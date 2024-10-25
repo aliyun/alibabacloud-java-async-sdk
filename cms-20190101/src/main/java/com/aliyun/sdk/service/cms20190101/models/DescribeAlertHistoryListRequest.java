@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertHistoryListRequest} extends {@link RequestModel}
  *
  * <p>DescribeAlertHistoryListRequest</p>
@@ -207,11 +208,14 @@ public class DescribeAlertHistoryListRequest extends Request {
         } 
 
         /**
-         * The order of alerts. Valid values:
-         * <p>
+         * <p>The order of alerts. Valid values:</p>
+         * <ul>
+         * <li>true (default value): reverse chronological order</li>
+         * <li>false: chronological order</li>
+         * </ul>
          * 
-         * *   true (default value): reverse chronological order
-         * *   false: chronological order
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ascending(Boolean ascending) {
             this.putQueryParameter("Ascending", ascending);
@@ -220,10 +224,11 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The end timestamp of the historical alerts that you want to query.
-         * <p>
+         * <p>The end timestamp of the historical alerts that you want to query.</p>
+         * <p>Unit: milliseconds.</p>
          * 
-         * Unit: milliseconds.
+         * <strong>example:</strong>
+         * <p>1640608200000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -232,10 +237,11 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
-         * <p>
+         * <p>The ID of the application group.</p>
+         * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
          * 
-         * For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * <strong>example:</strong>
+         * <p>7671****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -244,10 +250,11 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The metric that is used to monitor the cloud service.
-         * <p>
+         * <p>The metric that is used to monitor the cloud service.</p>
+         * <p>For information about how to query the name of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * 
-         * For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -256,10 +263,11 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service.
-         * <p>
+         * <p>The namespace of the cloud service.</p>
+         * <p>For information about how to query the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * 
-         * For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -268,10 +276,11 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -280,10 +289,11 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -292,10 +302,11 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
-         * <p>
+         * <p>The ID of the alert rule.</p>
+         * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * 
-         * For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * <strong>example:</strong>
+         * <p>applyTemplate61dc81b5-d357-4cf6-a9b7-9f83c1d5****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -304,10 +315,11 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The name of the alert rule.
-         * <p>
+         * <p>The name of the alert rule.</p>
+         * <p>For information about how to query the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * 
-         * For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * <strong>example:</strong>
+         * <p>ECS_Rule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -316,10 +328,11 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The start timestamp of the historical alerts that you want to query.
-         * <p>
+         * <p>The start timestamp of the historical alerts that you want to query.</p>
+         * <p>Unit: milliseconds.</p>
          * 
-         * Unit: milliseconds.
+         * <strong>example:</strong>
+         * <p>1640237400000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -328,11 +341,14 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * The status of the alert. Valid values:
-         * <p>
+         * <p>The status of the alert. Valid values:</p>
+         * <ul>
+         * <li>ALARM (default value): Alerts are triggered.</li>
+         * <li>OK: No alerts are triggered.</li>
+         * </ul>
          * 
-         * *   ALARM (default value): Alerts are triggered.
-         * *   OK: No alerts are triggered.
+         * <strong>example:</strong>
+         * <p>ALARM</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -341,12 +357,15 @@ public class DescribeAlertHistoryListRequest extends Request {
         }
 
         /**
-         * Specifies whether alerts are muted. Valid values:
-         * <p>
+         * <p>Specifies whether alerts are muted. Valid values:</p>
+         * <ul>
+         * <li>2 (default value): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</li>
+         * <li>0: Alerts are triggered or cleared.</li>
+         * <li>1: The alert rule is ineffective.</li>
+         * </ul>
          * 
-         * *   2 (default value): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.
-         * *   0: Alerts are triggered or cleared.
-         * *   1: The alert rule is ineffective.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

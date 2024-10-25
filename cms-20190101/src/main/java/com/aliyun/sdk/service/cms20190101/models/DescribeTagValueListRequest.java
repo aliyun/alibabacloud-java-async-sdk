@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagValueListRequest} extends {@link RequestModel}
  *
  * <p>DescribeTagValueListRequest</p>
@@ -82,10 +83,11 @@ public class DescribeTagValueListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -94,10 +96,11 @@ public class DescribeTagValueListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Pages start from page 1. Default value: 50.</p>
          * 
-         * Valid values: 1 to 100. Pages start from page 1. Default value: 50.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -106,10 +109,12 @@ public class DescribeTagValueListRequest extends Request {
         }
 
         /**
-         * The key of the tag whose values you want to query.
-         * <p>
+         * <p>The key of the tag whose values you want to query.</p>
+         * <p>For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+         * <strong>example:</strong>
+         * <p>tagKey1</p>
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);

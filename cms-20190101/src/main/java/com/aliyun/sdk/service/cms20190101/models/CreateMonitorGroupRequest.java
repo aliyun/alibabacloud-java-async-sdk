@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateMonitorGroupRequest</p>
@@ -68,10 +69,13 @@ public class CreateMonitorGroupRequest extends Request {
         } 
 
         /**
-         * The alert contact group. The alert notifications of the application group are sent to the alert contacts that belong to the alert contact group.
-         * <p>
+         * <p>The alert contact group. The alert notifications of the application group are sent to the alert contacts that belong to the alert contact group.</p>
+         * <blockquote>
+         * <p> An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="~~PutContact~~">PutContact</a> and <a href="~~PutContactGroup~~">PutContactGroup</a>.</p>
+         * </blockquote>
          * 
-         * >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~PutContact~~) and [PutContactGroup](~~PutContactGroup~~).
+         * <strong>example:</strong>
+         * <p>ECS_Alert_Group</p>
          */
         public Builder contactGroups(String contactGroups) {
             this.putQueryParameter("ContactGroups", contactGroups);
@@ -80,7 +84,11 @@ public class CreateMonitorGroupRequest extends Request {
         }
 
         /**
-         * The name of the application group.
+         * <p>The name of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

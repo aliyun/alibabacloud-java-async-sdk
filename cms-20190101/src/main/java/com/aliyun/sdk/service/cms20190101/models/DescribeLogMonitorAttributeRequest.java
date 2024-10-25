@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogMonitorAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeLogMonitorAttributeRequest</p>
@@ -54,10 +55,12 @@ public class DescribeLogMonitorAttributeRequest extends Request {
         } 
 
         /**
-         * The name of the log monitoring metric. Exact match is supported.
-         * <p>
+         * <p>The name of the log monitoring metric. Exact match is supported.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);

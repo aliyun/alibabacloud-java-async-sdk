@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventRuleAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventRuleAttributeRequest</p>
@@ -68,10 +69,12 @@ public class DescribeEventRuleAttributeRequest extends Request {
         } 
 
         /**
-         * The name of the event-triggered alert rule.
-         * <p>
+         * <p>The name of the event-triggered alert rule.</p>
+         * <p>For information about how to obtain the name of an event-triggered alert rule, see <a href="https://help.aliyun.com/document_detail/114996.html">DescribeEventRuleList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).
+         * <strong>example:</strong>
+         * <p>testRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -80,12 +83,14 @@ public class DescribeEventRuleAttributeRequest extends Request {
         }
 
         /**
-         * The mute period during which new alert notifications are not sent even if the trigger conditions are met.
-         * <p>
+         * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
+         * <p>Unit: seconds. Default value: 86400, which indicates one day.</p>
+         * <blockquote>
+         * <p> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
+         * </blockquote>
          * 
-         * Unit: seconds. Default value: 86400, which indicates one day.
-         * 
-         * >  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder silenceTime(String silenceTime) {
             this.putQueryParameter("SilenceTime", silenceTime);

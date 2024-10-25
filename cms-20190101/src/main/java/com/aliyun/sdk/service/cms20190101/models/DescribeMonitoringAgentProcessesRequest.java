@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitoringAgentProcessesRequest} extends {@link RequestModel}
  *
  * <p>DescribeMonitoringAgentProcessesRequest</p>
@@ -54,7 +55,11 @@ public class DescribeMonitoringAgentProcessesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp3hl3cx1pbahzy8****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

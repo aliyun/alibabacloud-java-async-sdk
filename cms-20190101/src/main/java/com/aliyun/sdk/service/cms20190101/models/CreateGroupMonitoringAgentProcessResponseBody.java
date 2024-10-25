@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGroupMonitoringAgentProcessResponseBody</p>
@@ -85,10 +86,13 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the call is successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the call is successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,7 +111,10 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F6150F9-45C7-43F9-9578-A58B2E726C90</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,7 +122,7 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The group process information.
+         * <p>The group process information.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -120,11 +130,14 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGroupMonitoringAgentProcessResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupProcessId")
         private String groupProcessId;
@@ -164,7 +183,10 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String groupProcessId; 
 
             /**
-             * The ID of the group process.
+             * <p>The ID of the group process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7F2B0024-4F21-48B9-A764-211CEC48****</p>
              */
             public Builder groupProcessId(String groupProcessId) {
                 this.groupProcessId = groupProcessId;

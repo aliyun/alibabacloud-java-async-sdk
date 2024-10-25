@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSiteMonitorsRequest} extends {@link RequestModel}
  *
  * <p>DeleteSiteMonitorsRequest</p>
@@ -68,11 +69,14 @@ public class DeleteSiteMonitorsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:
-         * <p>
+         * <p>Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:</p>
+         * <ul>
+         * <li>true (default value)</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true (default value)
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDeleteAlarms(Boolean isDeleteAlarms) {
             this.putQueryParameter("IsDeleteAlarms", isDeleteAlarms);
@@ -81,7 +85,11 @@ public class DeleteSiteMonitorsRequest extends Request {
         }
 
         /**
-         * The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).
+         * <p>The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01adacc2-ece5-41b6-afa2-3143ab5d****,43bd1ead-514f-4524-813e-228ce091****</p>
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

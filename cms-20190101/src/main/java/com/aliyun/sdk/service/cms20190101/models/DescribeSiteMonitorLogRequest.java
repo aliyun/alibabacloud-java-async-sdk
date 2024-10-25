@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorLogRequest} extends {@link RequestModel}
  *
  * <p>DescribeSiteMonitorLogRequest</p>
@@ -226,7 +227,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The city identification code.
+         * <p>The city identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>546</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -244,13 +248,17 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Valid values:
-         * <p>
+         * <p>The end of the time range to query. Valid values:</p>
+         * <ul>
+         * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
+         * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+         * </ul>
+         * <blockquote>
+         * <p> We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
+         * </blockquote>
          * 
-         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
-         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
-         * 
-         * >  We recommend that you use UNIX timestamps to prevent time zone-related issues.
+         * <strong>example:</strong>
+         * <p>1638422475687</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -259,10 +267,11 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The filter condition.
-         * <p>
+         * <p>The filter condition.</p>
+         * <p>You can specify a simple expression, for example, <code>TotalTime&gt;100</code>. In this case, the operation returns only the data for instant test tasks whose total response time exceeds 100 milliseconds.</p>
          * 
-         * You can specify a simple expression, for example, `TotalTime>100`. In this case, the operation returns only the data for instant test tasks whose total response time exceeds 100 milliseconds.
+         * <strong>example:</strong>
+         * <p>TotalTime&gt;100</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -271,7 +280,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The carrier identification code.
+         * <p>The carrier identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>465</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -280,7 +292,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 1440.
+         * <p>The number of entries to return on each page. Valid values: 1 to 1440.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder length(Integer length) {
             this.putQueryParameter("Length", length);
@@ -289,10 +304,11 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The name of the metric.
-         * <p>
+         * <p>The name of the metric.</p>
+         * <p>Only the <code>ProbeLog</code> metric is supported.</p>
          * 
-         * Only the `ProbeLog` metric is supported.
+         * <strong>example:</strong>
+         * <p>ProbeLog</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -301,7 +317,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``
+         * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IWBjqMYSy0is7zSMGu16****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -310,16 +329,19 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The start of the time range to query. The following formats are supported:
-         * <p>
+         * <p>The start of the time range to query. The following formats are supported:</p>
+         * <ul>
+         * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
+         * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.<br>We recommend that you use UNIX timestamps to prevent time zone-related issues.</li>
+         * </ul>
          * 
-         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
-         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
-         * 
-         * > 
-         * 
-         * *   The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.\
-         *     We recommend that you use UNIX timestamps to prevent time zone-related issues.
+         * <strong>example:</strong>
+         * <p>1638422474389</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -328,7 +350,11 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The IDs of the instant test tasks. Separate multiple task IDs with commas (,).
+         * <p>The IDs of the instant test tasks. Separate multiple task IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afa5c3ce-f944-4363-9edb-ce919a29****</p>
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

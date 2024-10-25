@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHostAvailabilityResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHostAvailabilityResponseBody</p>
@@ -85,10 +86,13 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,7 +111,10 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACBDBB40-DFB6-4F4C-8957-51FFB233969C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,11 +122,14 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -124,7 +137,10 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the availability monitoring task.
+         * <p>The ID of the availability monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

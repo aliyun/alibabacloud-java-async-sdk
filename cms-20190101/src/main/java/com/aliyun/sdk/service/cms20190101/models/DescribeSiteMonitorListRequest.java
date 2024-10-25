@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSiteMonitorListRequest</p>
@@ -123,10 +124,13 @@ public class DescribeSiteMonitorListRequest extends Request {
         } 
 
         /**
-         * The keyword to be matched.
-         * <p>
+         * <p>The keyword to be matched.</p>
+         * <blockquote>
+         * <p> You can search for tasks by name or address. Fuzzy search is supported.</p>
+         * </blockquote>
          * 
-         * >  You can search for tasks by name or address. Fuzzy search is supported.
+         * <strong>example:</strong>
+         * <p>site</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -135,7 +139,10 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -144,7 +151,10 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -153,7 +163,10 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The ID of the site monitoring task.
+         * <p>The ID of the site monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1ecd34a-8157-44d9-b060-14950837****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -162,11 +175,14 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The task status. Valid values:
-         * <p>
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>1: The task is enabled.</li>
+         * <li>2: The task is disabled.</li>
+         * </ul>
          * 
-         * *   1: The task is enabled.
-         * *   2: The task is disabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskState(String taskState) {
             this.putQueryParameter("TaskState", taskState);
@@ -175,7 +191,10 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
+         * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

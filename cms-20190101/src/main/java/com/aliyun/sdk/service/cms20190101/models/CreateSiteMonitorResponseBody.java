@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSiteMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSiteMonitorResponseBody</p>
@@ -97,10 +98,13 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -108,10 +112,8 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
-         * <p>
-         * 
-         * If a site monitoring task is created, the result is returned. If a site monitoring task fails to be created, no result is returned.
+         * <p>The returned result.</p>
+         * <p>If a site monitoring task is created, the result is returned. If a site monitoring task fails to be created, no result is returned.</p>
          */
         public Builder createResultList(CreateResultList createResultList) {
             this.createResultList = createResultList;
@@ -119,7 +121,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the site monitoring task.
+         * <p>The result of the site monitoring task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +129,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,7 +140,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68192f5d-0d45-4b98-9724-892813f86c71</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,11 +151,14 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -160,6 +171,12 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSiteMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSiteMonitorResponseBody</p>
+     */
     public static class CreateResultListCreateResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -199,7 +216,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * The ID of the site monitoring task.
+             * <p>The ID of the site monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2c8dbdf9-a3ab-46a1-85a4-f094965e****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -207,7 +227,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the site monitoring task.
+             * <p>The name of the site monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HanZhou_ECS1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -221,6 +244,12 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSiteMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSiteMonitorResponseBody</p>
+     */
     public static class CreateResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateResultList")
         private java.util.List < CreateResultListCreateResultList> createResultList;
@@ -248,10 +277,8 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             private java.util.List < CreateResultListCreateResultList> createResultList; 
 
             /**
-             * The returned result.
-             * <p>
-             * 
-             * If a site monitoring task is created, the result is returned. If a site monitoring task fails to be created, no result is returned.
+             * <p>The returned result.</p>
+             * <p>If a site monitoring task is created, the result is returned. If a site monitoring task fails to be created, no result is returned.</p>
              */
             public Builder createResultList(java.util.List < CreateResultListCreateResultList> createResultList) {
                 this.createResultList = createResultList;
@@ -265,6 +292,12 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSiteMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSiteMonitorResponseBody</p>
+     */
     public static class Contact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -340,10 +373,13 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The status code that is returned after you associate the existing alert rule with the site monitoring task.
-             * <p>
+             * <p>The status code that is returned after you associate the existing alert rule with the site monitoring task.</p>
+             * <blockquote>
+             * <p> The status code 200 indicates that the request was successful.</p>
+             * </blockquote>
              * 
-             * >  The status code 200 indicates that the request was successful.
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -351,7 +387,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The message that is returned after you associate the existing alert rule with the site monitoring task.
+             * <p>The message that is returned after you associate the existing alert rule with the site monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -359,7 +398,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request that was sent to associate the existing alert rule with the site monitoring task.
+             * <p>The ID of the request that was sent to associate the existing alert rule with the site monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5dd33455-4f65-4b0c-9200-33d66f3f340b</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -367,7 +409,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SystemDefault_acs_ecs_dashboard_InternetOutRate_Percent</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -375,11 +420,14 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the existing alert rule was associated with the site monitoring task. Valid values:
-             * <p>
+             * <p>Indicates whether the existing alert rule was associated with the site monitoring task. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(String success) {
                 this.success = success;
@@ -393,6 +441,12 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSiteMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSiteMonitorResponseBody</p>
+     */
     public static class AttachAlertResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contact")
         private java.util.List < Contact> contact;
@@ -434,6 +488,12 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSiteMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSiteMonitorResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachAlertResult")
         private AttachAlertResult attachAlertResult;
@@ -461,7 +521,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
             private AttachAlertResult attachAlertResult; 
 
             /**
-             * The result that is returned after you associate the existing alert rule with the site monitoring task.
+             * <p>The result that is returned after you associate the existing alert rule with the site monitoring task.</p>
              */
             public Builder attachAlertResult(AttachAlertResult attachAlertResult) {
                 this.attachAlertResult = attachAlertResult;

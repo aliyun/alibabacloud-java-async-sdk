@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContactListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContactListResponseBody</p>
@@ -97,10 +98,13 @@ public class DescribeContactListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -108,7 +112,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The alert contacts.
+         * <p>The alert contacts.</p>
          */
         public Builder contacts(Contacts contacts) {
             this.contacts = contacts;
@@ -116,7 +120,10 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -124,7 +131,10 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06D5ECC2-B9BE-42A4-8FA3-1A610FB08B83</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,11 +142,14 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -144,7 +157,10 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -157,6 +173,12 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContactListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactListResponseBody</p>
+     */
     public static class Channels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliIM")
         private String aliIM;
@@ -220,7 +242,10 @@ public class DescribeContactListResponseBody extends TeaModel {
             private String SMS; 
 
             /**
-             * The TradeManager ID of the alert contact.
+             * <p>The TradeManager ID of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
@@ -228,7 +253,10 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112">https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112</a>****</p>
              */
             public Builder dingWebHook(String dingWebHook) {
                 this.dingWebHook = dingWebHook;
@@ -236,7 +264,10 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -244,7 +275,10 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number of the alert contac.
+             * <p>The phone number of the alert contac.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1333333****</p>
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -258,6 +292,12 @@ public class DescribeContactListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactListResponseBody</p>
+     */
     public static class ChannelsState extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliIM")
         private String aliIM;
@@ -321,12 +361,14 @@ public class DescribeContactListResponseBody extends TeaModel {
             private String SMS; 
 
             /**
-             * The status of the TradeManager ID.
-             * <p>
+             * <p>The status of the TradeManager ID.</p>
+             * <p>Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.</p>
+             * <blockquote>
+             * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.
-             * 
-             * >  This parameter applies only to the Alibaba Cloud China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
@@ -334,10 +376,11 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DingTalk chatbot.
-             * <p>
+             * <p>The status of the DingTalk chatbot.</p>
+             * <p>Valid value: OK. The value OK indicates that the DingTalk chatbot is normal and alert notifications can be received in a DingTalk group.</p>
              * 
-             * Valid value: OK. The value OK indicates that the DingTalk chatbot is normal and alert notifications can be received in a DingTalk group.
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder dingWebHook(String dingWebHook) {
                 this.dingWebHook = dingWebHook;
@@ -345,11 +388,14 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the email address. Valid values:
-             * <p>
+             * <p>The status of the email address. Valid values:</p>
+             * <ul>
+             * <li>PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</li>
+             * <li>OK: The phone number is activated and can receive alert notifications.</li>
+             * </ul>
              * 
-             * *   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.
-             * *   OK: The phone number is activated and can receive alert notifications.
+             * <strong>example:</strong>
+             * <p>PENDING</p>
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -357,13 +403,17 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the phone number. Valid values:
-             * <p>
+             * <p>The status of the phone number. Valid values:</p>
+             * <ul>
+             * <li>PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</li>
+             * <li>OK: The phone number is activated and can receive alert notifications.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * *   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.
-             * *   OK: The phone number is activated and can receive alert notifications.
-             * 
-             * >  This parameter applies only to the Alibaba Cloud China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -377,6 +427,12 @@ public class DescribeContactListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactListResponseBody</p>
+     */
     public static class ContactGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < String > contactGroup;
@@ -418,6 +474,12 @@ public class DescribeContactListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactListResponseBody</p>
+     */
     public static class Contact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
         private Channels channels;
@@ -529,7 +591,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The alert notification method.
+             * <p>The alert notification method.</p>
              */
             public Builder channels(Channels channels) {
                 this.channels = channels;
@@ -537,10 +599,8 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the alert notification method. Valid values: PENDING and OK.
-             * <p>
-             * 
-             * The email address must be activated after it is added as the value specified for the alert notification method. The value PENDING indicates that the email address is not activated. The value OK indicates that the email address is activated.
+             * <p>The status of the alert notification method. Valid values: PENDING and OK.</p>
+             * <p>The email address must be activated after it is added as the value specified for the alert notification method. The value PENDING indicates that the email address is not activated. The value OK indicates that the email address is activated.</p>
              */
             public Builder channelsState(ChannelsState channelsState) {
                 this.channelsState = channelsState;
@@ -548,7 +608,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * None.
+             * <p>None.</p>
              */
             public Builder contactGroups(ContactGroups contactGroups) {
                 this.contactGroups = contactGroups;
@@ -556,10 +616,11 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert contact was created.
-             * <p>
+             * <p>The timestamp when the alert contact was created.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1552356159000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -567,7 +628,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -575,11 +636,14 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The language in which the alert information is displayed. Valid values:
-             * <p>
+             * <p>The language in which the alert information is displayed. Valid values:</p>
+             * <ul>
+             * <li>zh-cn: simplified Chinese</li>
+             * <li>en: English</li>
+             * </ul>
              * 
-             * *   zh-cn: simplified Chinese
-             * *   en: English
+             * <strong>example:</strong>
+             * <p>zh-cn</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -587,7 +651,10 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact.
+             * <p>The name of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -595,10 +662,11 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert contact was updated.
-             * <p>
+             * <p>The timestamp when the alert contact was updated.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1552356159000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -612,6 +680,12 @@ public class DescribeContactListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactListResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contact")
         private java.util.List < Contact> contact;

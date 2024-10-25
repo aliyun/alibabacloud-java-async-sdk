@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitoringAgentHostsRequest} extends {@link RequestModel}
  *
  * <p>DescribeMonitoringAgentHostsRequest</p>
@@ -179,11 +180,14 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query Elastic Compute Service (ECS) instances that are provided by Alibaba Cloud or to query hosts that are not provided by Alibaba Cloud. Valid values:
-         * <p>
+         * <p>Specifies whether to query Elastic Compute Service (ECS) instances that are provided by Alibaba Cloud or to query hosts that are not provided by Alibaba Cloud. Valid values:</p>
+         * <ul>
+         * <li>true (default value): queries all the ECS instances that are provided by Alibaba Cloud.</li>
+         * <li>false: queries all the hosts that are not provided by Alibaba Cloud.</li>
+         * </ul>
          * 
-         * *   true (default value): queries all the ECS instances that are provided by Alibaba Cloud.
-         * *   false: queries all the hosts that are not provided by Alibaba Cloud.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder aliyunHost(Boolean aliyunHost) {
             this.putQueryParameter("AliyunHost", aliyunHost);
@@ -192,7 +196,10 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         }
 
         /**
-         * The name of the host.
+         * <p>The name of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hostNam1</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -201,7 +208,10 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-a3d1q1pm2f9yr29e****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -210,7 +220,10 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder instanceRegionId(String instanceRegionId) {
             this.putQueryParameter("InstanceRegionId", instanceRegionId);
@@ -219,7 +232,10 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         }
 
         /**
-         * The keyword that is used in fuzzy match.
+         * <p>The keyword that is used in fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host1</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -228,7 +244,10 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -237,15 +256,19 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li>10</li>
+         * <li>20</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * <blockquote>
+         * <p>Although Alibaba Cloud does not limit the maximum value of this parameter, we recommend that you do not set it to an excessively large value. If you set it to an excessively large value, a timeout error may occur.</p>
+         * </blockquote>
          * 
-         * *   10
-         * *   20
-         * *   50
-         * *   100
-         * 
-         * > Although Alibaba Cloud does not limit the maximum value of this parameter, we recommend that you do not set it to an excessively large value. If you set it to an excessively large value, a timeout error may occur.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -254,12 +277,14 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         }
 
         /**
-         * The serial number of the host.
-         * <p>
+         * <p>The serial number of the host.</p>
+         * <p>After the CloudMonitor agent is installed on a host, a globally unique serial number is generated. A host that is not provided by Alibaba Cloud has a serial number instead of an instance ID.</p>
+         * <blockquote>
+         * <p>This parameter can be used to accurately search for a monitored host.</p>
+         * </blockquote>
          * 
-         * After the CloudMonitor agent is installed on a host, a globally unique serial number is generated. A host that is not provided by Alibaba Cloud has a serial number instead of an instance ID.
-         * 
-         * > This parameter can be used to accurately search for a monitored host.
+         * <strong>example:</strong>
+         * <p>a1ab31a3-1234-40f2-9e95-c8caa8f0****</p>
          */
         public Builder serialNumbers(String serialNumbers) {
             this.putQueryParameter("SerialNumbers", serialNumbers);
@@ -268,11 +293,14 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         }
 
         /**
-         * The status of the hosts that you want to query. Valid values:
-         * <p>
+         * <p>The status of the hosts that you want to query. Valid values:</p>
+         * <ul>
+         * <li>Running: queries the hosts that are running.</li>
+         * <li>Stopped: queries the hosts that are stopped, are not installed, or fail to be installed.</li>
+         * </ul>
          * 
-         * *   Running: queries the hosts that are running.
-         * *   Stopped: queries the hosts that are stopped, are not installed, or fail to be installed.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -281,13 +309,16 @@ public class DescribeMonitoringAgentHostsRequest extends Request {
         }
 
         /**
-         * The status of SysOM. Valid values:
-         * <p>
+         * <p>The status of SysOM. Valid values:</p>
+         * <ul>
+         * <li>installing: SysOM is being installed.</li>
+         * <li>running: SysOM is running.</li>
+         * <li>stopped: SysOM is stopped.</li>
+         * <li>uninstalling: SysOM is being uninstalled.</li>
+         * </ul>
          * 
-         * *   installing: SysOM is being installed.
-         * *   running: SysOM is running.
-         * *   stopped: SysOM is stopped.
-         * *   uninstalling: SysOM is being uninstalled.
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder sysomStatus(String sysomStatus) {
             this.putQueryParameter("SysomStatus", sysomStatus);

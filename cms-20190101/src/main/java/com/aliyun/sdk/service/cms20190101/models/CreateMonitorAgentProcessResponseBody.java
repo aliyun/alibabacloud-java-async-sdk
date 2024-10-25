@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorAgentProcessResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMonitorAgentProcessResponseBody</p>
@@ -85,10 +86,13 @@ public class CreateMonitorAgentProcessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class CreateMonitorAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the process.
+         * <p>The ID of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -104,7 +111,10 @@ public class CreateMonitorAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +122,10 @@ public class CreateMonitorAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>971CC023-5A96-452A-BB7C-2483F948BCFD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +133,14 @@ public class CreateMonitorAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

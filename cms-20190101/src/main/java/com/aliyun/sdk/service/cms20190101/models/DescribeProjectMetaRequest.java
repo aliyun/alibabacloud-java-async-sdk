@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProjectMetaRequest} extends {@link RequestModel}
  *
  * <p>DescribeProjectMetaRequest</p>
@@ -81,12 +82,14 @@ public class DescribeProjectMetaRequest extends Request {
         } 
 
         /**
-         * The tags. Tags are used to filter services.
-         * <p>
+         * <p>The tags. Tags are used to filter services.</p>
+         * <p>You can filter services only by the tag whose <code>name</code> is <code>product</code>. Example: {&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}.</p>
+         * <blockquote>
+         * <p>We recommend that you do not use the special tags in the CloudMonitor console.</p>
+         * </blockquote>
          * 
-         * You can filter services only by the tag whose `name` is `product`. Example: {"name":"product","value":"ECS"}.
-         * 
-         * > We recommend that you do not use the special tags in the CloudMonitor console.
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}]</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -95,12 +98,12 @@ public class DescribeProjectMetaRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -109,14 +112,15 @@ public class DescribeProjectMetaRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 10000.</p>
+         * <p>Default value: 30.</p>
+         * <blockquote>
+         * <p>The value of this parameter is not limited. You can view a large number of entries per page.</p>
+         * </blockquote>
          * 
-         * Valid values: 1 to 10000.
-         * 
-         * Default value: 30.
-         * 
-         * > The value of this parameter is not limited. You can view a large number of entries per page.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventRuleTargetListResponseBody</p>
@@ -133,10 +134,13 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         private WebhookParameters webhookParameters; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -144,7 +148,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the recipients if alert notifications are sent to the alert contacts of an alert contact group.
+         * <p>The information about the recipients if alert notifications are sent to the alert contacts of an alert contact group.</p>
          */
         public Builder contactParameters(ContactParameters contactParameters) {
             this.contactParameters = contactParameters;
@@ -152,7 +156,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the recipients in Function Compute.
+         * <p>The information about the recipients in Function Compute.</p>
          */
         public Builder fcParameters(FcParameters fcParameters) {
             this.fcParameters = fcParameters;
@@ -160,7 +164,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -168,7 +175,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the recipients in Message Service (MNS).
+         * <p>The information about the recipients in Message Service (MNS).</p>
          */
         public Builder mnsParameters(MnsParameters mnsParameters) {
             this.mnsParameters = mnsParameters;
@@ -176,7 +183,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the recipients in OpenAPI Explorer.
+         * <p>The information about the recipients in OpenAPI Explorer.</p>
          */
         public Builder openApiParameters(OpenApiParameters openApiParameters) {
             this.openApiParameters = openApiParameters;
@@ -184,7 +191,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87170bc7-e28a-4c93-b9bf-90a1dbe84736</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -192,7 +202,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the recipients in Log Service.
+         * <p>The information about the recipients in Log Service.</p>
          */
         public Builder slsParameters(SlsParameters slsParameters) {
             this.slsParameters = slsParameters;
@@ -200,7 +210,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the recipients if alert notifications are sent by sending a request to a callback URL.
+         * <p>The information about the recipients if alert notifications are sent by sending a request to a callback URL.</p>
          */
         public Builder webhookParameters(WebhookParameters webhookParameters) {
             this.webhookParameters = webhookParameters;
@@ -213,6 +223,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class ContactParameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
@@ -264,7 +280,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * The name of the alert group.
+             * <p>The name of the alert group.</p>
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -272,7 +288,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the recipient.
+             * <p>The ID of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -280,10 +299,11 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification methods. Valid values:
-             * <p>
+             * <p>The alert notification methods. Valid values:</p>
+             * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
              * 
-             * 4: Alert notifications are sent by using DingTalk chatbots and emails.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -297,6 +317,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class ContactParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactParameter")
         private java.util.List < ContactParameter> contactParameter;
@@ -338,6 +364,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class FCParameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -413,16 +445,15 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the function. 
-             * <p>
-             * 
-             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
-             * 
-             * - Service: the code of an Alibaba Cloud service
-             * - Region: the region ID
-             * - Account: the ID of an Alibaba Cloud account
-             * - ResourceType: the resource type
-             * - ResourceId: the resource ID
+             * <p>The Alibaba Cloud Resource Name (ARN) of the function. </p>
+             * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields: </p>
+             * <ul>
+             * <li>Service: the code of an Alibaba Cloud service</li>
+             * <li>Region: the region ID</li>
+             * <li>Account: the ID of an Alibaba Cloud account</li>
+             * <li>ResourceType: the resource type</li>
+             * <li>ResourceId: the resource ID</li>
+             * </ul>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -430,7 +461,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the function.
+             * <p>The name of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fcTest1</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -438,7 +472,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the recipient.
+             * <p>The ID of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -446,7 +483,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The region where Function Compute is deployed.
+             * <p>The region where Function Compute is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -454,7 +494,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Function Compute service.
+             * <p>The name of the Function Compute service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service1</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -468,6 +511,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class FcParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FCParameter")
         private java.util.List < FCParameter> FCParameter;
@@ -509,6 +558,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class MnsParameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -584,16 +639,15 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The ARN of the MNS queue. 
-             * <p>
-             * 
-             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
-             * 
-             * - Service: the code of an Alibaba Cloud service
-             * - Region: the region ID
-             * - Account: the ID of an Alibaba Cloud account
-             * - ResourceType: the resource type
-             * - ResourceId: the resource ID
+             * <p>The ARN of the MNS queue. </p>
+             * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields: </p>
+             * <ul>
+             * <li>Service: the code of an Alibaba Cloud service</li>
+             * <li>Region: the region ID</li>
+             * <li>Account: the ID of an Alibaba Cloud account</li>
+             * <li>ResourceType: the resource type</li>
+             * <li>ResourceId: the resource ID</li>
+             * </ul>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -601,7 +655,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the recipient.
+             * <p>The ID of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -609,7 +666,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MNS queue.
+             * <p>The name of the MNS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testQueue</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -617,7 +677,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The region where MNS is deployed.
+             * <p>The region where MNS is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -625,7 +688,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The MNS topic.
+             * <p>The MNS topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_sample</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -639,6 +705,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class MnsParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MnsParameter")
         private java.util.List < MnsParameter> mnsParameter;
@@ -680,6 +752,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class OpenApiParametersOpenApiParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -779,7 +857,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the API operation.
+             * <p>The name of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PutLogs</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -787,23 +868,23 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the API operation. 
-             * <p>
-             * 
-             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
-             * 
-             * - Service: the code of an Alibaba Cloud service
-             * - Region: the region ID
-             * - Account: the ID of an Alibaba Cloud account
-             * - ResourceType: the resource type
-             * - ResourceId: the resource ID The ARN of the Log Service Logstore. 
-             * 
-             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
-             * - Service: the code of an Alibaba Cloud service
-             * - Region: the region ID
-             * - Account: the ID of an Alibaba Cloud account
-             * - ResourceType: the resource type
-             * - ResourceId: the resource ID
+             * <p>The ARN of the API operation. </p>
+             * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields: </p>
+             * <ul>
+             * <li>Service: the code of an Alibaba Cloud service</li>
+             * <li>Region: the region ID</li>
+             * <li>Account: the ID of an Alibaba Cloud account</li>
+             * <li>ResourceType: the resource type</li>
+             * <li>ResourceId: the resource ID The ARN of the Log Service Logstore.</li>
+             * </ul>
+             * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields:</p>
+             * <ul>
+             * <li>Service: the code of an Alibaba Cloud service</li>
+             * <li>Region: the region ID</li>
+             * <li>Account: the ID of an Alibaba Cloud account</li>
+             * <li>ResourceType: the resource type</li>
+             * <li>ResourceId: the resource ID</li>
+             * </ul>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -811,7 +892,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the recipient.
+             * <p>The ID of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -819,7 +903,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud service to which the API operation belongs.
+             * <p>The ID of the cloud service to which the API operation belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -827,7 +914,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the resource resides.
+             * <p>The region where the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -835,7 +925,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the role.
+             * <p>The name of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyRole</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -843,7 +936,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the API.
+             * <p>The version of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -857,6 +953,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class OpenApiParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OpenApiParameters")
         private java.util.List < OpenApiParametersOpenApiParameters> openApiParameters;
@@ -884,7 +986,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private java.util.List < OpenApiParametersOpenApiParameters> openApiParameters; 
 
             /**
-             * The information about the recipients in OpenAPI Explorer.
+             * <p>The information about the recipients in OpenAPI Explorer.</p>
              */
             public Builder openApiParameters(java.util.List < OpenApiParametersOpenApiParameters> openApiParameters) {
                 this.openApiParameters = openApiParameters;
@@ -898,6 +1000,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class SlsParameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -973,16 +1081,15 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The ARN of the Log Service Logstore. 
-             * <p>
-             * 
-             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
-             * 
-             * - Service: the code of an Alibaba Cloud service
-             * - Region: the region ID
-             * - Account: the ID of an Alibaba Cloud account
-             * - ResourceType: the resource type
-             * - ResourceId: the resource ID
+             * <p>The ARN of the Log Service Logstore. </p>
+             * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields: </p>
+             * <ul>
+             * <li>Service: the code of an Alibaba Cloud service</li>
+             * <li>Region: the region ID</li>
+             * <li>Account: the ID of an Alibaba Cloud account</li>
+             * <li>ResourceType: the resource type</li>
+             * <li>ResourceId: the resource ID</li>
+             * </ul>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -990,7 +1097,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the recipient.
+             * <p>The ID of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -998,7 +1108,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstore_test</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -1006,7 +1119,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_test</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -1014,7 +1130,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Log Service project resides.
+             * <p>The ID of the region where the Log Service project resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1028,6 +1147,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class SlsParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlsParameter")
         private java.util.List < SlsParameter> slsParameter;
@@ -1069,6 +1194,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class WebhookParameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -1132,7 +1263,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The ID of the recipient.
+             * <p>The ID of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1140,7 +1274,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method. Valid values: GET and POST.
+             * <p>The HTTP request method. Valid values: GET and POST.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -1148,7 +1285,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type.
+             * <p>The protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1156,7 +1296,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL.
+             * <p>The callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1170,6 +1313,12 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleTargetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleTargetListResponseBody</p>
+     */
     public static class WebhookParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WebhookParameter")
         private java.util.List < WebhookParameter> webhookParameter;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEventRulesRequest} extends {@link RequestModel}
  *
  * <p>DeleteEventRulesRequest</p>
@@ -54,7 +55,10 @@ public class DeleteEventRulesRequest extends Request {
         } 
 
         /**
-         * RuleNames.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule1</p>
          */
         public Builder ruleNames(java.util.List < String > ruleNames) {
             this.putQueryParameter("RuleNames", ruleNames);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMonitorGroupInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyMonitorGroupInstancesResponseBody</p>
@@ -73,10 +74,13 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -84,7 +88,10 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -92,7 +99,10 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEC7EDB3-9B08-4AC0-A42A-329F5D14B95A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,7 +110,10 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

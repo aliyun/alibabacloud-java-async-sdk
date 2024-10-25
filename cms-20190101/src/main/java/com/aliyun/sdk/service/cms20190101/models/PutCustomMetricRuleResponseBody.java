@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutCustomMetricRuleResponseBody} extends {@link TeaModel}
  *
  * <p>PutCustomMetricRuleResponseBody</p>
@@ -73,10 +74,13 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The value 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The value 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -84,7 +88,10 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the call was successful, the return value is null. If the call failed, an error message is returned.
+         * <p>The returned message. If the call was successful, the return value is null. If the call failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ComparisonOperator is mandatory for this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -92,7 +99,10 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65D50468-ECEF-48F1-A6E1-D952E89D9432</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,11 +110,14 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

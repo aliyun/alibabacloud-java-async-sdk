@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NotificationStrategy} extends {@link TeaModel}
  *
  * <p>NotificationStrategy</p>
@@ -210,7 +211,7 @@ public class NotificationStrategy extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -271,6 +272,12 @@ public class NotificationStrategy extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class CustomChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -323,7 +330,7 @@ public class NotificationStrategy extends TeaModel {
             private String templateUuid; 
 
             /**
-             * ChannelType.
+             * <p>This parameter is required.</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -353,6 +360,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class EscalationSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoResolveMin")
         private Long autoResolveMin;
@@ -494,6 +507,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class BlackList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Field")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -548,7 +567,7 @@ public class NotificationStrategy extends TeaModel {
             private String value; 
 
             /**
-             * Field.
+             * <p>This parameter is required.</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -556,7 +575,7 @@ public class NotificationStrategy extends TeaModel {
             }
 
             /**
-             * Op.
+             * <p>This parameter is required.</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -564,7 +583,7 @@ public class NotificationStrategy extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -578,6 +597,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class WhiteList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Field")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -632,7 +657,7 @@ public class NotificationStrategy extends TeaModel {
             private String value; 
 
             /**
-             * Field.
+             * <p>This parameter is required.</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -640,7 +665,7 @@ public class NotificationStrategy extends TeaModel {
             }
 
             /**
-             * Op.
+             * <p>This parameter is required.</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -648,7 +673,7 @@ public class NotificationStrategy extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -662,6 +687,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class FilterSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackList")
         private java.util.List < java.util.List < BlackList> > blackList;
@@ -723,6 +754,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class GroupingItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keys")
         private java.util.List < String > keys;
@@ -784,6 +821,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class GroupingSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableRawAlertDispatching")
         private Boolean enableRawAlertDispatching;
@@ -905,6 +948,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class PushingSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PushingDataFormat")
         private String pushingDataFormat;
@@ -1006,6 +1055,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
@@ -1057,7 +1112,7 @@ public class NotificationStrategy extends TeaModel {
             private String value; 
 
             /**
-             * Field.
+             * <p>This parameter is required.</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -1065,7 +1120,7 @@ public class NotificationStrategy extends TeaModel {
             }
 
             /**
-             * Op.
+             * <p>This parameter is required.</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -1073,7 +1128,7 @@ public class NotificationStrategy extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1087,6 +1142,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class Routes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
@@ -1148,6 +1209,12 @@ public class NotificationStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NotificationStrategy} extends {@link TeaModel}
+     *
+     * <p>NotificationStrategy</p>
+     */
     public static class RouteSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Routes")
         private java.util.List < Routes> routes;

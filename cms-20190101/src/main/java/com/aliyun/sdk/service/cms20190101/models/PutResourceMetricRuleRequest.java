@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutResourceMetricRuleRequest} extends {@link RequestModel}
  *
  * <p>PutResourceMetricRuleRequest</p>
@@ -305,10 +306,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The trigger conditions for multiple metrics.
-         * <p>
-         * 
-         * >  The trigger conditions for a single metric and multiple metrics are mutually exclusive. You cannot specify trigger conditions for a single metric and multiple metrics at the same time.
+         * <p>The trigger conditions for multiple metrics.</p>
+         * <blockquote>
+         * <p> The trigger conditions for a single metric and multiple metrics are mutually exclusive. You cannot specify trigger conditions for a single metric and multiple metrics at the same time.</p>
+         * </blockquote>
          */
         public Builder compositeExpression(CompositeExpression compositeExpression) {
             String compositeExpressionShrink = shrink(compositeExpression, "CompositeExpression", "json");
@@ -318,10 +319,14 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The alert contact groups. Alert notifications are sent to the alert contacts in the alert contact group.
-         * <p>
+         * <p>The alert contact groups. Alert notifications are sent to the alert contacts in the alert contact group.</p>
+         * <blockquote>
+         * <p> An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         public Builder contactGroups(String contactGroups) {
             this.putQueryParameter("ContactGroups", contactGroups);
@@ -330,7 +335,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The period of time during which the alert rule is effective.
+         * <p>The period of time during which the alert rule is effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-23:59</p>
          */
         public Builder effectiveInterval(String effectiveInterval) {
             this.putQueryParameter("EffectiveInterval", effectiveInterval);
@@ -339,7 +347,7 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The subject of the alert notification email.
+         * <p>The subject of the alert notification email.</p>
          */
         public Builder emailSubject(String emailSubject) {
             this.putQueryParameter("EmailSubject", emailSubject);
@@ -348,10 +356,13 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The interval at which alerts are triggered based on the alert rule. Unit: seconds.
-         * <p>
+         * <p>The interval at which alerts are triggered based on the alert rule. Unit: seconds.</p>
+         * <blockquote>
+         * <p> For more information about how to query the statistical periods of metrics, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about how to query the statistical periods of metrics, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -360,10 +371,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.
-         * <p>
-         * 
-         * >  This parameter is equivalent to the Label parameter of Prometheus alerts.
+         * <p>If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.</p>
+         * <blockquote>
+         * <p> This parameter is equivalent to the Label parameter of Prometheus alerts.</p>
+         * </blockquote>
          */
         public Builder labels(java.util.List < Labels> labels) {
             this.putQueryParameter("Labels", labels);
@@ -372,10 +383,14 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The metric name. For more information about how to query metric names, see [Appendix 1: Metrics](~~163515~~).
-         * <p>
+         * <p>The metric name. For more information about how to query metric names, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <blockquote>
+         * <p> If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to the name of the namespace. For more information about how to query the names of namespaces, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to the name of the namespace. For more information about how to query the names of namespaces, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -384,10 +399,14 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service. For more information about how to query the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
-         * <p>
+         * <p>The namespace of the cloud service. For more information about how to query the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <blockquote>
+         * <p> If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to <code>acs_prometheus</code>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to `acs_prometheus`.
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -396,12 +415,15 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The method that is used to handle alerts when no monitoring data is found. Valid value:
-         * <p>
+         * <p>The method that is used to handle alerts when no monitoring data is found. Valid value:</p>
+         * <ul>
+         * <li>KEEP_LAST_STATE (default): No operation is performed.</li>
+         * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
+         * <li>OK: The status is considered normal.</li>
+         * </ul>
          * 
-         * *   KEEP_LAST_STATE (default): No operation is performed.
-         * *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
-         * *   OK: The status is considered normal.
+         * <strong>example:</strong>
+         * <p>KEEP_LAST_STATE</p>
          */
         public Builder noDataPolicy(String noDataPolicy) {
             this.putQueryParameter("NoDataPolicy", noDataPolicy);
@@ -410,7 +432,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The period of time during which the alert rule is ineffective.
+         * <p>The period of time during which the alert rule is ineffective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-06:00</p>
          */
         public Builder noEffectiveInterval(String noEffectiveInterval) {
             this.putQueryParameter("NoEffectiveInterval", noEffectiveInterval);
@@ -419,10 +444,13 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The statistical period of the metric. Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.
-         * <p>
+         * <p>The statistical period of the metric. Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.</p>
+         * <blockquote>
+         * <p> For more information about how to query the statistical periods of metrics, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about how to query the statistical periods of metrics, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -431,10 +459,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * Prometheus alerts.
-         * <p>
-         * 
-         * >  This parameter is required only if you create a Prometheus alert rule for Hybrid Cloud Monitoring.
+         * <p>Prometheus alerts.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you create a Prometheus alert rule for Hybrid Cloud Monitoring.</p>
+         * </blockquote>
          */
         public Builder prometheus(Prometheus prometheus) {
             String prometheusShrink = shrink(prometheus, "Prometheus", "json");
@@ -444,10 +472,11 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The resource information. Examples: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` and `[{"userId":"100931896542****"}]`.
-         * <p>
+         * <p>The resource information. Examples: <code>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</code> and <code>[{&quot;userId&quot;:&quot;100931896542****&quot;}]</code>.</p>
+         * <p>For more information about the supported dimensions that are used to query resources, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * 
-         * For more information about the supported dimensions that are used to query resources, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</p>
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -456,12 +485,15 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
-         * <p>
+         * <p>The ID of the alert rule.</p>
+         * <p>You can specify a new ID or the ID of an existing alert rule. For more information about how to query the IDs of alert rules, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <blockquote>
+         * <p> If you specify a new ID, a threshold-triggered alert rule is created.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * You can specify a new ID or the ID of an existing alert rule. For more information about how to query the IDs of alert rules, see [DescribeMetricRuleList](~~114941~~).
-         * 
-         * >  If you specify a new ID, a threshold-triggered alert rule is created.
+         * <strong>example:</strong>
+         * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -470,12 +502,15 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The name of the alert rule.
-         * <p>
+         * <p>The name of the alert rule.</p>
+         * <p>You can specify a new name or the name of an existing alert rule. For more information about how to query the names of alert rules, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <blockquote>
+         * <p> If you specify a new name, a threshold-triggered alert rule is created.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * You can specify a new name or the name of an existing alert rule. For more information about how to query the names of alert rules, see [DescribeMetricRuleList](~~114941~~).
-         * 
-         * >  If you specify a new name, a threshold-triggered alert rule is created.
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -484,10 +519,13 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
-         * <p>
+         * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.</p>
+         * <blockquote>
+         * <p> If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.</p>
+         * </blockquote>
          * 
-         * >  If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder silenceTime(Integer silenceTime) {
             this.putQueryParameter("SilenceTime", silenceTime);
@@ -496,7 +534,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://alert.aliyun.com.com:8080/callback">https://alert.aliyun.com.com:8080/callback</a></p>
          */
         public Builder webhook(String webhook) {
             this.putQueryParameter("Webhook", webhook);
@@ -511,6 +552,12 @@ public class PutResourceMetricRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutResourceMetricRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRuleRequest</p>
+     */
     public static class Critical extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
@@ -574,23 +621,27 @@ public class PutResourceMetricRuleRequest extends Request {
             private Integer times; 
 
             /**
-             * The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid value:
-             * <p>
+             * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid value:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+             * <li>GreaterThanThreshold: greater than the threshold</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+             * <li>LessThanThreshold: less than the threshold</li>
+             * <li>NotEqualToThreshold: not equal to the threshold</li>
+             * <li>EqualToThreshold: equal to the threshold</li>
+             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * </ul>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-             * *   GreaterThanThreshold: greater than the threshold
-             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-             * *   LessThanThreshold: less than the threshold
-             * *   NotEqualToThreshold: not equal to the threshold
-             * *   EqualToThreshold: equal to the threshold
-             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
-             * *   LessThanYesterday: less than the metric value at the same time yesterday
-             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-             * *   LessThanLastWeek: less than the metric value at the same time last week
-             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
-             * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -598,12 +649,14 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The statistical methods for Critical-level alerts.
-             * <p>
+             * <p>The statistical methods for Critical-level alerts.</p>
+             * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).
-             * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -611,10 +664,13 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The threshold for Critical-level alerts.
-             * <p>
+             * <p>The threshold for Critical-level alerts.</p>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -622,10 +678,13 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.
-             * <p>
+             * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -639,6 +698,12 @@ public class PutResourceMetricRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRuleRequest</p>
+     */
     public static class Info extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
@@ -702,23 +767,27 @@ public class PutResourceMetricRuleRequest extends Request {
             private Integer times; 
 
             /**
-             * The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid value:
-             * <p>
+             * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid value:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+             * <li>GreaterThanThreshold: greater than the threshold</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+             * <li>LessThanThreshold: less than the threshold</li>
+             * <li>NotEqualToThreshold: not equal to the threshold</li>
+             * <li>EqualToThreshold: equal to the threshold</li>
+             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * </ul>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-             * *   GreaterThanThreshold: greater than the threshold
-             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-             * *   LessThanThreshold: less than the threshold
-             * *   NotEqualToThreshold: not equal to the threshold
-             * *   EqualToThreshold: equal to the threshold
-             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
-             * *   LessThanYesterday: less than the metric value at the same time yesterday
-             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-             * *   LessThanLastWeek: less than the metric value at the same time last week
-             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
-             * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -726,12 +795,14 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The statistical methods for Info-level alerts.
-             * <p>
+             * <p>The statistical methods for Info-level alerts.</p>
+             * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).
-             * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -739,10 +810,13 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The threshold for Info-level alerts.
-             * <p>
+             * <p>The threshold for Info-level alerts.</p>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -750,10 +824,13 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.
-             * <p>
+             * <p>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</p>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -767,6 +844,12 @@ public class PutResourceMetricRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRuleRequest</p>
+     */
     public static class Warn extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
@@ -830,23 +913,27 @@ public class PutResourceMetricRuleRequest extends Request {
             private Integer times; 
 
             /**
-             * The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid value:
-             * <p>
+             * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid value:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+             * <li>GreaterThanThreshold: greater than the threshold</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+             * <li>LessThanThreshold: less than the threshold</li>
+             * <li>NotEqualToThreshold: not equal to the threshold</li>
+             * <li>EqualToThreshold: equal to the threshold</li>
+             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * </ul>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-             * *   GreaterThanThreshold: greater than the threshold
-             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-             * *   LessThanThreshold: less than the threshold
-             * *   NotEqualToThreshold: not equal to the threshold
-             * *   EqualToThreshold: equal to the threshold
-             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
-             * *   LessThanYesterday: less than the metric value at the same time yesterday
-             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-             * *   LessThanLastWeek: less than the metric value at the same time last week
-             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
-             * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -854,12 +941,14 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The statistical methods for Warn-level alerts.
-             * <p>
+             * <p>The statistical methods for Warn-level alerts.</p>
+             * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).
-             * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -867,10 +956,13 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The threshold for Warn-level alerts.
-             * <p>
+             * <p>The threshold for Warn-level alerts.</p>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -878,10 +970,13 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.
-             * <p>
+             * <p>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</p>
+             * <blockquote>
+             * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+             * </blockquote>
              * 
-             * >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -895,6 +990,12 @@ public class PutResourceMetricRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRuleRequest</p>
+     */
     public static class Escalations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Critical")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -979,6 +1080,12 @@ public class PutResourceMetricRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRuleRequest</p>
+     */
     public static class ExpressionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
@@ -1054,21 +1161,24 @@ public class PutResourceMetricRuleRequest extends Request {
             private String threshold; 
 
             /**
-             * The operator that is used to compare the metric value with the threshold. Valid value:
-             * <p>
+             * <p>The operator that is used to compare the metric value with the threshold. Valid value:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+             * <li>GreaterThanThreshold: greater than the threshold</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+             * <li>LessThanThreshold: less than the threshold</li>
+             * <li>NotEqualToThreshold: not equal to the threshold</li>
+             * <li>EqualToThreshold: equal to the threshold</li>
+             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * </ul>
              * 
-             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-             * *   GreaterThanThreshold: greater than the threshold
-             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-             * *   LessThanThreshold: less than the threshold
-             * *   NotEqualToThreshold: not equal to the threshold
-             * *   EqualToThreshold: equal to the threshold
-             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
-             * *   LessThanYesterday: less than the metric value at the same time yesterday
-             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-             * *   LessThanLastWeek: less than the metric value at the same time last week
-             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -1076,7 +1186,10 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The metric that is used to monitor the cloud service.
+             * <p>The metric that is used to monitor the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1084,10 +1197,11 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The aggregation period of the metric.
-             * <p>
+             * <p>The aggregation period of the metric.</p>
+             * <p>Unit: seconds.</p>
              * 
-             * Unit: seconds.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -1095,15 +1209,19 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The statistical method of the metric. Valid value:
-             * <p>
+             * <p>The statistical method of the metric. Valid value:</p>
+             * <ul>
+             * <li>$Maximum: the maximum value</li>
+             * <li>$Minimum: the minimum value</li>
+             * <li>$Average: the average value</li>
+             * <li>$Availability: the availability rate (usually used for site monitoring)</li>
+             * </ul>
+             * <blockquote>
+             * <p> <code>$</code> is the prefix of the metric. For information about the Alibaba Cloud services that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * </blockquote>
              * 
-             * *   $Maximum: the maximum value
-             * *   $Minimum: the minimum value
-             * *   $Average: the average value
-             * *   $Availability: the availability rate (usually used for site monitoring)
-             * 
-             * >  `$` is the prefix of the metric. For information about the Alibaba Cloud services that are supported by CloudMonitor, see [Appendix 1: Metrics](~~163515~~).
+             * <strong>example:</strong>
+             * <p>$Maximum</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -1111,7 +1229,10 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The alert threshold.
+             * <p>The alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -1125,6 +1246,12 @@ public class PutResourceMetricRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRuleRequest</p>
+     */
     public static class CompositeExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpressionList")
         private java.util.List < ExpressionList> expressionList;
@@ -1200,7 +1327,7 @@ public class PutResourceMetricRuleRequest extends Request {
             private Integer times; 
 
             /**
-             * The trigger conditions that are created in standard mode.
+             * <p>The trigger conditions that are created in standard mode.</p>
              */
             public Builder expressionList(java.util.List < ExpressionList> expressionList) {
                 this.expressionList = expressionList;
@@ -1208,11 +1335,14 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The relationship between the trigger conditions for multiple metrics. Valid value:
-             * <p>
+             * <p>The relationship between the trigger conditions for multiple metrics. Valid value:</p>
+             * <ul>
+             * <li><code>&amp;&amp;</code>: An alert is triggered only if all metrics meet the trigger conditions. An alert is triggered only if the results of all expressions specified in the ExpressionList parameter are <code>true</code>.</li>
+             * <li><code>||</code>: An alert is triggered if one of the metrics meets the trigger conditions.</li>
+             * </ul>
              * 
-             * *   `&&`: An alert is triggered only if all metrics meet the trigger conditions. An alert is triggered only if the results of all expressions specified in the ExpressionList parameter are `true`.
-             * *   `||`: An alert is triggered if one of the metrics meets the trigger conditions.
+             * <strong>example:</strong>
+             * <p>||</p>
              */
             public Builder expressionListJoin(String expressionListJoin) {
                 this.expressionListJoin = expressionListJoin;
@@ -1220,12 +1350,15 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The trigger conditions that are created by using expressions. You can use expressions to create trigger conditions in the following scenarios:
-             * <p>
+             * <p>The trigger conditions that are created by using expressions. You can use expressions to create trigger conditions in the following scenarios:</p>
+             * <ul>
+             * <li>Set an alert blacklist for specific resources. For example, if you specify <code>$instanceId != \&quot;i-io8kfvcpp7x5****\&quot; ``&amp;&amp;`` $Average &gt; 50</code>, no alert is triggered when the <code>average metric value</code> of the <code>i-io8kfvcpp7x5****</code> instance exceeds 50.</li>
+             * <li>Set a special alert threshold for a specified instance in the rule. For example, if you specify <code>$Average &gt; ($instanceId == \&quot;i-io8kfvcpp7x5****\&quot;? 80: 50)</code>, an alert is triggered when the <code>average metric value</code> of the <code>i-io8kfvcpp7x5****</code> instance exceeds 80 or the <code>average metric value</code> of other instances exceeds 50.</li>
+             * <li>Limit the number of instances whose metric values exceed the threshold. For example, if you specify <code>count($Average &gt; 20) &gt; 3</code>, an alert is triggered only when the <code>average metric value</code> of more than three instances exceeds 20.</li>
+             * </ul>
              * 
-             * *   Set an alert blacklist for specific resources. For example, if you specify `$instanceId != \"i-io8kfvcpp7x5****\" ``&&`` $Average > 50`, no alert is triggered when the `average metric value` of the `i-io8kfvcpp7x5****` instance exceeds 50.
-             * *   Set a special alert threshold for a specified instance in the rule. For example, if you specify `$Average > ($instanceId == \"i-io8kfvcpp7x5****\"? 80: 50)`, an alert is triggered when the `average metric value` of the `i-io8kfvcpp7x5****` instance exceeds 80 or the `average metric value` of other instances exceeds 50.
-             * *   Limit the number of instances whose metric values exceed the threshold. For example, if you specify `count($Average > 20) > 3`, an alert is triggered only when the `average metric value` of more than three instances exceeds 20.
+             * <strong>example:</strong>
+             * <p>$Average &gt; ($instanceId == &quot;i-io8kfvcpp7x5****&quot;? 80: 50)</p>
              */
             public Builder expressionRaw(String expressionRaw) {
                 this.expressionRaw = expressionRaw;
@@ -1233,12 +1366,15 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The alert level. Valid values:
-             * <p>
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li>Critical</li>
+             * <li>Warn</li>
+             * <li>Info</li>
+             * </ul>
              * 
-             * *   Critical
-             * *   Warn
-             * *   Info
+             * <strong>example:</strong>
+             * <p>Critical</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1246,7 +1382,10 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The number of consecutive triggers. If the number of times that the metric values meet the trigger conditions reaches the value of this parameter, CloudMonitor sends alert notifications.
+             * <p>The number of consecutive triggers. If the number of times that the metric values meet the trigger conditions reaches the value of this parameter, CloudMonitor sends alert notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -1260,6 +1399,12 @@ public class PutResourceMetricRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRuleRequest</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1299,7 +1444,10 @@ public class PutResourceMetricRuleRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1307,10 +1455,13 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <blockquote>
+             * <p> You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.</p>
+             * </blockquote>
              * 
-             * >  You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1324,6 +1475,12 @@ public class PutResourceMetricRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRuleRequest</p>
+     */
     public static class Annotations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1363,7 +1520,10 @@ public class PutResourceMetricRuleRequest extends Request {
             private String value; 
 
             /**
-             * The key of the annotation.
+             * <p>The key of the annotation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>summary</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1371,7 +1531,10 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The value of the annotation.
+             * <p>The value of the annotation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{{ $labels.instance }} CPU usage above 10% {current value: {{ humanizePercentage $value }} }</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1385,6 +1548,12 @@ public class PutResourceMetricRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRuleRequest</p>
+     */
     public static class Prometheus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Annotations")
         private java.util.List < Annotations> annotations;
@@ -1448,10 +1617,10 @@ public class PutResourceMetricRuleRequest extends Request {
             private Integer times; 
 
             /**
-             * The annotations of the Prometheus alert rule. When a Prometheus alert is triggered, the system renders the annotated keys and values to help you understand the metrics and alert rule.
-             * <p>
-             * 
-             * >  This parameter is equivalent to the annotations parameter of open source Prometheus.
+             * <p>The annotations of the Prometheus alert rule. When a Prometheus alert is triggered, the system renders the annotated keys and values to help you understand the metrics and alert rule.</p>
+             * <blockquote>
+             * <p> This parameter is equivalent to the annotations parameter of open source Prometheus.</p>
+             * </blockquote>
              */
             public Builder annotations(java.util.List < Annotations> annotations) {
                 this.annotations = annotations;
@@ -1459,12 +1628,15 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The alert level. Valid values:
-             * <p>
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li>Critical</li>
+             * <li>Warn</li>
+             * <li>Info</li>
+             * </ul>
              * 
-             * *   Critical
-             * *   Warn
-             * *   Info
+             * <strong>example:</strong>
+             * <p>Critical</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1472,10 +1644,13 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * PromQL statements are supported.
-             * <p>
+             * <p>PromQL statements are supported.</p>
+             * <blockquote>
+             * <p> The data obtained by using the PromQL query statement is the monitoring data. You must include the alert threshold in this statement.</p>
+             * </blockquote>
              * 
-             * >  The data obtained by using the PromQL query statement is the monitoring data. You must include the alert threshold in this statement.
+             * <strong>example:</strong>
+             * <p>cpuUsage{instanceId=&quot;xxxx&quot;}[1m]&gt;90</p>
              */
             public Builder promQL(String promQL) {
                 this.promQL = promQL;
@@ -1483,7 +1658,10 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * The number of consecutive triggers. If the number of times that the metric values meet the trigger conditions reaches the value of this parameter, CloudMonitor sends alert notifications.
+             * <p>The number of consecutive triggers. If the number of times that the metric values meet the trigger conditions reaches the value of this parameter, CloudMonitor sends alert notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetricRuleTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteMetricRuleTemplateRequest</p>
@@ -54,7 +55,11 @@ public class DeleteMetricRuleTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the alert template.
+         * <p>The ID of the alert template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

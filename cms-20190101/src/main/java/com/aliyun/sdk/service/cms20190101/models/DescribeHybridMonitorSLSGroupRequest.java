@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridMonitorSLSGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeHybridMonitorSLSGroupRequest</p>
@@ -95,7 +96,10 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
         } 
 
         /**
-         * The keyword that is used to search for Logstore groups.
+         * <p>The keyword that is used to search for Logstore groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logstore</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -104,10 +108,11 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,10 +121,11 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Minimum value: 1. Default value: 10.</p>
          * 
-         * Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +134,10 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
         }
 
         /**
-         * The name of the Logstore group.
+         * <p>The name of the Logstore group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logstore_test</p>
          */
         public Builder SLSGroupName(String SLSGroupName) {
             this.putQueryParameter("SLSGroupName", SLSGroupName);

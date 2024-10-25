@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableHostAvailabilityResponseBody} extends {@link TeaModel}
  *
  * <p>EnableHostAvailabilityResponseBody</p>
@@ -73,10 +74,13 @@ public class EnableHostAvailabilityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p> The HTTP status code 200 indicates a success.</p>
+         * </blockquote>
          * 
-         * >  The HTTP status code 200 indicates a success.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -84,7 +88,10 @@ public class EnableHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -92,7 +99,10 @@ public class EnableHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACBDBB40-DFB6-4F4C-8957-51FFB233969C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,11 +110,14 @@ public class EnableHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: successful.</li>
+         * <li>false: failed.</li>
+         * </ul>
          * 
-         * *   true: successful.
-         * *   false: failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

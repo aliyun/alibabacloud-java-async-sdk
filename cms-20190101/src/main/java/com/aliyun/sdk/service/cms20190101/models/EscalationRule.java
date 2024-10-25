@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EscalationRule} extends {@link TeaModel}
  *
  * <p>EscalationRule</p>
@@ -127,7 +128,7 @@ public class EscalationRule extends TeaModel {
         }
 
         /**
-         * Escalations.
+         * <p>This parameter is required.</p>
          */
         public Builder escalations(java.util.List < Escalations> escalations) {
             this.escalations = escalations;
@@ -135,7 +136,7 @@ public class EscalationRule extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -172,6 +173,12 @@ public class EscalationRule extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EscalationRule} extends {@link TeaModel}
+     *
+     * <p>EscalationRule</p>
+     */
     public static class ContactGroupsByLevel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Critical")
         private java.util.List < String > critical;
@@ -293,6 +300,12 @@ public class EscalationRule extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EscalationRule} extends {@link TeaModel}
+     *
+     * <p>EscalationRule</p>
+     */
     public static class Escalations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupContactGroups")
         private java.util.List < String > backupContactGroups;

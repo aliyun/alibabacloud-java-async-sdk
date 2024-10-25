@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMonitorGroupDynamicRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteMonitorGroupDynamicRuleRequest</p>
@@ -69,7 +70,11 @@ public class DeleteMonitorGroupDynamicRuleRequest extends Request {
         } 
 
         /**
-         * The service to which the rule applies. Valid values: ecs, rds, and slb.
+         * <p>The service to which the rule applies. Valid values: ecs, rds, and slb.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -78,7 +83,11 @@ public class DeleteMonitorGroupDynamicRuleRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);

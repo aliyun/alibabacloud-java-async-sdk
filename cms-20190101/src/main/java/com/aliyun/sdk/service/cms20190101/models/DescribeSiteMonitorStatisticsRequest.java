@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSiteMonitorStatisticsRequest</p>
@@ -97,12 +98,16 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         } 
 
         /**
-         * The metric name. Valid values:
-         * <p>
+         * <p>The metric name. Valid values:</p>
+         * <ul>
+         * <li>Availability</li>
+         * <li>ErrorRate</li>
+         * <li>ResponseTime</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Availability
-         * *   ErrorRate
-         * *   ResponseTime
+         * <strong>example:</strong>
+         * <p>Availability</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -111,10 +116,11 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Unit: milliseconds. The default value is 1 hour ahead of the current time.</p>
          * 
-         * Unit: milliseconds. The default value is 1 hour ahead of the current time.
+         * <strong>example:</strong>
+         * <p>1576142850527</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -123,10 +129,12 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         }
 
         /**
-         * The ID of the site monitoring task.
-         * <p>
+         * <p>The ID of the site monitoring task.</p>
+         * <p>For more information about how to obtain the ID of a site monitoring task, see <a href="https://help.aliyun.com/document_detail/115052.html">DescribeSiteMonitorList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a site monitoring task, see [DescribeSiteMonitorList](~~115052~~).
+         * <strong>example:</strong>
+         * <p>ef4cdc8b-9dc7-43e7-810e-f950e56c****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -135,10 +143,11 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         }
 
         /**
-         * The statistical period.
-         * <p>
+         * <p>The statistical period.</p>
+         * <p>Unit: minutes. Default value: 1440 (one day). Maximum value: 43200 (30 days).</p>
          * 
-         * Unit: minutes. Default value: 1440 (one day). Maximum value: 43200 (30 days).
+         * <strong>example:</strong>
+         * <p>1440</p>
          */
         public Builder timeRange(String timeRange) {
             this.putQueryParameter("TimeRange", timeRange);

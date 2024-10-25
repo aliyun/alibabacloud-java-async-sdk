@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHybridMonitorNamespaceRequest} extends {@link RequestModel}
  *
  * <p>DeleteHybridMonitorNamespaceRequest</p>
@@ -54,10 +55,12 @@ public class DeleteHybridMonitorNamespaceRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

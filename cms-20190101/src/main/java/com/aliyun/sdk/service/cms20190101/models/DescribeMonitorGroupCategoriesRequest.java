@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupCategoriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeMonitorGroupCategoriesRequest</p>
@@ -54,7 +55,11 @@ public class DescribeMonitorGroupCategoriesRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);

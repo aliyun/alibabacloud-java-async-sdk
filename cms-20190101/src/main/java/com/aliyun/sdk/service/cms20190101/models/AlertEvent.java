@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AlertEvent} extends {@link TeaModel}
  *
  * <p>AlertEvent</p>
@@ -430,6 +431,12 @@ public class AlertEvent extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AlertEvent} extends {@link TeaModel}
+     *
+     * <p>AlertEvent</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurValue")
         private String curValue;

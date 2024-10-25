@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrationJob} extends {@link TeaModel}
  *
  * <p>MigrationJob</p>
@@ -190,6 +191,12 @@ public class MigrationJob extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Channels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Level")
         private Long level;
@@ -271,6 +278,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
         private java.util.List < Channels> channels;
@@ -332,6 +345,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class LevelGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Critical")
         private java.util.List < String > critical;
@@ -433,6 +452,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Escalations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Groups")
         private java.util.List < String > groups;
@@ -494,6 +519,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class PlanEscalations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Escalations")
         private java.util.List < Escalations> escalations;
@@ -575,6 +606,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contacts")
         private java.util.List < String > contacts;
@@ -636,6 +673,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class EscalationSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("escalationUuid")
         private String escalationUuid;
@@ -677,6 +720,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class PushingSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetUuids")
         private java.util.List < String > targetUuids;
@@ -718,6 +767,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Strategies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EscalationSetting")
         private EscalationSetting escalationSetting;
@@ -799,6 +854,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
@@ -880,6 +941,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Subscriptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
@@ -961,6 +1028,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class HttpRequestTarget extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
@@ -1042,6 +1115,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Targets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -1163,6 +1242,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Plan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contacts")
         private java.util.List < Contacts> contacts;
@@ -1324,6 +1409,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class KeywordFilter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keywords")
         private java.util.List < String > keywords;
@@ -1385,6 +1476,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class PrimaryFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
@@ -1466,6 +1563,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Rule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeywordFilter")
         private KeywordFilter keywordFilter;
@@ -1547,6 +1650,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
@@ -1688,6 +1797,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class SourceTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
@@ -1749,6 +1864,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
         private Rule rule;

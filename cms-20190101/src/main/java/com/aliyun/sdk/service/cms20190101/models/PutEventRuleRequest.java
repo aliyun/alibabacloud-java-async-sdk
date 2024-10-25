@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutEventRuleRequest} extends {@link RequestModel}
  *
  * <p>PutEventRuleRequest</p>
@@ -139,7 +140,7 @@ public class PutEventRuleRequest extends Request {
         } 
 
         /**
-         * The description of the event-triggered alert rule.
+         * <p>The description of the event-triggered alert rule.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -148,7 +149,7 @@ public class PutEventRuleRequest extends Request {
         }
 
         /**
-         * EventPattern.
+         * <p>This parameter is required.</p>
          */
         public Builder eventPattern(java.util.List < EventPattern> eventPattern) {
             this.putQueryParameter("EventPattern", eventPattern);
@@ -157,11 +158,14 @@ public class PutEventRuleRequest extends Request {
         }
 
         /**
-         * The type of the event-triggered alert rule. Valid values:
-         * <p>
+         * <p>The type of the event-triggered alert rule. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: system event-triggered alert rule</li>
+         * <li>CUSTOM: custom event-triggered alert rule</li>
+         * </ul>
          * 
-         * *   SYSTEM: system event-triggered alert rule
-         * *   CUSTOM: custom event-triggered alert rule
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -170,7 +174,10 @@ public class PutEventRuleRequest extends Request {
         }
 
         /**
-         * The ID of the application group to which the event-triggered alert rule belongs.
+         * <p>The ID of the application group to which the event-triggered alert rule belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7378****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -179,7 +186,11 @@ public class PutEventRuleRequest extends Request {
         }
 
         /**
-         * The name of the event-triggered alert rule.
+         * <p>The name of the event-triggered alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myRuleName</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -188,7 +199,10 @@ public class PutEventRuleRequest extends Request {
         }
 
         /**
-         * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds.
+         * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder silenceTime(Long silenceTime) {
             this.putQueryParameter("SilenceTime", silenceTime);
@@ -197,11 +211,14 @@ public class PutEventRuleRequest extends Request {
         }
 
         /**
-         * The status of the event-triggered alert rule. Valid values:
-         * <p>
+         * <p>The status of the event-triggered alert rule. Valid values:</p>
+         * <ul>
+         * <li>ENABLED: enabled</li>
+         * <li>DISABLED: disabled</li>
+         * </ul>
          * 
-         * *   ENABLED: enabled
-         * *   DISABLED: disabled
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -216,6 +233,12 @@ public class PutEventRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutEventRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutEventRuleRequest</p>
+     */
     public static class EventPattern extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomFilters")
         private String customFilters;
@@ -316,7 +339,10 @@ public class PutEventRuleRequest extends Request {
             private java.util.List < String > statusList; 
 
             /**
-             * The keyword that is used to filter events. If the content of an event contains the specified keyword, an alert is automatically triggered.
+             * <p>The keyword that is used to filter events. If the content of an event contains the specified keyword, an alert is automatically triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stopping</p>
              */
             public Builder customFilters(String customFilters) {
                 this.customFilters = customFilters;
@@ -348,10 +374,14 @@ public class PutEventRuleRequest extends Request {
             }
 
             /**
-             * The type of the cloud service. Valid values of N: 1 to 50.
-             * <p>
+             * <p>The type of the cloud service. Valid values of N: 1 to 50.</p>
+             * <blockquote>
+             * <p> You can call the DescribeSystemEventMetaList operation to query the cloud services that support event-triggered alerts. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  You can call the DescribeSystemEventMetaList operation to query the cloud services that support event-triggered alerts. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -359,10 +389,13 @@ public class PutEventRuleRequest extends Request {
             }
 
             /**
-             * The SQL condition that is used to filter events. If the content of an event meets the specified SQL condition, an alert is automatically triggered.
-             * <p>
+             * <p>The SQL condition that is used to filter events. If the content of an event meets the specified SQL condition, an alert is automatically triggered.</p>
+             * <blockquote>
+             * <p> The syntax of SQL event filtering is consistent with the query syntax of Log Service.</p>
+             * </blockquote>
              * 
-             * >  The syntax of SQL event filtering is consistent with the query syntax of Log Service.
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX and Executed</p>
              */
             public Builder SQLFilter(String SQLFilter) {
                 this.SQLFilter = SQLFilter;

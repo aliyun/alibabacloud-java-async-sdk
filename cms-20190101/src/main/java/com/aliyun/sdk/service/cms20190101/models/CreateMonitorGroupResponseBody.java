@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMonitorGroupResponseBody</p>
@@ -85,10 +86,13 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder groupId(Long groupId) {
             this.groupId = groupId;
@@ -104,7 +111,10 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +122,10 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83C89BA6-ABD4-4398-A175-83E86C47A001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +133,14 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

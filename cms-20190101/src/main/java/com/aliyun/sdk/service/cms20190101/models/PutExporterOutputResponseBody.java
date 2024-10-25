@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutExporterOutputResponseBody} extends {@link TeaModel}
  *
  * <p>PutExporterOutputResponseBody</p>
@@ -73,10 +74,13 @@ public class PutExporterOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -84,7 +88,10 @@ public class PutExporterOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -92,7 +99,10 @@ public class PutExporterOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A5F022D-AC7C-460E-94AE-B9E75083D027</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,7 +110,10 @@ public class PutExporterOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. true: The request was successful. false: The request failed.
+         * <p>Indicates whether the request was successful. true: The request was successful. false: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

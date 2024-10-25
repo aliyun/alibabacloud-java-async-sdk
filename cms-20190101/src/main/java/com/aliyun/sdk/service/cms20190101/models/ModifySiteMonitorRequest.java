@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySiteMonitorRequest} extends {@link RequestModel}
  *
  * <p>ModifySiteMonitorRequest</p>
@@ -166,7 +167,10 @@ public class ModifySiteMonitorRequest extends Request {
         } 
 
         /**
-         * The URL or IP address that is monitored by the task.
+         * <p>The URL or IP address that is monitored by the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -175,7 +179,10 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule. You can call the DescribeMetricRuleList operation to query the IDs of existing alert rules in CloudMonitor. For more information, see [DescribeMetricRuleList](~~114941~~).
+         * <p>The ID of the alert rule. You can call the DescribeMetricRuleList operation to query the IDs of existing alert rules in CloudMonitor. For more information, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49f7c317-7645-4cc9-94fd-ea42e122****</p>
          */
         public Builder alertIds(String alertIds) {
             this.putQueryParameter("AlertIds", alertIds);
@@ -184,7 +191,10 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The custom detection period. You can only select a time period from Monday to Sunday for detection.
+         * <p>The custom detection period. You can only select a time period from Monday to Sunday for detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;start_hour&quot;:0,&quot;end_hour&quot;:24, &quot;days&quot;:[0], &quot;time_zone&quot;:&quot;Local&quot;}</p>
          */
         public Builder customSchedule(String customSchedule) {
             this.putQueryParameter("CustomSchedule", customSchedule);
@@ -193,7 +203,10 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The interval at which detection requests are sent. Valid values: 1, 5, and 15. Unit: minutes. Default value: 1.
+         * <p>The interval at which detection requests are sent. Valid values: 1, 5, and 15. Unit: minutes. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -202,10 +215,11 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The unit of the metric.
-         * <p>
+         * <p>The unit of the metric.</p>
+         * <p>Unit: milliseconds.</p>
          * 
-         * Unit: milliseconds.
+         * <strong>example:</strong>
+         * <p>ms</p>
          */
         public Builder intervalUnit(String intervalUnit) {
             this.putQueryParameter("IntervalUnit", intervalUnit);
@@ -214,10 +228,13 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The information of the detection points. The value is a JSON array. Example: `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`. The values of the `city` field indicate Beijing, Hangzhou, and Qingdao.
-         * <p>
+         * <p>The information of the detection points. The value is a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>. The values of the <code>city</code> field indicate Beijing, Hangzhou, and Qingdao.</p>
+         * <blockquote>
+         * <p>You can call the DescribeSiteMonitorISPCityList operation to query the detection points. For more information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>. If you leave this parameter empty, the system randomly selects three detection points.</p>
+         * </blockquote>
          * 
-         * > You can call the DescribeSiteMonitorISPCityList operation to query the detection points. For more information, see [DescribeSiteMonitorISPCityList](~~115045~~). If you leave this parameter empty, the system randomly selects three detection points.
+         * <strong>example:</strong>
+         * <p>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</p>
          */
         public Builder ispCities(String ispCities) {
             this.putQueryParameter("IspCities", ispCities);
@@ -226,7 +243,10 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
+         * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;time_out&quot;:5000}</p>
          */
         public Builder optionsJson(String optionsJson) {
             this.putQueryParameter("OptionsJson", optionsJson);
@@ -235,7 +255,11 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the site monitoring task.
+         * <p>The ID of the site monitoring task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2c8dbdf9-a3ab-46a1-85a4-f094965e****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -244,7 +268,10 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The name of the site monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+         * <p>The name of the site monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HanZhou_ECS2</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

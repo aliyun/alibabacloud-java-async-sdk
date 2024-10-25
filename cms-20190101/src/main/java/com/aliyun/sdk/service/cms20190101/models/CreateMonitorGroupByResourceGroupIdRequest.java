@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorGroupByResourceGroupIdRequest} extends {@link RequestModel}
  *
  * <p>CreateMonitorGroupByResourceGroupIdRequest</p>
@@ -127,10 +128,12 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         } 
 
         /**
-         * The alert contact groups. The alert notifications of the application group are sent to the alert contacts that belong to the specified alert contact groups.
-         * <p>
+         * <p>The alert contact groups. The alert notifications of the application group are sent to the alert contacts that belong to the specified alert contact groups.</p>
+         * <p>An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~). For information about how to obtain alert contact groups, see [DescribeContactGroupList](~~114922~~).
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         public Builder contactGroupList(java.util.List < String > contactGroupList) {
             this.putQueryParameter("ContactGroupList", contactGroupList);
@@ -139,11 +142,14 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:
-         * <p>
+         * <p>Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:</p>
+         * <ul>
+         * <li>true: The CloudMonitor agent is automatically installed.</li>
+         * <li>false (default): The CloudMonitor agent is not automatically installed.</li>
+         * </ul>
          * 
-         * *   true: The CloudMonitor agent is automatically installed.
-         * *   false (default): The CloudMonitor agent is not automatically installed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInstallAgent(Boolean enableInstallAgent) {
             this.putQueryParameter("EnableInstallAgent", enableInstallAgent);
@@ -152,11 +158,14 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:
-         * <p>
+         * <p>Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:</p>
+         * <ul>
+         * <li>true: The application group automatically subscribes to event notifications.</li>
+         * <li>false (default): The application group does not automatically subscribe to event notifications.</li>
+         * </ul>
          * 
-         * *   true: The application group automatically subscribes to event notifications.
-         * *   false (default): The application group does not automatically subscribe to event notifications.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSubscribeEvent(Boolean enableSubscribeEvent) {
             this.putQueryParameter("EnableSubscribeEvent", enableSubscribeEvent);
@@ -165,10 +174,12 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * The ID of the region where the resource group resides.
-         * <p>
+         * <p>The ID of the region where the resource group resides.</p>
+         * <p>For information about how to obtain the ID of the region where a resource group resides, see <a href="https://help.aliyun.com/document_detail/158866.html">GetResourceGroup</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the ID of the region where a resource group resides, see [GetResourceGroup](~~158866~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,10 +188,12 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
-         * <p>
+         * <p>The ID of the resource group.</p>
+         * <p>For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the ID of a resource group, see [ListResourceGroups](~~158855~~).
+         * <strong>example:</strong>
+         * <p>rg-acfmw3ty5y7****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -189,10 +202,12 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <p>For information about how to obtain the name of a resource group, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the name of a resource group, see [ListResourceGroups](~~158855~~).
+         * <strong>example:</strong>
+         * <p>CloudMonitor</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemEventHistogramRequest} extends {@link RequestModel}
  *
  * <p>DescribeSystemEventHistogramRequest</p>
@@ -165,10 +166,11 @@ public class DescribeSystemEventHistogramRequest extends Request {
         } 
 
         /**
-         * The end time.
-         * <p>
+         * <p>The end time.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1552220485596</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -177,10 +179,13 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The event type.
-         * <p>
+         * <p>The event type.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the types of system events.
+         * <strong>example:</strong>
+         * <p>Exception</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -189,7 +194,10 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -198,12 +206,15 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The level of the event. Valid values:
-         * <p>
+         * <p>The level of the event. Valid values:</p>
+         * <ul>
+         * <li>CRITICAL</li>
+         * <li>WARN</li>
+         * <li>INFO</li>
+         * </ul>
          * 
-         * *   CRITICAL
-         * *   WARN
-         * *   INFO
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -212,10 +223,13 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The event name.
-         * <p>
+         * <p>The event name.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the names of system events.
+         * <strong>example:</strong>
+         * <p>BucketIngressBandwidth</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -224,10 +238,13 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The abbreviation of the service name.
-         * <p>
+         * <p>The abbreviation of the service name.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the abbreviations of service names.
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -236,11 +253,14 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The keywords that are used to search for the system event. Valid values:
-         * <p>
+         * <p>The keywords that are used to search for the system event. Valid values:</p>
+         * <ul>
+         * <li>If you want to search for the system event whose content contains a and b, set the value to <code>a and b</code>.</li>
+         * <li>If you want to search for the system event whose content contains a or b, set the value to <code>a or b</code>.</li>
+         * </ul>
          * 
-         * *   If you want to search for the system event whose content contains a and b, set the value to `a and b`.
-         * *   If you want to search for the system event whose content contains a or b, set the value to `a or b`.
+         * <strong>example:</strong>
+         * <p>cms</p>
          */
         public Builder searchKeywords(String searchKeywords) {
             this.putQueryParameter("SearchKeywords", searchKeywords);
@@ -249,10 +269,11 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The start time.
-         * <p>
+         * <p>The start time.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1552209685596</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -261,10 +282,13 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The event status.
-         * <p>
+         * <p>The event status.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the status of system events.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the status of system events.
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

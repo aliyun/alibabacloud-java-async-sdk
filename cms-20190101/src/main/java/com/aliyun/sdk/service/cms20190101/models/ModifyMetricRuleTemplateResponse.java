@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMetricRuleTemplateResponse} extends {@link TeaModel}
  *
  * <p>ModifyMetricRuleTemplateResponse</p>

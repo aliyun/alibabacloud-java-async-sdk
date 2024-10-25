@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteExporterRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteExporterRuleRequest</p>
@@ -54,7 +55,11 @@ public class DeleteExporterRuleRequest extends Request {
         } 
 
         /**
-         * The name of the data export rule.
+         * <p>The name of the data export rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myRuleName</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

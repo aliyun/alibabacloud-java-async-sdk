@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMonitorGroupNotifyPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteMonitorGroupNotifyPolicyRequest</p>
@@ -68,7 +69,10 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6780****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -77,10 +81,12 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends Request {
         }
 
         /**
-         * The policy type.
-         * <p>
+         * <p>The policy type.</p>
+         * <p>Valid value: PauseNotify.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid value: PauseNotify.
+         * <strong>example:</strong>
+         * <p>PauseNotify</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridMonitorTaskListRequest} extends {@link RequestModel}
  *
  * <p>DescribeHybridMonitorTaskListRequest</p>
@@ -165,10 +166,11 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
-         * <p>
+         * <p>The ID of the application group.</p>
+         * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
          * 
-         * For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * <strong>example:</strong>
+         * <p>3607****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -177,11 +179,14 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * Specifies whether the returned result includes metric import tasks for Alibaba Cloud services. Valid values:
-         * <p>
+         * <p>Specifies whether the returned result includes metric import tasks for Alibaba Cloud services. Valid values:</p>
+         * <ul>
+         * <li>true (default): The returned result includes metric import tasks for Alibaba Cloud services.</li>
+         * <li>false: The returned result excludes metric import tasks for Alibaba Cloud services.</li>
+         * </ul>
          * 
-         * *   true (default): The returned result includes metric import tasks for Alibaba Cloud services.
-         * *   false: The returned result excludes metric import tasks for Alibaba Cloud services.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeAliyunTask(Boolean includeAliyunTask) {
             this.putQueryParameter("IncludeAliyunTask", includeAliyunTask);
@@ -190,7 +195,10 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The keyword that is used for the search.
+         * <p>The keyword that is used for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -199,10 +207,11 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
          * 
-         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -211,10 +220,11 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -223,10 +233,11 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Pages start from page 1. Default value: 10.</p>
          * 
-         * Pages start from page 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,10 +246,13 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The ID of the member account.
-         * <p>
+         * <p>The ID of the member account.</p>
+         * <blockquote>
+         * <p>This parameter is required only if you use a management account to call this operation to delete the metric import tasks that belong to a member in a resource directory. In this case, the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only if you use a management account to call this operation to delete the metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         public Builder targetUserId(Long targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);
@@ -247,7 +261,10 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The ID of the metric import task.
+         * <p>The ID of the metric import task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -256,11 +273,14 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The type of the metric import task. Valid values:
-         * <p>
+         * <p>The type of the metric import task. Valid values:</p>
+         * <ul>
+         * <li>aliyun_fc: metric import tasks for Alibaba Cloud services</li>
+         * <li>aliyun_sls: metrics for logs imported from Log Service</li>
+         * </ul>
          * 
-         * *   aliyun_fc: metric import tasks for Alibaba Cloud services
-         * *   aliyun_sls: metrics for logs imported from Log Service
+         * <strong>example:</strong>
+         * <p>aliyun_fc</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

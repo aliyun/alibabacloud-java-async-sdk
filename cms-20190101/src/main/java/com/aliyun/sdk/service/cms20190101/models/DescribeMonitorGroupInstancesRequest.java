@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeMonitorGroupInstancesRequest</p>
@@ -124,10 +125,13 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         } 
 
         /**
-         * The abbreviation of the cloud service name. Valid values of N: 1 to 200.
-         * <p>
+         * <p>The abbreviation of the cloud service name. Valid values of N: 1 to 200.</p>
+         * <blockquote>
+         * <p> For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * </blockquote>
          * 
-         * >  For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](~~114916~~) operation.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -136,7 +140,11 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -145,7 +153,10 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID. You can query multiple instances by specifying multiple IDs.
+         * <p>The instance ID. You can query multiple instances by specifying multiple IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-x1234568</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -154,7 +165,10 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The keyword used to search for instances. Fuzzy search based on instance names is supported.
+         * <p>The keyword used to search for instances. Fuzzy search based on instance names is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s1</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -163,7 +177,10 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -172,7 +189,10 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

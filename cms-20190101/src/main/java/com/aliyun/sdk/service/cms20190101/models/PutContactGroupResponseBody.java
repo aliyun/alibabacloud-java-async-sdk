@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutContactGroupResponseBody} extends {@link TeaModel}
  *
  * <p>PutContactGroupResponseBody</p>
@@ -73,10 +74,13 @@ public class PutContactGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -84,7 +88,10 @@ public class PutContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Illegal parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -92,7 +99,10 @@ public class PutContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4E30DB6-F069-5D0B-A589-2A89F7D62A57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,11 +110,14 @@ public class PutContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

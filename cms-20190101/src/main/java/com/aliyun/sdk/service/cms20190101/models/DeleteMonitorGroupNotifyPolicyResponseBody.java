@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMonitorGroupNotifyPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMonitorGroupNotifyPolicyResponseBody</p>
@@ -85,10 +86,13 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,7 +111,10 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7AF834D-D38B-4A46-920B-FE974EB7E135</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,7 +122,10 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of affected rows.
+         * <p>The number of affected rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder result(Integer result) {
             this.result = result;
@@ -120,11 +133,14 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

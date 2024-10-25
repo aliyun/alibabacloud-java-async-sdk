@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDynamicTagGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateDynamicTagGroupRequest</p>
@@ -154,7 +155,10 @@ public class CreateDynamicTagGroupRequest extends Request {
         } 
 
         /**
-         * ContactGroupList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         public Builder contactGroupList(java.util.List < String > contactGroupList) {
             this.putQueryParameter("ContactGroupList", contactGroupList);
@@ -163,11 +167,14 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:
-         * <p>
+         * <p>Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:</p>
+         * <ul>
+         * <li>true: The CloudMonitor agent is automatically installed.</li>
+         * <li>false (default value): The CloudMonitor agent is not automatically installed.</li>
+         * </ul>
          * 
-         * *   true: The CloudMonitor agent is automatically installed.
-         * *   false (default value): The CloudMonitor agent is not automatically installed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInstallAgent(Boolean enableInstallAgent) {
             this.putQueryParameter("EnableInstallAgent", enableInstallAgent);
@@ -176,11 +183,14 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:
-         * <p>
+         * <p>Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:</p>
+         * <ul>
+         * <li>true: The application group automatically subscribes to event notifications.</li>
+         * <li>false (default value): The application group does not automatically subscribe to event notifications.</li>
+         * </ul>
          * 
-         * *   true: The application group automatically subscribes to event notifications.
-         * *   false (default value): The application group does not automatically subscribe to event notifications.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSubscribeEvent(Boolean enableSubscribeEvent) {
             this.putQueryParameter("EnableSubscribeEvent", enableSubscribeEvent);
@@ -189,7 +199,8 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * The conditional expressions used to create an application group based on the tag.
+         * <p>The conditional expressions used to create an application group based on the tag.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
             this.putQueryParameter("MatchExpress", matchExpress);
@@ -198,11 +209,14 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * The relationship between the conditional expressions for the tag values of the cloud resources. Valid values:
-         * <p>
+         * <p>The relationship between the conditional expressions for the tag values of the cloud resources. Valid values:</p>
+         * <ul>
+         * <li>and (default value)</li>
+         * <li>or</li>
+         * </ul>
          * 
-         * *   and (default value)
-         * *   or
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder matchExpressFilterRelation(String matchExpressFilterRelation) {
             this.putQueryParameter("MatchExpressFilterRelation", matchExpressFilterRelation);
@@ -211,10 +225,12 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * The tag keys of the cloud resources.
-         * <p>
+         * <p>The tag keys of the cloud resources.</p>
+         * <p>For more information about how to obtain tag keys, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain tag keys, see [DescribeTagKeyList](~~145558~~).
+         * <strong>example:</strong>
+         * <p>ecs_instance</p>
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);
@@ -223,7 +239,10 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the tags belong.
+         * <p>The ID of the region to which the tags belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder tagRegionId(String tagRegionId) {
             this.putQueryParameter("TagRegionId", tagRegionId);
@@ -247,6 +266,12 @@ public class CreateDynamicTagGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDynamicTagGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDynamicTagGroupRequest</p>
+     */
     public static class MatchExpress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
@@ -298,7 +323,10 @@ public class CreateDynamicTagGroupRequest extends Request {
             private String tagValueMatchFunction; 
 
             /**
-             * The keys of the tags that are used to create the application group. If a specified key is attached to multiple resources, the resources that have the same key-value pair are added to the same group.
+             * <p>The keys of the tags that are used to create the application group. If a specified key is attached to multiple resources, the resources that have the same key-value pair are added to the same group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appname</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -306,10 +334,13 @@ public class CreateDynamicTagGroupRequest extends Request {
             }
 
             /**
-             * The tag values of the cloud resources. Set the value of N to 1.
-             * <p>
+             * <p>The tag values of the cloud resources. Set the value of N to 1.</p>
+             * <blockquote>
+             * <p> If you set the <code>MatchExpress.N.TagValueMatchFunction</code> parameter, you must also set the <code>MatchExpress.N.TagValue</code> parameter.</p>
+             * </blockquote>
              * 
-             * >  If you set the `MatchExpress.N.TagValueMatchFunction` parameter, you must also set the `MatchExpress.N.TagValue` parameter.
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -317,17 +348,21 @@ public class CreateDynamicTagGroupRequest extends Request {
             }
 
             /**
-             * The method that is used to match the tag values of the cloud resources. Set the value of N to 1. Valid values:
-             * <p>
+             * <p>The method that is used to match the tag values of the cloud resources. Set the value of N to 1. Valid values:</p>
+             * <ul>
+             * <li>contains: contains</li>
+             * <li>startWith: starts with a prefix</li>
+             * <li>endWith: ends with a suffix</li>
+             * <li>notContains: does not contain</li>
+             * <li>equals: equals</li>
+             * <li>all: matches all</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you set the <code>MatchExpress.N.TagValueMatchFunction</code> parameter, you must also set the <code>MatchExpress.N.TagValue</code> parameter.</p>
+             * </blockquote>
              * 
-             * *   contains: contains
-             * *   startWith: starts with a prefix
-             * *   endWith: ends with a suffix
-             * *   notContains: does not contain
-             * *   equals: equals
-             * *   all: matches all
-             * 
-             * >  If you set the `MatchExpress.N.TagValueMatchFunction` parameter, you must also set the `MatchExpress.N.TagValue` parameter.
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder tagValueMatchFunction(String tagValueMatchFunction) {
                 this.tagValueMatchFunction = tagValueMatchFunction;

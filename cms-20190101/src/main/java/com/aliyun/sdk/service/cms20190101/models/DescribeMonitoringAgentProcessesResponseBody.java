@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitoringAgentProcessesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitoringAgentProcessesResponseBody</p>
@@ -85,10 +86,13 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The value 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The value 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,7 +111,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the processes.
+         * <p>The information about the processes.</p>
          */
         public Builder nodeProcesses(NodeProcesses nodeProcesses) {
             this.nodeProcesses = nodeProcesses;
@@ -112,7 +119,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C11C0E85-6862-4F25-8D66-D6A5E0882984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitoringAgentProcessesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitoringAgentProcessesResponseBody</p>
+     */
     public static class NodeProcess extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -224,10 +243,13 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             private String processUser; 
 
             /**
-             * The command used to obtain the number of processes. Valid value: `number`.
-             * <p>
+             * <p>The command used to obtain the number of processes. Valid value: <code>number</code>.</p>
+             * <blockquote>
+             * <p> The <code>number</code> command obtains the number of processes that match the condition.</p>
+             * </blockquote>
              * 
-             * >  The `number` command obtains the number of processes that match the condition.
+             * <strong>example:</strong>
+             * <p>number</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -235,7 +257,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3619****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -243,7 +268,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp3hl3cx1pbahzy8****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -251,7 +279,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the process.
+             * <p>The ID of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234567</p>
              */
             public Builder processId(Long processId) {
                 this.processId = processId;
@@ -259,7 +290,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the process.
+             * <p>The name of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nginx</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -267,7 +301,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * The user who launched the process.
+             * <p>The user who launched the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder processUser(String processUser) {
                 this.processUser = processUser;
@@ -281,6 +318,12 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitoringAgentProcessesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitoringAgentProcessesResponseBody</p>
+     */
     public static class NodeProcesses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeProcess")
         private java.util.List < NodeProcess> nodeProcess;

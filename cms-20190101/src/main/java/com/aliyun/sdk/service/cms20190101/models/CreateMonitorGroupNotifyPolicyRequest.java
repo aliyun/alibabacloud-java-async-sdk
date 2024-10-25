@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorGroupNotifyPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateMonitorGroupNotifyPolicyRequest</p>
@@ -99,10 +100,12 @@ public class CreateMonitorGroupNotifyPolicyRequest extends Request {
         } 
 
         /**
-         * The timestamp that indicates the end time of the validity period for the policy.
-         * <p>
+         * <p>The timestamp that indicates the end time of the validity period for the policy.</p>
+         * <p>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1623208500000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -111,7 +114,11 @@ public class CreateMonitorGroupNotifyPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7301****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -120,7 +127,11 @@ public class CreateMonitorGroupNotifyPolicyRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid value: PauseNotify.
+         * <p>The type of the policy. Valid value: PauseNotify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PauseNotify</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -129,10 +140,12 @@ public class CreateMonitorGroupNotifyPolicyRequest extends Request {
         }
 
         /**
-         * The timestamp that indicates the start time of the validity period for the policy.
-         * <p>
+         * <p>The timestamp that indicates the start time of the validity period for the policy.</p>
+         * <p>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1622949300000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

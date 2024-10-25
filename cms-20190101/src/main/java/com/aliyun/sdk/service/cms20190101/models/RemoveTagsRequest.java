@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTagsRequest} extends {@link RequestModel}
  *
  * <p>RemoveTagsRequest</p>
@@ -69,7 +70,11 @@ public class RemoveTagsRequest extends Request {
         } 
 
         /**
-         * The IDs of the application groups.
+         * <p>The IDs of the application groups.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder groupIds(java.util.List < String > groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -78,7 +83,8 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -93,6 +99,12 @@ public class RemoveTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveTagsRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveTagsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -134,10 +146,14 @@ public class RemoveTagsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <blockquote>
+             * <p>The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
+             * <strong>example:</strong>
+             * <p>Key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -145,10 +161,14 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <blockquote>
+             * <p>The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
+             * <strong>example:</strong>
+             * <p>Value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

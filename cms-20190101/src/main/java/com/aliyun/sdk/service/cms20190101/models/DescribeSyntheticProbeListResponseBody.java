@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSyntheticProbeListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSyntheticProbeListResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSyntheticProbeListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyntheticProbeListResponseBody</p>
+     */
     public static class IspCityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AreaCn")
         private String areaCn;

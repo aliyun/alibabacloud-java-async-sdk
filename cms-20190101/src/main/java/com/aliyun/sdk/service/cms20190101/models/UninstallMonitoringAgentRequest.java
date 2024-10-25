@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UninstallMonitoringAgentRequest} extends {@link RequestModel}
  *
  * <p>UninstallMonitoringAgentRequest</p>
@@ -54,7 +55,11 @@ public class UninstallMonitoringAgentRequest extends Request {
         } 
 
         /**
-         * The ID of the host.
+         * <p>The ID of the host.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host-****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

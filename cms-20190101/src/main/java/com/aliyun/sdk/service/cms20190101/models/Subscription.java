@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Subscription} extends {@link TeaModel}
  *
  * <p>Subscription</p>
@@ -178,7 +179,7 @@ public class Subscription extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -231,6 +232,12 @@ public class Subscription extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Subscription} extends {@link TeaModel}
+     *
+     * <p>Subscription</p>
+     */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Field")
         private String field;

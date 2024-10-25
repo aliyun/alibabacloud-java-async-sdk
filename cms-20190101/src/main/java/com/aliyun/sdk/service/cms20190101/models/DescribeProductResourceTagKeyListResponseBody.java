@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductResourceTagKeyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProductResourceTagKeyListResponseBody</p>
@@ -97,10 +98,13 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
         private TagKeys tagKeys; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -108,7 +112,10 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -116,10 +123,13 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination cursor. If more entries are to be returned on the next page, a pagination cursor is returned.
-         * <p>
+         * <p>The pagination cursor. If more entries are to be returned on the next page, a pagination cursor is returned.</p>
+         * <blockquote>
+         * <p> If the value of this parameter is not null, more entries are to be returned on the next page. You can use the returned pagination cursor as a request parameter to obtain entries on the next page. If the value of this parameter is null, all the entries have been returned.</p>
+         * </blockquote>
          * 
-         * >  If the value of this parameter is not null, more entries are to be returned on the next page. You can use the returned pagination cursor as a request parameter to obtain entries on the next page. If the value of this parameter is null, all the entries have been returned.
+         * <strong>example:</strong>
+         * <p>dbc2826f237e****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -127,7 +137,10 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>945ACAA9-89F2-4A62-8913-076FDEDAA8DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +148,10 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -143,7 +159,7 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * The keys of tags.
+         * <p>The keys of tags.</p>
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -156,6 +172,12 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProductResourceTagKeyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResourceTagKeyListResponseBody</p>
+     */
     public static class TagKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private java.util.List < String > tagKey;

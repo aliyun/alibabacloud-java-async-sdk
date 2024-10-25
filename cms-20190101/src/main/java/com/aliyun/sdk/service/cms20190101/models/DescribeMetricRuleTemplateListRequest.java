@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricRuleTemplateListRequest} extends {@link RequestModel}
  *
  * <p>DescribeMetricRuleTemplateListRequest</p>
@@ -151,11 +152,14 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         } 
 
         /**
-         * Specifies whether to display the history of applying the alert templates to application groups. Valid values:
-         * <p>
+         * <p>Specifies whether to display the history of applying the alert templates to application groups. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder history(Boolean history) {
             this.putQueryParameter("History", history);
@@ -164,7 +168,10 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The keyword of the alert template name.
+         * <p>The keyword of the alert template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -173,7 +180,10 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The name of the alert template.
+         * <p>The name of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Template1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -182,11 +192,14 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The sorting order. Valid values:
-         * <p>
+         * <p>The sorting order. Valid values:</p>
+         * <ul>
+         * <li>true (default): ascending order</li>
+         * <li>false: descending order</li>
+         * </ul>
          * 
-         * *   true (default): ascending order
-         * *   false: descending order
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder order(Boolean order) {
             this.putQueryParameter("Order", order);
@@ -195,11 +208,14 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The sorting basis. Valid values:
-         * <p>
+         * <p>The sorting basis. Valid values:</p>
+         * <ul>
+         * <li>gmtMotified: sorts alert templates by modification time</li>
+         * <li>gmtCreate (default): sorts alert templates by creation time</li>
+         * </ul>
          * 
-         * *   gmtMotified: sorts alert templates by modification time
-         * *   gmtCreate (default): sorts alert templates by creation time
+         * <strong>example:</strong>
+         * <p>gmtCreate</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -208,10 +224,11 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -220,7 +237,10 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +249,10 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The ID of the alert template.
+         * <p>The ID of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70****</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

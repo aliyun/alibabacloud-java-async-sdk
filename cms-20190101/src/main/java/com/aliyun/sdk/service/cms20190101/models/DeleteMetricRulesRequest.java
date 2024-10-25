@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetricRulesRequest} extends {@link RequestModel}
  *
  * <p>DeleteMetricRulesRequest</p>
@@ -54,7 +55,10 @@ public class DeleteMetricRulesRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab05733c97b7ce239fb1b53393dc1697c7e12****</p>
          */
         public Builder id(java.util.List < String > id) {
             this.putQueryParameter("Id", id);

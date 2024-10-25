@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductResourceTagKeyListRequest} extends {@link RequestModel}
  *
  * <p>DescribeProductResourceTagKeyListRequest</p>
@@ -53,7 +54,10 @@ public class DescribeProductResourceTagKeyListRequest extends Request {
         } 
 
         /**
-         * The pagination cursor.
+         * <p>The pagination cursor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbc2826f237e****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

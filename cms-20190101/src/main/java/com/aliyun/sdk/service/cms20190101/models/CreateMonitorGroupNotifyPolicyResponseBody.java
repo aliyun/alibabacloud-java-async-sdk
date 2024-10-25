@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorGroupNotifyPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMonitorGroupNotifyPolicyResponseBody</p>
@@ -85,10 +86,13 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The HTTP status code 200 indicates that the call succeeds.</p>
+         * </blockquote>
          * 
-         * >  The HTTP status code 200 indicates that the call succeeds.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,7 +111,10 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13356BCA-3EC3-4748-A771-2064DA69AEF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,7 +122,10 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries that are returned.
+         * <p>The number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder result(Integer result) {
             this.result = result;
@@ -120,11 +133,14 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call succeeds. Valid values:
-         * <p>
+         * <p>Indicates whether the call succeeds. Valid values:</p>
+         * <ul>
+         * <li>true: The call succeeds.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call succeeds.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

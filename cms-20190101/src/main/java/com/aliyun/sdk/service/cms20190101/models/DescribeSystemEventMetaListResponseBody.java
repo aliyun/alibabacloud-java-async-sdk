@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemEventMetaListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSystemEventMetaListResponseBody</p>
@@ -85,10 +86,13 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -96,7 +100,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed meta information.
+         * <p>The detailed meta information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -104,7 +108,10 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A6582C8B-E67C-4A19-BC15-EAEFEBDC7995</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSystemEventMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemEventMetaListResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
@@ -248,12 +267,15 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             private String statusDesc; 
 
             /**
-             * The type of the system event. Valid values:
-             * <p>
+             * <p>The type of the system event. Valid values:</p>
+             * <ul>
+             * <li>StatusNotification</li>
+             * <li>Exception</li>
+             * <li>Maintenance</li>
+             * </ul>
              * 
-             * *   StatusNotification
-             * *   Exception
-             * *   Maintenance
+             * <strong>example:</strong>
+             * <p>Exception</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -261,12 +283,15 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the alert. Valid values:
-             * <p>
+             * <p>The level of the alert. Valid values:</p>
+             * <ul>
+             * <li>CRITICAL</li>
+             * <li>WARN</li>
+             * <li>INFO</li>
+             * </ul>
              * 
-             * *   CRITICAL
-             * *   WARN
-             * *   INFO
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -274,7 +299,10 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the system event.
+             * <p>The name of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SelectFailureRate</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +310,10 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the system event, in Chinese.
+             * <p>The description of the system event, in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High query failure rate</p>
              */
             public Builder nameDesc(String nameDesc) {
                 this.nameDesc = nameDesc;
@@ -298,7 +329,10 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the service name.
+             * <p>The abbreviation of the service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADS</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -306,7 +340,10 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the system event.
+             * <p>The status of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>failed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -314,7 +351,10 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the event status.
+             * <p>The description of the event status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operation Failed</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -328,6 +368,12 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSystemEventMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemEventMetaListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;

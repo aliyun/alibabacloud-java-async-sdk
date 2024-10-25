@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLogMonitorRequest} extends {@link RequestModel}
  *
  * <p>DeleteLogMonitorRequest</p>
@@ -54,7 +55,11 @@ public class DeleteLogMonitorRequest extends Request {
         } 
 
         /**
-         * The ID returned by Log Service.
+         * <p>The ID returned by Log Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder logId(Long logId) {
             this.putQueryParameter("LogId", logId);

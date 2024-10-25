@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitorGroupInstancesResponseBody</p>
@@ -121,10 +122,13 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The responses code.
-         * <p>
+         * <p>The responses code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -132,7 +136,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +147,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -148,7 +158,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +169,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97F2A410-9412-499C-9AD1-76EF7EC02DF2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +180,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resources in the application group.
+         * <p>The information about the resources in the application group.</p>
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -172,7 +188,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +199,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -193,6 +215,12 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitorGroupInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupInstancesResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -268,7 +296,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The abbreviation of the service name.
+             * <p>The abbreviation of the service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -276,7 +307,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -284,7 +318,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze3w55tr2r****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -292,7 +329,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hostIP</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -300,7 +340,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the instance resides.
+             * <p>The ID of the region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -314,6 +357,12 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupInstancesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;

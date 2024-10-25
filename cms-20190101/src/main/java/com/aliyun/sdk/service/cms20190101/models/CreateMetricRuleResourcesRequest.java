@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMetricRuleResourcesRequest} extends {@link RequestModel}
  *
  * <p>CreateMetricRuleResourcesRequest</p>
@@ -82,11 +83,14 @@ public class CreateMetricRuleResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to overwrite existing resources. Valid values:
-         * <p>
+         * <p>Specifies whether to overwrite existing resources. Valid values:</p>
+         * <ul>
+         * <li>true: The resources submitted this time overwrite the previously associated resources.</li>
+         * <li>false: The resources submitted this time do not overwrite the previously associated resources. The associated resources after submission include the previously associated resources and the resources submitted this time.</li>
+         * </ul>
          * 
-         * *   true: The resources submitted this time overwrite the previously associated resources.
-         * *   false: The resources submitted this time do not overwrite the previously associated resources. The associated resources after submission include the previously associated resources and the resources submitted this time.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder overwrite(String overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
@@ -95,10 +99,14 @@ public class CreateMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The resources that are associated with the alert rule. Set the value to a JSON array.
-         * <p>
+         * <p>The resources that are associated with the alert rule. Set the value to a JSON array.</p>
+         * <blockquote>
+         * <p> You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.
+         * <strong>example:</strong>
+         * <p>[{&quot;instanceId&quot;:&quot;i-a2d5q7pm3f9yr29e****&quot;}]</p>
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -107,7 +115,10 @@ public class CreateMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
+         * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze3w55tr2rcpejpcfap_59c96b85-0339-4f35-ba66-ae4e34d3****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

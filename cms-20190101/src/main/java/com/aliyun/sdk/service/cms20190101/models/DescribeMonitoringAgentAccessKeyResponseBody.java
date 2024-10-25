@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitoringAgentAccessKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitoringAgentAccessKeyResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The AccessKey ID that is required to install the agent.
+         * <p>The AccessKey ID that is required to install the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7A27f9****</p>
          */
         public Builder accessKey(String accessKey) {
             this.accessKey = accessKey;
@@ -105,10 +109,13 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -116,7 +123,10 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -124,7 +134,10 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0F655E9-D793-51E6-BD78-CABBCCFC1047</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,7 +145,10 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The AccessKey secret that is required to install the agent.
+         * <p>The AccessKey secret that is required to install the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sBjNOUhLylrxMX-Xv1****</p>
          */
         public Builder secretKey(String secretKey) {
             this.secretKey = secretKey;
@@ -140,11 +156,14 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHostAvailabilityListRequest} extends {@link RequestModel}
  *
  * <p>DescribeHostAvailabilityListRequest</p>
@@ -123,7 +124,10 @@ public class DescribeHostAvailabilityListRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -132,7 +136,10 @@ public class DescribeHostAvailabilityListRequest extends Request {
         }
 
         /**
-         * The ID of the availability monitoring task.
+         * <p>The ID of the availability monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -141,7 +148,10 @@ public class DescribeHostAvailabilityListRequest extends Request {
         }
 
         /**
-         * The IDs of the availability monitoring tasks. Separate multiple IDs with commas (,).
+         * <p>The IDs of the availability monitoring tasks. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456,345678</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -150,10 +160,11 @@ public class DescribeHostAvailabilityListRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -162,10 +173,11 @@ public class DescribeHostAvailabilityListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Minimum value: 1. Default value: 10</p>
          * 
-         * Minimum value: 1. Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +186,10 @@ public class DescribeHostAvailabilityListRequest extends Request {
         }
 
         /**
-         * The name of the availability monitoring task.
+         * <p>The name of the availability monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs_instance</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

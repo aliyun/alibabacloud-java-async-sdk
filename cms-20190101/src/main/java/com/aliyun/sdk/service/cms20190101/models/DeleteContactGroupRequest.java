@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContactGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteContactGroupRequest</p>
@@ -54,7 +55,11 @@ public class DeleteContactGroupRequest extends Request {
         } 
 
         /**
-         * The name of the alert group.
+         * <p>The name of the alert group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contact_group_2019_templatedfkXQ</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);

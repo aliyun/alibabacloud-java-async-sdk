@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableSiteMonitorsResponseBody} extends {@link TeaModel}
  *
  * <p>DisableSiteMonitorsResponseBody</p>
@@ -85,10 +86,13 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The responses code.
-         * <p>
+         * <p>The responses code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,7 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of detection points that are affected by the site monitoring tasks.
+         * <p>The number of detection points that are affected by the site monitoring tasks.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -104,7 +108,10 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3fcd12e7-d387-42ee-b77e-661c775bb17f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DisableSiteMonitorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DisableSiteMonitorsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("count")
         private Integer count;
@@ -164,7 +183,10 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The number of detection points.
+             * <p>The number of detection points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDynamicTagGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDynamicTagGroupResponseBody</p>
@@ -85,10 +86,13 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call is successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the tag matching rule.
+         * <p>The ID of the tag matching rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2534dc0a-e3e5-4ae1-a2fc-75ef166c****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -104,7 +111,10 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +122,10 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84AC6F0B-7945-466A-AA44-99BB5A561F86</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +133,14 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

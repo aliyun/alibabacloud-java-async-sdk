@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemEventAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeSystemEventAttributeRequest</p>
@@ -193,10 +194,11 @@ public class DescribeSystemEventAttributeRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</p>
          * 
-         * The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.
+         * <strong>example:</strong>
+         * <p>1552221584949</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -205,10 +207,13 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The type of the system event.
-         * <p>
+         * <p>The type of the system event.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the types of system events.
+         * <strong>example:</strong>
+         * <p>Exception</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -217,7 +222,10 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12346</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -226,12 +234,15 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The level of the system event. Valid values:
-         * <p>
+         * <p>The level of the system event. Valid values:</p>
+         * <ul>
+         * <li>CRITICAL: critical</li>
+         * <li>WARN: warning</li>
+         * <li>INFO: information</li>
+         * </ul>
          * 
-         * *   CRITICAL: critical
-         * *   WARN: warning
-         * *   INFO: information
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -240,10 +251,13 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The name of the system event.
-         * <p>
+         * <p>The name of the system event.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the names of system events.
+         * <strong>example:</strong>
+         * <p>BucketIngressBandwidth</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -252,12 +266,12 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Valid values: 1 to 100000000.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1 to 100000000.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -266,12 +280,12 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,10 +294,13 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The abbreviation of the service name.
-         * <p>
+         * <p>The abbreviation of the service name.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the abbreviations of service names.
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -292,11 +309,14 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The keywords that are used to search for the system event. Valid values:
-         * <p>
+         * <p>The keywords that are used to search for the system event. Valid values:</p>
+         * <ul>
+         * <li>If you want to search for the system event whose content contains a and b, set the value to <code>a and b</code>.</li>
+         * <li>If you want to search for the system event whose content contains a or b, set the value to <code>a or b</code>.</li>
+         * </ul>
          * 
-         * *   If you want to search for the system event whose content contains a and b, set the value to `a and b`.
-         * *   If you want to search for the system event whose content contains a or b, set the value to `a or b`.
+         * <strong>example:</strong>
+         * <p>cms</p>
          */
         public Builder searchKeywords(String searchKeywords) {
             this.putQueryParameter("SearchKeywords", searchKeywords);
@@ -305,10 +325,11 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</p>
          * 
-         * The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.
+         * <strong>example:</strong>
+         * <p>1552199984949</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -317,10 +338,13 @@ public class DescribeSystemEventAttributeRequest extends Request {
         }
 
         /**
-         * The status of the system event.
-         * <p>
+         * <p>The status of the system event.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the statuses of system events.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the statuses of system events.
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

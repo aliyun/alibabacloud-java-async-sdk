@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchExportResponseBody} extends {@link TeaModel}
  *
  * <p>BatchExportResponseBody</p>
@@ -133,7 +134,10 @@ public class BatchExportResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The timestamp of the data requested by the backend. A larger timestamp indicates that the data export time is closer to the current time.
+         * <p>The timestamp of the data requested by the backend. A larger timestamp indicates that the data export time is closer to the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678781819000</p>
          */
         public Builder anchor(Long anchor) {
             this.anchor = anchor;
@@ -141,10 +145,13 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -152,10 +159,13 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * The Cursor information that is used to call this operation again.
-         * <p>
+         * <p>The Cursor information that is used to call this operation again.</p>
+         * <blockquote>
+         * <p> If <code>null</code> is returned, the monitoring data is exported.</p>
+         * </blockquote>
          * 
-         * >  If `null` is returned, the monitoring data is exported.
+         * <strong>example:</strong>
+         * <p>v2.5eyJidWNrZXRzIjo0LCJjdXJzb3IiOiIxNjQxNDU0ODAwMDAwMWUxY2YxNWY0NTU0MTliZjllYTY4OWQ2ODI1OTU1Yzc1NmZjMDQ2OTMxMzczMzM2MzUzMTMxMzEzMzM0MzMzODM5MzEzMTMwMjQyYzY5MmQzMjdhNjU2MjY3N2E2NjZhNzczOTY2NmM3Mjc0NjM3MzY5Njg3NDcyMjQyYyIsImN1cnNvclZlcnNpb24iOiJxdWVyeSIsImVuZFRpbWUiOjE2NDE0NTUyMzYxMTIsImV4cG9ydEVuZFRpbWUiOjE2NDE0NTUyMzYxMTIsImV4cG9ydFN0YXJ0VGltZSI6MTY0MTQ1NDYzNjExMiwiZXhwcmVzc1JhbmdlIjpmYWxzZSwiaGFzTmV4dCI6dHJ1ZSwiaW5wdXRNZXRyaWMiOiJDUFVVdGlsaXphdGlvbiIsImlucHV0TmFtZXNwYWNlIjoiYWNzX2Vjc19kYXNoYm9hcmQiLCJsaW1pdCI6MTAwMCwibG9nVGltZU1vZGUiOnRydWUsIm1hdGNoZXJzIjp7ImNoYWluIjpbeyJsYWJlbCI6InVzZXJJZCIsIm9wZXJhdG9yIjoiRVFVQUxTIiwidmFsdWUiOiIxNzM2NTExMTM0Mzg5MTEwIn1dfSwibWV0cmljIjoiQ1BVVXRpbGl6YXRpb24iLCJtZXRyaWNUeXBlIjoiTUVUUklDIiwibmFtZXNwYWNlIjoiYWNzX2Vjc19kYXNoYm9hcmQiLCJuZXh0UGtBZGFwdGVyIjp7fSwib2Zmc2V0IjowLCJwYXJlbnRVaWQiOjEyNzA2NzY2Nzk1NDY3MDQsInN0YXJ0VGltZSI6MTY0MTQ1NDYzNjExMiwic3RlcCI6LTEsInRpbWVvdXQiOjEyMCwid2luZG93Ijo2MH0***</p>
          */
         public Builder cursor(String cursor) {
             this.cursor = cursor;
@@ -163,7 +173,7 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned in this call.
+         * <p>The data returned in this call.</p>
          */
         public Builder dataResults(java.util.List < MetricStat > dataResults) {
             this.dataResults = dataResults;
@@ -171,11 +181,14 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the data has been exported. Valid values:
-         * <p>
+         * <p>Indicates whether the data has been exported. Valid values:</p>
+         * <ul>
+         * <li>true: Some data is not exported.</li>
+         * <li>false: All the data is exported.</li>
+         * </ul>
          * 
-         * *   true: Some data is not exported.
-         * *   false: All the data is exported.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasNext(Boolean hasNext) {
             this.hasNext = hasNext;
@@ -183,7 +196,10 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * The number of data entries returned in this call.
+         * <p>The number of data entries returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder length(Integer length) {
             this.length = length;
@@ -191,7 +207,10 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +218,10 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>251402CD-305C-1617-808E-D8C11FC8138D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -207,11 +229,14 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

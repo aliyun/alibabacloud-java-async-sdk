@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableSiteMonitorsRequest} extends {@link RequestModel}
  *
  * <p>EnableSiteMonitorsRequest</p>
@@ -54,7 +55,11 @@ public class EnableSiteMonitorsRequest extends Request {
         } 
 
         /**
-         * The ID of the site monitoring task. Separate multiple IDs with commas (,).
+         * <p>The ID of the site monitoring task. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49f7b317-7645-4cc9-94fd-ea42e522****,49f7b317-7645-4cc9-94fd-ea42e522****</p>
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

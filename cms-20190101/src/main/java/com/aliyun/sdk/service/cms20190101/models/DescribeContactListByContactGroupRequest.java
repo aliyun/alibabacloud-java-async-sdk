@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContactListByContactGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeContactListByContactGroupRequest</p>
@@ -54,7 +55,11 @@ public class DescribeContactListByContactGroupRequest extends Request {
         } 
 
         /**
-         * The name of the alert contact group.
+         * <p>The name of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);

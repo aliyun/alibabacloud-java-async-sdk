@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMonitorGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyMonitorGroupRequest</p>
@@ -82,7 +83,10 @@ public class ModifyMonitorGroupRequest extends Request {
         } 
 
         /**
-         * The alert groups that can receive alert notifications for the application group.
+         * <p>The alert groups that can receive alert notifications for the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alarm_ecs_group</p>
          */
         public Builder contactGroups(String contactGroups) {
             this.putQueryParameter("ContactGroups", contactGroups);
@@ -91,7 +95,11 @@ public class ModifyMonitorGroupRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -100,7 +108,10 @@ public class ModifyMonitorGroupRequest extends Request {
         }
 
         /**
-         * The name of the application group.
+         * <p>The name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs_group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

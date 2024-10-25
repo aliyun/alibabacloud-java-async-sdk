@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemEventHistogramResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSystemEventHistogramResponseBody</p>
@@ -85,10 +86,13 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         private SystemEventHistograms systemEventHistograms; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,7 +111,10 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>486029C9-53E1-44B4-85A8-16A571A043FD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,7 +122,10 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.
+         * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -120,7 +133,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the number of times the system event occurred during each interval of a time period.
+         * <p>The information about the number of times the system event occurred during each interval of a time period.</p>
          */
         public Builder systemEventHistograms(SystemEventHistograms systemEventHistograms) {
             this.systemEventHistograms = systemEventHistograms;
@@ -133,6 +146,12 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSystemEventHistogramResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemEventHistogramResponseBody</p>
+     */
     public static class SystemEventHistogram extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -184,7 +203,10 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The number of times the system event occurred.
+             * <p>The number of times the system event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -192,10 +214,11 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The end time.
-             * <p>
+             * <p>The end time.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1552225753000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -203,10 +226,11 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
-             * <p>
+             * <p>The start time.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1552225770000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -220,6 +244,12 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSystemEventHistogramResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemEventHistogramResponseBody</p>
+     */
     public static class SystemEventHistograms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemEventHistogram")
         private java.util.List < SystemEventHistogram> systemEventHistogram;

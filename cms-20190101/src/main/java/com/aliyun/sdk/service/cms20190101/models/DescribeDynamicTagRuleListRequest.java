@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDynamicTagRuleListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDynamicTagRuleListRequest</p>
@@ -123,7 +124,10 @@ public class DescribeDynamicTagRuleListRequest extends Request {
         } 
 
         /**
-         * The ID of the tag rule.
+         * <p>The ID of the tag rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>004155fa-15ba-466d-b61a-***********</p>
          */
         public Builder dynamicTagRuleId(String dynamicTagRuleId) {
             this.putQueryParameter("DynamicTagRuleId", dynamicTagRuleId);
@@ -132,10 +136,11 @@ public class DescribeDynamicTagRuleListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -144,10 +149,11 @@ public class DescribeDynamicTagRuleListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Minimum value: 1. Default value: 30.</p>
          * 
-         * Minimum value: 1. Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -156,10 +162,11 @@ public class DescribeDynamicTagRuleListRequest extends Request {
         }
 
         /**
-         * The tag key.
-         * <p>
+         * <p>The tag key.</p>
+         * <p>For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
          * 
-         * For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+         * <strong>example:</strong>
+         * <p>tagkey1</p>
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);
@@ -168,7 +175,10 @@ public class DescribeDynamicTagRuleListRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the tags belong.
+         * <p>The ID of the region to which the tags belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder tagRegionId(String tagRegionId) {
             this.putQueryParameter("TagRegionId", tagRegionId);
@@ -177,10 +187,13 @@ public class DescribeDynamicTagRuleListRequest extends Request {
         }
 
         /**
-         * The tag value.
-         * <p>
+         * <p>The tag value.</p>
+         * <p>For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagKeyList</a>.</p>
          * 
-         * For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder tagValue(String tagValue) {
             this.putQueryParameter("TagValue", tagValue);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstantSiteMonitorRequest} extends {@link RequestModel}
  *
  * <p>CreateInstantSiteMonitorRequest</p>
@@ -126,7 +127,11 @@ public class CreateInstantSiteMonitorRequest extends Request {
         } 
 
         /**
-         * The URL or IP address that you want to test.
+         * <p>The URL or IP address that you want to test.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -135,14 +140,15 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * The detection points. If you leave this parameter empty, the system randomly selects three detection points.
-         * <p>
+         * <p>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
+         * <p>The value is a <code>JSON array</code>. Example: {&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
+         * <p>For information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
+         * <blockquote>
+         * <p>You must specify one of the <code>IspCities</code> and <code>RandomIspCity</code> parameters.</p>
+         * </blockquote>
          * 
-         * The value is a `JSON array`. Example: {"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}. The values of the city field indicate Beijing, Hangzhou, and Qingdao.
-         * 
-         * For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).
-         * 
-         * > You must specify one of the `IspCities` and `RandomIspCity` parameters.
+         * <strong>example:</strong>
+         * <p>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</p>
          */
         public Builder ispCities(String ispCities) {
             this.putQueryParameter("IspCities", ispCities);
@@ -151,7 +157,10 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * The extended options of the protocol that is used by the instant test task. The options vary based on the protocol.
+         * <p>The extended options of the protocol that is used by the instant test task. The options vary based on the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;time_out&quot;:5000}</p>
          */
         public Builder optionsJson(String optionsJson) {
             this.putQueryParameter("OptionsJson", optionsJson);
@@ -160,12 +169,15 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * The number of detection points.
-         * <p>
+         * <p>The number of detection points.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>You must specify one of the <code>IspCities</code> and <code>RandomIspCity</code> parameters. If you specify the <code>RandomIspCity</code> parameter, the <code>IspCities</code> parameter automatically becomes invalid.</li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   You must specify one of the `IspCities` and `RandomIspCity` parameters. If you specify the `RandomIspCity` parameter, the `IspCities` parameter automatically becomes invalid.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder randomIspCity(Integer randomIspCity) {
             this.putQueryParameter("RandomIspCity", randomIspCity);
@@ -174,10 +186,12 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * The name of the instant test task.
-         * <p>
+         * <p>The name of the instant test task.</p>
+         * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+         * <strong>example:</strong>
+         * <p>task1</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -186,7 +200,11 @@ public class CreateInstantSiteMonitorRequest extends Request {
         }
 
         /**
-         * The type of the instant test task. Valid values: HTTP, PING, TCP, UDP, and DNS.
+         * <p>The type of the instant test task. Valid values: HTTP, PING, TCP, UDP, and DNS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExporterOutputListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExporterOutputListResponseBody</p>
@@ -109,10 +110,13 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -120,7 +124,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration sets for exporting monitoring data.
+         * <p>The configuration sets for exporting monitoring data.</p>
          */
         public Builder datapoints(Datapoints datapoints) {
             this.datapoints = datapoints;
@@ -128,7 +132,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sucess</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +143,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -144,7 +154,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E657631-CD6C-4C24-9637-98D000B9272C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -152,11 +165,14 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -164,7 +180,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -177,6 +196,12 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExporterOutputListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExporterOutputListResponseBody</p>
+     */
     public static class ConfigJson extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ak")
         private String ak;
@@ -240,7 +265,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             private String project; 
 
             /**
-             * The AccessKey ID.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAIpY33********</p>
              */
             public Builder ak(String ak) {
                 this.ak = ak;
@@ -248,7 +276,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * The Log Service endpoint to which the monitoring data is exported.
+             * <p>The Log Service endpoint to which the monitoring data is exported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-qingdao-share.log.aliyuncs.com">http://cn-qingdao-share.log.aliyuncs.com</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -256,7 +287,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * The Logstore.
+             * <p>The Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>monitorlogstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -264,7 +298,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * The Log Service project to which the monitoring data is exported.
+             * <p>The Log Service project to which the monitoring data is exported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exporter</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -278,6 +315,12 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExporterOutputListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExporterOutputListResponseBody</p>
+     */
     public static class Datapoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigJson")
         private ConfigJson configJson;
@@ -341,7 +384,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             private String destType; 
 
             /**
-             * The JSON object that contains the details about the destination to which the monitoring data is exported.
+             * <p>The JSON object that contains the details about the destination to which the monitoring data is exported.</p>
              */
             public Builder configJson(ConfigJson configJson) {
                 this.configJson = configJson;
@@ -349,7 +392,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configuration set was created. The value is a UNIX timestamp.
+             * <p>The time when the configuration set was created. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1584016495498</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -357,7 +403,10 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration set.
+             * <p>The name of the configuration set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exporterOut</p>
              */
             public Builder destName(String destName) {
                 this.destName = destName;
@@ -365,10 +414,13 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             }
 
             /**
-             * The service to which the monitoring data is exported.
-             * <p>
+             * <p>The service to which the monitoring data is exported.</p>
+             * <blockquote>
+             * <p>Only Log Service is supported. More services will be supported in the future.</p>
+             * </blockquote>
              * 
-             * > Only Log Service is supported. More services will be supported in the future.
+             * <strong>example:</strong>
+             * <p>SLS</p>
              */
             public Builder destType(String destType) {
                 this.destType = destType;
@@ -382,6 +434,12 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExporterOutputListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExporterOutputListResponseBody</p>
+     */
     public static class Datapoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Datapoint")
         private java.util.List < Datapoint> datapoint;

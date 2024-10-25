@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomEventAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomEventAttributeRequest</p>
@@ -151,10 +152,11 @@ public class DescribeCustomEventAttributeRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1552227965971</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -163,7 +165,10 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the custom event.
+         * <p>The ID of the custom event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -172,7 +177,10 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -181,7 +189,10 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * The name of the custom event.
+         * <p>The name of the custom event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -190,7 +201,10 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -199,7 +213,10 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -208,11 +225,14 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * The keywords that are contained in the content of the custom event to query. You can use a logical operator between keywords.
-         * <p>
+         * <p>The keywords that are contained in the content of the custom event to query. You can use a logical operator between keywords.</p>
+         * <ul>
+         * <li>If you need to query the custom event whose content contains a and b, set the value to a and b.</li>
+         * <li>If you need to query the custom event whose content contains a or b, set the value to a or b.</li>
+         * </ul>
          * 
-         * *   If you need to query the custom event whose content contains a and b, set the value to a and b.
-         * *   If you need to query the custom event whose content contains a or b, set the value to a or b.
+         * <strong>example:</strong>
+         * <p>cms</p>
          */
         public Builder searchKeywords(String searchKeywords) {
             this.putQueryParameter("SearchKeywords", searchKeywords);
@@ -221,10 +241,11 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1552224365971</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeMonitorGroupsRequest</p>
@@ -235,7 +236,10 @@ public class DescribeMonitorGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the tag rule.
+         * <p>The ID of the tag rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6b882d9a-5117-42e2-9d0c-4749a0c6****</p>
          */
         public Builder dynamicTagRuleId(String dynamicTagRuleId) {
             this.putQueryParameter("DynamicTagRuleId", dynamicTagRuleId);
@@ -244,7 +248,10 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The tag key that is created for the application group by using the tag rule.
+         * <p>The tag key that is created for the application group by using the tag rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GroupKey1</p>
          */
         public Builder groupFounderTagKey(String groupFounderTagKey) {
             this.putQueryParameter("GroupFounderTagKey", groupFounderTagKey);
@@ -253,7 +260,10 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The tag value that is created for the application group by using the tag rule.
+         * <p>The tag value that is created for the application group by using the tag rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GroupValue1</p>
          */
         public Builder groupFounderTagValue(String groupFounderTagValue) {
             this.putQueryParameter("GroupFounderTagValue", groupFounderTagValue);
@@ -262,7 +272,10 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the application group. Separate multiple application group IDs with commas (,).
+         * <p>The ID of the application group. Separate multiple application group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -271,7 +284,10 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The name of the application group.
+         * <p>The name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGroup124</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -280,11 +296,14 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to include the historical alert templates that are applied to the application group in the response. Valid values:
-         * <p>
+         * <p>Specifies whether to include the historical alert templates that are applied to the application group in the response. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeTemplateHistory(Boolean includeTemplateHistory) {
             this.putQueryParameter("IncludeTemplateHistory", includeTemplateHistory);
@@ -293,7 +312,10 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The instance ID. This parameter is used to query the application group to which the specified instance belongs.
+         * <p>The instance ID. This parameter is used to query the application group to which the specified instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-abcdefgh12****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -302,7 +324,10 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The keyword that is used for the search.
+         * <p>The keyword that is used for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -311,10 +336,11 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -323,10 +349,11 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Pages start from page 1. Default value: 30.</p>
          * 
-         * Pages start from page 1. Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -335,11 +362,14 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to include the alert contact groups in the response. Valid values:
-         * <p>
+         * <p>Specifies whether to include the alert contact groups in the response. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder selectContactGroups(Boolean selectContactGroups) {
             this.putQueryParameter("SelectContactGroups", selectContactGroups);
@@ -348,7 +378,7 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The tags of the application group.
+         * <p>The tags of the application group.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -357,12 +387,15 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The type of the application group. Valid values:
-         * <p>
+         * <p>The type of the application group. Valid values:</p>
+         * <ul>
+         * <li>custom: a self-managed application group</li>
+         * <li>ehpc_cluster: an application group that is synchronized from an Elastic High Performance Computing (E-HPC) cluster</li>
+         * <li>kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster</li>
+         * </ul>
          * 
-         * *   custom: a self-managed application group
-         * *   ehpc_cluster: an application group that is synchronized from an Elastic High Performance Computing (E-HPC) cluster
-         * *   kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -371,15 +404,18 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * The type of the application group. Valid values:
-         * <p>
+         * <p>The type of the application group. Valid values:</p>
+         * <ul>
+         * <li>custom: a self-managed application group</li>
+         * <li>ehpc_cluster: an application group that is synchronized from an Elastic High Performance Computing (E-HPC) cluster</li>
+         * <li>kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster</li>
+         * <li>tag: an application group that is automatically created by using tags</li>
+         * <li>resMgr: an application group that is created by using resource groups</li>
+         * <li>ess: an application group that is synchronized from Auto Scaling (ESS)</li>
+         * </ul>
          * 
-         * *   custom: a self-managed application group
-         * *   ehpc_cluster: an application group that is synchronized from an Elastic High Performance Computing (E-HPC) cluster
-         * *   kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster
-         * *   tag: an application group that is automatically created by using tags
-         * *   resMgr: an application group that is created by using resource groups
-         * *   ess: an application group that is synchronized from Auto Scaling (ESS)
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder types(String types) {
             this.putQueryParameter("Types", types);
@@ -394,6 +430,12 @@ public class DescribeMonitorGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitorGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -433,7 +475,10 @@ public class DescribeMonitorGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the application group. Valid values of N: 1 to 5.
+             * <p>The tag key of the application group. Valid values of N: 1 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -441,7 +486,10 @@ public class DescribeMonitorGroupsRequest extends Request {
             }
 
             /**
-             * The tag value of the application group. Valid values of N: 1 to 5.
+             * <p>The tag value of the application group. Valid values of N: 1 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

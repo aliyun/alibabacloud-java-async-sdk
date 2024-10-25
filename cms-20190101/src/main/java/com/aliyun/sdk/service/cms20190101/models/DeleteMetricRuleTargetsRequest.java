@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetricRuleTargetsRequest} extends {@link RequestModel}
  *
  * <p>DeleteMetricRuleTargetsRequest</p>
@@ -69,7 +70,11 @@ public class DeleteMetricRuleTargetsRequest extends Request {
         } 
 
         /**
-         * The ID of the alert rule.
+         * <p>The ID of the alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ruleId-xxxxxx</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -78,7 +83,11 @@ public class DeleteMetricRuleTargetsRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * <p>The resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder targetIds(java.util.List < String > targetIds) {
             this.putQueryParameter("TargetIds", targetIds);

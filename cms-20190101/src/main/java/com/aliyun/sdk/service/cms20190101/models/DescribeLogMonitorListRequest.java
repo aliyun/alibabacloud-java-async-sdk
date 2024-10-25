@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogMonitorListRequest} extends {@link RequestModel}
  *
  * <p>DescribeLogMonitorListRequest</p>
@@ -95,7 +96,10 @@ public class DescribeLogMonitorListRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -104,7 +108,10 @@ public class DescribeLogMonitorListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -113,7 +120,10 @@ public class DescribeLogMonitorListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10
+         * <p>The number of entries to return on each page. Default value: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -122,7 +132,10 @@ public class DescribeLogMonitorListRequest extends Request {
         }
 
         /**
-         * The keyword that is used to search for log monitoring metrics. Fuzzy match is supported.
+         * <p>The keyword that is used to search for log monitoring metrics. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchValue(String searchValue) {
             this.putQueryParameter("SearchValue", searchValue);

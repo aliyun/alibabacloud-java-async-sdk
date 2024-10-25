@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeSiteMonitorDataRequest</p>
@@ -153,11 +154,14 @@ public class DescribeSiteMonitorDataRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The following formats are supported:
-         * <p>
+         * <p>The end of the time range to query. The following formats are supported:</p>
+         * <ul>
+         * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</li>
+         * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</li>
+         * </ul>
          * 
-         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.
-         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.
+         * <strong>example:</strong>
+         * <p>1551581437000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -166,7 +170,10 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The number of data points to return.
+         * <p>The number of data points to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder length(Integer length) {
             this.putQueryParameter("Length", length);
@@ -175,11 +182,15 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The metric name. Valid values:
-         * <p>
+         * <p>The metric name. Valid values:</p>
+         * <ul>
+         * <li>Availability</li>
+         * <li>ResponseTime</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Availability
-         * *   ResponseTime
+         * <strong>example:</strong>
+         * <p>Availability</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -188,7 +199,10 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The pagination token.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49f7b317-7645-4cc9-94fd-ea42e5220930ea42e5220930ea42e522****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -197,10 +211,13 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The statistical period. The value is an integral multiple of 60. Unit: seconds.
-         * <p>
+         * <p>The statistical period. The value is an integral multiple of 60. Unit: seconds.</p>
+         * <blockquote>
+         * <p> The default value equals the minimum interval at which detection requests are sent to the monitored address.</p>
+         * </blockquote>
          * 
-         * >  The default value equals the minimum interval at which detection requests are sent to the monitored address.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -209,11 +226,14 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The start of the time range to query. The following formats are supported:
-         * <p>
+         * <p>The start of the time range to query. The following formats are supported:</p>
+         * <ul>
+         * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</li>
+         * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</li>
+         * </ul>
          * 
-         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.
-         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.
+         * <strong>example:</strong>
+         * <p>1551579637000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -222,7 +242,11 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49f7b317-7645-4cc9-94fd-ea42e522****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -231,11 +255,14 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The type of the monitored object whose monitoring data is to be queried. Valid values:
-         * <p>
+         * <p>The type of the monitored object whose monitoring data is to be queried. Valid values:</p>
+         * <ul>
+         * <li>metric</li>
+         * <li>event</li>
+         * </ul>
          * 
-         * *   metric
-         * *   event
+         * <strong>example:</strong>
+         * <p>metric</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertLogHistogramResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAlertLogHistogramResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of alert logs that were generated during each interval of a time period.
+         * <p>The number of alert logs that were generated during each interval of a time period.</p>
          */
         public Builder alertLogHistogramList(java.util.List < AlertLogHistogramList> alertLogHistogramList) {
             this.alertLogHistogramList = alertLogHistogramList;
@@ -93,10 +94,13 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -104,7 +108,10 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C4A3709-BF52-42EE-87B5-7435F0929585</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAlertLogHistogramResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogHistogramResponseBody</p>
+     */
     public static class AlertLogHistogramList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -188,7 +207,10 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
             private Long to; 
 
             /**
-             * The number of alert logs.
+             * <p>The number of alert logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -196,10 +218,11 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The start timestamp of the queried alert logs.
-             * <p>
+             * <p>The start timestamp of the queried alert logs.</p>
+             * <p>Unit: seconds.</p>
              * 
-             * Unit: seconds.
+             * <strong>example:</strong>
+             * <p>1610074791</p>
              */
             public Builder from(Long from) {
                 this.from = from;
@@ -207,10 +230,11 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The end timestamp of the queried alert logs.
-             * <p>
+             * <p>The end timestamp of the queried alert logs.</p>
+             * <p>Unit: seconds.</p>
              * 
-             * Unit: seconds.
+             * <strong>example:</strong>
+             * <p>1610074800</p>
              */
             public Builder to(Long to) {
                 this.to = to;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeSiteMonitorAttributeRequest</p>
@@ -68,11 +69,14 @@ public class DescribeSiteMonitorAttributeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the information of the alert rules that are configured for the site monitoring task. Valid values:
-         * <p>
+         * <p>Specifies whether to return the information of the alert rules that are configured for the site monitoring task. Valid values:</p>
+         * <ul>
+         * <li>true: The system returns the information of the alert rules that are configured for the site monitoring task.</li>
+         * <li>false (default): The system does not return the information of the alert rules that are configured for the site monitoring task.</li>
+         * </ul>
          * 
-         * *   true: The system returns the information of the alert rules that are configured for the site monitoring task.
-         * *   false (default): The system does not return the information of the alert rules that are configured for the site monitoring task.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeAlert(Boolean includeAlert) {
             this.putQueryParameter("IncludeAlert", includeAlert);
@@ -81,7 +85,11 @@ public class DescribeSiteMonitorAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the site monitoring task.
+         * <p>The ID of the site monitoring task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc641dff-c19d-45f3-ad0a-818a0c4f****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

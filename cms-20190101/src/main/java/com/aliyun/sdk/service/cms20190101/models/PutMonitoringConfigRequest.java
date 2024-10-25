@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutMonitoringConfigRequest} extends {@link RequestModel}
  *
  * <p>PutMonitoringConfigRequest</p>
@@ -67,7 +68,10 @@ public class PutMonitoringConfigRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoInstall(Boolean autoInstall) {
             this.putQueryParameter("AutoInstall", autoInstall);
@@ -76,11 +80,14 @@ public class PutMonitoringConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:</p>
+         * <ul>
+         * <li>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</li>
+         * <li>false: The CloudMonitor agent is not automatically installed on new ECS instances.</li>
+         * </ul>
          * 
-         * *   true (default): The CloudMonitor agent is automatically installed on new ECS instances.
-         * *   false: The CloudMonitor agent is not automatically installed on new ECS instances.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInstallAgentNewECS(Boolean enableInstallAgentNewECS) {
             this.putQueryParameter("EnableInstallAgentNewECS", enableInstallAgentNewECS);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventRuleListRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventRuleListRequest</p>
@@ -109,7 +110,10 @@ public class DescribeEventRuleListRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7378****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -118,11 +122,14 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the event-triggered alert rule. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the event-triggered alert rule. Valid values:</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * - true (default)
-         * - false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isEnable(Boolean isEnable) {
             this.putQueryParameter("IsEnable", isEnable);
@@ -131,7 +138,10 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * The prefix in the name of the event-triggered alert rule.
+         * <p>The prefix in the name of the event-triggered alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder namePrefix(String namePrefix) {
             this.putQueryParameter("NamePrefix", namePrefix);
@@ -140,10 +150,11 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,10 +163,11 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Pages start from page 1. Default value: 10.</p>
          * 
-         * Pages start from page 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

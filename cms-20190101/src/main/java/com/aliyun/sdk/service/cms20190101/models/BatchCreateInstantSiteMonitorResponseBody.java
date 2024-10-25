@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchCreateInstantSiteMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>BatchCreateInstantSiteMonitorResponseBody</p>
@@ -85,10 +86,13 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the site monitoring task.
+         * <p>The information about the site monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;taskName&quot;: &quot;HangZhou_ECS1&quot;, &quot;taskId&quot;: &quot;679fbe4f-b80b-4706-91b2-5427b43e****&quot;}]</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -104,7 +111,10 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +122,10 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7AE72720-2C96-5446-9F2B-308C7CEDFF1A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +133,14 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +153,12 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchCreateInstantSiteMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchCreateInstantSiteMonitorResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -176,7 +198,10 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * The ID of the site monitoring task.
+             * <p>The ID of the site monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>679fbe4f-b80b-4706-91b2-5427b43e****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -184,7 +209,10 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the site monitoring task.
+             * <p>The name of the site monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HangZhou_ECS1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

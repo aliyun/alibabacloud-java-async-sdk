@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEventRuleTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteEventRuleTargetsResponseBody</p>
@@ -73,10 +74,13 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -84,7 +88,10 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -92,7 +99,10 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the request ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ADD7EFB-7555-4EC1-A3D9-F9955C189CCF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,11 +110,14 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

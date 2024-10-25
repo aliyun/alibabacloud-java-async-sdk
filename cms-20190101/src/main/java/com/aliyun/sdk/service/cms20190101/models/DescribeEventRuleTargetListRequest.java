@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventRuleTargetListRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventRuleTargetListRequest</p>
@@ -54,7 +55,11 @@ public class DescribeEventRuleTargetListRequest extends Request {
         } 
 
         /**
-         * The name of the event-triggered alert rule.
+         * <p>The name of the event-triggered alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

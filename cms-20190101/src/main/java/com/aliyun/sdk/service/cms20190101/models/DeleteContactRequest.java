@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContactRequest} extends {@link RequestModel}
  *
  * <p>DeleteContactRequest</p>
@@ -54,7 +55,11 @@ public class DeleteContactRequest extends Request {
         } 
 
         /**
-         * The name of the alert contact.
+         * <p>The name of the alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-01</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);

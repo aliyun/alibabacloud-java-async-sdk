@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupMonitoringAgentProcessRequest} extends {@link RequestModel}
  *
  * <p>DescribeGroupMonitoringAgentProcessRequest</p>
@@ -96,7 +97,11 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -105,7 +110,10 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1
+         * <p>The page number. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +122,10 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +134,10 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The process name.
+         * <p>The process name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sshd</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);

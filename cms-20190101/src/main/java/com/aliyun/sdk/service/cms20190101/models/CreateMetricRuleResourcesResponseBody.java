@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMetricRuleResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMetricRuleResourcesResponseBody</p>
@@ -73,10 +74,13 @@ public class CreateMetricRuleResourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -84,7 +88,10 @@ public class CreateMetricRuleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -92,7 +99,10 @@ public class CreateMetricRuleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0671A721-0D7A-4F11-BB77-2416325D65AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,7 +110,10 @@ public class CreateMetricRuleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.
+         * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

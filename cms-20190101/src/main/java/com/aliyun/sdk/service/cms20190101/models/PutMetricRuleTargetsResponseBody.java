@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutMetricRuleTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>PutMetricRuleTargetsResponseBody</p>
@@ -85,10 +86,13 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The failed data.
+         * <p>The failed data.</p>
          */
         public Builder failData(FailData failData) {
             this.failData = failData;
@@ -104,7 +108,10 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A569B0D-9055-58AF-9E82-BAEAF95C0FD5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PutMetricRuleTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutMetricRuleTargetsResponseBody</p>
+     */
     public static class Target extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -188,24 +207,30 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * The ARN of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. MNS, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. The following part describes the ARN of MNS and the parameters in the ARN:
-             * <p>
+             * <p>The ARN of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. MNS, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The following part describes the ARN of MNS and the parameters in the ARN:</p>
+             * <ul>
+             * <li><p>{Service name abbreviation}: mns.</p>
+             * </li>
+             * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
+             * </li>
+             * <li><p>{regionId}: the region ID of the message queue or topic.</p>
+             * </li>
+             * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
+             * <ul>
+             * <li><strong>queues</strong></li>
+             * <li><strong>topics</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>{Resource name}: the resource name.</p>
+             * <ul>
+             * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
+             * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   {Service name abbreviation}: mns.
-             * 
-             * *   {userId}: the ID of the Alibaba Cloud account.
-             * 
-             * *   {regionId}: the region ID of the message queue or topic.
-             * 
-             * *   {Resource type}: the type of the resource for which alerts are triggered. Valid values:
-             * 
-             *     *   **queues**
-             *     *   **topics**
-             * 
-             * *   {Resource name}: the resource name.
-             * 
-             *     *   If the resource type is **queues**, the resource name is the queue name.
-             *     *   If the resource type is **topics**, the resource name is the topic name.
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-hangzhou:111:/queues/test/message</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -213,7 +238,10 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource for which alerts are triggered.
+             * <p>The ID of the resource for which alerts are triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -221,12 +249,15 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert level. Valid values:
-             * <p>
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li>INFO</li>
+             * <li>WARN</li>
+             * <li>CRITICAL</li>
+             * </ul>
              * 
-             * *   INFO
-             * *   WARN
-             * *   CRITICAL
+             * <strong>example:</strong>
+             * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -240,6 +271,12 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutMetricRuleTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutMetricRuleTargetsResponseBody</p>
+     */
     public static class Targets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;
@@ -281,6 +318,12 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutMetricRuleTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutMetricRuleTargetsResponseBody</p>
+     */
     public static class FailData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Targets")
         private Targets targets;
@@ -308,7 +351,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             private Targets targets; 
 
             /**
-             * The information about the resources for which alerts are triggered.
+             * <p>The information about the resources for which alerts are triggered.</p>
              */
             public Builder targets(Targets targets) {
                 this.targets = targets;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSiteMonitorStatisticsResponseBody</p>
@@ -85,10 +86,13 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The responses code.
-         * <p>
+         * <p>The responses code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics.
+         * <p>The statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -104,7 +111,10 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succcessful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +122,10 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3AD2724D-E317-4BFB-B422-D6691D071BE1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +133,14 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

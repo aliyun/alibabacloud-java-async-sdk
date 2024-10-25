@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricRuleCountRequest} extends {@link RequestModel}
  *
  * <p>DescribeMetricRuleCountRequest</p>
@@ -67,7 +68,10 @@ public class DescribeMetricRuleCountRequest extends Request {
         } 
 
         /**
-         * The metric name. For more information, see [Appendix 1: Metrics](~~163515~~).
+         * <p>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -76,7 +80,10 @@ public class DescribeMetricRuleCountRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).
+         * <p>The namespace of the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

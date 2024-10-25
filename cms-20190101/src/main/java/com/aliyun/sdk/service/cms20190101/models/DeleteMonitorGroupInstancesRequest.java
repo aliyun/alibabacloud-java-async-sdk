@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMonitorGroupInstancesRequest} extends {@link RequestModel}
  *
  * <p>DeleteMonitorGroupInstancesRequest</p>
@@ -84,10 +85,14 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         } 
 
         /**
-         * The abbreviation of the cloud service name.
-         * <p>
+         * <p>The abbreviation of the cloud service name.</p>
+         * <blockquote>
+         * <p> For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](~~114916~~) operation.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -96,7 +101,11 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -105,7 +114,11 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.
+         * <p>The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-a2d5q7pm3f912****,i-a2d5q7pm3f222****</p>
          */
         public Builder instanceIdList(String instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);

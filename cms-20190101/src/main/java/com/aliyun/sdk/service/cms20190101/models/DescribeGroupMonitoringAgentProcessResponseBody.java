@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
@@ -121,10 +122,13 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         private String total; 
 
         /**
-         * The HTTP status codes.
-         * <p>
+         * <p>The HTTP status codes.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -132,7 +136,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +147,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Default value: 1
+         * <p>The page number. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -148,7 +158,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +169,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The process monitoring tasks.
+         * <p>The process monitoring tasks.</p>
          */
         public Builder processes(Processes processes) {
             this.processes = processes;
@@ -164,7 +177,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7985D471-3FA8-4EE9-8F4B-45C19DF3D36F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +188,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +199,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder total(String total) {
             this.total = total;
@@ -193,6 +215,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
+     */
     public static class Target extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -256,10 +284,30 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the resource. Format: acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message. Example: acs:mns:cn-hangzhou:120886317861\*\*\*\*:/queues/test123/message. Fields:
-             * <p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message. Example: acs:mns:cn-hangzhou:120886317861****:/queues/test123/message. Fields:</p>
+             * <ul>
+             * <li><p>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</p>
+             * </li>
+             * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
+             * </li>
+             * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
+             * </li>
+             * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
+             * <ul>
+             * <li><strong>queues</strong></li>
+             * <li><strong>topics</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>{Resource name}: the resource name.</p>
+             * <ul>
+             * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
+             * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * {Service name abbreviation}: the abbreviation of the service name. Valid value: mns. {userId}: the ID of the Alibaba Cloud account. {regionId}: the region ID of the message queue or topic. {Resource type}: the type of the resource that triggers the alert. Valid values: - **queues** - **topics** - {Resource name}: the resource name. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -267,7 +315,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource for which alerts are triggered.
+             * <p>The ID of the resource for which alerts are triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -275,7 +326,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the alert callback. The parameters are in the JSON format.
+             * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
              */
             public Builder jsonParmas(String jsonParmas) {
                 this.jsonParmas = jsonParmas;
@@ -283,10 +337,15 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the alert. Valid values:
-             * <p>
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li>INFO</li>
+             * <li>WARN</li>
+             * <li>CRITICAL</li>
+             * </ul>
              * 
-             * INFO WARN CRITICAL
+             * <strong>example:</strong>
+             * <p>CRITICAL</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -300,6 +359,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
+     */
     public static class TargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;
@@ -341,6 +406,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
+     */
     public static class AlertConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
@@ -476,20 +547,23 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String webhook; 
 
             /**
-             * The comparison operator that is used to compare the metric value with the threshold. Valid values:
-             * <p>
+             * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+             * <li>GreaterThanThreshold: greater than the threshold</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+             * <li>LessThanThreshold: less than the threshold</li>
+             * <li>NotEqualToThreshold: not equal to the threshold</li>
+             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday.</li>
+             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * </ul>
              * 
-             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-             * *   GreaterThanThreshold: greater than the threshold
-             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-             * *   LessThanThreshold: less than the threshold
-             * *   NotEqualToThreshold: not equal to the threshold
-             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday.
-             * *   LessThanYesterday: less than the metric value at the same time yesterday
-             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-             * *   LessThanLastWeek: less than the metric value at the same time last week
-             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -497,7 +571,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The time period during which the alert rule is effective.
+             * <p>The time period during which the alert rule is effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00-23:59</p>
              */
             public Builder effectiveInterval(String effectiveInterval) {
                 this.effectiveInterval = effectiveInterval;
@@ -505,12 +582,15 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the alert. Valid values:
-             * <p>
+             * <p>The level of the alert. Valid values:</p>
+             * <ul>
+             * <li>critical</li>
+             * <li>warn</li>
+             * <li>Info</li>
+             * </ul>
              * 
-             * *   critical
-             * *   warn
-             * *   Info
+             * <strong>example:</strong>
+             * <p>warn</p>
              */
             public Builder escalationsLevel(String escalationsLevel) {
                 this.escalationsLevel = escalationsLevel;
@@ -518,7 +598,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The time period during which the alert rule is ineffective.
+             * <p>The time period during which the alert rule is ineffective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00-23:59</p>
              */
             public Builder noEffectiveInterval(String noEffectiveInterval) {
                 this.noEffectiveInterval = noEffectiveInterval;
@@ -526,10 +609,13 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
-             * <p>
+             * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
+             * <blockquote>
+             * <p> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
+             * </blockquote>
              * 
-             * >  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder silenceTime(String silenceTime) {
                 this.silenceTime = silenceTime;
@@ -537,7 +623,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The method used to calculate metric values that trigger alerts.
+             * <p>The method used to calculate metric values that trigger alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -545,7 +634,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The resource for which alerts are triggered.
+             * <p>The resources for which alerts are triggered.</p>
              */
             public Builder targetList(TargetList targetList) {
                 this.targetList = targetList;
@@ -553,7 +642,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The alert threshold.
+             * <p>The alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -561,10 +653,13 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times for which the threshold can be consecutively exceeded.
-             * <p>
+             * <p>The number of times for which the threshold can be consecutively exceeded.</p>
+             * <blockquote>
+             * <p> A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+             * </blockquote>
              * 
-             * >  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(String times) {
                 this.times = times;
@@ -572,7 +667,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+             * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -586,6 +684,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
+     */
     public static class ProcessAlertConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private java.util.List < AlertConfig> alertConfig;
@@ -627,6 +731,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
+     */
     public static class MatchExpress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
@@ -678,17 +788,21 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The matching condition. Valid values:
-             * <p>
+             * <p>The matching condition. Valid values:</p>
+             * <ul>
+             * <li>all (default): matches all</li>
+             * <li>startWith: starts with a prefix</li>
+             * <li>endWith: ends with a suffix</li>
+             * <li>contains: contains</li>
+             * <li>notContains: excludes</li>
+             * <li>equals: equals</li>
+             * </ul>
+             * <blockquote>
+             * <p> The matched instances are monitored by the process monitoring task.</p>
+             * </blockquote>
              * 
-             * *   all (default): matches all
-             * *   startWith: starts with a prefix
-             * *   endWith: ends with a suffix
-             * *   contains: contains
-             * *   notContains: excludes
-             * *   equals: equals
-             * 
-             * >  The matched instances are monitored by the process monitoring task.
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -696,10 +810,13 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The criteria based on which the instances are matched.
-             * <p>
+             * <p>The criteria based on which the instances are matched.</p>
+             * <blockquote>
+             * <p> Set the value to <code>name</code>. The value name indicates that the instances are matched based on the instance name.</p>
+             * </blockquote>
              * 
-             * >  Set the value to `name`. The value name indicates that the instances are matched based on the instance name.
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -707,7 +824,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword used to match the instance name.
+             * <p>The keyword used to match the instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>portalHost</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -721,6 +841,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
+     */
     public static class ProcessMatchExpress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchExpress")
         private java.util.List < MatchExpress> matchExpress;
@@ -762,6 +888,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
+     */
     public static class Process extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private ProcessAlertConfig alertConfig;
@@ -849,7 +981,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String processName; 
 
             /**
-             * The alert rule configurations.
+             * <p>The alert rule configurations.</p>
              */
             public Builder alertConfig(ProcessAlertConfig alertConfig) {
                 this.alertConfig = alertConfig;
@@ -857,7 +989,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -865,7 +1000,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the process monitoring task.
+             * <p>The ID of the process monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3F6150F9-45C7-43F9-9578-A58B2E72****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -873,10 +1011,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The matching conditions.
-             * <p>
-             * 
-             * >  Only the instances that meet the conditional expressions are monitored by the process monitoring task.
+             * <p>The matching conditions.</p>
+             * <blockquote>
+             * <p> Only the instances that meet the conditional expressions are monitored by the process monitoring task.</p>
+             * </blockquote>
              */
             public Builder matchExpress(ProcessMatchExpress matchExpress) {
                 this.matchExpress = matchExpress;
@@ -884,12 +1022,15 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator used between conditional expressions that are used to match instances. Valid values:
-             * <p>
+             * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
+             * <ul>
+             * <li>all</li>
+             * <li>and</li>
+             * <li>or</li>
+             * </ul>
              * 
-             * *   all
-             * *   and
-             * *   or
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder matchExpressFilterRelation(String matchExpressFilterRelation) {
                 this.matchExpressFilterRelation = matchExpressFilterRelation;
@@ -897,7 +1038,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The process name.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sshd</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -911,6 +1055,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupMonitoringAgentProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
+     */
     public static class Processes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Process")
         private java.util.List < Process> process;

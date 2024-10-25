@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutResourceMetricRulesResponseBody} extends {@link TeaModel}
  *
  * <p>PutResourceMetricRulesResponseBody</p>
@@ -85,10 +86,13 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The alert rules that failed to be created for the resource.
+         * <p>The alert rules that failed to be created for the resource.</p>
          */
         public Builder failedListResult(FailedListResult failedListResult) {
             this.failedListResult = failedListResult;
@@ -104,7 +108,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15D1440E-BF24-5A41-93E4-36864635179E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PutResourceMetricRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -188,7 +207,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The response code.
+             * <p>The response code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -196,7 +218,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The request processing has failed due to some unknown error.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -204,11 +229,14 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -222,6 +250,12 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesResponseBody</p>
+     */
     public static class Target extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
@@ -261,7 +295,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * The alert rule that failed to be created.
+             * <p>The alert rule that failed to be created.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -269,7 +303,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -283,6 +320,12 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesResponseBody</p>
+     */
     public static class FailedListResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;

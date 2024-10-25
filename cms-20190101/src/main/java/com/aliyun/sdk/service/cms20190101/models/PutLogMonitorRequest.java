@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutLogMonitorRequest} extends {@link RequestModel}
  *
  * <p>PutLogMonitorRequest</p>
@@ -227,7 +228,8 @@ public class PutLogMonitorRequest extends Request {
         } 
 
         /**
-         * The aggregation logic.
+         * <p>The aggregation logic.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder aggregates(java.util.List < Aggregates> aggregates) {
             this.putQueryParameter("Aggregates", aggregates);
@@ -236,7 +238,10 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7301****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -245,7 +250,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.
+         * <p>The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.</p>
          */
         public Builder groupbys(java.util.List < Groupbys> groupbys) {
             this.putQueryParameter("Groupbys", groupbys);
@@ -254,7 +259,10 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the log monitoring metric.
+         * <p>The ID of the log monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16****</p>
          */
         public Builder logId(String logId) {
             this.putQueryParameter("LogId", logId);
@@ -263,16 +271,17 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The extended field. The extended field allows you to perform basic operations on the aggregation results.
-         * <p>
+         * <p>The extended field. The extended field allows you to perform basic operations on the aggregation results.</p>
+         * <p>For example, you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber*100.</p>
+         * <p>JSON format: {&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber*100&quot;}}. Description:</p>
+         * <ul>
+         * <li>extend: required.</li>
+         * <li>errorPercent: the alias of the field generated in the calculation result. You can specify the alias as needed.</li>
+         * <li>5XXNumber/TotalNumber*100: the calculation expression.</li>
+         * </ul>
          * 
-         * For example, you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
-         * 
-         * JSON format: {"extend":{"errorPercent":"5XXNumber/TotalNumber\*100"}}. Description:
-         * 
-         * *   extend: required.
-         * *   errorPercent: the alias of the field generated in the calculation result. You can specify the alias as needed.
-         * *   5XXNumber/TotalNumber\*100: the calculation expression.
+         * <strong>example:</strong>
+         * <p>{&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber*100&quot;}}</p>
          */
         public Builder metricExpress(String metricExpress) {
             this.putQueryParameter("MetricExpress", metricExpress);
@@ -281,7 +290,11 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The metric name. For more information about the metrics for cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * <p>The metric name. For more information about the metrics for cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -290,7 +303,11 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The name of the Simple Log Service Logstore.
+         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         public Builder slsLogstore(String slsLogstore) {
             this.putQueryParameter("SlsLogstore", slsLogstore);
@@ -299,7 +316,11 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The name of the Simple Log Service project.
+         * <p>The name of the Simple Log Service project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder slsProject(String slsProject) {
             this.putQueryParameter("SlsProject", slsProject);
@@ -308,7 +329,11 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The region in which the Simple Log Service project resides.
+         * <p>The region in which the Simple Log Service project resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder slsRegionId(String slsRegionId) {
             this.putQueryParameter("SlsRegionId", slsRegionId);
@@ -317,7 +342,10 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The size of the tumbling window for calculation. Unit: seconds. CloudMonitor performs aggregation for each tumbling window.
+         * <p>The size of the tumbling window for calculation. Unit: seconds. CloudMonitor performs aggregation for each tumbling window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60,300</p>
          */
         public Builder tumblingwindows(String tumblingwindows) {
             this.putQueryParameter("Tumblingwindows", tumblingwindows);
@@ -326,7 +354,10 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The unit.
+         * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Percent</p>
          */
         public Builder unit(String unit) {
             this.putQueryParameter("Unit", unit);
@@ -335,7 +366,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements. If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
+         * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements. If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
          */
         public Builder valueFilter(java.util.List < ValueFilter> valueFilter) {
             this.putQueryParameter("ValueFilter", valueFilter);
@@ -344,13 +375,18 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The logical operator that is used between log filter conditions. Valid values:
-         * <p>
+         * <p>The logical operator that is used between log filter conditions. Valid values:</p>
+         * <ul>
+         * <li>and</li>
+         * <li>or</li>
+         * </ul>
+         * <blockquote>
+         * <p> The ValueFilterRelation and <code>ValueFilter.N.Key</code> parameters must be used in pair.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   and
-         * *   or
-         * 
-         * >  The ValueFilterRelation and `ValueFilter.N.Key` parameters must be used in pair.
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder valueFilterRelation(String valueFilterRelation) {
             this.putQueryParameter("ValueFilterRelation", valueFilterRelation);
@@ -365,6 +401,12 @@ public class PutLogMonitorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutLogMonitorRequest} extends {@link TeaModel}
+     *
+     * <p>PutLogMonitorRequest</p>
+     */
     public static class Aggregates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -419,7 +461,11 @@ public class PutLogMonitorRequest extends Request {
             private String function; 
 
             /**
-             * The alias of the aggregate function. Valid values of N: 1 to 10.
+             * <p>The alias of the aggregate function. Valid values of N: 1 to 10.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Count</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -427,7 +473,11 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * The name of the field to be aggregated. Valid values of N: 1 to 10.
+             * <p>The name of the field to be aggregated. Valid values of N: 1 to 10.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sourceCount</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -435,17 +485,21 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * The function that is used to aggregate log data within a statistical period. Valid values of N: 1 to 10. Valid values:
-             * <p>
+             * <p>The function that is used to aggregate log data within a statistical period. Valid values of N: 1 to 10. Valid values:</p>
+             * <ul>
+             * <li>count: counts the number.</li>
+             * <li>sum: calculates the total value.</li>
+             * <li>avg: calculates the average value.</li>
+             * <li>max: calculates the maximum value.</li>
+             * <li>min: calculates the minimum value.</li>
+             * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.</li>
+             * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.</li>
+             * <li>distinct: calculates the number of unique values of the specified field within a statistical period.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   count: counts the number.
-             * *   sum: calculates the total value.
-             * *   avg: calculates the average value.
-             * *   max: calculates the maximum value.
-             * *   min: calculates the minimum value.
-             * *   countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.
-             * *   sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.
-             * *   distinct: calculates the number of unique values of the specified field within a statistical period.
+             * <strong>example:</strong>
+             * <p>count</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -459,6 +513,12 @@ public class PutLogMonitorRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutLogMonitorRequest} extends {@link TeaModel}
+     *
+     * <p>PutLogMonitorRequest</p>
+     */
     public static class Groupbys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -498,7 +558,10 @@ public class PutLogMonitorRequest extends Request {
             private String fieldName; 
 
             /**
-             * The alias of the dimension based on which the data is grouped. Valid values of N: 1 to 10.
+             * <p>The alias of the dimension based on which the data is grouped. Valid values of N: 1 to 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPUUtilization</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -506,7 +569,10 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * The name of the field that is specified as the dimension. Valid values of N: 1 to 10.
+             * <p>The name of the field that is specified as the dimension. Valid values of N: 1 to 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -520,6 +586,12 @@ public class PutLogMonitorRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutLogMonitorRequest} extends {@link TeaModel}
+     *
+     * <p>PutLogMonitorRequest</p>
+     */
     public static class ValueFilter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -571,7 +643,10 @@ public class PutLogMonitorRequest extends Request {
             private String value; 
 
             /**
-             * The name of the log field that is used for matching in the filter condition. Valid values of N: 1 to 10.
+             * <p>The name of the log field that is used for matching in the filter condition. Valid values of N: 1 to 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lh_source</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -579,15 +654,18 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * The method that is used to match the field value. Valid values of N: 1 to 10. Valid values:
-             * <p>
+             * <p>The method that is used to match the field value. Valid values of N: 1 to 10. Valid values:</p>
+             * <ul>
+             * <li><code>contain</code>: contains</li>
+             * <li><code>notContain</code>: does not contain</li>
+             * <li><code>&gt;</code>: greater than</li>
+             * <li><code>&lt;</code>: less than</li>
+             * <li><code>&gt;=</code>: greater than or equal to</li>
+             * <li><code>&lt;=</code>: less than or equal to</li>
+             * </ul>
              * 
-             * *   `contain`: contains
-             * *   `notContain`: does not contain
-             * *   `>`: greater than
-             * *   `<`: less than
-             * *   `>=`: greater than or equal to
-             * *   `<=`: less than or equal to
+             * <strong>example:</strong>
+             * <p>contain</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -595,7 +673,10 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * The field value to be matched in the filter condition. Valid values of N: 1 to 10.
+             * <p>The field value to be matched in the filter condition. Valid values of N: 1 to 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

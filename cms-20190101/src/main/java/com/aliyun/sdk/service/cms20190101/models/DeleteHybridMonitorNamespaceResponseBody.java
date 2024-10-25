@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHybridMonitorNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteHybridMonitorNamespaceResponseBody</p>
@@ -73,7 +74,10 @@ public class DeleteHybridMonitorNamespaceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class DeleteHybridMonitorNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Namespace.NotFound</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class DeleteHybridMonitorNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3843D23A-FB9E-5DC8-BCCC-458768B79296</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class DeleteHybridMonitorNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

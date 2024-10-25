@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutCustomEventResponseBody} extends {@link TeaModel}
  *
  * <p>PutCustomEventResponseBody</p>
@@ -61,10 +62,13 @@ public class PutCustomEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The responses code.
-         * <p>
+         * <p>The responses code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -72,7 +76,10 @@ public class PutCustomEventResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -80,7 +87,10 @@ public class PutCustomEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131DD9C8-9A32-4428-AD2E-4E3013B6E3A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

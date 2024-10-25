@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitoringAgentStatusesRequest} extends {@link RequestModel}
  *
  * <p>DescribeMonitoringAgentStatusesRequest</p>
@@ -67,7 +68,10 @@ public class DescribeMonitoringAgentStatusesRequest extends Request {
         } 
 
         /**
-         * The ID of the availability monitoring task.
+         * <p>The ID of the availability monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>126****</p>
          */
         public Builder hostAvailabilityTaskId(String hostAvailabilityTaskId) {
             this.putQueryParameter("HostAvailabilityTaskId", hostAvailabilityTaskId);
@@ -76,7 +80,10 @@ public class DescribeMonitoringAgentStatusesRequest extends Request {
         }
 
         /**
-         * The instance IDs. Separate multiple instance IDs with commas (,).
+         * <p>The instance IDs. Separate multiple instance IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp3dunahluwajv6f****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

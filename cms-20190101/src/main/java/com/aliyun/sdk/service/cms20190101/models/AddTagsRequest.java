@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTagsRequest} extends {@link RequestModel}
  *
  * <p>AddTagsRequest</p>
@@ -69,12 +70,13 @@ public class AddTagsRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
-         * <p>
+         * <p>The ID of the application group.</p>
+         * <p>Valid values of N: 1 to 20.</p>
+         * <p>For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values of N: 1 to 20.
-         * 
-         * For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * <strong>example:</strong>
+         * <p>7301****</p>
          */
         public Builder groupIds(java.util.List < String > groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -83,7 +85,8 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -98,6 +101,12 @@ public class AddTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddTagsRequest} extends {@link TeaModel}
+     *
+     * <p>AddTagsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -139,14 +148,16 @@ public class AddTagsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>Valid values of N: 1 to 3. A tag key can be 1 to 64 characters in length.</p>
+             * <p>You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
+             * <blockquote>
+             * <p> The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 3. A tag key can be 1 to 64 characters in length.
-             * 
-             * You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
-             * 
-             * >  The tag key cannot start with `aliyun` or `acs:`. The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -154,14 +165,16 @@ public class AddTagsRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>Valid values of N: 1 to 3. A tag value can be 1 to 64 characters in length.</p>
+             * <p>You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagValueList</a>.</p>
+             * <blockquote>
+             * <p> The tag value cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 3. A tag value can be 1 to 64 characters in length.
-             * 
-             * You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see [DescribeTagValueList](~~145557~~).
-             * 
-             * >  The tag value cannot start with `aliyun` or `acs:`. The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHostAvailabilityRequest} extends {@link RequestModel}
  *
  * <p>DeleteHostAvailabilityRequest</p>
@@ -54,7 +55,10 @@ public class DeleteHostAvailabilityRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12456</p>
          */
         public Builder id(java.util.List < Long > id) {
             this.putQueryParameter("Id", id);

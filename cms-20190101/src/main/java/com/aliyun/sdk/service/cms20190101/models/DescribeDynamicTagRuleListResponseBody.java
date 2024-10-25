@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDynamicTagRuleListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDynamicTagRuleListResponseBody</p>
@@ -121,10 +122,13 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -132,7 +136,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +147,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -148,7 +158,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +169,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D50523D-8D59-4A61-B58E-E2286ECFB3A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,11 +180,14 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -176,7 +195,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The tag rules of application groups.
+         * <p>The tag rules of application groups.</p>
          */
         public Builder tagGroupList(TagGroupList tagGroupList) {
             this.tagGroupList = tagGroupList;
@@ -184,7 +203,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -197,6 +219,12 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDynamicTagRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDynamicTagRuleListResponseBody</p>
+     */
     public static class ContactGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroupList")
         private java.util.List < String > contactGroupList;
@@ -238,6 +266,12 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDynamicTagRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDynamicTagRuleListResponseBody</p>
+     */
     public static class MatchExpress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -289,7 +323,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             private String tagValueMatchFunction; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>azone-version</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -297,10 +334,13 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The <code>TagValue</code> and <code>TagValueMatchFunction</code> parameters must be used in pairs.</p>
              * 
-             * The `TagValue` and `TagValueMatchFunction` parameters must be used in pairs.
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -308,15 +348,18 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to match tag values. Valid values:
-             * <p>
+             * <p>The method that is used to match tag values. Valid values:</p>
+             * <ul>
+             * <li>all: includes all</li>
+             * <li>startWith: starts with a prefix</li>
+             * <li>endWith: ends with a suffix</li>
+             * <li>contains: contains</li>
+             * <li>notContains: does not contain</li>
+             * <li>equals: equals</li>
+             * </ul>
              * 
-             * *   all: includes all
-             * *   startWith: starts with a prefix
-             * *   endWith: ends with a suffix
-             * *   contains: contains
-             * *   notContains: does not contain
-             * *   equals: equals
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder tagValueMatchFunction(String tagValueMatchFunction) {
                 this.tagValueMatchFunction = tagValueMatchFunction;
@@ -330,6 +373,12 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDynamicTagRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDynamicTagRuleListResponseBody</p>
+     */
     public static class TagGroupMatchExpress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchExpress")
         private java.util.List < MatchExpress> matchExpress;
@@ -371,6 +420,12 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDynamicTagRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDynamicTagRuleListResponseBody</p>
+     */
     public static class TagValueBlacklist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValueBlacklist")
         private java.util.List < String > tagValueBlacklist;
@@ -412,6 +467,12 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDynamicTagRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDynamicTagRuleListResponseBody</p>
+     */
     public static class TemplateIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateIdList")
         private java.util.List < String > templateIdList;
@@ -453,6 +514,12 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDynamicTagRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDynamicTagRuleListResponseBody</p>
+     */
     public static class TagGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroupList")
         private ContactGroupList contactGroupList;
@@ -576,7 +643,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             private TemplateIdList templateIdList; 
 
             /**
-             * The alert contact group.
+             * <p>The alert contact group.</p>
              */
             public Builder contactGroupList(ContactGroupList contactGroupList) {
                 this.contactGroupList = contactGroupList;
@@ -584,7 +651,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tag rule.
+             * <p>The ID of the tag rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536df65-a719-429d-8813-73cc40d7****</p>
              */
             public Builder dynamicTagRuleId(String dynamicTagRuleId) {
                 this.dynamicTagRuleId = dynamicTagRuleId;
@@ -592,7 +662,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The conditional expressions used to create an application group based on the tag.
+             * <p>The conditional expressions used to create an application group based on the tag.</p>
              */
             public Builder matchExpress(TagGroupMatchExpress matchExpress) {
                 this.matchExpress = matchExpress;
@@ -600,13 +670,17 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator that is used between conditional expressions. Valid values:
-             * <p>
+             * <p>The logical operator that is used between conditional expressions. Valid values:</p>
+             * <ul>
+             * <li><code>and</code></li>
+             * <li><code>or</code></li>
+             * </ul>
+             * <blockquote>
+             * <p> Only one logical operator can be used in a request.</p>
+             * </blockquote>
              * 
-             * *   `and`
-             * *   `or`
-             * 
-             * >  Only one logical operator can be used in a request.
+             * <strong>example:</strong>
+             * <p>or</p>
              */
             public Builder matchExpressFilterRelation(String matchExpressFilterRelation) {
                 this.matchExpressFilterRelation = matchExpressFilterRelation;
@@ -614,7 +688,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the tags belong.
+             * <p>The ID of the region to which the tags belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -622,11 +699,14 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of adding instances that meet the tag rule to the application group. Valid values:
-             * <p>
+             * <p>The status of adding instances that meet the tag rule to the application group. Valid values:</p>
+             * <ul>
+             * <li><code>RUNNING</code></li>
+             * <li><code>FINISH</code></li>
+             * </ul>
              * 
-             * *   `RUNNING`
-             * *   `FINISH`
+             * <strong>example:</strong>
+             * <p>FINISH</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -634,7 +714,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagkey1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -650,7 +733,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the alert templates.
+             * <p>The IDs of the alert templates.</p>
              */
             public Builder templateIdList(TemplateIdList templateIdList) {
                 this.templateIdList = templateIdList;
@@ -664,6 +747,12 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDynamicTagRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDynamicTagRuleListResponseBody</p>
+     */
     public static class TagGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagGroup")
         private java.util.List < TagGroup> tagGroup;

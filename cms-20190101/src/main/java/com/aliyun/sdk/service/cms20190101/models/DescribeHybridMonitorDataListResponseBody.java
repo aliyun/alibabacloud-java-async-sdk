@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridMonitorDataListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHybridMonitorDataListResponseBody</p>
@@ -85,10 +86,13 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         private java.util.List < TimeSeries> timeSeries; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>end timestamp must not be before start time.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,7 +111,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C240412F-3F5F-50E2-ACEC-DE808EF9C4BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,11 +122,14 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -124,7 +137,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned monitoring data.
+         * <p>The returned monitoring data.</p>
          */
         public Builder timeSeries(java.util.List < TimeSeries> timeSeries) {
             this.timeSeries = timeSeries;
@@ -137,6 +150,12 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHybridMonitorDataListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridMonitorDataListResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("K")
         private String k;
@@ -176,7 +195,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             private String v; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceId</p>
              */
             public Builder k(String k) {
                 this.k = k;
@@ -184,7 +206,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-rj99xc6cptkk64ml****</p>
              */
             public Builder v(String v) {
                 this.v = v;
@@ -198,6 +223,12 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHybridMonitorDataListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridMonitorDataListResponseBody</p>
+     */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ts")
         private String ts;
@@ -237,10 +268,11 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             private String v; 
 
             /**
-             * The timestamp that indicates the time when the metric value is collected.
-             * <p>
+             * <p>The timestamp that indicates the time when the metric value is collected.</p>
+             * <p>Unit: seconds.</p>
              * 
-             * Unit: seconds.
+             * <strong>example:</strong>
+             * <p>1653804865</p>
              */
             public Builder ts(String ts) {
                 this.ts = ts;
@@ -248,7 +280,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value.
+             * <p>The metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.13</p>
              */
             public Builder v(String v) {
                 this.v = v;
@@ -262,6 +297,12 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHybridMonitorDataListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridMonitorDataListResponseBody</p>
+     */
     public static class TimeSeries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
@@ -313,7 +354,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * The tags of the time dimension.
+             * <p>The tags of the time dimension.</p>
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -321,7 +362,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The metric name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunEcs_cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -329,7 +373,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The metric values that are collected at different timestamps.
+             * <p>The metric values that are collected at different timestamps.</p>
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;

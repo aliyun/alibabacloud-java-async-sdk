@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushingTarget} extends {@link TeaModel}
  *
  * <p>PushingTarget</p>
@@ -190,7 +191,7 @@ public class PushingTarget extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -251,6 +252,12 @@ public class PushingTarget extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PushingTarget} extends {@link TeaModel}
+     *
+     * <p>PushingTarget</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -312,6 +319,12 @@ public class PushingTarget extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PushingTarget} extends {@link TeaModel}
+     *
+     * <p>PushingTarget</p>
+     */
     public static class HttpRequestTarget extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;

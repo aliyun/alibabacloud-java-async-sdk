@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertingMetricRuleResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAlertingMetricRuleResourcesRequest</p>
@@ -137,7 +138,10 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         } 
 
         /**
-         * Queries the alerts that were triggered before the specified time. Timestamps in milliseconds are supported.
+         * <p>Queries the alerts that were triggered before the specified time. Timestamps in milliseconds are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698827400000</p>
          */
         public Builder alertBeforeTime(String alertBeforeTime) {
             this.putQueryParameter("AlertBeforeTime", alertBeforeTime);
@@ -146,7 +150,10 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The dimensions that specify the resources whose monitoring data you want to query.
+         * <p>The dimensions that specify the resources whose monitoring data you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;userId&quot;:&quot;120886317861****&quot;,&quot;region&quot;:&quot;cn-huhehaote&quot;,&quot;queue&quot;:&quot;test-0128&quot;}</p>
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -155,7 +162,10 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * <p>The ID of the application group. For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7671****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -164,10 +174,11 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service.
-         * <p>
+         * <p>The namespace of the cloud service.</p>
+         * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * 
-         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>acs_mns_new</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -176,10 +187,11 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -188,10 +200,11 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -200,7 +213,10 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * <p>The ID of the alert rule. For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>putNewAlarm_user_7e78d765-0e3e-4671-ba6d-7ce39108****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

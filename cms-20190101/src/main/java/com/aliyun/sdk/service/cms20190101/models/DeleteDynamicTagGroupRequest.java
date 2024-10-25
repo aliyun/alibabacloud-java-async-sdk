@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDynamicTagGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteDynamicTagGroupRequest</p>
@@ -54,10 +55,12 @@ public class DeleteDynamicTagGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the tag rule.
-         * <p>
+         * <p>The ID of the tag rule.</p>
+         * <p>For information about how to obtain the ID of a tag rule, see <a href="https://help.aliyun.com/document_detail/150126.html">DescribeDynamicTagRuleList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the ID of a tag rule, see [DescribeDynamicTagRuleList](~~150126~~).
+         * <strong>example:</strong>
+         * <p>6b882d9a-5117-42e2-9d0c-4749a0c6****</p>
          */
         public Builder dynamicTagRuleId(String dynamicTagRuleId) {
             this.putQueryParameter("DynamicTagRuleId", dynamicTagRuleId);

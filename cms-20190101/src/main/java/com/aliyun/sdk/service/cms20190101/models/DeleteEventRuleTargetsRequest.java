@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEventRuleTargetsRequest} extends {@link RequestModel}
  *
  * <p>DeleteEventRuleTargetsRequest</p>
@@ -69,7 +70,11 @@ public class DeleteEventRuleTargetsRequest extends Request {
         } 
 
         /**
-         * The IDs of event-triggered alert rules.
+         * <p>The IDs of event-triggered alert rules.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ids(java.util.List < String > ids) {
             this.putQueryParameter("Ids", ids);
@@ -78,10 +83,12 @@ public class DeleteEventRuleTargetsRequest extends Request {
         }
 
         /**
-         * The name of the event-triggered alert rule.
-         * <p>
+         * <p>The name of the event-triggered alert rule.</p>
+         * <p>For information about how to obtain the name of an event-triggered alert rule, see <a href="https://help.aliyun.com/document_detail/114996.html">DescribeEventRuleList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).
+         * <strong>example:</strong>
+         * <p>testRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

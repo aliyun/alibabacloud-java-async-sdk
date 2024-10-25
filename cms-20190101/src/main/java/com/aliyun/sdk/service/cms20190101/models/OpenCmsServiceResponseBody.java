@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenCmsServiceResponseBody} extends {@link TeaModel}
  *
  * <p>OpenCmsServiceResponseBody</p>
@@ -49,7 +50,10 @@ public class OpenCmsServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>211206750270***</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class OpenCmsServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5A72B5B-4F44-438C-B68A-147FD5DC53A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

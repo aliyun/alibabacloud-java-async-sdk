@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGroupMonitoringAgentProcessRequest} extends {@link RequestModel}
  *
  * <p>DeleteGroupMonitoringAgentProcessRequest</p>
@@ -69,7 +70,11 @@ public class DeleteGroupMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -78,7 +83,11 @@ public class DeleteGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The ID of the process monitoring task.
+         * <p>The ID of the process monitoring task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48F83746-C817-478C-9B06-7158F56B****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

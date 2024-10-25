@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSiteMonitorsResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSiteMonitorsResponseBody</p>
@@ -85,10 +86,13 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the site monitoring tasks that were deleted.
+         * <p>The information about the site monitoring tasks that were deleted.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -104,7 +108,10 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the call was successful, the value success is returned. If the call failed, an error message such as `TaskId not found` is returned.
+         * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message such as <code>TaskId not found</code> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123BCC5D-8B63-48EA-B747-9A8995BE7AA6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +130,10 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates success. The value false indicates failure.
+         * <p>Indicates whether the call was successful. The value true indicates success. The value false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -133,6 +146,12 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteSiteMonitorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteSiteMonitorsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("count")
         private Integer count;
@@ -160,7 +179,10 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The number of the site monitoring tasks that were deleted.
+             * <p>The number of the site monitoring tasks that were deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMetricRuleBlackListRequest} extends {@link RequestModel}
  *
  * <p>ModifyMetricRuleBlackListRequest</p>
@@ -198,7 +199,11 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         } 
 
         /**
-         * The category of the cloud service. For example, ApsaraDB for Redis supports the standard architecture, the cluster architecture, and the read/write splitting architecture. In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+         * <p>The category of the cloud service. For example, ApsaraDB for Redis supports the standard architecture, the cluster architecture, and the read/write splitting architecture. In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -207,15 +212,20 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The time range within which the blacklist policy is effective. Take note of the following information:
-         * <p>
+         * <p>The time range within which the blacklist policy is effective. Take note of the following information:</p>
+         * <ul>
+         * <li><p>If you do not configure this parameter, the blacklist policy is permanently effective.</p>
+         * </li>
+         * <li><p>If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:</p>
+         * <ul>
+         * <li><code>03:00-04:59</code>: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.</li>
+         * <li><code>03:00-04:59 UTC+0700</code>: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   If you do not configure this parameter, the blacklist policy is permanently effective.
-         * 
-         * *   If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:
-         * 
-         *     *   `03:00-04:59`: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.
-         *     *   `03:00-04:59 UTC+0700`: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.
+         * <strong>example:</strong>
+         * <p>03:00-04:59</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -224,10 +234,11 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The timestamp when the blacklist policy expires.
-         * <p>
+         * <p>The timestamp when the blacklist policy expires.</p>
+         * <p>Unit: milliseconds.</p>
          * 
-         * Unit: milliseconds.
+         * <strong>example:</strong>
+         * <p>1640608200000</p>
          */
         public Builder enableEndTime(String enableEndTime) {
             this.putQueryParameter("EnableEndTime", enableEndTime);
@@ -236,10 +247,11 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The timestamp when the blacklist policy starts to take effect.
-         * <p>
+         * <p>The timestamp when the blacklist policy starts to take effect.</p>
+         * <p>Unit: milliseconds.</p>
          * 
-         * Unit: milliseconds.
+         * <strong>example:</strong>
+         * <p>1640237400000</p>
          */
         public Builder enableStartTime(String enableStartTime) {
             this.putQueryParameter("EnableStartTime", enableStartTime);
@@ -248,10 +260,12 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The ID of the blacklist policy.
-         * <p>
+         * <p>The ID of the blacklist policy.</p>
+         * <p>For information about how to obtain the ID of a blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the ID of a blacklist policy, see [DescribeMetricRuleBlackList](~~457257~~).
+         * <strong>example:</strong>
+         * <p>93514c96-ceb8-47d8-8ee3-93b6d98b****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -260,7 +274,8 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The IDs of the instances that belong to the specified cloud service.
+         * <p>The IDs of the instances that belong to the specified cloud service.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List < String > instances) {
             this.putQueryParameter("Instances", instances);
@@ -269,11 +284,11 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The metrics of the instance.
-         * <p>
-         * 
-         * *   If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.
-         * *   If you configure this parameter, the blacklist policy applies only to the current metric.
+         * <p>The metrics of the instance.</p>
+         * <ul>
+         * <li>If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.</li>
+         * <li>If you configure this parameter, the blacklist policy applies only to the current metric.</li>
+         * </ul>
          */
         public Builder metrics(java.util.List < Metrics> metrics) {
             this.putQueryParameter("Metrics", metrics);
@@ -282,7 +297,11 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The name of the blacklist policy.
+         * <p>The name of the blacklist policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Blacklist-02</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -291,10 +310,12 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service.
-         * <p>
+         * <p>The namespace of the cloud service.</p>
+         * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -303,11 +324,14 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The effective scope of the blacklist policy. Valid values:
-         * <p>
+         * <p>The effective scope of the blacklist policy. Valid values:</p>
+         * <ul>
+         * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
+         * <li>GROUP (default): The blacklist policy takes effect only within the specified application group. For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</li>
+         * </ul>
          * 
-         * *   USER: The blacklist policy takes effect only within the current Alibaba Cloud account.
-         * *   GROUP (default): The blacklist policy takes effect only within the specified application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);
@@ -316,10 +340,13 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The IDs of the application groups.
-         * <p>
+         * <p>The IDs of the application groups.</p>
+         * <blockquote>
+         * <p> This parameter is required only when <code>ScopeType</code> is set to <code>GROUP</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only when `ScopeType` is set to `GROUP`.
+         * <strong>example:</strong>
+         * <p>[&quot;67****&quot;,&quot;78****&quot;]</p>
          */
         public Builder scopeValue(String scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -334,6 +361,12 @@ public class ModifyMetricRuleBlackListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyMetricRuleBlackListRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyMetricRuleBlackListRequest</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetricName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -374,10 +407,12 @@ public class ModifyMetricRuleBlackListRequest extends Request {
             private String resource; 
 
             /**
-             * The name of the metric.
-             * <p>
+             * <p>The name of the metric.</p>
+             * <p>Valid values of N: 1 to 10.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>disk_utilization</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -385,10 +420,11 @@ public class ModifyMetricRuleBlackListRequest extends Request {
             }
 
             /**
-             * The extended dimension of the instance. For example, `{"device":"C:"}` specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.
-             * <p>
+             * <p>The extended dimension of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>{&quot;device&quot;:&quot;C:&quot;}</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;

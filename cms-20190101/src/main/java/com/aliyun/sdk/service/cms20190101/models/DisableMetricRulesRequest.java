@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableMetricRulesRequest} extends {@link RequestModel}
  *
  * <p>DisableMetricRulesRequest</p>
@@ -54,7 +55,11 @@ public class DisableMetricRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the alert rule. Valid values of N: 1 to 20.
+         * <p>The ID of the alert rule. Valid values of N: 1 to 20.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>detect_87****_HTTP_HttpLatency</p>
          */
         public Builder ruleId(java.util.List < String > ruleId) {
             this.putQueryParameter("RuleId", ruleId);

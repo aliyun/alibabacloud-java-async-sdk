@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstantSiteMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstantSiteMonitorResponseBody</p>
@@ -85,10 +86,13 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code.
-         * <p>
+         * <p>The error code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The results for creating the instant test task.
+         * <p>The results for creating the instant test task.</p>
          */
         public Builder createResultList(java.util.List < CreateResultList> createResultList) {
             this.createResultList = createResultList;
@@ -104,7 +108,10 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68192f5d-0d45-4b98-9724-892813f86c71</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstantSiteMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateInstantSiteMonitorResponseBody</p>
+     */
     public static class CreateResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -176,7 +195,10 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * The ID of the instant test task.
+             * <p>The ID of the instant test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2c8dbdf9-a3ab-46a1-85a4-f094965e****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -184,7 +206,10 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instant test task.
+             * <p>The name of the instant test task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

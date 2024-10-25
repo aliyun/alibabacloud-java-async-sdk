@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
@@ -73,10 +74,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         private ResourceQuota resourceQuota; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -84,7 +88,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -92,7 +99,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31BC7201-00F2-47B2-B7B9-6A173076ACE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,7 +110,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The details about the resource quotas of CloudMonitor.
+         * <p>The details about the resource quotas of CloudMonitor.</p>
          */
         public Builder resourceQuota(ResourceQuota resourceQuota) {
             this.resourceQuota = resourceQuota;
@@ -113,6 +123,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class Api extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -164,7 +180,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of API calls. Unit: 10,000 calls.
+             * <p>The total quota of API calls. Unit: 10,000 calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -172,7 +191,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of API calls in your resource plan. Unit: 10,000 calls.
+             * <p>The quota of API calls in your resource plan. Unit: 10,000 calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -180,7 +202,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of API calls in your resource plan. Unit: calls.
+             * <p>The used quota of API calls in your resource plan. Unit: calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9987</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -194,6 +219,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class CustomMonitor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -245,7 +276,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of the time series for custom monitoring.
+             * <p>The total quota of the time series for custom monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -253,7 +287,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of the time series for custom monitoring in your resource plan.
+             * <p>The quota of the time series for custom monitoring in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -261,7 +298,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of the time series for custom monitoring in your resource plan.
+             * <p>The used quota of the time series for custom monitoring in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -275,6 +315,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class EnterpriseQuota extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -314,7 +360,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private String suitInfo; 
 
             /**
-             * The ID of the instance monitored by Hybrid Cloud Monitoring.
+             * <p>The ID of the instance monitored by Hybrid Cloud Monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms_enterprise_public_cn-7mz27pd****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -322,7 +371,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The description of Hybrid Cloud Monitoring.
+             * <p>The description of Hybrid Cloud Monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENTERPRISE</p>
              */
             public Builder suitInfo(String suitInfo) {
                 this.suitInfo = suitInfo;
@@ -336,6 +388,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class EventMonitor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -387,7 +445,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of events that can be reported in event monitoring. The total quota is the value that is multiplied by 10,000.
+             * <p>The total quota of events that can be reported in event monitoring. The total quota is the value that is multiplied by 10,000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -395,7 +456,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.
+             * <p>The quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -403,7 +467,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.
+             * <p>The used quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -417,6 +484,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class LogMonitor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -468,7 +541,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of processed log data in log monitoring. Unit: MB/min.
+             * <p>The total quota of processed log data in log monitoring. Unit: MB/min.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -476,7 +552,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of processed log data in log monitoring in your resource plan. Unit: MB/min.
+             * <p>The quota of processed log data in log monitoring in your resource plan. Unit: MB/min.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -484,7 +563,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of processed log data in log monitoring in your resource plan. Unit: MB/min.
+             * <p>The used quota of processed log data in log monitoring in your resource plan. Unit: MB/min.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -498,6 +580,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class Phone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -549,7 +637,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of alert phone calls. Unit: calls.
+             * <p>The total quota of alert phone calls. Unit: calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -557,7 +648,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of alert phone calls in your resource plan. Unit: calls.
+             * <p>The quota of alert phone calls in your resource plan. Unit: calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -565,7 +659,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of alert phone calls in your resource plan. Unit: calls.
+             * <p>The used quota of alert phone calls in your resource plan. Unit: calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -579,6 +676,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class SMS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -630,7 +733,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of alert text messages. Unit: messages.
+             * <p>The total quota of alert text messages. Unit: messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -638,7 +744,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of alert text messages in your resource plan. Unit: messages.
+             * <p>The quota of alert text messages in your resource plan. Unit: messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -646,7 +755,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of alert text messages in your resource plan. Unit: messages.
+             * <p>The used quota of alert text messages in your resource plan. Unit: messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -660,6 +772,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class SiteMonitorBrowser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -711,7 +829,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of browser detection tasks.
+             * <p>The total quota of browser detection tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -719,7 +840,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of browser detection tasks in your resource plan.
+             * <p>The quota of browser detection tasks in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -727,7 +851,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of browser detection tasks in your resource plan.
+             * <p>The used quota of browser detection tasks in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -741,6 +868,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class SiteMonitorEcsProbe extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -792,10 +925,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of ECS detection points for site monitoring.
-             * <p>
+             * <p>The total quota of ECS detection points for site monitoring.</p>
+             * <blockquote>
+             * <p>The value indicates the maximum number of ECS detection points that you can select for a site monitoring task.</p>
+             * </blockquote>
              * 
-             * > The value indicates the maximum number of ECS detection points that you can select for a site monitoring task.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -803,7 +939,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of ECS detection points for site monitoring in your resource plan.
+             * <p>The quota of ECS detection points for site monitoring in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -811,10 +950,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of ECS detection points for site monitoring in your resource plan.
-             * <p>
+             * <p>The used quota of ECS detection points for site monitoring in your resource plan.</p>
+             * <blockquote>
+             * <p>The value indicates the total number of ECS detection points that are used by existing site monitoring tasks.</p>
+             * </blockquote>
              * 
-             * > The value indicates the total number of ECS detection points that are used by existing site monitoring tasks.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -828,6 +970,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class SiteMonitorMobile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -879,7 +1027,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of mobile detection tasks.
+             * <p>The total quota of mobile detection tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -887,7 +1038,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of mobile detection tasks in your resource plan.
+             * <p>The quota of mobile detection tasks in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -895,7 +1049,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of mobile detection tasks in your resource plan.
+             * <p>The used quota of mobile detection tasks in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -909,6 +1066,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class SiteMonitorOperatorProbe extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -960,7 +1123,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of carrier detection points for site monitoring.
+             * <p>The total quota of carrier detection points for site monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -968,7 +1134,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of carrier detection points for site monitoring in your resource plan.
+             * <p>The quota of carrier detection points for site monitoring in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -976,7 +1145,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of carrier detection points for site monitoring in your resource plan.
+             * <p>The used quota of carrier detection points for site monitoring in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -990,6 +1162,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class SiteMonitorTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
@@ -1041,7 +1219,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of site monitoring tasks.
+             * <p>The total quota of site monitoring tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -1049,7 +1230,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of site monitoring tasks in your resource plan.
+             * <p>The quota of site monitoring tasks in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -1057,7 +1241,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of site monitoring tasks in your resource plan.
+             * <p>The used quota of site monitoring tasks in your resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -1071,6 +1258,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorResourceQuotaAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
+     */
     public static class ResourceQuota extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Api")
         private Api api;
@@ -1266,7 +1459,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private String suitInfo; 
 
             /**
-             * The details about the quota of API calls.
+             * <p>The details about the quota of API calls.</p>
              */
             public Builder api(Api api) {
                 this.api = api;
@@ -1274,7 +1467,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota for custom monitoring.
+             * <p>The details about the quota for custom monitoring.</p>
              */
             public Builder customMonitor(CustomMonitor customMonitor) {
                 this.customMonitor = customMonitor;
@@ -1282,7 +1475,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota of Hybrid Cloud Monitoring.
+             * <p>The details about the quota of Hybrid Cloud Monitoring.</p>
              */
             public Builder enterpriseQuota(EnterpriseQuota enterpriseQuota) {
                 this.enterpriseQuota = enterpriseQuota;
@@ -1290,7 +1483,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota for event monitoring.
+             * <p>The details about the quota for event monitoring.</p>
              */
             public Builder eventMonitor(EventMonitor eventMonitor) {
                 this.eventMonitor = eventMonitor;
@@ -1298,7 +1491,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The time when the resource plan expires.
+             * <p>The time when the resource plan expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-28</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1306,7 +1502,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the resource plan.
+             * <p>The ID of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms_edition-cn-n6w20rn****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1314,7 +1513,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota for log monitoring.
+             * <p>The details about the quota for log monitoring.</p>
              */
             public Builder logMonitor(LogMonitor logMonitor) {
                 this.logMonitor = logMonitor;
@@ -1322,7 +1521,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota of alert phone calls.
+             * <p>The details about the quota of alert phone calls.</p>
              */
             public Builder phone(Phone phone) {
                 this.phone = phone;
@@ -1330,7 +1529,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota of alert text messages.
+             * <p>The details about the quota of alert text messages.</p>
              */
             public Builder SMS(SMS SMS) {
                 this.SMS = SMS;
@@ -1338,7 +1537,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of browser detection tasks.
+             * <p>The quota of browser detection tasks.</p>
              */
             public Builder siteMonitorBrowser(SiteMonitorBrowser siteMonitorBrowser) {
                 this.siteMonitorBrowser = siteMonitorBrowser;
@@ -1346,7 +1545,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota of ECS detection points for site monitoring.
+             * <p>The details about the quota of ECS detection points for site monitoring.</p>
              */
             public Builder siteMonitorEcsProbe(SiteMonitorEcsProbe siteMonitorEcsProbe) {
                 this.siteMonitorEcsProbe = siteMonitorEcsProbe;
@@ -1354,7 +1553,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of mobile detection tasks.
+             * <p>The quota of mobile detection tasks.</p>
              */
             public Builder siteMonitorMobile(SiteMonitorMobile siteMonitorMobile) {
                 this.siteMonitorMobile = siteMonitorMobile;
@@ -1362,7 +1561,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota of carrier detection points for site monitoring.
+             * <p>The details about the quota of carrier detection points for site monitoring.</p>
              */
             public Builder siteMonitorOperatorProbe(SiteMonitorOperatorProbe siteMonitorOperatorProbe) {
                 this.siteMonitorOperatorProbe = siteMonitorOperatorProbe;
@@ -1370,7 +1569,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of site monitoring tasks.
+             * <p>The quota of site monitoring tasks.</p>
              */
             public Builder siteMonitorTask(SiteMonitorTask siteMonitorTask) {
                 this.siteMonitorTask = siteMonitorTask;
@@ -1378,12 +1577,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The current edition of CloudMonitor. Valid values:
-             * <p>
+             * <p>The current edition of CloudMonitor. Valid values:</p>
+             * <ul>
+             * <li>free: Free Edition</li>
+             * <li>pro: Pro Edition</li>
+             * <li>cms_post: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   free: Free Edition
-             * *   pro: Pro Edition
-             * *   cms_post: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>pro</p>
              */
             public Builder suitInfo(String suitInfo) {
                 this.suitInfo = suitInfo;

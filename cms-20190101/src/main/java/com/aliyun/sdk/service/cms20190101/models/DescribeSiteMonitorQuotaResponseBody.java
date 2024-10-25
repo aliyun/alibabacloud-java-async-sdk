@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSiteMonitorQuotaResponseBody</p>
@@ -85,10 +86,13 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The responses code.
-         * <p>
+         * <p>The responses code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +100,7 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The quota.
+         * <p>The quota.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -104,7 +108,7 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +116,10 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26860260-76C6-404E-AB7A-EB98D36A6885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +127,14 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +147,12 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSiteMonitorQuotaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorQuotaResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecondMonitor")
         private Boolean secondMonitor;
@@ -224,11 +240,14 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             private String siteMonitorVersion; 
 
             /**
-             * Indicates whether second-level monitoring is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether second-level monitoring is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Second-level monitoring is enabled.</li>
+             * <li>false: Second-level monitoring is disabled.</li>
+             * </ul>
              * 
-             * *   true: Second-level monitoring is enabled.
-             * *   false: Second-level monitoring is disabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder secondMonitor(Boolean secondMonitor) {
                 this.secondMonitor = secondMonitor;
@@ -236,7 +255,10 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The quota of detection points that are provided by Alibaba Cloud. Five detection points are provided for free.
+             * <p>The quota of detection points that are provided by Alibaba Cloud. Five detection points are provided for free.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder siteMonitorIdcQuota(Integer siteMonitorIdcQuota) {
                 this.siteMonitorIdcQuota = siteMonitorIdcQuota;
@@ -244,7 +266,10 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The quota of detection points that are not provided by Alibaba Cloud. Default value: 0.
+             * <p>The quota of detection points that are not provided by Alibaba Cloud. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder siteMonitorOperatorQuotaQuota(Integer siteMonitorOperatorQuotaQuota) {
                 this.siteMonitorOperatorQuotaQuota = siteMonitorOperatorQuotaQuota;
@@ -252,7 +277,10 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The used quota of site monitoring tasks.
+             * <p>The used quota of site monitoring tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder siteMonitorQuotaTaskUsed(Integer siteMonitorQuotaTaskUsed) {
                 this.siteMonitorQuotaTaskUsed = siteMonitorQuotaTaskUsed;
@@ -260,7 +288,10 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The quota of site monitoring tasks.
+             * <p>The quota of site monitoring tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder siteMonitorTaskQuota(Integer siteMonitorTaskQuota) {
                 this.siteMonitorTaskQuota = siteMonitorTaskQuota;
@@ -268,11 +299,14 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The version of site monitoring. Valid values:
-             * <p>
+             * <p>The version of site monitoring. Valid values:</p>
+             * <ul>
+             * <li>V1</li>
+             * <li>V2</li>
+             * </ul>
              * 
-             * *   V1
-             * *   V2
+             * <strong>example:</strong>
+             * <p>V1</p>
              */
             public Builder siteMonitorVersion(String siteMonitorVersion) {
                 this.siteMonitorVersion = siteMonitorVersion;

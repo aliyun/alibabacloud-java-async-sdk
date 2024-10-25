@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitoringAgentProcessRequest} extends {@link RequestModel}
  *
  * <p>CreateMonitoringAgentProcessRequest</p>
@@ -82,7 +83,11 @@ public class CreateMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze51wjtwox01r8g****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -91,7 +96,10 @@ public class CreateMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The name of the process.
+         * <p>The name of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -100,7 +108,10 @@ public class CreateMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The user who launches the process.
+         * <p>The user who launches the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder processUser(String processUser) {
             this.putQueryParameter("ProcessUser", processUser);

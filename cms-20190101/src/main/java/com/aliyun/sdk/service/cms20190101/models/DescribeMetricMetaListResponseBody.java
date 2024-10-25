@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricMetaListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetricMetaListResponseBody</p>
@@ -97,10 +98,13 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -108,7 +112,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -116,7 +123,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CCE0AF0-053C-4B13-A583-DC9A85785D49</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +134,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of the metrics in the resources.
+         * <p>The configuration of the metrics in the resources.</p>
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -132,11 +142,14 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -144,7 +157,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -157,6 +173,12 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMetricMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricMetaListResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -268,7 +290,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The metric description.
+             * <p>The metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPUUtilization</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -276,7 +301,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring dimensions of the resource. Multiple monitoring dimensions are separated with commas (,).
+             * <p>The monitoring dimensions of the resource. Multiple monitoring dimensions are separated with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceId</p>
              */
             public Builder dimensions(String dimensions) {
                 this.dimensions = dimensions;
@@ -284,17 +312,19 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the metric, including one or more JSON strings.
-             * <p>
+             * <p>The tags of the metric, including one or more JSON strings.</p>
+             * <p>Format: <code>[{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;}]</code>. The <code>name</code> can be repeated. The following tags are available:</p>
+             * <ul>
+             * <li>metricCategory: the category of the metric.</li>
+             * <li>alertEnable: indicates whether to report alerts for the metric.</li>
+             * <li>alertUnit: the unit of the metric in the alerts.</li>
+             * <li>unitFactor: the factor for metric unit conversion.</li>
+             * <li>minAlertPeriod: the minimum interval at which the alert is reported.</li>
+             * <li>productCategory: the category of the service.</li>
+             * </ul>
              * 
-             * Format: `[{"name":"tag key","value":"tag value"}]`. The `name` can be repeated. The following tags are available:
-             * 
-             * *   metricCategory: the category of the metric.
-             * *   alertEnable: indicates whether to report alerts for the metric.
-             * *   alertUnit: the unit of the metric in the alerts.
-             * *   unitFactor: the factor for metric unit conversion.
-             * *   minAlertPeriod: the minimum interval at which the alert is reported.
-             * *   productCategory: the category of the service.
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;alertUnit&quot;,&quot;value&quot;:&quot;Bytes&quot;},{&quot;name&quot;:&quot;minAlertPeriod&quot;,&quot;value&quot;:&quot;60&quot;},{&quot;name&quot;:&quot;metricCategory&quot;,&quot;value&quot;:&quot;instanceId&quot;},{&quot;name&quot;:&quot;instanceType&quot;,&quot;value&quot;:&quot;disaster&quot;},{&quot;name&quot;:&quot;is_alarm&quot;,&quot;value&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;productCategory&quot;,&quot;value&quot;:&quot;kvstore_old&quot;}]</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -302,7 +332,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The metric name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPUUtilization</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -310,7 +343,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the cloud service.
+             * <p>The namespace of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs_kvstore</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -318,10 +354,11 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical periods of the metric. Multiple statistical periods are separated with commas (,).
-             * <p>
+             * <p>The statistical periods of the metric. Multiple statistical periods are separated with commas (,).</p>
+             * <p>Unit: seconds.</p>
              * 
-             * Unit: seconds.
+             * <strong>example:</strong>
+             * <p>60,300</p>
              */
             public Builder periods(String periods) {
                 this.periods = periods;
@@ -329,7 +366,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical method. Multiple statistical methods are separated with commas (,).
+             * <p>The statistical method. Multiple statistical methods are separated with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Average,Minimum,Maximum</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -337,7 +377,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -351,6 +394,12 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMetricMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricMetaListResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;

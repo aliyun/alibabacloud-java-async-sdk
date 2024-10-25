@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveMetricRuleListRequest} extends {@link RequestModel}
  *
  * <p>DescribeActiveMetricRuleListRequest</p>
@@ -54,10 +55,12 @@ public class DescribeActiveMetricRuleListRequest extends Request {
         } 
 
         /**
-         * The abbreviation of the cloud service that supports initiative alert rules.
-         * <p>
+         * <p>The abbreviation of the cloud service that supports initiative alert rules.</p>
+         * <p>For more information about how to obtain the name of a cloud service, see <a href="https://help.aliyun.com/document_detail/114930.html">DescribeProductsOfActiveMetricRule</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the name of a cloud service, see [DescribeProductsOfActiveMetricRule](~~114930~~).
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);

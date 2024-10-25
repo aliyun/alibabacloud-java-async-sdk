@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHybridMonitorNamespaceRequest} extends {@link RequestModel}
  *
  * <p>ModifyHybridMonitorNamespaceRequest</p>
@@ -82,7 +83,7 @@ public class ModifyHybridMonitorNamespaceRequest extends Request {
         } 
 
         /**
-         * The description of the namespace.
+         * <p>The description of the namespace.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -91,12 +92,13 @@ public class ModifyHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <p>The name can contain letters, digits, and hyphens (-).</p>
+         * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name can contain letters, digits, and hyphens (-).
-         * 
-         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -105,17 +107,19 @@ public class ModifyHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * The data retention period. Valid values:
-         * <p>
+         * <p>The data retention period. Valid values:</p>
+         * <ul>
+         * <li>cms.s1.large: Data is stored for 15 days.</li>
+         * <li>cms.s1.xlarge: Data is stored for 32 days.</li>
+         * <li>cms.s1.2xlarge: Data is stored for 63 days.</li>
+         * <li>cms.s1.3xlarge: Data is stored for 93 days.</li>
+         * <li>cms.s1.6xlarge: Data is stored for 185 days.</li>
+         * <li>cms.s1.12xlarge: Data is stored for 376 days.</li>
+         * </ul>
+         * <p>For information about the pricing for different retention periods, see the <strong>Pricing</strong> section in <a href="https://help.aliyun.com/document_detail/223532.html">Billing of the dashboard feature</a>.</p>
          * 
-         * *   cms.s1.large: Data is stored for 15 days.
-         * *   cms.s1.xlarge: Data is stored for 32 days.
-         * *   cms.s1.2xlarge: Data is stored for 63 days.
-         * *   cms.s1.3xlarge: Data is stored for 93 days.
-         * *   cms.s1.6xlarge: Data is stored for 185 days.
-         * *   cms.s1.12xlarge: Data is stored for 376 days.
-         * 
-         * For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).
+         * <strong>example:</strong>
+         * <p>cms.s1.2xlarge</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
