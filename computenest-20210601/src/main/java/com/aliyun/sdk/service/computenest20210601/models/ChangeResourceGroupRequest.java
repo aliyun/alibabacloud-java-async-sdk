@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
@@ -95,10 +96,11 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the new resource group.
-         * <p>
+         * <p>The ID of the new resource group.</p>
+         * <p>You can view resource group IDs in the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> .</p>
          * 
-         * You can view resource group IDs in the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups) .
+         * <strong>example:</strong>
+         * <p>rg-acfmzmhzo******</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -107,7 +109,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -116,7 +121,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the cloud resource that you want to move to a new resource group.
+         * <p>The ID of the cloud resource that you want to move to a new resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-5dc794a7fd254e******</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -125,11 +133,14 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>service: service</li>
+         * <li>serviceinstance: service instance</li>
+         * </ul>
          * 
-         * *   service: service
-         * *   serviceinstance: service instance
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

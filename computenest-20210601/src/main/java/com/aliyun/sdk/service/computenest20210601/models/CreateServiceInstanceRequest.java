@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceInstanceRequest</p>
@@ -307,7 +308,10 @@ public class CreateServiceInstanceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -316,7 +320,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.
+         * <p>The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.</p>
          */
         public Builder commodity(Commodity commodity) {
             this.putQueryParameter("Commodity", commodity);
@@ -325,7 +329,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The alert contact group.
+         * <p>The alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云账号报警联系人</p>
          */
         public Builder contactGroup(String contactGroup) {
             this.putQueryParameter("ContactGroup", contactGroup);
@@ -334,11 +341,14 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. </li>
+         * <li><strong>false</strong> (default): sends the request.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. 
-         * *   **false** (default): sends the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -347,7 +357,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Indicates whether the service instance supports the operation feature.
+         * <p>Indicates whether the service instance supports the operation feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInstanceOps(Boolean enableInstanceOps) {
             this.putQueryParameter("EnableInstanceOps", enableInstanceOps);
@@ -356,7 +369,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Whether to enable Prometheus monitoring.
+         * <p>Whether to enable Prometheus monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableUserPrometheus(Boolean enableUserPrometheus) {
             this.putQueryParameter("EnableUserPrometheus", enableUserPrometheus);
@@ -365,7 +381,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The serviceInstance name.
+         * <p>The serviceInstance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -374,7 +393,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The operation metadata.
+         * <p>The operation metadata.</p>
          */
         public Builder operationMetadata(OperationMetadata operationMetadata) {
             this.putQueryParameter("OperationMetadata", operationMetadata);
@@ -383,10 +402,13 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The parameters that the customer specifies to deploy the service instance.
-         * <p>
+         * <p>The parameters that the customer specifies to deploy the service instance.</p>
+         * <blockquote>
+         * <p> If region information is required to create a service instance, you must specify the region ID in the value of Parameters.</p>
+         * </blockquote>
          * 
-         * >  If region information is required to create a service instance, you must specify the region ID in the value of Parameters.
+         * <strong>example:</strong>
+         * <p>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -396,11 +418,15 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. Valid values:
-         * <p>
+         * <p>The region ID. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: China (Hangzhou).</li>
+         * <li>ap-southeast-1: Singapore.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cn-hangzhou: China (Hangzhou).
-         * *   ap-southeast-1: Singapore.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -409,10 +435,11 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Whether the resource pays automatically.Valid values:
-         * <p>
-         * - true
-         * - false
+         * <p>Whether the resource pays automatically.Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          */
         public Builder resourceAutoPay(Boolean resourceAutoPay) {
             this.putQueryParameter("ResourceAutoPay", resourceAutoPay);
@@ -421,7 +448,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -430,7 +460,11 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-0e6fca6a51a54420****</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -439,7 +473,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The service version.
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -448,7 +485,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Specification code.
+         * <p>Specification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuncode5425200001</p>
          */
         public Builder specificationCode(String specificationCode) {
             this.putQueryParameter("SpecificationCode", specificationCode);
@@ -457,7 +497,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The package name.
+         * <p>The package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>套餐一</p>
          */
         public Builder specificationName(String specificationName) {
             this.putQueryParameter("SpecificationName", specificationName);
@@ -466,7 +509,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -475,7 +518,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The name of the template.
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模板1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -484,14 +530,17 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The trial type of serviceInstance. 
-         * <p>
-         * Valid values:
+         * <p>The trial type of serviceInstance. 
+         * Valid values:</p>
+         * <ul>
+         * <li>Created: </li>
+         * <li>Deploying</li>
+         * <li>DeployedFailed</li>
+         * <li>Deployed</li>
+         * </ul>
          * 
-         * - Created: 
-         * - Deploying
-         * - DeployedFailed
-         * - Deployed
+         * <strong>example:</strong>
+         * <p>Trial</p>
          */
         public Builder trialType(String trialType) {
             this.putQueryParameter("TrialType", trialType);
@@ -506,6 +555,12 @@ public class CreateServiceInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceInstanceRequest</p>
+     */
     public static class Commodity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoPay")
         private Boolean autoPay;
@@ -581,11 +636,14 @@ public class CreateServiceInstanceRequest extends Request {
             private String payPeriodUnit; 
 
             /**
-             * Specifies whether to automatically complete the payment. Valid values:
-             * <p>
+             * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoPay(Boolean autoPay) {
                 this.autoPay = autoPay;
@@ -593,11 +651,14 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable auto-renewal for the instance. Valid values:
-             * <p>
+             * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -613,7 +674,10 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * The subscription duration.
+             * <p>The subscription duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder payPeriod(Long payPeriod) {
                 this.payPeriod = payPeriod;
@@ -621,12 +685,15 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * The unit of the subscription duration. Valid values:
-             * <p>
+             * <p>The unit of the subscription duration. Valid values:</p>
+             * <ul>
+             * <li>Year</li>
+             * <li>Month</li>
+             * <li>Day</li>
+             * </ul>
              * 
-             * *   Year
-             * *   Month
-             * *   Day
+             * <strong>example:</strong>
+             * <p>Year</p>
              */
             public Builder payPeriodUnit(String payPeriodUnit) {
                 this.payPeriodUnit = payPeriodUnit;
@@ -640,6 +707,12 @@ public class CreateServiceInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServiceInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceInstanceRequest</p>
+     */
     public static class OperationMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -715,7 +788,10 @@ public class CreateServiceInstanceRequest extends Request {
             private String startTime; 
 
             /**
-             * The operation end time.
+             * <p>The operation end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-28T06:48:56Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -723,7 +799,20 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <pre><code class="language-json">  {
+             *     &quot;vncInfo&quot;: [
+             *       {
+             *         &quot;instanceId&quot;: &quot;i-001&quot;,
+             *         &quot;username&quot;: &quot;admin&quot;,
+             *         &quot;password&quot;: &quot;******&quot;,
+             *         &quot;vncPassword&quot;: &quot;******&quot;
+             *       }
+             *     ]
+             *   }
+             * </code></pre>
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -731,7 +820,10 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * Imported resource.
+             * <p>Imported resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,   &quot;Type&quot;: &quot;ResourceIds&quot;,   &quot;ResourceIds&quot;: {     &quot;ALIYUN::ECS::INSTANCE&quot;: [&quot;i-xxx&quot;, &quot;i-yyy&quot;],     &quot;ALIYUN::RDS::INSTANCE&quot;: [&quot;rm-xxx&quot;, &quot;rm-yyy&quot;],     &quot;ALIYUN::VPC::VPC&quot;: [&quot;vpc-xxx&quot;, &quot;vpc-yyy&quot;],     &quot;ALIYUN::SLB::INSTANCE&quot;: [&quot;lb-xxx&quot;, &quot;lb-yyy&quot;]   } }</p>
              */
             public Builder resources(String resources) {
                 this.resources = resources;
@@ -739,7 +831,10 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * The ID of the service instance.
+             * <p>The ID of the service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>si-d6ab3a63ccbb4b17****</p>
              */
             public Builder serviceInstanceId(String serviceInstanceId) {
                 this.serviceInstanceId = serviceInstanceId;
@@ -747,7 +842,10 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * The operation start time.
+             * <p>The operation start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-29T06:48:56Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -761,6 +859,12 @@ public class CreateServiceInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServiceInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -800,7 +904,10 @@ public class CreateServiceInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -808,7 +915,10 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceProvisionsRequest} extends {@link RequestModel}
  *
  * <p>GetServiceProvisionsRequest</p>
@@ -124,7 +125,10 @@ public class GetServiceProvisionsRequest extends Request {
         } 
 
         /**
-         * The parameters configured for the service instance.
+         * <p>The parameters configured for the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;ZoneId&quot;:&quot;cn-hangzhou-g&quot;,&quot;EcsInstanceType&quot;:&quot;ecs.g5.large&quot;,&quot;InstancePassword&quot;:&quot;xxxxxxxx&quot;,&quot;PayType&quot;:&quot;PostPaid&quot;,&quot;PayPeriodUnit&quot;:&quot;Month&quot;,&quot;PayPeriod&quot;:1}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -134,7 +138,10 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -143,7 +150,11 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-0efc0db451794bxxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -152,7 +163,10 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The version of the service.
+         * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -161,7 +175,10 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The template name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -170,11 +187,14 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The trial policy. Valid values:
-         * <p>
+         * <p>The trial policy. Valid values:</p>
+         * <ul>
+         * <li>Trial: Trials are supported.</li>
+         * <li>NotTrial: Trials are not supported.</li>
+         * </ul>
          * 
-         * *   Trial: Trials are supported.
-         * *   NotTrial: Trials are not supported.
+         * <strong>example:</strong>
+         * <p>Trial</p>
          */
         public Builder trialType(String trialType) {
             this.putQueryParameter("TrialType", trialType);

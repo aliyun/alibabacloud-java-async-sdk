@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceInstanceSpecRequest} extends {@link RequestModel}
  *
  * <p>UpdateServiceInstanceSpecRequest</p>
@@ -152,7 +153,10 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -161,7 +165,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.
+         * <p>The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.</p>
          */
         public Builder commodity(Commodity commodity) {
             this.putQueryParameter("Commodity", commodity);
@@ -170,11 +174,14 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>true: performs a dry run for the request, but does not create a service instance.</strong></li>
+         * <li><strong>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</strong></li>
+         * </ul>
          * 
-         * *   **true: performs a dry run for the request, but does not create a service instance.**
-         * *   **false: performs a dry run for the request, and creates a service instance if the request passes the dry run.**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -183,11 +190,14 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Prometheus on the customer side. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Prometheus on the customer side. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableUserPrometheus(Boolean enableUserPrometheus) {
             this.putQueryParameter("EnableUserPrometheus", enableUserPrometheus);
@@ -196,7 +206,10 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * The name of the configuration update operation.
+         * <p>The name of the configuration update operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>package modify</p>
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -205,7 +218,12 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * The configuration parameters of the service instance.
+         * <p>The configuration parameters of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;InstanceType&quot;: &quot;ecs.g8ise.2xlarge&quot;
+         * }</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -215,7 +233,10 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * The name of the specification package.
+         * <p>The name of the specification package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>package One</p>
          */
         public Builder predefinedParametersName(String predefinedParametersName) {
             this.putQueryParameter("PredefinedParametersName", predefinedParametersName);
@@ -224,7 +245,11 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * The service instance ID.
+         * <p>The service instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -239,6 +264,12 @@ public class UpdateServiceInstanceSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateServiceInstanceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateServiceInstanceSpecRequest</p>
+     */
     public static class Commodity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoPay")
         private Boolean autoPay;
@@ -266,11 +297,14 @@ public class UpdateServiceInstanceSpecRequest extends Request {
             private Boolean autoPay; 
 
             /**
-             * Specifies whether to automatically complete the payment. Valid values:
-             * <p>
+             * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoPay(Boolean autoPay) {
                 this.autoPay = autoPay;

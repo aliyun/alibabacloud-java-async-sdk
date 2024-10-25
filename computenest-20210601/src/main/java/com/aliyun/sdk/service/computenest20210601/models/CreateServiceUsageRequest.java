@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceUsageRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceUsageRequest</p>
@@ -91,7 +92,10 @@ public class CreateServiceUsageRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-d6fc5f949a9246xxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

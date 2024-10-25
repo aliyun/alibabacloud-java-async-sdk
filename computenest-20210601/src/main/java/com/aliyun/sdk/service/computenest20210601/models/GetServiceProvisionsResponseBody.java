@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceProvisionsResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceProvisionsResponseBody</p>
@@ -49,7 +50,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         private java.util.List < ServiceProvisions> serviceProvisions; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C27145F-C9F4-545D-A355-DCDDAD63D548</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the services.
+         * <p>The information about the services.</p>
          */
         public Builder serviceProvisions(java.util.List < ServiceProvisions> serviceProvisions) {
             this.serviceProvisions = serviceProvisions;
@@ -70,6 +74,12 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceProvisionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceProvisionsResponseBody</p>
+     */
     public static class ApiForCreation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
@@ -133,7 +143,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private java.util.Map < String, ? > parameters; 
 
             /**
-             * The name of the API operation.
+             * <p>The name of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateServiceLinkedRole</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -141,7 +154,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud service to which the API operation belongs.
+             * <p>The ID of the Alibaba Cloud service to which the API operation belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder apiProductId(String apiProductId) {
                 this.apiProductId = apiProductId;
@@ -149,11 +165,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the API operation. Valid values:
-             * <p>
+             * <p>The type of the API operation. Valid values:</p>
+             * <ul>
+             * <li>Open: public</li>
+             * <li>Inner: private</li>
+             * </ul>
              * 
-             * *   Open: public
-             * *   Inner: private
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder apiType(String apiType) {
                 this.apiType = apiType;
@@ -161,7 +180,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ROS parameters of the cluster.
+             * <p>The ROS parameters of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;ServiceLinkedRole&quot;: &quot;AliyunServiceRoleForRdsPgsqlOnEcs&quot;, &quot;RegionId&quot;: &quot;${RegionId}&quot; }</p>
              */
             public Builder parameters(java.util.Map < String, ? > parameters) {
                 this.parameters = parameters;
@@ -175,6 +197,12 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceProvisionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceProvisionsResponseBody</p>
+     */
     public static class Roles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiForCreation")
         private ApiForCreation apiForCreation;
@@ -238,7 +266,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private String roleName; 
 
             /**
-             * The information about the API operation that is used to create the RAM role.
+             * <p>The information about the API operation that is used to create the RAM role.</p>
              */
             public Builder apiForCreation(ApiForCreation apiForCreation) {
                 this.apiForCreation = apiForCreation;
@@ -246,11 +274,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the RAM role is created. Valid values:
-             * <p>
+             * <p>Indicates whether the RAM role is created. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder created(Boolean created) {
                 this.created = created;
@@ -258,7 +289,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose for which the RAM role is used. Default value: Default. A value of Default indicates that the RAM role is the default role of the service.
+             * <p>The purpose for which the RAM role is used. Default value: Default. A value of Default indicates that the RAM role is the default role of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -266,7 +300,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the role.
+             * <p>The name of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunCSManagedVKRole</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -280,6 +317,12 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceProvisionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceProvisionsResponseBody</p>
+     */
     public static class RoleProvision extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizationURL")
         private String authorizationURL;
@@ -319,10 +362,13 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private java.util.List < Roles> roles; 
 
             /**
-             * The authorization URL of the RAM role.
-             * <p>
+             * <p>The authorization URL of the RAM role.</p>
+             * <blockquote>
+             * <p>This parameter is returned if Created is set to false.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned if Created is set to false.
+             * <strong>example:</strong>
+             * <p><a href="https://ram.console.aliyun.com/role/authorization?request=%7B%22Services%22:%5B%7B%22Service%22:%22CS%22,%22Roles%22:%5B%7B%22RoleName%22:%22AliyunCSManagedVKRole%22,%22TemplateId%22:%22AliyunCSManagedVKRole%22%7D,%7B%22RoleName%22:%22AliyunCSDefaultRole%22,%22TemplateId%22:%22Default%22%7D%5D%7D%5D,%22ReturnUrl%22:%22https://cs.console.aliyun.com/%22%7D">https://ram.console.aliyun.com/role/authorization?request={&quot;Services&quot;:[{&quot;Service&quot;:&quot;CS&quot;,&quot;Roles&quot;:[{&quot;RoleName&quot;:&quot;AliyunCSManagedVKRole&quot;,&quot;TemplateId&quot;:&quot;AliyunCSManagedVKRole&quot;},{&quot;RoleName&quot;:&quot;AliyunCSDefaultRole&quot;,&quot;TemplateId&quot;:&quot;Default&quot;}]}],&quot;ReturnUrl&quot;:&quot;https://cs.console.aliyun.com/&quot;}</a></p>
              */
             public Builder authorizationURL(String authorizationURL) {
                 this.authorizationURL = authorizationURL;
@@ -330,7 +376,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The RAM roles of the service.
+             * <p>The RAM roles of the service.</p>
              */
             public Builder roles(java.util.List < Roles> roles) {
                 this.roles = roles;
@@ -344,6 +390,12 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceProvisionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceProvisionsResponseBody</p>
+     */
     public static class ServiceProvisions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoEnableService")
         private Boolean autoEnableService;
@@ -431,11 +483,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * Indicates whether automatic activation for the service is defined in the template. Valid values:
-             * <p>
+             * <p>Indicates whether automatic activation for the service is defined in the template. Valid values:</p>
+             * <ul>
+             * <li>true: Automatic activation for the service is defined in the template.</li>
+             * <li>false: Manual activation for the service is defined in the template.</li>
+             * </ul>
              * 
-             * *   true: Automatic activation for the service is defined in the template.
-             * *   false: Manual activation for the service is defined in the template.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoEnableService(Boolean autoEnableService) {
                 this.autoEnableService = autoEnableService;
@@ -443,10 +498,13 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that points to the activation page of the service.
-             * <p>
+             * <p>The URL that points to the activation page of the service.</p>
+             * <blockquote>
+             * <p>This parameter is returned if Status is set to Disabled.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned if Status is set to Disabled.
+             * <strong>example:</strong>
+             * <p><a href="https://common-buy.aliyun.com/?commodityCode=sls">https://common-buy.aliyun.com/?commodityCode=sls</a></p>
              */
             public Builder enableURL(String enableURL) {
                 this.enableURL = enableURL;
@@ -454,7 +512,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the RAM roles of the service. If this parameter is empty, no RAM role is associated with the service.
+             * <p>The information about the RAM roles of the service. If this parameter is empty, no RAM role is associated with the service.</p>
              */
             public Builder roleProvision(RoleProvision roleProvision) {
                 this.roleProvision = roleProvision;
@@ -462,7 +520,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The service name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CS</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -470,12 +531,15 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The activation status of the service. Valid values:
-             * <p>
+             * <p>The activation status of the service. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The service is activated.</li>
+             * <li>Disabled: The service is not activated.</li>
+             * <li>Unknown: The activation status of the service is unknown.</li>
+             * </ul>
              * 
-             * *   Enabled: The service is activated.
-             * *   Disabled: The service is not activated.
-             * *   Unknown: The activation status of the service is unknown.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -483,10 +547,13 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the service is in the Disabled or Unknown state.
-             * <p>
+             * <p>The reason why the service is in the Disabled or Unknown state.</p>
+             * <blockquote>
+             * <p>This parameter is returned if Status is set to Disabled or Unknown.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned if Status is set to Disabled or Unknown.
+             * <strong>example:</strong>
+             * <p>No permission</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ContinueDeployServiceInstanceRequest} extends {@link RequestModel}
  *
  * <p>ContinueDeployServiceInstanceRequest</p>
@@ -125,7 +126,10 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -134,11 +138,14 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run for the request, but does not create a service instance.</li>
+         * <li>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</li>
+         * </ul>
          * 
-         * *   true: performs a dry run for the request, but does not create a service instance.
-         * *   false: performs a dry run for the request, and creates a service instance if the request passes the dry run.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -147,7 +154,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * The options that the system adopts when the system continues to create the service instance.
+         * <p>The options that the system adopts when the system continues to create the service instance.</p>
          */
         public Builder option(java.util.List < String > option) {
             this.putQueryParameter("Option", option);
@@ -156,7 +163,10 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * The parameters configured for the service instance.
+         * <p>The parameters configured for the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -165,7 +175,11 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +188,11 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the service instance.
+         * <p>The ID of the service instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-0e6fca6a51a54420****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateServiceInstanceResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The MartketInstance ID.
+         * <p>The MartketInstance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>786***45</p>
          */
         public Builder marketInstanceId(String marketInstanceId) {
             this.marketInstanceId = marketInstanceId;
@@ -93,7 +97,10 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2306175xxxxxxxx</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -101,7 +108,10 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The service instance ID.
+         * <p>The service instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -117,12 +130,15 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the synchronization task was created. Valid values:
-         * <p>
+         * <p>Indicates whether the synchronization task was created. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Created.</li>
+         * <li><strong>0</strong>: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the <strong>RepeatedDbs</strong> parameter.</li>
+         * <li><strong>-1</strong>: Creation failed. The cause why the creation failed is returned for the <strong>ErrorMsg</strong> parameter.</li>
+         * </ul>
          * 
-         * *   **1**: Created.
-         * *   **0**: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the **RepeatedDbs** parameter.
-         * *   **-1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListServiceInstancesRequest</p>
@@ -124,7 +125,7 @@ public class ListServiceInstancesRequest extends Request {
         } 
 
         /**
-         * The filter.
+         * <p>The filter.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -133,7 +134,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -142,7 +146,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -151,7 +158,11 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -160,7 +171,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -169,7 +183,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The tag key and value.
+         * <p>The tag key and value.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -184,6 +198,12 @@ public class ListServiceInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>ListServiceInstancesRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -223,17 +243,20 @@ public class ListServiceInstancesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:
-             * <p>
+             * <p>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</p>
+             * <ul>
+             * <li>Name：Query by service name.</li>
+             * <li>ServiceInstanceName：Query by service  instance name.</li>
+             * <li>ServiceInstanceId：Query by service  instance ID.</li>
+             * <li>ServiceId：Query by service ID.</li>
+             * <li>Version：Query by service version.</li>
+             * <li>Status：Query by service status.</li>
+             * <li>DeployType: Query by service deployType.</li>
+             * <li>ServiceType：Query by service deployType.</li>
+             * </ul>
              * 
-             * - Name：Query by service name.
-             * - ServiceInstanceName：Query by service  instance name.
-             * - ServiceInstanceId：Query by service  instance ID.
-             * - ServiceId：Query by service ID.
-             * - Version：Query by service version.
-             * - Status：Query by service status.
-             * - DeployType: Query by service deployType.
-             * - ServiceType：Query by service deployType.
+             * <strong>example:</strong>
+             * <p>ServiceInstanceId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -241,7 +264,7 @@ public class ListServiceInstancesRequest extends Request {
             }
 
             /**
-             * The parameter values of the filter.
+             * <p>The parameter values of the filter.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -255,6 +278,12 @@ public class ListServiceInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>ListServiceInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -294,7 +323,10 @@ public class ListServiceInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +334,10 @@ public class ListServiceInstancesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

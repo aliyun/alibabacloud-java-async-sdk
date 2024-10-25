@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceEstimateCostRequest} extends {@link RequestModel}
  *
  * <p>GetServiceEstimateCostRequest</p>
@@ -194,7 +195,10 @@ public class GetServiceEstimateCostRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwertyuiop</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -203,7 +207,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The commodity details.
+         * <p>The commodity details.</p>
          */
         public Builder commodity(Commodity commodity) {
             String commodityShrink = shrink(commodity, "Commodity", "json");
@@ -213,7 +217,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The name of the configuration update operation.
+         * <p>The name of the configuration update operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>修改游戏参数</p>
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -222,10 +229,13 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The parameters that are specified for service instance deployment.
-         * <p>
+         * <p>The parameters that are specified for service instance deployment.</p>
+         * <blockquote>
+         * <p> If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.</p>
+         * </blockquote>
          * 
-         * >  If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.
+         * <strong>example:</strong>
+         * <p>{ &quot;RegionId&quot;: &quot;cn-hangzhou&quot;, &quot;InstanceType&quot;: &quot;ecs.g5.large&quot;}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -235,7 +245,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,7 +257,11 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-12xxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -253,7 +270,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The service instance ID.
+         * <p>The service instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17xxxx</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -262,7 +282,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The service version.
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -271,7 +294,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The package name.
+         * <p>The package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自定义套餐</p>
          */
         public Builder specificationName(String specificationName) {
             this.putQueryParameter("SpecificationName", specificationName);
@@ -280,11 +306,16 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The name of the template. This parameter is returned only if you specify TemplateId.
-         * <p>
+         * <p>The name of the template. This parameter is returned only if you specify TemplateId.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</li>
+         * <li>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > -   If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.
-         * > -  If you not specify TemplateVersion, the name of the template whose version is the default version is returned.
+         * <strong>example:</strong>
+         * <p>模板1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -293,11 +324,14 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * The trial policy. Valid values:
-         * <p>
+         * <p>The trial policy. Valid values:</p>
+         * <ul>
+         * <li>Trial: Trials are supported.</li>
+         * <li>NotTrial: Trials are not supported.</li>
+         * </ul>
          * 
-         * *   Trial: Trials are supported.
-         * *   NotTrial: Trials are not supported.
+         * <strong>example:</strong>
+         * <p>NotTrial</p>
          */
         public Builder trialType(String trialType) {
             this.putQueryParameter("TrialType", trialType);
@@ -312,6 +346,12 @@ public class GetServiceEstimateCostRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceEstimateCostRequest} extends {@link TeaModel}
+     *
+     * <p>GetServiceEstimateCostRequest</p>
+     */
     public static class Commodity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CouponId")
         private String couponId;
@@ -371,7 +411,10 @@ public class GetServiceEstimateCostRequest extends Request {
             }
 
             /**
-             * The subscription duration.
+             * <p>The subscription duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder payPeriod(Integer payPeriod) {
                 this.payPeriod = payPeriod;
@@ -379,12 +422,15 @@ public class GetServiceEstimateCostRequest extends Request {
             }
 
             /**
-             * The unit of the subscription duration. Valid values:
-             * <p>
+             * <p>The unit of the subscription duration. Valid values:</p>
+             * <ul>
+             * <li>Year</li>
+             * <li>Month</li>
+             * <li>Day</li>
+             * </ul>
              * 
-             * *   Year
-             * *   Month
-             * *   Day
+             * <strong>example:</strong>
+             * <p>Year</p>
              */
             public Builder payPeriodUnit(String payPeriodUnit) {
                 this.payPeriodUnit = payPeriodUnit;

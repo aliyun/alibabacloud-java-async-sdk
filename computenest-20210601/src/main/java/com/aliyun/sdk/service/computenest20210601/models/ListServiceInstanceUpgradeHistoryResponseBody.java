@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceInstanceUpgradeHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceInstanceUpgradeHistoryResponseBody</p>
@@ -130,6 +131,12 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceInstanceUpgradeHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceInstanceUpgradeHistoryResponseBody</p>
+     */
     public static class UpgradeHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;

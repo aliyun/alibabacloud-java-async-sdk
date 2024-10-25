@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesRequest} extends {@link RequestModel}
  *
  * <p>ListTagValuesRequest</p>
@@ -98,10 +99,14 @@ public class ListTagValuesRequest extends Request {
         } 
 
         /**
-         * The tag key.
-         * <p>
+         * <p>The tag key.</p>
+         * <blockquote>
+         * <p> This parameter is required.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This parameter is required.
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -110,7 +115,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAfmTH5rcd4YFfob4P0uDAAc=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -119,7 +127,11 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,13 +140,17 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>service: service</li>
+         * <li>serviceinstance: service instance</li>
+         * <li>artifact: artifact</li>
+         * <li>dataset: dataset</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   service: service
-         * *   serviceinstance: service instance
-         * *   artifact: artifact
-         * *   dataset: dataset
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

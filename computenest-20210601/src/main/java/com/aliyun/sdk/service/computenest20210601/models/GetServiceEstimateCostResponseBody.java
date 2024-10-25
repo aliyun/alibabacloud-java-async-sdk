@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceEstimateCostResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceEstimateCostResponseBody</p>
@@ -61,7 +62,10 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
         private java.util.Map < String, ? > resources; 
 
         /**
-         * Estimated commodity cost.
+         * <p>Estimated commodity cost.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cmgj00059839&quot;: {&quot;Result&quot;: {&quot;InquiryType&quot;: &quot;Buy&quot;, &quot;Order&quot;: {&quot;Currency&quot;: &quot;CNY&quot;, &quot;DiscountAmount&quot;: &quot;0.0&quot;, &quot;TradeAmount&quot;: &quot;0.01&quot;, &quot;OriginalAmount&quot;: &quot;0.01&quot;}}}}</p>
          */
         public Builder commodity(java.util.Map < String, CommodityValue > commodity) {
             this.commodity = commodity;
@@ -69,7 +73,10 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08ABBB67-39C9-5EE7-98E5-80486F75CE8D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,74 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
         }
 
         /**
-         * Estimated resource cost.
+         * <p>Estimated resource cost.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;EcsInstance&quot; : {
+         *       &quot;Type&quot; : &quot;ALIYUN::ECS::Instance&quot;,
+         *       &quot;Success&quot; : true,
+         *       &quot;Result&quot; : {
+         *         &quot;Order&quot; : {
+         *           &quot;Currency&quot; : &quot;CNY&quot;,
+         *           &quot;RuleIds&quot; : [ &quot;102111101338****&quot; ],
+         *           &quot;DetailInfos&quot; : {
+         *             &quot;ResourcePriceModel&quot; : [ {
+         *               &quot;OriginalPrice&quot; : 0,
+         *               &quot;DiscountPrice&quot; : 0,
+         *               &quot;SubRules&quot; : {
+         *                 &quot;Rule&quot; : [ ]
+         *               },
+         *               &quot;Resource&quot; : &quot;bandwidth&quot;,
+         *               &quot;TradePrice&quot; : 0
+         *             }, {
+         *               &quot;OriginalPrice&quot; : 0,
+         *               &quot;DiscountPrice&quot; : 0,
+         *               &quot;SubRules&quot; : {
+         *                 &quot;Rule&quot; : [ ]
+         *               },
+         *               &quot;Resource&quot; : &quot;image&quot;,
+         *               &quot;TradePrice&quot; : 0
+         *             }, {
+         *               &quot;OriginalPrice&quot; : 0.366666,
+         *               &quot;DiscountPrice&quot; : 0.249012,
+         *               &quot;SubRules&quot; : {
+         *                 &quot;Rule&quot; : [ ]
+         *               },
+         *               &quot;Resource&quot; : &quot;instanceType&quot;,
+         *               &quot;TradePrice&quot; : 0.117654
+         *             }, {
+         *               &quot;OriginalPrice&quot; : 0.055555,
+         *               &quot;DiscountPrice&quot; : 0.037729,
+         *               &quot;SubRules&quot; : {
+         *                 &quot;Rule&quot; : [ ]
+         *               },
+         *               &quot;Resource&quot; : &quot;systemDisk&quot;,
+         *               &quot;TradePrice&quot; : 0.017826
+         *             } ]
+         *           },
+         *           &quot;TradeAmount&quot; : 0.135,
+         *           &quot;OriginalAmount&quot; : 0.422,
+         *           &quot;Coupons&quot; : {
+         *             &quot;Coupon&quot; : [ ]
+         *           },
+         *           &quot;DiscountAmount&quot; : 0.287
+         *         },
+         *         &quot;OrderSupplement&quot; : {
+         *           &quot;PriceUnit&quot; : &quot;/Hour&quot;,
+         *           &quot;ChargeType&quot; : &quot;PostPaid&quot;,
+         *           &quot;Quantity&quot; : 1,
+         *           &quot;PriceType&quot; : &quot;Total&quot;
+         *         },
+         *         &quot;Rules&quot; : {
+         *           &quot;Rule&quot; : [ {
+         *             &quot;RuleDescId&quot; : &quot;102111101338****&quot;,
+         *             &quot;Name&quot; : &quot;合同优惠_多计费项优惠_3.208750折&quot;
+         *           } ]
+         *         }
+         *       }
+         *     }
+         *   }</p>
          */
         public Builder resources(java.util.Map < String, ? > resources) {
             this.resources = resources;

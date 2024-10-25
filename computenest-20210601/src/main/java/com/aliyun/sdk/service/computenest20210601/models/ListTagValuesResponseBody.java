@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagValuesResponseBody</p>
@@ -61,7 +62,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         private java.util.List < String > values; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAVz7BQqj2xtiNSC3d3RAD38=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0631D623-D917-1C2D-ACD6-5B3B19XXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the tag values.
+         * <p>The information of the tag values.</p>
          */
         public Builder values(java.util.List < String > values) {
             this.values = values;

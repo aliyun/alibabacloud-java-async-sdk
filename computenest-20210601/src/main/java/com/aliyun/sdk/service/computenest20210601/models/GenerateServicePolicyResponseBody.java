@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateServicePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateServicePolicyResponseBody</p>
@@ -61,7 +62,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The policies that are missing.
+         * <p>The policies that are missing.</p>
          */
         public Builder missingPolicy(java.util.List < MissingPolicy> missingPolicy) {
             this.missingPolicy = missingPolicy;
@@ -69,7 +70,10 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The RAM policy.
+         * <p>The RAM policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{Statement&quot;: [{ &quot;Action&quot;: [&quot;oos:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;</em>&quot;},{ &quot;Action&quot;: [&quot;ecs:DescribeInstances&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;<em>&quot;},{ &quot;Action&quot;: [&quot;ecs:RunInstance&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;</em>&quot;}], &quot;Version&quot;: &quot;1&quot;}</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -77,7 +81,10 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5040BE9E-8DA2-5C9D-9B70-0EE6027A14BC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateServicePolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateServicePolicyResponseBody</p>
+     */
     public static class MissingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private java.util.List < String > action;
@@ -141,7 +154,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * Operations on specific resources.
+             * <p>Operations on specific resources.</p>
              */
             public Builder action(java.util.List < String > action) {
                 this.action = action;
@@ -149,7 +162,12 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The specific objects authorized. An asterisk (*) denotes all resources.
+             * <p>The specific objects authorized. An asterisk (*) denotes all resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -157,7 +175,10 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

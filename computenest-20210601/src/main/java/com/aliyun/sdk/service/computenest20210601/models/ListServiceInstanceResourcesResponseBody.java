@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceInstanceResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceInstanceResourcesResponseBody</p>
@@ -73,7 +74,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,7 +85,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +96,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The resources.
+         * <p>The resources.</p>
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -110,6 +120,12 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceInstanceResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceInstanceResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -245,7 +261,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the resource was created.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-01T12:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -253,7 +272,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource expires.
+             * <p>The time when the resource expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-01T12:00:00</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -261,11 +283,14 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>Subscription</li>
+             * <li>PayAsYouGo</li>
+             * </ul>
              * 
-             * *   Subscription
-             * *   PayAsYouGo
+             * <strong>example:</strong>
+             * <p>Subscription</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -273,7 +298,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service.
+             * <p>The code of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -281,7 +309,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud service.
+             * <p>The type of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -289,12 +320,15 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal state. Valid values:
-             * <p>
+             * <p>The renewal state. Valid values:</p>
+             * <ul>
+             * <li>AutoRenewal</li>
+             * <li>ManualRenewal</li>
+             * <li>NotRenewal</li>
+             * </ul>
              * 
-             * *   AutoRenewal
-             * *   ManualRenewal
-             * *   NotRenewal
+             * <strong>example:</strong>
+             * <p>AutoRenewal</p>
              */
             public Builder renewStatus(String renewStatus) {
                 this.renewStatus = renewStatus;
@@ -302,7 +336,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal period.
+             * <p>The renewal period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder renewalPeriod(Integer renewalPeriod) {
                 this.renewalPeriod = renewalPeriod;
@@ -310,11 +347,14 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the renewal period. Valid values:
-             * <p>
+             * <p>The unit of the renewal period. Valid values:</p>
+             * <ul>
+             * <li>Month</li>
+             * <li>Year</li>
+             * </ul>
              * 
-             * *   Month
-             * *   Year
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder renewalPeriodUnit(String renewalPeriodUnit) {
                 this.renewalPeriodUnit = renewalPeriodUnit;
@@ -322,7 +362,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the resource.
+             * <p>The ARN of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arn:acs:sag:cn-hangzhou:130920852836****:ccn/ccn-b3qf0q439sq2de****</p>
              */
             public Builder resourceARN(String resourceARN) {
                 this.resourceARN = resourceARN;
@@ -330,14 +373,18 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the resource. Valid values:
-             * <p>
+             * <p>The state of the resource. Valid values:</p>
+             * <ul>
+             * <li>running</li>
+             * <li>waiting</li>
+             * <li>terminated</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only for containers.</p>
+             * </blockquote>
              * 
-             * *   running
-             * *   waiting
-             * *   terminated
-             * 
-             * >  This parameter is returned only for containers.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;

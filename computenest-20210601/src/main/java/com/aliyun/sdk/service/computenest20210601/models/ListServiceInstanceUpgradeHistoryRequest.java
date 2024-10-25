@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceInstanceUpgradeHistoryRequest} extends {@link RequestModel}
  *
  * <p>ListServiceInstanceUpgradeHistoryRequest</p>
@@ -115,7 +116,10 @@ public class ListServiceInstanceUpgradeHistoryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +128,10 @@ public class ListServiceInstanceUpgradeHistoryRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-70a3b15bb62643xxxxxx</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);

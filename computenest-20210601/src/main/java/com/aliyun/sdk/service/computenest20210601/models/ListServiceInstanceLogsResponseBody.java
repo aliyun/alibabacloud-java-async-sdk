@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceInstanceLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceInstanceLogsResponseBody</p>
@@ -73,7 +74,10 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         private java.util.List < ServiceInstancesLogs> serviceInstancesLogs; 
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,7 +85,10 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +96,10 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51945B04-6AA6-410D-93BA-236E0248B104</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,7 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The logs of the service instance.
+         * <p>The logs of the service instance.</p>
          */
         public Builder serviceInstancesLogs(java.util.List < ServiceInstancesLogs> serviceInstancesLogs) {
             this.serviceInstancesLogs = serviceInstancesLogs;
@@ -110,7 +120,19 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceInstanceLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceInstanceLogsResponseBody</p>
+     */
     public static class ServiceInstancesLogs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CompliancePackType")
+        private String compliancePackType;
+
+        @com.aliyun.core.annotation.NameInMap("ComplianceRuleName")
+        private String complianceRuleName;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
@@ -133,6 +155,8 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         private String timestamp;
 
         private ServiceInstancesLogs(Builder builder) {
+            this.compliancePackType = builder.compliancePackType;
+            this.complianceRuleName = builder.complianceRuleName;
             this.content = builder.content;
             this.logType = builder.logType;
             this.resourceId = builder.resourceId;
@@ -148,6 +172,20 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
 
         public static ServiceInstancesLogs create() {
             return builder().build();
+        }
+
+        /**
+         * @return compliancePackType
+         */
+        public String getCompliancePackType() {
+            return this.compliancePackType;
+        }
+
+        /**
+         * @return complianceRuleName
+         */
+        public String getComplianceRuleName() {
+            return this.complianceRuleName;
         }
 
         /**
@@ -200,6 +238,8 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String compliancePackType; 
+            private String complianceRuleName; 
             private String content; 
             private String logType; 
             private String resourceId; 
@@ -209,7 +249,26 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The log content.
+             * CompliancePackType.
+             */
+            public Builder compliancePackType(String compliancePackType) {
+                this.compliancePackType = compliancePackType;
+                return this;
+            }
+
+            /**
+             * ComplianceRuleName.
+             */
+            public Builder complianceRuleName(String complianceRuleName) {
+                this.complianceRuleName = complianceRuleName;
+                return this;
+            }
+
+            /**
+             * <p>The log content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Start creating service instance</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -217,11 +276,14 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The log type. Valid values:
-             * <p>
+             * <p>The log type. Valid values:</p>
+             * <ul>
+             * <li>serviceInstance: log generated by the service instance.</li>
+             * <li>resource: log generated by ROS resources.</li>
+             * </ul>
              * 
-             * *   serviceInstance: log generated by the service instance.
-             * *   resource: log generated by ROS resources.
+             * <strong>example:</strong>
+             * <p>serviceInstance</p>
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -229,7 +291,10 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>si-5c6525c0589545c3****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -237,7 +302,10 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ROS.Stack</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -245,11 +313,15 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the service instance log. Valid values:
-             * <p>
+             * <p>The source of the service instance log. Valid values:</p>
+             * <ul>
+             * <li>computeNest: The log is generated by Compute Nest.</li>
+             * <li>application: logs generated by the application.</li>
+             * <li>actionTrail: the action trail logs.</li>
+             * </ul>
              * 
-             * *   ros: The log is generated by Resource Orchestration Service (ROS).
-             * *   computeNest: The log is generated by Compute Nest.
+             * <strong>example:</strong>
+             * <p>computeNest</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -257,18 +329,21 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the service instance. Valid values:
-             * <p>
+             * <p>The state of the service instance. Valid values:</p>
+             * <ul>
+             * <li>Creating: The service instance is being created.</li>
+             * <li>Created: The service instance is created.</li>
+             * <li>Deploying: The service instance is being deployed.</li>
+             * <li>Deployed: The service instance is deployed.</li>
+             * <li>DeployedFailed: The service instance failed to be deployed.</li>
+             * <li>Expired: The service instance expired.</li>
+             * <li>ExtendSuccess: The service instance is renewed.</li>
+             * <li>Upgrading: The service instance is being updated.</li>
+             * <li>UpgradeSuccess: The service instance is updated.</li>
+             * </ul>
              * 
-             * *   Creating: The service instance is being created.
-             * *   Created: The service instance is created.
-             * *   Deploying: The service instance is being deployed.
-             * *   Deployed: The service instance is deployed.
-             * *   DeployedFailed: The service instance failed to be deployed.
-             * *   Expired: The service instance expired.
-             * *   ExtendSuccess: The service instance is renewed.
-             * *   Upgrading: The service instance is being updated.
-             * *   UpgradeSuccess: The service instance is updated.
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -276,7 +351,10 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the service instance log.
+             * <p>The timestamp of the service instance log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-21T00:00:00Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;

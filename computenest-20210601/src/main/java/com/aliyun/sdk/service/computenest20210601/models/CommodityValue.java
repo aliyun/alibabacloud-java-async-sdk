@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommodityValue} extends {@link TeaModel}
  *
  * <p>CommodityValue</p>
@@ -50,6 +51,12 @@ public class CommodityValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CommodityValue} extends {@link TeaModel}
+     *
+     * <p>CommodityValue</p>
+     */
     public static class Order extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -151,6 +158,12 @@ public class CommodityValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CommodityValue} extends {@link TeaModel}
+     *
+     * <p>CommodityValue</p>
+     */
     public static class ModuleAttrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private Long type;
@@ -272,6 +285,12 @@ public class CommodityValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CommodityValue} extends {@link TeaModel}
+     *
+     * <p>CommodityValue</p>
+     */
     public static class ModuleInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleId")
         private Long moduleId;
@@ -513,6 +532,12 @@ public class CommodityValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CommodityValue} extends {@link TeaModel}
+     *
+     * <p>CommodityValue</p>
+     */
     public static class SubOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleInstance")
         private java.util.List < ModuleInstance> moduleInstance;
@@ -554,6 +579,12 @@ public class CommodityValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CommodityValue} extends {@link TeaModel}
+     *
+     * <p>CommodityValue</p>
+     */
     public static class SubOrders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubOrder")
         private java.util.List < SubOrder> subOrder;
@@ -595,6 +626,12 @@ public class CommodityValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CommodityValue} extends {@link TeaModel}
+     *
+     * <p>CommodityValue</p>
+     */
     public static class Coupons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanPromFee")
         private Double canPromFee;
@@ -716,6 +753,12 @@ public class CommodityValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CommodityValue} extends {@link TeaModel}
+     *
+     * <p>CommodityValue</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Order")
         private Order order;

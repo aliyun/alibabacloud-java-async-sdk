@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagKeysRequest} extends {@link RequestModel}
  *
  * <p>ListTagKeysRequest</p>
@@ -83,7 +84,10 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -92,7 +96,11 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,13 +109,17 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>service: service</li>
+         * <li>serviceinstance: service instance</li>
+         * <li>artifact: artifact</li>
+         * <li>dataset: dataset</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   service: service
-         * *   serviceinstance: service instance
-         * *   artifact: artifact
-         * *   dataset: dataset
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

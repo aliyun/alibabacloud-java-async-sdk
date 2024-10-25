@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UnTagResourcesRequest</p>
@@ -112,11 +113,14 @@ public class UnTagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resource. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
+         * <ul>
+         * <li>true: All tags are removed from the resource.</li>
+         * <li>false (default): The specified tags are removed from the resource.</li>
+         * </ul>
          * 
-         * *   true: All tags are removed from the resource.
-         * *   false (default): The specified tags are removed from the resource.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -125,7 +129,11 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -134,10 +142,9 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource ID.
-         * <p>
-         * 
-         * You can remove tags from up to 50 resources at a time.
+         * <p>The resource ID.</p>
+         * <p>You can remove tags from up to 50 resources at a time.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -146,13 +153,17 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>service: service</li>
+         * <li>serviceinstance: service instance</li>
+         * <li>artifact: artifact</li>
+         * <li>dataset: dataset</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   service: service
-         * *   serviceinstance: service instance
-         * *   artifact: artifact
-         * *   dataset: dataset
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -161,12 +172,11 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys.
-         * <p>
-         * 
-         * You can specify a maximum of 20 tag keys.
-         * 
-         * > If you set the `All` parameter to `true`, you do not need to specify tag keys.
+         * <p>The tag keys.</p>
+         * <p>You can specify a maximum of 20 tag keys.</p>
+         * <blockquote>
+         * <p>If you set the <code>All</code> parameter to <code>true</code>, you do not need to specify tag keys.</p>
+         * </blockquote>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

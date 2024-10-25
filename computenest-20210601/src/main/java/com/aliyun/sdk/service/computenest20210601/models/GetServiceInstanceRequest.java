@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetServiceInstanceRequest</p>
@@ -82,7 +83,10 @@ public class GetServiceInstanceRequest extends Request {
         } 
 
         /**
-         * The MarketInstance ID.
+         * <p>The MarketInstance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>704***59</p>
          */
         public Builder marketInstanceId(String marketInstanceId) {
             this.putQueryParameter("MarketInstanceId", marketInstanceId);
@@ -91,7 +95,11 @@ public class GetServiceInstanceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,10 +108,13 @@ public class GetServiceInstanceRequest extends Request {
         }
 
         /**
-         * The service instance ID.
-         * <p>
+         * <p>The service instance ID.</p>
+         * <blockquote>
+         * <p> You must specify either <code>ServiceInstanceId</code> or <code>MarketInstanceId</code>. Otherwise, the operation fails.</p>
+         * </blockquote>
          * 
-         * >  You must specify either `ServiceInstanceId` or `MarketInstanceId`. Otherwise, the operation fails.
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
