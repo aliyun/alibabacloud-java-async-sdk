@@ -310,6 +310,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterSSLResponse> describeDBClusterSSL(DescribeDBClusterSSLRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBClusterShardNumber  DescribeDBClusterShardNumberRequest
+     * @return DescribeDBClusterShardNumberResponse
+     */
+    CompletableFuture<DescribeDBClusterShardNumberResponse> describeDBClusterShardNumber(DescribeDBClusterShardNumberRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBClusterSpaceSummary  DescribeDBClusterSpaceSummaryRequest
      * @return DescribeDBClusterSpaceSummaryResponse
      */
