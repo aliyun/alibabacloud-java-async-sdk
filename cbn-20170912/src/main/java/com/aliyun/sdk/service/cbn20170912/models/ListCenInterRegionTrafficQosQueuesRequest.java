@@ -222,7 +222,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         } 
 
         /**
-         * EffectiveBandwidthFilter.
+         * <p>按照实际的生效带宽值进行过滤，只允许输入正整数，单位Mbps。</p>
          */
         public Builder effectiveBandwidthFilter(EffectiveBandwidthFilter effectiveBandwidthFilter) {
             this.putQueryParameter("EffectiveBandwidthFilter", effectiveBandwidthFilter);
@@ -420,7 +420,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
             private Long lte; 
 
             /**
-             * Gte.
+             * <p>实际生效带宽大于或等于指定带宽值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder gte(Long gte) {
                 this.gte = gte;
@@ -428,7 +431,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
             }
 
             /**
-             * Lte.
+             * <p>实际生效带宽小于或等于指定带宽值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder lte(Long lte) {
                 this.lte = lte;

@@ -292,7 +292,7 @@ public class CreateTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The destination CIDR block of the route.</p>
+         * <p>The destination CIDR block of the route entry. IPv4 and IPv6 addresses are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

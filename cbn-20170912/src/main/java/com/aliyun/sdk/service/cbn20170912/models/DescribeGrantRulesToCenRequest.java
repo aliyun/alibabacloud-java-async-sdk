@@ -248,7 +248,14 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * EnabledIpv6.
+         * <p>Specifies whether to enable IPv6.</p>
+         * <ol>
+         * <li>This parameter takes effect only if ProductType is set to VPC.</li>
+         * <li>true: enables IPv6. false: disables IPv6. If you do not specify a value, network instances are not filtered based on this parameter.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabledIpv6(Boolean enabledIpv6) {
             this.putQueryParameter("EnabledIpv6", enabledIpv6);

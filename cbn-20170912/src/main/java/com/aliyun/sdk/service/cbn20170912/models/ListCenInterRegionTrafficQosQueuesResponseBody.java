@@ -254,7 +254,11 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * Bandwidth.
+             * <p>带宽保障类型为按绝对值模式时，当前队列分配跨地域带宽的值。</p>
+             * <p>例如，<strong>1</strong>表示符合当前队列的流量报文最多只能使用1Mbps的跨地域带宽。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -270,7 +274,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveBandwidth.
+             * <p>当前队列实际生效的带宽值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.35</p>
              */
             public Builder effectiveBandwidth(String effectiveBandwidth) {
                 this.effectiveBandwidth = effectiveBandwidth;

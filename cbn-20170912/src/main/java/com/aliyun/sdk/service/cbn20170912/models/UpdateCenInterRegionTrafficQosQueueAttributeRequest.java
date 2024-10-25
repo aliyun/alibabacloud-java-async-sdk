@@ -209,7 +209,11 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         } 
 
         /**
-         * Bandwidth.
+         * <p>按带宽绝对值模式分配时，当前队列可使用的跨地域带宽的绝对值，单位Mbps。</p>
+         * <p>输入数字即可，无需输入单位。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);

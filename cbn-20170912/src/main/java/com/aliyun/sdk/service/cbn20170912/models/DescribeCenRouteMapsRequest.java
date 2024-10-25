@@ -239,7 +239,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -251,7 +251,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

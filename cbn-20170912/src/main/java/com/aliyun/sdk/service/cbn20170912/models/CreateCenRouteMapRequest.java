@@ -662,7 +662,8 @@ public class CreateCenRouteMapRequest extends Request {
 
         /**
          * <p>The prefix list against which routes are matched.</p>
-         * <p>You must specify the IP addresses in CIDR notation. You can enter at most 32 CIDR blocks.</p>
+         * <p>Specify IP addresses in CIDR notations. You can specify at most 32 CIDR blocks.</p>
+         * <p>IPv4 and IPv4 addresses are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>10.10.10.0/24</p>
@@ -713,7 +714,7 @@ public class CreateCenRouteMapRequest extends Request {
         }
 
         /**
-         * DestinationRegionIds.
+         * <p>The destination region IDs of the route. You can specify at most 32 region IDs.</p>
          */
         public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
             this.putQueryParameter("DestinationRegionIds", destinationRegionIds);

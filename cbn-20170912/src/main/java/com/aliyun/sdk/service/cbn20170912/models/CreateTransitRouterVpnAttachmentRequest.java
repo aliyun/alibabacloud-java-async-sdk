@@ -79,7 +79,6 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Zone")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Zone> zone;
 
     private CreateTransitRouterVpnAttachmentRequest(Builder builder) {
@@ -481,7 +480,6 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         /**
          * <p>The ID of the zone in the current region.</p>
          * <p>Resources are deployed in the specified zone.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder zone(java.util.List < Zone> zone) {
             this.putQueryParameter("Zone", zone);
@@ -581,7 +579,6 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
      */
     public static class Zone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String zoneId;
 
         private Zone(Builder builder) {
@@ -609,7 +606,6 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
             /**
              * <p>The zone ID of the read-only instance.</p>
              * <p>You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the most recent zone list.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>

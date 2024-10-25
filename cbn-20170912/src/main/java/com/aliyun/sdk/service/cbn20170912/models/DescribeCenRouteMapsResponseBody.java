@@ -1321,7 +1321,8 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefixes of the routes.</p>
+             * <p>The prefix list against which routes are matched.</p>
+             * <p>IPv4 and IPv6 addresses are supported.</p>
              */
             public Builder destinationCidrBlocks(DestinationCidrBlocks destinationCidrBlocks) {
                 this.destinationCidrBlocks = destinationCidrBlocks;
@@ -1355,7 +1356,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationRegionIds.
+             * <p>The IDs of the destination regions for the routing policy.</p>
              */
             public Builder destinationRegionIds(DestinationRegionIds destinationRegionIds) {
                 this.destinationRegionIds = destinationRegionIds;

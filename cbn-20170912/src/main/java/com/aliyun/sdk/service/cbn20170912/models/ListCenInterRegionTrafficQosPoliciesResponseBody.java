@@ -252,7 +252,10 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             private Integer remainBandwidthPercent; 
 
             /**
-             * Bandwidth.
+             * <p>带宽保障类型为按绝对值模式时，当前队列分配的跨地域带宽的值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -268,7 +271,10 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveBandwidth.
+             * <p>当前队列实际生效的带宽值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.35</p>
              */
             public Builder effectiveBandwidth(String effectiveBandwidth) {
                 this.effectiveBandwidth = effectiveBandwidth;
@@ -443,7 +449,14 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * BandwidthGuaranteeMode.
+             * <p>带宽保障类型。</p>
+             * <ul>
+             * <li><strong>byBandwidth</strong>：按带宽绝对值模式配置QoS队列。</li>
+             * <li><strong>byBandwidthPercent</strong>：按带宽百分比模式配置QoS队列。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>byBandwidthPercent</p>
              */
             public Builder bandwidthGuaranteeMode(String bandwidthGuaranteeMode) {
                 this.bandwidthGuaranteeMode = bandwidthGuaranteeMode;

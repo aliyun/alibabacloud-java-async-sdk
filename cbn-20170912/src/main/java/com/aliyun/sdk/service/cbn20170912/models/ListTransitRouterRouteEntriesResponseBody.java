@@ -624,7 +624,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination CIDR block of the route.</p>
+             * <p>The destination CIDR block of the route entry. An IPv4 or IPv6 CIDR block is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/24</p>

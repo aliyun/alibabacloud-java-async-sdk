@@ -318,7 +318,10 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterVPCAttachmentOptions.
+         * <p>Feature configurations of the VPC connection.</p>
+         * <ul>
+         * <li>ipv6Support: specifies whether to enable IPv6. Valid values: true and false. The default value is the status of the VPC connection.</li>
+         * </ul>
          */
         public Builder transitRouterVPCAttachmentOptions(java.util.Map < String, String > transitRouterVPCAttachmentOptions) {
             String transitRouterVPCAttachmentOptionsShrink = shrink(transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
