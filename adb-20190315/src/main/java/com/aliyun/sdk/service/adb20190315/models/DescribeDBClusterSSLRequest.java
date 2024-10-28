@@ -26,6 +26,10 @@ public class DescribeDBClusterSSLRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -38,6 +42,7 @@ public class DescribeDBClusterSSLRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -77,6 +82,13 @@ public class DescribeDBClusterSSLRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -94,6 +106,7 @@ public class DescribeDBClusterSSLRequest extends Request {
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -106,6 +119,7 @@ public class DescribeDBClusterSSLRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -141,6 +155,15 @@ public class DescribeDBClusterSSLRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
