@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubmissionRequest} extends {@link RequestModel}
  *
  * <p>CreateSubmissionRequest</p>
@@ -248,7 +249,10 @@ public class CreateSubmissionRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -285,7 +289,10 @@ public class CreateSubmissionRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestEntityType</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -357,7 +364,10 @@ public class CreateSubmissionRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestWorkspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

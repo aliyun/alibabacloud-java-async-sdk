@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppResponseBody</p>
@@ -550,6 +551,12 @@ public class GetAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -611,6 +618,12 @@ public class GetAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class Dependencies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -672,6 +685,12 @@ public class GetAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class Inputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
@@ -833,6 +852,12 @@ public class GetAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class Outputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
@@ -994,6 +1019,12 @@ public class GetAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class Revisions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

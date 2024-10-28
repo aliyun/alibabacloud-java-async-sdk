@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTemplatesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplatesResponseBody</p>
+     */
     public static class InputsExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
@@ -311,6 +318,12 @@ public class ListTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplatesResponseBody</p>
+     */
     public static class OutputsExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
@@ -472,6 +485,12 @@ public class ListTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;

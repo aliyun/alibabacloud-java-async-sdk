@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateTemplateRequest</p>
@@ -173,7 +174,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * InputsExpression.
+         * <p>This parameter is required.</p>
          */
         public Builder inputsExpression(java.util.List < InputsExpression> inputsExpression) {
             String inputsExpressionShrink = shrink(inputsExpression, "InputsExpression", "json");
@@ -192,7 +193,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * OutputsExpression.
+         * <p>This parameter is required.</p>
          */
         public Builder outputsExpression(java.util.List < OutputsExpression> outputsExpression) {
             String outputsExpressionShrink = shrink(outputsExpression, "OutputsExpression", "json");
@@ -211,7 +212,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -220,7 +224,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);
@@ -235,6 +242,12 @@ public class UpdateTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTemplateRequest</p>
+     */
     public static class InputsExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
@@ -347,7 +360,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * Required.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -363,7 +379,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * TaskName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -371,7 +390,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * VariableName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fastq1</p>
              */
             public Builder variableName(String variableName) {
                 this.variableName = variableName;
@@ -379,7 +401,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * VariableType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder variableType(String variableType) {
                 this.variableType = variableType;
@@ -387,7 +412,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * VariableValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>read_1.fastq.gz</p>
              */
             public Builder variableValue(String variableValue) {
                 this.variableValue = variableValue;
@@ -401,6 +429,12 @@ public class UpdateTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTemplateRequest</p>
+     */
     public static class OutputsExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
@@ -513,7 +547,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * Required.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -529,7 +566,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * TaskName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -537,7 +577,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * VariableName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bam</p>
              */
             public Builder variableName(String variableName) {
                 this.variableName = variableName;
@@ -545,7 +588,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * VariableType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder variableType(String variableType) {
                 this.variableType = variableType;
@@ -553,7 +599,10 @@ public class UpdateTemplateRequest extends Request {
             }
 
             /**
-             * VariableValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>out.bam</p>
              */
             public Builder variableValue(String variableValue) {
                 this.variableValue = variableValue;

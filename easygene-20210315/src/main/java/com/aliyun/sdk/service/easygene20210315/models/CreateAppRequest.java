@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppRequest} extends {@link RequestModel}
  *
  * <p>CreateAppRequest</p>
@@ -276,7 +277,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -313,7 +317,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * Definition.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>import &quot;./task/echo.wdl&quot; as echo workflow wf_echo {   call echo.echo }</p>
          */
         public Builder definition(String definition) {
             this.putBodyParameter("Definition", definition);
@@ -377,7 +384,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main.wdl</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -404,7 +414,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestWorkspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);
@@ -419,6 +432,12 @@ public class CreateAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppRequest</p>
+     */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -466,7 +485,10 @@ public class CreateAppRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main.wdl</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -480,6 +502,12 @@ public class CreateAppRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppRequest</p>
+     */
     public static class Dependencies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -527,7 +555,10 @@ public class CreateAppRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main.wdl</p>
              */
             public Builder path(String path) {
                 this.path = path;

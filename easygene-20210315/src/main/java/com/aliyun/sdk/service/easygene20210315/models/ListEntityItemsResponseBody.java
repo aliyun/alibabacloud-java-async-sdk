@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEntityItemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEntityItemsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListEntityItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEntityItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEntityItemsResponseBody</p>
+     */
     public static class EntityItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityData")
         private java.util.Map < String, String > entityData;

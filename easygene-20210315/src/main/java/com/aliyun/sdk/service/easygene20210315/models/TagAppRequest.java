@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagAppRequest} extends {@link RequestModel}
  *
  * <p>TagAppRequest</p>
@@ -122,7 +123,10 @@ public class TagAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -131,7 +135,10 @@ public class TagAppRequest extends Request {
         }
 
         /**
-         * AppRevision.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder appRevision(String appRevision) {
             this.putQueryParameter("AppRevision", appRevision);
@@ -140,7 +147,10 @@ public class TagAppRequest extends Request {
         }
 
         /**
-         * RevisionTag.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProduceVersion</p>
          */
         public Builder revisionTag(String revisionTag) {
             this.putQueryParameter("RevisionTag", revisionTag);
@@ -149,7 +159,10 @@ public class TagAppRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestWorkspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

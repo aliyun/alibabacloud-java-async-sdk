@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGlobalAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListGlobalAppsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListGlobalAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGlobalAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGlobalAppsResponseBody</p>
+     */
     public static class GlobalApps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppDefaultVersion")
         private String appDefaultVersion;

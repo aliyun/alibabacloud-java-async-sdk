@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetTemplateRequest</p>
@@ -92,7 +93,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -101,7 +105,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

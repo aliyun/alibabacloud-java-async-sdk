@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateTemplateRequest</p>
@@ -221,7 +222,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -257,7 +261,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * InputsExpression.
+         * <p>This parameter is required.</p>
          */
         public Builder inputsExpression(java.util.List < InputsExpression> inputsExpression) {
             String inputsExpressionShrink = shrink(inputsExpression, "InputsExpression", "json");
@@ -276,7 +280,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * OutputsExpression.
+         * <p>This parameter is required.</p>
          */
         public Builder outputsExpression(java.util.List < OutputsExpression> outputsExpression) {
             String outputsExpressionShrink = shrink(outputsExpression, "OutputsExpression", "json");
@@ -304,7 +308,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -313,7 +320,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);
@@ -328,6 +338,12 @@ public class CreateTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTemplateRequest</p>
+     */
     public static class InputsExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
@@ -440,7 +456,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * Required.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -456,7 +475,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * TaskName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -464,7 +486,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * VariableName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fastq1</p>
              */
             public Builder variableName(String variableName) {
                 this.variableName = variableName;
@@ -472,7 +497,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * VariableType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File</p>
              */
             public Builder variableType(String variableType) {
                 this.variableType = variableType;
@@ -480,7 +508,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * VariableValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/file1.fastq</p>
              */
             public Builder variableValue(String variableValue) {
                 this.variableValue = variableValue;
@@ -494,6 +525,12 @@ public class CreateTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTemplateRequest</p>
+     */
     public static class OutputsExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
@@ -606,7 +643,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * Required.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -622,7 +662,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * TaskName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -630,7 +673,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * VariableName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bam</p>
              */
             public Builder variableName(String variableName) {
                 this.variableName = variableName;
@@ -638,7 +684,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * VariableType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File</p>
              */
             public Builder variableType(String variableType) {
                 this.variableType = variableType;
@@ -646,7 +695,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * VariableValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/file.bam</p>
              */
             public Builder variableValue(String variableValue) {
                 this.variableValue = variableValue;

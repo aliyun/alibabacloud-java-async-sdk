@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRunRequest} extends {@link RequestModel}
  *
  * <p>CreateRunRequest</p>
@@ -262,7 +263,10 @@ public class CreateRunRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sentieon</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -326,7 +330,10 @@ public class CreateRunRequest extends Request {
         }
 
         /**
-         * Inputs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{         &quot;workflow1.task1.param1&quot;: &quot;helloooo.txt&quot;,         &quot;workflow1.task1.param2&quot;: &quot;abc&quot;,         &quot;workflow1.task2.param1&quot;: &quot;new_helloooo.txt&quot;,         &quot;workflow1.task2.param2&quot;: &quot;def&quot;     }</p>
          */
         public Builder inputs(String inputs) {
             this.putQueryParameter("Inputs", inputs);
@@ -380,7 +387,10 @@ public class CreateRunRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);
@@ -395,6 +405,12 @@ public class CreateRunRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRunRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRunRequest</p>
+     */
     public static class ExecuteOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallCaching")
         private Boolean callCaching;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AbortSubmissionRequest} extends {@link RequestModel}
  *
  * <p>AbortSubmissionRequest</p>
@@ -92,7 +93,10 @@ public class AbortSubmissionRequest extends Request {
         }
 
         /**
-         * SubmissionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sub-13BeXWnGvrOl3MC124tazcJVKaV</p>
          */
         public Builder submissionId(String submissionId) {
             this.putQueryParameter("SubmissionId", submissionId);
@@ -101,7 +105,10 @@ public class AbortSubmissionRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

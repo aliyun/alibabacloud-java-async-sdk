@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkspacesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesResponseBody</p>
+     */
     public static class Workspaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
@@ -353,7 +360,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * RAM Role
+             * <p>RAM Role</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestRole</p>
              */
             public Builder role(String role) {
                 this.role = role;

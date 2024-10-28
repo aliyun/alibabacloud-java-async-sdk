@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListContainerImagesRequest} extends {@link RequestModel}
  *
  * <p>ListContainerImagesRequest</p>
@@ -106,7 +107,10 @@ public class ListContainerImagesRequest extends Request {
         }
 
         /**
-         * Location.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);

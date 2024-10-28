@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAuthorizedSoftwareResponseBody} extends {@link TeaModel}
  *
  * <p>ListAuthorizedSoftwareResponseBody</p>
@@ -150,6 +151,12 @@ public class ListAuthorizedSoftwareResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAuthorizedSoftwareResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorizedSoftwareResponseBody</p>
+     */
     public static class Softwares extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HelpLink")
         private String helpLink;

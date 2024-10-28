@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserActiveRunsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserActiveRunsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserActiveRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserActiveRunsResponseBody</p>
+     */
     public static class ExecuteOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallCaching")
         private Boolean callCaching;
@@ -251,6 +258,12 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserActiveRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserActiveRunsResponseBody</p>
+     */
     public static class Runs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;

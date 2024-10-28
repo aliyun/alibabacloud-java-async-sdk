@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEntityRequest} extends {@link RequestModel}
  *
  * <p>CreateEntityRequest</p>
@@ -130,7 +131,7 @@ public class CreateEntityRequest extends Request {
         }
 
         /**
-         * EntityItems.
+         * <p>This parameter is required.</p>
          */
         public Builder entityItems(java.util.List < EntityItems> entityItems) {
             String entityItemsShrink = shrink(entityItems, "EntityItems", "json");
@@ -140,7 +141,10 @@ public class CreateEntityRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -149,7 +153,10 @@ public class CreateEntityRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);
@@ -164,6 +171,12 @@ public class CreateEntityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEntityRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEntityRequest</p>
+     */
     public static class EntityItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityData")
         private java.util.Map < String, String > entityData;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAuthorizedSoftwareRequest} extends {@link RequestModel}
  *
  * <p>ListAuthorizedSoftwareRequest</p>
@@ -157,7 +158,10 @@ public class ListAuthorizedSoftwareRequest extends Request {
         }
 
         /**
-         * Location.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);

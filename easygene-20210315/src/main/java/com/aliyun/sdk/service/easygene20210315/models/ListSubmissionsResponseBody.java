@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSubmissionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSubmissionsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListSubmissionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSubmissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubmissionsResponseBody</p>
+     */
     public static class RunStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Aborted")
         private Long aborted;
@@ -311,6 +318,12 @@ public class ListSubmissionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSubmissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubmissionsResponseBody</p>
+     */
     public static class Submissions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

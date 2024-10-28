@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportAppRequest} extends {@link RequestModel}
  *
  * <p>ImportAppRequest</p>
@@ -107,7 +108,10 @@ public class ImportAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fastp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -116,7 +120,10 @@ public class ImportAppRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>easygene:opengene/fastp</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -125,7 +132,10 @@ public class ImportAppRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestWorkspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicDatasetEntitiesRequest} extends {@link RequestModel}
  *
  * <p>ListPublicDatasetEntitiesRequest</p>
@@ -148,7 +149,10 @@ public class ListPublicDatasetEntitiesRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>西蒙斯基因组多样性计划</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);

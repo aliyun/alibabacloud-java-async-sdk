@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGlobalAppResponseBody} extends {@link TeaModel}
  *
  * <p>GetGlobalAppResponseBody</p>
@@ -490,6 +491,12 @@ public class GetGlobalAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGlobalAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGlobalAppResponseBody</p>
+     */
     public static class AppDescriptorFiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Checksum")
         private String checksum;
@@ -611,6 +618,12 @@ public class GetGlobalAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGlobalAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGlobalAppResponseBody</p>
+     */
     public static class AppVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppsRequest} extends {@link RequestModel}
  *
  * <p>ListAppsRequest</p>
@@ -249,7 +250,10 @@ public class ListAppsRequest extends Request {
         }
 
         /**
-         * Next Token
+         * <p>Next Token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestToken</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -285,7 +289,10 @@ public class ListAppsRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestWorkspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

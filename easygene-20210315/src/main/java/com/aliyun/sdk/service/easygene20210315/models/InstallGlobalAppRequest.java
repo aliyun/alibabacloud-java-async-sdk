@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallGlobalAppRequest} extends {@link RequestModel}
  *
  * <p>InstallGlobalAppRequest</p>
@@ -137,7 +138,10 @@ public class InstallGlobalAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>joint-calling</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -146,7 +150,10 @@ public class InstallGlobalAppRequest extends Request {
         }
 
         /**
-         * InstalledAppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>joint-calling</p>
          */
         public Builder installedAppName(String installedAppName) {
             this.putQueryParameter("InstalledAppName", installedAppName);
@@ -155,7 +162,10 @@ public class InstallGlobalAppRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sentieon</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
@@ -164,7 +174,10 @@ public class InstallGlobalAppRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EasyGene</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -173,7 +186,10 @@ public class InstallGlobalAppRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

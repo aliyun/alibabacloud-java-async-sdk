@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppsResponseBody</p>
@@ -121,7 +122,10 @@ public class ListAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Next Token
+         * <p>Next Token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestToken</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -150,6 +154,12 @@ public class ListAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppsResponseBody</p>
+     */
     public static class Apps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppDefaultVersion")
         private String appDefaultVersion;

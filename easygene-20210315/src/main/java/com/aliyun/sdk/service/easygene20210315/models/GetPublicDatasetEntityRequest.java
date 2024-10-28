@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPublicDatasetEntityRequest} extends {@link RequestModel}
  *
  * <p>GetPublicDatasetEntityRequest</p>
@@ -106,7 +107,10 @@ public class GetPublicDatasetEntityRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>西蒙斯基因组多样性计划</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -115,7 +119,10 @@ public class GetPublicDatasetEntityRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);

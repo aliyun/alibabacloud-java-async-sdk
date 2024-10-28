@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRunRequest} extends {@link RequestModel}
  *
  * <p>GetRunRequest</p>
@@ -92,7 +93,10 @@ public class GetRunRequest extends Request {
         }
 
         /**
-         * RunId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run-12kDbbqp5O9dfsH0sEdQeRclGQb</p>
          */
         public Builder runId(String runId) {
             this.putQueryParameter("RunId", runId);
@@ -101,7 +105,10 @@ public class GetRunRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

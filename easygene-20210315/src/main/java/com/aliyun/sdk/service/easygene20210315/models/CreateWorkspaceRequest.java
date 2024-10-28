@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>CreateWorkspaceRequest</p>
@@ -207,7 +208,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * Storage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://gstor-default-workspace-cn-shanghai-bae3193d/</p>
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);
@@ -216,7 +220,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestWorkspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadEntityRequest} extends {@link RequestModel}
  *
  * <p>UploadEntityRequest</p>
@@ -92,7 +93,10 @@ public class UploadEntityRequest extends Request {
         }
 
         /**
-         * EntityCSVFile.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://my-bucket.oss.aliyucs.com/entity.csv">https://my-bucket.oss.aliyucs.com/entity.csv</a></p>
          */
         public Builder entityCSVFile(String entityCSVFile) {
             this.putQueryParameter("EntityCSVFile", entityCSVFile);
@@ -101,7 +105,10 @@ public class UploadEntityRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

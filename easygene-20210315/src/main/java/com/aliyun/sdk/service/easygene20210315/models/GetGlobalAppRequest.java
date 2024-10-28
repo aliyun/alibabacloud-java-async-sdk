@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGlobalAppRequest} extends {@link RequestModel}
  *
  * <p>GetGlobalAppRequest</p>
@@ -134,7 +135,10 @@ public class GetGlobalAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>joint-calling</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -171,7 +175,10 @@ public class GetGlobalAppRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sentieon</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

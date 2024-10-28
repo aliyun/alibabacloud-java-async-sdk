@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEntityItemsRequest} extends {@link RequestModel}
  *
  * <p>DeleteEntityItemsRequest</p>
@@ -107,7 +108,7 @@ public class DeleteEntityItemsRequest extends Request {
         }
 
         /**
-         * EntityNames.
+         * <p>This parameter is required.</p>
          */
         public Builder entityNames(java.util.List < String > entityNames) {
             String entityNamesShrink = shrink(entityNames, "EntityNames", "json");
@@ -117,7 +118,10 @@ public class DeleteEntityItemsRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -126,7 +130,10 @@ public class DeleteEntityItemsRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);

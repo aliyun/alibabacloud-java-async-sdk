@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicDatasetEntitiesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPublicDatasetEntitiesResponseBody</p>
@@ -170,6 +171,12 @@ public class ListPublicDatasetEntitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublicDatasetEntitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublicDatasetEntitiesResponseBody</p>
+     */
     public static class Entities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;

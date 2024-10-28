@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AbortRun  AbortRunRequest
+     * @return AbortRunResponse
+     */
     @Override
     public CompletableFuture<AbortRunResponse> abortRun(AbortRunRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AbortSubmission  AbortSubmissionRequest
+     * @return AbortSubmissionResponse
+     */
     @Override
     public CompletableFuture<AbortSubmissionResponse> abortSubmission(AbortSubmissionRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopyPublicEntity  CopyPublicEntityRequest
+     * @return CopyPublicEntityResponse
+     */
     @Override
     public CompletableFuture<CopyPublicEntityResponse> copyPublicEntity(CopyPublicEntityRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateApp  CreateAppRequest
+     * @return CreateAppResponse
+     */
     @Override
     public CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEntity  CreateEntityRequest
+     * @return CreateEntityResponse
+     */
     @Override
     public CompletableFuture<CreateEntityResponse> createEntity(CreateEntityRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRun  CreateRunRequest
+     * @return CreateRunResponse
+     */
     @Override
     public CompletableFuture<CreateRunResponse> createRun(CreateRunRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSubmission  CreateSubmissionRequest
+     * @return CreateSubmissionResponse
+     */
     @Override
     public CompletableFuture<CreateSubmissionResponse> createSubmission(CreateSubmissionRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTemplate  CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
     @Override
     public CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteApp  DeleteAppRequest
+     * @return DeleteAppResponse
+     */
     @Override
     public CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEntity  DeleteEntityRequest
+     * @return DeleteEntityResponse
+     */
     @Override
     public CompletableFuture<DeleteEntityResponse> deleteEntity(DeleteEntityRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEntityItems  DeleteEntityItemsRequest
+     * @return DeleteEntityItemsResponse
+     */
     @Override
     public CompletableFuture<DeleteEntityItemsResponse> deleteEntityItems(DeleteEntityItemsRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRun  DeleteRunRequest
+     * @return DeleteRunResponse
+     */
     @Override
     public CompletableFuture<DeleteRunResponse> deleteRun(DeleteRunRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSubmission  DeleteSubmissionRequest
+     * @return DeleteSubmissionResponse
+     */
     @Override
     public CompletableFuture<DeleteSubmissionResponse> deleteSubmission(DeleteSubmissionRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
+     * @return DeleteTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
     @Override
     public CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadEntity  DownloadEntityRequest
+     * @return DownloadEntityResponse
+     */
     @Override
     public CompletableFuture<DownloadEntityResponse> downloadEntity(DownloadEntityRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApp  GetAppRequest
+     * @return GetAppResponse
+     */
     @Override
     public CompletableFuture<GetAppResponse> getApp(GetAppRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEntity  GetEntityRequest
+     * @return GetEntityResponse
+     */
     @Override
     public CompletableFuture<GetEntityResponse> getEntity(GetEntityRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetGlobalApp  GetGlobalAppRequest
+     * @return GetGlobalAppResponse
+     */
     @Override
     public CompletableFuture<GetGlobalAppResponse> getGlobalApp(GetGlobalAppRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPublicDataset  GetPublicDatasetRequest
+     * @return GetPublicDatasetResponse
+     */
     @Override
     public CompletableFuture<GetPublicDatasetResponse> getPublicDataset(GetPublicDatasetRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPublicDatasetEntity  GetPublicDatasetEntityRequest
+     * @return GetPublicDatasetEntityResponse
+     */
     @Override
     public CompletableFuture<GetPublicDatasetEntityResponse> getPublicDatasetEntity(GetPublicDatasetEntityRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRun  GetRunRequest
+     * @return GetRunResponse
+     */
     @Override
     public CompletableFuture<GetRunResponse> getRun(GetRunRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSubmission  GetSubmissionRequest
+     * @return GetSubmissionResponse
+     */
     @Override
     public CompletableFuture<GetSubmissionResponse> getSubmission(GetSubmissionRequest request) {
         try {
@@ -375,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTemplate  GetTemplateRequest
+     * @return GetTemplateResponse
+     */
     @Override
     public CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request) {
         try {
@@ -389,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
     @Override
     public CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request) {
         try {
@@ -403,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportApp  ImportAppRequest
+     * @return ImportAppResponse
+     */
     @Override
     public CompletableFuture<ImportAppResponse> importApp(ImportAppRequest request) {
         try {
@@ -417,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallGlobalApp  InstallGlobalAppRequest
+     * @return InstallGlobalAppResponse
+     */
     @Override
     public CompletableFuture<InstallGlobalAppResponse> installGlobalApp(InstallGlobalAppRequest request) {
         try {
@@ -431,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApps  ListAppsRequest
+     * @return ListAppsResponse
+     */
     @Override
     public CompletableFuture<ListAppsResponse> listApps(ListAppsRequest request) {
         try {
@@ -445,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAuthorizedSoftware  ListAuthorizedSoftwareRequest
+     * @return ListAuthorizedSoftwareResponse
+     */
     @Override
     public CompletableFuture<ListAuthorizedSoftwareResponse> listAuthorizedSoftware(ListAuthorizedSoftwareRequest request) {
         try {
@@ -459,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListContainerImages  ListContainerImagesRequest
+     * @return ListContainerImagesResponse
+     */
     @Override
     public CompletableFuture<ListContainerImagesResponse> listContainerImages(ListContainerImagesRequest request) {
         try {
@@ -473,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEntities  ListEntitiesRequest
+     * @return ListEntitiesResponse
+     */
     @Override
     public CompletableFuture<ListEntitiesResponse> listEntities(ListEntitiesRequest request) {
         try {
@@ -487,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEntityItems  ListEntityItemsRequest
+     * @return ListEntityItemsResponse
+     */
     @Override
     public CompletableFuture<ListEntityItemsResponse> listEntityItems(ListEntityItemsRequest request) {
         try {
@@ -501,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGlobalApps  ListGlobalAppsRequest
+     * @return ListGlobalAppsResponse
+     */
     @Override
     public CompletableFuture<ListGlobalAppsResponse> listGlobalApps(ListGlobalAppsRequest request) {
         try {
@@ -515,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicDataset  ListPublicDatasetRequest
+     * @return ListPublicDatasetResponse
+     */
     @Override
     public CompletableFuture<ListPublicDatasetResponse> listPublicDataset(ListPublicDatasetRequest request) {
         try {
@@ -529,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicDatasetEntities  ListPublicDatasetEntitiesRequest
+     * @return ListPublicDatasetEntitiesResponse
+     */
     @Override
     public CompletableFuture<ListPublicDatasetEntitiesResponse> listPublicDatasetEntities(ListPublicDatasetEntitiesRequest request) {
         try {
@@ -543,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicDatasetEntityItems  ListPublicDatasetEntityItemsRequest
+     * @return ListPublicDatasetEntityItemsResponse
+     */
     @Override
     public CompletableFuture<ListPublicDatasetEntityItemsResponse> listPublicDatasetEntityItems(ListPublicDatasetEntityItemsRequest request) {
         try {
@@ -557,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicDatasetTags  ListPublicDatasetTagsRequest
+     * @return ListPublicDatasetTagsResponse
+     */
     @Override
     public CompletableFuture<ListPublicDatasetTagsResponse> listPublicDatasetTags(ListPublicDatasetTagsRequest request) {
         try {
@@ -571,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRegions  ListRegionsRequest
+     * @return ListRegionsResponse
+     */
     @Override
     public CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request) {
         try {
@@ -585,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRuns  ListRunsRequest
+     * @return ListRunsResponse
+     */
     @Override
     public CompletableFuture<ListRunsResponse> listRuns(ListRunsRequest request) {
         try {
@@ -599,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSubmissions  ListSubmissionsRequest
+     * @return ListSubmissionsResponse
+     */
     @Override
     public CompletableFuture<ListSubmissionsResponse> listSubmissions(ListSubmissionsRequest request) {
         try {
@@ -613,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTemplates  ListTemplatesRequest
+     * @return ListTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListTemplatesResponse> listTemplates(ListTemplatesRequest request) {
         try {
@@ -627,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserActiveRuns  ListUserActiveRunsRequest
+     * @return ListUserActiveRunsResponse
+     */
     @Override
     public CompletableFuture<ListUserActiveRunsResponse> listUserActiveRuns(ListUserActiveRunsRequest request) {
         try {
@@ -641,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
     @Override
     public CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request) {
         try {
@@ -655,6 +831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResumeSubmission  ResumeSubmissionRequest
+     * @return ResumeSubmissionResponse
+     */
     @Override
     public CompletableFuture<ResumeSubmissionResponse> resumeSubmission(ResumeSubmissionRequest request) {
         try {
@@ -669,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagApp  TagAppRequest
+     * @return TagAppResponse
+     */
     @Override
     public CompletableFuture<TagAppResponse> tagApp(TagAppRequest request) {
         try {
@@ -684,9 +868,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI UpdateEntity is deprecated, please use EasyGene::2021-03-15::UpdateEntityItems instead.  * @param request  the request parameters of UpdateEntity  UpdateEntityRequest
+     * @return UpdateEntityResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateEntityResponse> updateEntity(UpdateEntityRequest request) {
         try {
@@ -701,6 +886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEntityItems  UpdateEntityItemsRequest
+     * @return UpdateEntityItemsResponse
+     */
     @Override
     public CompletableFuture<UpdateEntityItemsResponse> updateEntityItems(UpdateEntityItemsRequest request) {
         try {
@@ -715,6 +904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest
+     * @return UpdateTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request) {
         try {
@@ -729,6 +922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
     @Override
     public CompletableFuture<UpdateWorkspaceResponse> updateWorkspace(UpdateWorkspaceRequest request) {
         try {
@@ -743,6 +940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadEntity  UploadEntityRequest
+     * @return UploadEntityResponse
+     */
     @Override
     public CompletableFuture<UploadEntityResponse> uploadEntity(UploadEntityRequest request) {
         try {

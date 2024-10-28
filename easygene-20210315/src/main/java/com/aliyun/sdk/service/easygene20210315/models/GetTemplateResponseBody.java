@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateResponseBody</p>
@@ -330,6 +331,12 @@ public class GetTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateResponseBody</p>
+     */
     public static class InputsExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
@@ -491,6 +498,12 @@ public class GetTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateResponseBody</p>
+     */
     public static class OutputsExpression extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Help")
         private String help;

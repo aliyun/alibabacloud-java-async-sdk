@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspacesRequest} extends {@link RequestModel}
  *
  * <p>ListWorkspacesRequest</p>
@@ -174,7 +175,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * NextToken
+         * <p>NextToken</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestToken</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

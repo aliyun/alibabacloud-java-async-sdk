@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyPublicEntityRequest} extends {@link RequestModel}
  *
  * <p>CopyPublicEntityRequest</p>
@@ -107,7 +108,10 @@ public class CopyPublicEntityRequest extends Request {
         }
 
         /**
-         * Dataset.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDataset</p>
          */
         public Builder dataset(String dataset) {
             this.putQueryParameter("Dataset", dataset);
@@ -116,7 +120,10 @@ public class CopyPublicEntityRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -125,7 +132,10 @@ public class CopyPublicEntityRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);
