@@ -469,6 +469,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
@@ -477,6 +480,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
         @com.aliyun.core.annotation.NameInMap("ImageUrls")
         private java.util.List < String > imageUrls;
+
+        @com.aliyun.core.annotation.NameInMap("PubTime")
+        private String pubTime;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -498,9 +504,11 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
         private News(Builder builder) {
             this.content = builder.content;
+            this.createTime = builder.createTime;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
             this.imageUrls = builder.imageUrls;
+            this.pubTime = builder.pubTime;
             this.source = builder.source;
             this.summary = builder.summary;
             this.tags = builder.tags;
@@ -525,6 +533,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return docId
          */
         public String getDocId() {
@@ -543,6 +558,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
          */
         public java.util.List < String > getImageUrls() {
             return this.imageUrls;
+        }
+
+        /**
+         * @return pubTime
+         */
+        public String getPubTime() {
+            return this.pubTime;
         }
 
         /**
@@ -589,9 +611,11 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
         public static final class Builder {
             private String content; 
+            private String createTime; 
             private String docId; 
             private String docUuid; 
             private java.util.List < String > imageUrls; 
+            private String pubTime; 
             private String source; 
             private String summary; 
             private java.util.List < String > tags; 
@@ -604,6 +628,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -628,6 +660,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
              */
             public Builder imageUrls(java.util.List < String > imageUrls) {
                 this.imageUrls = imageUrls;
+                return this;
+            }
+
+            /**
+             * PubTime.
+             */
+            public Builder pubTime(String pubTime) {
+                this.pubTime = pubTime;
                 return this;
             }
 
