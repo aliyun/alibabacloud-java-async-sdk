@@ -107,6 +107,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
     /**
+     * @param request the request parameters of CreateProjectMember  CreateProjectMemberRequest
+     * @return CreateProjectMemberResponse
+     */
+    CompletableFuture<CreateProjectMemberResponse> createProjectMember(CreateProjectMemberRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
@@ -199,6 +205,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
     /**
+     * @param request the request parameters of DeleteProjectMember  DeleteProjectMemberRequest
+     * @return DeleteProjectMemberResponse
+     */
+    CompletableFuture<DeleteProjectMemberResponse> deleteProjectMember(DeleteProjectMemberRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</p>
@@ -220,6 +232,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRouteResponse
      */
     CompletableFuture<DeleteRouteResponse> deleteRoute(DeleteRouteRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTask  DeleteTaskRequest
+     * @return DeleteTaskResponse
+     */
+    CompletableFuture<DeleteTaskResponse> deleteTask(DeleteTaskRequest request);
 
     /**
      * <b>description</b> :
@@ -263,6 +281,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDIJobLogResponse> getDIJobLog(GetDIJobLogRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetDataSource  GetDataSourceRequest
      * @return GetDataSourceResponse
      */
@@ -305,6 +329,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
     /**
+     * @param request the request parameters of GetProjectMember  GetProjectMemberRequest
+     * @return GetProjectMemberResponse
+     */
+    CompletableFuture<GetProjectMemberResponse> getProjectMember(GetProjectMemberRequest request);
+
+    /**
      * @param request the request parameters of GetProjectRole  GetProjectRoleRequest
      * @return GetProjectRoleResponse
      */
@@ -329,10 +359,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRouteResponse> getRoute(GetRouteRequest request);
 
     /**
+     * @param request the request parameters of GetTask  GetTaskRequest
+     * @return GetTaskResponse
+     */
+    CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetTaskInstance  GetTaskInstanceRequest
+     * @return GetTaskInstanceResponse
+     */
+    CompletableFuture<GetTaskInstanceResponse> getTaskInstance(GetTaskInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetTaskInstanceLog  GetTaskInstanceLogRequest
+     * @return GetTaskInstanceLogResponse
+     */
+    CompletableFuture<GetTaskInstanceLogResponse> getTaskInstanceLog(GetTaskInstanceLogRequest request);
+
+    /**
      * @param request the request parameters of GetWorkflowDefinition  GetWorkflowDefinitionRequest
      * @return GetWorkflowDefinitionResponse
      */
     CompletableFuture<GetWorkflowDefinitionResponse> getWorkflowDefinition(GetWorkflowDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of GrantMemberProjectRoles  GrantMemberProjectRolesRequest
+     * @return GrantMemberProjectRolesResponse
+     */
+    CompletableFuture<GrantMemberProjectRolesResponse> grantMemberProjectRoles(GrantMemberProjectRolesRequest request);
 
     /**
      * @param request the request parameters of ImportWorkflowDefinition  ImportWorkflowDefinitionRequest
@@ -371,6 +425,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDIJobsResponse> listDIJobs(ListDIJobsRequest request);
 
     /**
+     * @param request the request parameters of ListDataQualityEvaluationTaskInstances  ListDataQualityEvaluationTaskInstancesRequest
+     * @return ListDataQualityEvaluationTaskInstancesResponse
+     */
+    CompletableFuture<ListDataQualityEvaluationTaskInstancesResponse> listDataQualityEvaluationTaskInstances(ListDataQualityEvaluationTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListDataQualityEvaluationTasks  ListDataQualityEvaluationTasksRequest
+     * @return ListDataQualityEvaluationTasksResponse
+     */
+    CompletableFuture<ListDataQualityEvaluationTasksResponse> listDataQualityEvaluationTasks(ListDataQualityEvaluationTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListDataQualityResults  ListDataQualityResultsRequest
+     * @return ListDataQualityResultsResponse
+     */
+    CompletableFuture<ListDataQualityResultsResponse> listDataQualityResults(ListDataQualityResultsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataQualityRules  ListDataQualityRulesRequest
+     * @return ListDataQualityRulesResponse
+     */
+    CompletableFuture<ListDataQualityRulesResponse> listDataQualityRules(ListDataQualityRulesRequest request);
+
+    /**
      * @param request the request parameters of ListDataSourceSharedRules  ListDataSourceSharedRulesRequest
      * @return ListDataSourceSharedRulesResponse
      */
@@ -387,6 +465,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDeploymentsResponse
      */
     CompletableFuture<ListDeploymentsResponse> listDeployments(ListDeploymentsRequest request);
+
+    /**
+     * @param request the request parameters of ListDownstreamTaskInstances  ListDownstreamTaskInstancesRequest
+     * @return ListDownstreamTaskInstancesResponse
+     */
+    CompletableFuture<ListDownstreamTaskInstancesResponse> listDownstreamTaskInstances(ListDownstreamTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListDownstreamTasks  ListDownstreamTasksRequest
+     * @return ListDownstreamTasksResponse
+     */
+    CompletableFuture<ListDownstreamTasksResponse> listDownstreamTasks(ListDownstreamTasksRequest request);
 
     /**
      * @param request the request parameters of ListFunctions  ListFunctionsRequest
@@ -411,6 +501,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNodesResponse
      */
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
+
+    /**
+     * @param request the request parameters of ListProjectMembers  ListProjectMembersRequest
+     * @return ListProjectMembersResponse
+     */
+    CompletableFuture<ListProjectMembersResponse> listProjectMembers(ListProjectMembersRequest request);
 
     /**
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
@@ -443,6 +539,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRoutesResponse> listRoutes(ListRoutesRequest request);
 
     /**
+     * @param request the request parameters of ListTaskInstanceOperationLogs  ListTaskInstanceOperationLogsRequest
+     * @return ListTaskInstanceOperationLogsResponse
+     */
+    CompletableFuture<ListTaskInstanceOperationLogsResponse> listTaskInstanceOperationLogs(ListTaskInstanceOperationLogsRequest request);
+
+    /**
+     * @param request the request parameters of ListTaskInstances  ListTaskInstancesRequest
+     * @return ListTaskInstancesResponse
+     */
+    CompletableFuture<ListTaskInstancesResponse> listTaskInstances(ListTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListTaskOperationLogs  ListTaskOperationLogsRequest
+     * @return ListTaskOperationLogsResponse
+     */
+    CompletableFuture<ListTaskOperationLogsResponse> listTaskOperationLogs(ListTaskOperationLogsRequest request);
+
+    /**
+     * @param request the request parameters of ListTasks  ListTasksRequest
+     * @return ListTasksResponse
+     */
+    CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListUpstreamTaskInstances  ListUpstreamTaskInstancesRequest
+     * @return ListUpstreamTaskInstancesResponse
+     */
+    CompletableFuture<ListUpstreamTaskInstancesResponse> listUpstreamTaskInstances(ListUpstreamTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListUpstreamTasks  ListUpstreamTasksRequest
+     * @return ListUpstreamTasksResponse
+     */
+    CompletableFuture<ListUpstreamTasksResponse> listUpstreamTasks(ListUpstreamTasksRequest request);
+
+    /**
      * @param request the request parameters of ListWorkflowDefinitions  ListWorkflowDefinitionsRequest
      * @return ListWorkflowDefinitionsResponse
      */
@@ -473,6 +605,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveWorkflowDefinitionResponse> moveWorkflowDefinition(MoveWorkflowDefinitionRequest request);
 
     /**
+     * @param request the request parameters of RemoveTaskInstanceDependencies  RemoveTaskInstanceDependenciesRequest
+     * @return RemoveTaskInstanceDependenciesResponse
+     */
+    CompletableFuture<RemoveTaskInstanceDependenciesResponse> removeTaskInstanceDependencies(RemoveTaskInstanceDependenciesRequest request);
+
+    /**
      * @param request the request parameters of RenameFunction  RenameFunctionRequest
      * @return RenameFunctionResponse
      */
@@ -497,6 +635,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenameWorkflowDefinitionResponse> renameWorkflowDefinition(RenameWorkflowDefinitionRequest request);
 
     /**
+     * @param request the request parameters of RerunTaskInstances  RerunTaskInstancesRequest
+     * @return RerunTaskInstancesResponse
+     */
+    CompletableFuture<RerunTaskInstancesResponse> rerunTaskInstances(RerunTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ResumeTaskInstances  ResumeTaskInstancesRequest
+     * @return ResumeTaskInstancesResponse
+     */
+    CompletableFuture<ResumeTaskInstancesResponse> resumeTaskInstances(ResumeTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of RevokeMemberProjectRoles  RevokeMemberProjectRolesRequest
+     * @return RevokeMemberProjectRolesResponse
+     */
+    CompletableFuture<RevokeMemberProjectRolesResponse> revokeMemberProjectRoles(RevokeMemberProjectRolesRequest request);
+
+    /**
+     * @param request the request parameters of SetSuccessTaskInstances  SetSuccessTaskInstancesRequest
+     * @return SetSuccessTaskInstancesResponse
+     */
+    CompletableFuture<SetSuccessTaskInstancesResponse> setSuccessTaskInstances(SetSuccessTaskInstancesRequest request);
+
+    /**
      * @param request the request parameters of StartDIJob  StartDIJobRequest
      * @return StartDIJobResponse
      */
@@ -507,6 +669,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopDIJobResponse
      */
     CompletableFuture<StopDIJobResponse> stopDIJob(StopDIJobRequest request);
+
+    /**
+     * @param request the request parameters of StopTaskInstances  StopTaskInstancesRequest
+     * @return StopTaskInstancesResponse
+     */
+    CompletableFuture<StopTaskInstancesResponse> stopTaskInstances(StopTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of SuspendTaskInstances  SuspendTaskInstancesRequest
+     * @return SuspendTaskInstancesResponse
+     */
+    CompletableFuture<SuspendTaskInstancesResponse> suspendTaskInstances(SuspendTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of TriggerSchedulerTaskInstance  TriggerSchedulerTaskInstanceRequest
+     * @return TriggerSchedulerTaskInstanceResponse
+     */
+    CompletableFuture<TriggerSchedulerTaskInstanceResponse> triggerSchedulerTaskInstance(TriggerSchedulerTaskInstanceRequest request);
 
     /**
      * @param request the request parameters of UpdateDIAlarmRule  UpdateDIAlarmRuleRequest
@@ -561,6 +741,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRouteResponse
      */
     CompletableFuture<UpdateRouteResponse> updateRoute(UpdateRouteRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTaskInstances  UpdateTaskInstancesRequest
+     * @return UpdateTaskInstancesResponse
+     */
+    CompletableFuture<UpdateTaskInstancesResponse> updateTaskInstances(UpdateTaskInstancesRequest request);
 
     /**
      * @param request the request parameters of UpdateWorkflowDefinition  UpdateWorkflowDefinitionRequest

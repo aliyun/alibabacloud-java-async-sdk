@@ -346,7 +346,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * <p>The synchronization tasks that are returned.</p>
+             * <p>The synchronization tasks returned.</p>
              */
             public Builder DIJobs(java.util.List < DIJobs> DIJobs) {
                 this.DIJobs = DIJobs;

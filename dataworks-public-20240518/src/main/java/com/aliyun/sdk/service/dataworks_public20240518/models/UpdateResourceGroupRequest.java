@@ -106,6 +106,7 @@ public class UpdateResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +119,10 @@ public class UpdateResourceGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new name that you want to change for the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common_resource_group</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -127,7 +131,10 @@ public class UpdateResourceGroupRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The new remarks that you want to modify for the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>创建用于普通任务的通用资源组</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);

@@ -189,10 +189,10 @@ public class ListResourcesRequest extends Request {
          * <p>The resource type. This parameter specifies a filter condition.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>python</li>
-         * <li>jar</li>
-         * <li>archive</li>
-         * <li>file</li>
+         * <li>Python</li>
+         * <li>Jar</li>
+         * <li>Archive</li>
+         * <li>File</li>
          * </ul>
          * 
          * <strong>example:</strong>

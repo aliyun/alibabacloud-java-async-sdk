@@ -58,7 +58,10 @@ public class GetDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -236,7 +239,18 @@ public class GetDataSourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ConnectionProperties.
+             * <p>The connection properties of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;envType&quot;: &quot;Prod&quot;,
+             *     &quot;regionId&quot;: &quot;cn-beijing&quot;,
+             *     &quot;instanceId&quot;: &quot;hgprecn-cn-x0r3oun4k001&quot;,
+             *     &quot;database&quot;: &quot;testdb&quot;,
+             *     &quot;securityProtocol&quot;: &quot;authTypeNone&quot;,
+             *     &quot;authType&quot;: &quot;Executor&quot;,
+             *     &quot;authIdentity&quot;: &quot;1107550004253538&quot;
+             * }</p>
              */
             public Builder connectionProperties(Object connectionProperties) {
                 this.connectionProperties = connectionProperties;
@@ -244,7 +258,15 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionPropertiesMode.
+             * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</p>
+             * <ul>
+             * <li>InstanceMode: instance mode</li>
+             * <li>UrlMode: connection string mode</li>
+             * <li>CdhMode: CDH cluster mode</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UrlMode</p>
              */
             public Builder connectionPropertiesMode(String connectionPropertiesMode) {
                 this.connectionPropertiesMode = connectionPropertiesMode;
@@ -252,7 +274,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the data source was added. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698286929333</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -260,7 +285,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the user who adds the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1107550004253538</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -268,7 +296,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -276,7 +307,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16738</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -284,7 +318,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the data source was last modified. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698286929333</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -292,7 +329,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The ID of the user who modifies the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1107550004253538</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -300,7 +340,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -308,7 +351,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace with which the data source is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52660</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -316,7 +362,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * QualifiedName.
+             * <p>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the ${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database} format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1107550004253538:cn-beijing:holo:hgprecn-cn-x0r3oun4k001:testdb</p>
              */
             public Builder qualifiedName(String qualifiedName) {
                 this.qualifiedName = qualifiedName;
@@ -324,7 +373,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hologres</p>
              */
             public Builder type(String type) {
                 this.type = type;
