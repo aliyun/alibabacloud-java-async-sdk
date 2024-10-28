@@ -104,6 +104,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomScenePolicyResponse> createCustomScenePolicy(CreateCustomScenePolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateEdgeContainerApp  CreateEdgeContainerAppRequest
+     * @return CreateEdgeContainerAppResponse
+     */
+    CompletableFuture<CreateEdgeContainerAppResponse> createEdgeContainerApp(CreateEdgeContainerAppRequest request);
+
+    /**
+     * @param request the request parameters of CreateEdgeContainerAppRecord  CreateEdgeContainerAppRecordRequest
+     * @return CreateEdgeContainerAppRecordResponse
+     */
+    CompletableFuture<CreateEdgeContainerAppRecordResponse> createEdgeContainerAppRecord(CreateEdgeContainerAppRecordRequest request);
+
+    /**
+     * @param request the request parameters of CreateEdgeContainerAppVersion  CreateEdgeContainerAppVersionRequest
+     * @return CreateEdgeContainerAppVersionResponse
+     */
+    CompletableFuture<CreateEdgeContainerAppVersionResponse> createEdgeContainerAppVersion(CreateEdgeContainerAppVersionRequest request);
+
+    /**
      * @param request the request parameters of CreateKvNamespace  CreateKvNamespaceRequest
      * @return CreateKvNamespaceResponse
      */
@@ -210,6 +228,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCustomScenePolicyResponse
      */
     CompletableFuture<DeleteCustomScenePolicyResponse> deleteCustomScenePolicy(DeleteCustomScenePolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEdgeContainerApp  DeleteEdgeContainerAppRequest
+     * @return DeleteEdgeContainerAppResponse
+     */
+    CompletableFuture<DeleteEdgeContainerAppResponse> deleteEdgeContainerApp(DeleteEdgeContainerAppRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEdgeContainerAppRecord  DeleteEdgeContainerAppRecordRequest
+     * @return DeleteEdgeContainerAppRecordResponse
+     */
+    CompletableFuture<DeleteEdgeContainerAppRecordResponse> deleteEdgeContainerAppRecord(DeleteEdgeContainerAppRecordRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEdgeContainerAppVersion  DeleteEdgeContainerAppVersionRequest
+     * @return DeleteEdgeContainerAppVersionResponse
+     */
+    CompletableFuture<DeleteEdgeContainerAppVersionResponse> deleteEdgeContainerAppVersion(DeleteEdgeContainerAppVersionRequest request);
 
     /**
      * @param request the request parameters of DeleteKv  DeleteKvRequest
@@ -404,6 +440,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCacheReserveSpecificationResponse> getCacheReserveSpecification(GetCacheReserveSpecificationRequest request);
 
     /**
+     * @param request the request parameters of GetEdgeContainerApp  GetEdgeContainerAppRequest
+     * @return GetEdgeContainerAppResponse
+     */
+    CompletableFuture<GetEdgeContainerAppResponse> getEdgeContainerApp(GetEdgeContainerAppRequest request);
+
+    /**
+     * @param request the request parameters of GetEdgeContainerAppStatus  GetEdgeContainerAppStatusRequest
+     * @return GetEdgeContainerAppStatusResponse
+     */
+    CompletableFuture<GetEdgeContainerAppStatusResponse> getEdgeContainerAppStatus(GetEdgeContainerAppStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetEdgeContainerAppVersion  GetEdgeContainerAppVersionRequest
+     * @return GetEdgeContainerAppVersionResponse
+     */
+    CompletableFuture<GetEdgeContainerAppVersionResponse> getEdgeContainerAppVersion(GetEdgeContainerAppVersionRequest request);
+
+    /**
+     * @param request the request parameters of GetEdgeContainerDeployRegions  GetEdgeContainerDeployRegionsRequest
+     * @return GetEdgeContainerDeployRegionsResponse
+     */
+    CompletableFuture<GetEdgeContainerDeployRegionsResponse> getEdgeContainerDeployRegions(GetEdgeContainerDeployRegionsRequest request);
+
+    /**
+     * @param request the request parameters of GetEdgeContainerLogs  GetEdgeContainerLogsRequest
+     * @return GetEdgeContainerLogsResponse
+     */
+    CompletableFuture<GetEdgeContainerLogsResponse> getEdgeContainerLogs(GetEdgeContainerLogsRequest request);
+
+    /**
+     * @param request the request parameters of GetEdgeContainerStagingDeployStatus  GetEdgeContainerStagingDeployStatusRequest
+     * @return GetEdgeContainerStagingDeployStatusResponse
+     */
+    CompletableFuture<GetEdgeContainerStagingDeployStatusResponse> getEdgeContainerStagingDeployStatus(GetEdgeContainerStagingDeployStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetEdgeContainerTerminal  GetEdgeContainerTerminalRequest
+     * @return GetEdgeContainerTerminalResponse
+     */
+    CompletableFuture<GetEdgeContainerTerminalResponse> getEdgeContainerTerminal(GetEdgeContainerTerminalRequest request);
+
+    /**
      * @param request the request parameters of GetErService  GetErServiceRequest
      * @return GetErServiceResponse
      */
@@ -588,6 +666,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEdgeContainerAppRecordsResponse
      */
     CompletableFuture<ListEdgeContainerAppRecordsResponse> listEdgeContainerAppRecords(ListEdgeContainerAppRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListEdgeContainerAppVersions  ListEdgeContainerAppVersionsRequest
+     * @return ListEdgeContainerAppVersionsResponse
+     */
+    CompletableFuture<ListEdgeContainerAppVersionsResponse> listEdgeContainerAppVersions(ListEdgeContainerAppVersionsRequest request);
 
     /**
      * @param request the request parameters of ListEdgeContainerApps  ListEdgeContainerAppsRequest
@@ -782,6 +866,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PreloadCachesResponse> preloadCaches(PreloadCachesRequest request);
 
     /**
+     * @param request the request parameters of PublishEdgeContainerAppVersion  PublishEdgeContainerAppVersionRequest
+     * @return PublishEdgeContainerAppVersionResponse
+     */
+    CompletableFuture<PublishEdgeContainerAppVersionResponse> publishEdgeContainerAppVersion(PublishEdgeContainerAppVersionRequest request);
+
+    /**
      * @param request the request parameters of PublishRoutineCodeVersion  PublishRoutineCodeVersionRequest
      * @return PublishRoutineCodeVersionResponse
      */
@@ -800,10 +890,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutKvResponse> putKv(PutKvRequest request);
 
     /**
+     * @param request the request parameters of RebuildEdgeContainerAppStagingEnv  RebuildEdgeContainerAppStagingEnvRequest
+     * @return RebuildEdgeContainerAppStagingEnvResponse
+     */
+    CompletableFuture<RebuildEdgeContainerAppStagingEnvResponse> rebuildEdgeContainerAppStagingEnv(RebuildEdgeContainerAppStagingEnvRequest request);
+
+    /**
      * @param request the request parameters of ResetScheduledPreloadJob  ResetScheduledPreloadJobRequest
      * @return ResetScheduledPreloadJobResponse
      */
     CompletableFuture<ResetScheduledPreloadJobResponse> resetScheduledPreloadJob(ResetScheduledPreloadJobRequest request);
+
+    /**
+     * @param request the request parameters of RollbackEdgeContainerAppVersion  RollbackEdgeContainerAppVersionRequest
+     * @return RollbackEdgeContainerAppVersionResponse
+     */
+    CompletableFuture<RollbackEdgeContainerAppVersionResponse> rollbackEdgeContainerAppVersion(RollbackEdgeContainerAppVersionRequest request);
 
     /**
      * @param request the request parameters of SetCertificate  SetCertificateRequest
