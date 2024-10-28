@@ -142,6 +142,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelDirQuotaResponse> cancelDirQuota(CancelDirQuotaRequest request);
 
     /**
+     * @param request the request parameters of CancelFilesetQuota  CancelFilesetQuotaRequest
+     * @return CancelFilesetQuotaResponse
+     */
+    CompletableFuture<CancelFilesetQuotaResponse> cancelFilesetQuota(CancelFilesetQuotaRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Only General-purpose NAS file systems support this operation.</p>
      * 
@@ -1164,6 +1170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetDirQuotaResponse
      */
     CompletableFuture<SetDirQuotaResponse> setDirQuota(SetDirQuotaRequest request);
+
+    /**
+     * @param request the request parameters of SetFilesetQuota  SetFilesetQuotaRequest
+     * @return SetFilesetQuotaResponse
+     */
+    CompletableFuture<SetFilesetQuotaResponse> setFilesetQuota(SetFilesetQuotaRequest request);
 
     /**
      * <b>description</b> :
