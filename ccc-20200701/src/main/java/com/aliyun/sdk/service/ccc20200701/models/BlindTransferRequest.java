@@ -47,6 +47,10 @@ public class BlindTransferRequest extends Request {
     private String routingType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    private String skillGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StrategyName")
     private String strategyName;
 
@@ -90,6 +94,7 @@ public class BlindTransferRequest extends Request {
         this.queuingOverflowThreshold = builder.queuingOverflowThreshold;
         this.queuingTimeoutSeconds = builder.queuingTimeoutSeconds;
         this.routingType = builder.routingType;
+        this.skillGroupId = builder.skillGroupId;
         this.strategyName = builder.strategyName;
         this.strategyParams = builder.strategyParams;
         this.tags = builder.tags;
@@ -170,6 +175,13 @@ public class BlindTransferRequest extends Request {
     }
 
     /**
+     * @return skillGroupId
+     */
+    public String getSkillGroupId() {
+        return this.skillGroupId;
+    }
+
+    /**
      * @return strategyName
      */
     public String getStrategyName() {
@@ -234,6 +246,7 @@ public class BlindTransferRequest extends Request {
         private Long queuingOverflowThreshold; 
         private Long queuingTimeoutSeconds; 
         private String routingType; 
+        private String skillGroupId; 
         private String strategyName; 
         private String strategyParams; 
         private String tags; 
@@ -257,6 +270,7 @@ public class BlindTransferRequest extends Request {
             this.queuingOverflowThreshold = request.queuingOverflowThreshold;
             this.queuingTimeoutSeconds = request.queuingTimeoutSeconds;
             this.routingType = request.routingType;
+            this.skillGroupId = request.skillGroupId;
             this.strategyName = request.strategyName;
             this.strategyParams = request.strategyParams;
             this.tags = request.tags;
@@ -342,6 +356,15 @@ public class BlindTransferRequest extends Request {
         public Builder routingType(String routingType) {
             this.putQueryParameter("RoutingType", routingType);
             this.routingType = routingType;
+            return this;
+        }
+
+        /**
+         * SkillGroupId.
+         */
+        public Builder skillGroupId(String skillGroupId) {
+            this.putQueryParameter("SkillGroupId", skillGroupId);
+            this.skillGroupId = skillGroupId;
             return this;
         }
 

@@ -479,6 +479,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceTrendingReportResponse> getInstanceTrendingReport(GetInstanceTrendingReportRequest request);
 
     /**
+     * @param request the request parameters of GetIvrTrackingSummary  GetIvrTrackingSummaryRequest
+     * @return GetIvrTrackingSummaryResponse
+     */
+    CompletableFuture<GetIvrTrackingSummaryResponse> getIvrTrackingSummary(GetIvrTrackingSummaryRequest request);
+
+    /**
      * @param request the request parameters of GetLoginDetails  GetLoginDetailsRequest
      * @return GetLoginDetailsResponse
      */
