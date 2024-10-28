@@ -284,14 +284,22 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
      * <p>QueryResourceStaticsResponseBody</p>
      */
     public static class Summary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActiveCpu")
+        private Float activeCpu;
+
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
+
+        @com.aliyun.core.annotation.NameInMap("IdleCpu")
+        private Float idleCpu;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
         private Summary(Builder builder) {
+            this.activeCpu = builder.activeCpu;
             this.cpu = builder.cpu;
+            this.idleCpu = builder.idleCpu;
             this.memory = builder.memory;
         }
 
@@ -304,10 +312,24 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return activeCpu
+         */
+        public Float getActiveCpu() {
+            return this.activeCpu;
+        }
+
+        /**
          * @return cpu
          */
         public Float getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return idleCpu
+         */
+        public Float getIdleCpu() {
+            return this.idleCpu;
         }
 
         /**
@@ -318,8 +340,18 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Float activeCpu; 
             private Float cpu; 
+            private Float idleCpu; 
             private Float memory; 
+
+            /**
+             * ActiveCpu.
+             */
+            public Builder activeCpu(Float activeCpu) {
+                this.activeCpu = activeCpu;
+                return this;
+            }
 
             /**
              * <p>The CPU usage. Unit: core per minute.</p>
@@ -329,6 +361,14 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * IdleCpu.
+             */
+            public Builder idleCpu(Float idleCpu) {
+                this.idleCpu = idleCpu;
                 return this;
             }
 
