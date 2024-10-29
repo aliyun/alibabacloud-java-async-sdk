@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeDetailListOfBuyerResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeDetailListOfBuyerResponseBody</p>
@@ -170,6 +171,12 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeDetailListOfBuyerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailListOfBuyerResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_order_num")
         private Long changeOrderNum;
@@ -311,6 +318,12 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailListOfBuyerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailListOfBuyerResponseBody</p>
+     */
     public static class Pagination extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("current_page")
         private Integer currentPage;
@@ -412,6 +425,12 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailListOfBuyerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailListOfBuyerResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
         private java.util.List < List> list;

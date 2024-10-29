@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeDetailRequest} extends {@link RequestModel}
  *
  * <p>ChangeDetailRequest</p>
@@ -83,7 +84,10 @@ public class ChangeDetailRequest extends Request {
         } 
 
         /**
-         * change_order_num.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4988430***950</p>
          */
         public Builder changeOrderNum(Long changeOrderNum) {
             this.putQueryParameter("change_order_num", changeOrderNum);
@@ -92,7 +96,11 @@ public class ChangeDetailRequest extends Request {
         }
 
         /**
-         * access_token
+         * <p>access_token</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJSUzI1NiIsImtpZCI6InN1ZXpfa2V5aWQifQ.eyJqdGkiOiJCQldMaWIzN0VxbC0xMjhhR2N5elJ3IiwiaWF0IjoxNjc3MDY2NTAxLCJleHAiOjE2NzcwNzM3MDEsIm5iZiI6MTY3NzA2NjQ0MX0.AF0DxsZK4Edyg0C6ObRQFUo36R1VYrb5IYmak25TmL1OfR5RkIUc3PpqFuQKNLKXf5fOtVQaKjaexzwodVeWZQDKEG_RPt_Ybb99EnEm6vPKs6e3pWFbKiBq71WleLHhVrdFb4YPowRKjc7bG0jyGUxiQ2iXy0RWDj9tIjfI-KEdzNp5oVnX7j4p3H12DwQrRPmd1nz3BciAQNINvDpzqusuIUw8JXyLFCz838Y0NhwB1_bYZyctxRLSzrGZuI5rrWtItgupqMsOlJ3RNy1QrIbQ2g6nPmzl-atOqcQ4Nw0HeDLR8dhM1OsIcFLbKXBUtwXofflhzAQrkDxhwYiXii</p>
          */
         public Builder xAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
             this.putHeaderParameter("x-acs-airticket-access-token", xAcsAirticketAccessToken);

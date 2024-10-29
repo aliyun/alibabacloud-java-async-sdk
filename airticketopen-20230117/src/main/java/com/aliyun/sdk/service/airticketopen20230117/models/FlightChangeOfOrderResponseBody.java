@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightChangeOfOrderResponseBody} extends {@link TeaModel}
  *
  * <p>FlightChangeOfOrderResponseBody</p>
@@ -170,6 +171,12 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightChangeOfOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightChangeOfOrderResponseBody</p>
+     */
     public static class FlightChangeDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_reason")
         private String changeReason;
@@ -451,6 +458,12 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightChangeOfOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightChangeOfOrderResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_change_detail")
         private FlightChangeDetail flightChangeDetail;

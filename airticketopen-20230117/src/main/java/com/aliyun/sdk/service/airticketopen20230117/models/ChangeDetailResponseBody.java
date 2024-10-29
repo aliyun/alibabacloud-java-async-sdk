@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeDetailResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeDetailResponseBody</p>
@@ -170,6 +171,12 @@ public class ChangeDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class ChangeFee extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
@@ -251,6 +258,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class Passenger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("document")
         private String document;
@@ -332,6 +345,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class ChangeFeeDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_fee")
         private ChangeFee changeFee;
@@ -393,6 +412,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class ChangePassengers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("document")
         private String document;
@@ -474,6 +499,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class SegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
         private String arrivalAirport;
@@ -935,6 +966,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class ChangedJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
         private java.util.List < SegmentList> segmentList;
@@ -996,6 +1033,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class Contact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("email")
         private String email;
@@ -1077,6 +1120,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class LastJourneysSegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
         private String arrivalAirport;
@@ -1538,6 +1587,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class LastJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
         private java.util.List < LastJourneysSegmentList> segmentList;
@@ -1599,6 +1654,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class OriginalJourneysSegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
         private String arrivalAirport;
@@ -2060,6 +2121,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class OriginalJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
         private java.util.List < OriginalJourneysSegmentList> segmentList;
@@ -2121,6 +2188,12 @@ public class ChangeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_fee_details")
         private java.util.List < ChangeFeeDetails> changeFeeDetails;

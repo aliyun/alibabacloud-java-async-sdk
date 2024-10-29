@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeApplyResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeApplyResponseBody</p>
@@ -170,6 +171,12 @@ public class ChangeApplyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeApplyResponseBody</p>
+     */
     public static class Passengers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("document")
         private String document;
@@ -251,6 +258,12 @@ public class ChangeApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeApplyResponseBody</p>
+     */
     public static class ChangeOrders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_order_num")
         private Long changeOrderNum;
@@ -352,6 +365,12 @@ public class ChangeApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeApplyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_orders")
         private java.util.List < ChangeOrders> changeOrders;

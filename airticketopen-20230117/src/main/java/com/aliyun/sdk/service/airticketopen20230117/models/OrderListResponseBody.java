@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OrderListResponseBody} extends {@link TeaModel}
  *
  * <p>OrderListResponseBody</p>
@@ -109,7 +110,10 @@ public class OrderListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +121,7 @@ public class OrderListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +129,10 @@ public class OrderListResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +140,10 @@ public class OrderListResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>error data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -141,7 +151,10 @@ public class OrderListResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -149,7 +162,10 @@ public class OrderListResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>http reqeust has been processed successfully，status code is 200</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -157,7 +173,10 @@ public class OrderListResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>true represents success, false represents failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,6 +189,12 @@ public class OrderListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OrderListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderListResponseBody</p>
+     */
     public static class Credential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_issue_place")
         private String certIssuePlace;
@@ -233,7 +258,10 @@ public class OrderListResponseBody extends TeaModel {
             private String expireDate; 
 
             /**
-             * cert_issue_place.
+             * <p>issuing place (two-letter code)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder certIssuePlace(String certIssuePlace) {
                 this.certIssuePlace = certIssuePlace;
@@ -241,7 +269,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * credential_num.
+             * <p>credential number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E1***5674</p>
              */
             public Builder credentialNum(String credentialNum) {
                 this.credentialNum = credentialNum;
@@ -249,7 +280,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * credential_type.
+             * <p>credential type , only support &quot;1&quot;(1 means passport) currently.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder credentialType(Integer credentialType) {
                 this.credentialType = credentialType;
@@ -257,7 +291,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * expire_date.
+             * <p>credential expiration date</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20290101</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -271,6 +308,12 @@ public class OrderListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderListResponseBody</p>
+     */
     public static class PassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -394,7 +437,10 @@ public class OrderListResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * birthday.
+             * <p>date of birth (yyyyMMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20020301</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -402,7 +448,7 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * credential.
+             * <p>credential</p>
              */
             public Builder credential(Credential credential) {
                 this.credential = credential;
@@ -410,7 +456,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -418,7 +467,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * gender.
+             * <p>gender 0: MALE; 1: FEMALE</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gender(Integer gender) {
                 this.gender = gender;
@@ -426,7 +478,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>last name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -434,7 +489,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_country_code.
+             * <p>mobile country code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -442,7 +500,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_phone_number.
+             * <p>mobile phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183******96</p>
              */
             public Builder mobilePhoneNumber(String mobilePhoneNumber) {
                 this.mobilePhoneNumber = mobilePhoneNumber;
@@ -450,7 +511,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * nationality.
+             * <p>nationality (two-letter code)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -458,7 +522,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>passenger type 0: adult; 1: child; 8: infant</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -472,6 +539,12 @@ public class OrderListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("book_time")
         private Long bookTime;
@@ -643,7 +716,10 @@ public class OrderListResponseBody extends TeaModel {
             private String transactionNo; 
 
             /**
-             * book_time.
+             * <p>book time(timestamp)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677210784000</p>
              */
             public Builder bookTime(Long bookTime) {
                 this.bookTime = bookTime;
@@ -651,7 +727,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * order_num.
+             * <p>order number created by book</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4966***617111</p>
              */
             public Builder orderNum(Long orderNum) {
                 this.orderNum = orderNum;
@@ -659,7 +738,15 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * order_status.
+             * <p>order status</p>
+             * <p>1: order reservation in process</p>
+             * <p>2: order reservation successful</p>
+             * <p>3: order paid</p>
+             * <p>4: order successful</p>
+             * <p>5: order closed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder orderStatus(String orderStatus) {
                 this.orderStatus = orderStatus;
@@ -667,7 +754,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * out_order_num.
+             * <p>external order number(customized by buyer when book)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x091-2023-0220-j-0001</p>
              */
             public Builder outOrderNum(String outOrderNum) {
                 this.outOrderNum = outOrderNum;
@@ -675,7 +765,7 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * passenger_list.
+             * <p>the information about all passenger of current order</p>
              */
             public Builder passengerList(java.util.List < PassengerList> passengerList) {
                 this.passengerList = passengerList;
@@ -683,7 +773,14 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * pay_status.
+             * <p>payment status</p>
+             * <p>1: payment in process</p>
+             * <p>2: deduction successful</p>
+             * <p>3: paid to the seller</p>
+             * <p>4: transaction closed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder payStatus(String payStatus) {
                 this.payStatus = payStatus;
@@ -691,7 +788,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * pay_time.
+             * <p>pay time(timestamp)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677210788000</p>
              */
             public Builder payTime(Long payTime) {
                 this.payTime = payTime;
@@ -699,7 +799,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * promotion_price.
+             * <p>discount amount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder promotionPrice(Double promotionPrice) {
                 this.promotionPrice = promotionPrice;
@@ -707,7 +810,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * real_pay_price.
+             * <p>actual payment amount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder realPayPrice(Double realPayPrice) {
                 this.realPayPrice = realPayPrice;
@@ -715,7 +821,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * session_nick.
+             * <p>buyer nickname</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nick</p>
              */
             public Builder sessionNick(String sessionNick) {
                 this.sessionNick = sessionNick;
@@ -723,7 +832,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * succeed_time.
+             * <p>order success time(timestamp)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677210786000</p>
              */
             public Builder succeedTime(Long succeedTime) {
                 this.succeedTime = succeedTime;
@@ -731,7 +843,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * total_price.
+             * <p>total price of current order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder totalPrice(Double totalPrice) {
                 this.totalPrice = totalPrice;
@@ -739,7 +854,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * transaction_no.
+             * <p>transaction number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkduendkd-2023-dj0</p>
              */
             public Builder transactionNo(String transactionNo) {
                 this.transactionNo = transactionNo;
@@ -753,6 +871,12 @@ public class OrderListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderListResponseBody</p>
+     */
     public static class Pagination extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("current_page")
         private Integer currentPage;
@@ -816,7 +940,10 @@ public class OrderListResponseBody extends TeaModel {
             private Integer totalPage; 
 
             /**
-             * current_page.
+             * <p>current page index</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -824,7 +951,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * <p>page size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -832,7 +962,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * <p>the number of total orders</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -840,7 +973,10 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * total_page.
+             * <p>the number of total pages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPage(Integer totalPage) {
                 this.totalPage = totalPage;
@@ -854,6 +990,12 @@ public class OrderListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
         private java.util.List < List> list;
@@ -893,7 +1035,7 @@ public class OrderListResponseBody extends TeaModel {
             private Pagination pagination; 
 
             /**
-             * list.
+             * <p>order list</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -901,7 +1043,7 @@ public class OrderListResponseBody extends TeaModel {
             }
 
             /**
-             * pagination.
+             * <p>information of pagination</p>
              */
             public Builder pagination(Pagination pagination) {
                 this.pagination = pagination;

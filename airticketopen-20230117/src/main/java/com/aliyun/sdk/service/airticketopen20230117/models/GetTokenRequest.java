@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTokenRequest} extends {@link RequestModel}
  *
  * <p>GetTokenRequest</p>
@@ -69,7 +70,11 @@ public class GetTokenRequest extends Request {
         } 
 
         /**
-         * appKey
+         * <p>appKey</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fu1bltcu3400iurywuri</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("app_key", appKey);
@@ -78,7 +83,11 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * appSecret
+         * <p>appSecret</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZzQ3MW1mb3E1ODAwI2ldUjYlWUdJn5YI</p>
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("app_secret", appSecret);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundDetailListResponseBody} extends {@link TeaModel}
  *
  * <p>RefundDetailListResponseBody</p>
@@ -109,7 +110,10 @@ public class RefundDetailListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +121,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +129,10 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +140,10 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>error data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -141,7 +151,10 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -149,7 +162,10 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>http reqeust has been processed successfully，status code is 200</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -157,7 +173,10 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>true represents success, false represents failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,6 +189,12 @@ public class RefundDetailListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RefundDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("is_multi_refund")
         private Boolean isMultiRefund;
@@ -269,7 +294,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             private Long utcCreateTime; 
 
             /**
-             * is_multi_refund.
+             * <p>whether it is a supplementary refund order (if the refund amount is not enough, you can use RefundApply to create a supplementary refund order)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isMultiRefund(Boolean isMultiRefund) {
                 this.isMultiRefund = isMultiRefund;
@@ -277,7 +305,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * order_num.
+             * <p>order number that returned by Book</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49884*****2345</p>
              */
             public Builder orderNum(Long orderNum) {
                 this.orderNum = orderNum;
@@ -285,7 +316,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * refund_order_num.
+             * <p>refund order number that returned by RefundApply</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49884*****950</p>
              */
             public Builder refundOrderNum(Long refundOrderNum) {
                 this.refundOrderNum = refundOrderNum;
@@ -293,7 +327,14 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * refund_order_status.
+             * <p>refund order status </p>
+             * <p>0: refund application</p>
+             * <p>1: refund in progress</p>
+             * <p>2: refund failed</p>
+             * <p>3: refund succeeded</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder refundOrderStatus(Integer refundOrderStatus) {
                 this.refundOrderStatus = refundOrderStatus;
@@ -301,7 +342,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * related_refund_order_num.
+             * <p>the original refund order number associated with this supplementary refund order, only avaliable when is_multi_refund=true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49884*****2387</p>
              */
             public Builder relatedRefundOrderNum(String relatedRefundOrderNum) {
                 this.relatedRefundOrderNum = relatedRefundOrderNum;
@@ -309,7 +353,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * transaction_no.
+             * <p>transaction number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49884**tde-95za</p>
              */
             public Builder transactionNo(String transactionNo) {
                 this.transactionNo = transactionNo;
@@ -317,7 +364,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * utc_create_time.
+             * <p>refund time(timestamp)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677229002000</p>
              */
             public Builder utcCreateTime(Long utcCreateTime) {
                 this.utcCreateTime = utcCreateTime;
@@ -331,6 +381,12 @@ public class RefundDetailListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailListResponseBody</p>
+     */
     public static class Pagination extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("current_page")
         private Integer currentPage;
@@ -394,7 +450,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             private Integer totalPage; 
 
             /**
-             * current_page.
+             * <p>current page index</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -402,7 +461,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * <p>page size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -410,7 +472,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * <p>the number of total refund orders</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -418,7 +483,10 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * total_page.
+             * <p>the number of total pages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPage(Integer totalPage) {
                 this.totalPage = totalPage;
@@ -432,6 +500,12 @@ public class RefundDetailListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
         private java.util.List < List> list;
@@ -471,7 +545,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             private Pagination pagination; 
 
             /**
-             * list.
+             * <p>refund order list</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -479,7 +553,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * pagination.
+             * <p>information of pagination</p>
              */
             public Builder pagination(Pagination pagination) {
                 this.pagination = pagination;

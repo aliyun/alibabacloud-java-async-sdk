@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue} extends {@link TeaModel}
  *
  * <p>DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue</p>
@@ -73,7 +74,7 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         private java.util.List < ChangeRuleOutUnusedList> changeRuleOutUnusedList; 
 
         /**
-         * refund_rule_all_unused_list.
+         * <p>refund rule for fully-unused tickets</p>
          */
         public Builder refundRuleAllUnusedList(java.util.List < RefundRuleAllUnusedList> refundRuleAllUnusedList) {
             this.refundRuleAllUnusedList = refundRuleAllUnusedList;
@@ -81,7 +82,7 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         }
 
         /**
-         * refund_rule_part_unused_list.
+         * <p>refund rule for partially-used tickets</p>
          */
         public Builder refundRulePartUnusedList(java.util.List < RefundRulePartUnusedList> refundRulePartUnusedList) {
             this.refundRulePartUnusedList = refundRulePartUnusedList;
@@ -89,7 +90,7 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         }
 
         /**
-         * change_rule_in_unused_list.
+         * <p>change rule for inbound segment unused tickets</p>
          */
         public Builder changeRuleInUnusedList(java.util.List < ChangeRuleInUnusedList> changeRuleInUnusedList) {
             this.changeRuleInUnusedList = changeRuleInUnusedList;
@@ -97,7 +98,7 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         }
 
         /**
-         * change_rule_out_unused_list.
+         * <p>change rule for outbound-flight-unused tickets</p>
          */
         public Builder changeRuleOutUnusedList(java.util.List < ChangeRuleOutUnusedList> changeRuleOutUnusedList) {
             this.changeRuleOutUnusedList = changeRuleOutUnusedList;
@@ -110,6 +111,12 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
 
     } 
 
+    /**
+     * 
+     * {@link DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue} extends {@link TeaModel}
+     *
+     * <p>DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue</p>
+     */
     public static class RefundRuleAllUnusedList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
@@ -221,7 +228,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             private Double returnPartTaxFee; 
 
             /**
-             * type.
+             * <p>type: 0 - fully-unused ticket; 1 - partially used ticket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -229,7 +239,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * time_unit.
+             * <p>time unit: day/hour</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -237,7 +250,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * rule_start_time.
+             * <p>applicable refund rule start time, time unit (day/hour)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder ruleStartTime(Integer ruleStartTime) {
                 this.ruleStartTime = ruleStartTime;
@@ -245,7 +261,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * rule_end_time.
+             * <p>applicable refund rule end time, time unit (day/hour)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder ruleEndTime(Integer ruleEndTime) {
                 this.ruleEndTime = ruleEndTime;
@@ -253,7 +272,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * can_refund.
+             * <p>whether refundable X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canRefund(Boolean canRefund) {
                 this.canRefund = canRefund;
@@ -261,7 +283,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * refund_fee.
+             * <p>refund fee X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder refundFee(Double refundFee) {
                 this.refundFee = refundFee;
@@ -269,7 +294,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * can_return_all_tax.
+             * <p>whether tax is fully refundable X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canReturnAllTax(Boolean canReturnAllTax) {
                 this.canReturnAllTax = canReturnAllTax;
@@ -277,7 +305,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * return_part_tax_fee.
+             * <p>tax amount refundable X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder returnPartTaxFee(Double returnPartTaxFee) {
                 this.returnPartTaxFee = returnPartTaxFee;
@@ -291,6 +322,12 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         } 
 
     }
+    /**
+     * 
+     * {@link DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue} extends {@link TeaModel}
+     *
+     * <p>DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue</p>
+     */
     public static class RefundRulePartUnusedList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
@@ -402,7 +439,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             private Double returnPartTaxFee; 
 
             /**
-             * type.
+             * <p>type: 0 - fully-unused ticket; 1 - partially used ticket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -410,7 +450,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * time_unit.
+             * <p>time unit: day/hour</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -418,7 +461,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * rule_start_time.
+             * <p>applicable refund rule start time, time unit (day/hour)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder ruleStartTime(Integer ruleStartTime) {
                 this.ruleStartTime = ruleStartTime;
@@ -426,7 +472,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * rule_end_time.
+             * <p>applicable refund rule end time, time unit (day/hour)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder ruleEndTime(Integer ruleEndTime) {
                 this.ruleEndTime = ruleEndTime;
@@ -434,7 +483,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * can_refund.
+             * <p>whether refundable X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canRefund(Boolean canRefund) {
                 this.canRefund = canRefund;
@@ -442,7 +494,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * refund_fee.
+             * <p>refund fee X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder refundFee(Double refundFee) {
                 this.refundFee = refundFee;
@@ -450,7 +505,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * can_return_all_tax.
+             * <p>whether tax is fully refundable X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canReturnAllTax(Boolean canReturnAllTax) {
                 this.canReturnAllTax = canReturnAllTax;
@@ -458,7 +516,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * return_part_tax_fee.
+             * <p>tax amount refundable X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder returnPartTaxFee(Double returnPartTaxFee) {
                 this.returnPartTaxFee = returnPartTaxFee;
@@ -472,6 +533,12 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         } 
 
     }
+    /**
+     * 
+     * {@link DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue} extends {@link TeaModel}
+     *
+     * <p>DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue</p>
+     */
     public static class ChangeRuleInUnusedList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
@@ -559,7 +626,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             private Double changeFee; 
 
             /**
-             * type.
+             * <p>type: 2 - outbound segment unused; 3 - inbound segment unused</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -567,7 +637,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * time_unit.
+             * <p>time unit: day/hour</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -575,7 +648,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * rule_start_time.
+             * <p>applicable change rule start time, time unit (day/hour)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder ruleStartTime(Integer ruleStartTime) {
                 this.ruleStartTime = ruleStartTime;
@@ -583,7 +659,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * rule_end_time.
+             * <p>applicable change rule end time, time unit (day/hour)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder ruleEndTime(Integer ruleEndTime) {
                 this.ruleEndTime = ruleEndTime;
@@ -591,7 +670,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * can_change.
+             * <p>whether changeable X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canChange(Boolean canChange) {
                 this.canChange = canChange;
@@ -599,7 +681,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * change_fee.
+             * <p>change fee X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder changeFee(Double changeFee) {
                 this.changeFee = changeFee;
@@ -613,6 +698,12 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         } 
 
     }
+    /**
+     * 
+     * {@link DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue} extends {@link TeaModel}
+     *
+     * <p>DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue</p>
+     */
     public static class ChangeRuleOutUnusedList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
@@ -700,7 +791,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             private Double changeFee; 
 
             /**
-             * type.
+             * <p>type: 2 - outbound segment unused; 3 - inbound segment unused</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -708,7 +802,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * time_unit.
+             * <p>time unit: day/hour</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -716,7 +813,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * rule_start_time.
+             * <p>applicable change rule start time, time unit (day/hour)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder ruleStartTime(Integer ruleStartTime) {
                 this.ruleStartTime = ruleStartTime;
@@ -724,7 +824,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * rule_end_time.
+             * <p>applicable change rule end time, time unit (day/hour)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder ruleEndTime(Integer ruleEndTime) {
                 this.ruleEndTime = ruleEndTime;
@@ -732,7 +835,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * can_change.
+             * <p>whether changeable X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canChange(Boolean canChange) {
                 this.canChange = canChange;
@@ -740,7 +846,10 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
             }
 
             /**
-             * change_fee.
+             * <p>change fee X-Y hour(day) before departure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder changeFee(Double changeFee) {
                 this.changeFee = changeFee;

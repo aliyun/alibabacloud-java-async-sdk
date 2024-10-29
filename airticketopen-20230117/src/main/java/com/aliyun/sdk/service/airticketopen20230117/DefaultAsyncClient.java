@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AccountFlowList  AccountFlowListRequest
+     * @return AccountFlowListResponse
+     */
     @Override
     public CompletableFuture<AccountFlowListResponse> accountFlowList(AccountFlowListRequest request) {
         try {
@@ -53,6 +57,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>search ancillary for selected solution, you should enter the solution_id returned by enrich.</p>
+     * 
+     * @param request the request parameters of AncillarySuggest  AncillarySuggestRequest
+     * @return AncillarySuggestResponse
+     */
     @Override
     public CompletableFuture<AncillarySuggestResponse> ancillarySuggest(AncillarySuggestRequest request) {
         try {
@@ -67,6 +78,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
+     * There are two issues should be noticed:</p>
+     * <ol>
+     * <li>the solution_id must be processed by pricing.</li>
+     * <li>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of Book  BookRequest
+     * @return BookResponse
+     */
     @Override
     public CompletableFuture<BookResponse> book(BookRequest request) {
         try {
@@ -81,6 +104,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>close an unpaid order</p>
+     * 
+     * @param request the request parameters of Cancel  CancelRequest
+     * @return CancelResponse
+     */
     @Override
     public CompletableFuture<CancelResponse> cancel(CancelRequest request) {
         try {
@@ -95,6 +125,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeApply  ChangeApplyRequest
+     * @return ChangeApplyResponse
+     */
     @Override
     public CompletableFuture<ChangeApplyResponse> changeApply(ChangeApplyRequest request) {
         try {
@@ -109,6 +143,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeCancel  ChangeCancelRequest
+     * @return ChangeCancelResponse
+     */
     @Override
     public CompletableFuture<ChangeCancelResponse> changeCancel(ChangeCancelRequest request) {
         try {
@@ -123,6 +161,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeConfirm  ChangeConfirmRequest
+     * @return ChangeConfirmResponse
+     */
     @Override
     public CompletableFuture<ChangeConfirmResponse> changeConfirm(ChangeConfirmRequest request) {
         try {
@@ -137,6 +179,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeDetail  ChangeDetailRequest
+     * @return ChangeDetailResponse
+     */
     @Override
     public CompletableFuture<ChangeDetailResponse> changeDetail(ChangeDetailRequest request) {
         try {
@@ -151,6 +197,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeDetailListOfBuyer  ChangeDetailListOfBuyerRequest
+     * @return ChangeDetailListOfBuyerResponse
+     */
     @Override
     public CompletableFuture<ChangeDetailListOfBuyerResponse> changeDetailListOfBuyer(ChangeDetailListOfBuyerRequest request) {
         try {
@@ -165,6 +215,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeDetailListOfOrderNum  ChangeDetailListOfOrderNumRequest
+     * @return ChangeDetailListOfOrderNumResponse
+     */
     @Override
     public CompletableFuture<ChangeDetailListOfOrderNumResponse> changeDetailListOfOrderNum(ChangeDetailListOfOrderNumRequest request) {
         try {
@@ -179,6 +233,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Enrich supports two modes:</p>
+     * <ol>
+     * <li>mode1: enter solution_id returned by Search.</li>
+     * <li>mode2: enter journeyParamList.
+     * If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</li>
+     * </ol>
+     * 
+     * @param request the request parameters of Enrich  EnrichRequest
+     * @return EnrichResponse
+     */
     @Override
     public CompletableFuture<EnrichResponse> enrich(EnrichRequest request) {
         try {
@@ -193,6 +259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FileUpload  FileUploadRequest
+     * @return FileUploadResponse
+     */
     @Override
     public CompletableFuture<FileUploadResponse> fileUpload(FileUploadRequest request) {
         try {
@@ -207,6 +277,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightChangeOfOrder  FlightChangeOfOrderRequest
+     * @return FlightChangeOfOrderResponse
+     */
     @Override
     public CompletableFuture<FlightChangeOfOrderResponse> flightChangeOfOrder(FlightChangeOfOrderRequest request) {
         try {
@@ -221,6 +295,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetToken  GetTokenRequest
+     * @return GetTokenResponse
+     */
     @Override
     public CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request) {
         try {
@@ -235,6 +313,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LuggageDirect  LuggageDirectRequest
+     * @return LuggageDirectResponse
+     */
     @Override
     public CompletableFuture<LuggageDirectResponse> luggageDirect(LuggageDirectRequest request) {
         try {
@@ -249,6 +331,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>query order detail</p>
+     * 
+     * @param request the request parameters of OrderDetail  OrderDetailRequest
+     * @return OrderDetailResponse
+     */
     @Override
     public CompletableFuture<OrderDetailResponse> orderDetail(OrderDetailRequest request) {
         try {
@@ -263,6 +352,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>query order list</p>
+     * 
+     * @param request the request parameters of OrderList  OrderListRequest
+     * @return OrderListResponse
+     */
     @Override
     public CompletableFuture<OrderListResponse> orderList(OrderListRequest request) {
         try {
@@ -277,6 +373,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</p>
+     * 
+     * @param request the request parameters of Pricing  PricingRequest
+     * @return PricingResponse
+     */
     @Override
     public CompletableFuture<PricingResponse> pricing(PricingRequest request) {
         try {
@@ -291,6 +394,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Apply for a refund and generate a refund order.</p>
+     * 
+     * @param request the request parameters of RefundApply  RefundApplyRequest
+     * @return RefundApplyResponse
+     */
     @Override
     public CompletableFuture<RefundApplyResponse> refundApply(RefundApplyRequest request) {
         try {
@@ -305,6 +415,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Query refund order detail.</p>
+     * 
+     * @param request the request parameters of RefundDetail  RefundDetailRequest
+     * @return RefundDetailResponse
+     */
     @Override
     public CompletableFuture<RefundDetailResponse> refundDetail(RefundDetailRequest request) {
         try {
@@ -319,6 +436,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Query refund order detail.</p>
+     * 
+     * @param request the request parameters of RefundDetailList  RefundDetailListRequest
+     * @return RefundDetailListResponse
+     */
     @Override
     public CompletableFuture<RefundDetailListResponse> refundDetailList(RefundDetailListRequest request) {
         try {
@@ -333,6 +457,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</p>
+     * 
+     * @param request the request parameters of Search  SearchRequest
+     * @return SearchResponse
+     */
     @Override
     public CompletableFuture<SearchResponse> search(SearchRequest request) {
         try {
@@ -347,6 +478,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Ticketing  TicketingRequest
+     * @return TicketingResponse
+     */
     @Override
     public CompletableFuture<TicketingResponse> ticketing(TicketingRequest request) {
         try {
@@ -361,6 +496,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Pre-check for Ticketing, this interface is optional to use.</p>
+     * 
+     * @param request the request parameters of TicketingCheck  TicketingCheckRequest
+     * @return TicketingCheckResponse
+     */
     @Override
     public CompletableFuture<TicketingCheckResponse> ticketingCheck(TicketingCheckRequest request) {
         try {
@@ -375,6 +517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TransitVisa  TransitVisaRequest
+     * @return TransitVisaResponse
+     */
     @Override
     public CompletableFuture<TransitVisaResponse> transitVisa(TransitVisaRequest request) {
         try {

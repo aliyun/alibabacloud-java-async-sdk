@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FileUploadResponseBody} extends {@link TeaModel}
  *
  * <p>FileUploadResponseBody</p>
@@ -170,6 +171,12 @@ public class FileUploadResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FileUploadResponseBody} extends {@link TeaModel}
+     *
+     * <p>FileUploadResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("uploaded_file_url")
         private String uploadedFileUrl;

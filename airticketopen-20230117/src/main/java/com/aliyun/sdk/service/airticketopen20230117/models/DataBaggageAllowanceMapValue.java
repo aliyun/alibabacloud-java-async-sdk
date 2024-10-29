@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataBaggageAllowanceMapValue} extends {@link TeaModel}
  *
  * <p>DataBaggageAllowanceMapValue</p>
@@ -121,7 +122,10 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
         private Boolean isAllCarryOnWeight; 
 
         /**
-         * baggage_amount.
+         * <p>checked baggage quantity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder baggageAmount(Integer baggageAmount) {
             this.baggageAmount = baggageAmount;
@@ -129,7 +133,10 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
         }
 
         /**
-         * baggage_weight.
+         * <p>checked baggage weight</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder baggageWeight(Integer baggageWeight) {
             this.baggageWeight = baggageWeight;
@@ -137,7 +144,10 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
         }
 
         /**
-         * baggage_weight_unit.
+         * <p>checked baggage weight unit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KG</p>
          */
         public Builder baggageWeightUnit(String baggageWeightUnit) {
             this.baggageWeightUnit = baggageWeightUnit;
@@ -145,7 +155,10 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
         }
 
         /**
-         * is_all_weight.
+         * <p>Whether the weight is for all baggages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAllWeight(Boolean isAllWeight) {
             this.isAllWeight = isAllWeight;
@@ -153,7 +166,10 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
         }
 
         /**
-         * carry_on_amount.
+         * <p>carry-on baggage quantity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder carryOnAmount(Integer carryOnAmount) {
             this.carryOnAmount = carryOnAmount;
@@ -161,7 +177,10 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
         }
 
         /**
-         * carry_on_weight.
+         * <p>carry-on baggage weight</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder carryOnWeight(Integer carryOnWeight) {
             this.carryOnWeight = carryOnWeight;
@@ -169,7 +188,10 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
         }
 
         /**
-         * carry_on_weight_unit.
+         * <p>carry-on baggage weight unit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KG</p>
          */
         public Builder carryOnWeightUnit(String carryOnWeightUnit) {
             this.carryOnWeightUnit = carryOnWeightUnit;
@@ -177,7 +199,10 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
         }
 
         /**
-         * is_all_carry_on_weight.
+         * <p>Whether the weight is for all baggages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAllCarryOnWeight(Boolean isAllCarryOnWeight) {
             this.isAllCarryOnWeight = isAllCarryOnWeight;

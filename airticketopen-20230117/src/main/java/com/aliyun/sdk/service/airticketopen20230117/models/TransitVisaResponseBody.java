@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransitVisaResponseBody} extends {@link TeaModel}
  *
  * <p>TransitVisaResponseBody</p>
@@ -170,6 +171,12 @@ public class TransitVisaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TransitVisaResponseBody} extends {@link TeaModel}
+     *
+     * <p>TransitVisaResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;

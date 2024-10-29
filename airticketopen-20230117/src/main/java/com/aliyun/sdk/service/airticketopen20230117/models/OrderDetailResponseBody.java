@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>OrderDetailResponseBody</p>
@@ -109,7 +110,10 @@ public class OrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +121,7 @@ public class OrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +129,10 @@ public class OrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +140,10 @@ public class OrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>error data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -141,7 +151,10 @@ public class OrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -149,7 +162,10 @@ public class OrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>http reqeust has been processed successfully，status code is 200</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -157,7 +173,10 @@ public class OrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>true represents success, false represents failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,6 +189,12 @@ public class OrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class BaggageAncillary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_amount")
         private Integer baggageAmount;
@@ -291,6 +316,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class Ancillary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ancillary_id")
         private String ancillaryId;
@@ -342,7 +373,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private BaggageAncillary baggageAncillary; 
 
             /**
-             * ancillary_id.
+             * <p>ancillay_id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MDY2NTAxLCJleHAiOjE2NxNzM3MDEsIm5ix</p>
              */
             public Builder ancillaryId(String ancillaryId) {
                 this.ancillaryId = ancillaryId;
@@ -350,7 +384,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ancillary_type.
+             * <p>ancillary product type currently supports 4: paid luggage</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder ancillaryType(Integer ancillaryType) {
                 this.ancillaryType = ancillaryType;
@@ -372,6 +409,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class Credential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_issue_place")
         private String certIssuePlace;
@@ -435,7 +478,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private String expireDate; 
 
             /**
-             * cert_issue_place.
+             * <p>place of issue, two-letter code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder certIssuePlace(String certIssuePlace) {
                 this.certIssuePlace = certIssuePlace;
@@ -443,7 +489,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * credential_num.
+             * <p>travel document number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E1***5674</p>
              */
             public Builder credentialNum(String credentialNum) {
                 this.credentialNum = credentialNum;
@@ -451,7 +500,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * credential_type.
+             * <p>travel document type , only support &quot;1&quot;(1 means passport) currently.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder credentialType(Integer credentialType) {
                 this.credentialType = credentialType;
@@ -459,7 +511,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * expire_date.
+             * <p>expiration date</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20290101</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -473,6 +528,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class Passenger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -596,7 +657,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * birthday.
+             * <p>date of birth (yyyyMMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20020301</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -604,7 +668,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * credential.
+             * <p>travel document</p>
              */
             public Builder credential(Credential credential) {
                 this.credential = credential;
@@ -612,7 +676,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -620,7 +687,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * gender.
+             * <p>gender 0: male; 1: female</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gender(Integer gender) {
                 this.gender = gender;
@@ -628,7 +698,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>last name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -636,7 +709,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_country_code.
+             * <p>country code for mobile phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -644,7 +720,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_phone_number.
+             * <p>mobile phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183******96</p>
              */
             public Builder mobilePhoneNumber(String mobilePhoneNumber) {
                 this.mobilePhoneNumber = mobilePhoneNumber;
@@ -652,7 +731,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * nationality.
+             * <p>nationality</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -660,7 +742,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>passenger type 0: adult; 1: child; 8: infant</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -674,6 +759,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class AncillaryItemDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ancillary")
         private Ancillary ancillary;
@@ -725,7 +816,7 @@ public class OrderDetailResponseBody extends TeaModel {
             private java.util.List < String > segmentIdList; 
 
             /**
-             * ancillary.
+             * <p>the ancillary buyer booked</p>
              */
             public Builder ancillary(Ancillary ancillary) {
                 this.ancillary = ancillary;
@@ -733,7 +824,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * passenger.
+             * <p>passenger</p>
              */
             public Builder passenger(Passenger passenger) {
                 this.passenger = passenger;
@@ -741,7 +832,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id_list.
+             * <p>segment ID list, these segments share the same ancillary</p>
              */
             public Builder segmentIdList(java.util.List < String > segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -755,6 +846,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class FlightPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sell_price")
         private Double sellPrice;
@@ -794,7 +891,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private Double tax; 
 
             /**
-             * sell_price.
+             * <p>selling price</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder sellPrice(Double sellPrice) {
                 this.sellPrice = sellPrice;
@@ -802,7 +902,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * tax.
+             * <p>tax</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder tax(Double tax) {
                 this.tax = tax;
@@ -816,6 +919,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class FlightSegmentCabinRelation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
@@ -891,7 +1000,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private String segmentId; 
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -899,7 +1011,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>cabin class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -907,7 +1022,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class_name.
+             * <p>cabin class description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>economy class</p>
              */
             public Builder cabinClassName(String cabinClassName) {
                 this.cabinClassName = cabinClassName;
@@ -915,7 +1033,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_quantity.
+             * <p>availability</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder cabinQuantity(String cabinQuantity) {
                 this.cabinQuantity = cabinQuantity;
@@ -923,7 +1044,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(yyMMddHHmm)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -937,6 +1061,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class PassengerCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_issue_place")
         private String certIssuePlace;
@@ -1000,7 +1130,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private String expireDate; 
 
             /**
-             * cert_issue_place.
+             * <p>place of issue, two-letter code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder certIssuePlace(String certIssuePlace) {
                 this.certIssuePlace = certIssuePlace;
@@ -1008,7 +1141,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * credential_num.
+             * <p>travel document number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E1***5674</p>
              */
             public Builder credentialNum(String credentialNum) {
                 this.credentialNum = credentialNum;
@@ -1016,7 +1152,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * credential_type.
+             * <p>travel document type , only support &quot;1&quot;(1 means passport) currently.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder credentialType(Integer credentialType) {
                 this.credentialType = credentialType;
@@ -1024,7 +1163,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * expire_date.
+             * <p>expiration date</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20290101</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -1038,6 +1180,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class FlightItemDetailListPassenger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -1161,7 +1309,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * birthday.
+             * <p>date of birth (yyyyMMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20020301</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -1169,7 +1320,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * credential.
+             * <p>travel document</p>
              */
             public Builder credential(PassengerCredential credential) {
                 this.credential = credential;
@@ -1177,7 +1328,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -1185,7 +1339,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * gender.
+             * <p>gender 0: MALE; 1: FEMALE</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gender(Integer gender) {
                 this.gender = gender;
@@ -1193,7 +1350,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>last name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -1201,7 +1361,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_country_code.
+             * <p>mobile country code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -1209,7 +1372,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_phone_number.
+             * <p>mobile phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183******96</p>
              */
             public Builder mobilePhoneNumber(String mobilePhoneNumber) {
                 this.mobilePhoneNumber = mobilePhoneNumber;
@@ -1217,7 +1383,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * nationality.
+             * <p>nationality (two-letter code)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -1225,7 +1394,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>passenger type 0: adult; 1: child; 8: infant</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -1239,6 +1411,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class FlightItemDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("b_pnr_list")
         private java.util.List < String > bPnrList;
@@ -1338,7 +1516,7 @@ public class OrderDetailResponseBody extends TeaModel {
             private java.util.List < String > ticketNos; 
 
             /**
-             * b_pnr_list.
+             * <p>b PNR(airline booking code) list</p>
              */
             public Builder bPnrList(java.util.List < String > bPnrList) {
                 this.bPnrList = bPnrList;
@@ -1346,7 +1524,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * c_pnr_list.
+             * <p>c PNR(airline booking code) list</p>
              */
             public Builder cPnrList(java.util.List < String > cPnrList) {
                 this.cPnrList = cPnrList;
@@ -1354,7 +1532,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * flight_price.
+             * <p>flight price information for current passenger</p>
              */
             public Builder flightPrice(FlightPrice flightPrice) {
                 this.flightPrice = flightPrice;
@@ -1362,7 +1540,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * flight_segment_cabin_relation.
+             * <p>RBD information in flight segment dimension</p>
              */
             public Builder flightSegmentCabinRelation(java.util.List < FlightSegmentCabinRelation> flightSegmentCabinRelation) {
                 this.flightSegmentCabinRelation = flightSegmentCabinRelation;
@@ -1370,7 +1548,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * passenger.
+             * <p>passenger</p>
              */
             public Builder passenger(FlightItemDetailListPassenger passenger) {
                 this.passenger = passenger;
@@ -1378,7 +1556,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ticket_air_line.
+             * <p>ticketing airline</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder ticketAirLine(String ticketAirLine) {
                 this.ticketAirLine = ticketAirLine;
@@ -1386,7 +1567,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ticket_nos.
+             * <p>ticket number list</p>
              */
             public Builder ticketNos(java.util.List < String > ticketNos) {
                 this.ticketNos = ticketNos;
@@ -1400,6 +1581,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class PassengerListCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_issue_place")
         private String certIssuePlace;
@@ -1463,7 +1650,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private String expireDate; 
 
             /**
-             * cert_issue_place.
+             * <p>place of issue, two-letter code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder certIssuePlace(String certIssuePlace) {
                 this.certIssuePlace = certIssuePlace;
@@ -1471,7 +1661,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * credential_num.
+             * <p>travel document number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E1***5674</p>
              */
             public Builder credentialNum(String credentialNum) {
                 this.credentialNum = credentialNum;
@@ -1479,7 +1672,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * credential_type.
+             * <p>travel document type , only support &quot;1&quot;(1 means passport) currently.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder credentialType(Integer credentialType) {
                 this.credentialType = credentialType;
@@ -1487,7 +1683,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * expire_date.
+             * <p>expiration date</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20290101</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -1501,6 +1700,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class PassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -1624,7 +1829,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * birthday.
+             * <p>date of birth (yyyyMMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20020301</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -1632,7 +1840,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * credential.
+             * <p>travel document</p>
              */
             public Builder credential(PassengerListCredential credential) {
                 this.credential = credential;
@@ -1640,7 +1848,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -1648,7 +1859,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * gender.
+             * <p>gender 0: MALE; 1: FEMALE</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gender(Integer gender) {
                 this.gender = gender;
@@ -1656,7 +1870,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>last name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -1664,7 +1881,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_country_code.
+             * <p>mobile country code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -1672,7 +1892,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_phone_number.
+             * <p>mobile phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183******96</p>
              */
             public Builder mobilePhoneNumber(String mobilePhoneNumber) {
                 this.mobilePhoneNumber = mobilePhoneNumber;
@@ -1680,7 +1903,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * nationality.
+             * <p>nationality (two-letter code)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -1688,7 +1914,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>passenger type 0: adult; 1: child; 8: infant</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -1702,6 +1931,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class SegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
         private String arrivalAirport;
@@ -1981,7 +2216,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private Integer stopQuantity; 
 
             /**
-             * arrival_airport.
+             * <p>arrival airport code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -1989,7 +2227,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_city.
+             * <p>arrival city code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -1997,7 +2238,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_terminal.
+             * <p>arrival terminal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -2005,7 +2249,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_time.
+             * <p>arrival time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 10:40:00</p>
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -2013,7 +2260,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * availability.
+             * <p>availability</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -2021,7 +2271,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -2029,7 +2282,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>cabin class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -2037,7 +2293,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * code_share.
+             * <p>code share or not</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -2045,7 +2304,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_airport.
+             * <p>departure airport code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -2053,7 +2315,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_city.
+             * <p>departure city code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -2061,7 +2326,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_terminal.
+             * <p>departure terminal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -2069,7 +2337,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_time.
+             * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -2077,7 +2348,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * equip_type.
+             * <p>equipment type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32Q</p>
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -2085,7 +2359,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * flight_duration.
+             * <p>flight time, unit: minute</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -2093,7 +2370,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_airline.
+             * <p>marketing airline code (eg: KA)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -2101,7 +2381,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>marketing airline flight no. (eg: KA5809)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -2109,7 +2392,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no_int.
+             * <p>marketing airline flight no. (eg: 5809)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295</p>
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -2117,7 +2403,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_airline.
+             * <p>operating airline code (eg: CX)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -2125,7 +2414,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_flight_no.
+             * <p>operating airline flight no. (eg: CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -2133,7 +2425,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -2141,7 +2436,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_list.
+             * <p>stop city list when stop_quantity &gt; 1 , use “,” for seperation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -2149,7 +2447,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_quantity.
+             * <p>number of stops</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -2163,6 +2464,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class JourneyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
         private java.util.List < SegmentList> segmentList;
@@ -2202,7 +2509,7 @@ public class OrderDetailResponseBody extends TeaModel {
             private Integer transferCount; 
 
             /**
-             * segment_list.
+             * <p>segment list</p>
              */
             public Builder segmentList(java.util.List < SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -2210,7 +2517,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * transfer_count.
+             * <p>number of transfers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -2224,6 +2534,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class SegmentBaggageCheckInInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("luggage_direct_info_type")
         private Integer luggageDirectInfoType;
@@ -2263,7 +2579,16 @@ public class OrderDetailResponseBody extends TeaModel {
             private java.util.List < String > segmentIdList; 
 
             /**
-             * luggage_direct_info_type.
+             * <p>through check-in baggage policy type</p>
+             * <ol>
+             * <li>baggage through check-in between segments</li>
+             * <li>baggage re-check-in needed between segments</li>
+             * <li>baggage through check-in at stop city ( applies for stop flight )</li>
+             * <li>baggage re-checkin needed at stop city ( applies for stop flight )</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder luggageDirectInfoType(Integer luggageDirectInfoType) {
                 this.luggageDirectInfoType = luggageDirectInfoType;
@@ -2271,7 +2596,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id_list.
+             * <p>segment id list. all the listed segment ids share the same baggage through check-in policy</p>
              */
             public Builder segmentIdList(java.util.List < String > segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -2285,6 +2610,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class SegmentBaggageMappingList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_baggage_allowance_mapping")
         private java.util.Map < String, DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue > passengerBaggageAllowanceMapping;
@@ -2324,7 +2655,7 @@ public class OrderDetailResponseBody extends TeaModel {
             private java.util.List < String > segmentIdList; 
 
             /**
-             * passenger_baggage_allowance_mapping.
+             * <p>baggage rule mapping, key is passenger type, value is baggage allowance details</p>
              */
             public Builder passengerBaggageAllowanceMapping(java.util.Map < String, DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue > passengerBaggageAllowanceMapping) {
                 this.passengerBaggageAllowanceMapping = passengerBaggageAllowanceMapping;
@@ -2332,7 +2663,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id_list.
+             * <p>segment id list. all the listed segment ids share the same baggage rule</p>
              */
             public Builder segmentIdList(java.util.List < String > segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -2346,6 +2677,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class SegmentRefundChangeRuleMappingList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("refund_change_rule_map")
         private java.util.Map < String, DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue > refundChangeRuleMap;
@@ -2385,7 +2722,7 @@ public class OrderDetailResponseBody extends TeaModel {
             private java.util.List < String > segmentIdList; 
 
             /**
-             * refund_change_rule_map.
+             * <p>change and refund policy mapping, key is passenger type, value is change and refund policy details</p>
              */
             public Builder refundChangeRuleMap(java.util.Map < String, DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue > refundChangeRuleMap) {
                 this.refundChangeRuleMap = refundChangeRuleMap;
@@ -2393,7 +2730,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id_list.
+             * <p>segment id list. all the listed segment ids share the same change and refund policy</p>
              */
             public Builder segmentIdList(java.util.List < String > segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -2407,6 +2744,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class Solution extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adult_price")
         private Double adultPrice;
@@ -2578,7 +2921,10 @@ public class OrderDetailResponseBody extends TeaModel {
             private String solutionId; 
 
             /**
-             * adult_price.
+             * <p>adult fare</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder adultPrice(Double adultPrice) {
                 this.adultPrice = adultPrice;
@@ -2586,7 +2932,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * adult_tax.
+             * <p>adult tax</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder adultTax(Double adultTax) {
                 this.adultTax = adultTax;
@@ -2594,7 +2943,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * child_price.
+             * <p>child fare</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder childPrice(Double childPrice) {
                 this.childPrice = childPrice;
@@ -2602,7 +2954,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * child_tax.
+             * <p>child tax</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder childTax(Double childTax) {
                 this.childTax = childTax;
@@ -2610,7 +2965,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * infant_price.
+             * <p>infant fare</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder infantPrice(Double infantPrice) {
                 this.infantPrice = infantPrice;
@@ -2618,7 +2976,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * infant_tax.
+             * <p>infant tax</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder infantTax(Double infantTax) {
                 this.infantTax = infantTax;
@@ -2626,7 +2987,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * journey_list.
+             * <p>journey list</p>
              */
             public Builder journeyList(java.util.List < JourneyList> journeyList) {
                 this.journeyList = journeyList;
@@ -2634,7 +2995,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * product_type_description.
+             * <p>product type description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder productTypeDescription(String productTypeDescription) {
                 this.productTypeDescription = productTypeDescription;
@@ -2642,7 +3006,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refund_ticket_coupon_description.
+             * <p>refund coupon description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder refundTicketCouponDescription(String refundTicketCouponDescription) {
                 this.refundTicketCouponDescription = refundTicketCouponDescription;
@@ -2650,7 +3017,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_baggage_check_in_info_list.
+             * <p>through check-in baggage policy</p>
              */
             public Builder segmentBaggageCheckInInfoList(java.util.List < SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {
                 this.segmentBaggageCheckInInfoList = segmentBaggageCheckInInfoList;
@@ -2658,7 +3025,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_baggage_mapping_list.
+             * <p>baggage rule list</p>
              */
             public Builder segmentBaggageMappingList(java.util.List < SegmentBaggageMappingList> segmentBaggageMappingList) {
                 this.segmentBaggageMappingList = segmentBaggageMappingList;
@@ -2666,7 +3033,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_refund_change_rule_mapping_list.
+             * <p>change and refund policy</p>
              */
             public Builder segmentRefundChangeRuleMappingList(java.util.List < SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList) {
                 this.segmentRefundChangeRuleMappingList = segmentRefundChangeRuleMappingList;
@@ -2674,7 +3041,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * solution_id
+             * <p>solution_id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eJwz8DeySEo0NjQ01TU3TUxxx</p>
              */
             public Builder solutionId(String solutionId) {
                 this.solutionId = solutionId;
@@ -2688,6 +3058,12 @@ public class OrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OrderDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ancillary_item_detail_list")
         private java.util.List < AncillaryItemDetailList> ancillaryItemDetailList;
@@ -2919,7 +3295,7 @@ public class OrderDetailResponseBody extends TeaModel {
             private String transactionNo; 
 
             /**
-             * ancillary_item_detail_list.
+             * <p>ancillary product fulfillment details</p>
              */
             public Builder ancillaryItemDetailList(java.util.List < AncillaryItemDetailList> ancillaryItemDetailList) {
                 this.ancillaryItemDetailList = ancillaryItemDetailList;
@@ -2927,7 +3303,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * baggage_allowance_map.
+             * <p>baggage rule mapping, key is passenger type, value is baggage allowance details</p>
              */
             public Builder baggageAllowanceMap(java.util.Map < String, DataBaggageAllowanceMapValue > baggageAllowanceMap) {
                 this.baggageAllowanceMap = baggageAllowanceMap;
@@ -2935,7 +3311,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * book_time.
+             * <p>book time(timestamp)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677210784000</p>
              */
             public Builder bookTime(Long bookTime) {
                 this.bookTime = bookTime;
@@ -2943,7 +3322,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * flight_item_detail_list.
+             * <p>flight product fulfillment details</p>
              */
             public Builder flightItemDetailList(java.util.List < FlightItemDetailList> flightItemDetailList) {
                 this.flightItemDetailList = flightItemDetailList;
@@ -2951,7 +3330,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * order_num.
+             * <p>order number created by book</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4966***617111</p>
              */
             public Builder orderNum(Long orderNum) {
                 this.orderNum = orderNum;
@@ -2959,7 +3341,15 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * order_status.
+             * <p>order status </p>
+             * <p>1: order creation in process; </p>
+             * <p>2: order creation successful; </p>
+             * <p>3: order paid; </p>
+             * <p>4: order successful; </p>
+             * <p>5: order closed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -2967,7 +3357,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * out_order_num.
+             * <p>external order number(customized by buyer when book)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x091-2023-0220-j-0001</p>
              */
             public Builder outOrderNum(String outOrderNum) {
                 this.outOrderNum = outOrderNum;
@@ -2975,7 +3368,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * passenger_list.
+             * <p>the information about all passenger of current order</p>
              */
             public Builder passengerList(java.util.List < PassengerList> passengerList) {
                 this.passengerList = passengerList;
@@ -2983,7 +3376,14 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * pay_status.
+             * <p>payment status </p>
+             * <p>1: payment in process; </p>
+             * <p>2: deduction successful; </p>
+             * <p>3: paid to the seller; </p>
+             * <p>4: transaction closed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder payStatus(Integer payStatus) {
                 this.payStatus = payStatus;
@@ -2991,7 +3391,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * pay_time.
+             * <p>pay time(timestamp)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677210788000</p>
              */
             public Builder payTime(Long payTime) {
                 this.payTime = payTime;
@@ -2999,7 +3402,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * promotion_price.
+             * <p>discount amount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder promotionPrice(Double promotionPrice) {
                 this.promotionPrice = promotionPrice;
@@ -3007,7 +3413,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * real_pay_price.
+             * <p>actual payment amount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder realPayPrice(Double realPayPrice) {
                 this.realPayPrice = realPayPrice;
@@ -3015,7 +3424,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refund_change_rule_map.
+             * <p>change and refund policy mapping, key is passenger type, value is change and refund policy details</p>
              */
             public Builder refundChangeRuleMap(java.util.Map < String, DataRefundChangeRuleMapValue > refundChangeRuleMap) {
                 this.refundChangeRuleMap = refundChangeRuleMap;
@@ -3023,7 +3432,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * session_nick.
+             * <p>buyer nickname</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nick</p>
              */
             public Builder sessionNick(String sessionNick) {
                 this.sessionNick = sessionNick;
@@ -3031,7 +3443,7 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * solution.
+             * <p>the solution buyer booked</p>
              */
             public Builder solution(Solution solution) {
                 this.solution = solution;
@@ -3039,7 +3451,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * succeed_time.
+             * <p>order success time(timestamp)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677210786000</p>
              */
             public Builder succeedTime(Long succeedTime) {
                 this.succeedTime = succeedTime;
@@ -3047,7 +3462,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * total_price.
+             * <p>total price of current order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder totalPrice(Double totalPrice) {
                 this.totalPrice = totalPrice;
@@ -3055,7 +3473,10 @@ public class OrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * transaction_no.
+             * <p>transaction number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkduendkd-2023-dj0</p>
              */
             public Builder transactionNo(String transactionNo) {
                 this.transactionNo = transactionNo;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnrichRequest} extends {@link RequestModel}
  *
  * <p>EnrichRequest</p>
@@ -152,7 +153,10 @@ public class EnrichRequest extends Request {
         } 
 
         /**
-         * adults.
+         * <p>adult passenger amount 1-9</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder adults(Integer adults) {
             this.putBodyParameter("adults", adults);
@@ -161,7 +165,18 @@ public class EnrichRequest extends Request {
         }
 
         /**
-         * cabin_class.
+         * <p>cabin class</p>
+         * <ol>
+         * <li><strong>ALL_CABIN</strong> : all cabin class</li>
+         * <li><strong>Y</strong> : economy class</li>
+         * <li><strong>FC</strong> : first class and business class</li>
+         * <li><strong>S</strong> : premium economy class</li>
+         * <li><strong>YS</strong> : economy class and premium economy class</li>
+         * <li><strong>YSC</strong> : economy class, premium economy class and business class</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_CABIN</p>
          */
         public Builder cabinClass(String cabinClass) {
             this.putBodyParameter("cabin_class", cabinClass);
@@ -170,7 +185,10 @@ public class EnrichRequest extends Request {
         }
 
         /**
-         * children.
+         * <p>child passenger amount 0-9</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder children(Integer children) {
             this.putBodyParameter("children", children);
@@ -179,7 +197,10 @@ public class EnrichRequest extends Request {
         }
 
         /**
-         * infants.
+         * <p>infant passenger amount 0-9</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder infants(Integer infants) {
             this.putBodyParameter("infants", infants);
@@ -188,7 +209,7 @@ public class EnrichRequest extends Request {
         }
 
         /**
-         * journey_param_list.
+         * <p>journey list</p>
          */
         public Builder journeyParamList(java.util.List < JourneyParamList> journeyParamList) {
             String journeyParamListShrink = shrink(journeyParamList, "journey_param_list", "json");
@@ -198,7 +219,10 @@ public class EnrichRequest extends Request {
         }
 
         /**
-         * solution_id.
+         * <p>solution_id returned by Search</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
          */
         public Builder solutionId(String solutionId) {
             this.putBodyParameter("solution_id", solutionId);
@@ -207,7 +231,11 @@ public class EnrichRequest extends Request {
         }
 
         /**
-         * access_token
+         * <p>access token</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJSUzI1NiIsImtpZCI6InN1ZXpfa2V5aWQifQ.eyJqdGkiOiJCQldMaWIzN0VxbC0xMjhhR2N5elJ3IiwiaWF0IjoxNjc3MDY2NTAxLCJleHAiOjE2NzcwNzM3MDEsIm5iZiI6MTY3NzA2NjQ0MX0.AF0DxsZK4Edyg0C6ObRQFUo36R1VYrb5IYmak25TmL1OfR5RkIUc3PpqFuQKNLKXf5fOtVQaKjaexzwodVeWZQDKEG_RPt_Ybb99EnEm6vPKs6e3pWFbKiBq71WleLHhVrdFb4YPowRKjc7bG0jyGUxiQ2iXy0RWDj9tIjfI-KEdzNp5oVnX7j4p3H12DwQrRPmd1nz3BciAQNINvDpzqusuIUw8JXyLFCz838Y0NhwB1_bYZyctxRLSzrGZuI5rrWtItgupqMsOlJ3RNy1QrIbQ2g6nPmzl-atOqcQ4Nw0HeDLR8dhM1OsIcFLbKXBUtwXofflhzAQrkDxhwYiXii</p>
          */
         public Builder xAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
             this.putHeaderParameter("x-acs-airticket-access-token", xAcsAirticketAccessToken);
@@ -216,7 +244,10 @@ public class EnrichRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);
@@ -231,6 +262,12 @@ public class EnrichRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EnrichRequest} extends {@link TeaModel}
+     *
+     * <p>EnrichRequest</p>
+     */
     public static class SegmentParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -346,7 +383,11 @@ public class EnrichRequest extends Request {
             private String marketingFlightNo; 
 
             /**
-             * arrival_airport.
+             * <p>arrival airport code (capitalized)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -354,7 +395,10 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * arrival_city.
+             * <p>arrival city code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -362,7 +406,10 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -370,7 +417,10 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * child_cabin.
+             * <p>child RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E</p>
              */
             public Builder childCabin(String childCabin) {
                 this.childCabin = childCabin;
@@ -378,7 +428,11 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * departure_airport.
+             * <p>departure airport code (capitalized)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -386,7 +440,10 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * departure_city.
+             * <p>departure city code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -394,7 +451,11 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * departure_time.
+             * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -402,7 +463,11 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>marketing flight no. (eg: KA5809)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -416,6 +481,12 @@ public class EnrichRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link EnrichRequest} extends {@link TeaModel}
+     *
+     * <p>EnrichRequest</p>
+     */
     public static class JourneyParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_city")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -483,7 +554,11 @@ public class EnrichRequest extends Request {
             private java.util.List < SegmentParamList> segmentParamList; 
 
             /**
-             * arrival_city.
+             * <p>arrival city code (capitalized)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -491,7 +566,11 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * departure_city.
+             * <p>departure city code (capitalized)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -499,7 +578,11 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * departure_date.
+             * <p>departure date (eg: yyyyMMdd)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230310</p>
              */
             public Builder departureDate(String departureDate) {
                 this.departureDate = departureDate;
@@ -507,7 +590,8 @@ public class EnrichRequest extends Request {
             }
 
             /**
-             * segment_param_list.
+             * <p>segement param list</p>
+             * <p>This parameter is required.</p>
              */
             public Builder segmentParamList(java.util.List < SegmentParamList> segmentParamList) {
                 this.segmentParamList = segmentParamList;

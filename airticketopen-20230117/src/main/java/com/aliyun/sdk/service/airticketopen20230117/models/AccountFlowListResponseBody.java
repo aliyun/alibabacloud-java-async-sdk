@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AccountFlowListResponseBody} extends {@link TeaModel}
  *
  * <p>AccountFlowListResponseBody</p>
@@ -170,6 +171,12 @@ public class AccountFlowListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AccountFlowListResponseBody} extends {@link TeaModel}
+     *
+     * <p>AccountFlowListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("after_available_amount")
         private Double afterAvailableAmount;
@@ -431,6 +438,12 @@ public class AccountFlowListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AccountFlowListResponseBody} extends {@link TeaModel}
+     *
+     * <p>AccountFlowListResponseBody</p>
+     */
     public static class Pagination extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("current_page")
         private Integer currentPage;
@@ -532,6 +545,12 @@ public class AccountFlowListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AccountFlowListResponseBody} extends {@link TeaModel}
+     *
+     * <p>AccountFlowListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
         private java.util.List < List> list;

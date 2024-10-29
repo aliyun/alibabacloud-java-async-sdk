@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundApplyRequest} extends {@link RequestModel}
  *
  * <p>RefundApplyRequest</p>
@@ -128,7 +129,11 @@ public class RefundApplyRequest extends Request {
         } 
 
         /**
-         * order_num.
+         * <p>order number</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4966***617111</p>
          */
         public Builder orderNum(Long orderNum) {
             this.putBodyParameter("order_num", orderNum);
@@ -137,7 +142,8 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * refund_journeys.
+         * <p>journeys for which a refund is being requested</p>
+         * <p>This parameter is required.</p>
          */
         public Builder refundJourneys(java.util.List < RefundJourneys> refundJourneys) {
             String refundJourneysShrink = shrink(refundJourneys, "refund_journeys", "json");
@@ -147,7 +153,8 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * refund_passenger_list.
+         * <p>passengers that applying for a refund</p>
+         * <p>This parameter is required.</p>
          */
         public Builder refundPassengerList(java.util.List < RefundPassengerList> refundPassengerList) {
             String refundPassengerListShrink = shrink(refundPassengerList, "refund_passenger_list", "json");
@@ -157,7 +164,8 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * refund_type.
+         * <p>refund type and attachments</p>
+         * <p>This parameter is required.</p>
          */
         public Builder refundType(RefundType refundType) {
             String refundTypeShrink = shrink(refundType, "refund_type", "json");
@@ -167,7 +175,11 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * access_token
+         * <p>access token</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJSUzI1NiIsImtpZCI6InN1ZXpfa2V5aWQifQ.eyJqdGkiOiJCQldMaWIzN0VxbC0xMjhhR2N5elJ3IiwiaWF0IjoxNjc3MDY2NTAxLCJleHAiOjE2NzcwNzM3MDEsIm5iZiI6MTY3NzA2NjQ0MX0.AF0DxsZK4Edyg0C6ObRQFUo36R1VYrb5IYmak25TmL1OfR5RkIUc3PpqFuQKNLKXf5fOtVQaKjaexzwodVeWZQDKEG_RPt_Ybb99EnEm6vPKs6e3pWFbKiBq71WleLHhVrdFb4YPowRKjc7bG0jyGUxiQ2iXy0RWDj9tIjfI-KEdzNp5oVnX7j4p3H12DwQrRPmd1nz3BciAQNINvDpzqusuIUw8JXyLFCz838Y0NhwB1_bYZyctxRLSzrGZuI5rrWtItgupqMsOlJ3RNy1QrIbQ2g6nPmzl-atOqcQ4Nw0HeDLR8dhM1OsIcFLbKXBUtwXofflhzAQrkDxhwYiXii</p>
          */
         public Builder xAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
             this.putHeaderParameter("x-acs-airticket-access-token", xAcsAirticketAccessToken);
@@ -176,7 +188,10 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);
@@ -191,6 +206,12 @@ public class RefundApplyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RefundApplyRequest} extends {@link TeaModel}
+     *
+     * <p>RefundApplyRequest</p>
+     */
     public static class SegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -258,7 +279,11 @@ public class RefundApplyRequest extends Request {
             private String departureCity; 
 
             /**
-             * arrival_airport.
+             * <p>arrival airport code (capitalized)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -266,7 +291,11 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * arrival_city.
+             * <p>arrival city code (capitalized)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -274,7 +303,11 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * departure_airport.
+             * <p>departure airport code (capitalized)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -282,7 +315,11 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * departure_city.
+             * <p>departure city code (capitalized)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -296,6 +333,12 @@ public class RefundApplyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundApplyRequest} extends {@link TeaModel}
+     *
+     * <p>RefundApplyRequest</p>
+     */
     public static class RefundJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -324,7 +367,8 @@ public class RefundApplyRequest extends Request {
             private java.util.List < SegmentList> segmentList; 
 
             /**
-             * segment_list.
+             * <p>segment list</p>
+             * <p>This parameter is required.</p>
              */
             public Builder segmentList(java.util.List < SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -338,6 +382,12 @@ public class RefundApplyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundApplyRequest} extends {@link TeaModel}
+     *
+     * <p>RefundApplyRequest</p>
+     */
     public static class RefundPassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("document")
         private String document;
@@ -391,7 +441,10 @@ public class RefundApplyRequest extends Request {
             private String lastName; 
 
             /**
-             * document.
+             * <p>credential number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>411***********4411</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -399,7 +452,11 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -407,7 +464,11 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * last_name.
+             * <p>last name</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -421,6 +482,12 @@ public class RefundApplyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundApplyRequest} extends {@link TeaModel}
+     *
+     * <p>RefundApplyRequest</p>
+     */
     public static class RefundType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("file")
         private java.util.List < String > file;
@@ -473,7 +540,11 @@ public class RefundApplyRequest extends Request {
             private String remark; 
 
             /**
-             * file.
+             * <p>attachment file URLs</p>
+             * <p>(note: upload the files using a separate file upload interface to get the file URLs)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[xxx,yyy]</p>
              */
             public Builder file(java.util.List < String > file) {
                 this.file = file;
@@ -481,7 +552,15 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * refund_type_id.
+             * <p>refund type </p>
+             * <p>2: voluntary (I want to change my travel plan/I don&quot;t want to fly) </p>
+             * <p>5: involuntary, due to flight delay or cancellation, schedule changes, etc., by the airline </p>
+             * <p>6: involuntary, due to health reasons with a certificate from a hospital of at least secondary level A or above </p>
+             * <p> (note: attachments are not mandatory, but it is recommended to provide them for involuntary refunds as they can increase the success rate)</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder refundTypeId(Integer refundTypeId) {
                 this.refundTypeId = refundTypeId;
@@ -489,7 +568,10 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * remark.
+             * <p>remark</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark desc</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

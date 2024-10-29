@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundDetailListRequest} extends {@link RequestModel}
  *
  * <p>RefundDetailListRequest</p>
@@ -140,7 +141,10 @@ public class RefundDetailListRequest extends Request {
         } 
 
         /**
-         * order_num.
+         * <p>order number returned by Book</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49884*****950</p>
          */
         public Builder orderNum(Long orderNum) {
             this.putQueryParameter("order_num", orderNum);
@@ -149,7 +153,10 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * page_index.
+         * <p>pagination query parameters, from which page to start querying</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("page_index", pageIndex);
@@ -158,7 +165,10 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>pagination query parameters, how many orders to return</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -167,7 +177,11 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * refund_create_begin_time.
+         * <p>the earliest time(timestamp) of refund order creation</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677229002000</p>
          */
         public Builder refundCreateBeginTime(Long refundCreateBeginTime) {
             this.putQueryParameter("refund_create_begin_time", refundCreateBeginTime);
@@ -176,7 +190,11 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * refund_create_end_time.
+         * <p>the latest time(timestamp) of refund order creation</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677229005000</p>
          */
         public Builder refundCreateEndTime(Long refundCreateEndTime) {
             this.putQueryParameter("refund_create_end_time", refundCreateEndTime);
@@ -185,7 +203,11 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * access_token
+         * <p>access token</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJSUzI1NiIsImtpZCI6InN1ZXpfa2V5aWQifQ.eyJqdGkiOiJCQldMaWIzN0VxbC0xMjhhR2N5elJ3IiwiaWF0IjoxNjc3MDY2NTAxLCJleHAiOjE2NzcwNzM3MDEsIm5iZiI6MTY3NzA2NjQ0MX0.AF0DxsZK4Edyg0C6ObRQFUo36R1VYrb5IYmak25TmL1OfR5RkIUc3PpqFuQKNLKXf5fOtVQaKjaexzwodVeWZQDKEG_RPt_Ybb99EnEm6vPKs6e3pWFbKiBq71WleLHhVrdFb4YPowRKjc7bG0jyGUxiQ2iXy0RWDj9tIjfI-KEdzNp5oVnX7j4p3H12DwQrRPmd1nz3BciAQNINvDpzqusuIUw8JXyLFCz838Y0NhwB1_bYZyctxRLSzrGZuI5rrWtItgupqMsOlJ3RNy1QrIbQ2g6nPmzl-atOqcQ4Nw0HeDLR8dhM1OsIcFLbKXBUtwXofflhzAQrkDxhwYiXii</p>
          */
         public Builder xAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
             this.putHeaderParameter("x-acs-airticket-access-token", xAcsAirticketAccessToken);
@@ -194,7 +216,10 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);

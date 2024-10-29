@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BookRequest} extends {@link RequestModel}
  *
  * <p>BookRequest</p>
@@ -142,7 +143,8 @@ public class BookRequest extends Request {
         } 
 
         /**
-         * contact.
+         * <p>contact information</p>
+         * <p>This parameter is required.</p>
          */
         public Builder contact(Contact contact) {
             String contactShrink = shrink(contact, "contact", "json");
@@ -152,7 +154,11 @@ public class BookRequest extends Request {
         }
 
         /**
-         * out_order_num.
+         * <p>external order number(buyer customization)</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x091-2023-0220-j-0001</p>
          */
         public Builder outOrderNum(String outOrderNum) {
             this.putBodyParameter("out_order_num", outOrderNum);
@@ -161,7 +167,7 @@ public class BookRequest extends Request {
         }
 
         /**
-         * passenger_ancillary_purchase_map_list.
+         * <p>passenger-ancillary purchase relationship</p>
          */
         public Builder passengerAncillaryPurchaseMapList(java.util.List < PassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList) {
             String passengerAncillaryPurchaseMapListShrink = shrink(passengerAncillaryPurchaseMapList, "passenger_ancillary_purchase_map_list", "json");
@@ -171,7 +177,8 @@ public class BookRequest extends Request {
         }
 
         /**
-         * passenger_list.
+         * <p>passenger list</p>
+         * <p>This parameter is required.</p>
          */
         public Builder passengerList(java.util.List < PassengerList> passengerList) {
             String passengerListShrink = shrink(passengerList, "passenger_list", "json");
@@ -181,7 +188,11 @@ public class BookRequest extends Request {
         }
 
         /**
-         * solution_id
+         * <p>solution_id returned by Enrich</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
          */
         public Builder solutionId(String solutionId) {
             this.putBodyParameter("solution_id", solutionId);
@@ -190,7 +201,11 @@ public class BookRequest extends Request {
         }
 
         /**
-         * access_token
+         * <p>access token</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJSUzI1NiIsImtpZCI6InN1ZXpfa2V5aWQifQ.eyJqdGkiOiJCQldMaWIzN0VxbC0xMjhhR2N5elJ3IiwiaWF0IjoxNjc3MDY2NTAxLCJleHAiOjE2NzcwNzM3MDEsIm5iZiI6MTY3NzA2NjQ0MX0.AF0DxsZK4Edyg0C6ObRQFUo36R1VYrb5IYmak25TmL1OfR5RkIUc3PpqFuQKNLKXf5fOtVQaKjaexzwodVeWZQDKEG_RPt_Ybb99EnEm6vPKs6e3pWFbKiBq71WleLHhVrdFb4YPowRKjc7bG0jyGUxiQ2iXy0RWDj9tIjfI-KEdzNp5oVnX7j4p3H12DwQrRPmd1nz3BciAQNINvDpzqusuIUw8JXyLFCz838Y0NhwB1_bYZyctxRLSzrGZuI5rrWtItgupqMsOlJ3RNy1QrIbQ2g6nPmzl-atOqcQ4Nw0HeDLR8dhM1OsIcFLbKXBUtwXofflhzAQrkDxhwYiXii</p>
          */
         public Builder xAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
             this.putHeaderParameter("x-acs-airticket-access-token", xAcsAirticketAccessToken);
@@ -199,7 +214,10 @@ public class BookRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);
@@ -214,6 +232,12 @@ public class BookRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BookRequest} extends {@link TeaModel}
+     *
+     * <p>BookRequest</p>
+     */
     public static class Contact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("email")
         private String email;
@@ -289,7 +313,10 @@ public class BookRequest extends Request {
             private String mobilePhoneNum; 
 
             /**
-             * email.
+             * <p>email address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gao******@gmail.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -297,7 +324,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -305,7 +335,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * last_name.
+             * <p>last name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -313,7 +346,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * mobile_country_code.
+             * <p>country code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -321,7 +357,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * mobile_phone_num.
+             * <p>mobile phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183******96</p>
              */
             public Builder mobilePhoneNum(String mobilePhoneNum) {
                 this.mobilePhoneNum = mobilePhoneNum;
@@ -335,6 +374,12 @@ public class BookRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link BookRequest} extends {@link TeaModel}
+     *
+     * <p>BookRequest</p>
+     */
     public static class BookAncillaryReqItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ancillary_id")
         private String ancillaryId;
@@ -374,7 +419,10 @@ public class BookRequest extends Request {
             private Integer ancillaryType; 
 
             /**
-             * ancillary_id.
+             * <p>ancillary product ID, returned by AncillarySuggest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MDY2NTAxLCJleHAiOjE2NxNzM3MDEsIm5ix</p>
              */
             public Builder ancillaryId(String ancillaryId) {
                 this.ancillaryId = ancillaryId;
@@ -382,7 +430,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * ancillary_type.
+             * <p>type of ancillary product, only support &quot;4&quot;(4 means paid baggage) currently.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder ancillaryType(Integer ancillaryType) {
                 this.ancillaryType = ancillaryType;
@@ -396,6 +447,12 @@ public class BookRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link BookRequest} extends {@link TeaModel}
+     *
+     * <p>BookRequest</p>
+     */
     public static class Credential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_issue_place")
         private String certIssuePlace;
@@ -460,7 +517,10 @@ public class BookRequest extends Request {
             private String expireDate; 
 
             /**
-             * cert_issue_place.
+             * <p>place of issue, two-letter code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder certIssuePlace(String certIssuePlace) {
                 this.certIssuePlace = certIssuePlace;
@@ -468,7 +528,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * credential_num.
+             * <p>travel document number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E1***5673</p>
              */
             public Builder credentialNum(String credentialNum) {
                 this.credentialNum = credentialNum;
@@ -476,7 +539,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * credential_type.
+             * <p>travel document type , only support &quot;1&quot;(1 means passport) currently</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder credentialType(Integer credentialType) {
                 this.credentialType = credentialType;
@@ -484,7 +551,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * expire_date.
+             * <p>expiration date</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20290102</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -498,6 +568,12 @@ public class BookRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link BookRequest} extends {@link TeaModel}
+     *
+     * <p>BookRequest</p>
+     */
     public static class PassengerAncillaryPurchaseMapListPassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -626,7 +702,10 @@ public class BookRequest extends Request {
             private Integer type; 
 
             /**
-             * birthday.
+             * <p>date of birth (yyyyMMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20020320</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -634,7 +713,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * credential.
+             * <p>travel document</p>
              */
             public Builder credential(Credential credential) {
                 this.credential = credential;
@@ -642,7 +721,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -650,7 +733,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * gender.
+             * <p>gender 0: male; 1: female</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gender(Integer gender) {
                 this.gender = gender;
@@ -658,7 +744,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * last_name.
+             * <p>last name</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -666,7 +756,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * mobile_country_code.
+             * <p>country code for mobile phone number</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -674,7 +768,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * mobile_phone_number.
+             * <p>mobile phone number</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>182******92</p>
              */
             public Builder mobilePhoneNumber(String mobilePhoneNumber) {
                 this.mobilePhoneNumber = mobilePhoneNumber;
@@ -682,7 +780,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * nationality.
+             * <p>nationality</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -690,7 +791,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>passenger type 0: adult; 1: child; 8: Infant</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -704,6 +809,12 @@ public class BookRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link BookRequest} extends {@link TeaModel}
+     *
+     * <p>BookRequest</p>
+     */
     public static class PassengerAncillaryPurchaseMapList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("book_ancillary_req_item")
         private BookAncillaryReqItem bookAncillaryReqItem;
@@ -743,7 +854,7 @@ public class BookRequest extends Request {
             private java.util.List < PassengerAncillaryPurchaseMapListPassengerList> passengerList; 
 
             /**
-             * book_ancillary_req_item.
+             * <p>ancillary information</p>
              */
             public Builder bookAncillaryReqItem(BookAncillaryReqItem bookAncillaryReqItem) {
                 this.bookAncillaryReqItem = bookAncillaryReqItem;
@@ -751,7 +862,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * passenger_list.
+             * <p>passenger list for unified ancillary purchases</p>
              */
             public Builder passengerList(java.util.List < PassengerAncillaryPurchaseMapListPassengerList> passengerList) {
                 this.passengerList = passengerList;
@@ -765,6 +876,12 @@ public class BookRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link BookRequest} extends {@link TeaModel}
+     *
+     * <p>BookRequest</p>
+     */
     public static class PassengerListCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_issue_place")
         private String certIssuePlace;
@@ -829,7 +946,10 @@ public class BookRequest extends Request {
             private String expireDate; 
 
             /**
-             * cert_issue_place.
+             * <p>place of issue, two-letter code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder certIssuePlace(String certIssuePlace) {
                 this.certIssuePlace = certIssuePlace;
@@ -837,7 +957,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * credential_num.
+             * <p>travel document number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E1***5674</p>
              */
             public Builder credentialNum(String credentialNum) {
                 this.credentialNum = credentialNum;
@@ -845,7 +968,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * credential_type.
+             * <p>travel document type , only support &quot;1&quot;(1 means passport) currently.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder credentialType(Integer credentialType) {
                 this.credentialType = credentialType;
@@ -853,7 +980,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * expire_date.
+             * <p>expiration date</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20290101</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -867,6 +997,12 @@ public class BookRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link BookRequest} extends {@link TeaModel}
+     *
+     * <p>BookRequest</p>
+     */
     public static class PassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -995,7 +1131,10 @@ public class BookRequest extends Request {
             private Integer type; 
 
             /**
-             * birthday.
+             * <p>date of birth (yyyyMMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20200320</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -1003,7 +1142,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * credential.
+             * <p>travel document</p>
              */
             public Builder credential(PassengerListCredential credential) {
                 this.credential = credential;
@@ -1011,7 +1150,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -1019,7 +1162,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * gender.
+             * <p>gender 0: MALE; 1: FEMALE</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gender(Integer gender) {
                 this.gender = gender;
@@ -1027,7 +1173,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * last_name.
+             * <p>last name</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -1035,7 +1185,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * mobile_country_code.
+             * <p>mobile country code</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -1043,7 +1197,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * mobile_phone_number.
+             * <p>mobile phone number</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183******95</p>
              */
             public Builder mobilePhoneNumber(String mobilePhoneNumber) {
                 this.mobilePhoneNumber = mobilePhoneNumber;
@@ -1051,7 +1209,10 @@ public class BookRequest extends Request {
             }
 
             /**
-             * nationality.
+             * <p>nationality (two-letter code)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -1059,7 +1220,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>passenger type 0: adult; 1: child; 8: infant</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeConfirmResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeConfirmResponseBody</p>
@@ -170,6 +171,12 @@ public class ChangeConfirmResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeConfirmResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeConfirmResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pay_amount")
         private Double payAmount;

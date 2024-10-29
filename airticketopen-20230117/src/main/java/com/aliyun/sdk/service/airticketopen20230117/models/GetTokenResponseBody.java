@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetTokenResponseBody</p>
@@ -109,7 +110,10 @@ public class GetTokenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>Request RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +121,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Correctly processed return data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +129,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>Business error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +140,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>Data carried during error handling</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -141,7 +151,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -149,7 +162,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>When the HTTP request is successful, the status value is 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -157,7 +173,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether it is correct</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,6 +189,12 @@ public class GetTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTokenResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expire_time")
         private Long expireTime;
@@ -221,7 +246,10 @@ public class GetTokenResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * expire_time.
+             * <p>Remaining valid time of the token in seconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7200</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -229,7 +257,10 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * generate_time.
+             * <p>Timestamp of token generation in seconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677055176</p>
              */
             public Builder generateTime(Long generateTime) {
                 this.generateTime = generateTime;
@@ -237,7 +268,10 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * token
+             * <p>token</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJhbGciOiJSUzI1NiIsImtpZCI6InN1ZXpfa2V5aWQifQ.eyJqdGkiOiIyUlRjY0Ezc1puSndpYU11R1ctTkVRIiwiaWF0IjoxNjc3MTU1Njg3LCJleHAiOjE2NzcxNjI4ODcsIm5iZiI6MTY3NzE1NTYyN30.bd8qBedJ7R24NC8VpMtM4Ni5OR-Cc0utPiKSx8fjoj9taalt7zXBF8uIVTETw1N-Fx9reLflwVXrbDHky7ZKqlE5o_B5Bkx-crQKlJL-NzasEmNnuJNb5kmmbCy3mvIrQfo5Q5Y0ZaQ110pXK4qd1shRbklvuQXn8lPueJtNqo8VdIOAPGG_rPwOw2P767I0fyFHcome8FR4ST1UrwxeApNKMB_BkpCsUZLgpm9h9trhKbB-3qtk6UK1GKmfw6qlWpL3PQN7FAObNruS0r0CGh3Muc9PaGsuu8Xu5on21h9WmI7L0-jatZkS55p4PEerU56XpkwJfa35_hltKNTauu</p>
              */
             public Builder token(String token) {
                 this.token = token;

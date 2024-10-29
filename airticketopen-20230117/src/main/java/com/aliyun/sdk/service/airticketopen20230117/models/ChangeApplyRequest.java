@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeApplyRequest} extends {@link RequestModel}
  *
  * <p>ChangeApplyRequest</p>
@@ -157,7 +158,7 @@ public class ChangeApplyRequest extends Request {
         } 
 
         /**
-         * change_passenger_list.
+         * <p>This parameter is required.</p>
          */
         public Builder changePassengerList(java.util.List < ChangePassengerList> changePassengerList) {
             String changePassengerListShrink = shrink(changePassengerList, "change_passenger_list", "json");
@@ -167,7 +168,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * changed_journeys.
+         * <p>This parameter is required.</p>
          */
         public Builder changedJourneys(java.util.List < ChangedJourneys> changedJourneys) {
             String changedJourneysShrink = shrink(changedJourneys, "changed_journeys", "json");
@@ -177,7 +178,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * contact.
+         * <p>This parameter is required.</p>
          */
         public Builder contact(Contact contact) {
             String contactShrink = shrink(contact, "contact", "json");
@@ -187,7 +188,10 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * order_num.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4988430***950</p>
          */
         public Builder orderNum(Long orderNum) {
             this.putBodyParameter("order_num", orderNum);
@@ -205,7 +209,10 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Integer type) {
             this.putBodyParameter("type", type);
@@ -214,7 +221,11 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * access_token
+         * <p>access_token</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJSUzI1NiIsImtpZCI6InN1ZXpfa2V5aWQifQ.eyJqdGkiOiJCQldMaWIzN0VxbC0xMjhhR2N5elJ3IiwiaWF0IjoxNjc3MDY2NTAxLCJleHAiOjE2NzcwNzM3MDEsIm5iZiI6MTY3NzA2NjQ0MX0.AF0DxsZK4Edyg0C6ObRQFUo36R1VYrb5IYmak25TmL1OfR5RkIUc3PpqFuQKNLKXf5fOtVQaKjaexzwodVeWZQDKEG_RPt_Ybb99EnEm6vPKs6e3pWFbKiBq71WleLHhVrdFb4YPowRKjc7bG0jyGUxiQ2iXy0RWDj9tIjfI-KEdzNp5oVnX7j4p3H12DwQrRPmd1nz3BciAQNINvDpzqusuIUw8JXyLFCz838Y0NhwB1_bYZyctxRLSzrGZuI5rrWtItgupqMsOlJ3RNy1QrIbQ2g6nPmzl-atOqcQ4Nw0HeDLR8dhM1OsIcFLbKXBUtwXofflhzAQrkDxhwYiXii</p>
          */
         public Builder xAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
             this.putHeaderParameter("x-acs-airticket-access-token", xAcsAirticketAccessToken);
@@ -238,6 +249,12 @@ public class ChangeApplyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeApplyRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeApplyRequest</p>
+     */
     public static class ChangePassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("document")
         private String document;
@@ -299,7 +316,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * first_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -307,7 +327,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * last_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -321,6 +344,12 @@ public class ChangeApplyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeApplyRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeApplyRequest</p>
+     */
     public static class SegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
         private String arrivalAirport;
@@ -334,6 +363,9 @@ public class ChangeApplyRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("arrive_time")
         private Long arriveTime;
+
+        @com.aliyun.core.annotation.NameInMap("arrive_time_str")
+        private String arriveTimeStr;
 
         @com.aliyun.core.annotation.NameInMap("code_share")
         private Boolean codeShare;
@@ -355,6 +387,9 @@ public class ChangeApplyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("departure_time")
         private Long departureTime;
 
+        @com.aliyun.core.annotation.NameInMap("departure_time_str")
+        private String departureTimeStr;
+
         @com.aliyun.core.annotation.NameInMap("marketing_flight_no")
         @com.aliyun.core.annotation.Validation(required = true)
         private String marketingFlightNo;
@@ -367,12 +402,14 @@ public class ChangeApplyRequest extends Request {
             this.arrivalCity = builder.arrivalCity;
             this.arriveTerminal = builder.arriveTerminal;
             this.arriveTime = builder.arriveTime;
+            this.arriveTimeStr = builder.arriveTimeStr;
             this.codeShare = builder.codeShare;
             this.departureAirport = builder.departureAirport;
             this.departureCity = builder.departureCity;
             this.departureDate = builder.departureDate;
             this.departureTerminal = builder.departureTerminal;
             this.departureTime = builder.departureTime;
+            this.departureTimeStr = builder.departureTimeStr;
             this.marketingFlightNo = builder.marketingFlightNo;
             this.operatingFlightNo = builder.operatingFlightNo;
         }
@@ -411,6 +448,13 @@ public class ChangeApplyRequest extends Request {
          */
         public Long getArriveTime() {
             return this.arriveTime;
+        }
+
+        /**
+         * @return arriveTimeStr
+         */
+        public String getArriveTimeStr() {
+            return this.arriveTimeStr;
         }
 
         /**
@@ -456,6 +500,13 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
+         * @return departureTimeStr
+         */
+        public String getDepartureTimeStr() {
+            return this.departureTimeStr;
+        }
+
+        /**
          * @return marketingFlightNo
          */
         public String getMarketingFlightNo() {
@@ -474,12 +525,14 @@ public class ChangeApplyRequest extends Request {
             private String arrivalCity; 
             private String arriveTerminal; 
             private Long arriveTime; 
+            private String arriveTimeStr; 
             private Boolean codeShare; 
             private String departureAirport; 
             private String departureCity; 
             private String departureDate; 
             private String departureTerminal; 
             private Long departureTime; 
+            private String departureTimeStr; 
             private String marketingFlightNo; 
             private String operatingFlightNo; 
 
@@ -492,7 +545,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * arrival_city.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -516,6 +572,14 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
+             * arrive_time_str.
+             */
+            public Builder arriveTimeStr(String arriveTimeStr) {
+                this.arriveTimeStr = arriveTimeStr;
+                return this;
+            }
+
+            /**
              * code_share.
              */
             public Builder codeShare(Boolean codeShare) {
@@ -532,7 +596,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * departure_city.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -540,7 +607,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * departure_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230320</p>
              */
             public Builder departureDate(String departureDate) {
                 this.departureDate = departureDate;
@@ -564,7 +634,18 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * marketing_flight_no.
+             * departure_time_str.
+             */
+            public Builder departureTimeStr(String departureTimeStr) {
+                this.departureTimeStr = departureTimeStr;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -586,6 +667,12 @@ public class ChangeApplyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeApplyRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeApplyRequest</p>
+     */
     public static class ChangedJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
         private java.util.List < SegmentList> segmentList;
@@ -627,6 +714,12 @@ public class ChangeApplyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeApplyRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeApplyRequest</p>
+     */
     public static class Contact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("email")
         private String email;

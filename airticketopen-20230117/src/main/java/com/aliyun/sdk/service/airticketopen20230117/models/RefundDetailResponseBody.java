@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundDetailResponseBody} extends {@link TeaModel}
  *
  * <p>RefundDetailResponseBody</p>
@@ -117,7 +118,7 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +126,10 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +137,10 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>error data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -141,7 +148,10 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -149,7 +159,10 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>http reqeust has been processed successfully，status code is 200</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -157,7 +170,10 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>true represents success, false represents failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,6 +186,12 @@ public class RefundDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailResponseBody</p>
+     */
     public static class Passenger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("document")
         private String document;
@@ -221,7 +243,10 @@ public class RefundDetailResponseBody extends TeaModel {
             private String lastName; 
 
             /**
-             * document.
+             * <p>credential number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>411***********4411</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -229,7 +254,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -237,7 +265,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>last name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -251,6 +282,12 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailResponseBody</p>
+     */
     public static class PassengerMultiRefundDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_order_refund_fee")
         private Double changeOrderRefundFee;
@@ -302,7 +339,10 @@ public class RefundDetailResponseBody extends TeaModel {
             private Passenger passenger; 
 
             /**
-             * change_order_refund_fee.
+             * <p>amount of the supplementary refund for the change order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder changeOrderRefundFee(Double changeOrderRefundFee) {
                 this.changeOrderRefundFee = changeOrderRefundFee;
@@ -310,7 +350,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * original_order_refund_fee.
+             * <p>amount of the supplementary refund for the original order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder originalOrderRefundFee(Double originalOrderRefundFee) {
                 this.originalOrderRefundFee = originalOrderRefundFee;
@@ -318,7 +361,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * passenger.
+             * <p>passenger for the refund</p>
              */
             public Builder passenger(Passenger passenger) {
                 this.passenger = passenger;
@@ -332,6 +375,12 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailResponseBody</p>
+     */
     public static class MultiRefundDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("multi_refund_order_num")
         private Long multiRefundOrderNum;
@@ -383,7 +432,10 @@ public class RefundDetailResponseBody extends TeaModel {
             private java.util.List < PassengerMultiRefundDetails> passengerMultiRefundDetails; 
 
             /**
-             * multi_refund_order_num.
+             * <p>supplementary refund order number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>498843***6950</p>
              */
             public Builder multiRefundOrderNum(Long multiRefundOrderNum) {
                 this.multiRefundOrderNum = multiRefundOrderNum;
@@ -391,7 +443,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * multi_refund_transaction_no.
+             * <p>transaction number of the supplementary refund order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>498843***6950</p>
              */
             public Builder multiRefundTransactionNo(String multiRefundTransactionNo) {
                 this.multiRefundTransactionNo = multiRefundTransactionNo;
@@ -399,7 +454,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * passenger_multi_refund_details.
+             * <p>supplementary refund details in passenger dimension</p>
              */
             public Builder passengerMultiRefundDetails(java.util.List < PassengerMultiRefundDetails> passengerMultiRefundDetails) {
                 this.passengerMultiRefundDetails = passengerMultiRefundDetails;
@@ -413,6 +468,12 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailResponseBody</p>
+     */
     public static class PassengerRefundDetailsPassenger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("document")
         private String document;
@@ -464,7 +525,10 @@ public class RefundDetailResponseBody extends TeaModel {
             private String lastName; 
 
             /**
-             * document.
+             * <p>credential number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>411***********4411</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -472,7 +536,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -480,7 +547,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -494,6 +564,12 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailResponseBody</p>
+     */
     public static class RefundFee extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("already_used_total_fee")
         private Double alreadyUsedTotalFee;
@@ -593,7 +669,10 @@ public class RefundDetailResponseBody extends TeaModel {
             private Double refundToBuyerMoney; 
 
             /**
-             * already_used_total_fee.
+             * <p>total price of the used flight tickets</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder alreadyUsedTotalFee(Double alreadyUsedTotalFee) {
                 this.alreadyUsedTotalFee = alreadyUsedTotalFee;
@@ -601,7 +680,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * modify_refund_to_buyer_money.
+             * <p>amount refunded to the user after change (only available when has change order)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder modifyRefundToBuyerMoney(Double modifyRefundToBuyerMoney) {
                 this.modifyRefundToBuyerMoney = modifyRefundToBuyerMoney;
@@ -609,7 +691,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * non_refundable_change_service_fee.
+             * <p>non-refundable change service fee</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder nonRefundableChangeServiceFee(Double nonRefundableChangeServiceFee) {
                 this.nonRefundableChangeServiceFee = nonRefundableChangeServiceFee;
@@ -617,7 +702,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * non_refundable_change_upgrade_fee.
+             * <p>non-refundable upgrade fee</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder nonRefundableChangeUpgradeFee(Double nonRefundableChangeUpgradeFee) {
                 this.nonRefundableChangeUpgradeFee = nonRefundableChangeUpgradeFee;
@@ -625,7 +713,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * non_refundable_tax_fee.
+             * <p>non-refundable tax amount, i.e., tax refund fee</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder nonRefundableTaxFee(Double nonRefundableTaxFee) {
                 this.nonRefundableTaxFee = nonRefundableTaxFee;
@@ -633,7 +724,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * non_refundable_ticket_fee.
+             * <p>non-refundable ticket amount, i.e., ticket refund fee</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder nonRefundableTicketFee(Double nonRefundableTicketFee) {
                 this.nonRefundableTicketFee = nonRefundableTicketFee;
@@ -641,7 +735,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refund_to_buyer_money.
+             * <p>amount refundable to the user from the original ticket (fare + tax - non_refundable_ticket_fee - non_refundable_tax_fee - already_used_total_fee - discount)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder refundToBuyerMoney(Double refundToBuyerMoney) {
                 this.refundToBuyerMoney = refundToBuyerMoney;
@@ -655,6 +752,12 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailResponseBody</p>
+     */
     public static class PassengerRefundDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger")
         private PassengerRefundDetailsPassenger passenger;
@@ -694,7 +797,7 @@ public class RefundDetailResponseBody extends TeaModel {
             private RefundFee refundFee; 
 
             /**
-             * passenger.
+             * <p>information of the passenger applying for a refund</p>
              */
             public Builder passenger(PassengerRefundDetailsPassenger passenger) {
                 this.passenger = passenger;
@@ -702,7 +805,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refund_fee.
+             * <p>details of the refund fee</p>
              */
             public Builder refundFee(RefundFee refundFee) {
                 this.refundFee = refundFee;
@@ -716,6 +819,12 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailResponseBody</p>
+     */
     public static class SegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
         private String arrivalAirport;
@@ -995,7 +1104,10 @@ public class RefundDetailResponseBody extends TeaModel {
             private Integer stopQuantity; 
 
             /**
-             * arrival_airport.
+             * <p>arrival airport code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -1003,7 +1115,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_city.
+             * <p>arrival city code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -1011,7 +1126,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_terminal.
+             * <p>arrival terminal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -1019,7 +1137,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_time.
+             * <p>arrival time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 10:40:00</p>
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -1027,7 +1148,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * availability.
+             * <p>field deprecated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -1035,7 +1159,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -1043,7 +1170,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>cabin class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -1051,7 +1181,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * code_share.
+             * <p>code share or not</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -1059,7 +1192,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_airport.
+             * <p>departure airport code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -1067,7 +1203,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_city.
+             * <p>departure city code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -1075,7 +1214,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_terminal.
+             * <p>departure terminal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -1083,7 +1225,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * departure_time.
+             * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -1091,7 +1236,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * equip_type.
+             * <p>equipment type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32Q</p>
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -1099,7 +1247,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * flight_duration.
+             * <p>flight time, unit: minute</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -1107,7 +1258,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_airline.
+             * <p>marketing airline code (eg: KA)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -1115,7 +1269,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>marketing flight no. (eg: KA5809)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -1123,7 +1280,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no_int.
+             * <p>marketing flight no. (eg: 5809)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295</p>
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -1131,7 +1291,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_airline.
+             * <p>operating airline code (eg: CX)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -1139,7 +1302,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * operating_flight_no.
+             * <p>operating flight no. (eg: CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -1147,7 +1313,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -1155,7 +1324,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_list.
+             * <p>stopover city list when stop_quantity &gt; 0 , use “,” for seperation use</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -1163,7 +1335,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * stop_quantity.
+             * <p>number of stopover</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -1177,6 +1352,12 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailResponseBody</p>
+     */
     public static class RefundJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
         private java.util.List < SegmentList> segmentList;
@@ -1216,7 +1397,7 @@ public class RefundDetailResponseBody extends TeaModel {
             private Integer transferCount; 
 
             /**
-             * segment_list.
+             * <p>segment list</p>
              */
             public Builder segmentList(java.util.List < SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -1224,7 +1405,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * transfer_count.
+             * <p>number of transfer</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -1238,6 +1422,12 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contain_multi_refund")
         private Boolean containMultiRefund;
@@ -1421,7 +1611,10 @@ public class RefundDetailResponseBody extends TeaModel {
             private Long utcCreateTime; 
 
             /**
-             * contain_multi_refund.
+             * <p>whether it is a supplementary refund order (if the refund amount is not enough, you can use RefundApply to create a supplementary refund order)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder containMultiRefund(Boolean containMultiRefund) {
                 this.containMultiRefund = containMultiRefund;
@@ -1429,7 +1622,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * multi_refund_details.
+             * <p>supplementary refund orders</p>
              */
             public Builder multiRefundDetails(java.util.List < MultiRefundDetails> multiRefundDetails) {
                 this.multiRefundDetails = multiRefundDetails;
@@ -1437,7 +1630,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * order_num.
+             * <p>order number that returned by Book</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4966***617111</p>
              */
             public Builder orderNum(Long orderNum) {
                 this.orderNum = orderNum;
@@ -1445,7 +1641,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * passenger_refund_details.
+             * <p>refund details by passenger dimension</p>
              */
             public Builder passengerRefundDetails(java.util.List < PassengerRefundDetails> passengerRefundDetails) {
                 this.passengerRefundDetails = passengerRefundDetails;
@@ -1453,7 +1649,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * pay_success_utc_time.
+             * <p>refund completed time(timestamp)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677229005000</p>
              */
             public Builder paySuccessUtcTime(Long paySuccessUtcTime) {
                 this.paySuccessUtcTime = paySuccessUtcTime;
@@ -1461,7 +1660,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refund_attachment_urls.
+             * <p>URLs for refund attachments</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[zzz,yyy]</p>
              */
             public Builder refundAttachmentUrls(java.util.List < String > refundAttachmentUrls) {
                 this.refundAttachmentUrls = refundAttachmentUrls;
@@ -1469,7 +1671,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refund_journeys.
+             * <p>refunded journey</p>
              */
             public Builder refundJourneys(java.util.List < RefundJourneys> refundJourneys) {
                 this.refundJourneys = refundJourneys;
@@ -1477,7 +1679,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refund_order_num.
+             * <p>refund order number that returned by RefundApply</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4966***617654</p>
              */
             public Builder refundOrderNum(Long refundOrderNum) {
                 this.refundOrderNum = refundOrderNum;
@@ -1485,7 +1690,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refund_reason.
+             * <p>reason for refund</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc reason</p>
              */
             public Builder refundReason(String refundReason) {
                 this.refundReason = refundReason;
@@ -1493,7 +1701,15 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refund_type.
+             * <p>refund type </p>
+             * <p>2: voluntary application</p>
+             * <p>5: flight delay or cancellation, flight schedule change, etc., due to airline reasons</p>
+             * <p>6: health reasons with a certificate from a secondary class A hospital or above</p>
+             * <p>7: non-voluntary confirmed guidance</p>
+             * <p>100: non-voluntary non-confirmed guidance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder refundType(Integer refundType) {
                 this.refundType = refundType;
@@ -1501,7 +1717,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * refuse_reason.
+             * <p>reason for refund rejection</p>
+             * 
+             * <strong>example:</strong>
+             * <p>refuse reason</p>
              */
             public Builder refuseReason(String refuseReason) {
                 this.refuseReason = refuseReason;
@@ -1509,7 +1728,14 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>refund order status</p>
+             * <p>0: refund application</p>
+             * <p>1: refund in progress</p>
+             * <p>2: refund failed</p>
+             * <p>3: refund succeeded</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1517,7 +1743,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * transaction_no.
+             * <p>transaction number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677229005000</p>
              */
             public Builder transactionNo(String transactionNo) {
                 this.transactionNo = transactionNo;
@@ -1525,7 +1754,10 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * utc_create_time.
+             * <p>refund order created time(timestamp)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677229002000</p>
              */
             public Builder utcCreateTime(Long utcCreateTime) {
                 this.utcCreateTime = utcCreateTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LuggageDirectRequest} extends {@link RequestModel}
  *
  * <p>LuggageDirectRequest</p>
@@ -92,7 +93,11 @@ public class LuggageDirectRequest extends Request {
         }
 
         /**
-         * access_token
+         * <p>access_token</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJSUzI1NiIsImtpZCI6InN1ZXpfa2V5aWQifQ.eyJqdGkiOiJCQldMaWIzN0VxbC0xMjhhR2N5elJ3IiwiaWF0IjoxNjc3MDY2NTAxLCJleHAiOjE2NzcwNzM3MDEsIm5iZiI6MTY3NzA2NjQ0MX0.AF0DxsZK4Edyg0C6ObRQFUo36R1VYrb5IYmak25TmL1OfR5RkIUc3PpqFuQKNLKXf5fOtVQaKjaexzwodVeWZQDKEG_RPt_Ybb99EnEm6vPKs6e3pWFbKiBq71WleLHhVrdFb4YPowRKjc7bG0jyGUxiQ2iXy0RWDj9tIjfI-KEdzNp5oVnX7j4p3H12DwQrRPmd1nz3BciAQNINvDpzqusuIUw8JXyLFCz838Y0NhwB1_bYZyctxRLSzrGZuI5rrWtItgupqMsOlJ3RNy1QrIbQ2g6nPmzl-atOqcQ4Nw0HeDLR8dhM1OsIcFLbKXBUtwXofflhzAQrkDxhwYiXii</p>
          */
         public Builder xAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
             this.putHeaderParameter("x-acs-airticket-access-token", xAcsAirticketAccessToken);
@@ -116,6 +121,12 @@ public class LuggageDirectRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link LuggageDirectRequest} extends {@link TeaModel}
+     *
+     * <p>LuggageDirectRequest</p>
+     */
     public static class FlightSegmentParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -282,7 +293,10 @@ public class LuggageDirectRequest extends Request {
             private String ticketingAirline; 
 
             /**
-             * arrival_airport.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIN</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -298,7 +312,10 @@ public class LuggageDirectRequest extends Request {
             }
 
             /**
-             * arrival_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1705285430445</p>
              */
             public Builder arrivalTime(Long arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -306,7 +323,10 @@ public class LuggageDirectRequest extends Request {
             }
 
             /**
-             * code_share.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -314,7 +334,10 @@ public class LuggageDirectRequest extends Request {
             }
 
             /**
-             * departure_airport.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HGH</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -330,7 +353,10 @@ public class LuggageDirectRequest extends Request {
             }
 
             /**
-             * departure_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1705285430445</p>
              */
             public Builder departureTime(Long departureTime) {
                 this.departureTime = departureTime;
@@ -338,7 +364,10 @@ public class LuggageDirectRequest extends Request {
             }
 
             /**
-             * marketing_airline.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CZ</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -346,7 +375,10 @@ public class LuggageDirectRequest extends Request {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CZ616</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;

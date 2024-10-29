@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AncillarySuggestResponseBody} extends {@link TeaModel}
  *
  * <p>AncillarySuggestResponseBody</p>
@@ -109,7 +110,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +121,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Properly processed return data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +129,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +140,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>Data carried in error handling</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -141,7 +151,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -149,7 +162,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>http request successful, status value is always 200</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -157,7 +173,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>true represents success, false represents failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,6 +189,12 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AncillarySuggestResponseBody} extends {@link TeaModel}
+     *
+     * <p>AncillarySuggestResponseBody</p>
+     */
     public static class BaggageAncillary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_amount")
         private Integer baggageAmount;
@@ -245,7 +270,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
             private Double price; 
 
             /**
-             * 行李件数 取值如：3、2、1、0、-2。 -2 表示计重
+             * <p>baggage quantity, values such as: 3, 2, 1, 0, -2.     -2 indicates weight-based</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder baggageAmount(Integer baggageAmount) {
                 this.baggageAmount = baggageAmount;
@@ -253,7 +281,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
             }
 
             /**
-             * 行李重量，0-50。isAllWeght=true 时，表示所有件数总重量。
+             * <p>Baggage weight, 0-50. When isAllWeight=true, it represents the total weight of all baggages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder baggageWeight(Integer baggageWeight) {
                 this.baggageWeight = baggageWeight;
@@ -261,7 +292,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
             }
 
             /**
-             * 行李重量单位
+             * <p>Unit of baggage weight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KG</p>
              */
             public Builder baggageWeightUnit(String baggageWeightUnit) {
                 this.baggageWeightUnit = baggageWeightUnit;
@@ -269,7 +303,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
             }
 
             /**
-             * 是否所有行李重量
+             * <p>Whether the weight is for all baggages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAllWeight(Boolean isAllWeight) {
                 this.isAllWeight = isAllWeight;
@@ -277,7 +314,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
             }
 
             /**
-             * 总价
+             * <p>Total price</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder price(Double price) {
                 this.price = price;
@@ -291,6 +331,12 @@ public class AncillarySuggestResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AncillarySuggestResponseBody} extends {@link TeaModel}
+     *
+     * <p>AncillarySuggestResponseBody</p>
+     */
     public static class Ancillary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ancillary_id")
         private String ancillaryId;
@@ -342,7 +388,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
             private BaggageAncillary baggageAncillary; 
 
             /**
-             * ancillary_id.
+             * <p>Ancillary product ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eJwz8DeySEo0NjQ01TU3TU</p>
              */
             public Builder ancillaryId(String ancillaryId) {
                 this.ancillaryId = ancillaryId;
@@ -350,7 +399,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
             }
 
             /**
-             * ancillary_type.
+             * <p>Ancillary product type. currently supports 4: paid luggage</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder ancillaryType(Integer ancillaryType) {
                 this.ancillaryType = ancillaryType;
@@ -358,7 +410,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
             }
 
             /**
-             * 行李辅营详情
+             * <p>Baggage details</p>
              */
             public Builder baggageAncillary(BaggageAncillary baggageAncillary) {
                 this.baggageAncillary = baggageAncillary;
@@ -372,6 +424,12 @@ public class AncillarySuggestResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AncillarySuggestResponseBody} extends {@link TeaModel}
+     *
+     * <p>AncillarySuggestResponseBody</p>
+     */
     public static class SegAncillaryMapList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ancillary")
         private Ancillary ancillary;
@@ -411,7 +469,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
             private java.util.List < String > segmentIdList; 
 
             /**
-             * ancillary.
+             * <p>Ancillary product</p>
              */
             public Builder ancillary(Ancillary ancillary) {
                 this.ancillary = ancillary;
@@ -419,7 +477,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id_list.
+             * <p>Segment ID list, these segments share the same ancillary</p>
              */
             public Builder segmentIdList(java.util.List < String > segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -433,6 +491,12 @@ public class AncillarySuggestResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AncillarySuggestResponseBody} extends {@link TeaModel}
+     *
+     * <p>AncillarySuggestResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("seg_ancillary_map_list")
         private java.util.List < SegAncillaryMapList> segAncillaryMapList;
@@ -472,7 +536,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
             private String solutionId; 
 
             /**
-             * seg_ancillary_map_list.
+             * <p>ancillary detail list</p>
              */
             public Builder segAncillaryMapList(java.util.List < SegAncillaryMapList> segAncillaryMapList) {
                 this.segAncillaryMapList = segAncillaryMapList;
@@ -480,7 +544,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
             }
 
             /**
-             * solution_id.
+             * <p>solution_id, equals to solution_id in request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
              */
             public Builder solutionId(String solutionId) {
                 this.solutionId = solutionId;
