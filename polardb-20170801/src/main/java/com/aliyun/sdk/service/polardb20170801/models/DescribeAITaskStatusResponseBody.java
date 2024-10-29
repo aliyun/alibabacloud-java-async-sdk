@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAITaskStatusResponseBody</p>
  */
 public class DescribeAITaskStatusResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    private String accountName;
+
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
@@ -25,6 +28,7 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
     private String statusName;
 
     private DescribeAITaskStatusResponseBody(Builder builder) {
+        this.accountName = builder.accountName;
         this.DBClusterId = builder.DBClusterId;
         this.requestId = builder.requestId;
         this.status = builder.status;
@@ -37,6 +41,13 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
 
     public static DescribeAITaskStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accountName
+     */
+    public String getAccountName() {
+        return this.accountName;
     }
 
     /**
@@ -68,10 +79,19 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accountName; 
         private String DBClusterId; 
         private String requestId; 
         private String status; 
         private String statusName; 
+
+        /**
+         * AccountName.
+         */
+        public Builder accountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
 
         /**
          * <p>The cluster ID.</p>
