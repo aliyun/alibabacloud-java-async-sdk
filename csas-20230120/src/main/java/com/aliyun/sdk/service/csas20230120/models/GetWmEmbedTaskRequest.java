@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWmEmbedTaskRequest} extends {@link RequestModel}
  *
  * <p>GetWmEmbedTaskRequest</p>
@@ -54,7 +55,10 @@ public class GetWmEmbedTaskRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job:5GfrJYsoaffmCE7Z5bZtjU********</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

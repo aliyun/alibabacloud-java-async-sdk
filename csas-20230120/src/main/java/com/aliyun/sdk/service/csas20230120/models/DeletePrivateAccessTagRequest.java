@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePrivateAccessTagRequest} extends {@link RequestModel}
  *
  * <p>DeletePrivateAccessTagRequest</p>
@@ -54,7 +55,10 @@ public class DeletePrivateAccessTagRequest extends Request {
         } 
 
         /**
-         * TagId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-d3f64e8bdd4a****</p>
          */
         public Builder tagId(String tagId) {
             this.putBodyParameter("TagId", tagId);

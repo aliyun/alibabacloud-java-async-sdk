@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDynamicRouteRequest} extends {@link RequestModel}
  *
  * <p>DeleteDynamicRouteRequest</p>
@@ -54,7 +55,10 @@ public class DeleteDynamicRouteRequest extends Request {
         } 
 
         /**
-         * DynamicRouteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-ca9fddfac7c6****</p>
          */
         public Builder dynamicRouteId(String dynamicRouteId) {
             this.putQueryParameter("DynamicRouteId", dynamicRouteId);

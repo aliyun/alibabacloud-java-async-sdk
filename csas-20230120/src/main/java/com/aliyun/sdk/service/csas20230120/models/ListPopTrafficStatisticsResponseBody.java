@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPopTrafficStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPopTrafficStatisticsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         private java.util.List < TrafficData> trafficData; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFE7EBB2-449D-5BBB-B381-CA7839BC1649</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPopTrafficStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPopTrafficStatisticsResponseBody</p>
+     */
     public static class Datapoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Average")
         private Double average;
@@ -131,6 +141,12 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPopTrafficStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPopTrafficStatisticsResponseBody</p>
+     */
     public static class TrafficData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Datapoints")
         private java.util.List < Datapoints> datapoints;

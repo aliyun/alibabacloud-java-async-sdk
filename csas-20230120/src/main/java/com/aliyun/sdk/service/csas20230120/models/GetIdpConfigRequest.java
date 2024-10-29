@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIdpConfigRequest} extends {@link RequestModel}
  *
  * <p>GetIdpConfigRequest</p>
@@ -54,7 +55,10 @@ public class GetIdpConfigRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1465</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

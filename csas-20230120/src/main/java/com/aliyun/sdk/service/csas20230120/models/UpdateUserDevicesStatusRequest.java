@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserDevicesStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserDevicesStatusRequest</p>
@@ -69,7 +70,10 @@ public class UpdateUserDevicesStatusRequest extends Request {
         } 
 
         /**
-         * DeviceAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unbound</p>
          */
         public Builder deviceAction(String deviceAction) {
             this.putBodyParameter("DeviceAction", deviceAction);
@@ -78,7 +82,7 @@ public class UpdateUserDevicesStatusRequest extends Request {
         }
 
         /**
-         * DeviceTags.
+         * <p>This parameter is required.</p>
          */
         public Builder deviceTags(java.util.List < String > deviceTags) {
             this.putBodyParameter("DeviceTags", deviceTags);

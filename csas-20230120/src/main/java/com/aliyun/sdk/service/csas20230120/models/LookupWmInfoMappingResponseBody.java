@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LookupWmInfoMappingResponseBody} extends {@link TeaModel}
  *
  * <p>LookupWmInfoMappingResponseBody</p>
@@ -70,6 +71,12 @@ public class LookupWmInfoMappingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link LookupWmInfoMappingResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupWmInfoMappingResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WmInfoBytesB64")
         private String wmInfoBytesB64;

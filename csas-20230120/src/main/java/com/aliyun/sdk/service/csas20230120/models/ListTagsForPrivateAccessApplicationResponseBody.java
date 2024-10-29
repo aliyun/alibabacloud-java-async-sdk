@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagsForPrivateAccessApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagsForPrivateAccessApplicationResponseBody</p>
@@ -70,6 +71,12 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagsForPrivateAccessApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagsForPrivateAccessApplicationResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -191,6 +198,12 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTagsForPrivateAccessApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagsForPrivateAccessApplicationResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;

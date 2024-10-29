@@ -6,11 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWmEmbedTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateWmEmbedTaskRequest</p>
  */
 public class CreateWmEmbedTaskRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CsvControl")
+    private CsvControl csvControl;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocumentControl")
     private DocumentControl documentControl;
@@ -62,6 +67,7 @@ public class CreateWmEmbedTaskRequest extends Request {
 
     private CreateWmEmbedTaskRequest(Builder builder) {
         super(builder);
+        this.csvControl = builder.csvControl;
         this.documentControl = builder.documentControl;
         this.fileUrl = builder.fileUrl;
         this.filename = builder.filename;
@@ -86,6 +92,13 @@ public class CreateWmEmbedTaskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return csvControl
+     */
+    public CsvControl getCsvControl() {
+        return this.csvControl;
     }
 
     /**
@@ -166,6 +179,7 @@ public class CreateWmEmbedTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateWmEmbedTaskRequest, Builder> {
+        private CsvControl csvControl; 
         private DocumentControl documentControl; 
         private String fileUrl; 
         private String filename; 
@@ -184,6 +198,7 @@ public class CreateWmEmbedTaskRequest extends Request {
 
         private Builder(CreateWmEmbedTaskRequest request) {
             super(request);
+            this.csvControl = request.csvControl;
             this.documentControl = request.documentControl;
             this.fileUrl = request.fileUrl;
             this.filename = request.filename;
@@ -198,6 +213,16 @@ public class CreateWmEmbedTaskRequest extends Request {
         } 
 
         /**
+         * CsvControl.
+         */
+        public Builder csvControl(CsvControl csvControl) {
+            String csvControlShrink = shrink(csvControl, "CsvControl", "json");
+            this.putQueryParameter("CsvControl", csvControlShrink);
+            this.csvControl = csvControl;
+            return this;
+        }
+
+        /**
          * DocumentControl.
          */
         public Builder documentControl(DocumentControl documentControl) {
@@ -208,7 +233,10 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * FileUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/abc****.pdf">https://example.com/abc****.pdf</a></p>
          */
         public Builder fileUrl(String fileUrl) {
             this.putBodyParameter("FileUrl", fileUrl);
@@ -217,7 +245,10 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * Filename.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc****.pdf</p>
          */
         public Builder filename(String filename) {
             this.putBodyParameter("Filename", filename);
@@ -289,7 +320,10 @@ public class CreateWmEmbedTaskRequest extends Request {
         }
 
         /**
-         * WmType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PureDocument</p>
          */
         public Builder wmType(String wmType) {
             this.putBodyParameter("WmType", wmType);
@@ -304,6 +338,99 @@ public class CreateWmEmbedTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
+    public static class CsvControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EmbedColumn")
+        private Long embedColumn;
+
+        @com.aliyun.core.annotation.NameInMap("EmbedPrecision")
+        private Long embedPrecision;
+
+        @com.aliyun.core.annotation.NameInMap("Method")
+        private String method;
+
+        private CsvControl(Builder builder) {
+            this.embedColumn = builder.embedColumn;
+            this.embedPrecision = builder.embedPrecision;
+            this.method = builder.method;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CsvControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return embedColumn
+         */
+        public Long getEmbedColumn() {
+            return this.embedColumn;
+        }
+
+        /**
+         * @return embedPrecision
+         */
+        public Long getEmbedPrecision() {
+            return this.embedPrecision;
+        }
+
+        /**
+         * @return method
+         */
+        public String getMethod() {
+            return this.method;
+        }
+
+        public static final class Builder {
+            private Long embedColumn; 
+            private Long embedPrecision; 
+            private String method; 
+
+            /**
+             * EmbedColumn.
+             */
+            public Builder embedColumn(Long embedColumn) {
+                this.embedColumn = embedColumn;
+                return this;
+            }
+
+            /**
+             * EmbedPrecision.
+             */
+            public Builder embedPrecision(Long embedPrecision) {
+                this.embedPrecision = embedPrecision;
+                return this;
+            }
+
+            /**
+             * Method.
+             */
+            public Builder method(String method) {
+                this.method = method;
+                return this;
+            }
+
+            public CsvControl build() {
+                return new CsvControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
     public static class BgInvisibleControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Opacity")
         @com.aliyun.core.annotation.Validation(maximum = 255, minimum = 1)
@@ -346,6 +473,12 @@ public class CreateWmEmbedTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
     public static class BgVisibleControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Angle")
         @com.aliyun.core.annotation.Validation(maximum = 360)
@@ -573,6 +706,12 @@ public class CreateWmEmbedTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
     public static class BackgroundControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BgAddInvisible")
         private Boolean bgAddInvisible;
@@ -674,6 +813,12 @@ public class CreateWmEmbedTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateWmEmbedTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskRequest</p>
+     */
     public static class DocumentControl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackgroundControl")
         private BackgroundControl backgroundControl;

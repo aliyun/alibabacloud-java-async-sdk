@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePrivateAccessPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreatePrivateAccessPolicyRequest</p>
@@ -236,7 +237,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * ApplicationType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         public Builder applicationType(String applicationType) {
             this.putBodyParameter("ApplicationType", applicationType);
@@ -281,7 +285,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private_access_policy_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -290,7 +297,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * PolicyAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Allow</p>
          */
         public Builder policyAction(String policyAction) {
             this.putBodyParameter("PolicyAction", policyAction);
@@ -299,7 +309,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -308,7 +321,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -317,7 +333,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * 内网访问标签ID集合。最多可输入100个内网访问标签ID。当**ApplicationType**为**Tag时**，必填。和**ApplicationIds**互斥。
+         * <p>内网访问标签ID集合。最多可输入100个内网访问标签ID。当<strong>ApplicationType</strong>为<strong>Tag时</strong>，必填。和<strong>ApplicationIds</strong>互斥。</p>
          */
         public Builder tagIds(java.util.List < String > tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -335,10 +351,15 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * 内网访问策略的用户组类型。取值：
-         * <p>
-         * - **Normal**：普通用户组。
-         * - **Custom**：自定义用户组。
+         * <p>内网访问策略的用户组类型。取值：</p>
+         * <ul>
+         * <li><strong>Normal</strong>：普通用户组。</li>
+         * <li><strong>Custom</strong>：自定义用户组。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder userGroupMode(String userGroupMode) {
             this.putBodyParameter("UserGroupMode", userGroupMode);
@@ -353,6 +374,12 @@ public class CreatePrivateAccessPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePrivateAccessPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePrivateAccessPolicyRequest</p>
+     */
     public static class CustomUserAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;

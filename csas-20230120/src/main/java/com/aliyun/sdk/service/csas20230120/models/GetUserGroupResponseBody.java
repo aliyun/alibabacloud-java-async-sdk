@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserGroupResponseBody</p>
@@ -70,6 +71,12 @@ public class GetUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserGroupResponseBody</p>
+     */
     public static class Attributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
@@ -171,6 +178,12 @@ public class GetUserGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserGroupResponseBody</p>
+     */
     public static class UserGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < Attributes> attributes;

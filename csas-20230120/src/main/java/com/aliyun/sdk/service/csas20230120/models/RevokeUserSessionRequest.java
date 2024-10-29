@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeUserSessionRequest} extends {@link RequestModel}
  *
  * <p>RevokeUserSessionRequest</p>
@@ -69,7 +70,10 @@ public class RevokeUserSessionRequest extends Request {
         } 
 
         /**
-         * ExternalIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder externalIds(String externalIds) {
             this.putQueryParameter("ExternalIds", externalIds);
@@ -78,7 +82,10 @@ public class RevokeUserSessionRequest extends Request {
         }
 
         /**
-         * IdpId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idp-cfg9vcrqylo39c39uxnw</p>
          */
         public Builder idpId(String idpId) {
             this.putQueryParameter("IdpId", idpId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrivateAccessPolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrivateAccessPolicyRequest</p>
@@ -308,7 +309,10 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-policy-63b2f1844b86****</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -335,7 +339,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * 内网访问标签ID集合。一条策略最多支持100个内网访问标签ID。
+         * <p>内网访问标签ID集合。一条策略最多支持100个内网访问标签ID。</p>
          */
         public Builder tagIds(java.util.List < String > tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -353,10 +357,14 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * 内网访问策略的用户组类型。取值：
-         * <p>
-         * - **Normal**：普通用户组。
-         * - **Custom**：自定义用户组。
+         * <p>内网访问策略的用户组类型。取值：</p>
+         * <ul>
+         * <li><strong>Normal</strong>：普通用户组。</li>
+         * <li><strong>Custom</strong>：自定义用户组。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder userGroupMode(String userGroupMode) {
             this.putBodyParameter("UserGroupMode", userGroupMode);
@@ -371,6 +379,12 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePrivateAccessPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePrivateAccessPolicyRequest</p>
+     */
     public static class CustomUserAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
@@ -445,7 +459,10 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
             }
 
             /**
-             * Relation.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -453,7 +470,10 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
             }
 
             /**
-             * UserGroupType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -461,7 +481,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagsForPrivateAccessPolicyResponseBody</p>
@@ -70,6 +71,12 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagsForPrivateAccessPolicyResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -145,7 +152,10 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             private String tagType; 
 
             /**
-             * 内网访问标签创建时间。
+             * <p>内网访问标签创建时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-21 14:10:16</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -191,6 +201,12 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTagsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagsForPrivateAccessPolicyResponseBody</p>
+     */
     public static class Polices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;

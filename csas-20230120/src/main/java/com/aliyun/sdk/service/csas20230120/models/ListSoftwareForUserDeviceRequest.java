@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSoftwareForUserDeviceRequest} extends {@link RequestModel}
  *
  * <p>ListSoftwareForUserDeviceRequest</p>
@@ -84,7 +85,10 @@ public class ListSoftwareForUserDeviceRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -93,7 +97,10 @@ public class ListSoftwareForUserDeviceRequest extends Request {
         }
 
         /**
-         * DeviceTag.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
         public Builder deviceTag(String deviceTag) {
             this.putQueryParameter("DeviceTag", deviceTag);
@@ -102,7 +109,10 @@ public class ListSoftwareForUserDeviceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

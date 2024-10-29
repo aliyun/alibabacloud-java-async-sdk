@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWmEmbedTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateWmEmbedTaskResponseBody</p>
@@ -70,6 +71,12 @@ public class CreateWmEmbedTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWmEmbedTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateWmEmbedTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;

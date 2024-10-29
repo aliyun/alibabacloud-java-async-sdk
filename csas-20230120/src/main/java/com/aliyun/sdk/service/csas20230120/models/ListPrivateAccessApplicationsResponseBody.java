@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivateAccessApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrivateAccessApplicationsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrivateAccessApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivateAccessApplicationsResponseBody</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Integer begin;
@@ -151,12 +158,21 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPrivateAccessApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivateAccessApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addresses")
         private java.util.List < String > addresses;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
+
+        @com.aliyun.core.annotation.NameInMap("BrowserAccessStatus")
+        private String browserAccessStatus;
 
         @com.aliyun.core.annotation.NameInMap("ConnectorIds")
         private java.util.List < String > connectorIds;
@@ -166,6 +182,12 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("L7ProxyDomainAutomatic")
+        private String l7ProxyDomainAutomatic;
+
+        @com.aliyun.core.annotation.NameInMap("L7ProxyDomainCustom")
+        private String l7ProxyDomainCustom;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -188,9 +210,12 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         private Applications(Builder builder) {
             this.addresses = builder.addresses;
             this.applicationId = builder.applicationId;
+            this.browserAccessStatus = builder.browserAccessStatus;
             this.connectorIds = builder.connectorIds;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.l7ProxyDomainAutomatic = builder.l7ProxyDomainAutomatic;
+            this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
             this.name = builder.name;
             this.policyIds = builder.policyIds;
             this.portRanges = builder.portRanges;
@@ -222,6 +247,13 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return browserAccessStatus
+         */
+        public String getBrowserAccessStatus() {
+            return this.browserAccessStatus;
+        }
+
+        /**
          * @return connectorIds
          */
         public java.util.List < String > getConnectorIds() {
@@ -240,6 +272,20 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return l7ProxyDomainAutomatic
+         */
+        public String getL7ProxyDomainAutomatic() {
+            return this.l7ProxyDomainAutomatic;
+        }
+
+        /**
+         * @return l7ProxyDomainCustom
+         */
+        public String getL7ProxyDomainCustom() {
+            return this.l7ProxyDomainCustom;
         }
 
         /**
@@ -287,9 +333,12 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < String > addresses; 
             private String applicationId; 
+            private String browserAccessStatus; 
             private java.util.List < String > connectorIds; 
             private String createTime; 
             private String description; 
+            private String l7ProxyDomainAutomatic; 
+            private String l7ProxyDomainCustom; 
             private String name; 
             private java.util.List < String > policyIds; 
             private java.util.List < PortRanges> portRanges; 
@@ -314,6 +363,14 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
+             * BrowserAccessStatus.
+             */
+            public Builder browserAccessStatus(String browserAccessStatus) {
+                this.browserAccessStatus = browserAccessStatus;
+                return this;
+            }
+
+            /**
              * ConnectorIds.
              */
             public Builder connectorIds(java.util.List < String > connectorIds) {
@@ -334,6 +391,22 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * L7ProxyDomainAutomatic.
+             */
+            public Builder l7ProxyDomainAutomatic(String l7ProxyDomainAutomatic) {
+                this.l7ProxyDomainAutomatic = l7ProxyDomainAutomatic;
+                return this;
+            }
+
+            /**
+             * L7ProxyDomainCustom.
+             */
+            public Builder l7ProxyDomainCustom(String l7ProxyDomainCustom) {
+                this.l7ProxyDomainCustom = l7ProxyDomainCustom;
                 return this;
             }
 

@@ -6,11 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivateAccessApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListPrivateAccessApplicationsRequest</p>
  */
 public class ListPrivateAccessApplicationsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessModes")
+    private String accessModes;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
@@ -51,6 +56,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
 
     private ListPrivateAccessApplicationsRequest(Builder builder) {
         super(builder);
+        this.accessModes = builder.accessModes;
         this.address = builder.address;
         this.applicationIds = builder.applicationIds;
         this.connectorId = builder.connectorId;
@@ -73,6 +79,13 @@ public class ListPrivateAccessApplicationsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessModes
+     */
+    public String getAccessModes() {
+        return this.accessModes;
     }
 
     /**
@@ -139,6 +152,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListPrivateAccessApplicationsRequest, Builder> {
+        private String accessModes; 
         private String address; 
         private java.util.List < String > applicationIds; 
         private String connectorId; 
@@ -155,6 +169,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
 
         private Builder(ListPrivateAccessApplicationsRequest request) {
             super(request);
+            this.accessModes = request.accessModes;
             this.address = request.address;
             this.applicationIds = request.applicationIds;
             this.connectorId = request.connectorId;
@@ -165,6 +180,15 @@ public class ListPrivateAccessApplicationsRequest extends Request {
             this.status = request.status;
             this.tagId = request.tagId;
         } 
+
+        /**
+         * AccessModes.
+         */
+        public Builder accessModes(String accessModes) {
+            this.putQueryParameter("AccessModes", accessModes);
+            this.accessModes = accessModes;
+            return this;
+        }
 
         /**
          * Address.
@@ -194,7 +218,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -212,7 +239,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

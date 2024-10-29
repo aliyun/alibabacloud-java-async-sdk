@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserDeviceResponseBody</p>
@@ -70,6 +71,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserDeviceResponseBody</p>
+     */
     public static class HistoryUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SaseUserId")
         private String saseUserId;
@@ -131,6 +138,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserDeviceResponseBody</p>
+     */
     public static class Device extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppStatus")
         private String appStatus;

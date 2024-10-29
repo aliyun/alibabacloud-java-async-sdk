@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRegistrationPoliciesForUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListRegistrationPoliciesForUserGroupResponseBody</p>
@@ -70,6 +71,12 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRegistrationPoliciesForUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRegistrationPoliciesForUserGroupResponseBody</p>
+     */
     public static class LimitCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("All")
         private String all;
@@ -151,6 +158,12 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRegistrationPoliciesForUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRegistrationPoliciesForUserGroupResponseBody</p>
+     */
     public static class LimitDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceBelong")
         private String deviceBelong;
@@ -232,6 +245,12 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRegistrationPoliciesForUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRegistrationPoliciesForUserGroupResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -433,6 +452,12 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRegistrationPoliciesForUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRegistrationPoliciesForUserGroupResponseBody</p>
+     */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Policies")
         private java.util.List < Policies> policies;

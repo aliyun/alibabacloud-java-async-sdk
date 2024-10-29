@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRegistrationPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateRegistrationPolicyResponseBody</p>
@@ -70,6 +71,12 @@ public class UpdateRegistrationPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRegistrationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateRegistrationPolicyResponseBody</p>
+     */
     public static class LimitCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("All")
         private Integer all;
@@ -151,6 +158,12 @@ public class UpdateRegistrationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRegistrationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateRegistrationPolicyResponseBody</p>
+     */
     public static class LimitDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceBelong")
         private String deviceBelong;
@@ -232,6 +245,12 @@ public class UpdateRegistrationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRegistrationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateRegistrationPolicyResponseBody</p>
+     */
     public static class Policy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

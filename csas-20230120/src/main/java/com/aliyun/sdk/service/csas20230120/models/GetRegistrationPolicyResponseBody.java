@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRegistrationPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetRegistrationPolicyResponseBody</p>
@@ -250,6 +251,12 @@ public class GetRegistrationPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRegistrationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegistrationPolicyResponseBody</p>
+     */
     public static class LimitCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("All")
         private Integer all;
@@ -331,6 +338,12 @@ public class GetRegistrationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegistrationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegistrationPolicyResponseBody</p>
+     */
     public static class LimitDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceBelong")
         private String deviceBelong;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClientUserResponseBody} extends {@link TeaModel}
  *
  * <p>GetClientUserResponseBody</p>
@@ -70,6 +71,12 @@ public class GetClientUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClientUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientUserResponseBody</p>
+     */
     public static class Department extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -131,6 +138,12 @@ public class GetClientUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientUserResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Department")
         private Department department;

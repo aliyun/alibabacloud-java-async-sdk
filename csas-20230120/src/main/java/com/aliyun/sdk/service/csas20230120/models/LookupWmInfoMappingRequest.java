@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LookupWmInfoMappingRequest} extends {@link RequestModel}
  *
  * <p>LookupWmInfoMappingRequest</p>
@@ -93,7 +94,10 @@ public class LookupWmInfoMappingRequest extends Request {
         }
 
         /**
-         * WmInfoUint.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         public Builder wmInfoUint(String wmInfoUint) {
             this.putQueryParameter("WmInfoUint", wmInfoUint);
@@ -102,7 +106,10 @@ public class LookupWmInfoMappingRequest extends Request {
         }
 
         /**
-         * WmType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PureDocument</p>
          */
         public Builder wmType(String wmType) {
             this.putQueryParameter("WmType", wmType);

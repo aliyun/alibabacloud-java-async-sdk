@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNacUserCertStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateNacUserCertStatusRequest</p>
@@ -91,6 +92,12 @@ public class UpdateNacUserCertStatusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateNacUserCertStatusRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateNacUserCertStatusRequest</p>
+     */
     public static class IdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DevTag")
         private String devTag;

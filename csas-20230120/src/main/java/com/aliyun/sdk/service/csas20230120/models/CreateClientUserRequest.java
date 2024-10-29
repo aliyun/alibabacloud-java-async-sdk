@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClientUserRequest} extends {@link RequestModel}
  *
  * <p>CreateClientUserRequest</p>
@@ -158,7 +159,10 @@ public class CreateClientUserRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -167,7 +171,10 @@ public class CreateClientUserRequest extends Request {
         }
 
         /**
-         * IdpConfigId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727</p>
          */
         public Builder idpConfigId(String idpConfigId) {
             this.putQueryParameter("IdpConfigId", idpConfigId);
@@ -194,7 +201,7 @@ public class CreateClientUserRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>This parameter is required.</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClientUserStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateClientUserStatusRequest</p>
@@ -69,7 +70,10 @@ public class UpdateClientUserStatusRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1495</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -78,7 +82,10 @@ public class UpdateClientUserStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicesForPrivateAccessApplicationRequest} extends {@link RequestModel}
  *
  * <p>ListPolicesForPrivateAccessApplicationRequest</p>
@@ -54,7 +55,7 @@ public class ListPolicesForPrivateAccessApplicationRequest extends Request {
         } 
 
         /**
-         * ApplicationIds.
+         * <p>This parameter is required.</p>
          */
         public Builder applicationIds(java.util.List < String > applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);

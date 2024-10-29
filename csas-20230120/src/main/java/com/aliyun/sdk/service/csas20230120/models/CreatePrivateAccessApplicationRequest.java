@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePrivateAccessApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreatePrivateAccessApplicationRequest</p>
@@ -17,8 +18,20 @@ public class CreatePrivateAccessApplicationRequest extends Request {
     private java.util.List < String > addresses;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BrowserAccessStatus")
+    private String browserAccessStatus;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("L7ProxyDomainAutomaticPrefix")
+    private String l7ProxyDomainAutomaticPrefix;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("L7ProxyDomainCustom")
+    private String l7ProxyDomainCustom;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -47,7 +60,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
     private CreatePrivateAccessApplicationRequest(Builder builder) {
         super(builder);
         this.addresses = builder.addresses;
+        this.browserAccessStatus = builder.browserAccessStatus;
         this.description = builder.description;
+        this.l7ProxyDomainAutomaticPrefix = builder.l7ProxyDomainAutomaticPrefix;
+        this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
         this.name = builder.name;
         this.portRanges = builder.portRanges;
         this.protocol = builder.protocol;
@@ -76,10 +92,31 @@ public class CreatePrivateAccessApplicationRequest extends Request {
     }
 
     /**
+     * @return browserAccessStatus
+     */
+    public String getBrowserAccessStatus() {
+        return this.browserAccessStatus;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return l7ProxyDomainAutomaticPrefix
+     */
+    public String getL7ProxyDomainAutomaticPrefix() {
+        return this.l7ProxyDomainAutomaticPrefix;
+    }
+
+    /**
+     * @return l7ProxyDomainCustom
+     */
+    public String getL7ProxyDomainCustom() {
+        return this.l7ProxyDomainCustom;
     }
 
     /**
@@ -119,7 +156,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreatePrivateAccessApplicationRequest, Builder> {
         private java.util.List < String > addresses; 
+        private String browserAccessStatus; 
         private String description; 
+        private String l7ProxyDomainAutomaticPrefix; 
+        private String l7ProxyDomainCustom; 
         private String name; 
         private java.util.List < PortRanges> portRanges; 
         private String protocol; 
@@ -133,7 +173,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         private Builder(CreatePrivateAccessApplicationRequest request) {
             super(request);
             this.addresses = request.addresses;
+            this.browserAccessStatus = request.browserAccessStatus;
             this.description = request.description;
+            this.l7ProxyDomainAutomaticPrefix = request.l7ProxyDomainAutomaticPrefix;
+            this.l7ProxyDomainCustom = request.l7ProxyDomainCustom;
             this.name = request.name;
             this.portRanges = request.portRanges;
             this.protocol = request.protocol;
@@ -142,11 +185,20 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         } 
 
         /**
-         * Addresses.
+         * <p>This parameter is required.</p>
          */
         public Builder addresses(java.util.List < String > addresses) {
             this.putBodyParameter("Addresses", addresses);
             this.addresses = addresses;
+            return this;
+        }
+
+        /**
+         * BrowserAccessStatus.
+         */
+        public Builder browserAccessStatus(String browserAccessStatus) {
+            this.putBodyParameter("BrowserAccessStatus", browserAccessStatus);
+            this.browserAccessStatus = browserAccessStatus;
             return this;
         }
 
@@ -160,7 +212,28 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * Name.
+         * L7ProxyDomainAutomaticPrefix.
+         */
+        public Builder l7ProxyDomainAutomaticPrefix(String l7ProxyDomainAutomaticPrefix) {
+            this.putBodyParameter("L7ProxyDomainAutomaticPrefix", l7ProxyDomainAutomaticPrefix);
+            this.l7ProxyDomainAutomaticPrefix = l7ProxyDomainAutomaticPrefix;
+            return this;
+        }
+
+        /**
+         * L7ProxyDomainCustom.
+         */
+        public Builder l7ProxyDomainCustom(String l7ProxyDomainCustom) {
+            this.putBodyParameter("L7ProxyDomainCustom", l7ProxyDomainCustom);
+            this.l7ProxyDomainCustom = l7ProxyDomainCustom;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private_access_application_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -169,7 +242,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * PortRanges.
+         * <p>This parameter is required.</p>
          */
         public Builder portRanges(java.util.List < PortRanges> portRanges) {
             this.putBodyParameter("PortRanges", portRanges);
@@ -178,7 +251,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("Protocol", protocol);
@@ -187,7 +263,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -211,6 +290,12 @@ public class CreatePrivateAccessApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePrivateAccessApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePrivateAccessApplicationRequest</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         @com.aliyun.core.annotation.Validation(required = true, maximum = 65535, minimum = 1)
@@ -252,7 +337,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
             private Integer end; 
 
             /**
-             * Begin.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -260,7 +348,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
             }
 
             /**
-             * End.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder end(Integer end) {
                 this.end = end;

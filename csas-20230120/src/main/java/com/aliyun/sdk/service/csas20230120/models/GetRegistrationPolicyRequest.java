@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRegistrationPolicyRequest} extends {@link RequestModel}
  *
  * <p>GetRegistrationPolicyRequest</p>
@@ -54,7 +55,10 @@ public class GetRegistrationPolicyRequest extends Request {
         } 
 
         /**
-         * PolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reg-policy-dcbfd33cb004****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);

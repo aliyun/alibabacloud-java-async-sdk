@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDynamicRoutesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDynamicRoutesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDynamicRoutesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDynamicRoutesResponseBody</p>
+     */
     public static class DynamicRoutes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationIds")
         private java.util.List < String > applicationIds;

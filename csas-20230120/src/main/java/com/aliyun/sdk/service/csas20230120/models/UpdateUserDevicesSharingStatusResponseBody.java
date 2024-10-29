@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserDevicesSharingStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateUserDevicesSharingStatusResponseBody</p>
@@ -70,6 +71,12 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateUserDevicesSharingStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateUserDevicesSharingStatusResponseBody</p>
+     */
     public static class Devices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppStatus")
         private String appStatus;

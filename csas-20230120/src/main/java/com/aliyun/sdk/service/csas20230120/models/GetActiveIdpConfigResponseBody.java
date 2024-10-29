@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetActiveIdpConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetActiveIdpConfigResponseBody</p>
@@ -70,6 +71,12 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetActiveIdpConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetActiveIdpConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;

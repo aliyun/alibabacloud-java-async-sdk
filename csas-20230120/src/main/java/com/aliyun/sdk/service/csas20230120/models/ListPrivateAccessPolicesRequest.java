@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivateAccessPolicesRequest} extends {@link RequestModel}
  *
  * <p>ListPrivateAccessPolicesRequest</p>
@@ -213,7 +214,10 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -231,7 +235,10 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -285,10 +292,14 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * 用户组ID。取值来源：
-         * <p>
-         * - [ListUserGroups](~~ListUserGroups~~)：批量查询用户组。
-         * - [CreateUserGroup](~~CreateUserGroup~~)：创建用户组。
+         * <p>用户组ID。取值来源：</p>
+         * <ul>
+         * <li><a href="~~ListUserGroups~~">ListUserGroups</a>：批量查询用户组。</li>
+         * <li><a href="~~CreateUserGroup~~">CreateUserGroup</a>：创建用户组。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>usergroup-6f1ef2fc56b6****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

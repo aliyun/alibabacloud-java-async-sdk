@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConnectorsResponseBody} extends {@link TeaModel}
  *
  * <p>ListConnectorsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConnectorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectorsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -151,6 +158,12 @@ public class ListConnectorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectorsResponseBody</p>
+     */
     public static class ConnectorClients extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
@@ -252,6 +265,12 @@ public class ListConnectorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectorsResponseBody</p>
+     */
     public static class UpgradeTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private String end;
@@ -313,6 +332,12 @@ public class ListConnectorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectorsResponseBody</p>
+     */
     public static class Connectors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List < Applications> applications;
@@ -452,7 +477,10 @@ public class ListConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorID。
+             * <p>ConnectorID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector-94db94e06b98****</p>
              */
             public Builder connectorId(String connectorId) {
                 this.connectorId = connectorId;

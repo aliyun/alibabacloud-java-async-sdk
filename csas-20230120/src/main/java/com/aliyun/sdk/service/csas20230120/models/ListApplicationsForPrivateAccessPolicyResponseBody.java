@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsForPrivateAccessPolicyResponseBody</p>
@@ -70,6 +71,12 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForPrivateAccessPolicyResponseBody</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Integer begin;
@@ -131,6 +138,12 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForPrivateAccessPolicyResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addresses")
         private java.util.List < String > addresses;
@@ -312,6 +325,12 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForPrivateAccessPolicyResponseBody</p>
+     */
     public static class Polices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List < Applications> applications;

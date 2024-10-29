@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSoftwareForUserDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>ListSoftwareForUserDeviceResponseBody</p>
@@ -90,6 +91,12 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSoftwareForUserDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSoftwareForUserDeviceResponseBody</p>
+     */
     public static class Software extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Inc")
         private String inc;

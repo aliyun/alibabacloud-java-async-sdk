@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDynamicRouteRequest} extends {@link RequestModel}
  *
  * <p>CreateDynamicRouteRequest</p>
@@ -195,7 +196,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * ApplicationType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         public Builder applicationType(String applicationType) {
             this.putBodyParameter("ApplicationType", applicationType);
@@ -213,7 +217,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * DynamicRouteType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector</p>
          */
         public Builder dynamicRouteType(String dynamicRouteType) {
             this.putBodyParameter("DynamicRouteType", dynamicRouteType);
@@ -222,7 +229,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dynamic_route_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -231,7 +241,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * NextHop.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector-8ccb13b6f52c****</p>
          */
         public Builder nextHop(String nextHop) {
             this.putBodyParameter("NextHop", nextHop);
@@ -240,7 +253,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -249,7 +265,7 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * RegionIds.
+         * <p>This parameter is required.</p>
          */
         public Builder regionIds(java.util.List < String > regionIds) {
             this.putBodyParameter("RegionIds", regionIds);
@@ -258,7 +274,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

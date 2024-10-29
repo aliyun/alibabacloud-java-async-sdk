@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateUserGroupRequest</p>
@@ -83,7 +84,7 @@ public class CreateUserGroupRequest extends Request {
         } 
 
         /**
-         * Attributes.
+         * <p>This parameter is required.</p>
          */
         public Builder attributes(java.util.List < Attributes> attributes) {
             this.putBodyParameter("Attributes", attributes);
@@ -101,7 +102,10 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_group_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -116,6 +120,12 @@ public class CreateUserGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserGroupRequest</p>
+     */
     public static class Attributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
@@ -190,7 +200,10 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * Relation.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -198,7 +211,10 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * UserGroupType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -206,7 +222,7 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;

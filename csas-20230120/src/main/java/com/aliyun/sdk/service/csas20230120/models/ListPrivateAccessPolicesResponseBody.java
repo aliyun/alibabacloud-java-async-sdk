@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivateAccessPolicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrivateAccessPolicesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrivateAccessPolicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivateAccessPolicesResponseBody</p>
+     */
     public static class CustomUserAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
@@ -191,6 +198,12 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPrivateAccessPolicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivateAccessPolicesResponseBody</p>
+     */
     public static class Polices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationIds")
         private java.util.List < String > applicationIds;

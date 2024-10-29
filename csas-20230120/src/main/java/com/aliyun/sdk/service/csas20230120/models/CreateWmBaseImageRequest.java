@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWmBaseImageRequest} extends {@link RequestModel}
  *
  * <p>CreateWmBaseImageRequest</p>
@@ -157,7 +158,10 @@ public class CreateWmBaseImageRequest extends Request {
         } 
 
         /**
-         * Height.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         public Builder height(Integer height) {
             this.putBodyParameter("Height", height);
@@ -166,7 +170,10 @@ public class CreateWmBaseImageRequest extends Request {
         }
 
         /**
-         * Opacity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>255</p>
          */
         public Builder opacity(Integer opacity) {
             this.putBodyParameter("Opacity", opacity);
@@ -175,7 +182,10 @@ public class CreateWmBaseImageRequest extends Request {
         }
 
         /**
-         * Scale.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scale(Integer scale) {
             this.putBodyParameter("Scale", scale);
@@ -184,7 +194,10 @@ public class CreateWmBaseImageRequest extends Request {
         }
 
         /**
-         * Width.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1920</p>
          */
         public Builder width(Integer width) {
             this.putBodyParameter("Width", width);
@@ -220,7 +233,10 @@ public class CreateWmBaseImageRequest extends Request {
         }
 
         /**
-         * WmType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PureWebappInvisible</p>
          */
         public Builder wmType(String wmType) {
             this.putBodyParameter("WmType", wmType);

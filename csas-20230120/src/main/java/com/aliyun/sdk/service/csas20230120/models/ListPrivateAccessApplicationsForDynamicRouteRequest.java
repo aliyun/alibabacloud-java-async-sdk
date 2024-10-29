@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivateAccessApplicationsForDynamicRouteRequest} extends {@link RequestModel}
  *
  * <p>ListPrivateAccessApplicationsForDynamicRouteRequest</p>
@@ -54,7 +55,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteRequest extends Request
         } 
 
         /**
-         * DynamicRouteIds.
+         * <p>This parameter is required.</p>
          */
         public Builder dynamicRouteIds(java.util.List < String > dynamicRouteIds) {
             this.putQueryParameter("DynamicRouteIds", dynamicRouteIds);

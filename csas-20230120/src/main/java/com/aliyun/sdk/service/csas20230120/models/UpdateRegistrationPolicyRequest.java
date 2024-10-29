@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRegistrationPolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdateRegistrationPolicyRequest</p>
@@ -273,7 +274,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reg-policy-63b2f1844b86****</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -324,6 +328,12 @@ public class UpdateRegistrationPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRegistrationPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRegistrationPolicyRequest</p>
+     */
     public static class CompanyLimitCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("All")
         private Integer all;
@@ -405,6 +415,12 @@ public class UpdateRegistrationPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRegistrationPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRegistrationPolicyRequest</p>
+     */
     public static class PersonalLimitCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("All")
         private Integer all;

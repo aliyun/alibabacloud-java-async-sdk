@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicesForUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListPolicesForUserGroupResponseBody</p>
@@ -70,6 +71,12 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPolicesForUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicesForUserGroupResponseBody</p>
+     */
     public static class Polices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -151,6 +158,12 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPolicesForUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicesForUserGroupResponseBody</p>
+     */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Polices")
         private java.util.List < Polices> polices;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRegistrationPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateRegistrationPolicyRequest</p>
@@ -208,7 +209,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * CompanyLimitType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LimitAll</p>
          */
         public Builder companyLimitType(String companyLimitType) {
             this.putBodyParameter("CompanyLimitType", companyLimitType);
@@ -226,7 +230,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * MatchMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupAll</p>
          */
         public Builder matchMode(String matchMode) {
             this.putBodyParameter("MatchMode", matchMode);
@@ -235,7 +242,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registration_policy_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -254,7 +264,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * PersonalLimitType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LimitDiff</p>
          */
         public Builder personalLimitType(String personalLimitType) {
             this.putBodyParameter("PersonalLimitType", personalLimitType);
@@ -272,7 +285,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -305,6 +321,12 @@ public class CreateRegistrationPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRegistrationPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRegistrationPolicyRequest</p>
+     */
     public static class CompanyLimitCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("All")
         private Integer all;
@@ -386,6 +408,12 @@ public class CreateRegistrationPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRegistrationPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRegistrationPolicyRequest</p>
+     */
     public static class PersonalLimitCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("All")
         private Integer all;

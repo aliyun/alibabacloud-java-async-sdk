@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIdpDepartmentRequest} extends {@link RequestModel}
  *
  * <p>UpdateIdpDepartmentRequest</p>
@@ -84,7 +85,10 @@ public class UpdateIdpDepartmentRequest extends Request {
         } 
 
         /**
-         * DepartmentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10653</p>
          */
         public Builder departmentId(String departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -93,7 +97,7 @@ public class UpdateIdpDepartmentRequest extends Request {
         }
 
         /**
-         * DepartmentName.
+         * <p>This parameter is required.</p>
          */
         public Builder departmentName(String departmentName) {
             this.putQueryParameter("DepartmentName", departmentName);
@@ -102,7 +106,10 @@ public class UpdateIdpDepartmentRequest extends Request {
         }
 
         /**
-         * IdpConfigId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>598</p>
          */
         public Builder idpConfigId(String idpConfigId) {
             this.putQueryParameter("IdpConfigId", idpConfigId);

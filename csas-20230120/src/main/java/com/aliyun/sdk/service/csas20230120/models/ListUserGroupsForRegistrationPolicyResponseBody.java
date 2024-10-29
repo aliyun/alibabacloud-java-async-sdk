@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGroupsForRegistrationPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserGroupsForRegistrationPolicyResponseBody</p>
@@ -70,6 +71,12 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserGroupsForRegistrationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsForRegistrationPolicyResponseBody</p>
+     */
     public static class Attributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
@@ -171,6 +178,12 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserGroupsForRegistrationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsForRegistrationPolicyResponseBody</p>
+     */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < Attributes> attributes;
@@ -292,6 +305,12 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserGroupsForRegistrationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsForRegistrationPolicyResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;

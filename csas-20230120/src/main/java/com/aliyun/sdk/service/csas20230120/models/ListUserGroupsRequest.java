@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListUserGroupsRequest</p>
@@ -134,7 +135,10 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -143,7 +147,10 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * 用户组名称。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。
+         * <p>用户组名称。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_group_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -161,7 +168,10 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

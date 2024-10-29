@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserDevicesSharingStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserDevicesSharingStatusRequest</p>
@@ -69,7 +70,7 @@ public class UpdateUserDevicesSharingStatusRequest extends Request {
         } 
 
         /**
-         * DeviceTags.
+         * <p>This parameter is required.</p>
          */
         public Builder deviceTags(java.util.List < String > deviceTags) {
             this.putBodyParameter("DeviceTags", deviceTags);
@@ -78,7 +79,10 @@ public class UpdateUserDevicesSharingStatusRequest extends Request {
         }
 
         /**
-         * SharingStatus.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sharingStatus(Boolean sharingStatus) {
             this.putBodyParameter("SharingStatus", sharingStatus);

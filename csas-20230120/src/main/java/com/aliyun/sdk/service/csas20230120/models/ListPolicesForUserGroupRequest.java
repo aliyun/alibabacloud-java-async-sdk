@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicesForUserGroupRequest} extends {@link RequestModel}
  *
  * <p>ListPolicesForUserGroupRequest</p>
@@ -54,7 +55,7 @@ public class ListPolicesForUserGroupRequest extends Request {
         } 
 
         /**
-         * UserGroupIds.
+         * <p>This parameter is required.</p>
          */
         public Builder userGroupIds(java.util.List < String > userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);

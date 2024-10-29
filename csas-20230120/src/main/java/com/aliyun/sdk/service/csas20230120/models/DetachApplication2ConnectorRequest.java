@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachApplication2ConnectorRequest} extends {@link RequestModel}
  *
  * <p>DetachApplication2ConnectorRequest</p>
@@ -69,7 +70,7 @@ public class DetachApplication2ConnectorRequest extends Request {
         } 
 
         /**
-         * ApplicationIds.
+         * <p>This parameter is required.</p>
          */
         public Builder applicationIds(java.util.List < String > applicationIds) {
             String applicationIdsShrink = shrink(applicationIds, "ApplicationIds", "json");
@@ -79,7 +80,11 @@ public class DetachApplication2ConnectorRequest extends Request {
         }
 
         /**
-         * ConnectorID。
+         * <p>ConnectorID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector-94db94e06b98****</p>
          */
         public Builder connectorId(String connectorId) {
             this.putBodyParameter("ConnectorId", connectorId);

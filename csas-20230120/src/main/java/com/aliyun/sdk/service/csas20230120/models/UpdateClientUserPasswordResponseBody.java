@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClientUserPasswordResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateClientUserPasswordResponseBody</p>

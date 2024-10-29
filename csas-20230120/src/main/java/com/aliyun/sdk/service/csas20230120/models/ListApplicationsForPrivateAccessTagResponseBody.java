@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsForPrivateAccessTagResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsForPrivateAccessTagResponseBody</p>
@@ -70,6 +71,12 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsForPrivateAccessTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForPrivateAccessTagResponseBody</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Integer begin;
@@ -131,6 +138,12 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsForPrivateAccessTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForPrivateAccessTagResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addresses")
         private java.util.List < String > addresses;
@@ -258,7 +271,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * 内网访问应用创建时间。
+             * <p>内网访问应用创建时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-27 18:10:25</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -312,6 +328,12 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsForPrivateAccessTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForPrivateAccessTagResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List < Applications> applications;

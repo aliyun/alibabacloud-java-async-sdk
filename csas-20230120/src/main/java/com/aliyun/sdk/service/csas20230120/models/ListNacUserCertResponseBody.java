@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNacUserCertResponseBody} extends {@link TeaModel}
  *
  * <p>ListNacUserCertResponseBody</p>
@@ -130,6 +131,12 @@ public class ListNacUserCertResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNacUserCertResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNacUserCertResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Aliuid")
         private String aliuid;

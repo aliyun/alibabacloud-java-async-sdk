@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateExcessiveDeviceRegistrationApplicationsStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateExcessiveDeviceRegistrationApplicationsStatusRequest</p>
@@ -69,7 +70,7 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
         } 
 
         /**
-         * ApplicationIds.
+         * <p>This parameter is required.</p>
          */
         public Builder applicationIds(java.util.List < String > applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
@@ -78,7 +79,10 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

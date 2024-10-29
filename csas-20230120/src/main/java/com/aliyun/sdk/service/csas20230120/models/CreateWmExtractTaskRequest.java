@@ -6,11 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWmExtractTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateWmExtractTaskRequest</p>
  */
 public class CreateWmExtractTaskRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CsvControl")
+    private CsvControl csvControl;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocumentIsCapture")
     private Boolean documentIsCapture;
@@ -45,6 +50,7 @@ public class CreateWmExtractTaskRequest extends Request {
 
     private CreateWmExtractTaskRequest(Builder builder) {
         super(builder);
+        this.csvControl = builder.csvControl;
         this.documentIsCapture = builder.documentIsCapture;
         this.fileUrl = builder.fileUrl;
         this.filename = builder.filename;
@@ -65,6 +71,13 @@ public class CreateWmExtractTaskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return csvControl
+     */
+    public CsvControl getCsvControl() {
+        return this.csvControl;
     }
 
     /**
@@ -117,6 +130,7 @@ public class CreateWmExtractTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateWmExtractTaskRequest, Builder> {
+        private CsvControl csvControl; 
         private Boolean documentIsCapture; 
         private String fileUrl; 
         private String filename; 
@@ -131,6 +145,7 @@ public class CreateWmExtractTaskRequest extends Request {
 
         private Builder(CreateWmExtractTaskRequest request) {
             super(request);
+            this.csvControl = request.csvControl;
             this.documentIsCapture = request.documentIsCapture;
             this.fileUrl = request.fileUrl;
             this.filename = request.filename;
@@ -139,6 +154,16 @@ public class CreateWmExtractTaskRequest extends Request {
             this.wmInfoSize = request.wmInfoSize;
             this.wmType = request.wmType;
         } 
+
+        /**
+         * CsvControl.
+         */
+        public Builder csvControl(CsvControl csvControl) {
+            String csvControlShrink = shrink(csvControl, "CsvControl", "json");
+            this.putQueryParameter("CsvControl", csvControlShrink);
+            this.csvControl = csvControl;
+            return this;
+        }
 
         /**
          * DocumentIsCapture.
@@ -150,7 +175,10 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
-         * FileUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/test-****.pdf">https://example.com/test-****.pdf</a></p>
          */
         public Builder fileUrl(String fileUrl) {
             this.putBodyParameter("FileUrl", fileUrl);
@@ -159,7 +187,10 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
-         * Filename.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-****.pdf</p>
          */
         public Builder filename(String filename) {
             this.putBodyParameter("Filename", filename);
@@ -195,7 +226,10 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
-         * WmType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PureDocument</p>
          */
         public Builder wmType(String wmType) {
             this.putBodyParameter("WmType", wmType);
@@ -210,4 +244,91 @@ public class CreateWmExtractTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWmExtractTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWmExtractTaskRequest</p>
+     */
+    public static class CsvControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EmbedColumn")
+        private Long embedColumn;
+
+        @com.aliyun.core.annotation.NameInMap("EmbedPrecision")
+        private Long embedPrecision;
+
+        @com.aliyun.core.annotation.NameInMap("Method")
+        private String method;
+
+        private CsvControl(Builder builder) {
+            this.embedColumn = builder.embedColumn;
+            this.embedPrecision = builder.embedPrecision;
+            this.method = builder.method;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CsvControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return embedColumn
+         */
+        public Long getEmbedColumn() {
+            return this.embedColumn;
+        }
+
+        /**
+         * @return embedPrecision
+         */
+        public Long getEmbedPrecision() {
+            return this.embedPrecision;
+        }
+
+        /**
+         * @return method
+         */
+        public String getMethod() {
+            return this.method;
+        }
+
+        public static final class Builder {
+            private Long embedColumn; 
+            private Long embedPrecision; 
+            private String method; 
+
+            /**
+             * EmbedColumn.
+             */
+            public Builder embedColumn(Long embedColumn) {
+                this.embedColumn = embedColumn;
+                return this;
+            }
+
+            /**
+             * EmbedPrecision.
+             */
+            public Builder embedPrecision(Long embedPrecision) {
+                this.embedPrecision = embedPrecision;
+                return this;
+            }
+
+            /**
+             * Method.
+             */
+            public Builder method(String method) {
+                this.method = method;
+                return this;
+            }
+
+            public CsvControl build() {
+                return new CsvControl(this);
+            } 
+
+        } 
+
+    }
 }

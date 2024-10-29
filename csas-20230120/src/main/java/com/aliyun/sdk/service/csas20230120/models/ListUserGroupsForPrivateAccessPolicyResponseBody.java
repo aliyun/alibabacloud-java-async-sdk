@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGroupsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserGroupsForPrivateAccessPolicyResponseBody</p>
@@ -70,6 +71,12 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserGroupsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsForPrivateAccessPolicyResponseBody</p>
+     */
     public static class Attributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
@@ -171,6 +178,12 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserGroupsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsForPrivateAccessPolicyResponseBody</p>
+     */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < Attributes> attributes;
@@ -254,7 +267,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 用户组创建时间。
+             * <p>用户组创建时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-27 18:10:25</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -292,6 +308,12 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserGroupsForPrivateAccessPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsForPrivateAccessPolicyResponseBody</p>
+     */
     public static class Polices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;

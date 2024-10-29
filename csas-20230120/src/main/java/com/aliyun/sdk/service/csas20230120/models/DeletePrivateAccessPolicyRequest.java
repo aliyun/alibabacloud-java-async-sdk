@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePrivateAccessPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeletePrivateAccessPolicyRequest</p>
@@ -54,7 +55,10 @@ public class DeletePrivateAccessPolicyRequest extends Request {
         } 
 
         /**
-         * PolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-policy-867ef4007c8a****</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrivateAccessApplicationRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrivateAccessApplicationRequest</p>
@@ -23,6 +24,18 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("L7ProxyDomainAutomaticPrefix")
+    private String l7ProxyDomainAutomaticPrefix;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("L7ProxyDomainCustom")
+    private String l7ProxyDomainCustom;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("L7ProxyDomainPrivate")
+    private String l7ProxyDomainPrivate;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ModifyType")
@@ -49,6 +62,9 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         this.addresses = builder.addresses;
         this.applicationId = builder.applicationId;
         this.description = builder.description;
+        this.l7ProxyDomainAutomaticPrefix = builder.l7ProxyDomainAutomaticPrefix;
+        this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
+        this.l7ProxyDomainPrivate = builder.l7ProxyDomainPrivate;
         this.modifyType = builder.modifyType;
         this.portRanges = builder.portRanges;
         this.protocol = builder.protocol;
@@ -91,6 +107,27 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     }
 
     /**
+     * @return l7ProxyDomainAutomaticPrefix
+     */
+    public String getL7ProxyDomainAutomaticPrefix() {
+        return this.l7ProxyDomainAutomaticPrefix;
+    }
+
+    /**
+     * @return l7ProxyDomainCustom
+     */
+    public String getL7ProxyDomainCustom() {
+        return this.l7ProxyDomainCustom;
+    }
+
+    /**
+     * @return l7ProxyDomainPrivate
+     */
+    public String getL7ProxyDomainPrivate() {
+        return this.l7ProxyDomainPrivate;
+    }
+
+    /**
      * @return modifyType
      */
     public String getModifyType() {
@@ -129,6 +166,9 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         private java.util.List < String > addresses; 
         private String applicationId; 
         private String description; 
+        private String l7ProxyDomainAutomaticPrefix; 
+        private String l7ProxyDomainCustom; 
+        private String l7ProxyDomainPrivate; 
         private String modifyType; 
         private java.util.List < PortRanges> portRanges; 
         private String protocol; 
@@ -144,6 +184,9 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
             this.addresses = request.addresses;
             this.applicationId = request.applicationId;
             this.description = request.description;
+            this.l7ProxyDomainAutomaticPrefix = request.l7ProxyDomainAutomaticPrefix;
+            this.l7ProxyDomainCustom = request.l7ProxyDomainCustom;
+            this.l7ProxyDomainPrivate = request.l7ProxyDomainPrivate;
             this.modifyType = request.modifyType;
             this.portRanges = request.portRanges;
             this.protocol = request.protocol;
@@ -161,7 +204,10 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * ApplicationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-application-e12860ef6c48****</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -175,6 +221,33 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * L7ProxyDomainAutomaticPrefix.
+         */
+        public Builder l7ProxyDomainAutomaticPrefix(String l7ProxyDomainAutomaticPrefix) {
+            this.putBodyParameter("L7ProxyDomainAutomaticPrefix", l7ProxyDomainAutomaticPrefix);
+            this.l7ProxyDomainAutomaticPrefix = l7ProxyDomainAutomaticPrefix;
+            return this;
+        }
+
+        /**
+         * L7ProxyDomainCustom.
+         */
+        public Builder l7ProxyDomainCustom(String l7ProxyDomainCustom) {
+            this.putBodyParameter("L7ProxyDomainCustom", l7ProxyDomainCustom);
+            this.l7ProxyDomainCustom = l7ProxyDomainCustom;
+            return this;
+        }
+
+        /**
+         * L7ProxyDomainPrivate.
+         */
+        public Builder l7ProxyDomainPrivate(String l7ProxyDomainPrivate) {
+            this.putBodyParameter("L7ProxyDomainPrivate", l7ProxyDomainPrivate);
+            this.l7ProxyDomainPrivate = l7ProxyDomainPrivate;
             return this;
         }
 
@@ -230,6 +303,12 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePrivateAccessApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePrivateAccessApplicationRequest</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)

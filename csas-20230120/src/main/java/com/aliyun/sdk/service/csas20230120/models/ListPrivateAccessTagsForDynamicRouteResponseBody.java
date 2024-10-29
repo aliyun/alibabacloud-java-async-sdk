@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivateAccessTagsForDynamicRouteResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrivateAccessTagsForDynamicRouteResponseBody</p>
@@ -70,6 +71,12 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrivateAccessTagsForDynamicRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivateAccessTagsForDynamicRouteResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -191,6 +198,12 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPrivateAccessTagsForDynamicRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivateAccessTagsForDynamicRouteResponseBody</p>
+     */
     public static class DynamicRoutes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DynamicRouteId")
         private String dynamicRouteId;

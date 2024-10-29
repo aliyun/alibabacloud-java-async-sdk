@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIdpConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetIdpConfigResponseBody</p>
@@ -70,6 +71,12 @@ public class GetIdpConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIdpConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIdpConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
@@ -301,7 +308,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             private String verifyUrl; 
 
             /**
-             * AccessKey ID
+             * <p>AccessKey ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI5tJVztnh6Nn***</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -309,7 +319,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKey Secret
+             * <p>AccessKey Secret</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E75ktr5jENiR3ssjC***</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;

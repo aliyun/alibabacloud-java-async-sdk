@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateUserGroupResponseBody</p>

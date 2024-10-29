@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserDeviceRequest} extends {@link RequestModel}
  *
  * <p>GetUserDeviceRequest</p>
@@ -54,7 +55,10 @@ public class GetUserDeviceRequest extends Request {
         } 
 
         /**
-         * DeviceTag.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
         public Builder deviceTag(String deviceTag) {
             this.putQueryParameter("DeviceTag", deviceTag);
