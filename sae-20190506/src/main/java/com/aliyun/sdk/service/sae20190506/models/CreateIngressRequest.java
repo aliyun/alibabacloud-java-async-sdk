@@ -30,6 +30,26 @@ public class CreateIngressRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableXForwardedFor")
+    private Boolean enableXForwardedFor;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableXForwardedForClientSrcPort")
+    private Boolean enableXForwardedForClientSrcPort;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableXForwardedForProto")
+    private Boolean enableXForwardedForProto;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableXForwardedForSlbId")
+    private Boolean enableXForwardedForSlbId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableXForwardedForSlbPort")
+    private Boolean enableXForwardedForSlbPort;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
@@ -75,6 +95,11 @@ public class CreateIngressRequest extends Request {
         this.certIds = builder.certIds;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
+        this.enableXForwardedFor = builder.enableXForwardedFor;
+        this.enableXForwardedForClientSrcPort = builder.enableXForwardedForClientSrcPort;
+        this.enableXForwardedForProto = builder.enableXForwardedForProto;
+        this.enableXForwardedForSlbId = builder.enableXForwardedForSlbId;
+        this.enableXForwardedForSlbPort = builder.enableXForwardedForSlbPort;
         this.idleTimeout = builder.idleTimeout;
         this.listenerPort = builder.listenerPort;
         this.listenerProtocol = builder.listenerProtocol;
@@ -125,6 +150,41 @@ public class CreateIngressRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableXForwardedFor
+     */
+    public Boolean getEnableXForwardedFor() {
+        return this.enableXForwardedFor;
+    }
+
+    /**
+     * @return enableXForwardedForClientSrcPort
+     */
+    public Boolean getEnableXForwardedForClientSrcPort() {
+        return this.enableXForwardedForClientSrcPort;
+    }
+
+    /**
+     * @return enableXForwardedForProto
+     */
+    public Boolean getEnableXForwardedForProto() {
+        return this.enableXForwardedForProto;
+    }
+
+    /**
+     * @return enableXForwardedForSlbId
+     */
+    public Boolean getEnableXForwardedForSlbId() {
+        return this.enableXForwardedForSlbId;
+    }
+
+    /**
+     * @return enableXForwardedForSlbPort
+     */
+    public Boolean getEnableXForwardedForSlbPort() {
+        return this.enableXForwardedForSlbPort;
     }
 
     /**
@@ -195,6 +255,11 @@ public class CreateIngressRequest extends Request {
         private String certIds; 
         private String defaultRule; 
         private String description; 
+        private Boolean enableXForwardedFor; 
+        private Boolean enableXForwardedForClientSrcPort; 
+        private Boolean enableXForwardedForProto; 
+        private Boolean enableXForwardedForSlbId; 
+        private Boolean enableXForwardedForSlbPort; 
         private Integer idleTimeout; 
         private Integer listenerPort; 
         private String listenerProtocol; 
@@ -215,6 +280,11 @@ public class CreateIngressRequest extends Request {
             this.certIds = request.certIds;
             this.defaultRule = request.defaultRule;
             this.description = request.description;
+            this.enableXForwardedFor = request.enableXForwardedFor;
+            this.enableXForwardedForClientSrcPort = request.enableXForwardedForClientSrcPort;
+            this.enableXForwardedForProto = request.enableXForwardedForProto;
+            this.enableXForwardedForSlbId = request.enableXForwardedForSlbId;
+            this.enableXForwardedForSlbPort = request.enableXForwardedForSlbPort;
             this.idleTimeout = request.idleTimeout;
             this.listenerPort = request.listenerPort;
             this.listenerProtocol = request.listenerProtocol;
@@ -286,6 +356,51 @@ public class CreateIngressRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableXForwardedFor.
+         */
+        public Builder enableXForwardedFor(Boolean enableXForwardedFor) {
+            this.putQueryParameter("EnableXForwardedFor", enableXForwardedFor);
+            this.enableXForwardedFor = enableXForwardedFor;
+            return this;
+        }
+
+        /**
+         * EnableXForwardedForClientSrcPort.
+         */
+        public Builder enableXForwardedForClientSrcPort(Boolean enableXForwardedForClientSrcPort) {
+            this.putQueryParameter("EnableXForwardedForClientSrcPort", enableXForwardedForClientSrcPort);
+            this.enableXForwardedForClientSrcPort = enableXForwardedForClientSrcPort;
+            return this;
+        }
+
+        /**
+         * EnableXForwardedForProto.
+         */
+        public Builder enableXForwardedForProto(Boolean enableXForwardedForProto) {
+            this.putQueryParameter("EnableXForwardedForProto", enableXForwardedForProto);
+            this.enableXForwardedForProto = enableXForwardedForProto;
+            return this;
+        }
+
+        /**
+         * EnableXForwardedForSlbId.
+         */
+        public Builder enableXForwardedForSlbId(Boolean enableXForwardedForSlbId) {
+            this.putQueryParameter("EnableXForwardedForSlbId", enableXForwardedForSlbId);
+            this.enableXForwardedForSlbId = enableXForwardedForSlbId;
+            return this;
+        }
+
+        /**
+         * EnableXForwardedForSlbPort.
+         */
+        public Builder enableXForwardedForSlbPort(Boolean enableXForwardedForSlbPort) {
+            this.putQueryParameter("EnableXForwardedForSlbPort", enableXForwardedForSlbPort);
+            this.enableXForwardedForSlbPort = enableXForwardedForSlbPort;
             return this;
         }
 

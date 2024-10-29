@@ -509,6 +509,21 @@ public class DescribeIngressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedFor")
+        private Boolean enableXForwardedFor;
+
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedForClientSrcPort")
+        private Boolean enableXForwardedForClientSrcPort;
+
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedForProto")
+        private Boolean enableXForwardedForProto;
+
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedForSlbId")
+        private Boolean enableXForwardedForSlbId;
+
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedForSlbPort")
+        private Boolean enableXForwardedForSlbPort;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
@@ -550,6 +565,11 @@ public class DescribeIngressResponseBody extends TeaModel {
             this.certIds = builder.certIds;
             this.defaultRule = builder.defaultRule;
             this.description = builder.description;
+            this.enableXForwardedFor = builder.enableXForwardedFor;
+            this.enableXForwardedForClientSrcPort = builder.enableXForwardedForClientSrcPort;
+            this.enableXForwardedForProto = builder.enableXForwardedForProto;
+            this.enableXForwardedForSlbId = builder.enableXForwardedForSlbId;
+            this.enableXForwardedForSlbPort = builder.enableXForwardedForSlbPort;
             this.id = builder.id;
             this.idleTimeout = builder.idleTimeout;
             this.listenerPort = builder.listenerPort;
@@ -598,6 +618,41 @@ public class DescribeIngressResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return enableXForwardedFor
+         */
+        public Boolean getEnableXForwardedFor() {
+            return this.enableXForwardedFor;
+        }
+
+        /**
+         * @return enableXForwardedForClientSrcPort
+         */
+        public Boolean getEnableXForwardedForClientSrcPort() {
+            return this.enableXForwardedForClientSrcPort;
+        }
+
+        /**
+         * @return enableXForwardedForProto
+         */
+        public Boolean getEnableXForwardedForProto() {
+            return this.enableXForwardedForProto;
+        }
+
+        /**
+         * @return enableXForwardedForSlbId
+         */
+        public Boolean getEnableXForwardedForSlbId() {
+            return this.enableXForwardedForSlbId;
+        }
+
+        /**
+         * @return enableXForwardedForSlbPort
+         */
+        public Boolean getEnableXForwardedForSlbPort() {
+            return this.enableXForwardedForSlbPort;
         }
 
         /**
@@ -689,6 +744,11 @@ public class DescribeIngressResponseBody extends TeaModel {
             private String certIds; 
             private DefaultRule defaultRule; 
             private String description; 
+            private Boolean enableXForwardedFor; 
+            private Boolean enableXForwardedForClientSrcPort; 
+            private Boolean enableXForwardedForProto; 
+            private Boolean enableXForwardedForSlbId; 
+            private Boolean enableXForwardedForSlbPort; 
             private Long id; 
             private Integer idleTimeout; 
             private Integer listenerPort; 
@@ -737,6 +797,46 @@ public class DescribeIngressResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableXForwardedFor.
+             */
+            public Builder enableXForwardedFor(Boolean enableXForwardedFor) {
+                this.enableXForwardedFor = enableXForwardedFor;
+                return this;
+            }
+
+            /**
+             * EnableXForwardedForClientSrcPort.
+             */
+            public Builder enableXForwardedForClientSrcPort(Boolean enableXForwardedForClientSrcPort) {
+                this.enableXForwardedForClientSrcPort = enableXForwardedForClientSrcPort;
+                return this;
+            }
+
+            /**
+             * EnableXForwardedForProto.
+             */
+            public Builder enableXForwardedForProto(Boolean enableXForwardedForProto) {
+                this.enableXForwardedForProto = enableXForwardedForProto;
+                return this;
+            }
+
+            /**
+             * EnableXForwardedForSlbId.
+             */
+            public Builder enableXForwardedForSlbId(Boolean enableXForwardedForSlbId) {
+                this.enableXForwardedForSlbId = enableXForwardedForSlbId;
+                return this;
+            }
+
+            /**
+             * EnableXForwardedForSlbPort.
+             */
+            public Builder enableXForwardedForSlbPort(Boolean enableXForwardedForSlbPort) {
+                this.enableXForwardedForSlbPort = enableXForwardedForSlbPort;
                 return this;
             }
 

@@ -25,6 +25,9 @@ public class Container extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String image;
 
+    @com.aliyun.core.annotation.NameInMap("ImageRegistryConfig")
+    private ImageRegistryConfig imageRegistryConfig;
+
     @com.aliyun.core.annotation.NameInMap("MetricsCollectConfig")
     private MetricsCollectConfig metricsCollectConfig;
 
@@ -58,6 +61,7 @@ public class Container extends TeaModel {
         this.command = builder.command;
         this.environmentVariables = builder.environmentVariables;
         this.image = builder.image;
+        this.imageRegistryConfig = builder.imageRegistryConfig;
         this.metricsCollectConfig = builder.metricsCollectConfig;
         this.port = builder.port;
         this.requestConcurrency = builder.requestConcurrency;
@@ -103,6 +107,13 @@ public class Container extends TeaModel {
      */
     public String getImage() {
         return this.image;
+    }
+
+    /**
+     * @return imageRegistryConfig
+     */
+    public ImageRegistryConfig getImageRegistryConfig() {
+        return this.imageRegistryConfig;
     }
 
     /**
@@ -173,6 +184,7 @@ public class Container extends TeaModel {
         private String command; 
         private java.util.Map < String, String > environmentVariables; 
         private String image; 
+        private ImageRegistryConfig imageRegistryConfig; 
         private MetricsCollectConfig metricsCollectConfig; 
         private Integer port; 
         private Integer requestConcurrency; 
@@ -215,6 +227,14 @@ public class Container extends TeaModel {
          */
         public Builder image(String image) {
             this.image = image;
+            return this;
+        }
+
+        /**
+         * ImageRegistryConfig.
+         */
+        public Builder imageRegistryConfig(ImageRegistryConfig imageRegistryConfig) {
+            this.imageRegistryConfig = imageRegistryConfig;
             return this;
         }
 
