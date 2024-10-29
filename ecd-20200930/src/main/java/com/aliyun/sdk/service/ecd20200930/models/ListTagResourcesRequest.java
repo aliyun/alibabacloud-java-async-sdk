@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -125,7 +126,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -134,7 +138,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -143,7 +150,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,7 +163,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.
+         * <p>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-ia2zw38bi6cm7****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -161,12 +175,15 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ALIYUN::GWS::INSTANCE: cloud computer.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * * ALIYUN::GWS::INSTANCE: cloud computer.
+         * <strong>example:</strong>
+         * <p>ALIYUN::GWS::INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -175,7 +192,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that you want to query.
+         * <p>The tags that you want to query.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -190,6 +207,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -229,7 +252,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys. You can specify 1 to 20 tag keys.
+             * <p>The tag keys. You can specify 1 to 20 tag keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -237,7 +263,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The tag values. You can specify 1 to 20 tag values.
+             * <p>The tag values. You can specify 1 to 20 tag values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

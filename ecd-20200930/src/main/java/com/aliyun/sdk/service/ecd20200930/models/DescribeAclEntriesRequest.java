@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAclEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAclEntriesRequest</p>
@@ -111,10 +112,11 @@ public class DescribeAclEntriesRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Maximum value: 1600.
-         * <p>
+         * <p>The number of entries per page. Maximum value: 1600.</p>
+         * <p>Default value: 1600.</p>
          * 
-         * Default value: 1600.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -123,7 +125,10 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. If this parameter is empty, all results have been returned.
+         * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kRxd1mKkNnHlUy14zdjl/I</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -132,7 +137,11 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +150,10 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.
+         * <p>The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-****</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -150,13 +162,15 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * The granularity of the ACL.
-         * <p>
+         * <p>The granularity of the ACL.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>desktop: cloud computer</li>
+         * <li>vpc: office network</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   desktop: cloud computer
-         * *   vpc: office network
+         * <strong>example:</strong>
+         * <p>desktop</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

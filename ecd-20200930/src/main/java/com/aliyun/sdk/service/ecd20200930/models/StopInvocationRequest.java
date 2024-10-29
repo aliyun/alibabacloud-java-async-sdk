@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInvocationRequest} extends {@link RequestModel}
  *
  * <p>StopInvocationRequest</p>
@@ -83,7 +84,10 @@ public class StopInvocationRequest extends Request {
         } 
 
         /**
-         * The ID of cloud desktop N. Valid values of N: 1 to 50.
+         * <p>The ID of cloud desktop N. Valid values of N: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-7w78ozhjcwa3u****</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -92,7 +96,11 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * The ID of the execution.
+         * <p>The ID of the execution.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-7d2a745b412b4601b2d47f6a768d****</p>
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -101,7 +109,11 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

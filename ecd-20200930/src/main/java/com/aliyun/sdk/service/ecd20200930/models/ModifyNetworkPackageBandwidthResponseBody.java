@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNetworkPackageBandwidthResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyNetworkPackageBandwidthResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyNetworkPackageBandwidthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>214552063030752</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class ModifyNetworkPackageBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

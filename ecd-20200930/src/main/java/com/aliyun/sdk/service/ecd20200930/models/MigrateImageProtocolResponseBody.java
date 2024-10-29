@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateImageProtocolResponseBody} extends {@link TeaModel}
  *
  * <p>MigrateImageProtocolResponseBody</p>
@@ -49,7 +50,7 @@ public class MigrateImageProtocolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the images whose protocols failed to be updated.
+         * <p>The IDs of the images whose protocols failed to be updated.</p>
          */
         public Builder failedIds(java.util.List < String > failedIds) {
             this.failedIds = failedIds;
@@ -57,7 +58,10 @@ public class MigrateImageProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D4E5AF5-DF28-5FE7-85C7-9F98315B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

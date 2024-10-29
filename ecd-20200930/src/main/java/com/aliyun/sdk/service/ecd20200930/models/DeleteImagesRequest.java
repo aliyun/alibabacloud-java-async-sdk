@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteImagesRequest} extends {@link RequestModel}
  *
  * <p>DeleteImagesRequest</p>
@@ -83,7 +84,10 @@ public class DeleteImagesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete the associated template.
+         * <p>Specifies whether to delete the associated template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteCascadedBundle(Boolean deleteCascadedBundle) {
             this.putQueryParameter("DeleteCascadedBundle", deleteCascadedBundle);
@@ -92,7 +96,8 @@ public class DeleteImagesRequest extends Request {
         }
 
         /**
-         * The image IDs. You can specify 1 to 100 image IDs.
+         * <p>The image IDs. You can specify 1 to 100 image IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -101,7 +106,11 @@ public class DeleteImagesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

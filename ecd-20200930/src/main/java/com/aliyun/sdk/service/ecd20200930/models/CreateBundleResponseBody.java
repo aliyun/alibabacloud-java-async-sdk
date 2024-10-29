@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBundleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBundleResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateBundleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cloud computer template.
+         * <p>The ID of the cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-cezrnfgecbich****</p>
          */
         public Builder bundleId(String bundleId) {
             this.bundleId = bundleId;
@@ -57,7 +61,10 @@ public class CreateBundleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

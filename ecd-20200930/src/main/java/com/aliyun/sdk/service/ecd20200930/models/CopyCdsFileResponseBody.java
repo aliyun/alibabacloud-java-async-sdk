@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyCdsFileResponseBody} extends {@link TeaModel}
  *
  * <p>CopyCdsFileResponseBody</p>
@@ -85,7 +86,10 @@ public class CopyCdsFileResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.
+         * <p>The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the file copying.
+         * <p>The details about the file copying.</p>
          */
         public Builder copyCdsFileModel(CopyCdsFileModel copyCdsFileModel) {
             this.copyCdsFileModel = copyCdsFileModel;
@@ -101,7 +105,10 @@ public class CopyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned. This parameter is not returned if the value of Code is success.
+         * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class CopyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93AD30C1-16B8-5C54-AD23-A51FF53F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,26 +127,26 @@ public class CopyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
-         * <p>
+         * <p>Indicates whether the request is successful.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -149,6 +159,12 @@ public class CopyCdsFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CopyCdsFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>CopyCdsFileResponseBody</p>
+     */
     public static class CopyCdsFileModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
         private String asyncTaskId;
@@ -188,7 +204,10 @@ public class CopyCdsFileResponseBody extends TeaModel {
             private String fileId; 
 
             /**
-             * The ID of the asynchronous task. This parameter is not returned if you copy a file. This parameter is returned if you copy a folder in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.
+             * <p>The ID of the asynchronous task. This parameter is not returned if you copy a file. This parameter is returned if you copy a folder in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4221bf6e6ab43a255edc4463bffa6f5f5d31****</p>
              */
             public Builder asyncTaskId(String asyncTaskId) {
                 this.asyncTaskId = asyncTaskId;
@@ -196,7 +215,10 @@ public class CopyCdsFileResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the copied file or folder.
+             * <p>The ID of the copied file or folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6400727cb878821bcb414615a609b4072463****</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCustomizedListHeadersRequest} extends {@link RequestModel}
  *
  * <p>ModifyCustomizedListHeadersRequest</p>
@@ -82,7 +83,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
         } 
 
         /**
-         * The headers.
+         * <p>The headers.</p>
          */
         public Builder headers(java.util.List < Headers> headers) {
             this.putQueryParameter("Headers", headers);
@@ -91,18 +92,19 @@ public class ModifyCustomizedListHeadersRequest extends Request {
         }
 
         /**
-         * The type of the list.
-         * <p>
+         * <p>The type of the list.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>desktop: cloud computer</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   desktop: cloud computer
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>desktop</p>
          */
         public Builder listType(String listType) {
             this.putQueryParameter("ListType", listType);
@@ -111,7 +113,11 @@ public class ModifyCustomizedListHeadersRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,6 +132,12 @@ public class ModifyCustomizedListHeadersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCustomizedListHeadersRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCustomizedListHeadersRequest</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayType")
         private String displayType;
@@ -165,10 +177,13 @@ public class ModifyCustomizedListHeadersRequest extends Request {
             private String headerKey; 
 
             /**
-             * The display type of the header.
-             * <p>
+             * <p>The display type of the header.</p>
+             * <blockquote>
+             * <p>For the desktop_id_name and office_site_id_name head keys, set the value of this parameter to required. For other header keys, set the value of this parameter to display or hide based on your requirements.</p>
+             * </blockquote>
              * 
-             * > For the desktop_id_name and office_site_id_name head keys, set the value of this parameter to required. For other header keys, set the value of this parameter to display or hide based on your requirements.
+             * <strong>example:</strong>
+             * <p>display</p>
              */
             public Builder displayType(String displayType) {
                 this.displayType = displayType;
@@ -176,132 +191,120 @@ public class ModifyCustomizedListHeadersRequest extends Request {
             }
 
             /**
-             * The key of the header.
-             * <p>
+             * <p>The key of the header.</p>
+             * <blockquote>
+             * <p>All header keys of the list must be specified.</p>
+             * </blockquote>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>desktop_id_name: the IDs and names of the cloud computers.</p>
+             * <!-- -->
              * 
-             * > All header keys of the list must be specified.
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
+             * </li>
+             * <li><p>system_data_disk: the system disks and data disks of the cloud computers.</p>
+             * <!-- -->
              * 
-             * *   desktop_id_name: the IDs and names of the cloud computers.
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>office_site_type: the office network types of the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>create_time: the time when the cloud computers are created.</p>
+             * <!-- -->
              * 
-             * *   system_data_disk: the system disks and data disks of the cloud computers.
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>ip: the IP addresses of the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>spec_system_protocol: the instance types, OSs, and protocol types of the cloud computers.</p>
+             * <!-- -->
              * 
-             * *   office_site_type: the office network types of the cloud computers.
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>monitor: the monitoring information of the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>assigned_users: the number of end users that are assigned to the cloud computers.</p>
+             * <!-- -->
              * 
-             * *   create_time: the time when the cloud computers are created.
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>encryption: indicates whether the cloud computers are encrypted.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>office_site_id_name: the IDs and names of the office networks.</p>
+             * <!-- -->
              * 
-             * *   ip: the IP addresses of the cloud computers.
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>pay_type: the billing methods of the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>tag: the tags that are attached to the cloud computers.</p>
+             * <!-- -->
              * 
-             * *   spec_system_protocol: the instance types, OSs, and protocol types of the cloud computers.
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>hostname: the hostnames of the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>status: the statuses of the cloud computers.</p>
+             * <!-- -->
              * 
-             * *   monitor: the monitoring information of the cloud computers.
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>current_user: the current end users of the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             * *   assigned_users: the number of end users that are assigned to the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   encryption: indicates whether the cloud computers are encrypted.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   office_site_id_name: the IDs and names of the office networks.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   pay_type: the billing methods of the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   tag: the tags that are attached to the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   hostname: the hostnames of the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   status: the statuses of the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   current_user: the current end users of the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>pay_type</p>
              */
             public Builder headerKey(String headerKey) {
                 this.headerKey = headerKey;

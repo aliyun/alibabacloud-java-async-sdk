@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelCdsFileShareLinkRequest} extends {@link RequestModel}
  *
  * <p>CancelCdsFileShareLinkRequest</p>
@@ -69,7 +70,11 @@ public class CancelCdsFileShareLinkRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-352282****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -78,7 +83,11 @@ public class CancelCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The ID of the file sharing task.
+         * <p>The ID of the file sharing task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1Fsw****</p>
          */
         public Builder shareId(String shareId) {
             this.putQueryParameter("ShareId", shareId);

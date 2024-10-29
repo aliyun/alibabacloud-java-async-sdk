@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveCdsFileResponseBody} extends {@link TeaModel}
  *
  * <p>MoveCdsFileResponseBody</p>
@@ -85,7 +86,10 @@ public class MoveCdsFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result of the modification. A value of success indicates that the modification is successful. If the modification failed, an error message is returned.
+         * <p>The result of the modification. A value of success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class MoveCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned. This parameter is not returned if the value of Code is success.
+         * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,7 @@ public class MoveCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The response object when you move a file.
+         * <p>The response object when you move a file.</p>
          */
         public Builder moveCdsFileModel(MoveCdsFileModel moveCdsFileModel) {
             this.moveCdsFileModel = moveCdsFileModel;
@@ -109,7 +116,10 @@ public class MoveCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,26 +127,26 @@ public class MoveCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
-         * <p>
+         * <p>Indicates whether the request is successful.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><!-- -->
          * 
-         * Valid values:
+         * <p>true</p>
+         * <!-- -->
          * 
-         * *   <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
          * 
-         *     true
+         * <p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   <!-- -->
-         * 
-         *     false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -149,6 +159,12 @@ public class MoveCdsFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MoveCdsFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveCdsFileResponseBody</p>
+     */
     public static class MoveCdsFileModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
         private String asyncTaskId;
@@ -200,7 +216,10 @@ public class MoveCdsFileResponseBody extends TeaModel {
             private String fileId; 
 
             /**
-             * The ID of the asynchronous task. This parameter is not returned if you copy files. This parameter is returned if you copy folders in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.
+             * <p>The ID of the asynchronous task. This parameter is not returned if you copy files. This parameter is returned if you copy folders in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe307518-825a-4c8b-a69c-958f0e8a****</p>
              */
             public Builder asyncTaskId(String asyncTaskId) {
                 this.asyncTaskId = asyncTaskId;
@@ -208,26 +227,26 @@ public class MoveCdsFileResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the file exists.
-             * <p>
+             * <p>Indicates whether the file exists.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><!-- -->
              * 
-             * Valid values:
+             * <p>true</p>
+             * <!-- -->
              * 
-             * *   <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><!-- -->
              * 
-             *     true
+             * <p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder exist(Boolean exist) {
                 this.exist = exist;
@@ -235,7 +254,10 @@ public class MoveCdsFileResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file.
+             * <p>The ID of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63636837e47e5a24a8a940218bef395c210e****</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;

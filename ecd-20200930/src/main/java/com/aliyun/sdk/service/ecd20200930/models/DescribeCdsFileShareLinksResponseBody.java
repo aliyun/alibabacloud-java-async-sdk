@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdsFileShareLinksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdsFileShareLinksResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The operation result. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.
+         * <p>The operation result. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * The data information.
+         * <p>The data information.</p>
          */
         public Builder data(java.util.List < CdsFileShareLinkModel > data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned. This parameter is not returned if the value of Code is `success`.
+         * <p>The error message that is returned. This parameter is not returned if the value of Code is <code>success</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mnFXZiT7NdvGNgkInJ****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -129,7 +139,10 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

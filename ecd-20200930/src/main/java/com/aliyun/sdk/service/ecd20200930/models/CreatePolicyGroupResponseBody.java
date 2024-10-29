@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePolicyGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class CreatePolicyGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-gx2x1dhsmthe9****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.policyGroupId = policyGroupId;
@@ -57,7 +61,10 @@ public class CreatePolicyGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

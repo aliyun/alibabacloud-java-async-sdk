@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnapshotsRequest</p>
@@ -209,7 +210,10 @@ public class DescribeSnapshotsRequest extends Request {
         } 
 
         /**
-         * The user who creates the snapshot.
+         * <p>The user who creates the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Administrator</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -218,7 +222,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer.
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -227,7 +234,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The name of the cloud computer.
+         * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -236,7 +246,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-31T06:32:31Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -245,11 +258,14 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
+         * <p>The maximum number of entries to return on each page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100</li>
+         * <li>Default value: 10</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 100
-         * *   Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -258,7 +274,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8051af8d01b5479bec9f5ddf02e4a8fbd0ab6e7e43f8****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -267,7 +286,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -276,7 +299,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The snapshot ID.
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2ze81owrnv9pity4****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -285,7 +311,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (\_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+         * <p>The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-). The name cannot start with <code>auto</code> because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_data_disk</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -294,34 +323,33 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The category of the snapshots.
-         * <p>
+         * <p>The category of the snapshots.</p>
+         * <p>Default value: all. Valid values:</p>
+         * <ul>
+         * <li><p>all: all snapshot categories</p>
+         * <!-- -->
          * 
-         * Default value: all. Valid values:
+         * <!-- -->
          * 
-         * *   all: all snapshot categories
+         * <!-- -->
+         * </li>
+         * <li><p>auto: automatic snapshots</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>user: manual snapshots</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   auto: automatic snapshots
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   user: manual snapshots
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -330,28 +358,29 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the disk for which the snapshot is created.
-         * <p>
+         * <p>The type of the disk for which the snapshot is created.</p>
+         * <blockquote>
+         * <p> The value of this parameter is not case-sensitive.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Data: data disk</p>
+         * <!-- -->
          * 
-         * >  The value of this parameter is not case-sensitive.
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
+         * </li>
+         * <li><p>System: system disk</p>
+         * <!-- -->
          * 
-         * *   Data: data disk
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   System: system disk
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);
@@ -360,7 +389,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-30T06:32:31Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBundlesRequest} extends {@link RequestModel}
  *
  * <p>DescribeBundlesRequest</p>
@@ -335,7 +336,10 @@ public class DescribeBundlesRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud computer templates. You can specify 1 to 100 IDs.
+         * <p>The IDs of the cloud computer templates. You can specify 1 to 100 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
          */
         public Builder bundleId(java.util.List < String > bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -344,26 +348,26 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The type of the cloud computer template.
-         * <p>
+         * <p>The type of the cloud computer template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>SYSTEM: system template</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   SYSTEM: system template
+         * <!-- -->
+         * </li>
+         * <li><p>CUSTOM: custom template</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   CUSTOM: custom template
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder bundleType(String bundleType) {
             this.putQueryParameter("BundleType", bundleType);
@@ -372,7 +376,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the inventory status of the cloud computer instance type.
+         * <p>Specifies whether to query the inventory status of the cloud computer instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkStock(Boolean checkStock) {
             this.putQueryParameter("CheckStock", checkStock);
@@ -381,7 +388,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The number of vCPUs contained in the cloud computer instance type.
+         * <p>The number of vCPUs contained in the cloud computer instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.putQueryParameter("CpuCount", cpuCount);
@@ -390,14 +400,16 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The instance family of the cloud computers.
-         * <p>
+         * <p>The instance family of the cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>eds.graphics: graphical instance families</li>
+         * <li>eds.hf: instance families with high clock speeds</li>
+         * <li>eds.general: general-purpose instance families</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   eds.graphics: graphical instance families
-         * *   eds.hf: instance families with high clock speeds
-         * *   eds.general: general-purpose instance families
+         * <strong>example:</strong>
+         * <p>eds.general</p>
          */
         public Builder desktopTypeFamily(String desktopTypeFamily) {
             this.putQueryParameter("DesktopTypeFamily", desktopTypeFamily);
@@ -406,7 +418,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * This parameter is now in invitational preview and not publicly available.
+         * <p>This parameter is now in invitational preview and not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This parameter is now in invitational preview and unavailable.</p>
          */
         public Builder fotaChannel(String fotaChannel) {
             this.putQueryParameter("FotaChannel", fotaChannel);
@@ -415,26 +430,26 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether the cloud computers in the template belong to a cloud computer pool.
-         * <p>
+         * <p>Specifies whether the cloud computers in the template belong to a cloud computer pool.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fromDesktopGroup(Boolean fromDesktopGroup) {
             this.putQueryParameter("FromDesktopGroup", fromDesktopGroup);
@@ -443,7 +458,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The number of GPUs contained in the cloud computer instance type.
+         * <p>The number of GPUs contained in the cloud computer instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpuCount(Float gpuCount) {
             this.putQueryParameter("GpuCount", gpuCount);
@@ -461,7 +479,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The image ID.
+         * <p>The image ID.</p>
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -470,12 +488,12 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -484,7 +502,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The memory size of the cloud computer instance type. Unit: GiB.
+         * <p>The memory size of the cloud computer instance type. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder memorySize(Integer memorySize) {
             this.putQueryParameter("MemorySize", memorySize);
@@ -493,7 +514,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The token that is used to start the next query.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -502,26 +526,26 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The type of the OS.
-         * <p>
+         * <p>The type of the OS.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Linux</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   Linux
+         * <!-- -->
+         * </li>
+         * <li><p>Windows</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   Windows
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -530,13 +554,15 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The protocol type.
-         * <p>
+         * <p>The protocol type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>HDX: High-definition Experience (HDX) protocol</li>
+         * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   HDX: High-definition Experience (HDX) protocol
-         * *   ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -545,7 +571,11 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -554,7 +584,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The scenario to use the image.
+         * <p>The scenario to use the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FastBuy</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -563,7 +596,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The desktop template that is selected based on specific criteria.
+         * <p>The desktop template that is selected based on specific criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder selectedBundle(Boolean selectedBundle) {
             this.putQueryParameter("SelectedBundle", selectedBundle);
@@ -572,12 +608,15 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The type of the session.
-         * <p>
+         * <p>The type of the session.</p>
+         * <p>Enumeration Value:</p>
+         * <ul>
+         * <li><strong>SingleSession</strong></li>
+         * <li><strong>MultipleSession</strong></li>
+         * </ul>
          * 
-         * Enumeration Value:
-         * * **SingleSession**
-         * * **MultipleSession**
+         * <strong>example:</strong>
+         * <p>SingleSession</p>
          */
         public Builder sessionType(String sessionType) {
             this.putQueryParameter("SessionType", sessionType);
@@ -586,7 +625,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return multi-session cloud computer templates. Default value: false.
+         * <p>Specifies whether to return multi-session cloud computer templates. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder supportMultiSession(Boolean supportMultiSession) {
             this.putQueryParameter("SupportMultiSession", supportMultiSession);
@@ -595,7 +637,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable disk encryption.
+         * <p>Specifies whether to enable disk encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
             this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetNASDefaultMountTargetRequest} extends {@link RequestModel}
  *
  * <p>ResetNASDefaultMountTargetRequest</p>
@@ -69,7 +70,11 @@ public class ResetNASDefaultMountTargetRequest extends Request {
         } 
 
         /**
-         * The ID of the NAS file system.
+         * <p>The ID of the NAS file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a6ef4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -78,7 +83,11 @@ public class ResetNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyImageResponseBody} extends {@link TeaModel}
  *
  * <p>CopyImageResponseBody</p>
@@ -49,7 +50,10 @@ public class CopyImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the image that is being copied.
+         * <p>The ID of the image that is being copied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-2g65ljy3ynrdq****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -57,7 +61,10 @@ public class CopyImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28A40F12-F340-442B-A35F-46EF6A03****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

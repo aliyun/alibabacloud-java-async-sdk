@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRenewalPriceResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class Promotions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
@@ -191,6 +198,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -332,6 +345,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -393,6 +412,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenewalPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenewalPriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;

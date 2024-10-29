@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudDrivePermissionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudDrivePermissionsRequest</p>
@@ -69,7 +70,10 @@ public class DescribeCloudDrivePermissionsRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-82414*****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -78,7 +82,10 @@ public class DescribeCloudDrivePermissionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

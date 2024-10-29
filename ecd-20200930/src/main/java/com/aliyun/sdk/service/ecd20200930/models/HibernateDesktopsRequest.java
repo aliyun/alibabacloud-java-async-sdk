@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HibernateDesktopsRequest} extends {@link RequestModel}
  *
  * <p>HibernateDesktopsRequest</p>
@@ -69,7 +70,8 @@ public class HibernateDesktopsRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.
+         * <p>The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -78,7 +80,11 @@ public class HibernateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

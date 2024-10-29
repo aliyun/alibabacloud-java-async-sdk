@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopGroupSessionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDesktopGroupSessionsRequest</p>
@@ -151,7 +152,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2022-08-31T06:56:45Z&quot;</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,7 +164,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the end user.
+         * <p>The ID of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xianqiu</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -169,7 +176,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -178,7 +188,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;asdfdfsdfsdfds&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -187,13 +200,15 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The type of the session.
-         * <p>
+         * <p>The type of the session.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: single-session</li>
+         * <li>1: multi-session</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   0: single-session
-         * *   1: multi-session
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ownType(Integer ownType) {
             this.putQueryParameter("OwnType", ownType);
@@ -202,7 +217,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,26 +229,26 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The status of the session.
-         * <p>
+         * <p>The status of the session.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Connected</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   Connected
+         * <!-- -->
+         * </li>
+         * <li><p>Disconnected</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   Disconnected
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Connected</p>
          */
         public Builder sessionStatus(String sessionStatus) {
             this.putQueryParameter("SessionStatus", sessionStatus);
@@ -239,7 +257,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2022-08-31T06:56:45Z&quot;</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

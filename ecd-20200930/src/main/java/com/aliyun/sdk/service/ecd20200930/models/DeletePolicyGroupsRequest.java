@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePolicyGroupsRequest} extends {@link RequestModel}
  *
  * <p>DeletePolicyGroupsRequest</p>
@@ -69,7 +70,11 @@ public class DeletePolicyGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the policy. You can specify 1 to 100 policy IDs.
+         * <p>The ID of the policy. You can specify 1 to 100 policy IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-gx2x1dhsmthe9****</p>
          */
         public Builder policyGroupId(java.util.List < String > policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -78,7 +83,11 @@ public class DeletePolicyGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

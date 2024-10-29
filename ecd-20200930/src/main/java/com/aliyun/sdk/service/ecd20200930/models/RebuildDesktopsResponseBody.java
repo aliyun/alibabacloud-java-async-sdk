@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebuildDesktopsResponseBody} extends {@link TeaModel}
  *
  * <p>RebuildDesktopsResponseBody</p>
@@ -49,7 +50,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The recreation results.
+         * <p>The recreation results.</p>
          */
         public Builder rebuildResults(java.util.List < RebuildResults> rebuildResults) {
             this.rebuildResults = rebuildResults;
@@ -57,7 +58,10 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class RebuildDesktopsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RebuildDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>RebuildDesktopsResponseBody</p>
+     */
     public static class RebuildResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -121,7 +131,10 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The recreation result code. If the request was successful, `success` is returned. If the request failed, an error message is returned.
+             * <p>The recreation result code. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IncorrectDesktopStatus</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -129,7 +142,10 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the cloud computers.
+             * <p>The IDs of the cloud computers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-gx2x1dhsmucyy****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -137,7 +153,10 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message. This parameter is invalid if the value of `Code` is `success`.
+             * <p>The error message. This parameter is invalid if the value of <code>Code</code> is <code>success</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The current status of the desktop does not support this operation.</p>
              */
             public Builder message(String message) {
                 this.message = message;

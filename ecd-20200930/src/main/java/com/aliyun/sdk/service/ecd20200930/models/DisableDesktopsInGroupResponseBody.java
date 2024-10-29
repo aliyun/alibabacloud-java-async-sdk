@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableDesktopsInGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DisableDesktopsInGroupResponseBody</p>
@@ -37,7 +38,10 @@ public class DisableDesktopsInGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34FB4D97-C0D9-5534-ABC6-90C7EBD5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

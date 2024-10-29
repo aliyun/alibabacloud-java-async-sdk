@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportClientEventsRequest} extends {@link RequestModel}
  *
  * <p>ExportClientEventsRequest</p>
@@ -208,7 +209,10 @@ public class ExportClientEventsRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud desktop.
+         * <p>The ID of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -217,7 +221,10 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The name of the cloud desktop.
+         * <p>The name of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -226,10 +233,11 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * <p>If you do not specify a value for this parameter, the current time is used.</p>
          * 
-         * If you do not specify a value for this parameter, the current time is used.
+         * <strong>example:</strong>
+         * <p>2022-03-23T07:11:01Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -238,7 +246,10 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint user.
+         * <p>The ID of the endpoint user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -247,18 +258,20 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The type of event that you want to query. Valid values:
-         * <p>
+         * <p>The type of event that you want to query. Valid values:</p>
+         * <ul>
+         * <li>DESKTOP_CONNECT: The desktop session is established.</li>
+         * <li>DESKTOP_DISCONNECT: The desktop session is disconnected.</li>
+         * <li>DESKTOP_REBOOT: The cloud desktop is restarted.</li>
+         * <li>CLIENT_AD_LOGIN: The AD user logs on to the client.</li>
+         * <li>GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.</li>
+         * <li>DESKTOP_START: The cloud desktop is started.</li>
+         * <li>DESKTOP_STOP: The cloud desktop is stopped.</li>
+         * </ul>
+         * <p>If you do not specify a value for this parameter, events of all types are queried.</p>
          * 
-         * *   DESKTOP_CONNECT: The desktop session is established.
-         * *   DESKTOP_DISCONNECT: The desktop session is disconnected.
-         * *   DESKTOP_REBOOT: The cloud desktop is restarted.
-         * *   CLIENT_AD_LOGIN: The AD user logs on to the client.
-         * *   GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.
-         * *   DESKTOP_START: The cloud desktop is started.
-         * *   DESKTOP_STOP: The cloud desktop is stopped.
-         * 
-         * If you do not specify a value for this parameter, events of all types are queried.
+         * <strong>example:</strong>
+         * <p>CLIENT_LOGIN</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -267,7 +280,7 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The types of event.
+         * <p>The types of event.</p>
          */
         public Builder eventTypes(java.util.List < String > eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
@@ -276,13 +289,15 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The language in which the cloud desktop is displayed in the console UI. You can export the list of cloud desktops in the specified language. Valid values:
-         * <p>
+         * <p>The language in which the cloud desktop is displayed in the console UI. You can export the list of cloud desktops in the specified language. Valid values:</p>
+         * <ul>
+         * <li><code>zh-CN</code>: Simplified Chinese</li>
+         * <li><code>en-GB</code>: English (United Kingdom)</li>
+         * </ul>
+         * <p>Default value: <code>zh-CN</code>.</p>
          * 
-         * *   `zh-CN`: Simplified Chinese
-         * *   `en-GB`: English (United Kingdom)
-         * 
-         * Default value: `zh-CN`.
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder langType(String langType) {
             this.putQueryParameter("LangType", langType);
@@ -291,11 +306,14 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 5000.</li>
+         * <li>Default value: 5000.</li>
+         * </ul>
          * 
-         * *   Maximum value: 5000.
-         * *   Default value: 5000.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -304,7 +322,10 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -313,7 +334,10 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The name of the workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -322,7 +346,11 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -331,10 +359,11 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * <p>If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for <code>EndTime</code> are queried.</p>
          * 
-         * If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for `EndTime` are queried.
+         * <strong>example:</strong>
+         * <p>2022-03-23T04:10:21Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageModifiedRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageModifiedRecordsRequest</p>
@@ -97,7 +98,11 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud computer.
+         * <p>The ID of the cloud computer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-bd53sfmysz8ir****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -106,11 +111,14 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
+         * <p>The maximum number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -119,7 +127,10 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l3d+SWeOobbIlDLjwhjkTk</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -128,7 +139,11 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

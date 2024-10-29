@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCloudDrivePermissionRequest} extends {@link RequestModel}
  *
  * <p>ModifyCloudDrivePermissionRequest</p>
@@ -97,7 +98,11 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk in Cloud Drive Service.
+         * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-60911*****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -106,7 +111,7 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         }
 
         /**
-         * The IDs of the users who have the download permissions.
+         * <p>The IDs of the users who have the download permissions.</p>
          */
         public Builder downloadEndUserIds(java.util.List < String > downloadEndUserIds) {
             this.putQueryParameter("DownloadEndUserIds", downloadEndUserIds);
@@ -115,7 +120,7 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         }
 
         /**
-         * The IDs of the users who have the upload and download permissions.
+         * <p>The IDs of the users who have the upload and download permissions.</p>
          */
         public Builder downloadUploadEndUserIds(java.util.List < String > downloadUploadEndUserIds) {
             this.putQueryParameter("DownloadUploadEndUserIds", downloadUploadEndUserIds);
@@ -124,7 +129,11 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

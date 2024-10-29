@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNASFileSystemsRequest} extends {@link RequestModel}
  *
  * <p>DescribeNASFileSystemsRequest</p>
@@ -125,7 +126,10 @@ public class DescribeNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * The IDs of the NAS file system.
+         * <p>The IDs of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****</p>
          */
         public Builder fileSystemId(java.util.List < String > fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -134,7 +138,10 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * Specifies whether to filter NAS file systems that only support the user profile management (UPM) feature.
+         * <p>Specifies whether to filter NAS file systems that only support the user profile management (UPM) feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder matchCompatibleProfile(Boolean matchCompatibleProfile) {
             this.putQueryParameter("MatchCompatibleProfile", matchCompatibleProfile);
@@ -143,12 +150,12 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -157,7 +164,10 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query.
+         * <p>The token that determines the start point of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -166,7 +176,10 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -175,7 +188,11 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

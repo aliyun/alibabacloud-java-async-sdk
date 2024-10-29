@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompleteCdsFileResponseBody} extends {@link TeaModel}
  *
  * <p>CompleteCdsFileResponseBody</p>
@@ -37,7 +38,10 @@ public class CompleteCdsFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05C2791F-41A7-5E7C-B5E4-1401FD0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApproveFotaUpdateRequest} extends {@link RequestModel}
  *
  * <p>ApproveFotaUpdateRequest</p>
@@ -84,7 +85,11 @@ public class ApproveFotaUpdateRequest extends Request {
         } 
 
         /**
-         * Mirror version.
+         * <p>Mirror version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1-D-20220513.143129</p>
          */
         public Builder appVersion(String appVersion) {
             this.putQueryParameter("AppVersion", appVersion);
@@ -93,7 +98,11 @@ public class ApproveFotaUpdateRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer.
+         * <p>The ID of the cloud computer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-138dsptkrt00u****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -102,7 +111,11 @@ public class ApproveFotaUpdateRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by Elastic Desktop Service.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

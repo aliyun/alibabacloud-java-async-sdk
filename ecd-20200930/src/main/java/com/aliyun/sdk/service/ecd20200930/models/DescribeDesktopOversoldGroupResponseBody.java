@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopOversoldGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDesktopOversoldGroupResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDesktopOversoldGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopOversoldGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConcurrenceCount")
         private Integer concurrenceCount;

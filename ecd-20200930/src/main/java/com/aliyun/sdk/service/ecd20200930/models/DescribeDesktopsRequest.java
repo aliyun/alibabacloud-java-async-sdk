@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDesktopsRequest</p>
@@ -105,6 +106,14 @@ public class DescribeDesktopsRequest extends Request {
     private java.util.List < String > osTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     private String policyGroupId;
 
@@ -170,6 +179,8 @@ public class DescribeDesktopsRequest extends Request {
         this.officeSiteName = builder.officeSiteName;
         this.onlyDesktopGroup = builder.onlyDesktopGroup;
         this.osTypes = builder.osTypes;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.policyGroupId = builder.policyGroupId;
         this.protocolType = builder.protocolType;
         this.qosRuleId = builder.qosRuleId;
@@ -357,6 +368,20 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return policyGroupId
      */
     public String getPolicyGroupId() {
@@ -450,6 +475,8 @@ public class DescribeDesktopsRequest extends Request {
         private String officeSiteName; 
         private Boolean onlyDesktopGroup; 
         private java.util.List < String > osTypes; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String policyGroupId; 
         private String protocolType; 
         private String qosRuleId; 
@@ -490,6 +517,8 @@ public class DescribeDesktopsRequest extends Request {
             this.officeSiteName = request.officeSiteName;
             this.onlyDesktopGroup = request.onlyDesktopGroup;
             this.osTypes = request.osTypes;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.policyGroupId = request.policyGroupId;
             this.protocolType = request.protocolType;
             this.qosRuleId = request.qosRuleId;
@@ -503,7 +532,10 @@ public class DescribeDesktopsRequest extends Request {
         } 
 
         /**
-         * The billing method of the cloud desktop.
+         * <p>The billing method of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -512,7 +544,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.
+         * <p>The ID of the desktop group. If you specify the <code>DesktopId</code> parameter, ignore the <code>DesktopGroupId</code> parameter. If you do not specify the <code>DesktopId</code> parameter, specify the <code>DesktopGroupId</code> parameter in the call to request all IDs of the cloud desktops in the specified desktop group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -521,7 +556,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.
+         * <p>The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -530,7 +568,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The name of the cloud desktop.
+         * <p>The name of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDesktopName</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -539,7 +580,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The status of the cloud desktop.
+         * <p>The status of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder desktopStatus(String desktopStatus) {
             this.putQueryParameter("DesktopStatus", desktopStatus);
@@ -548,7 +592,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The list of desktop status.
+         * <p>The list of desktop status.</p>
          */
         public Builder desktopStatusList(java.util.List < String > desktopStatusList) {
             this.putQueryParameter("DesktopStatusList", desktopStatusList);
@@ -557,7 +601,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The new desktop type. You can call the [DescribeDesktopTypes](~~DescribeDesktopTypes~~) operation to query the IDs of supported desktop types.
+         * <p>The new desktop type. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the IDs of supported desktop types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.general.2c8g</p>
          */
         public Builder desktopType(String desktopType) {
             this.putQueryParameter("DesktopType", desktopType);
@@ -566,7 +613,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the directory, The ID is the same as the workspace ID.
+         * <p>The ID of the directory, The ID is the same as the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -575,10 +625,13 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.
-         * <p>
+         * <p>The IDs of the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.</p>
+         * <blockquote>
+         * <p>Only one end user can use the cloud desktop at a time.</p>
+         * </blockquote>
          * 
-         * > Only one end user can use the cloud desktop at a time.
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -587,7 +640,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the end users that are excluded from the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.
+         * <p>The IDs of the end users that are excluded from the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>andy</p>
          */
         public Builder excludedEndUserId(java.util.List < String > excludedEndUserId) {
             this.putQueryParameter("ExcludedEndUserId", excludedEndUserId);
@@ -596,7 +652,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The time when the subscription cloud desktop expires.
+         * <p>The time when the subscription cloud desktop expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-31T15:59:59Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -614,7 +673,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to filter cloud desktops in the desktop group.
+         * <p>Specifies whether to filter cloud desktops in the desktop group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder filterDesktopGroup(Boolean filterDesktopGroup) {
             this.putQueryParameter("FilterDesktopGroup", filterDesktopGroup);
@@ -632,10 +694,13 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group.
-         * <p>
+         * <p>The ID of the desktop group.</p>
+         * <blockquote>
+         * <p>The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.</p>
+         * </blockquote>
          * 
-         * > The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.
+         * <strong>example:</strong>
+         * <p>dg-boyczi8enfyc5****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -644,7 +709,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the images.
+         * <p>The IDs of the images.</p>
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -653,7 +718,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The flag that is used to manage the cloud desktops.
+         * <p>The flag that is used to manage the cloud desktops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoFlag</p>
          */
         public Builder managementFlag(String managementFlag) {
             this.putQueryParameter("ManagementFlag", managementFlag);
@@ -662,11 +730,14 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Maximum value: 100</li>
+         * <li>Default value: 10</li>
+         * </ul>
          * 
-         * *   Maximum value: 100
-         * *   Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -675,7 +746,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -684,7 +758,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -693,7 +770,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The name of the workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -702,7 +782,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The progress when the cloud desktop was created.
+         * <p>The progress when the cloud desktop was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onlyDesktopGroup(Boolean onlyDesktopGroup) {
             this.putQueryParameter("OnlyDesktopGroup", onlyDesktopGroup);
@@ -711,7 +794,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The types of the OSs.
+         * <p>The types of the OSs.</p>
          */
         public Builder osTypes(java.util.List < String > osTypes) {
             this.putQueryParameter("OsTypes", osTypes);
@@ -720,7 +803,28 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system-all-enabled-policy</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -729,7 +833,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The type of the protocol.
+         * <p>The type of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -747,7 +854,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the information about image update of the cloud desktop.
+         * <p>Specifies whether to query the information about image update of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder queryFotaUpdate(Boolean queryFotaUpdate) {
             this.putQueryParameter("QueryFotaUpdate", queryFotaUpdate);
@@ -756,7 +866,11 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+         * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -774,7 +888,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot policy.
+         * <p>The ID of the snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-hb12mclyne09xw***</p>
          */
         public Builder snapshotPolicyId(String snapshotPolicyId) {
             this.putQueryParameter("SnapshotPolicyId", snapshotPolicyId);
@@ -792,7 +909,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).
+         * <p>The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -801,7 +918,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The name of the end user.
+         * <p>The name of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -816,6 +936,12 @@ public class DescribeDesktopsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDesktopsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -855,7 +981,10 @@ public class DescribeDesktopsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.
+             * <p>The key of the tag. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. You cannot specify an empty string as a tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -863,7 +992,10 @@ public class DescribeDesktopsRequest extends Request {
             }
 
             /**
-             * The value of the tag. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <p>The value of the tag. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

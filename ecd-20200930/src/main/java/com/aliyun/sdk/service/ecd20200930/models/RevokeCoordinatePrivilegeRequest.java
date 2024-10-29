@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeCoordinatePrivilegeRequest} extends {@link RequestModel}
  *
  * <p>RevokeCoordinatePrivilegeRequest</p>
@@ -112,7 +113,11 @@ public class RevokeCoordinatePrivilegeRequest extends Request {
         } 
 
         /**
-         * The ID of the stream coordination task.
+         * <p>The ID of the stream coordination task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>co-fqsm6e8ee75w61fp9</p>
          */
         public Builder coId(String coId) {
             this.putQueryParameter("CoId", coId);
@@ -121,7 +126,10 @@ public class RevokeCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * The ID of the end user.
+         * <p>The ID of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -130,7 +138,11 @@ public class RevokeCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,10 +151,12 @@ public class RevokeCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * The type of user who requires the coordinate permissions.
-         * <p>
+         * <p>The type of user who requires the coordinate permissions.</p>
+         * <p>Set the value to TENANT_ADMIN. Only tenant administrators can be granted with the coordinate permissions.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to TENANT_ADMIN. Only tenant administrators can be granted with the coordinate permissions.
+         * <strong>example:</strong>
+         * <p>TENANT_ADMIN</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);
@@ -151,7 +165,10 @@ public class RevokeCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click **About** on the client logon page to view the identifier of the client.
+         * <p>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click <strong>About</strong> on the client logon page to view the identifier of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C78CA9E99315687575DD2844C1F3****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

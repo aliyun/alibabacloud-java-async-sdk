@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSimpleOfficeSiteResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSimpleOfficeSiteResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateSimpleOfficeSiteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The office network ID.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+os-c5cy7q578s8jc****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
@@ -57,7 +61,10 @@ public class CreateSimpleOfficeSiteResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageModifiedRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageModifiedRecordsResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the image modification record.
+         * <p>Details about the image modification record.</p>
          */
         public Builder imageModifiedRecords(java.util.List < ImageModifiedRecords> imageModifiedRecords) {
             this.imageModifiedRecords = imageModifiedRecords;
@@ -81,7 +82,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * If the NextToken parameter is empty, no next page exists.
+         * <p>If the NextToken parameter is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6koN7RqHg3d2z8LKmSoe821</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +93,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC40EE61-7E83-59ED-AEA6-7EE9C437F352</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of image modification records.
+         * <p>The total number of image modification records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +120,12 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageModifiedRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageModifiedRecordsResponseBody</p>
+     */
     public static class ImageModifiedRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -197,7 +213,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the original image.
+             * <p>The ID of the original image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-8rnz2imrpcfuh****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -205,7 +224,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the original image.
+             * <p>The name of the original image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>win10-0307</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -213,7 +235,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the new image after the image was modified.
+             * <p>The ID of the new image after the image was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxNewImageID</p>
              */
             public Builder newImageId(String newImageId) {
                 this.newImageId = newImageId;
@@ -221,7 +246,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the new image after the image was modified.
+             * <p>The name of the new image after the image was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxImageID</p>
              */
             public Builder newImageName(String newImageName) {
                 this.newImageName = newImageName;
@@ -229,16 +257,19 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image modification.
-             * <p>
+             * <p>The status of the image modification.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>0: The image is being modified.</p>
+             * </li>
+             * <li><p>1: The image is successfully modified.</p>
+             * </li>
+             * <li><p>2: The image fails to be modified.</p>
+             * </li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   0: The image is being modified.
-             * 
-             * *   1: The image is successfully modified.
-             * 
-             * *   2: The image fails to be modified.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -246,7 +277,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was last modified.
+             * <p>The time when the image was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-03T02:43:44.851Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

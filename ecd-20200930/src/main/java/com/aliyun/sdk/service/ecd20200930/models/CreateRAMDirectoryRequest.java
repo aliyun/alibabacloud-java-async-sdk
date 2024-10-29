@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRAMDirectoryRequest} extends {@link RequestModel}
  *
  * <p>CreateRAMDirectoryRequest</p>
@@ -126,34 +127,33 @@ public class CreateRAMDirectoryRequest extends Request {
         } 
 
         /**
-         * The method in which the cloud computer is connected.
-         * <p>
+         * <p>The method in which the cloud computer is connected.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>VPC</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   VPC
+         * <!-- -->
+         * </li>
+         * <li><p>Internet (default)</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Any</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Internet (default)
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Any
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -162,7 +162,11 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * The directory name. The name must be 2 to 255 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The directory name. The name must be 2 to 255 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDirectoryName</p>
          */
         public Builder directoryName(String directoryName) {
             this.putQueryParameter("DirectoryName", directoryName);
@@ -171,28 +175,27 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.
-         * <p>
+         * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><!-- -->
          * 
-         * Valid values:
+         * <p>true</p>
+         * <!-- -->
          * 
-         * *   <!-- -->
+         * <p>(default)</p>
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
          * 
-         *     true
+         * <p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     (default)
-         * 
-         *     <!-- -->
-         * 
-         * *   <!-- -->
-         * 
-         *     false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -201,26 +204,26 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access.
-         * <p>
+         * <p>Specifies whether to enable Internet access.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
             this.putQueryParameter("EnableInternetAccess", enableInternetAccess);
@@ -229,7 +232,11 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +245,8 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * The vSwitch IDs. You can configure only one vSwitch.
+         * <p>The vSwitch IDs. You can configure only one vSwitch.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder vSwitchId(java.util.List < String > vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

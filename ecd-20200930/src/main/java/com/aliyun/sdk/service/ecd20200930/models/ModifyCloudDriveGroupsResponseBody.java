@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCloudDriveGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCloudDriveGroupsResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyCloudDriveGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned results. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.
+         * <p>The returned results. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class ModifyCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The data information.
+         * <p>The data information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +108,10 @@ public class ModifyCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class ModifyCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class ModifyCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

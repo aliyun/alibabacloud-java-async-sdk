@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAclEntriesRequest} extends {@link RequestModel}
  *
  * <p>ModifyAclEntriesRequest</p>
@@ -99,14 +100,18 @@ public class ModifyAclEntriesRequest extends Request {
         } 
 
         /**
-         * The Internet access control policy.
-         * <p>
+         * <p>The Internet access control policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>allow: allows access to the Internet.</p>
+         * </li>
+         * <li><p>disable: forbids access to the Internet.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   allow: allows access to the Internet.
-         * 
-         * *   disable: forbids access to the Internet.
+         * <strong>example:</strong>
+         * <p>allow</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -115,7 +120,11 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +133,8 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * The instance IDs (office network IDs or cloud computer IDs) to which the Internet access control policy is applicable.
+         * <p>The instance IDs (office network IDs or cloud computer IDs) to which the Internet access control policy is applicable.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sourceId(java.util.List < String > sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -133,14 +143,18 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * The granularity to which the Internet access control policy is applicable.
-         * <p>
+         * <p>The granularity to which the Internet access control policy is applicable.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>desktop: cloud computer granularity.</p>
+         * </li>
+         * <li><p>vpc: office network granularity.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   desktop: cloud computer granularity.
-         * 
-         * *   vpc: office network granularity.
+         * <strong>example:</strong>
+         * <p>desktop</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

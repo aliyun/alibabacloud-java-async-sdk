@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelCoordinationForMonitoringRequest} extends {@link RequestModel}
  *
  * <p>CancelCoordinationForMonitoringRequest</p>
@@ -97,7 +98,8 @@ public class CancelCoordinationForMonitoringRequest extends Request {
         } 
 
         /**
-         * The IDs of stream collaboration tasks.
+         * <p>The IDs of stream collaboration tasks.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder coIds(java.util.List < String > coIds) {
             this.putQueryParameter("CoIds", coIds);
@@ -106,7 +108,10 @@ public class CancelCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * The ID of the end user that initiates stream collaboration. If the initiator is the administrator, skip this parameter.
+         * <p>The ID of the end user that initiates stream collaboration. If the initiator is the administrator, skip this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -115,7 +120,11 @@ public class CancelCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,12 +133,14 @@ public class CancelCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * The type of the user.
-         * <p>
+         * <p>The type of the user.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>TENANT_ADMIN: administrator.</li>
+         * </ul>
          * 
-         * Valid value:
-         * 
-         * * TENANT_ADMIN: administrator.
+         * <strong>example:</strong>
+         * <p>TENANT_ADMIN</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

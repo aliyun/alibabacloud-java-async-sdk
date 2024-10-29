@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOfficeSiteSsoStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetOfficeSiteSsoStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class GetOfficeSiteSsoStatusResponseBody extends TeaModel {
         private Boolean ssoStatus; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class GetOfficeSiteSsoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether SSO is enabled.
+         * <p>Indicates whether SSO is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ssoStatus(Boolean ssoStatus) {
             this.ssoStatus = ssoStatus;

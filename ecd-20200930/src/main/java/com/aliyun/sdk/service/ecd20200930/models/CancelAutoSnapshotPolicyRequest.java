@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>CancelAutoSnapshotPolicyRequest</p>
@@ -83,7 +84,8 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud computers. You can specify 1 to 50 IDs. The IDs cannot be an empty string. The IDs can be up to 64 characters in length and cannot contain `http://` or `https://`. The IDs cannot start with `acs:` or `aliyun`.
+         * <p>The IDs of the cloud computers. You can specify 1 to 50 IDs. The IDs cannot be an empty string. The IDs can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The IDs cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -92,7 +94,10 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy.
+         * <p>The ID of the automatic snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-78lhzpe7kjfnd****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -101,7 +106,11 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDirectoryUsersRequest} extends {@link RequestModel}
  *
  * <p>ListDirectoryUsersRequest</p>
@@ -162,7 +163,11 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The ID of the AD directory.
+         * <p>The ID of the AD directory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -171,7 +176,10 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.
+         * <p>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -180,12 +188,12 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -194,7 +202,10 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The token used to start the next query. If the value of this parameter is empty, all results are returned.
+         * <p>The token used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -203,7 +214,10 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The organizational unit (OU) in the specified AD domain.
+         * <p>The organizational unit (OU) in the specified AD domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com/Domain Controllers</p>
          */
         public Builder OUPath(String OUPath) {
             this.putQueryParameter("OUPath", OUPath);
@@ -212,7 +226,11 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUserEntitlementRequest} extends {@link RequestModel}
  *
  * <p>ModifyUserEntitlementRequest</p>
@@ -96,7 +97,7 @@ public class ModifyUserEntitlementRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud computers to which you want to add end users.
+         * <p>The IDs of the cloud computers to which you want to add end users.</p>
          */
         public Builder authorizeDesktopId(java.util.List < String > authorizeDesktopId) {
             this.putQueryParameter("AuthorizeDesktopId", authorizeDesktopId);
@@ -105,7 +106,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * The ID of the users.
+         * <p>The ID of the users.</p>
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -114,7 +115,11 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,7 +128,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud computers whose end users you want to remove.
+         * <p>The IDs of the cloud computers whose end users you want to remove.</p>
          */
         public Builder revokeDesktopId(java.util.List < String > revokeDesktopId) {
             this.putQueryParameter("RevokeDesktopId", revokeDesktopId);

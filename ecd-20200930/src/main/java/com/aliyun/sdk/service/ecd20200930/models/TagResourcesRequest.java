@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -99,7 +100,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -108,7 +113,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.
+         * <p>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-ia2zw38bi6cm7****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -117,12 +126,15 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ALIYUN::GWS::INSTANCE: cloud computer.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * * ALIYUN::GWS::INSTANCE: cloud computer.
+         * <strong>example:</strong>
+         * <p>ALIYUN::GWS::INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -131,7 +143,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the cloud computers. You can specify 1 to 20 tags.
+         * <p>The tags that you want to add to the cloud computers. You can specify 1 to 20 tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -146,6 +159,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -185,7 +204,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with `acs:` or `aliyun` and cannot contain `http://` or `https://`.
+             * <p>The tag keys. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -193,7 +215,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+             * <p>The tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

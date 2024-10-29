@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCdsFilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCdsFilesResponseBody</p>
@@ -109,7 +110,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result of the operation. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.
+         * <p>The result of the operation. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder count(String count) {
             this.count = count;
@@ -125,7 +132,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The files.
+         * <p>The files.</p>
          */
         public Builder fileModels(java.util.List < FileModels> fileModels) {
             this.fileModels = fileModels;
@@ -133,7 +140,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed. This parameter is empty if the value of Code is success.
+         * <p>The error message returned if the request failed. This parameter is empty if the value of Code is success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +151,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The token used for the next query. If this parameter is empty, all results have been returned.
+         * <p>The token used for the next query. If this parameter is empty, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WyI2MzhmMjA2ZTFmZGZlZGVjZDk3OTRlNzVhZmIwMDFiZmM5NWQ3YTgwIiwibiIsIm4iLDEsLTEsMTY3MDMyNDMzNTAzMSwiNjM4ZjIwNmZjNDFkMzIwOTZmZWU0NGYxODkwY2I5ZjI0Mjg0NzM2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -149,7 +162,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. An ID is the unique identifier of the request.
+         * <p>The request ID. An ID is the unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40D86754-20FD-53DC-A9B8-25F7FECC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,26 +173,26 @@ public class ListCdsFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
-         * <p>
+         * <p>Indicates whether the request is successful.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
          * 
-         *     <!-- -->
+         * <p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   <!-- -->
-         * 
-         *     false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -189,6 +205,12 @@ public class ListCdsFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCdsFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCdsFilesResponseBody</p>
+     */
     public static class FileModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -456,7 +478,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             private String thumbnail; 
 
             /**
-             * The file category. PDS categorizes files based on their suffixes and MIME types. The following major categories are included: doc, image, audio, and video.
+             * <p>The file category. PDS categorizes files based on their suffixes and MIME types. The following major categories are included: doc, image, audio, and video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -464,7 +489,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The content type of the file.
+             * <p>The content type of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/json</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -472,7 +500,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file was created.
+             * <p>The time when the file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T07:27:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -480,7 +511,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The file creator.
+             * <p>The file creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user01</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -488,7 +522,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The file description.
+             * <p>The file description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -496,7 +533,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the file. The download URL is valid for only 15 minutes. If the URL is expired, you can call the GetFile operation to obtain the file.
+             * <p>The URL that is used to download the file. The download URL is valid for only 15 minutes. If the URL is expired, you can call the GetFile operation to obtain the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -504,7 +544,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The filename extension.
+             * <p>The filename extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileExtension(String fileExtension) {
                 this.fileExtension = fileExtension;
@@ -512,7 +555,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The file ID.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>637725ff2f63db8470984e6c92c692b87d52****</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -520,7 +566,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The file path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>isv/1019236948660053/temp/</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -528,7 +577,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The file type.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -536,7 +588,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 value of the file.
+             * <p>The MD5 value of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63c83ececb4e6926c51448fc5ecb****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -544,7 +599,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file was last modified.
+             * <p>The time when the file was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T07:27:08Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -552,7 +610,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The user who modified the file.
+             * <p>The user who modified the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user02</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -560,7 +621,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The file name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fvt-appcenterp4qwa</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -568,7 +632,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file was last opened.
+             * <p>The time when the file was last opened.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T07:27:08Z</p>
              */
             public Builder openTime(String openTime) {
                 this.openTime = openTime;
@@ -576,7 +643,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the time when the file was last opened.
+             * <p>The timestamp that indicates the time when the file was last opened.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168951245231</p>
              */
             public Builder openTimeStamp(Long openTimeStamp) {
                 this.openTimeStamp = openTimeStamp;
@@ -584,7 +654,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent folder.
+             * <p>The ID of the parent folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3343213ff2f63db8470984e6c92c3213dfdw****</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -592,7 +665,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+             * <p>The region ID You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -600,7 +676,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA 1 file.
+             * <p>The SHA 1 file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EA4942AA8761213890A5C386F88E6464D2C3****</p>
              */
             public Builder sha1(String sha1) {
                 this.sha1 = sha1;
@@ -608,7 +687,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The file size. Unit: bits.
+             * <p>The file size. Unit: bits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102400</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -616,7 +698,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the thumbnail.
+             * <p>The URL of the thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;

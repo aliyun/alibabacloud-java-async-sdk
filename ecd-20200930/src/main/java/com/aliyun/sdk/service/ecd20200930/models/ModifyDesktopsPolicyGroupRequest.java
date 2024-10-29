@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopsPolicyGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesktopsPolicyGroupRequest</p>
@@ -97,7 +98,11 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud desktop. You can specify one or more desktop IDs. The value is a JSON array.
+         * <p>The ID of the cloud desktop. You can specify one or more desktop IDs. The value is a JSON array.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-ia2zw38bi6cm7****</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -106,7 +111,10 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-gx2x1dhsmthe9****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -115,7 +123,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * 策略ID列表。
+         * <p>策略ID列表。</p>
          */
         public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
@@ -124,7 +132,11 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

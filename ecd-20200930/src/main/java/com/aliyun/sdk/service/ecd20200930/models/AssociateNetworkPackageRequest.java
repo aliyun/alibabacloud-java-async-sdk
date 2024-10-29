@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateNetworkPackageRequest} extends {@link RequestModel}
  *
  * <p>AssociateNetworkPackageRequest</p>
@@ -84,7 +85,11 @@ public class AssociateNetworkPackageRequest extends Request {
         } 
 
         /**
-         * The ID of the premium bandwidth plan.
+         * <p>The ID of the premium bandwidth plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-e0iodl3yzb62q****</p>
          */
         public Builder networkPackageId(String networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -93,7 +98,11 @@ public class AssociateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The ID of the office network. You can call the [DescribeNetworkPackages](~~216079~~) to obtain the ID of the office network to which a premium bandwidth plan is bound.
+         * <p>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216079.html">DescribeNetworkPackages</a> to obtain the ID of the office network to which a premium bandwidth plan is bound.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-*********</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -102,7 +111,11 @@ public class AssociateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

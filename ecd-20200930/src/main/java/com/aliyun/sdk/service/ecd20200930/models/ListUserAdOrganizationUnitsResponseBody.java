@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserAdOrganizationUnitsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserAdOrganizationUnitsResponseBody</p>
@@ -61,7 +62,10 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * A pagination token.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAAAAA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * The OUs of the AD domain.
+         * <p>The OUs of the AD domain.</p>
          */
         public Builder OUNames(java.util.List < OUNames> OUNames) {
             this.OUNames = OUNames;
@@ -77,7 +81,10 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserAdOrganizationUnitsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserAdOrganizationUnitsResponseBody</p>
+     */
     public static class OUNames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayOUName")
         private String displayOUName;
@@ -141,7 +154,10 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
             private String officeSiteId; 
 
             /**
-             * The name of the OU.
+             * <p>The name of the OU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wuying_computers</p>
              */
             public Builder displayOUName(String displayOUName) {
                 this.displayOUName = displayOUName;
@@ -149,7 +165,10 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The canonical name (CNAME) of the OU in the AD domain controller.
+             * <p>The canonical name (CNAME) of the OU in the AD domain controller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com/wuying_computers</p>
              */
             public Builder OUName(String OUName) {
                 this.OUName = OUName;
@@ -157,7 +176,10 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The enterprise AD office network ID.
+             * <p>The enterprise AD office network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-485361****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopTimerResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDesktopTimerResponseBody</p>
@@ -49,7 +50,7 @@ public class ModifyDesktopTimerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the cloud computers for which you successfully configure the scheduled task.
+         * <p>The IDs of the cloud computers for which you successfully configure the scheduled task.</p>
          */
         public Builder desktopIds(java.util.List < String > desktopIds) {
             this.desktopIds = desktopIds;
@@ -57,7 +58,10 @@ public class ModifyDesktopTimerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4638719F-3CAB-5704-BD54-55617BFF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

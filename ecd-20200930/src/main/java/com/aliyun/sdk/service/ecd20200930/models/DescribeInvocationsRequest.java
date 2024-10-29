@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInvocationsRequest</p>
@@ -209,11 +210,14 @@ public class DescribeInvocationsRequest extends Request {
         } 
 
         /**
-         * The type of the command. Valid values:
-         * <p>
+         * <p>The type of the command. Valid values:</p>
+         * <ul>
+         * <li>RunBatScript</li>
+         * <li>RunPowerShellScript</li>
+         * </ul>
          * 
-         * *   RunBatScript
-         * *   RunPowerShellScript
+         * <strong>example:</strong>
+         * <p>RunPowerShellScript</p>
          */
         public Builder commandType(String commandType) {
             this.putQueryParameter("CommandType", commandType);
@@ -222,13 +226,15 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The encoding method of the command content and output. Valid values:
-         * <p>
+         * <p>The encoding method of the command content and output. Valid values:</p>
+         * <ul>
+         * <li>PlainText</li>
+         * <li>Base64</li>
+         * </ul>
+         * <p>Default value: Base64.</p>
          * 
-         * *   PlainText
-         * *   Base64
-         * 
-         * Default value: Base64.
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -237,7 +243,10 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop. If you specify a cloud desktop, all the execution records of Cloud Assistant commands on the cloud desktop are queried.
+         * <p>The ID of the cloud desktop. If you specify a cloud desktop, all the execution records of Cloud Assistant commands on the cloud desktop are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-7w78ozhjcwa3u****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -246,7 +255,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud desktops.
+         * <p>The IDs of the cloud desktops.</p>
          */
         public Builder desktopIds(java.util.List < String > desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
@@ -255,7 +264,10 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The ID of the end user.
+         * <p>The ID of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -273,13 +285,15 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return command outputs in the response. Valid values:
-         * <p>
+         * <p>Specifies whether to return command outputs in the response. Valid values:</p>
+         * <ul>
+         * <li>true: returns command outputs.</li>
+         * <li>false: does not return command outputs.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: returns command outputs.
-         * *   false: does not return command outputs.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeOutput(Boolean includeOutput) {
             this.putQueryParameter("IncludeOutput", includeOutput);
@@ -288,7 +302,10 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The ID of the execution.
+         * <p>The ID of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-hz0jdfwd9f****</p>
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -297,16 +314,18 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The overall execution status of a command. The overall execution status is determined by the execution status of the command on one or more cloud desktops. Valid values:
-         * <p>
+         * <p>The overall execution status of a command. The overall execution status is determined by the execution status of the command on one or more cloud desktops. Valid values:</p>
+         * <ul>
+         * <li>Running: The execution is in progress on one or more cloud desktops.</li>
+         * <li>Finished: The execution is finished on all cloud desktops, or the execution is manually stopped on some cloud desktops and the execution is finished on others.</li>
+         * <li>Failed: The execution failed on all cloud desktops.</li>
+         * <li>PartialFailed: The execution failed on some cloud desktops.</li>
+         * <li>Stopped: The execution is stopped.</li>
+         * </ul>
+         * <p>Default value: Running.</p>
          * 
-         * *   Running: The execution is in progress on one or more cloud desktops.
-         * *   Finished: The execution is finished on all cloud desktops, or the execution is manually stopped on some cloud desktops and the execution is finished on others.
-         * *   Failed: The execution failed on all cloud desktops.
-         * *   PartialFailed: The execution failed on some cloud desktops.
-         * *   Stopped: The execution is stopped.
-         * 
-         * Default value: Running.
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder invokeStatus(String invokeStatus) {
             this.putQueryParameter("InvokeStatus", invokeStatus);
@@ -315,11 +334,14 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 50.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 50.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -328,7 +350,10 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value that is returned from the last call to the previous DescribeInvocations operation.
+         * <p>The query token. Set the value to the NextToken value that is returned from the last call to the previous DescribeInvocations operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -337,7 +362,11 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

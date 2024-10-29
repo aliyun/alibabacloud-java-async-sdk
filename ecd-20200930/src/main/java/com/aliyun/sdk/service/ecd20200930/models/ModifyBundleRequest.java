@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBundleRequest} extends {@link RequestModel}
  *
  * <p>ModifyBundleRequest</p>
@@ -125,7 +126,11 @@ public class ModifyBundleRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud computer template that you want to modify.
+         * <p>The ID of the cloud computer template that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-2g65ljy4291vl****</p>
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -134,7 +139,10 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The name of the new cloud computer template.
+         * <p>The name of the new cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newName</p>
          */
         public Builder bundleName(String bundleName) {
             this.putQueryParameter("BundleName", bundleName);
@@ -143,7 +151,10 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The description of the new cloud computer template.
+         * <p>The description of the new cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -152,13 +163,16 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The new image ID. The new image must meet the following conditions:
-         * <p>
+         * <p>The new image ID. The new image must meet the following conditions:</p>
+         * <ul>
+         * <li>The new image must be in the Available state.</li>
+         * <li>The operating system of the new image must be the same as that of the original image.</li>
+         * <li>The required disk size for the new image cannot be greater than that for the original image.</li>
+         * <li>The GPU type of the new image must be the same as that of the original image.</li>
+         * </ul>
          * 
-         * *   The new image must be in the Available state.
-         * *   The operating system of the new image must be the same as that of the original image.
-         * *   The required disk size for the new image cannot be greater than that for the original image.
-         * *   The GPU type of the new image must be the same as that of the original image.
+         * <strong>example:</strong>
+         * <p>m-aea3oaww001np****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -167,16 +181,21 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The OS language. This parameter is available only for system images.
-         * <p>
+         * <p>The OS language. This parameter is available only for system images.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>en-US: American English</p>
+         * </li>
+         * <li><p>zh-HK: Traditional Chinese (Hong Kong)</p>
+         * </li>
+         * <li><p>zh-CN: Simplified Chinese.</p>
+         * </li>
+         * <li><p>ja-JP: Japanese</p>
+         * </li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   en-US: American English
-         * *   zh-HK: Traditional Chinese (Hong Kong)
-         * *   zh-CN: Simplified Chinese.
-         * 
-         * *   ja-JP: Japanese
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -185,7 +204,11 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

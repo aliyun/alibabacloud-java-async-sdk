@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDesktopInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The basic information about cloud computers.
+         * <p>The basic information about cloud computers.</p>
          */
         public Builder desktops(java.util.List < Desktops> desktops) {
             this.desktops = desktops;
@@ -57,7 +58,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>062B1439-709A-580E-85DF-CE97A1560565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDesktopInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopInfoResponseBody</p>
+     */
     public static class Desktops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
@@ -205,13 +215,15 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The connection status of the user.
-             * <p>
+             * <p>The connection status of the user.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Connected</li>
+             * <li>Disconnected</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Connected
-             * *   Disconnected
+             * <strong>example:</strong>
+             * <p>Disconnected</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -219,7 +231,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the cloud computer image.
+             * <p>The version of the cloud computer image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4.0-R-***</p>
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -227,7 +242,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud computer pool.
+             * <p>The ID of the cloud computer pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dg-3uiojcc0j4kh7****</p>
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -235,7 +253,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud computer.
+             * <p>The ID of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-gx2x1dhsmucyy****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -243,19 +264,21 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud computer.
-             * <p>
+             * <p>The status of the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Stopped</li>
+             * <li>Failed</li>
+             * <li>Starting</li>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * <li>Expired</li>
+             * <li>Deleted</li>
+             * <li>Pending</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Stopped
-             * *   Failed
-             * *   Starting
-             * *   Running
-             * *   Stopping
-             * *   Expired
-             * *   Deleted
-             * *   Pending
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -263,7 +286,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about flags that are used to manage cloud computers.
+             * <p>The information about flags that are used to manage cloud computers.</p>
              */
             public Builder managementFlag(java.util.List < String > managementFlag) {
                 this.managementFlag = managementFlag;
@@ -271,7 +294,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the update package. Unit: KB.
+             * <p>The size of the update package. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>568533470</p>
              */
             public Builder newAppSize(Long newAppSize) {
                 this.newAppSize = newAppSize;
@@ -279,7 +305,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the image that can be updated on the cloud computer.
+             * <p>The version number of the image that can be updated on the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.6.0-R-***</p>
              */
             public Builder newAppVersion(String newAppVersion) {
                 this.newAppVersion = newAppVersion;
@@ -287,7 +316,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image version that can be updated.
+             * <p>The description of the image version that can be updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test package 03-07</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -295,7 +327,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud computer was first started.
+             * <p>The time when the cloud computer was first started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-06T08:31Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

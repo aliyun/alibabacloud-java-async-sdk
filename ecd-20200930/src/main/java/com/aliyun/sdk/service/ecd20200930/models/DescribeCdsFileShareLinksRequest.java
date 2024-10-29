@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdsFileShareLinksRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdsFileShareLinksRequest</p>
@@ -139,7 +140,11 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-532033****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -148,7 +153,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * The users that create the file sharing links.
+         * <p>The users that create the file sharing links.</p>
          */
         public Builder creators(java.util.List < String > creators) {
             this.putQueryParameter("Creators", creators);
@@ -157,7 +162,10 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Valid values: 1 to 100. Default value: 100. The number of returned resources must be less than or equal to the specified number.
+         * <p>The maximum number of resources to return. Valid values: 1 to 100. Default value: 100. The number of returned resources must be less than or equal to the specified number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -166,7 +174,10 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * Specifies the marker after which the returned list begins. If this parameter is not specified, all results are returned. Default value: null.
+         * <p>Specifies the marker after which the returned list begins. If this parameter is not specified, all results are returned. Default value: null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -175,7 +186,10 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * The ID of the file sharing link.
+         * <p>The ID of the file sharing link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1Fs****</p>
          */
         public Builder shareId(String shareId) {
             this.putQueryParameter("ShareId", shareId);
@@ -184,7 +198,10 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * The sharing name for fuzzy search.
+         * <p>The sharing name for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder shareName(String shareName) {
             this.putQueryParameter("ShareName", shareName);
@@ -193,7 +210,10 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         }
 
         /**
-         * The file sharing status. Valid values: ● disabled: canceled ● enabled: valid
+         * <p>The file sharing status. Valid values: ● disabled: canceled ● enabled: valid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

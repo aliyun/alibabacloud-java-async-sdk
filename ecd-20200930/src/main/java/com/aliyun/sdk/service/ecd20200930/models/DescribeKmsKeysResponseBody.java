@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKmsKeysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKmsKeysResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The authorization status.
+         * <p>The authorization status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>authorized</p>
          */
         public Builder authorizeStatus(String authorizeStatus) {
             this.authorizeStatus = authorizeStatus;
@@ -81,7 +85,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the customer master keys (CMKs).
+         * <p>Details about the customer master keys (CMKs).</p>
          */
         public Builder keys(java.util.List < Keys> keys) {
             this.keys = keys;
@@ -89,7 +93,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether KMS is activated.
+         * <p>Indicates whether KMS is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder kmsServiceStatus(String kmsServiceStatus) {
             this.kmsServiceStatus = kmsServiceStatus;
@@ -97,7 +104,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKmsKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKmsKeysResponseBody</p>
+     */
     public static class Keys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -173,7 +189,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The alias of the key.
+             * <p>The alias of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestAlias</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -181,7 +200,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the key in KMS.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the key in KMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:kms:cn-hangzhou:154035569884****:key/05754286-3ba2-4fa6-8d41-4323aca6****</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -189,7 +211,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the key.
+             * <p>The ID of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05754286-3ba2-4fa6-8d41-4323aca6****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -197,7 +222,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the key.
+             * <p>The type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceKey</p>
              */
             public Builder type(String type) {
                 this.type = type;

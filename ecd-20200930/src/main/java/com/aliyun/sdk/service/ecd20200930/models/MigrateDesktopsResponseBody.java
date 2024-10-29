@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateDesktopsResponseBody} extends {@link TeaModel}
  *
  * <p>MigrateDesktopsResponseBody</p>
@@ -37,7 +38,10 @@ public class MigrateDesktopsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E46DECEC-AC72-570E-958B-B52A4B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

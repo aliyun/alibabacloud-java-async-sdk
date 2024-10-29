@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceRequest} extends {@link RequestModel}
  *
  * <p>DescribePriceRequest</p>
@@ -20,6 +21,10 @@ public class DescribePriceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
     @com.aliyun.core.annotation.Validation(maximum = 2048, minimum = 1)
     private Integer bandwidth;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    private Integer duration;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupDesktopCount")
@@ -72,6 +77,7 @@ public class DescribePriceRequest extends Request {
         super(builder);
         this.amount = builder.amount;
         this.bandwidth = builder.bandwidth;
+        this.duration = builder.duration;
         this.groupDesktopCount = builder.groupDesktopCount;
         this.instanceType = builder.instanceType;
         this.internetChargeType = builder.internetChargeType;
@@ -110,6 +116,13 @@ public class DescribePriceRequest extends Request {
      */
     public Integer getBandwidth() {
         return this.bandwidth;
+    }
+
+    /**
+     * @return duration
+     */
+    public Integer getDuration() {
+        return this.duration;
     }
 
     /**
@@ -192,6 +205,7 @@ public class DescribePriceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
         private Integer amount; 
         private Integer bandwidth; 
+        private Integer duration; 
         private Integer groupDesktopCount; 
         private String instanceType; 
         private String internetChargeType; 
@@ -212,6 +226,7 @@ public class DescribePriceRequest extends Request {
             super(request);
             this.amount = request.amount;
             this.bandwidth = request.bandwidth;
+            this.duration = request.duration;
             this.groupDesktopCount = request.groupDesktopCount;
             this.instanceType = request.instanceType;
             this.internetChargeType = request.internetChargeType;
@@ -226,7 +241,10 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * The number of the resources. Default value: 1.
+         * <p>The number of the resources. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -235,15 +253,27 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The maximum public bandwidth. Unit: Mbit/s.
-         * <p>
+         * <p>The maximum public bandwidth. Unit: Mbit/s.</p>
+         * <ul>
+         * <li>Valid values if the PayByTraffic parameter is set to PayByBandwidth: 10 to 1000</li>
+         * <li>Valid values if the PayByTraffic parameter is set to PayByTraffic: 10 to 200</li>
+         * </ul>
          * 
-         * *   Valid values if the PayByTraffic parameter is set to PayByBandwidth: 10 to 1000
-         * *   Valid values if the PayByTraffic parameter is set to PayByTraffic: 10 to 200
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
             this.bandwidth = bandwidth;
+            return this;
+        }
+
+        /**
+         * Duration.
+         */
+        public Builder duration(Integer duration) {
+            this.putQueryParameter("Duration", duration);
+            this.duration = duration;
             return this;
         }
 
@@ -257,33 +287,38 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The resource specifications.
-         * <p>
+         * <p>The resource specifications.</p>
+         * <ul>
+         * <li><p>If you set ResourceType to Desktop, set this parameter to one of the following values:</p>
+         * <ul>
+         * <li>ecd.basic.small</li>
+         * <li>ecd.basic.large</li>
+         * <li>ecd.advanced.large</li>
+         * <li>ecd.advanced.xlarge</li>
+         * <li>ecd.performance.2xlarge</li>
+         * <li>ecd.graphics.xlarge</li>
+         * <li>ecd.graphics.2xlarge</li>
+         * <li>ecd.advanced.xlarge_s8d2</li>
+         * <li>ecd.advanced.xlarge_s8d7</li>
+         * <li>ecd.graphics.1g72c</li>
+         * <li>eds.general.2c2g</li>
+         * <li>eds.general.2c4g</li>
+         * <li>eds.general.2c8g</li>
+         * <li>eds.general.4c8g</li>
+         * <li>eds.general.4c16g</li>
+         * <li>eds.general.8c16g</li>
+         * <li>eds.general.8c32g</li>
+         * <li>eds.general.16c32g</li>
+         * </ul>
+         * </li>
+         * <li><p>If you set ResourceType to OfficeSite, set this parameter to large.</p>
+         * </li>
+         * <li><p>If you set ResourceType to Bandwidth, leave this parameter empty.</p>
+         * </li>
+         * </ul>
          * 
-         * *   If you set ResourceType to Desktop, set this parameter to one of the following values:
-         * 
-         *     *   ecd.basic.small
-         *     *   ecd.basic.large
-         *     *   ecd.advanced.large
-         *     *   ecd.advanced.xlarge
-         *     *   ecd.performance.2xlarge
-         *     *   ecd.graphics.xlarge
-         *     *   ecd.graphics.2xlarge
-         *     *   ecd.advanced.xlarge_s8d2
-         *     *   ecd.advanced.xlarge_s8d7
-         *     *   ecd.graphics.1g72c
-         *     *   eds.general.2c2g
-         *     *   eds.general.2c4g
-         *     *   eds.general.2c8g
-         *     *   eds.general.4c8g
-         *     *   eds.general.4c16g
-         *     *   eds.general.8c16g
-         *     *   eds.general.8c32g
-         *     *   eds.general.16c32g
-         * 
-         * *   If you set ResourceType to OfficeSite, set this parameter to large.
-         * 
-         * *   If you set ResourceType to Bandwidth, leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>eds.general.2c2g</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -292,11 +327,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The metering method of the Internet access package. Valid values:
-         * <p>
+         * <p>The metering method of the Internet access package. Valid values:</p>
+         * <ul>
+         * <li>PayByBandwidth: pay-by-bandwidth</li>
+         * <li>PayByTraffic: pay-by-data-transfer</li>
+         * </ul>
          * 
-         * *   PayByBandwidth: pay-by-bandwidth
-         * *   PayByTraffic: pay-by-data-transfer
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -305,13 +343,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The OS. Valid values:
-         * <p>
+         * <p>The OS. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * </ul>
+         * <p>Default value: Windows.</p>
          * 
-         * *   Windows
-         * *   Linux
-         * 
-         * Default value: Windows.
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -320,7 +360,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The subscription duration. Default value: 1.
+         * <p>The subscription duration. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -329,14 +372,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The unit of the billing cycle. Valid values:
-         * <p>
+         * <p>The unit of the billing cycle. Valid values:</p>
+         * <ul>
+         * <li>Hour</li>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>Default value: Hour.</p>
          * 
-         * *   Hour
-         * *   Month
-         * *   Year
-         * 
-         * Default value: Hour.
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -345,7 +390,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The promotion ID.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -354,7 +402,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -363,14 +415,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>Desktop: cloud desktop</li>
+         * <li>OfficeSite: workspace</li>
+         * <li>Bandwidth: network bandwidth</li>
+         * </ul>
+         * <p>Default value: Desktop.</p>
          * 
-         * *   Desktop: cloud desktop
-         * *   OfficeSite: workspace
-         * *   Bandwidth: network bandwidth
-         * 
-         * Default value: Desktop.
+         * <strong>example:</strong>
+         * <p>Desktop</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -379,7 +433,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The system disk size. Unit: GiB.
+         * <p>The system disk size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
@@ -388,7 +445,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The data disk size. Unit: GiB.
+         * <p>The data disk size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder userDiskSizeGib(Integer userDiskSizeGib) {
             this.putQueryParameter("UserDiskSizeGib", userDiskSizeGib);

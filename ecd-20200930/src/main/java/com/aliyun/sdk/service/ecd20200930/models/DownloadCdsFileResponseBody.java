@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadCdsFileResponseBody} extends {@link TeaModel}
  *
  * <p>DownloadCdsFileResponseBody</p>
@@ -110,6 +111,12 @@ public class DownloadCdsFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DownloadCdsFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadCdsFileResponseBody</p>
+     */
     public static class DownloadFileModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadType")
         private String downloadType;

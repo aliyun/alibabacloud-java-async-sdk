@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDesktopTypesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of cloud desktop types.
+         * <p>Details of cloud desktop types.</p>
          */
         public Builder desktopTypes(java.util.List < DesktopTypes> desktopTypes) {
             this.desktopTypes = desktopTypes;
@@ -57,7 +58,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDesktopTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopTypesResponseBody</p>
+     */
     public static class DesktopTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuCount")
         private String cpuCount;
@@ -95,6 +105,12 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
+        @com.aliyun.core.annotation.NameInMap("Scopes")
+        private java.util.List < String > scopes;
+
+        @com.aliyun.core.annotation.NameInMap("StockState")
+        private String stockState;
+
         @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private String systemDiskSize;
 
@@ -107,6 +123,8 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             this.gpuSpec = builder.gpuSpec;
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.memorySize = builder.memorySize;
+            this.scopes = builder.scopes;
+            this.stockState = builder.stockState;
             this.systemDiskSize = builder.systemDiskSize;
         }
 
@@ -175,6 +193,20 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return scopes
+         */
+        public java.util.List < String > getScopes() {
+            return this.scopes;
+        }
+
+        /**
+         * @return stockState
+         */
+        public String getStockState() {
+            return this.stockState;
+        }
+
+        /**
          * @return systemDiskSize
          */
         public String getSystemDiskSize() {
@@ -190,10 +222,15 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private String gpuSpec; 
             private String instanceTypeFamily; 
             private String memorySize; 
+            private java.util.List < String > scopes; 
+            private String stockState; 
             private String systemDiskSize; 
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpuCount(String cpuCount) {
                 this.cpuCount = cpuCount;
@@ -201,7 +238,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the data disk. Unit: GiB.
+             * <p>The size of the data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -209,7 +249,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop type.
+             * <p>The ID of the cloud desktop type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd.graphics.xlarge</p>
              */
             public Builder desktopTypeId(String desktopTypeId) {
                 this.desktopTypeId = desktopTypeId;
@@ -217,7 +260,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.
+             * <p>The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUFFICIENT</p>
              */
             public Builder desktopTypeStatus(String desktopTypeStatus) {
                 this.desktopTypeStatus = desktopTypeStatus;
@@ -225,7 +271,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of GPUs.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpuCount(Float gpuCount) {
                 this.gpuCount = gpuCount;
@@ -233,7 +282,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU memory.
+             * <p>The GPU memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16 GiB</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -241,7 +293,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The family of the cloud desktop type.
+             * <p>The family of the cloud desktop type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd.graphics</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -249,7 +304,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MiB.
+             * <p>The memory size. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23552</p>
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
@@ -257,7 +315,26 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the system disk. Unit: GiB.
+             * Scopes.
+             */
+            public Builder scopes(java.util.List < String > scopes) {
+                this.scopes = scopes;
+                return this;
+            }
+
+            /**
+             * StockState.
+             */
+            public Builder stockState(String stockState) {
+                this.stockState = stockState;
+                return this;
+            }
+
+            /**
+             * <p>The size of the system disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder systemDiskSize(String systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

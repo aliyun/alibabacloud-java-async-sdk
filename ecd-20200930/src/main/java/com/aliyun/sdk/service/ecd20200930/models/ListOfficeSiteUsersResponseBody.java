@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOfficeSiteUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListOfficeSiteUsersResponseBody</p>
@@ -61,7 +62,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,9 +84,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The usernames of AD users.\
-         * <p>
-         * If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.
+         * <p>The usernames of AD users.<br>If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -92,6 +97,12 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOfficeSiteUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOfficeSiteUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -131,7 +142,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             private String endUser; 
 
             /**
-             * The display name of the user.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -139,7 +153,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the AD user.
+             * <p>The name of the AD user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;

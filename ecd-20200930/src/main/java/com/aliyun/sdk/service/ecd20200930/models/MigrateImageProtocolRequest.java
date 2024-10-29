@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateImageProtocolRequest} extends {@link RequestModel}
  *
  * <p>MigrateImageProtocolRequest</p>
@@ -83,7 +84,8 @@ public class MigrateImageProtocolRequest extends Request {
         } 
 
         /**
-         * The image IDs.
+         * <p>The image IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -92,7 +94,11 @@ public class MigrateImageProtocolRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +107,10 @@ public class MigrateImageProtocolRequest extends Request {
         }
 
         /**
-         * The protocol to which you want to update the image protocols. Set the value to ASP.
+         * <p>The protocol to which you want to update the image protocols. Set the value to ASP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         public Builder targetProtocolType(String targetProtocolType) {
             this.putQueryParameter("TargetProtocolType", targetProtocolType);

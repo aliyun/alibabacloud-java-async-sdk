@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopTimerRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesktopTimerRequest</p>
@@ -97,7 +98,8 @@ public class ModifyDesktopTimerRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud computers.
+         * <p>The IDs of the cloud computers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -106,7 +108,7 @@ public class ModifyDesktopTimerRequest extends Request {
         }
 
         /**
-         * The details of the scheduled task on cloud computers.
+         * <p>The details of the scheduled task on cloud computers.</p>
          */
         public Builder desktopTimers(java.util.List < DesktopTimers> desktopTimers) {
             this.putQueryParameter("DesktopTimers", desktopTimers);
@@ -115,7 +117,11 @@ public class ModifyDesktopTimerRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +130,10 @@ public class ModifyDesktopTimerRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `DesktopTimers`** parameter. Set the value to `true`**.
+         * <p>Specifies whether to use the <code>DesktopTimers</code>** parameter. Set the value to <code>true</code>**.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useDesktopTimers(Boolean useDesktopTimers) {
             this.putQueryParameter("UseDesktopTimers", useDesktopTimers);
@@ -139,6 +148,12 @@ public class ModifyDesktopTimerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDesktopTimerRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDesktopTimerRequest</p>
+     */
     public static class DesktopTimers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowClientSetting")
         private Boolean allowClientSetting;
@@ -238,7 +253,10 @@ public class ModifyDesktopTimerRequest extends Request {
             private String timerType; 
 
             /**
-             * Specifies whether to allow end users to configure the scheduled task.
+             * <p>Specifies whether to allow end users to configure the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowClientSetting(Boolean allowClientSetting) {
                 this.allowClientSetting = allowClientSetting;
@@ -246,10 +264,13 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * The cron expression of the schedule.
-             * <p>
+             * <p>The cron expression of the schedule.</p>
+             * <blockquote>
+             * <p>The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? * 1,2,3,4,5,6,7</p>
+             * </blockquote>
              * 
-             * > The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7
+             * <strong>example:</strong>
+             * <p>0 0 16 ? * 1,2,3,4,5,6,7</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -257,26 +278,26 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * Specifies whether to forcibly execute the scheduled task.
-             * <p>
+             * <p>Specifies whether to forcibly execute the scheduled task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.
+             * <!-- -->
+             * </li>
+             * <li><p>false: does not forcibly execute the scheduled task.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false: does not forcibly execute the scheduled task.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -284,7 +305,10 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * The interval at which the scheduled task is executed. Unit: minutes.
+             * <p>The interval at which the scheduled task is executed. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -292,26 +316,26 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * The operations that scheduled tasks support. This parameter is valid only when TimerType is set to NoConnect.
-             * <p>
+             * <p>The operations that scheduled tasks support. This parameter is valid only when TimerType is set to NoConnect.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Hibernate: hibernates the cloud computers.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Hibernate: hibernates the cloud computers.
+             * <!-- -->
+             * </li>
+             * <li><p>Shutdown: stops the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Shutdown: stops the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Shutdown</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -319,26 +343,26 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * The reset type of the cloud computers.
-             * <p>
+             * <p>The reset type of the cloud computers.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>RESET_TYPE_SYSTE: resets the system disk.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   RESET_TYPE_SYSTE: resets the system disk.
+             * <!-- -->
+             * </li>
+             * <li><p>RESET_TYPE_BOTH: resets data and user disks.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   RESET_TYPE_BOTH: resets data and user disks.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>RESET_TYPE_SYSTEM</p>
              */
             public Builder resetType(String resetType) {
                 this.resetType = resetType;
@@ -346,90 +370,82 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * The type of the scheduled task.
-             * <p>
+             * <p>The type of the scheduled task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>NoOperationDisconnect: Disconnects the cloud computers without performing operations on the cloud computers.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   NoOperationDisconnect: Disconnects the cloud computers without performing operations on the cloud computers.
+             * <!-- -->
+             * </li>
+             * <li><p>LogoutShutdown: Stops the cloud computers when end users log out Alibaba Cloud Workspace clients.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>NoConnect: Disconnects the cloud computers when end users perform one of the actions that is specified by the OperationType parameter.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   LogoutShutdown: Stops the cloud computers when end users log out Alibaba Cloud Workspace clients.
+             * <!-- -->
+             * </li>
+             * <li><p>TimerBoot: Starts the cloud computers on schedule.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>TimerReset: Resets the cloud computers on schedule.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   NoConnect: Disconnects the cloud computers when end users perform one of the actions that is specified by the OperationType parameter.
+             * <!-- -->
+             * </li>
+             * <li><p>LoginAutoConnect: automatically connects to the cloud computers when end users log on to Alibaba Cloud Workspace clients.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>NoOperationShutdown: Stops the cloud computers without performing operations on the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   TimerBoot: Starts the cloud computers on schedule.
+             * <!-- -->
+             * </li>
+             * <li><p>TimerShutdown: Stops the cloud computers on schedule.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>NoOperationReboot: Restarts the cloud computers without performing operations on the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   TimerReset: Resets the cloud computers on schedule.
+             * <!-- -->
+             * </li>
+             * <li><p>TimerReboot: Restarts the cloud computers on schedule.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   LoginAutoConnect: automatically connects to the cloud computers when end users log on to Alibaba Cloud Workspace clients.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   NoOperationShutdown: Stops the cloud computers without performing operations on the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   TimerShutdown: Stops the cloud computers on schedule.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   NoOperationReboot: Restarts the cloud computers without performing operations on the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   TimerReboot: Restarts the cloud computers on schedule.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>TimerBoot</p>
              */
             public Builder timerType(String timerType) {
                 this.timerType = timerType;

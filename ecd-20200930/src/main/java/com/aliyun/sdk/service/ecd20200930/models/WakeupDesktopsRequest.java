@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WakeupDesktopsRequest} extends {@link RequestModel}
  *
  * <p>WakeupDesktopsRequest</p>
@@ -69,7 +70,7 @@ public class WakeupDesktopsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -78,7 +79,10 @@ public class WakeupDesktopsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

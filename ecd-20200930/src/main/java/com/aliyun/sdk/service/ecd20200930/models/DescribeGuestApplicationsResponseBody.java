@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGuestApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGuestApplicationsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the applications.
+         * <p>The details of the applications.</p>
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -57,7 +58,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>272CF39E-B5DE-5BE3-A09B-B43F1026****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGuestApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGuestApplicationsResponseBody</p>
+     */
     public static class ProcessData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -181,7 +191,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             private String processPath; 
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Google Chrome</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -189,7 +202,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The application version.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>115.0.5790.110</p>
              */
             public Builder applicationVersion(String applicationVersion) {
                 this.applicationVersion = applicationVersion;
@@ -197,7 +213,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization (%).
+             * <p>The CPU utilization (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89</p>
              */
             public Builder cpuPercent(Double cpuPercent) {
                 this.cpuPercent = cpuPercent;
@@ -205,7 +224,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU utilization (%).
+             * <p>The GPU utilization (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder gpuPercent(Double gpuPercent) {
                 this.gpuPercent = gpuPercent;
@@ -213,7 +235,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The I/O read and write performance.
+             * <p>The I/O read and write performance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>124906.0</p>
              */
             public Builder iospeed(Double iospeed) {
                 this.iospeed = iospeed;
@@ -221,7 +246,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory utilization (%).
+             * <p>The memory utilization (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder memPercent(Double memPercent) {
                 this.memPercent = memPercent;
@@ -229,7 +257,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The PID.
+             * <p>The PID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1357</p>
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;
@@ -237,7 +268,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the process.
+             * <p>The path to the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\Program Files\Google\Chrome\Application\ch****.exe</p>
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -251,6 +285,12 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGuestApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGuestApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -398,7 +438,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Google Chrome</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -406,7 +449,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The application version.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>115.0.5790.110</p>
              */
             public Builder applicationVersion(String applicationVersion) {
                 this.applicationVersion = applicationVersion;
@@ -414,7 +460,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization (%).
+             * <p>The CPU utilization (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89</p>
              */
             public Builder cpuPercent(Double cpuPercent) {
                 this.cpuPercent = cpuPercent;
@@ -422,7 +471,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU utilization (%).
+             * <p>The GPU utilization (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder gpuPercent(Double gpuPercent) {
                 this.gpuPercent = gpuPercent;
@@ -430,7 +482,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The icon URL of the application.
+             * <p>The icon URL of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/market/preload/default****.png">https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/market/preload/default****.png</a></p>
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -438,7 +493,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The I/O read and write performance.
+             * <p>The I/O read and write performance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>124906.0</p>
              */
             public Builder ioSpeed(Double ioSpeed) {
                 this.ioSpeed = ioSpeed;
@@ -446,7 +504,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory utilization (%).
+             * <p>The memory utilization (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder memPercent(Double memPercent) {
                 this.memPercent = memPercent;
@@ -454,7 +515,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID (PID).
+             * <p>The process ID (PID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1357</p>
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;
@@ -462,7 +526,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The process information.
+             * <p>The process information.</p>
              */
             public Builder processData(java.util.List < ProcessData> processData) {
                 this.processData = processData;
@@ -470,7 +534,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the process.
+             * <p>The path to the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\Program Files\Google\Chrome\Application\ch****.exe</p>
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -478,7 +545,10 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The application status.
+             * <p>The application status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPolicyGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyPolicyGroupRequest</p>
@@ -881,10 +882,13 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
         /**
-         * Specifies whether the end user has administrator permissions after the end user connects to the cloud desktop.
-         * <p>
+         * <p>Specifies whether the end user has administrator permissions after the end user connects to the cloud desktop.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and not available to the public.</p>
+         * </blockquote>
          * 
-         * >  This parameter is in invitational preview and not available to the public.
+         * <strong>example:</strong>
+         * <p>deny</p>
          */
         public Builder adminAccess(String adminAccess) {
             this.putQueryParameter("AdminAccess", adminAccess);
@@ -893,13 +897,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the anti-screenshot feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the anti-screenshot feature. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * <p>Default value: off.</p>
          * 
-         * * on
-         * * off
-         * 
-         * Default value: off.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder appContentProtection(String appContentProtection) {
             this.putQueryParameter("AppContentProtection", appContentProtection);
@@ -908,7 +914,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The client CIDR blocks in the whitelist.
+         * <p>The client CIDR blocks in the whitelist.</p>
          */
         public Builder authorizeAccessPolicyRule(java.util.List < AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
             this.putQueryParameter("AuthorizeAccessPolicyRule", authorizeAccessPolicyRule);
@@ -917,7 +923,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The security group rules.
+         * <p>The security group rules.</p>
          */
         public Builder authorizeSecurityPolicyRule(java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
             this.putQueryParameter("AuthorizeSecurityPolicyRule", authorizeSecurityPolicyRule);
@@ -926,13 +932,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the webcam redirection feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the webcam redirection feature. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * <p>Default value: on.</p>
          * 
-         * * on
-         * * off
-         * 
-         * Default value: on.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder cameraRedirect(String cameraRedirect) {
             this.putQueryParameter("CameraRedirect", cameraRedirect);
@@ -941,7 +949,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The logon methods.
+         * <p>The logon methods.</p>
          */
         public Builder clientType(java.util.List < ClientType> clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -950,12 +958,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The permissions on clipboards. Valid values:
-         * <p>
+         * <p>The permissions on clipboards. Valid values:</p>
+         * <ul>
+         * <li>read: specifies one-way transfer. You can copy data from your computer to cloud desktops, but cannot copy data from cloud desktops to your computer.</li>
+         * <li>readwrite: specifies two-way transfer. You can copy data between your computer and cloud desktops.</li>
+         * <li>off: specifies that the two-way transfer is disabled. You cannot copy data between your computer and cloud desktops.</li>
+         * </ul>
          * 
-         * *   read: specifies one-way transfer. You can copy data from your computer to cloud desktops, but cannot copy data from cloud desktops to your computer.
-         * *   readwrite: specifies two-way transfer. You can copy data between your computer and cloud desktops.
-         * *   off: specifies that the two-way transfer is disabled. You cannot copy data between your computer and cloud desktops.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder clipboard(String clipboard) {
             this.putQueryParameter("Clipboard", clipboard);
@@ -982,11 +993,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The domain blacklist or whitelist. Wildcard domains are supported. Separate domain names with commas (,). Valid values:
-         * <p>
+         * <p>The domain blacklist or whitelist. Wildcard domains are supported. Separate domain names with commas (,). Valid values:</p>
+         * <ul>
+         * <li>[black:],example1.com,example2.com: the domain name blacklist.</li>
+         * <li>[white:],example1.com,example2.com: the domain name whitelist.</li>
+         * </ul>
          * 
-         * *   \[black:],example1.com,example2.com: the domain name blacklist.
-         * *   \[white:],example1.com,example2.com: the domain name whitelist.
+         * <strong>example:</strong>
+         * <p>[black:],example1.com,example2.com</p>
          */
         public Builder domainList(String domainList) {
             this.putQueryParameter("DomainList", domainList);
@@ -995,7 +1009,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The details of the DNS rule.
+         * <p>The details of the DNS rule.</p>
          */
         public Builder domainResolveRule(java.util.List < DomainResolveRule> domainResolveRule) {
             this.putQueryParameter("DomainResolveRule", domainResolveRule);
@@ -1004,7 +1018,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The DNS rule type.
+         * <p>The DNS rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OFF</p>
          */
         public Builder domainResolveRuleType(String domainResolveRuleType) {
             this.putQueryParameter("DomainResolveRuleType", domainResolveRuleType);
@@ -1013,10 +1030,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The user applies for the administrator assistance switch. Value range: 
-         * <p>
-         * * on 
-         * * off
+         * <p>The user applies for the administrator assistance switch. Value range: </p>
+         * <ul>
+         * <li>on </li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder endUserApplyAdminCoordinate(String endUserApplyAdminCoordinate) {
             this.putQueryParameter("EndUserApplyAdminCoordinate", endUserApplyAdminCoordinate);
@@ -1025,10 +1046,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The flow collaboration switch between users. Value range: 
-         * <p>
-         * * on 
-         * * off
+         * <p>The flow collaboration switch between users. Value range: </p>
+         * <ul>
+         * <li>on </li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder endUserGroupCoordinate(String endUserGroupCoordinate) {
             this.putQueryParameter("EndUserGroupCoordinate", endUserGroupCoordinate);
@@ -1037,11 +1062,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the image display quality feature for the Graphics cloud desktop. If your business requires high desktop performance and optimal user experience, we recommend that you enable this feature. For example, you can enable this policy in professional design scenarios. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the image display quality feature for the Graphics cloud desktop. If your business requires high desktop performance and optimal user experience, we recommend that you enable this feature. For example, you can enable this policy in professional design scenarios. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
          * 
-         * * on
-         * * off
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder gpuAcceleration(String gpuAcceleration) {
             this.putQueryParameter("GpuAcceleration", gpuAcceleration);
@@ -1050,15 +1078,18 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the access from HTM5 clients to a cloud desktop. Valid values:
-         * <p>
+         * <p>Specifies whether to allow the access from HTM5 clients to a cloud desktop. Valid values:</p>
+         * <ul>
+         * <li>on: allows the access.</li>
+         * <li>off: denies the access.</li>
+         * </ul>
+         * <p>Default value: off.</p>
+         * <blockquote>
+         * <p> We recommend that you use the ClientType-related parameters to control the EDS client type for cloud desktop logon.</p>
+         * </blockquote>
          * 
-         * *   on: allows the access.
-         * *   off: denies the access.
-         * 
-         * Default value: off.
-         * 
-         * >  We recommend that you use the ClientType-related parameters to control the EDS client type for cloud desktop logon.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder html5Access(String html5Access) {
             this.putQueryParameter("Html5Access", html5Access);
@@ -1067,15 +1098,17 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The file transfer policy for HTML5 clients. Valid values:
-         * <p>
+         * <p>The file transfer policy for HTML5 clients. Valid values:</p>
+         * <ul>
+         * <li>off: Files cannot be uploaded from or downloaded to HTML5 clients.</li>
+         * <li>upload: Files can be uploaded from HTML5 clients.</li>
+         * <li>download: Files can be downloaded to HTML5 clients.</li>
+         * <li>all: Files can be uploaded from and downloaded to HTML5 clients.</li>
+         * </ul>
+         * <p>Default value: off.</p>
          * 
-         * *   off: Files cannot be uploaded from or downloaded to HTML5 clients.
-         * *   upload: Files can be uploaded from HTML5 clients.
-         * *   download: Files can be downloaded to HTML5 clients.
-         * *   all: Files can be uploaded from and downloaded to HTML5 clients.
-         * 
-         * Default value: off.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder html5FileTransfer(String html5FileTransfer) {
             this.putQueryParameter("Html5FileTransfer", html5FileTransfer);
@@ -1084,13 +1117,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The protocol that you want to use for network communication. Valid values:
-         * <p>
+         * <p>The protocol that you want to use for network communication. Valid values:</p>
+         * <ul>
+         * <li>TCP: Only the TCP protocol is used.</li>
+         * <li>BOTH: allows automatic switchover between the TCP protocol and the UDP protocol.</li>
+         * </ul>
+         * <p>Default value: TCP.</p>
          * 
-         * * TCP: Only the TCP protocol is used.
-         * * BOTH: allows automatic switchover between the TCP protocol and the UDP protocol.
-         * 
-         * Default value: TCP.
+         * <strong>example:</strong>
+         * <p>BOTH</p>
          */
         public Builder internetCommunicationProtocol(String internetCommunicationProtocol) {
             this.putQueryParameter("InternetCommunicationProtocol", internetCommunicationProtocol);
@@ -1099,12 +1134,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The permissions on local disk mapping. Valid values:
-         * <p>
+         * <p>The permissions on local disk mapping. Valid values:</p>
+         * <ul>
+         * <li>read: read-only permissions. Local disks are mapped to cloud desktops. You can only read (copy) local files but cannot modify them.</li>
+         * <li>readwrite: read and write permissions. Local disks are mapped to cloud desktops. You can read (copy) and modify local files.</li>
+         * <li>off: no permissions. Local disks are not mapped to cloud desktops.</li>
+         * </ul>
          * 
-         * *   read: read-only permissions. Local disks are mapped to cloud desktops. You can only read (copy) local files but cannot modify them.
-         * *   readwrite: read and write permissions. Local disks are mapped to cloud desktops. You can read (copy) and modify local files.
-         * *   off: no permissions. Local disks are not mapped to cloud desktops.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder localDrive(String localDrive) {
             this.putQueryParameter("LocalDrive", localDrive);
@@ -1122,7 +1160,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPolicyGroupName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -1131,13 +1172,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The network redirection feature. Valid values:
-         * <p>
+         * <p>The network redirection feature. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * <p>Default value: off.</p>
          * 
-         * * on
-         * * off
-         * 
-         * Default value: off.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder netRedirect(String netRedirect) {
             this.putQueryParameter("NetRedirect", netRedirect);
@@ -1146,7 +1189,11 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-gx2x1dhsmthe9****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -1155,7 +1202,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow user preemption. Default value: off. You cannot change the value.
+         * <p>Specifies whether to allow user preemption. Default value: off. You cannot change the value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder preemptLogin(String preemptLogin) {
             this.putQueryParameter("PreemptLogin", preemptLogin);
@@ -1164,10 +1214,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The names of the users that are allowed to connect to the same cloud desktop at the same time. You can specify up to five usernames.
-         * <p>
-         * 
-         * > To improve user experience and ensure data security, multiple end users cannot connect to the same cloud desktop at the same time.
+         * <p>The names of the users that are allowed to connect to the same cloud desktop at the same time. You can specify up to five usernames.</p>
+         * <blockquote>
+         * <p>To improve user experience and ensure data security, multiple end users cannot connect to the same cloud desktop at the same time.</p>
+         * </blockquote>
          */
         public Builder preemptLoginUser(java.util.List < String > preemptLoginUser) {
             this.putQueryParameter("PreemptLoginUser", preemptLoginUser);
@@ -1176,11 +1226,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable printer redirection. Valid values:
-         * <p>
+         * <p>Specifies whether to enable printer redirection. Valid values:</p>
+         * <ul>
+         * <li>off: disables printer redirection.</li>
+         * <li>on: enables printer redirection.</li>
+         * </ul>
          * 
-         * *   off: disables printer redirection.
-         * *   on: enables printer redirection.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder printerRedirection(String printerRedirection) {
             this.putQueryParameter("PrinterRedirection", printerRedirection);
@@ -1189,13 +1242,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the custom screen recording feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the custom screen recording feature. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * <p>Default value: off.</p>
          * 
-         * * on
-         * * off
-         * 
-         * Default value: off.
+         * <strong>example:</strong>
+         * <p>OFF</p>
          */
         public Builder recordContent(String recordContent) {
             this.putQueryParameter("RecordContent", recordContent);
@@ -1204,7 +1259,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The duration in which the custom screen recording is valid. Default value: 30. Unit: days.
+         * <p>The duration in which the custom screen recording is valid. Default value: 30. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder recordContentExpires(Long recordContentExpires) {
             this.putQueryParameter("RecordContentExpires", recordContentExpires);
@@ -1213,12 +1271,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable screen recording. Valid values:
-         * <p>
+         * <p>Specifies whether to enable screen recording. Valid values:</p>
+         * <ul>
+         * <li>OFF: disabled.</li>
+         * <li>ALLTIME: All operations that are performed by an end user on the cloud desktop are recorded. The recording immediately starts when the end user connects to the cloud desktop and ends after the end user disconnects from the cloud desktop.</li>
+         * <li>PERIOD: The operations that are performed by an end user on the cloud desktop during a specific period of time are recorded. You must specify the start time and the end time of the recording.</li>
+         * </ul>
          * 
-         * * OFF: disabled.
-         * * ALLTIME: All operations that are performed by an end user on the cloud desktop are recorded. The recording immediately starts when the end user connects to the cloud desktop and ends after the end user disconnects from the cloud desktop.
-         * * PERIOD: The operations that are performed by an end user on the cloud desktop during a specific period of time are recorded. You must specify the start time and the end time of the recording.
+         * <strong>example:</strong>
+         * <p>OFF</p>
          */
         public Builder recording(String recording) {
             this.putQueryParameter("Recording", recording);
@@ -1227,11 +1288,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to record the sound that is generated on the cloud desktop during screen recording. Valid values:
-         * <p>
+         * <p>Specifies whether to record the sound that is generated on the cloud desktop during screen recording. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
          * 
-         * * on
-         * * off
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder recordingAudio(String recordingAudio) {
             this.putQueryParameter("RecordingAudio", recordingAudio);
@@ -1240,7 +1304,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * This parameter takes effect based on the Recording-related parameters. You can specify a time range for screen recording, and recording files are generated after the specified end time is reached.
+         * <p>This parameter takes effect based on the Recording-related parameters. You can specify a time range for screen recording, and recording files are generated after the specified end time is reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder recordingDuration(Integer recordingDuration) {
             this.putQueryParameter("RecordingDuration", recordingDuration);
@@ -1249,7 +1316,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The time when the screen recording ends. Specify the value in the HH:MM:SS format. The value is valid only when you set the Recording parameter to PERIOD.
+         * <p>The time when the screen recording ends. Specify the value in the HH:MM:SS format. The value is valid only when you set the Recording parameter to PERIOD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:59:00</p>
          */
         public Builder recordingEndTime(String recordingEndTime) {
             this.putQueryParameter("RecordingEndTime", recordingEndTime);
@@ -1258,7 +1328,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The period in which the screen recording audit is valid. Valid values: 15 to 180. Unit: days.
+         * <p>The period in which the screen recording audit is valid. Valid values: 15 to 180. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder recordingExpires(Long recordingExpires) {
             this.putQueryParameter("RecordingExpires", recordingExpires);
@@ -1267,13 +1340,16 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The frame rate of screen recording. Unit: fps. Valid values:
-         * <p>
+         * <p>The frame rate of screen recording. Unit: fps. Valid values:</p>
+         * <ul>
+         * <li>2</li>
+         * <li>5</li>
+         * <li>10</li>
+         * <li>15</li>
+         * </ul>
          * 
-         * * 2
-         * * 5
-         * * 10
-         * * 15
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder recordingFps(Long recordingFps) {
             this.putQueryParameter("RecordingFps", recordingFps);
@@ -1282,7 +1358,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The time when the screen recording starts. Specify the value in the HH:MM:SS format. The value is valid only when you set the Recording parameter to PERIOD.
+         * <p>The time when the screen recording starts. Specify the value in the HH:MM:SS format. The value is valid only when you set the Recording parameter to PERIOD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:00:00</p>
          */
         public Builder recordingStartTime(String recordingStartTime) {
             this.putQueryParameter("RecordingStartTime", recordingStartTime);
@@ -1291,7 +1370,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the screen recording notification feature. Valid values: on and off. on and off (default).
+         * <p>Specifies whether to enable the screen recording notification feature. Valid values: on and off. on and off (default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder recordingUserNotify(String recordingUserNotify) {
             this.putQueryParameter("RecordingUserNotify", recordingUserNotify);
@@ -1300,7 +1382,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The content of the screen recording notification sent to the client. By default, you do not need to specify this parameter.
+         * <p>The content of the screen recording notification sent to the client. By default, you do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Your desktop is being recorded.</p>
          */
         public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
             this.putQueryParameter("RecordingUserNotifyMessage", recordingUserNotifyMessage);
@@ -1309,7 +1394,11 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where the cloud desktop resides.
+         * <p>The ID of the region where the cloud desktop resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -1318,12 +1407,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The permissions on the keyboard and mouse to control the cloud desktop during remote assistance. Valid values:
-         * <p>
+         * <p>The permissions on the keyboard and mouse to control the cloud desktop during remote assistance. Valid values:</p>
+         * <ul>
+         * <li>fullControl: The keyboard and mouse can be fully controlled.</li>
+         * <li>optionalControl: By default, this feature is disabled. You can apply for permissions to enable the feature.</li>
+         * <li>disableControl: The keyboard and mouse cannot be controlled.</li>
+         * </ul>
          * 
-         * * fullControl: The keyboard and mouse can be fully controlled.
-         * * optionalControl: By default, this feature is disabled. You can apply for permissions to enable the feature.
-         * * disableControl: The keyboard and mouse cannot be controlled.
+         * <strong>example:</strong>
+         * <p>fullControl</p>
          */
         public Builder remoteCoordinate(String remoteCoordinate) {
             this.putQueryParameter("RemoteCoordinate", remoteCoordinate);
@@ -1332,7 +1424,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The security group rules that you want to delete.
+         * <p>The security group rules that you want to delete.</p>
          */
         public Builder revokeAccessPolicyRule(java.util.List < RevokeAccessPolicyRule> revokeAccessPolicyRule) {
             this.putQueryParameter("RevokeAccessPolicyRule", revokeAccessPolicyRule);
@@ -1341,7 +1433,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The security group rules that you want to delete.
+         * <p>The security group rules that you want to delete.</p>
          */
         public Builder revokeSecurityPolicyRule(java.util.List < RevokeSecurityPolicyRule> revokeSecurityPolicyRule) {
             this.putQueryParameter("RevokeSecurityPolicyRule", revokeSecurityPolicyRule);
@@ -1350,11 +1442,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The effective scope of the policy. Valid values:
-         * <p>
+         * <p>The effective scope of the policy. Valid values:</p>
+         * <ul>
+         * <li>GLOBAL: takes effect globally.</li>
+         * <li>IP: takes effect based on the IP address.</li>
+         * </ul>
          * 
-         * * GLOBAL: takes effect globally.
-         * * IP: takes effect based on the IP address.
+         * <strong>example:</strong>
+         * <p>GLOBAL</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -1363,7 +1458,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * This parameter is required when the Scope parameter is set to IP.
+         * <p>This parameter is required when the Scope parameter is set to IP.</p>
          */
         public Builder scopeValue(java.util.List < String > scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -1372,11 +1467,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable USB redirection. Valid values:
-         * <p>
+         * <p>Specifies whether to enable USB redirection. Valid values:</p>
+         * <ul>
+         * <li>on: enables USB redirection.</li>
+         * <li>off: disables USB redirection.</li>
+         * </ul>
          * 
-         * *   on: enables USB redirection.
-         * *   off: disables USB redirection.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder usbRedirect(String usbRedirect) {
             this.putQueryParameter("UsbRedirect", usbRedirect);
@@ -1385,7 +1483,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The USB redirection rules.
+         * <p>The USB redirection rules.</p>
          */
         public Builder usbSupplyRedirectRule(java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule) {
             this.putQueryParameter("UsbSupplyRedirectRule", usbSupplyRedirectRule);
@@ -1394,7 +1492,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The multimedia redirection feature.
+         * <p>The multimedia redirection feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder videoRedirect(String videoRedirect) {
             this.putQueryParameter("VideoRedirect", videoRedirect);
@@ -1403,13 +1504,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specify whether to enable the policy of image display quality. Valid values:
-         * <p>
+         * <p>Specify whether to enable the policy of image display quality. Valid values:</p>
+         * <ul>
+         * <li>on: enables the policy of image display quality.</li>
+         * <li>off: disables the policy of image display quality.</li>
+         * </ul>
+         * <p>Default value: off.</p>
          * 
-         * *   on: enables the policy of image display quality.
-         * *   off: disables the policy of image display quality.
-         * 
-         * Default value: off.
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         public Builder visualQuality(String visualQuality) {
             this.putQueryParameter("VisualQuality", visualQuality);
@@ -1418,11 +1521,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable watermarking. Valid values:
-         * <p>
+         * <p>Specifies whether to enable watermarking. Valid values:</p>
+         * <ul>
+         * <li>on: enables watermarking.</li>
+         * <li>off: disables watermarking.</li>
+         * </ul>
          * 
-         * *   on: enables watermarking.
-         * *   off: disables watermarking.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder watermark(String watermark) {
             this.putQueryParameter("Watermark", watermark);
@@ -1431,7 +1537,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the anti-screen photo feature for invisible watermarks. on and off (default).
+         * <p>Specifies whether to enable the anti-screen photo feature for invisible watermarks. on and off (default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder watermarkAntiCam(String watermarkAntiCam) {
             this.putQueryParameter("WatermarkAntiCam", watermarkAntiCam);
@@ -1440,7 +1549,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The font color of the watermark. Valid values: 0 to 16777215.
+         * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder watermarkColor(Integer watermarkColor) {
             this.putQueryParameter("WatermarkColor", watermarkColor);
@@ -1449,7 +1561,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The inclination angle of the watermark. Value values: -10 to -30.
+         * <p>The inclination angle of the watermark. Value values: -10 to -30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-10</p>
          */
         public Builder watermarkDegree(Double watermarkDegree) {
             this.putQueryParameter("WatermarkDegree", watermarkDegree);
@@ -1458,7 +1573,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The font size of the watermark. Valid values: 10 to 50
+         * <p>The font size of the watermark. Valid values: 10 to 50</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder watermarkFontSize(Integer watermarkFontSize) {
             this.putQueryParameter("WatermarkFontSize", watermarkFontSize);
@@ -1467,11 +1585,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The font style of the watermark. Valid values:
-         * <p>
+         * <p>The font style of the watermark. Valid values:</p>
+         * <ul>
+         * <li>plain</li>
+         * <li>bold</li>
+         * </ul>
          * 
-         * * plain
-         * * bold
+         * <strong>example:</strong>
+         * <p>plain</p>
          */
         public Builder watermarkFontStyle(String watermarkFontStyle) {
             this.putQueryParameter("WatermarkFontStyle", watermarkFontStyle);
@@ -1480,7 +1601,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The watermark enhancement feature. Valid values: low, medium, and high.
+         * <p>The watermark enhancement feature. Valid values: low, medium, and high.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         public Builder watermarkPower(String watermarkPower) {
             this.putQueryParameter("WatermarkPower", watermarkPower);
@@ -1489,7 +1613,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The number of watermark rows. This parameter is not in use.
+         * <p>The number of watermark rows. This parameter is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder watermarkRowAmount(Integer watermarkRowAmount) {
             this.putQueryParameter("WatermarkRowAmount", watermarkRowAmount);
@@ -1498,7 +1625,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The security priority rule for invisible watermarks. Valid values: on and off.
+         * <p>The security priority rule for invisible watermarks. Valid values: on and off.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder watermarkSecurity(String watermarkSecurity) {
             this.putQueryParameter("WatermarkSecurity", watermarkSecurity);
@@ -1507,12 +1637,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The transparency of the watermark. The valid values include:
-         * <p>
+         * <p>The transparency of the watermark. The valid values include:</p>
+         * <ul>
+         * <li>LIGHT</li>
+         * <li>MIDDLE</li>
+         * <li>DARK</li>
+         * </ul>
          * 
-         * *   LIGHT
-         * *   MIDDLE
-         * *   DARK
+         * <strong>example:</strong>
+         * <p>LIGHT</p>
          */
         public Builder watermarkTransparency(String watermarkTransparency) {
             this.putQueryParameter("WatermarkTransparency", watermarkTransparency);
@@ -1521,7 +1654,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The transparency of the watermark. A larger value indicates a less transparent watermark. Valid values: 10 to 100.
+         * <p>The transparency of the watermark. A larger value indicates a less transparent watermark. Valid values: 10 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder watermarkTransparencyValue(Integer watermarkTransparencyValue) {
             this.putQueryParameter("WatermarkTransparencyValue", watermarkTransparencyValue);
@@ -1530,11 +1666,14 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * The type of the watermark. You can specify multiple watermark types at a time. Separate watermark types with commas (,). Valid values:
-         * <p>
+         * <p>The type of the watermark. You can specify multiple watermark types at a time. Separate watermark types with commas (,). Valid values:</p>
+         * <ul>
+         * <li>EndUserId: the username</li>
+         * <li>HostName: the last 15 characters of the cloud desktop ID</li>
+         * </ul>
          * 
-         * *   EndUserId: the username
-         * *   HostName: the last 15 characters of the cloud desktop ID
+         * <strong>example:</strong>
+         * <p>EndUserId</p>
          */
         public Builder watermarkType(String watermarkType) {
             this.putQueryParameter("WatermarkType", watermarkType);
@@ -1558,6 +1697,12 @@ public class ModifyPolicyGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class AuthorizeAccessPolicyRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrIp")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1598,7 +1743,11 @@ public class ModifyPolicyGroupRequest extends Request {
             private String description; 
 
             /**
-             * The CIDR block that the client can access.
+             * <p>The CIDR block that the client can access.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX/16</p>
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -1606,7 +1755,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The description of the client IP address whitelist.
+             * <p>The description of the client IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1620,6 +1772,12 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class AuthorizeSecurityPolicyRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
@@ -1719,7 +1877,10 @@ public class ModifyPolicyGroupRequest extends Request {
             private String type; 
 
             /**
-             * The object to which the security group rule applies. The value is an IPv4 CIDR block.
+             * <p>The object to which the security group rule applies. The value is an IPv4 CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX/8</p>
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -1727,7 +1888,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The description of security group rule N.
+             * <p>The description of security group rule N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1735,14 +1899,17 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The protocol type of security group rule N. Valid values:
-             * <p>
+             * <p>The protocol type of security group rule N. Valid values:</p>
+             * <ul>
+             * <li>tcp: TCP</li>
+             * <li>udp: UDP</li>
+             * <li>icmp: ICMP (IPv4)</li>
+             * <li>gre: GRE</li>
+             * <li>all: all protocols</li>
+             * </ul>
              * 
-             * *   tcp: TCP
-             * *   udp: UDP
-             * *   icmp: ICMP (IPv4)
-             * *   gre: GRE
-             * *   all: all protocols
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -1750,11 +1917,14 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The authorization policy of security group rule N. Valid values:
-             * <p>
+             * <p>The authorization policy of security group rule N. Valid values:</p>
+             * <ul>
+             * <li>accept: specifies the Allow policy that allows all access requests.</li>
+             * <li>drop: specifies the Deny policy that denies all access requests. If no messages of access denied are returned, the requests time out or failed.</li>
+             * </ul>
              * 
-             * *   accept: specifies the Allow policy that allows all access requests.
-             * *   drop: specifies the Deny policy that denies all access requests. If no messages of access denied are returned, the requests time out or failed.
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -1762,15 +1932,17 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The port range of security group rule N. The value of the port range is determined by the protocol type specified by the AuthorizeSecurityPolicyRule.N.IpProtocol parameter.
-             * <p>
+             * <p>The port range of security group rule N. The value of the port range is determined by the protocol type specified by the AuthorizeSecurityPolicyRule.N.IpProtocol parameter.</p>
+             * <ul>
+             * <li>When the AuthorizeSecurityPolicyRule.N.IpProtocol parameter is set to tcp or udp, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
+             * <li>When AuthorizeSecurityPolicyRule.N.IpProtocol is set to icmp, set the value to -1/-1.</li>
+             * <li>When AuthorizeSecurityPolicyRule.N.IpProtocol is set to gre, set the value to -1/-1.</li>
+             * <li>When AuthorizeSecurityPolicyRule.N.IpProtocol is set to all, set the value to -1/-1.</li>
+             * </ul>
+             * <p>For more information about the common ports of typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
              * 
-             * *   When the AuthorizeSecurityPolicyRule.N.IpProtocol parameter is set to tcp or udp, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-             * *   When AuthorizeSecurityPolicyRule.N.IpProtocol is set to icmp, set the value to -1/-1.
-             * *   When AuthorizeSecurityPolicyRule.N.IpProtocol is set to gre, set the value to -1/-1.
-             * *   When AuthorizeSecurityPolicyRule.N.IpProtocol is set to all, set the value to -1/-1.
-             * 
-             * For more information about the common ports of typical applications, see [Common ports](~~40724~~).
+             * <strong>example:</strong>
+             * <p>22/22</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -1778,12 +1950,12 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The priority of security group rule N. A smaller value indicates a higher priority.
-             * <p>
+             * <p>The priority of security group rule N. A smaller value indicates a higher priority.</p>
+             * <p>Valid values: 1 to 60.</p>
+             * <p>Default value: 1.</p>
              * 
-             * Valid values: 1 to 60.
-             * 
-             * Default value: 1.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -1791,11 +1963,14 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The direction of security group rule N. Valid values:
-             * <p>
+             * <p>The direction of security group rule N. Valid values:</p>
+             * <ul>
+             * <li>inflow: inbound</li>
+             * <li>outflow: outbound</li>
+             * </ul>
              * 
-             * *   inflow: inbound
-             * *   outflow: outbound
+             * <strong>example:</strong>
+             * <p>inflow</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1809,6 +1984,12 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class ClientType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
@@ -1848,17 +2029,21 @@ public class ModifyPolicyGroupRequest extends Request {
             private String status; 
 
             /**
-             * The type of client that you want to use to connect to the cloud desktop. Valid values:
-             * <p>
+             * <p>The type of client that you want to use to connect to the cloud desktop. Valid values:</p>
+             * <ul>
+             * <li>windows: the Windows client</li>
+             * <li>linux: C-Key Series Cloud Computer TC and A Series Cloud Computer TC</li>
+             * <li>macos: the macOS client</li>
+             * <li>ios: the iOS client</li>
+             * <li>android: the Android client</li>
+             * <li>html5: the web client</li>
+             * </ul>
+             * <blockquote>
+             * <p>By default, if you do not configure the ClientType-related parameters, all types of clients are allowed to connect to the cloud desktop.</p>
+             * </blockquote>
              * 
-             * * windows: the Windows client
-             * * linux: C-Key Series Cloud Computer TC and A Series Cloud Computer TC
-             * * macos: the macOS client
-             * * ios: the iOS client
-             * * android: the Android client
-             * * html5: the web client
-             * 
-             * > By default, if you do not configure the ClientType-related parameters, all types of clients are allowed to connect to the cloud desktop.
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -1866,13 +2051,17 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The logon method. This parameter specifies whether a specific type of the client is allowed to connect to the cloud desktop. Valid values:
-             * <p>
+             * <p>The logon method. This parameter specifies whether a specific type of the client is allowed to connect to the cloud desktop. Valid values:</p>
+             * <ul>
+             * <li>on: allowed.</li>
+             * <li>off: disallowed.</li>
+             * </ul>
+             * <blockquote>
+             * <p>By default, if you do not configure the ClientType-related parameters, all types of clients are allowed to log on to cloud desktops.</p>
+             * </blockquote>
              * 
-             * * on: allowed.
-             * * off: disallowed.
-             * 
-             * > By default, if you do not configure the ClientType-related parameters, all types of clients are allowed to log on to cloud desktops.
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1886,6 +2075,12 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class DeviceRedirects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
@@ -1947,6 +2142,12 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class DeviceRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
@@ -2088,6 +2289,12 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class DomainResolveRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2139,7 +2346,10 @@ public class ModifyPolicyGroupRequest extends Request {
             private String policy; 
 
             /**
-             * The description of the DNS rule.
+             * <p>The description of the DNS rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description policy</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2147,7 +2357,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.igetget.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -2155,26 +2368,26 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to allow the DNS rule.
-             * <p>
+             * <p>Specifies whether to allow the DNS rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>allow</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   allow
+             * <!-- -->
+             * </li>
+             * <li><p>block</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   block
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -2188,6 +2401,12 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class RevokeAccessPolicyRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
@@ -2227,7 +2446,10 @@ public class ModifyPolicyGroupRequest extends Request {
             private String description; 
 
             /**
-             * The IPv4 CIDR block that can be accessed from the client.
+             * <p>The IPv4 CIDR block that can be accessed from the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX/16</p>
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -2235,7 +2457,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The description of the client IP address whitelist that you want to delete.
+             * <p>The description of the client IP address whitelist that you want to delete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2249,6 +2474,12 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class RevokeSecurityPolicyRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
@@ -2348,7 +2579,10 @@ public class ModifyPolicyGroupRequest extends Request {
             private String type; 
 
             /**
-             * The IPv4 CIDR block of the security group rule.
+             * <p>The IPv4 CIDR block of the security group rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX/16</p>
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -2356,7 +2590,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The description of the security group rule.
+             * <p>The description of the security group rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2364,14 +2601,17 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The protocol type of the security group rule. Valid values:
-             * <p>
+             * <p>The protocol type of the security group rule. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>ICMP: ICMP (IPv4)</li>
+             * <li>GRE</li>
+             * <li>ALL</li>
+             * </ul>
              * 
-             * * TCP
-             * * UDP
-             * * ICMP: ICMP (IPv4)
-             * * GRE
-             * * ALL
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -2379,13 +2619,15 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The authorization policy of the security group rule that you want to delete. Valid values:
-             * <p>
+             * <p>The authorization policy of the security group rule that you want to delete. Valid values:</p>
+             * <ul>
+             * <li>accept: allows all access requests.</li>
+             * <li>drop: disallows all access requests. If no denied messages are returned, the requests timed out or failed.</li>
+             * </ul>
+             * <p>Default value: accept.</p>
              * 
-             * * accept: allows all access requests.
-             * * drop: disallows all access requests. If no denied messages are returned, the requests timed out or failed.
-             * 
-             * Default value: accept.
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -2393,15 +2635,17 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The port range of the security group rule that you want to delete. The value of the port range is determined by the protocol type specified by the IpProtocol parameter.
-             * <p>
+             * <p>The port range of the security group rule that you want to delete. The value of the port range is determined by the protocol type specified by the IpProtocol parameter.</p>
+             * <ul>
+             * <li>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.</li>
+             * <li>If the IpProtocol parameter is set to ICMP, the port range is -1/-1.</li>
+             * <li>If the IpProtocol parameter is set to GRE, the port range is -1/-1.</li>
+             * <li>If the IpProtocol parameter is set to ALL, the port range is -1/-1.</li>
+             * </ul>
+             * <p>For more information about the common ports of typical applications, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/common-ports?spm=a2c63.p38356.0.0.56b87f2c2SJTAw">Common ports</a>.</p>
              * 
-             * * If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
-             * * If the IpProtocol parameter is set to ICMP, the port range is -1/-1.
-             * * If the IpProtocol parameter is set to GRE, the port range is -1/-1.
-             * * If the IpProtocol parameter is set to ALL, the port range is -1/-1.
-             * 
-             * For more information about the common ports of typical applications, see [Common ports](https://www.alibabacloud.com/help/en/ecs/user-guide/common-ports?spm=a2c63.p38356.0.0.56b87f2c2SJTAw).
+             * <strong>example:</strong>
+             * <p>22/22</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -2409,12 +2653,12 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The priority of the security group rule. A smaller value indicates a higher priority.
-             * <p>
+             * <p>The priority of the security group rule. A smaller value indicates a higher priority.</p>
+             * <p>Valid values: 1 to 60.</p>
+             * <p>Default value: 1.</p>
              * 
-             * Valid values: 1 to 60.
-             * 
-             * Default value: 1.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -2422,11 +2666,14 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The direction of the security group rule that you want to delete. Valid values:
-             * <p>
+             * <p>The direction of the security group rule that you want to delete. Valid values:</p>
+             * <ul>
+             * <li>inflow: inbound</li>
+             * <li>outflow: outbound</li>
+             * </ul>
              * 
-             * * inflow: inbound
-             * * outflow: outbound
+             * <strong>example:</strong>
+             * <p>outflow</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2440,6 +2687,12 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyGroupRequest</p>
+     */
     public static class UsbSupplyRedirectRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2539,7 +2792,10 @@ public class ModifyPolicyGroupRequest extends Request {
             private String vendorId; 
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test rule</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2547,7 +2803,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The class of the device. This parameter is required when you set the usbRuleType parameter to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes?spm=a2c63.p38356.0.0.56b84b03GUn4kJ).
+             * <p>The class of the device. This parameter is required when you set the usbRuleType parameter to 1. For more information, see <a href="https://www.usb.org/defined-class-codes?spm=a2c63.p38356.0.0.56b84b03GUn4kJ">Defined Class Codes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0Eh</p>
              */
             public Builder deviceClass(String deviceClass) {
                 this.deviceClass = deviceClass;
@@ -2555,7 +2814,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The subclass of the device. This parameter is required when you set the usbRuleType parameter to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes?spm=a2c63.p38356.0.0.56b84b03GUn4kJ).
+             * <p>The subclass of the device. This parameter is required when you set the usbRuleType parameter to 1. For more information, see <a href="https://www.usb.org/defined-class-codes?spm=a2c63.p38356.0.0.56b84b03GUn4kJ">Defined Class Codes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxh</p>
              */
             public Builder deviceSubclass(String deviceSubclass) {
                 this.deviceSubclass = deviceSubclass;
@@ -2563,7 +2825,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08**</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -2571,11 +2836,14 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to allow USB redirection. Valid values:
-             * <p>
+             * <p>Specifies whether to allow USB redirection. Valid values:</p>
+             * <ul>
+             * <li>1: allowed.</li>
+             * <li>2: disallowed.</li>
+             * </ul>
              * 
-             * * 1: allowed.
-             * * 2: disallowed.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usbRedirectType(Long usbRedirectType) {
                 this.usbRedirectType = usbRedirectType;
@@ -2583,11 +2851,14 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The type of the USB redirection rule. Valid values:
-             * <p>
+             * <p>The type of the USB redirection rule. Valid values:</p>
+             * <ul>
+             * <li>1: device class.</li>
+             * <li>2: device vendor.</li>
+             * </ul>
              * 
-             * * 1: device class.
-             * * 2: device vendor.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usbRuleType(Long usbRuleType) {
                 this.usbRuleType = usbRuleType;
@@ -2595,7 +2866,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * The ID of the vendor. For more information, see[ Valid USB Vendor IDs (VIDs)](https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf?spm=a2c63.p38356.0.0.56b84b03GUn4kJ&file=vendor_ids032322.pdf_1.pdf).
+             * <p>The ID of the vendor. For more information, see<a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf?spm=a2c63.p38356.0.0.56b84b03GUn4kJ&file=vendor_ids032322.pdf_1.pdf"> Valid USB Vendor IDs (VIDs)</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04**</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;

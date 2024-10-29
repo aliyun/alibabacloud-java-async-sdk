@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportDesktopGroupInfoRequest} extends {@link RequestModel}
  *
  * <p>ExportDesktopGroupInfoRequest</p>
@@ -208,14 +209,17 @@ public class ExportDesktopGroupInfoRequest extends Request {
         } 
 
         /**
-         * The billing method of the cloud computer pool.
-         * <p>
+         * <p>The billing method of the cloud computer pool.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>PostPaid: pay-as-you-go.</p>
+         * </li>
+         * <li><p>PrePaid: subscription.</p>
+         * </li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   PostPaid: pay-as-you-go.
-         * 
-         * *   PrePaid: subscription.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -224,7 +228,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud computer pools.
+         * <p>The IDs of the cloud computer pools.</p>
          */
         public Builder desktopGroupId(java.util.List < String > desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -233,7 +237,10 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The name of the cloud computer pool.
+         * <p>The name of the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -242,7 +249,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The authorized user IDs of cloud computer pools.
+         * <p>The authorized user IDs of cloud computer pools.</p>
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -251,7 +258,10 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The time when the subscription cloud computer pool expires.
+         * <p>The time when the subscription cloud computer pool expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-31T15:59Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -260,7 +270,10 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The language of the response.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder langType(String langType) {
             this.putQueryParameter("LangType", langType);
@@ -269,12 +282,12 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -283,7 +296,10 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -292,7 +308,10 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The ID of the office network to which the cloud computer pool belongs.
+         * <p>The ID of the office network to which the cloud computer pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-467671****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -301,7 +320,10 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The ID of the policy that is associated with the cloud computer pool.
+         * <p>The ID of the policy that is associated with the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-53iyi2aar0nd6****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -310,7 +332,11 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by Elastic Desktop Service.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -319,7 +345,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The tags attached to the cloud computer pool. You can specify 1 to 20 tags.
+         * <p>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -334,6 +360,12 @@ public class ExportDesktopGroupInfoRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExportDesktopGroupInfoRequest} extends {@link TeaModel}
+     *
+     * <p>ExportDesktopGroupInfoRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -373,7 +405,10 @@ public class ExportDesktopGroupInfoRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.
+             * <p>The key of the tag. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. You cannot specify an empty string as a tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -381,7 +416,10 @@ public class ExportDesktopGroupInfoRequest extends Request {
             }
 
             /**
-             * The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+             * <p>The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

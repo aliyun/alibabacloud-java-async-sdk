@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiskEncryptionServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDiskEncryptionServiceResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>214552063030752</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -69,7 +73,10 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

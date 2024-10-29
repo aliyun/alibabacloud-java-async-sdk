@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDesktopGroupTimerStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetDesktopGroupTimerStatusResponseBody</p>
@@ -37,7 +38,10 @@ public class SetDesktopGroupTimerStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC7912E7-8BDF-547F-BCAC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

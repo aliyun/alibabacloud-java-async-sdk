@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserProfilePathRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserProfilePathRulesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         private UserProfilePathRule userProfilePathRule; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The directory blacklist and whitelist.
+         * <p>The directory blacklist and whitelist.</p>
          */
         public Builder userProfilePathRule(UserProfilePathRule userProfilePathRule) {
             this.userProfilePathRule = userProfilePathRule;
@@ -70,6 +74,12 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserProfilePathRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserProfilePathRulesResponseBody</p>
+     */
     public static class BlackPath extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -109,7 +119,10 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AppLocal/Data</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -117,26 +130,26 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The path type.
-             * <p>
+             * <p>The path type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>file</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   file
+             * <!-- -->
+             * </li>
+             * <li><p>folder</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   folder
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -150,6 +163,12 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserProfilePathRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserProfilePathRulesResponseBody</p>
+     */
     public static class WhitePaths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -189,7 +208,10 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>games</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -197,26 +219,26 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The path type.
-             * <p>
+             * <p>The path type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>file</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   file
+             * <!-- -->
+             * </li>
+             * <li><p>folder</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   folder
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>folder</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -230,6 +252,12 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserProfilePathRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserProfilePathRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackPath")
         private BlackPath blackPath;
@@ -269,7 +297,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private java.util.List < WhitePaths> whitePaths; 
 
             /**
-             * The blacklist that is configured.
+             * <p>The blacklist that is configured.</p>
              */
             public Builder blackPath(BlackPath blackPath) {
                 this.blackPath = blackPath;
@@ -277,7 +305,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The directories in the whitelist.
+             * <p>The directories in the whitelist.</p>
              */
             public Builder whitePaths(java.util.List < WhitePaths> whitePaths) {
                 this.whitePaths = whitePaths;
@@ -291,6 +319,12 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserProfilePathRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserProfilePathRulesResponseBody</p>
+     */
     public static class UserProfilePathRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
@@ -342,7 +376,10 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private String userProfileRuleType; 
 
             /**
-             * The desktop group ID.
+             * <p>The desktop group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dg-4i8fvpv6tfs03****</p>
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -350,7 +387,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The directory rules.
+             * <p>The directory rules.</p>
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -358,26 +395,26 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The directory type that is configured for the directory.
-             * <p>
+             * <p>The directory type that is configured for the directory.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>DesktopGroup</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   DesktopGroup
+             * <!-- -->
+             * </li>
+             * <li><p>Default</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Default
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder userProfileRuleType(String userProfileRuleType) {
                 this.userProfileRuleType = userProfileRuleType;

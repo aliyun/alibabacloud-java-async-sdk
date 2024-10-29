@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetSnapshotRequest} extends {@link RequestModel}
  *
  * <p>ResetSnapshotRequest</p>
@@ -69,7 +70,11 @@ public class ResetSnapshotRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hzngahou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +83,11 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * <p>The ID of the snapshot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2zeipxmnhej803x7****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigADConnectorUserRequest} extends {@link RequestModel}
  *
  * <p>ConfigADConnectorUserRequest</p>
@@ -113,7 +114,11 @@ public class ConfigADConnectorUserRequest extends Request {
         } 
 
         /**
-         * The password of the AD user that has the permissions to join computers to domains.
+         * <p>The password of the AD user that has the permissions to join computers to domains.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder domainPassword(String domainPassword) {
             this.putQueryParameter("DomainPassword", domainPassword);
@@ -122,10 +127,12 @@ public class ConfigADConnectorUserRequest extends Request {
         }
 
         /**
-         * The username of the AD user that has the permissions to join computers to domains.
-         * <p>
+         * <p>The username of the AD user that has the permissions to join computers to domains.</p>
+         * <p>After the username is configured, the cloud desktops in the same AD workspace are joined to the specified OU.</p>
+         * <p>This parameter is required.</p>
          * 
-         * After the username is configured, the cloud desktops in the same AD workspace are joined to the specified OU.
+         * <strong>example:</strong>
+         * <p>Administrator</p>
          */
         public Builder domainUserName(String domainUserName) {
             this.putQueryParameter("DomainUserName", domainUserName);
@@ -134,7 +141,10 @@ public class ConfigADConnectorUserRequest extends Request {
         }
 
         /**
-         * The name of the OU in the AD domain. You can call the [ListUserAdOrganizationUnits](~~311259~~) to obtain the OU name.
+         * <p>The name of the OU in the AD domain. You can call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the OU name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com/Domain Controllers</p>
          */
         public Builder OUName(String OUName) {
             this.putQueryParameter("OUName", OUName);
@@ -143,7 +153,11 @@ public class ConfigADConnectorUserRequest extends Request {
         }
 
         /**
-         * The ID of the AD workspace.
+         * <p>The ID of the AD workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-778418****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -152,7 +166,11 @@ public class ConfigADConnectorUserRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

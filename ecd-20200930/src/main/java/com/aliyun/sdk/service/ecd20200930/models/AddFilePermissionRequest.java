@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFilePermissionRequest} extends {@link RequestModel}
  *
  * <p>AddFilePermissionRequest</p>
@@ -127,7 +128,11 @@ public class AddFilePermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk whose folder you want to share.
+         * <p>The ID of the cloud disk whose folder you want to share.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-352282****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -136,7 +141,10 @@ public class AddFilePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the end user who uses the cloud disk.
+         * <p>The ID of the end user who uses the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -145,7 +153,11 @@ public class AddFilePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the file.
+         * <p>The ID of the file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6333e553a133ce21e6f747cf948bb9ef95d7****</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -154,7 +166,10 @@ public class AddFilePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the team that uses cloud disks in Cloud Drive Service.
+         * <p>The ID of the team that uses cloud disks in Cloud Drive Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-i1ruuudp92qpj****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -163,7 +178,8 @@ public class AddFilePermissionRequest extends Request {
         }
 
         /**
-         * The members who are granted the folder permissions.
+         * <p>The members who are granted the folder permissions.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder memberList(java.util.List < MemberList> memberList) {
             String memberListShrink = shrink(memberList, "MemberList", "json");
@@ -173,7 +189,11 @@ public class AddFilePermissionRequest extends Request {
         }
 
         /**
-         * The region ID of the folder. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -188,6 +208,12 @@ public class AddFilePermissionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddFilePermissionRequest} extends {@link TeaModel}
+     *
+     * <p>AddFilePermissionRequest</p>
+     */
     public static class CdsIdentity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -229,7 +255,11 @@ public class AddFilePermissionRequest extends Request {
             private String type; 
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user01</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -237,26 +267,27 @@ public class AddFilePermissionRequest extends Request {
             }
 
             /**
-             * The type of the user.
-             * <p>
+             * <p>The type of the user.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><!-- -->
              * 
-             * Valid values:
+             * <p>IT_Group</p>
+             * <!-- -->
              * 
-             * *   <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><!-- -->
              * 
-             *     IT_Group
+             * <p>IT_User</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     IT_User
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>IT_User</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -270,6 +301,12 @@ public class AddFilePermissionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddFilePermissionRequest} extends {@link TeaModel}
+     *
+     * <p>AddFilePermissionRequest</p>
+     */
     public static class MemberList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CdsIdentity")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -335,7 +372,8 @@ public class AddFilePermissionRequest extends Request {
             private String roleId; 
 
             /**
-             * The user of the cloud disk.
+             * <p>The user of the cloud disk.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder cdsIdentity(CdsIdentity cdsIdentity) {
                 this.cdsIdentity = cdsIdentity;
@@ -343,7 +381,10 @@ public class AddFilePermissionRequest extends Request {
             }
 
             /**
-             * Specifies whether the users of the child group can inherit the folder permissions.
+             * <p>Specifies whether the users of the child group can inherit the folder permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disinheritSubGroup(Boolean disinheritSubGroup) {
                 this.disinheritSubGroup = disinheritSubGroup;
@@ -351,7 +392,10 @@ public class AddFilePermissionRequest extends Request {
             }
 
             /**
-             * The time when the authorization expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The value never expires. You can specify a value that is predefined by the system for this parameter. Example: 4775500800000.
+             * <p>The time when the authorization expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The value never expires. You can specify a value that is predefined by the system for this parameter. Example: 4775500800000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4775500800000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -359,24 +403,27 @@ public class AddFilePermissionRequest extends Request {
             }
 
             /**
-             * The ID of the role to which you want to attach the folder permissions. To configure the folder permissions: you can specify a role or create custom operation permissions. You can use RoleId to specify a role. RoleId is mutually exclusive with ActionList. If you specify both of them, the value of RoleId takes precedence.
-             * <p>
+             * <p>The ID of the role to which you want to attach the folder permissions. To configure the folder permissions: you can specify a role or create custom operation permissions. You can use RoleId to specify a role. RoleId is mutually exclusive with ActionList. If you specify both of them, the value of RoleId takes precedence.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SystemFileEditorWithoutShareLink</li>
+             * <li>SystemFileUploaderAndDownloaderWithShareLink</li>
+             * <li>SystemFileDownloader</li>
+             * <li>SystemFileEditorWithoutDelete</li>
+             * <li>SystemFileOwner</li>
+             * <li>SystemFileDownloaderWithShareLink</li>
+             * <li>SystemFileUploaderAndViewer</li>
+             * <li>SystemFileViewer</li>
+             * <li>SystemFileEditor</li>
+             * <li>SystemFileUploaderWithShareLink</li>
+             * <li>SystemFileUploader</li>
+             * <li>SystemFileUploaderAndDownloader</li>
+             * <li>SystemFileMetaViewer</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values:
-             * 
-             * * SystemFileEditorWithoutShareLink
-             * * SystemFileUploaderAndDownloaderWithShareLink
-             * * SystemFileDownloader
-             * * SystemFileEditorWithoutDelete
-             * * SystemFileOwner
-             * * SystemFileDownloaderWithShareLink
-             * * SystemFileUploaderAndViewer
-             * * SystemFileViewer
-             * * SystemFileEditor
-             * * SystemFileUploaderWithShareLink
-             * * SystemFileUploader
-             * * SystemFileUploaderAndDownloader
-             * * SystemFileMetaViewer
+             * <strong>example:</strong>
+             * <p>SystemFileUploaderAndDownloader</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;

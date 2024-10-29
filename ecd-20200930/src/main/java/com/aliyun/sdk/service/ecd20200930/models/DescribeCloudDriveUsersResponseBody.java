@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudDriveUsersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudDriveUsersResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudDriveUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDriveUsersResponseBody</p>
+     */
     public static class CloudDriveUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DriveId")
         private String driveId;

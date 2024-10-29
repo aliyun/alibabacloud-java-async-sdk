@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizedListHeadersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomizedListHeadersResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomizedListHeadersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomizedListHeadersResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayType")
         private String displayType;

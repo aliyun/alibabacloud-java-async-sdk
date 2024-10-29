@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFotaTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeFotaTasksRequest</p>
@@ -139,7 +140,12 @@ public class DescribeFotaTasksRequest extends Request {
         } 
 
         /**
-         * >  This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>To be hidden.</p>
          */
         public Builder fotaStatus(String fotaStatus) {
             this.putQueryParameter("FotaStatus", fotaStatus);
@@ -148,13 +154,15 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * The language of the image version to update.
-         * <p>
+         * <p>The language of the image version to update.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en: English.</li>
+         * <li>zh: Simplified Chinese.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   en: English.
-         * *   zh: Simplified Chinese.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -163,11 +171,14 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100</li>
+         * <li>Default value: 20</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 100
-         * *   Default value: 20
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -176,7 +187,10 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -185,7 +199,11 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by Elastic Desktop Service.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +212,7 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * The IDs of the image update tasks.
+         * <p>The IDs of the image update tasks.</p>
          */
         public Builder taskUid(java.util.List < String > taskUid) {
             this.putQueryParameter("TaskUid", taskUid);
@@ -203,13 +221,15 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically push the image update task.
-         * <p>
+         * <p>Specifies whether to automatically push the image update task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Running: automatically pushes the image update task.</li>
+         * <li>Pending: does not automatically push the image update task.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Running: automatically pushes the image update task.
-         * *   Pending: does not automatically push the image update task.
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         public Builder userStatus(String userStatus) {
             this.putQueryParameter("UserStatus", userStatus);

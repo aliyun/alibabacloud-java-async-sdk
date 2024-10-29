@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteAutoSnapshotPolicyRequest</p>
@@ -69,7 +70,8 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The IDs of the automatic snapshot policies that you want to delete.
+         * <p>The IDs of the automatic snapshot policies that you want to delete.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder policyId(java.util.List < String > policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -78,7 +80,11 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualMFADevicesResponse} extends {@link TeaModel}
  *
  * <p>DescribeVirtualMFADevicesResponse</p>

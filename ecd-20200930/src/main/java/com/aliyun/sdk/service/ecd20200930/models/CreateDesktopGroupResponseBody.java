@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDesktopGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDesktopGroupResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the desktop group.
+         * <p>The ID of the desktop group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.desktopGroupId = desktopGroupId;
@@ -69,7 +73,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the orders.
+         * <p>The IDs of the orders.</p>
          */
         public Builder orderIds(java.util.List < String > orderIds) {
             this.orderIds = orderIds;
@@ -77,7 +81,10 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3EB7FCEE-D731-4948-85A3-4B2C341CA983</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

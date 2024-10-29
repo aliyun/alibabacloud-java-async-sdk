@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachEndUserRequest} extends {@link RequestModel}
  *
  * <p>DetachEndUserRequest</p>
@@ -126,7 +127,10 @@ public class DetachEndUserRequest extends Request {
         } 
 
         /**
-         * The address of the Active Directory (AD) office network.
+         * <p>The address of the Active Directory (AD) office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xn--0zw****</p>
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -135,12 +139,15 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The type of the client.
-         * <p>
+         * <p>The type of the client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: hardware client.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   1: hardware client.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -149,7 +156,11 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The serial number (SN) of the hardware client.
+         * <p>The serial number (SN) of the hardware client.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F9E52EDCCB2B****</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -158,7 +169,10 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the convenient office network.
+         * <p>The ID of the convenient office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -167,7 +181,11 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the user that you want to unbind from the hardware client.
+         * <p>The ID of the user that you want to unbind from the hardware client.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>moli</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -176,7 +194,10 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

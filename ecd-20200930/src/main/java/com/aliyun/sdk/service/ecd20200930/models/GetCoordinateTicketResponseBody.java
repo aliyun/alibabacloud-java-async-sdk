@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCoordinateTicketResponseBody} extends {@link TeaModel}
  *
  * <p>GetCoordinateTicketResponseBody</p>
@@ -85,7 +86,10 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         private String ticket; 
 
         /**
-         * The ID of the stream collaboration.
+         * <p>The ID of the stream collaboration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>co-0sot77uale3****</p>
          */
         public Builder coId(String coId) {
             this.coId = coId;
@@ -93,7 +97,10 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,10 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the cloud computer connection task.
+         * <p>The ID of the cloud computer connection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39cc15e5-6998-4b9f-9b2c-7a4cc3e2****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -109,34 +119,33 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * The task status.
-         * <p>
+         * <p>The task status.</p>
+         * <p>Possible values:</p>
+         * <ul>
+         * <li><p>Finished</p>
+         * <!-- -->
          * 
-         * Possible values:
+         * <!-- -->
          * 
-         * *   Finished
+         * <!-- -->
+         * </li>
+         * <li><p>Failed</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Running</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Failed
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Running
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -144,7 +153,10 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * The credentials of the stream collaboration.
+         * <p>The credentials of the stream collaboration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>
          */
         public Builder ticket(String ticket) {
             this.ticket = ticket;

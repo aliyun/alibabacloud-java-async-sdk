@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportDesktopGroupInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ExportDesktopGroupInfoResponseBody</p>
@@ -49,7 +50,10 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24E05D3E-08F4-551E-B1F0-F6D84EE0BCCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,19 +61,22 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The URL from which you can download the exported cloud computer pools. The details of the cloud computer pools include:
-         * <p>
+         * <p>The URL from which you can download the exported cloud computer pools. The details of the cloud computer pools include:</p>
+         * <ul>
+         * <li>IDs and names of the cloud computer pools</li>
+         * <li>IDs and names of the office networks</li>
+         * <li>Cloud computer pool templates</li>
+         * <li>Number of CPU cores and memory size</li>
+         * <li>System disks and data disks</li>
+         * <li>Names of security policies</li>
+         * <li>Number of current authorized users</li>
+         * <li>Billing methods</li>
+         * <li>The time when the cloud computer pools were created</li>
+         * <li>The time when the cloud computer pools expire</li>
+         * </ul>
          * 
-         * *   IDs and names of the cloud computer pools
-         * *   IDs and names of the office networks
-         * *   Cloud computer pool templates
-         * *   Number of CPU cores and memory size
-         * *   System disks and data disks
-         * *   Names of security policies
-         * *   Number of current authorized users
-         * *   Billing methods
-         * *   The time when the cloud computer pools were created
-         * *   The time when the cloud computer pools expire
+         * <strong>example:</strong>
+         * <p><a href="https://cn-hangzhou-servicemanager.oss-cn-hangzhou.aliyuncs.com/A0_DESKTOP/EDS_CloudDesktopGroups_202203********_xBjqdCT***.xlsx">https://cn-hangzhou-servicemanager.oss-cn-hangzhou.aliyuncs.com/A0_DESKTOP/EDS_CloudDesktopGroups_202203********_xBjqdCT***.xlsx</a>?*********</p>
          */
         public Builder url(String url) {
             this.url = url;

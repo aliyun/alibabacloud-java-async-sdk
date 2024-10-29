@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserProfilePathRulesResponse} extends {@link TeaModel}
  *
  * <p>DescribeUserProfilePathRulesResponse</p>

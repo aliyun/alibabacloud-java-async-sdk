@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewDesktopsResponseBody} extends {@link TeaModel}
  *
  * <p>RenewDesktopsResponseBody</p>
@@ -49,7 +50,10 @@ public class RenewDesktopsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20844399755****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class RenewDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

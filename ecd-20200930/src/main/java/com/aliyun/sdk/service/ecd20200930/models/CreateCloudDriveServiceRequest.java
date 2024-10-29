@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudDriveServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateCloudDriveServiceRequest</p>
@@ -297,7 +298,10 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * The business type.
+         * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder bizType(Integer bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -342,7 +346,10 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * MaxSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536870912000</p>
          */
         public Builder maxSize(Long maxSize) {
             this.putQueryParameter("MaxSize", maxSize);
@@ -351,7 +358,10 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * The name of the cloud disk that you want to create in Cloud Drive Service.
+         * <p>The name of the cloud disk that you want to create in Cloud Drive Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wuying-pds</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -396,7 +406,11 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,7 +419,10 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * The solution ID.
+         * <p>The solution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>co-0esnf8kb8zpfbqmvt</p>
          */
         public Builder solutionId(String solutionId) {
             this.putQueryParameter("SolutionId", solutionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserConnectTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserConnectTimeResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeUserConnectTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserConnectTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserConnectTimeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndConnectTime")
         private String endConnectTime;

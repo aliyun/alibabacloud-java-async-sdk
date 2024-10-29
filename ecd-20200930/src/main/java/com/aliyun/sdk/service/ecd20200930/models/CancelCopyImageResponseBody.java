@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelCopyImageResponseBody} extends {@link TeaModel}
  *
  * <p>CancelCopyImageResponseBody</p>
@@ -37,7 +38,10 @@ public class CancelCopyImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BEFE642-A383-4A18-8939-FB7DE452****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

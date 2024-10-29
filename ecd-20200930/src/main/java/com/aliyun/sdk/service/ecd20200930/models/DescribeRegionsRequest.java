@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRegionsRequest</p>
@@ -68,7 +69,10 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The display name of the region, which varies based on the current language.
+         * <p>The display name of the region, which varies based on the current language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -77,7 +81,11 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudDriveGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudDriveGroupsRequest</p>
@@ -210,7 +211,11 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk in Cloud Drive Service.
+         * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai+cds-135515****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -219,7 +224,10 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -228,7 +236,10 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The workspace name.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDirectoryName</p>
          */
         public Builder directoryName(String directoryName) {
             this.putQueryParameter("DirectoryName", directoryName);
@@ -237,13 +248,15 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The team space status. Valid values:
-         * <p>
+         * <p>The team space status. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>Default value: enabled.</p>
          * 
-         * *   enabled
-         * *   disabled
-         * 
-         * Default value: enabled.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder driveStatus(String driveStatus) {
             this.putQueryParameter("DriveStatus", driveStatus);
@@ -252,13 +265,15 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether the space is increased.
-         * <p>
+         * <p>Specifies whether the space is increased.</p>
+         * <ul>
+         * <li>binding: increased</li>
+         * <li>unbound: not increased</li>
+         * </ul>
+         * <p>Default value: null. The default value indicates that all spaces are queried.</p>
          * 
-         * *   binding: increased
-         * *   unbound: not increased
-         * 
-         * Default value: null. The default value indicates that all spaces are queried.
+         * <strong>example:</strong>
+         * <p>binding</p>
          */
         public Builder driveType(String driveType) {
             this.putQueryParameter("DriveType", driveType);
@@ -267,7 +282,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The team ID.
+         * <p>The team ID.</p>
          */
         public Builder groupId(java.util.List < String > groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -276,7 +291,10 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The team name for fuzzy search.
+         * <p>The team name for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Team 1</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -285,13 +303,15 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The team type.
-         * <p>
+         * <p>The team type.</p>
+         * <ul>
+         * <li>org: organizational structure</li>
+         * <li>directory: workspace</li>
+         * </ul>
+         * <p>Default value: null. The default value indicates that all types of teams are queried.</p>
          * 
-         * *   org: organizational structure
-         * *   directory: workspace
-         * 
-         * Default value: null. The default value indicates that all types of teams are queried.
+         * <strong>example:</strong>
+         * <p>org</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -300,11 +320,14 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100</li>
+         * <li>Default value: 20</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 100
-         * *   Default value: 20
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -313,7 +336,10 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lY3I2VNHLwy+nIoSXh****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -322,10 +348,11 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.
-         * <p>
+         * <p>The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.</p>
+         * <p>Default value: null. The default value indicates that all nodes are queried.</p>
          * 
-         * Default value: null. The default value indicates that all nodes are queried.
+         * <strong>example:</strong>
+         * <p>cg-e70ga4ixp30ur****</p>
          */
         public Builder parentGroupId(String parentGroupId) {
             this.putQueryParameter("ParentGroupId", parentGroupId);
@@ -334,7 +361,11 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

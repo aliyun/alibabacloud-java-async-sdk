@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FilePermissionMember} extends {@link TeaModel}
  *
  * <p>FilePermissionMember</p>
@@ -75,7 +76,7 @@ public class FilePermissionMember extends TeaModel {
         private String roleId; 
 
         /**
-         * CdsIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder cdsIdentity(CdsIdentity cdsIdentity) {
             this.cdsIdentity = cdsIdentity;
@@ -99,7 +100,7 @@ public class FilePermissionMember extends TeaModel {
         }
 
         /**
-         * RoleId.
+         * <p>This parameter is required.</p>
          */
         public Builder roleId(String roleId) {
             this.roleId = roleId;
@@ -112,6 +113,12 @@ public class FilePermissionMember extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FilePermissionMember} extends {@link TeaModel}
+     *
+     * <p>FilePermissionMember</p>
+     */
     public static class CdsIdentity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -153,7 +160,7 @@ public class FilePermissionMember extends TeaModel {
             private String type; 
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -161,7 +168,7 @@ public class FilePermissionMember extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
              */
             public Builder type(String type) {
                 this.type = type;

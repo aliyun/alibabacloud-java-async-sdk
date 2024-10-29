@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveCdsFileRequest} extends {@link RequestModel}
  *
  * <p>MoveCdsFileRequest</p>
@@ -138,7 +139,10 @@ public class MoveCdsFileRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-346063****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -147,50 +151,44 @@ public class MoveCdsFileRequest extends Request {
         }
 
         /**
-         * The processing mode of files that have the same name.
-         * <p>
+         * <p>The processing mode of files that have the same name.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><!-- -->
          * 
-         * Valid values:
+         * <p>refuse</p>
+         * <!-- -->
          * 
-         * *   <!-- -->
+         * <p>: If you want to create a file that uses the same name as an existing file in the cloud, the system denies your request and returns the details of the existing file.</p>
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
          * 
-         *     refuse
+         * <p>auto_rename</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>: If you want to create a file that uses the same name as an existing file in the cloud, the system renames the file that you want to create by appending the current time point.</p>
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
          * 
-         *     : If you want to create a file that uses the same name as an existing file in the cloud, the system denies your request and returns the details of the existing file.
+         * <p>ignore</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>: The system allows you to create a file that uses the same name as an existing file in the cloud.</p>
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
          * 
-         * *   <!-- -->
+         * <p>over_write</p>
+         * <!-- -->
          * 
-         *     auto_rename
+         * <p>: After you create a file that uses the same name as an existing file in the cloud, the new file overwrites the existing file.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     : If you want to create a file that uses the same name as an existing file in the cloud, the system renames the file that you want to create by appending the current time point.
-         * 
-         *     <!-- -->
-         * 
-         * *   <!-- -->
-         * 
-         *     ignore
-         * 
-         *     <!-- -->
-         * 
-         *     : The system allows you to create a file that uses the same name as an existing file in the cloud.
-         * 
-         *     <!-- -->
-         * 
-         * *   <!-- -->
-         * 
-         *     over_write
-         * 
-         *     <!-- -->
-         * 
-         *     : After you create a file that uses the same name as an existing file in the cloud, the new file overwrites the existing file.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         public Builder conflictPolicy(String conflictPolicy) {
             this.putQueryParameter("ConflictPolicy", conflictPolicy);
@@ -199,7 +197,10 @@ public class MoveCdsFileRequest extends Request {
         }
 
         /**
-         * The user ID that you want to use to access the cloud disk.
+         * <p>The user ID that you want to use to access the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -208,7 +209,10 @@ public class MoveCdsFileRequest extends Request {
         }
 
         /**
-         * The ID of the file.
+         * <p>The ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63f3257b68b018170b194d87b875512d108f****</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -217,7 +221,7 @@ public class MoveCdsFileRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -226,7 +230,10 @@ public class MoveCdsFileRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder that you want to move. If you want to remove the root folder, set the value to root.
+         * <p>The ID of the parent folder that you want to move. If you want to remove the root folder, set the value to root.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6409848a6da91d6240604e7ba7337d85ba8a1****</p>
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -235,7 +242,11 @@ public class MoveCdsFileRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

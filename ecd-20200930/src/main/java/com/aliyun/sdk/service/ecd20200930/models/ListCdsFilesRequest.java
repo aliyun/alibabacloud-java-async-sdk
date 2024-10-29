@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCdsFilesRequest} extends {@link RequestModel}
  *
  * <p>ListCdsFilesRequest</p>
@@ -180,7 +181,11 @@ public class ListCdsFilesRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-320357****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -189,7 +194,10 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * The ID of the user to whom the cloud disk is allocated.
+         * <p>The ID of the user to whom the cloud disk is allocated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -198,7 +206,7 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * The IDs of the files to be queried.
+         * <p>The IDs of the files to be queried.</p>
          */
         public Builder fileIds(java.util.List < String > fileIds) {
             String fileIdsShrink = shrink(fileIds, "FileIds", "json");
@@ -217,7 +225,10 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 100.
+         * <p>The number of entries to return on each page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -226,7 +237,10 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * The token used for the next query. If this parameter is empty, all results are returned.
+         * <p>The token used for the next query. If this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WyI2Mzg4MjAwMzFhNGQwZWVmN2I3MjRkZjZhZjAyMWU4YzY1MmRjZmUyIiwibiIsIm4iLDEsLTEsMTY2OTg2NTQ3NTMxMiwiNjM4ODIwMDNlNTU0YmZiZjFkYTk0MmEyYTZhMjEyZDkxODdjMjAy****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -235,106 +249,84 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * The sorting method of the files.
-         * <p>
+         * <p>The sorting method of the files.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>CreateTimeDesc</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   CreateTimeDesc
+         * <p>sorts files in descending order based on the time when they are created.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>ModifiedTimeAsc</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>sorts files in ascending order based on the time when they are modified.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>NameDesc</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     sorts files in descending order based on the time when they are created.
+         * <p>sorts files in descending order based on their names.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>SizeAsc</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   ModifiedTimeAsc
+         * <p>sorts files in ascending order based on their sizes.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>ModifiedTimeDesc</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>sorts files in descending order based on the time when they are modified.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>CreateTimeAsc</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     sorts files in ascending order based on the time when they are modified.
+         * <p>sorts files in ascending order based on the time when they are created.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>SizeDesc</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   NameDesc
+         * <p>sorts files in descending order based on their sizes.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>NameAsc</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>sorts files in ascending order based on their names.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     sorts files in descending order based on their names.
-         * 
-         *     <!-- -->
-         * 
-         * *   SizeAsc
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     sorts files in ascending order based on their sizes.
-         * 
-         *     <!-- -->
-         * 
-         * *   ModifiedTimeDesc
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     sorts files in descending order based on the time when they are modified.
-         * 
-         *     <!-- -->
-         * 
-         * *   CreateTimeAsc
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     sorts files in ascending order based on the time when they are created.
-         * 
-         *     <!-- -->
-         * 
-         * *   SizeDesc
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     sorts files in descending order based on their sizes.
-         * 
-         *     <!-- -->
-         * 
-         * *   NameAsc
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     sorts files in ascending order based on their names.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>CreateTimeDesc</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -343,7 +335,10 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * The ID of the parent file.
+         * <p>The ID of the parent file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63636837e47e5a24a8a940218bef395c210e****</p>
          */
         public Builder parentFileId(String parentFileId) {
             this.putQueryParameter("ParentFileId", parentFileId);
@@ -352,7 +347,10 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -361,34 +359,30 @@ public class ListCdsFilesRequest extends Request {
         }
 
         /**
-         * The file status.
-         * <p>
+         * <p>The file status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>available</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   available
+         * <p>returns only normal files.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>uploading</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>returns only the files that are being uploaded.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     returns only normal files.
-         * 
-         *     <!-- -->
-         * 
-         * *   uploading
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     returns only the files that are being uploaded.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

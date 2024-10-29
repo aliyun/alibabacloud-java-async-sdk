@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFotaTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFotaTasksResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned message. If the request was successful, a `success` is returned. If the request failed, an error message is returned.
+         * <p>The returned message. If the request was successful, a <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the image update task.
+         * <p>Details about the image update task.</p>
          */
         public Builder fotaTasks(java.util.List < FotaTasks> fotaTasks) {
             this.fotaTasks = fotaTasks;
@@ -101,7 +105,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message. This parameter is not returned if the Code value is a `success` message.
+         * <p>The returned error message. This parameter is not returned if the Code value is a <code>success</code> message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +127,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +143,12 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFotaTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFotaTasksResponseBody</p>
+     */
     public static class FotaTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
@@ -253,7 +272,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             private String taskUid; 
 
             /**
-             * The image version. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.
+             * <p>The image version. You can call the <a href="https://help.aliyun.com/document_detail/188895.html">DescribeImages</a> operation to obtain the value of this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1-D-20220513.143129</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -261,7 +283,12 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * >  This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>To be hidden.</p>
              */
             public Builder fotaProject(String fotaProject) {
                 this.fotaProject = fotaProject;
@@ -269,7 +296,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of custom images that can be updated to this version.
+             * <p>The number of custom images that can be updated to this version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pendingCustomImageCount(Integer pendingCustomImageCount) {
                 this.pendingCustomImageCount = pendingCustomImageCount;
@@ -277,7 +307,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud computers whose images can be updated to this version.
+             * <p>The number of cloud computers whose images can be updated to this version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pendingDesktopCount(Integer pendingDesktopCount) {
                 this.pendingDesktopCount = pendingDesktopCount;
@@ -285,7 +318,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image version available for update was published.
+             * <p>The time when the image version available for update was published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-31T04:28:48Z</p>
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -293,7 +329,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image version available for update.
+             * <p>The description of the image version available for update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -301,7 +340,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the update package. Unit: KB.
+             * <p>The size of the update package. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>568533470</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -309,13 +351,15 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image update task is automatically pushed.
-             * <p>
+             * <p>Indicates whether the image update task is automatically pushed.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Running: automatically pushes the image update task.</li>
+             * <li>Pending: does not automatically push the image update task.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Running: automatically pushes the image update task.
-             * *   Pending: does not automatically push the image update task.
+             * <strong>example:</strong>
+             * <p>valid</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -323,7 +367,10 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image upgrade task.
+             * <p>The ID of the image upgrade task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aot-c4khwrp9ocml4****</p>
              */
             public Builder taskUid(String taskUid) {
                 this.taskUid = taskUid;

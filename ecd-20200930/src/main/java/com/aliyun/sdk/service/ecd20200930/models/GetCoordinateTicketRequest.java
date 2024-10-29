@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCoordinateTicketRequest} extends {@link RequestModel}
  *
  * <p>GetCoordinateTicketRequest</p>
@@ -112,7 +113,11 @@ public class GetCoordinateTicketRequest extends Request {
         } 
 
         /**
-         * The ID of the stream collaboration. You can obtain the value of this parameter based on the value of `Coid` that is returned by the `ApplyCoordinationForMonitoring` operation.
+         * <p>The ID of the stream collaboration. You can obtain the value of this parameter based on the value of <code>Coid</code> that is returned by the <code>ApplyCoordinationForMonitoring</code> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>co-0sot77uale3****</p>
          */
         public Builder coId(String coId) {
             this.putQueryParameter("CoId", coId);
@@ -121,7 +126,10 @@ public class GetCoordinateTicketRequest extends Request {
         }
 
         /**
-         * The name of the convenience user account. If you initiate the request as an administrator, you do not need to specify this parameter.
+         * <p>The name of the convenience user account. If you initiate the request as an administrator, you do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -130,7 +138,11 @@ public class GetCoordinateTicketRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +151,10 @@ public class GetCoordinateTicketRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer connection task. The first time you initiate the request, you do not need to specify the ID of the cloud computer connection task. If no ticket is returned after you initiate the first request, you must specify the value of taskId that is returned for the first request in the subsequent request.
+         * <p>The ID of the cloud computer connection task. The first time you initiate the request, you do not need to specify the ID of the cloud computer connection task. If no ticket is returned after you initiate the first request, you must specify the value of taskId that is returned for the first request in the subsequent request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39cc15e5-6998-4b9f-9b2c-7a4cc3e2****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -148,22 +163,24 @@ public class GetCoordinateTicketRequest extends Request {
         }
 
         /**
-         * The type of the user.
-         * <p>
+         * <p>The type of the user.</p>
+         * <p>Set the value to TENANT_ADMIN.</p>
+         * <ul>
+         * <li><p>The value of</p>
+         * <!-- -->
          * 
-         * Set the value to TENANT_ADMIN.
+         * <!-- -->
          * 
-         * *   The value of
+         * <p>TENANT_ADMIN</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>specifies an administrator.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         *     TENANT_ADMIN
-         * 
-         *     <!-- -->
-         * 
-         *     specifies an administrator.
+         * <strong>example:</strong>
+         * <p>TENANT_ADMIN</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

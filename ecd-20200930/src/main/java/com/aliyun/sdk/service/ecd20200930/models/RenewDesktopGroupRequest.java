@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewDesktopGroupRequest} extends {@link RequestModel}
  *
  * <p>RenewDesktopGroupRequest</p>
@@ -143,7 +144,10 @@ public class RenewDesktopGroupRequest extends Request {
         }
 
         /**
-         * DesktopGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-7724r1jitbjzc****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -170,7 +174,10 @@ public class RenewDesktopGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

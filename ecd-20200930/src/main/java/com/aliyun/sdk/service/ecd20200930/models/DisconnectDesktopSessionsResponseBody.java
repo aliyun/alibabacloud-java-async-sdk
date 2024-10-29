@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisconnectDesktopSessionsResponseBody} extends {@link TeaModel}
  *
  * <p>DisconnectDesktopSessionsResponseBody</p>
@@ -49,7 +50,7 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of invalid sessions.
+         * <p>The list of invalid sessions.</p>
          */
         public Builder invalidSessions(java.util.List < InvalidSessions> invalidSessions) {
             this.invalidSessions = invalidSessions;
@@ -57,7 +58,10 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2507CFA8-FEAB-5208-98F5-5E028C50XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DisconnectDesktopSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DisconnectDesktopSessionsResponseBody</p>
+     */
     public static class InvalidSessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
@@ -109,7 +119,10 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
             private String endUserId; 
 
             /**
-             * The cloud desktop ID.
+             * <p>The cloud desktop ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-2jv6wugbkp65pxxxx</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -117,7 +130,10 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The end user ID.
+             * <p>The end user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wy01</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImagePermissionRequest} extends {@link RequestModel}
  *
  * <p>ModifyImagePermissionRequest</p>
@@ -97,7 +98,7 @@ public class ModifyImagePermissionRequest extends Request {
         } 
 
         /**
-         * The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template. You can specify up to 20 account IDs.
+         * <p>The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template. You can specify up to 20 account IDs.</p>
          */
         public Builder addAccount(java.util.List < Long > addAccount) {
             this.putQueryParameter("AddAccount", addAccount);
@@ -106,7 +107,11 @@ public class ModifyImagePermissionRequest extends Request {
         }
 
         /**
-         * The IDs of the images.
+         * <p>The IDs of the images.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-gx2x1dhsmusr2****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -115,7 +120,11 @@ public class ModifyImagePermissionRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +133,7 @@ public class ModifyImagePermissionRequest extends Request {
         }
 
         /**
-         * The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.
+         * <p>The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.</p>
          */
         public Builder removeAccount(java.util.List < Long > removeAccount) {
             this.putQueryParameter("RemoveAccount", removeAccount);

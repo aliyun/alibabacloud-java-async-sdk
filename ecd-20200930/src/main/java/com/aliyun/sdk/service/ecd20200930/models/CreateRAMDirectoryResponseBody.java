@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRAMDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRAMDirectoryResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateRAMDirectoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The RAM directory ID.
+         * <p>The RAM directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dri-uf62w3qzt4aigvlcb****</p>
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -57,7 +61,10 @@ public class CreateRAMDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

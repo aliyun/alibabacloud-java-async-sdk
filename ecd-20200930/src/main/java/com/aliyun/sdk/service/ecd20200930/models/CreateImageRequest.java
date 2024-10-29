@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageRequest} extends {@link RequestModel}
  *
  * <p>CreateImageRequest</p>
@@ -166,7 +167,10 @@ public class CreateImageRequest extends Request {
         } 
 
         /**
-         * Specifies whether to clear private data of users. If you set AutoCleanUserdata to `true`, the custom image clears the data directories, excluding the `Administrator` and `Public` directories, in the `C:\Users` directory.
+         * <p>Specifies whether to clear private data of users. If you set AutoCleanUserdata to <code>true</code>, the custom image clears the data directories, excluding the <code>Administrator</code> and <code>Public</code> directories, in the <code>C:\Users</code> directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoCleanUserdata(Boolean autoCleanUserdata) {
             this.putQueryParameter("AutoCleanUserdata", autoCleanUserdata);
@@ -175,7 +179,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+         * <p>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -184,7 +191,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer.
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-7w78ozhjcwa3u****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -193,13 +203,15 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The disk data that is contained in the custom image.
-         * <p>
+         * <p>The disk data that is contained in the custom image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: only contain data from system disks.</li>
+         * <li>ALL: contain data from system disks and user disks. [default]</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * - SYSTEM: only contain data from system disks.
-         * - ALL: contain data from system disks and user disks. [default]
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -208,7 +220,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImageName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -217,7 +232,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>To be hidden.</p>
          */
         public Builder imageResourceType(String imageResourceType) {
             this.putQueryParameter("ImageResourceType", imageResourceType);
@@ -226,7 +244,11 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,7 +257,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2zefuwk8l6ytcgd3bf4o</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -244,7 +269,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The IDs of the snapshots.
+         * <p>The IDs of the snapshots.</p>
          */
         public Builder snapshotIds(java.util.List < String > snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);

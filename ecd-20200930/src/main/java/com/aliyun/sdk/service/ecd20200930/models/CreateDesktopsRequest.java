@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDesktopsRequest} extends {@link RequestModel}
  *
  * <p>CreateDesktopsRequest</p>
@@ -35,6 +36,10 @@ public class CreateDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAttachment")
+    private DesktopAttachment desktopAttachment;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopMemberIp")
@@ -111,6 +116,10 @@ public class CreateDesktopsRequest extends Request {
     private java.util.List < Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimerGroupId")
+    private String timerGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserAssignMode")
     private String userAssignMode;
 
@@ -142,6 +151,7 @@ public class CreateDesktopsRequest extends Request {
         this.bundleId = builder.bundleId;
         this.bundleModels = builder.bundleModels;
         this.chargeType = builder.chargeType;
+        this.desktopAttachment = builder.desktopAttachment;
         this.desktopMemberIp = builder.desktopMemberIp;
         this.desktopName = builder.desktopName;
         this.desktopNameSuffix = builder.desktopNameSuffix;
@@ -160,6 +170,7 @@ public class CreateDesktopsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
         this.tag = builder.tag;
+        this.timerGroupId = builder.timerGroupId;
         this.userAssignMode = builder.userAssignMode;
         this.userCommands = builder.userCommands;
         this.userName = builder.userName;
@@ -221,6 +232,13 @@ public class CreateDesktopsRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return desktopAttachment
+     */
+    public DesktopAttachment getDesktopAttachment() {
+        return this.desktopAttachment;
     }
 
     /**
@@ -350,6 +368,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return timerGroupId
+     */
+    public String getTimerGroupId() {
+        return this.timerGroupId;
+    }
+
+    /**
      * @return userAssignMode
      */
     public String getUserAssignMode() {
@@ -398,6 +423,7 @@ public class CreateDesktopsRequest extends Request {
         private String bundleId; 
         private java.util.List < BundleModels> bundleModels; 
         private String chargeType; 
+        private DesktopAttachment desktopAttachment; 
         private String desktopMemberIp; 
         private String desktopName; 
         private Boolean desktopNameSuffix; 
@@ -416,6 +442,7 @@ public class CreateDesktopsRequest extends Request {
         private String resourceGroupId; 
         private String snapshotPolicyId; 
         private java.util.List < Tag> tag; 
+        private String timerGroupId; 
         private String userAssignMode; 
         private java.util.List < UserCommands> userCommands; 
         private String userName; 
@@ -435,6 +462,7 @@ public class CreateDesktopsRequest extends Request {
             this.bundleId = request.bundleId;
             this.bundleModels = request.bundleModels;
             this.chargeType = request.chargeType;
+            this.desktopAttachment = request.desktopAttachment;
             this.desktopMemberIp = request.desktopMemberIp;
             this.desktopName = request.desktopName;
             this.desktopNameSuffix = request.desktopNameSuffix;
@@ -453,6 +481,7 @@ public class CreateDesktopsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.snapshotPolicyId = request.snapshotPolicyId;
             this.tag = request.tag;
+            this.timerGroupId = request.timerGroupId;
             this.userAssignMode = request.userAssignMode;
             this.userCommands = request.userCommands;
             this.userName = request.userName;
@@ -462,7 +491,10 @@ public class CreateDesktopsRequest extends Request {
         } 
 
         /**
-         * The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: 1.
+         * <p>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -471,7 +503,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment.
+         * <p>Specifies whether to enable automatic payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -480,7 +515,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal. This parameter takes effect only when the ChargeType parameter is set to PrePaid.
+         * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the ChargeType parameter is set to PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -489,7 +527,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer template.
+         * <p>The ID of the cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-je9hani001wfn****</p>
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -498,7 +539,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The cloud computer templates.
+         * <p>The cloud computer templates.</p>
          */
         public Builder bundleModels(java.util.List < BundleModels> bundleModels) {
             this.putQueryParameter("BundleModels", bundleModels);
@@ -507,26 +548,26 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The billing method of the cloud computers.
-         * <p>
+         * <p>The billing method of the cloud computers.</p>
+         * <p>Default value: PostPaid. Valid values:</p>
+         * <ul>
+         * <li><p>Postpaid: pay-as-you-go</p>
+         * <!-- -->
          * 
-         * Default value: PostPaid. Valid values:
+         * <!-- -->
          * 
-         * *   Postpaid: pay-as-you-go
+         * <!-- -->
+         * </li>
+         * <li><p>PrePaid: subscription</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   PrePaid: subscription
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -535,7 +576,20 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The private IP address of the cloud computer.
+         * DesktopAttachment.
+         */
+        public Builder desktopAttachment(DesktopAttachment desktopAttachment) {
+            String desktopAttachmentShrink = shrink(desktopAttachment, "DesktopAttachment", "json");
+            this.putQueryParameter("DesktopAttachment", desktopAttachmentShrink);
+            this.desktopAttachment = desktopAttachment;
+            return this;
+        }
+
+        /**
+         * <p>The private IP address of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.1</p>
          */
         public Builder desktopMemberIp(String desktopMemberIp) {
             this.putQueryParameter("DesktopMemberIp", desktopMemberIp);
@@ -544,12 +598,15 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The name of the cloud computer. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the cloud computer. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 1 to 64 characters in length.</li>
+         * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+         * </ul>
          * 
-         * *   The name must be 1 to 64 characters in length.
-         * *   The name must start with a letter but cannot start with `http://` or `https://`.
-         * *   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>testDesktopName</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -558,26 +615,26 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically add suffixes to the names of cloud computers when you create multiple cloud computers at the same time.
-         * <p>
+         * <p>Specifies whether to automatically add suffixes to the names of cloud computers when you create multiple cloud computers at the same time.</p>
+         * <p>Default value: true. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Default value: true. Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>False</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   False
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder desktopNameSuffix(Boolean desktopNameSuffix) {
             this.putQueryParameter("DesktopNameSuffix", desktopNameSuffix);
@@ -586,7 +643,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The details of the scheduled task on cloud computers.
+         * <p>The details of the scheduled task on cloud computers.</p>
          */
         public Builder desktopTimers(java.util.List < DesktopTimers> desktopTimers) {
             this.putQueryParameter("DesktopTimers", desktopTimers);
@@ -595,7 +652,12 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * >  This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>To be hidden.</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -604,7 +666,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the end users to which you want to assign the cloud computers. You can specify 1 to 100 IDs.
+         * <p>The IDs of the end users to which you want to assign the cloud computers. You can specify 1 to 100 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -613,7 +678,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer pool.
+         * <p>The ID of the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-boyczi8enfyc5****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -622,19 +690,21 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.
-         * <p>
+         * <p>The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.</p>
+         * <p>The hostnames must meet the following requirements:</p>
+         * <ul>
+         * <li>The hostnames must be 2 to 15 characters in length.</li>
+         * <li>The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+         * </ul>
+         * <p>When you create multiple cloud computers, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
+         * <ul>
+         * <li><code>name_prefix</code>: the prefix of the hostname.</li>
+         * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. The <code>begin_number</code> value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The <code>bits</code> value is the number of digits. Valid values: 1 to 6. Default value: 6.</li>
+         * <li><code>name_suffix</code>: the suffix of the hostname.</li>
+         * </ul>
          * 
-         * The hostnames must meet the following requirements:
-         * 
-         * *   The hostnames must be 2 to 15 characters in length.
-         * *   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
-         * 
-         * When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.
-         * 
-         * *   `name_prefix`: the prefix of the hostname.
-         * *   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.
-         * *   `name_suffix`: the suffix of the hostname.
+         * <strong>example:</strong>
+         * <p>testhost</p>
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("Hostname", hostname);
@@ -643,7 +713,9 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * > This parameter is not publicly available.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
          */
         public Builder monthDesktopSetting(MonthDesktopSetting monthDesktopSetting) {
             this.putQueryParameter("MonthDesktopSetting", monthDesktopSetting);
@@ -652,7 +724,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The office network ID.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+os-c5cy7q578s8jc****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -661,23 +736,29 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The subscription duration of the cloud desktop that you want to create. The unit is specified by the `PeriodUnit` parameter. This parameter takes effect and is required only when the `ChargeType` parameter is set to `PrePaid`.
-         * <p>
+         * <p>The subscription duration of the cloud desktop that you want to create. The unit is specified by the <code>PeriodUnit</code> parameter. This parameter takes effect and is required only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>.</p>
+         * <ul>
+         * <li><p>Valid values if the <code>PeriodUnit</code> parameter is set to <code>Month</code>:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>6</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values if the <code>PeriodUnit</code> parameter is set to <code>Year</code>:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>4</li>
+         * <li>5</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values if the `PeriodUnit` parameter is set to `Month`:
-         * 
-         *     *   1
-         *     *   2
-         *     *   3
-         *     *   6
-         * 
-         * *   Valid values if the `PeriodUnit` parameter is set to `Year`:
-         * 
-         *     *   1
-         *     *   2
-         *     *   3
-         *     *   4
-         *     *   5
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -686,7 +767,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration.
+         * <p>The unit of the subscription duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -695,7 +779,11 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system-all-enabled-policy</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -704,7 +792,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the sales promotion.
+         * <p>The ID of the sales promotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23141</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -713,7 +804,11 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -740,7 +835,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the cloud desktop.
+         * <p>The tags that you want to add to the cloud desktop.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -749,30 +844,39 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * How the cloud computers are assigned.
-         * <p>
+         * TimerGroupId.
+         */
+        public Builder timerGroupId(String timerGroupId) {
+            this.putQueryParameter("TimerGroupId", timerGroupId);
+            this.timerGroupId = timerGroupId;
+            return this;
+        }
+
+        /**
+         * <p>How the cloud computers are assigned.</p>
+         * <blockquote>
+         * <p> If you do not specify the <code>EndUserId</code> parameter, the cloud computers are not assigned to end users after the cloud computers are created.</p>
+         * </blockquote>
+         * <p>Default value: ALL. Valid values:</p>
+         * <ul>
+         * <li><p>ALL: If you specify the EndUserId parameter, the cloud computers are assigned to all specified end users after the cloud computers are created.</p>
+         * <!-- -->
          * 
-         * >  If you do not specify the `EndUserId` parameter, the cloud computers are not assigned to end users after the cloud computers are created.
+         * <!-- -->
          * 
-         * Default value: ALL. Valid values:
+         * <!-- -->
+         * </li>
+         * <li><p>PER_USER: If you specify the EndUserId parameter, the cloud computers are evenly assigned to the specified end users after the cloud computers are created.</p>
+         * <!-- -->
          * 
-         * *   ALL: If you specify the EndUserId parameter, the cloud computers are assigned to all specified end users after the cloud computers are created.
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>In this case, you must make sure that the value of the Amount parameter can be divided by the N value of the EndUserId.N parameter that you specify.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   PER_USER: If you specify the EndUserId parameter, the cloud computers are evenly assigned to the specified end users after the cloud computers are created.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     In this case, you must make sure that the value of the Amount parameter can be divided by the N value of the EndUserId.N parameter that you specify.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder userAssignMode(String userAssignMode) {
             this.putQueryParameter("UserAssignMode", userAssignMode);
@@ -781,7 +885,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * Details about the custom command scripts.
+         * <p>Details about the custom command scripts.</p>
          */
         public Builder userCommands(java.util.List < UserCommands> userCommands) {
             this.putQueryParameter("UserCommands", userCommands);
@@ -790,7 +894,12 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * >  This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>To be hidden.</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -799,7 +908,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable disk encryption.
+         * <p>Specifies whether to enable disk encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
             this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);
@@ -808,7 +920,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+         * <p>The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to obtain a list of KMS keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
          */
         public Builder volumeEncryptionKey(String volumeEncryptionKey) {
             this.putQueryParameter("VolumeEncryptionKey", volumeEncryptionKey);
@@ -817,7 +932,12 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * >  This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>To be hidden.</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -832,6 +952,12 @@ public class CreateDesktopsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDesktopsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDesktopsRequest</p>
+     */
     public static class BundleModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         @com.aliyun.core.annotation.Validation(maximum = 300)
@@ -932,7 +1058,10 @@ public class CreateDesktopsRequest extends Request {
             private String volumeEncryptionKey; 
 
             /**
-             * The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: null.
+             * <p>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -940,7 +1069,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The ID of a cloud computer template.
+             * <p>The ID of a cloud computer template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b-je9hani001wfn****</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -948,12 +1080,15 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The name of the cloud computer. The name must meet the following requirements:
-             * <p>
+             * <p>The name of the cloud computer. The name must meet the following requirements:</p>
+             * <ul>
+             * <li>The name must be 1 to 64 characters in length.</li>
+             * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+             * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+             * </ul>
              * 
-             * *   The name must be 1 to 64 characters in length.
-             * *   The name must start with a letter but cannot start with `http://` or `https://`.
-             * *   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+             * <strong>example:</strong>
+             * <p>testDesktopName</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -961,7 +1096,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The IDs of the end users to whom the cloud computer are assigned.
+             * <p>The IDs of the end users to whom the cloud computer are assigned.</p>
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -969,19 +1104,21 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.
-             * <p>
+             * <p>The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.</p>
+             * <p>The hostnames must meet the following requirements:</p>
+             * <ul>
+             * <li>The hostnames must be 2 to 15 characters in length.</li>
+             * <li>The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+             * </ul>
+             * <p>When you create multiple cloud computers, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
+             * <ul>
+             * <li><code>name_prefix</code>: the prefix of the hostname.</li>
+             * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. The <code>begin_number</code> value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The <code>bits</code> value is the number of digits. Valid values: 1 to 6. Default value: 6.</li>
+             * <li><code>name_suffix</code>: the suffix of the hostname.</li>
+             * </ul>
              * 
-             * The hostnames must meet the following requirements:
-             * 
-             * *   The hostnames must be 2 to 15 characters in length.
-             * *   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
-             * 
-             * When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.
-             * 
-             * *   `name_prefix`: the prefix of the hostname.
-             * *   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.
-             * *   `name_suffix`: the suffix of the hostname.
+             * <strong>example:</strong>
+             * <p>testhost</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -989,7 +1126,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable disk encryption.
+             * <p>Specifies whether to enable disk encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
                 this.volumeEncryptionEnabled = volumeEncryptionEnabled;
@@ -997,7 +1137,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.
+             * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;
@@ -1011,6 +1154,219 @@ public class CreateDesktopsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDesktopsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDesktopsRequest</p>
+     */
+    public static class DesktopAttachment extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
+        private String dataDiskCategory;
+
+        @com.aliyun.core.annotation.NameInMap("DataDiskPerLevel")
+        private String dataDiskPerLevel;
+
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
+        private Integer dataDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("DefaultLanguage")
+        private String defaultLanguage;
+
+        @com.aliyun.core.annotation.NameInMap("DesktopType")
+        private String desktopType;
+
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
+        private String systemDiskCategory;
+
+        @com.aliyun.core.annotation.NameInMap("SystemDiskPerLevel")
+        private String systemDiskPerLevel;
+
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+        private Integer systemDiskSize;
+
+        private DesktopAttachment(Builder builder) {
+            this.dataDiskCategory = builder.dataDiskCategory;
+            this.dataDiskPerLevel = builder.dataDiskPerLevel;
+            this.dataDiskSize = builder.dataDiskSize;
+            this.defaultLanguage = builder.defaultLanguage;
+            this.desktopType = builder.desktopType;
+            this.imageId = builder.imageId;
+            this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskPerLevel = builder.systemDiskPerLevel;
+            this.systemDiskSize = builder.systemDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DesktopAttachment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataDiskCategory
+         */
+        public String getDataDiskCategory() {
+            return this.dataDiskCategory;
+        }
+
+        /**
+         * @return dataDiskPerLevel
+         */
+        public String getDataDiskPerLevel() {
+            return this.dataDiskPerLevel;
+        }
+
+        /**
+         * @return dataDiskSize
+         */
+        public Integer getDataDiskSize() {
+            return this.dataDiskSize;
+        }
+
+        /**
+         * @return defaultLanguage
+         */
+        public String getDefaultLanguage() {
+            return this.defaultLanguage;
+        }
+
+        /**
+         * @return desktopType
+         */
+        public String getDesktopType() {
+            return this.desktopType;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return systemDiskCategory
+         */
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        /**
+         * @return systemDiskPerLevel
+         */
+        public String getSystemDiskPerLevel() {
+            return this.systemDiskPerLevel;
+        }
+
+        /**
+         * @return systemDiskSize
+         */
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        public static final class Builder {
+            private String dataDiskCategory; 
+            private String dataDiskPerLevel; 
+            private Integer dataDiskSize; 
+            private String defaultLanguage; 
+            private String desktopType; 
+            private String imageId; 
+            private String systemDiskCategory; 
+            private String systemDiskPerLevel; 
+            private Integer systemDiskSize; 
+
+            /**
+             * DataDiskCategory.
+             */
+            public Builder dataDiskCategory(String dataDiskCategory) {
+                this.dataDiskCategory = dataDiskCategory;
+                return this;
+            }
+
+            /**
+             * DataDiskPerLevel.
+             */
+            public Builder dataDiskPerLevel(String dataDiskPerLevel) {
+                this.dataDiskPerLevel = dataDiskPerLevel;
+                return this;
+            }
+
+            /**
+             * DataDiskSize.
+             */
+            public Builder dataDiskSize(Integer dataDiskSize) {
+                this.dataDiskSize = dataDiskSize;
+                return this;
+            }
+
+            /**
+             * DefaultLanguage.
+             */
+            public Builder defaultLanguage(String defaultLanguage) {
+                this.defaultLanguage = defaultLanguage;
+                return this;
+            }
+
+            /**
+             * DesktopType.
+             */
+            public Builder desktopType(String desktopType) {
+                this.desktopType = desktopType;
+                return this;
+            }
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * SystemDiskCategory.
+             */
+            public Builder systemDiskCategory(String systemDiskCategory) {
+                this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * SystemDiskPerLevel.
+             */
+            public Builder systemDiskPerLevel(String systemDiskPerLevel) {
+                this.systemDiskPerLevel = systemDiskPerLevel;
+                return this;
+            }
+
+            /**
+             * SystemDiskSize.
+             */
+            public Builder systemDiskSize(Integer systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            public DesktopAttachment build() {
+                return new DesktopAttachment(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDesktopsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDesktopsRequest</p>
+     */
     public static class DesktopTimers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowClientSetting")
         private Boolean allowClientSetting;
@@ -1110,7 +1466,10 @@ public class CreateDesktopsRequest extends Request {
             private String timerType; 
 
             /**
-             * Specifies whether to allow the end user to configure the scheduled task.
+             * <p>Specifies whether to allow the end user to configure the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowClientSetting(Boolean allowClientSetting) {
                 this.allowClientSetting = allowClientSetting;
@@ -1118,10 +1477,13 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The cron expression for the scheduled task.
-             * <p>
+             * <p>The cron expression for the scheduled task.</p>
+             * <blockquote>
+             * <p> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? * 1,2,3,4,5,6,7</p>
+             * </blockquote>
              * 
-             * >  The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7
+             * <strong>example:</strong>
+             * <p>0 40 7 ? * 1,2,3,4,5,6,7</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -1129,26 +1491,26 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * Specifies whether to forcibly execute the scheduled task.
-             * <p>
+             * <p>Specifies whether to forcibly execute the scheduled task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.
+             * <!-- -->
+             * </li>
+             * <li><p>false: does not forcibly execute the scheduled task.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false: does not forcibly execute the scheduled task.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -1156,7 +1518,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The interval at which cloud computers are created. Unit: minutes.
+             * <p>The interval at which cloud computers are created. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -1164,26 +1529,26 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The operations that scheduled tasks support. This parameter is valid only when TimerType is set to NoConnect.
-             * <p>
+             * <p>The operations that scheduled tasks support. This parameter is valid only when TimerType is set to NoConnect.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Hibernate: hibernates the cloud computers.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Hibernate: hibernates the cloud computers.
+             * <!-- -->
+             * </li>
+             * <li><p>Shutdown: stops the cloud computers.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Shutdown: stops the cloud computers.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Shutdown</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -1191,26 +1556,26 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The reset type of the cloud computers.
-             * <p>
+             * <p>The reset type of the cloud computers.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>RESET_TYPE_SYSTEM: resets the system disks.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   RESET_TYPE_SYSTEM: resets the system disks.
+             * <!-- -->
+             * </li>
+             * <li><p>RESET_TYPE_BOTH: resets the system disks and data disks.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   RESET_TYPE_BOTH: resets the system disks and data disks.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>RESET_TYPE_SYSTEM</p>
              */
             public Builder resetType(String resetType) {
                 this.resetType = resetType;
@@ -1218,7 +1583,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The type of the scheduled task.
+             * <p>The type of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NoOperationReboot</p>
              */
             public Builder timerType(String timerType) {
                 this.timerType = timerType;
@@ -1232,6 +1600,12 @@ public class CreateDesktopsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDesktopsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDesktopsRequest</p>
+     */
     public static class MonthDesktopSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuyerId")
         private Long buyerId;
@@ -1283,7 +1657,12 @@ public class CreateDesktopsRequest extends Request {
             private Integer useDuration; 
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder buyerId(Long buyerId) {
                 this.buyerId = buyerId;
@@ -1291,7 +1670,12 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -1299,7 +1683,12 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder useDuration(Integer useDuration) {
                 this.useDuration = useDuration;
@@ -1313,6 +1702,12 @@ public class CreateDesktopsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDesktopsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDesktopsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1352,7 +1747,10 @@ public class CreateDesktopsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify 1 to 20 keys for a tag.
+             * <p>The key of the tag. You can specify 1 to 20 keys for a tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1360,7 +1758,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The value of the tag. You can specify 1 to 20 values for a tag.
+             * <p>The value of the tag. You can specify 1 to 20 values for a tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1374,6 +1775,12 @@ public class CreateDesktopsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDesktopsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDesktopsRequest</p>
+     */
     public static class UserCommands extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(maxLength = 15000)
@@ -1426,7 +1833,10 @@ public class CreateDesktopsRequest extends Request {
             private String contentType; 
 
             /**
-             * The command content.
+             * <p>The command content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bmV3LWl0ZW0gZDpcdGVzdF91c2VyX2NvbW1hbmRzLnR4dCAtdHlwZSBm****</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1434,26 +1844,26 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The encoding mode of the command content.
-             * <p>
+             * <p>The encoding mode of the command content.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Base64: encodes the command content in Base64.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Base64: encodes the command content in Base64.
+             * <!-- -->
+             * </li>
+             * <li><p>PlainText: does not encode the command content.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   PlainText: does not encode the command content.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Base64</p>
              */
             public Builder contentEncoding(String contentEncoding) {
                 this.contentEncoding = contentEncoding;
@@ -1461,34 +1871,33 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The language type of the command.
-             * <p>
+             * <p>The language type of the command.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>RunPowerShellScript: PowerShell commands (applicable to Windows cloud computers).</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   RunPowerShellScript: PowerShell commands (applicable to Windows cloud computers).
+             * <!-- -->
+             * </li>
+             * <li><p>RunShellScript: shell commands (applicable to Linux cloud computers).</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>RunBatScript: batch commands (applicable to Windows cloud computers).</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   RunShellScript: shell commands (applicable to Linux cloud computers).
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   RunBatScript: batch commands (applicable to Windows cloud computers).
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>RunPowerShellScript</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDirectorySsoStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDirectorySsoStatusRequest</p>
@@ -84,7 +85,11 @@ public class SetDirectorySsoStatusRequest extends Request {
         } 
 
         /**
-         * The AD directory ID.
+         * <p>The AD directory ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-h95efs1mbukd9****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -93,11 +98,15 @@ public class SetDirectorySsoStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable SSO. Valid values:
-         * <p>
+         * <p>Specifies whether to enable SSO. Valid values:</p>
+         * <ul>
+         * <li>true: enables SSO.</li>
+         * <li>false: disables SSO.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: enables SSO.
-         * *   false: disables SSO.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSso(Boolean enableSso) {
             this.putQueryParameter("EnableSso", enableSso);
@@ -106,7 +115,11 @@ public class SetDirectorySsoStatusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

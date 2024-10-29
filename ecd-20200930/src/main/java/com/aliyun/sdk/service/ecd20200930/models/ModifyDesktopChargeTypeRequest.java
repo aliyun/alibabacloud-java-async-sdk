@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopChargeTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesktopChargeTypeRequest</p>
@@ -153,7 +154,10 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment if you specify subscription as the new billing method for the cloud desktop.
+         * <p>Specifies whether to enable automatic payment if you specify subscription as the new billing method for the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -162,26 +166,26 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * The new billing method that you want to apply.
-         * <p>
+         * <p>The new billing method that you want to apply.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>PostPaid: changes the billing method from subscription to pay-as-you-go.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   PostPaid: changes the billing method from subscription to pay-as-you-go.
+         * <!-- -->
+         * </li>
+         * <li><p>PrePaid: changes the billing method from pay-as-you-go to subscription.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   PrePaid: changes the billing method from pay-as-you-go to subscription.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -190,7 +194,11 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud computers. You can specify 1 to 20 IDs.
+         * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -199,12 +207,15 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration of the cloud computers if you set the ChargeType parameter to PrePaid. The unit is specified by the `PeriodUnit` parameter. This parameter is valid only when the `ChargeType` parameter is set to `PrePaid`. In this case, you must specify this parameter.
-         * <p>
+         * <p>The subscription duration of the cloud computers if you set the ChargeType parameter to PrePaid. The unit is specified by the <code>PeriodUnit</code> parameter. This parameter is valid only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>. In this case, you must specify this parameter.</p>
+         * <ul>
+         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Week</code>, set the Period parameter to 1.</li>
+         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Month</code>, the valid values of the Period parameter are 1, 2, 3, and 6.</li>
+         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Year</code>, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</li>
+         * </ul>
          * 
-         * *   If the `PeriodUnit` parameter is set to `Week`, set the Period parameter to 1.
-         * *   If the `PeriodUnit` parameter is set to `Month`, the valid values of the Period parameter are 1, 2, 3, and 6.
-         * *   If the `PeriodUnit` parameter is set to `Year`, the valid values of the Period parameter are 1, 2, 3, 4, and 5.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -213,7 +224,10 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration if you specify subscription as the new billing method for the cloud desktop.
+         * <p>The unit of the subscription duration if you specify subscription as the new billing method for the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -222,7 +236,10 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * The ID of the promotional activity.
+         * <p>The ID of the promotional activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500038360030606</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -231,7 +248,11 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +261,12 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * >  This parameter is in invitational preview and not publicly available.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>internal only</p>
          */
         public Builder useDuration(Integer useDuration) {
             this.putQueryParameter("UseDuration", useDuration);

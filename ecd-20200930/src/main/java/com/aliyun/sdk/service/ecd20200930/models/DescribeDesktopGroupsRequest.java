@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDesktopGroupsRequest</p>
@@ -278,7 +279,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud computer templates.
+         * <p>The IDs of the cloud computer templates.</p>
          */
         public Builder bundleId(java.util.List < String > bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -287,7 +288,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer pool.
+         * <p>The ID of the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -296,7 +300,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The name of the cloud computer pool to query. Fuzzy search is supported.
+         * <p>The name of the cloud computer pool to query. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -305,7 +312,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The authorized user IDs of cloud computer pools.
+         * <p>The authorized user IDs of cloud computer pools.</p>
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -314,7 +321,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The authorized users that you want to exclude.
+         * <p>The authorized users that you want to exclude.</p>
          */
         public Builder excludedEndUserIds(java.util.List < String > excludedEndUserIds) {
             this.putQueryParameter("ExcludedEndUserIds", excludedEndUserIds);
@@ -323,7 +330,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The IDs of the images.
+         * <p>The IDs of the images.</p>
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -332,7 +339,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -341,7 +351,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -350,7 +363,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the office network to which the cloud computer pool belongs.
+         * <p>The ID of the office network to which the cloud computer pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-467671****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -359,15 +375,18 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The type of the cloud computer pool.
-         * <p>
+         * <p>The type of the cloud computer pool.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: individual (single session)</li>
+         * <li>1: shared (multiple sessions)</li>
+         * </ul>
          * 
-         * >  This parameter is not publicly available.
-         * 
-         * Valid values:
-         * 
-         * *   0: individual (single session)
-         * *   1: shared (multiple sessions)
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ownType(Long ownType) {
             this.putQueryParameter("OwnType", ownType);
@@ -376,23 +395,29 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The subscription duration of the cloud computer pool. The unit is specified by the `PeriodUnit` parameter.
-         * <p>
+         * <p>The subscription duration of the cloud computer pool. The unit is specified by the <code>PeriodUnit</code> parameter.</p>
+         * <ul>
+         * <li><p>Valid values if the <code>PeriodUnit</code> parameter is set to <code>Month</code>:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>6</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values if the <code>PeriodUnit</code> parameter is set to <code>Year</code>:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>4</li>
+         * <li>5</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values if the `PeriodUnit` parameter is set to `Month`:
-         * 
-         *     *   1
-         *     *   2
-         *     *   3
-         *     *   6
-         * 
-         * *   Valid values if the `PeriodUnit` parameter is set to `Year`:
-         * 
-         *     *   1
-         *     *   2
-         *     *   3
-         *     *   4
-         *     *   5
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -401,7 +426,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration.
+         * <p>The unit of the subscription duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -410,7 +438,10 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the policy that you want to associate with the cloud computer pool.
+         * <p>The ID of the policy that you want to associate with the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-53iyi2aar0nd6****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -419,26 +450,26 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The protocol type.
-         * <p>
+         * <p>The protocol type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>High-definition Experience (HDX)</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   High-definition Experience (HDX)
+         * <!-- -->
+         * </li>
+         * <li><p>Adaptive Streaming Protocol (ASP)</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   Adaptive Streaming Protocol (ASP)
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -447,7 +478,11 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -456,14 +491,16 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The payment status of the cloud computer pool.
-         * <p>
+         * <p>The payment status of the cloud computer pool.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: unpaid</li>
+         * <li>1: paid</li>
+         * <li>2: overdue or expired</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   0: unpaid
-         * *   1: paid
-         * *   2: overdue or expired
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -472,7 +509,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The tags attached to the cloud computer pool. You can specify 1 to 20 tags.
+         * <p>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -487,6 +524,12 @@ public class DescribeDesktopGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDesktopGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -526,7 +569,10 @@ public class DescribeDesktopGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.
+             * <p>The key of the tag. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. You cannot specify an empty string as a tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -534,7 +580,10 @@ public class DescribeDesktopGroupsRequest extends Request {
             }
 
             /**
-             * The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+             * <p>The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

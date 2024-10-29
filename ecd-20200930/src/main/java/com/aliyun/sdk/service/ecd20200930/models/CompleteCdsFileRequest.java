@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompleteCdsFileRequest} extends {@link RequestModel}
  *
  * <p>CompleteCdsFileRequest</p>
@@ -127,7 +128,11 @@ public class CompleteCdsFileRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai+cds-465878****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -136,7 +141,10 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * The name of the end user.
+         * <p>The name of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -145,7 +153,11 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * The file ID. An ID is the unique identifier of a file.
+         * <p>The file ID. An ID is the unique identifier of a file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>635a316c94f40f35f5354da29b2aee88c9d1****</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -163,7 +175,11 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -172,7 +188,11 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * The ID of the file uploading task.
+         * <p>The ID of the file uploading task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C48B55A1FAC4E1A9E0579059514****</p>
          */
         public Builder uploadId(String uploadId) {
             this.putQueryParameter("UploadId", uploadId);

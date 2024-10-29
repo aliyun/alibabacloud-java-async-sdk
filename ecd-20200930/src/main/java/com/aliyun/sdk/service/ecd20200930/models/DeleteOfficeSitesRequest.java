@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteOfficeSitesRequest} extends {@link RequestModel}
  *
  * <p>DeleteOfficeSitesRequest</p>
@@ -69,7 +70,11 @@ public class DeleteOfficeSitesRequest extends Request {
         } 
 
         /**
-         * The IDs of the office networks. You can specify 1 to 100 office networks.
+         * <p>The IDs of the office networks. You can specify 1 to 100 office networks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -78,7 +83,11 @@ public class DeleteOfficeSitesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

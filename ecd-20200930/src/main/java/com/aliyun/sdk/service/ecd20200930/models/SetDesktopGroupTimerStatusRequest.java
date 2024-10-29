@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDesktopGroupTimerStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDesktopGroupTimerStatusRequest</p>
@@ -98,7 +99,11 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud computer pool.
+         * <p>The ID of the cloud computer pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-fgxsniu6at****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -107,7 +112,11 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -116,15 +125,17 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         }
 
         /**
-         * The status of the scheduled task.
-         * <p>
+         * <p>The status of the scheduled task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: enabled</li>
+         * <li>2: disabled</li>
+         * <li>3: deleted</li>
+         * <li>100: unknown</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   1: enabled
-         * *   2: disabled
-         * *   3: deleted
-         * *   100: unknown
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -133,15 +144,18 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         }
 
         /**
-         * The type of the scheduled task.
-         * <p>
+         * <p>The type of the scheduled task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: scheduled reset</li>
+         * <li>2: scheduled startup</li>
+         * <li>3: scheduled stop</li>
+         * <li>4: scheduled restart</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   1: scheduled reset
-         * *   2: scheduled startup
-         * *   3: scheduled stop
-         * *   4: scheduled restart
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timerType(Integer timerType) {
             this.putQueryParameter("TimerType", timerType);

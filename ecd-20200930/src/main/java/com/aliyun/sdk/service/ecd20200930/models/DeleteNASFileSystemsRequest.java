@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNASFileSystemsRequest} extends {@link RequestModel}
  *
  * <p>DeleteNASFileSystemsRequest</p>
@@ -69,7 +70,11 @@ public class DeleteNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * The IDs of the NAS file systems that you want to delete.
+         * <p>The IDs of the NAS file systems that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****</p>
          */
         public Builder fileSystemId(java.util.List < String > fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -78,7 +83,11 @@ public class DeleteNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The region ID of the NAS file system that you want to delete.
+         * <p>The region ID of the NAS file system that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

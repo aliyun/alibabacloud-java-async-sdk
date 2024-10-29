@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudDriveUsersRequest} extends {@link RequestModel}
  *
  * <p>CreateCloudDriveUsersRequest</p>
@@ -99,7 +100,11 @@ public class CreateCloudDriveUsersRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-352282****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -108,7 +113,8 @@ public class CreateCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * The IDs of the end users.
+         * <p>The IDs of the end users.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -117,7 +123,11 @@ public class CreateCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +136,11 @@ public class CreateCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * The maximum storage space of an end user. Unit: bytes.
+         * <p>The maximum storage space of an end user. Unit: bytes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder userMaxSize(Long userMaxSize) {
             this.putQueryParameter("UserMaxSize", userMaxSize);

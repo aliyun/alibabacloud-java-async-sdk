@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFlowStatisticRequest} extends {@link RequestModel}
  *
  * <p>DescribeFlowStatisticRequest</p>
@@ -128,7 +129,10 @@ public class DescribeFlowStatisticRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud computer.
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-7w78ozhjcwa3u****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -137,7 +141,11 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The office network ID.
+         * <p>The office network ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -146,9 +154,10 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The number of the page to return.\
-         * <p>
-         * Default value: 1.
+         * <p>The number of the page to return.<br>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -157,7 +166,10 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,14 +178,17 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The statistic collection interval. Unit: seconds.
-         * <p>
+         * <p>The statistic collection interval. Unit: seconds.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>3600: 1 hour</li>
+         * <li>10800: 3 hours</li>
+         * <li>86400: 24 hours</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   3600: 1 hour
-         * *   10800: 3 hours
-         * *   86400: 24 hours
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -182,7 +197,11 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

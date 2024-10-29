@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyCoordinationForMonitoringRequest} extends {@link RequestModel}
  *
  * <p>ApplyCoordinationForMonitoringRequest</p>
@@ -127,18 +128,20 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         } 
 
         /**
-         * The coordination policy.
-         * <p>
+         * <p>The coordination policy.</p>
+         * <p>Set the value to FULL_CONTROL.</p>
+         * <ul>
+         * <li><p>The value FULL_CONTROL specifies that the cloud desktop is shared and remote access to the cloud desktop is allowed.</p>
+         * <!-- -->
          * 
-         * Set the value to FULL_CONTROL.
+         * <!-- -->
          * 
-         * *   The value FULL_CONTROL specifies that the cloud desktop is shared and remote access to the cloud desktop is allowed.
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>FULL_CONTROL</p>
          */
         public Builder coordinatePolicyType(String coordinatePolicyType) {
             this.putQueryParameter("CoordinatePolicyType", coordinatePolicyType);
@@ -147,7 +150,10 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * The ID of the end user who initiates the stream collaboration. If the initiator is the administrator, do not specify this parameter.
+         * <p>The ID of the end user who initiates the stream collaboration. If the initiator is the administrator, do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -156,18 +162,19 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * The type of the initiator.
-         * <p>
+         * <p>The type of the initiator.</p>
+         * <p>Set the value to ADMIN_INITIATE.</p>
+         * <ul>
+         * <li><p>The value ADMIN_INITIATE specifies that the administrator initiates the coordination request.</p>
+         * <!-- -->
          * 
-         * Set the value to ADMIN_INITIATE.
+         * <!-- -->
          * 
-         * *   The value ADMIN_INITIATE specifies that the administrator initiates the coordination request.
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>ADMIN_INITIATE</p>
          */
         public Builder initiatorType(String initiatorType) {
             this.putQueryParameter("InitiatorType", initiatorType);
@@ -176,7 +183,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -185,7 +196,8 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * The list of cloud desktops that run the collaboration task at the same time.
+         * <p>The list of cloud desktops that run the collaboration task at the same time.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceCandidates(java.util.List < ResourceCandidates> resourceCandidates) {
             this.putQueryParameter("ResourceCandidates", resourceCandidates);
@@ -194,7 +206,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * The universally unique identifier (UUID) of the device.
+         * <p>The universally unique identifier (UUID) of the device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62f2f1f252f04e0e9d8bc****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -209,6 +225,12 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyCoordinationForMonitoringRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyCoordinationForMonitoringRequest</p>
+     */
     public static class ResourceCandidates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerAliUid")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -313,7 +335,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             private String resourceType; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the current cloud desktop belongs.
+             * <p>The ID of the Alibaba Cloud account to which the current cloud desktop belongs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130247021517****</p>
              */
             public Builder ownerAliUid(Long ownerAliUid) {
                 this.ownerAliUid = ownerAliUid;
@@ -321,7 +347,10 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * The ID of the current end user.
+             * <p>The ID of the current end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder ownerEndUserId(String ownerEndUserId) {
                 this.ownerEndUserId = ownerEndUserId;
@@ -329,7 +358,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * <p>The ID of the cloud desktop.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-08zhejm3h7ilr****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -337,7 +370,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * The name of the cloud desktop.
+             * <p>The name of the cloud desktop.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestDesktop</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -345,7 +382,10 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * The properties of the cloud desktop.
+             * <p>The properties of the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestProperty</p>
              */
             public Builder resourceProperties(String resourceProperties) {
                 this.resourceProperties = resourceProperties;
@@ -353,7 +393,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * The region where the resource resides.
+             * <p>The region where the resource resides.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -361,18 +405,20 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * The resource type.
-             * <p>
+             * <p>The resource type.</p>
+             * <p>Set the value to CLOUD_DESKTOP.</p>
+             * <ul>
+             * <li><p>The value CLOUD_DESKTOP specifies that the resource is a cloud desktop.</p>
+             * <!-- -->
              * 
-             * Set the value to CLOUD_DESKTOP.
+             * <!-- -->
              * 
-             * *   The value CLOUD_DESKTOP specifies that the resource is a cloud desktop.
+             * <!-- --></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>CLOUD_DESKTOP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

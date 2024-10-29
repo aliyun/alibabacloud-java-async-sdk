@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCdsFileResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCdsFileResponseBody</p>
@@ -57,7 +58,10 @@ public class CreateCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BAFE05D-FFB9-5938-96D0-08017DB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateCdsFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCdsFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCdsFileResponseBody</p>
+     */
     public static class FileModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;

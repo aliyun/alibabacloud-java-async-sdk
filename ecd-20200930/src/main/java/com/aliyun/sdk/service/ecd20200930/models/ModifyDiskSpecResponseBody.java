@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDiskSpecResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDiskSpecResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order. You can obtain the order ID on the [Orders](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\&pageSize=20\&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa) page in Alibaba Cloud User Center.
+         * <p>The ID of the order. You can obtain the order ID on the <a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1&pageSize=20&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Orders</a> page in Alibaba Cloud User Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219861020660568</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F89BBB13-8B3B-5C8A-A700-EEFDC17B8227</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

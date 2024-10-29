@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDesktopGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteDesktopGroupRequest</p>
@@ -69,7 +70,11 @@ public class DeleteDesktopGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop group.
+         * <p>The ID of the desktop group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -78,7 +83,11 @@ public class DeleteDesktopGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

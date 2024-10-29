@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePriceResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The price details.
+         * <p>The price details.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -57,7 +58,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1175630-3C44-4389-A3C1-15639FFC8EBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Promotions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
@@ -145,7 +155,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Boolean selected; 
 
             /**
-             * The description of the promotion rule.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -153,7 +166,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the promotion.
+             * <p>The description of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Get started with new services with a discount.</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -161,7 +177,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The promotion ID.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -169,7 +188,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The promotion name.
+             * <p>The promotion name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Special Offer</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -177,7 +199,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an item is selected.
+             * <p>Indicates whether an item is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -191,6 +216,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -290,7 +321,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The unit of the currency.
+             * <p>The unit of the currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -298,7 +332,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discounted price.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -314,7 +351,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.796</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -322,7 +362,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the promotion.
+             * <p>The details of the promotion.</p>
              */
             public Builder promotions(java.util.List < Promotions> promotions) {
                 this.promotions = promotions;
@@ -338,7 +378,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The actual price that is paid. The original price minus the discounted part equals the actual price.
+             * <p>The actual price that is paid. The original price minus the discounted part equals the actual price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.796</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -352,6 +395,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -391,7 +440,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Receive a 15% discount on a one-year subscription.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -399,7 +451,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>587</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -413,6 +468,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FreeCdsQuota")
         private Boolean freeCdsQuota;
@@ -492,7 +553,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the price.
+             * <p>The information about the price.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -500,7 +561,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the promotion rules.
+             * <p>The details of the promotion rules.</p>
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;

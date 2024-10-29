@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudDriveGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudDriveGroupsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The list of team spaces.
+         * <p>The list of team spaces.</p>
          */
         public Builder cloudDriveGroups(java.util.List < CloudDriveGroups> cloudDriveGroups) {
             this.cloudDriveGroups = cloudDriveGroups;
@@ -93,7 +94,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -101,7 +105,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF015AE5-B30A-5189-B519-735CEE40****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudDriveGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDriveGroupsResponseBody</p>
+     */
     public static class AdminUserInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
@@ -291,6 +310,12 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudDriveGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDriveGroupsResponseBody</p>
+     */
     public static class CloudDriveGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdminUserIds")
         private String adminUserIds;
@@ -454,7 +479,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the team space was created.
+             * <p>The time when the team space was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-11T07:44:21Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -462,7 +490,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-959593****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -470,7 +501,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The team space ID.
+             * <p>The team space ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sh1234</p>
              */
             public Builder driveId(String driveId) {
                 this.driveId = driveId;
@@ -478,7 +512,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The team ID.
+             * <p>The team ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cg-e70ga4ixp30ur****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -486,7 +523,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the team space.
+             * <p>The name of the team space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Team 1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -502,13 +542,15 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The team space status. Valid values:
-             * <p>
+             * <p>The team space status. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
+             * <p>Default value: enabled.</p>
              * 
-             * *   enabled
-             * *   disabled
-             * 
-             * Default value: enabled.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -516,7 +558,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of the team space.
+             * <p>The total capacity of the team space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5368709120</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -524,7 +569,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of the used space. Unit: bytes.
+             * <p>The capacity of the used space. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024000000</p>
              */
             public Builder usedSize(String usedSize) {
                 this.usedSize = usedSize;

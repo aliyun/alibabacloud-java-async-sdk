@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDirectoriesRequest} extends {@link RequestModel}
  *
  * <p>DeleteDirectoriesRequest</p>
@@ -69,7 +70,11 @@ public class DeleteDirectoriesRequest extends Request {
         } 
 
         /**
-         * The directory IDs. You can specify one or more directory IDs.
+         * <p>The directory IDs. You can specify one or more directory IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
          */
         public Builder directoryId(java.util.List < String > directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -78,7 +83,11 @@ public class DeleteDirectoriesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

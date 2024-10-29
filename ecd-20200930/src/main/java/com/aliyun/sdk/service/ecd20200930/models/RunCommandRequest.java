@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCommandRequest} extends {@link RequestModel}
  *
  * <p>RunCommandRequest</p>
@@ -141,11 +142,14 @@ public class RunCommandRequest extends Request {
         } 
 
         /**
-         * The content of the command. The command content can be plaintext or Base64-encoded.\
-         * <p>
-         * The Base64-encoded command content cannot exceed 16 KB in size.
+         * <p>The content of the command. The command content can be plaintext or Base64-encoded.<br>The Base64-encoded command content cannot exceed 16 KB in size.</p>
+         * <blockquote>
+         * <p>If the command content is Base64-encoded, you must set the ContentEncoding parameter to Base64.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If the command content is Base64-encoded, you must set the ContentEncoding parameter to Base64.
+         * <strong>example:</strong>
+         * <p>ipconfig</p>
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -154,13 +158,15 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The encoding mode of the command content. Valid values:
-         * <p>
+         * <p>The encoding mode of the command content. Valid values:</p>
+         * <ul>
+         * <li>PlainText: The command content is not encoded.</li>
+         * <li>Base64: The command content is Base64-encoded.</li>
+         * </ul>
+         * <p>Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.</p>
          * 
-         * *   PlainText: The command content is not encoded.
-         * *   Base64: The command content is Base64-encoded.
-         * 
-         * Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.
+         * <strong>example:</strong>
+         * <p>Base64</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -169,9 +175,8 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The ID of cloud desktop N. Valid values of N: 1 to 50.\
-         * <p>
-         * If multiple cloud desktops are specified and the command execution succeeds on at least one of the cloud desktops, the operation is considered successful. If multiple cloud desktops are specified and the command execution fails on all the cloud desktops, verify the value of the parameter and try again.
+         * <p>The ID of cloud desktop N. Valid values of N: 1 to 50.<br>If multiple cloud desktops are specified and the command execution succeeds on at least one of the cloud desktops, the operation is considered successful. If multiple cloud desktops are specified and the command execution fails on all the cloud desktops, verify the value of the parameter and try again.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -180,7 +185,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The ID of the end user. If you specify a value, you run the command as the end user that is granted specific permissions. Note: The end user has sessions on a cloud computer. That is, when the cloud computer is started, the end user logs on to an Alibaba Cloud Workspace client and connects to the cloud computer, and the cloud computer is not preempted by another end user during the connection. This parameter is not available for Linux cloud computers.
+         * <p>The ID of the end user. If you specify a value, you run the command as the end user that is granted specific permissions. Note: The end user has sessions on a cloud computer. That is, when the cloud computer is started, the end user logs on to an Alibaba Cloud Workspace client and connects to the cloud computer, and the cloud computer is not preempted by another end user during the connection. This parameter is not available for Linux cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User1</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -189,7 +197,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,9 +210,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The timeout period for the command to run. Unit: seconds. Default value: 60.\
-         * <p>
-         * A timeout error occurs if the command cannot be run because the process slows down or because a specific module or the Cloud Assistant client does not exist. When a timeout error occurs, the command process is forcibly terminated.
+         * <p>The timeout period for the command to run. Unit: seconds. Default value: 60.<br>A timeout error occurs if the command cannot be run because the process slows down or because a specific module or the Cloud Assistant client does not exist. When a timeout error occurs, the command process is forcibly terminated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -209,11 +222,15 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The language of the O\&M command. Valid values:
-         * <p>
+         * <p>The language of the O&amp;M command. Valid values:</p>
+         * <ul>
+         * <li>RunBatScript</li>
+         * <li>RunPowerShellScript</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   RunBatScript
-         * *   RunPowerShellScript
+         * <strong>example:</strong>
+         * <p>RunPowerShellScript</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

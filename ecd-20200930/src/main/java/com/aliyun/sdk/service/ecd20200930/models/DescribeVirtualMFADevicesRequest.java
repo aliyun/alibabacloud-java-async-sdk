@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualMFADevicesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVirtualMFADevicesRequest</p>
@@ -111,7 +112,10 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         } 
 
         /**
-         * The names of the AD users.
+         * <p>The names of the AD users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -120,7 +124,10 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 500. Default value: 100.
+         * <p>The number of entries per page. Valid values: 1 to 500. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -129,7 +136,10 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -138,7 +148,10 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-269345****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -147,7 +160,11 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

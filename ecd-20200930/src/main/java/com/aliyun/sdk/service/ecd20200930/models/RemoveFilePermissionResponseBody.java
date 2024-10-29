@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveFilePermissionResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveFilePermissionResponseBody</p>
@@ -37,7 +38,10 @@ public class RemoveFilePermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4636DBE0-BBB4-4076-8B8E-94D21A9A3CFB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportDesktopListInfoRequest} extends {@link RequestModel}
  *
  * <p>ExportDesktopListInfoRequest</p>
@@ -251,26 +252,26 @@ public class ExportDesktopListInfoRequest extends Request {
         } 
 
         /**
-         * The billing method of the cloud computer.
-         * <p>
+         * <p>The billing method of the cloud computer.</p>
+         * <p>Default value: Postpaid. Valid values:</p>
+         * <ul>
+         * <li><p>Postpaid: pay-as-you-go</p>
+         * <!-- -->
          * 
-         * Default value: Postpaid. Valid values:
+         * <!-- -->
          * 
-         * *   Postpaid: pay-as-you-go
+         * <!-- -->
+         * </li>
+         * <li><p>PrePaid: subscription</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   PrePaid: subscription
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -279,7 +280,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud computers. You can specify 1 to 100 IDs.
+         * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -288,7 +289,10 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The name of the cloud computer.
+         * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -297,74 +301,68 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The status of the cloud computers.
-         * <p>
+         * <p>The status of the cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Stopped</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   Stopped
+         * <!-- -->
+         * </li>
+         * <li><p>Starting</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Rebuilding</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Starting
+         * <!-- -->
+         * </li>
+         * <li><p>Running</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Stopping</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Rebuilding
+         * <!-- -->
+         * </li>
+         * <li><p>Expired</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Deleted</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Running
+         * <!-- -->
+         * </li>
+         * <li><p>Pending</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   Stopping
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Expired
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Deleted
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Pending
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder desktopStatus(String desktopStatus) {
             this.putQueryParameter("DesktopStatus", desktopStatus);
@@ -373,10 +371,10 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The IDs of the end users of the cloud computer. You can specify 1 to 100 IDs.
-         * <p>
-         * 
-         * >  During a specific period of time, only one user can connect to and use the cloud computer.
+         * <p>The IDs of the end users of the cloud computer. You can specify 1 to 100 IDs.</p>
+         * <blockquote>
+         * <p> During a specific period of time, only one user can connect to and use the cloud computer.</p>
+         * </blockquote>
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -385,7 +383,10 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The time when a subscription cloud computer expires.
+         * <p>The time when a subscription cloud computer expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-31T15:59Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -394,7 +395,10 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer pool to which the cloud computers belong.
+         * <p>The ID of the cloud computer pool to which the cloud computers belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-boyczi8enfyc5***</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -403,26 +407,26 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The language in which the cloud computer is displayed in the console UI. You can export the list of cloud computers in the specified language.
-         * <p>
+         * <p>The language in which the cloud computer is displayed in the console UI. You can export the list of cloud computers in the specified language.</p>
+         * <p>Default value: zh-CN. Valid values:</p>
+         * <ul>
+         * <li><p>zh-CN: Simplified Chinese</p>
+         * <!-- -->
          * 
-         * Default value: zh-CN. Valid values:
+         * <!-- -->
          * 
-         * *   zh-CN: Simplified Chinese
+         * <!-- -->
+         * </li>
+         * <li><p>en-GB: British English</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   en-GB: British English
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p><code>zh-CN</code></p>
          */
         public Builder langType(String langType) {
             this.putQueryParameter("LangType", langType);
@@ -431,12 +435,12 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -445,7 +449,10 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. If this parameter is empty, all results are returned.
+         * <p>The token that is used for the next query. If this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -454,7 +461,10 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The office network ID.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -463,7 +473,10 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The ID of the policy that is attached to the cloud computer.
+         * <p>The ID of the policy that is attached to the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system-all-enabled-policy</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -472,7 +485,11 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -481,7 +498,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The tags that are added to the cloud computer. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud computers by group. This facilitates search and batch operations. For more information, see [Use tags to manage cloud computers](~~203781~~).
+         * <p>The tags that are added to the cloud computer. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud computers by group. This facilitates search and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -490,7 +507,10 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * The username of the end user who is using the cloud computer.
+         * <p>The username of the end user who is using the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -505,6 +525,12 @@ public class ExportDesktopListInfoRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExportDesktopListInfoRequest} extends {@link TeaModel}
+     *
+     * <p>ExportDesktopListInfoRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -544,7 +570,10 @@ public class ExportDesktopListInfoRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun` and cannot contain only spaces.
+             * <p>The tag key. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code> and cannot contain only spaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -552,7 +581,10 @@ public class ExportDesktopListInfoRequest extends Request {
             }
 
             /**
-             * The tag value. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

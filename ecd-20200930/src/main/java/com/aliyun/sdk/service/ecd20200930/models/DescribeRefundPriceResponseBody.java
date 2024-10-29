@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRefundPriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRefundPriceResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRefundPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRefundPriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;

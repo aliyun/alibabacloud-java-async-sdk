@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCdsFileResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCdsFileResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.
+         * <p>The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,28 +97,27 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether data is returned.
-         * <p>
+         * <p>Specifies whether data is returned.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>false: Data fails to be returned.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   false: Data fails to be returned.
+         * <!-- -->
+         * </li>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>: Data is returned.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   true
-         * 
-         *     <!-- -->
-         * 
-         *     : Data is returned.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,26 +147,26 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true: The request is successful.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true: The request is successful.
+         * <!-- -->
+         * </li>
+         * <li><p>false: The request fails.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false: The request fails.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

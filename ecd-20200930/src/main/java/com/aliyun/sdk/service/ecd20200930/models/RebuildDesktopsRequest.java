@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebuildDesktopsRequest} extends {@link RequestModel}
  *
  * <p>RebuildDesktopsRequest</p>
@@ -111,7 +112,11 @@ public class RebuildDesktopsRequest extends Request {
         } 
 
         /**
-         * The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.
+         * <p>The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -120,7 +125,10 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the new image.
+         * <p>The ID of the new image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-84mztzatmlnys****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -129,15 +137,17 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The OS language. Only system images are supported, and Linux cloud computers support only English.
-         * <p>
+         * <p>The OS language. Only system images are supported, and Linux cloud computers support only English.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en-US: English</li>
+         * <li>zh-HK: Traditional Chinese (Hong Kong, China)</li>
+         * <li>zh-CN: Simplified Chinese</li>
+         * <li>ja-JP: Japanese</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   en-US: English
-         * *   zh-HK: Traditional Chinese (Hong Kong, China)
-         * *   zh-CN: Simplified Chinese
-         * *   ja-JP: Japanese
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -146,25 +156,33 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The operation type on the data disk.
-         * <p>
+         * <p>The operation type on the data disk.</p>
+         * <blockquote>
+         * <p> This parameter is empty by default regardless of whether data disks are attached to the cloud computer.</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>No data disks are attached to the cloud computer:<br>No operation is performed on the data disks of the cloud computer regardless of the value of this parameter.</p>
+         * </li>
+         * <li><p>Data disks are attached to the cloud computer:</p>
+         * <ol>
+         * <li><p>The OS of the cloud computer is the same as the OS of the destination image:</p>
+         * <ul>
+         * <li>If you set the OperateType parameter to <code>replace</code>, the data in the data disks of the cloud computer is replaced.</li>
+         * <li>If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is retained.</li>
+         * </ul>
+         * </li>
+         * <li><p>The OS of the cloud computer is different from the OS of the destination image:</p>
+         * <ul>
+         * <li>If you set the OperateType parameter to <code>replace</code>, the data in the data disks of the cloud computer is replaced.</li>
+         * <li>If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is cleared.</li>
+         * </ul>
+         * </li>
+         * </ol>
+         * </li>
+         * </ul>
          * 
-         * >  This parameter is empty by default regardless of whether data disks are attached to the cloud computer.
-         * 
-         * *   No data disks are attached to the cloud computer:\
-         *     No operation is performed on the data disks of the cloud computer regardless of the value of this parameter.
-         * 
-         * *   Data disks are attached to the cloud computer:
-         * 
-         *     1.  The OS of the cloud computer is the same as the OS of the destination image:
-         * 
-         *         *   If you set the OperateType parameter to `replace`, the data in the data disks of the cloud computer is replaced.
-         *         *   If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is retained.
-         * 
-         *     2.  The OS of the cloud computer is different from the OS of the destination image:
-         * 
-         *         *   If you set the OperateType parameter to `replace`, the data in the data disks of the cloud computer is replaced.
-         *         *   If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is cleared.
+         * <strong>example:</strong>
+         * <p>replace</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -173,7 +191,11 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the regions supported by Elastic Desktop Service (EDS).
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

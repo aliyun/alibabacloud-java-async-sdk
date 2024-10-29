@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyImageRequest} extends {@link RequestModel}
  *
  * <p>CopyImageRequest</p>
@@ -113,7 +114,10 @@ public class CopyImageRequest extends Request {
         } 
 
         /**
-         * The description of the new image in the destination region. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the new image in the destination region. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder destinationDescription(String destinationDescription) {
             this.putQueryParameter("DestinationDescription", destinationDescription);
@@ -122,7 +126,11 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Office_Shanghai</p>
          */
         public Builder destinationImageName(String destinationImageName) {
             this.putQueryParameter("DestinationImageName", destinationImageName);
@@ -131,7 +139,11 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the destination region. The ID must be different from the current region ID of the image. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The ID of the destination region. The ID must be different from the current region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -140,7 +152,11 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the image that is copied to the destination region.
+         * <p>The ID of the image that is copied to the destination region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-gx2x1dhsmusr2****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -149,7 +165,11 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

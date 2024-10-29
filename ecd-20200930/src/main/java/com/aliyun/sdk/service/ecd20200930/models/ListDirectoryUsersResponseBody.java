@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDirectoryUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListDirectoryUsersResponseBody</p>
@@ -61,7 +62,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * The token used to start the next query. If the value of this parameter is empty, all results are returned.
+         * <p>The token used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The names of users corresponding to the AD directory. If the AD directory contains only Administrator and Guest, an empty Users array is returned.
+         * <p>The names of users corresponding to the AD directory. If the AD directory contains only Administrator and Guest, an empty Users array is returned.</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -90,6 +97,12 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDirectoryUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDirectoryUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignedDesktopNumber")
         private Integer assignedDesktopNumber;
@@ -149,7 +162,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the user.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -157,7 +173,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * <p>The name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;

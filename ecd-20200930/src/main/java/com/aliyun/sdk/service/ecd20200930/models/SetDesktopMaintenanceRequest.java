@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDesktopMaintenanceRequest} extends {@link RequestModel}
  *
  * <p>SetDesktopMaintenanceRequest</p>
@@ -84,7 +85,7 @@ public class SetDesktopMaintenanceRequest extends Request {
         } 
 
         /**
-         * DesktopIds.
+         * <p>This parameter is required.</p>
          */
         public Builder desktopIds(java.util.List < String > desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
@@ -93,7 +94,10 @@ public class SetDesktopMaintenanceRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enter</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -102,7 +106,10 @@ public class SetDesktopMaintenanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

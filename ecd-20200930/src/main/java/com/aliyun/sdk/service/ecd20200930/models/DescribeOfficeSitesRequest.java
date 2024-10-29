@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOfficeSitesRequest} extends {@link RequestModel}
  *
  * <p>DescribeOfficeSitesRequest</p>
@@ -139,11 +140,14 @@ public class DescribeOfficeSitesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -152,7 +156,10 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query.
+         * <p>The token that determines the start point of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -161,7 +168,10 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The office network IDs. You can specify the IDs of 1 to 100 office networks.
+         * <p>The office network IDs. You can specify the IDs of 1 to 100 office networks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -170,26 +180,26 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The account type of the office network.
-         * <p>
+         * <p>The account type of the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>SIMPLE: convenience account</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   SIMPLE: convenience account
+         * <!-- -->
+         * </li>
+         * <li><p>AD_CONNECTOR: enterprise Active Directory (AD) account</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   AD_CONNECTOR: enterprise Active Directory (AD) account
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         public Builder officeSiteType(String officeSiteType) {
             this.putQueryParameter("OfficeSiteType", officeSiteType);
@@ -198,7 +208,11 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,82 +230,75 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The office network status.
-         * <p>
+         * <p>The office network status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>REGISTERING: The office network is being registered.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   REGISTERING: The office network is being registered.
+         * <!-- -->
+         * </li>
+         * <li><p>DEREGISTERING: The office network is being deregistered.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>REGISTERED: The office network is registered.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   DEREGISTERING: The office network is being deregistered.
+         * <!-- -->
+         * </li>
+         * <li><p>NEEDCONFIGTRUST: A trust relationship is required for the office network.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   REGISTERED: The office network is registered.
+         * <!-- -->
+         * </li>
+         * <li><p>DEREGISTERED: The office network is deregistered.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ERROR: One or more configurations of the office network are invalid.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   NEEDCONFIGTRUST: A trust relationship is required for the office network.
+         * <!-- -->
+         * </li>
+         * <li><p>CONFIGTRUSTING: A trust relationship is being configured for the office network.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>NEEDCONFIGUSER: Users are required for the office network.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   DEREGISTERED: The office network is deregistered.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   ERROR: One or more configurations of the office network are invalid.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   CONFIGTRUSTING: A trust relationship is being configured for the office network.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   NEEDCONFIGUSER: Users are required for the office network.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>REGISTERED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

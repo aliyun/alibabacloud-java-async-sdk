@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudDrivePermissionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudDrivePermissionsResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudDrivePermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDrivePermissionsResponseBody</p>
+     */
     public static class CloudDrivePermissionModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUsers")
         private java.util.List < String > endUsers;

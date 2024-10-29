@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDesktopOversoldGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDesktopOversoldGroupResponseBody</p>
@@ -70,6 +71,12 @@ public class CreateDesktopOversoldGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDesktopOversoldGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDesktopOversoldGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;

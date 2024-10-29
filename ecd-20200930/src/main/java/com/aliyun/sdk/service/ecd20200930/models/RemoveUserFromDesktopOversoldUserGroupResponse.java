@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveUserFromDesktopOversoldUserGroupResponse} extends {@link TeaModel}
  *
  * <p>RemoveUserFromDesktopOversoldUserGroupResponse</p>

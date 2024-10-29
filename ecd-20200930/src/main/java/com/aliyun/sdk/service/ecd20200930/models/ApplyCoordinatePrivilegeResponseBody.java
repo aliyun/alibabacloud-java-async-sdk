@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyCoordinatePrivilegeResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyCoordinatePrivilegeResponseBody</p>
@@ -37,7 +38,10 @@ public class ApplyCoordinatePrivilegeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C43EEAC3-84F8-5C1E-A067-4751C3D1422E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

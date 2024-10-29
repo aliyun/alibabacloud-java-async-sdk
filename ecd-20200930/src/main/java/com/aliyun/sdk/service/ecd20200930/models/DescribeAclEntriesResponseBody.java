@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAclEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAclEntriesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ACL entries.
+         * <p>The ACL entries.</p>
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
@@ -69,7 +70,10 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to start the next query. If the value of this parameter is empty, all results are returned.
+         * <p>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +81,10 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAclEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAclEntriesResponseBody</p>
+     */
     public static class AclEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
@@ -141,13 +154,15 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * The ACL type.
-             * <p>
+             * <p>The ACL type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>allow: whitelist</li>
+             * <li>disable: blacklist</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   allow: whitelist
-             * *   disable: blacklist
+             * <strong>example:</strong>
+             * <p>allow</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -155,7 +170,10 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the ACL applies, such as an office network ID or a cloud computer ID.
+             * <p>The ID of the instance to which the ACL applies, such as an office network ID or a cloud computer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-fsafeweh***</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -163,13 +181,15 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The granularity of the ACL.
-             * <p>
+             * <p>The granularity of the ACL.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>desktop: cloud computer</li>
+             * <li>vpc: office network</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   desktop: cloud computer
-             * *   vpc: office network
+             * <strong>example:</strong>
+             * <p>desktop</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

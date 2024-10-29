@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewNetworkPackagesRequest} extends {@link RequestModel}
  *
  * <p>RenewNetworkPackagesRequest</p>
@@ -125,30 +126,28 @@ public class RenewNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the automatic payment feature.
-         * <p>
+         * <p>Specifies whether to enable the automatic payment feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true (default): enables the auto-payment feature.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true (default): enables the auto-payment feature.
+         * <p>Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     Make sure that your account has sufficient balance. Otherwise, no order is generated.
-         * 
-         *     <!-- -->
-         * 
-         * *   false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -157,7 +156,8 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The IDs of premium bandwidth plans. You can specify up to 100 IDs.
+         * <p>The IDs of premium bandwidth plans. You can specify up to 100 IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder networkPackageId(java.util.List < String > networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -166,12 +166,15 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the `PeriodUnit` parameter. This parameter takes effect only when the `ChargeType` parameter is set to `PrePaid`.
-         * <p>
+         * <p>The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the <code>PeriodUnit</code> parameter. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>.</p>
+         * <ul>
+         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Week</code>, the valid value of the Period parameter is 1.</li>
+         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Month</code>, the valid values of the Period parameter are 1, 2, 3, and 6.</li>
+         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Year</code>, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</li>
+         * </ul>
          * 
-         * *   If the `PeriodUnit` parameter is set to `Week`, the valid value of the Period parameter is 1.
-         * *   If the `PeriodUnit` parameter is set to `Month`, the valid values of the Period parameter are 1, 2, 3, and 6.
-         * *   If the `PeriodUnit` parameter is set to `Year`, the valid values of the Period parameter are 1, 2, 3, 4, and 5.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -180,13 +183,15 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The unit of the renewal duration specified by the Period parameter. Valid values:
-         * <p>
+         * <p>The unit of the renewal duration specified by the Period parameter. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>Default value: Month.</p>
          * 
-         * *   Month
-         * *   Year
-         * 
-         * Default value: Month.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -195,7 +200,10 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The promotion ID.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500038360030606</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -204,7 +212,11 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

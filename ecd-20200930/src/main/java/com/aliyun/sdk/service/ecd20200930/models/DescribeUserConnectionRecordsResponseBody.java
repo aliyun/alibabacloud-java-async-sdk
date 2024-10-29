@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserConnectionRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserConnectionRecordsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about connection records of the end user.
+         * <p>Details about connection records of the end user.</p>
          */
         public Builder connectionRecords(java.util.List < ConnectionRecords> connectionRecords) {
             this.connectionRecords = connectionRecords;
@@ -69,7 +70,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to start the next query.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +81,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CC66B0A-BA3B-5D87-BFBE-11AAAD7A8E03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserConnectionRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserConnectionRecordsResponseBody</p>
+     */
     public static class ConnectionRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectDuration")
         private String connectDuration;
@@ -177,7 +190,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             private String desktopName; 
 
             /**
-             * The duration for which the end user is connected to the cloud computer. Unit: seconds.
+             * <p>The duration for which the end user is connected to the cloud computer. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3405035000</p>
              */
             public Builder connectDuration(String connectDuration) {
                 this.connectDuration = connectDuration;
@@ -185,7 +201,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the end user disconnected from the cloud computer.
+             * <p>The time when the end user disconnected from the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-27T20:03:13Z</p>
              */
             public Builder connectEndTime(String connectEndTime) {
                 this.connectEndTime = connectEndTime;
@@ -193,7 +212,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the end user connected to the cloud computer.
+             * <p>The time when the end user connected to the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-19T10:12:38Z</p>
              */
             public Builder connectStartTime(String connectStartTime) {
                 this.connectStartTime = connectStartTime;
@@ -201,7 +223,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the connection record.
+             * <p>The ID of the connection record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>528</p>
              */
             public Builder connectionRecordId(String connectionRecordId) {
                 this.connectionRecordId = connectionRecordId;
@@ -209,7 +234,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud computer to which the end user connected.
+             * <p>The ID of the cloud computer to which the end user connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ud-2hawufy3uedi1****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -217,7 +245,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud computer to which the end user connected.
+             * <p>The name of the cloud computer to which the end user connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;

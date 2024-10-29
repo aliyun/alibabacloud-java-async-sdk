@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateADConnectorDirectoryRequest} extends {@link RequestModel}
  *
  * <p>CreateADConnectorDirectoryRequest</p>
@@ -228,34 +229,33 @@ public class CreateADConnectorDirectoryRequest extends Request {
         } 
 
         /**
-         * The method in which the cloud computer is connected.
-         * <p>
+         * <p>The method in which the cloud computer is connected.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>VPC</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   VPC
+         * <!-- -->
+         * </li>
+         * <li><p>Internet (default)</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Any</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Internet (default)
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Any
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -264,7 +264,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The directory name. The name must be 2 to 255 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The directory name. The name must be 2 to 255 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDirectoryName</p>
          */
         public Builder directoryName(String directoryName) {
             this.putQueryParameter("DirectoryName", directoryName);
@@ -273,7 +277,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The IP address of the DNS server corresponding to the enterprise AD. You can specify only one IP address. Make sure that the specified IP address is accessible in the network of the selected vSwitch.
+         * <p>The IP address of the DNS server corresponding to the enterprise AD. You can specify only one IP address. Make sure that the specified IP address is accessible in the network of the selected vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>127.0.**.**</code></p>
          */
         public Builder dnsAddress(java.util.List < String > dnsAddress) {
             this.putQueryParameter("DnsAddress", dnsAddress);
@@ -282,7 +290,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The fully qualified domain name (FQDN) of the enterprise AD system. The value must contain the hostname and the domain name. You can register each FQDN only once.
+         * <p>The fully qualified domain name (FQDN) of the enterprise AD system. The value must contain the hostname and the domain name. You can register each FQDN only once.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>corp.example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -291,7 +303,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The password of the domain administrator. The password can be up to 64 characters in length.
+         * <p>The password of the domain administrator. The password can be up to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder domainPassword(String domainPassword) {
             this.putQueryParameter("DomainPassword", domainPassword);
@@ -300,7 +316,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The username of the domain administrator. The username can be up to 64 characters in length.
+         * <p>The username of the domain administrator. The username can be up to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sAMAccountName</p>
          */
         public Builder domainUserName(String domainUserName) {
             this.putQueryParameter("DomainUserName", domainUserName);
@@ -309,28 +329,27 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.
-         * <p>
+         * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><!-- -->
          * 
-         * Valid values:
+         * <p>true</p>
+         * <!-- -->
          * 
-         * *   <!-- -->
+         * <p>(default)</p>
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
          * 
-         *     true
+         * <p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     (default)
-         * 
-         *     <!-- -->
-         * 
-         * *   <!-- -->
-         * 
-         *     false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -339,28 +358,29 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Multi-Factor Authentication (MFA). After you enable MFA, all AD users in the directory must enter a dynamic verification code generated by the virtual MFA device in addition to a correct password when they log on to a cloud computer.
-         * <p>
+         * <p>Specifies whether to enable Multi-Factor Authentication (MFA). After you enable MFA, all AD users in the directory must enter a dynamic verification code generated by the virtual MFA device in addition to a correct password when they log on to a cloud computer.</p>
+         * <blockquote>
+         * <p> When end users log on to a cloud computer for the first time, they must bind an MFA device.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * >  When end users log on to a cloud computer for the first time, they must bind an MFA device.
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
          * 
-         * *   true
+         * <p>false (default)</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   <!-- -->
-         * 
-         *     false (default)
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
@@ -369,7 +389,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -378,12 +402,15 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The type of the AD connector.
-         * <p>
+         * <p>The type of the AD connector.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1 (General)</li>
+         * <li>2 (Advanced)</li>
+         * </ul>
          * 
-         * Valid values:
-         * - 1 (General)
-         * - 2 (Advanced)
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder specification(Long specification) {
             this.putQueryParameter("Specification", specification);
@@ -392,9 +419,10 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The DNS address of the existing AD subdomain.\
-         * <p>
-         * If you specify the `SubDomainName` parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.
+         * <p>The DNS address of the existing AD subdomain.<br>If you specify the <code>SubDomainName</code> parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>127.0.**.**</code></p>
          */
         public Builder subDomainDnsAddress(java.util.List < String > subDomainDnsAddress) {
             this.putQueryParameter("SubDomainDnsAddress", subDomainDnsAddress);
@@ -403,7 +431,10 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The FQDN of the enterprise AD subdomain. The value must contain the hostname and the subdomain name.
+         * <p>The FQDN of the enterprise AD subdomain. The value must contain the hostname and the subdomain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>child.example.com</p>
          */
         public Builder subDomainName(String subDomainName) {
             this.putQueryParameter("SubDomainName", subDomainName);
@@ -412,7 +443,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * Details of the vSwitch IDs. You can specify only one vSwitch ID.
+         * <p>Details of the vSwitch IDs. You can specify only one vSwitch ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp19ocz3erfx15uon****</p>
          */
         public Builder vSwitchId(java.util.List < String > vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

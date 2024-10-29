@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFilePermissionRequest} extends {@link RequestModel}
  *
  * <p>ListFilePermissionRequest</p>
@@ -112,7 +113,11 @@ public class ListFilePermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-346063****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -121,7 +126,10 @@ public class ListFilePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the end user who uses the cloud disk.
+         * <p>The ID of the end user who uses the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -130,7 +138,11 @@ public class ListFilePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the shared file.
+         * <p>The ID of the shared file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6333e553a133ce21e6f747cf948bb9ef95d7****</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -139,7 +151,7 @@ public class ListFilePermissionRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -148,7 +160,11 @@ public class ListFilePermissionRequest extends Request {
         }
 
         /**
-         * The region ID of the cloud disk. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID of the cloud disk. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

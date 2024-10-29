@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopTypesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDesktopTypesRequest</p>
@@ -32,6 +33,10 @@ public class DescribeDesktopTypesRequest extends Request {
     private String desktopTypeId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopTypeIdList")
+    private java.util.List < String > desktopTypeIdList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Float gpuCount;
 
@@ -48,6 +53,10 @@ public class DescribeDesktopTypesRequest extends Request {
     private Integer memorySize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
+    private String orderBy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
@@ -56,6 +65,14 @@ public class DescribeDesktopTypesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    private String scope;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
+    private String sortType;
+
     private DescribeDesktopTypesRequest(Builder builder) {
         super(builder);
         this.appliedScope = builder.appliedScope;
@@ -63,12 +80,16 @@ public class DescribeDesktopTypesRequest extends Request {
         this.desktopGroupIdForModify = builder.desktopGroupIdForModify;
         this.desktopIdForModify = builder.desktopIdForModify;
         this.desktopTypeId = builder.desktopTypeId;
+        this.desktopTypeIdList = builder.desktopTypeIdList;
         this.gpuCount = builder.gpuCount;
         this.gpuDriverType = builder.gpuDriverType;
         this.instanceTypeFamily = builder.instanceTypeFamily;
         this.memorySize = builder.memorySize;
+        this.orderBy = builder.orderBy;
         this.orderType = builder.orderType;
         this.regionId = builder.regionId;
+        this.scope = builder.scope;
+        this.sortType = builder.sortType;
     }
 
     public static Builder builder() {
@@ -120,6 +141,13 @@ public class DescribeDesktopTypesRequest extends Request {
     }
 
     /**
+     * @return desktopTypeIdList
+     */
+    public java.util.List < String > getDesktopTypeIdList() {
+        return this.desktopTypeIdList;
+    }
+
+    /**
      * @return gpuCount
      */
     public Float getGpuCount() {
@@ -148,6 +176,13 @@ public class DescribeDesktopTypesRequest extends Request {
     }
 
     /**
+     * @return orderBy
+     */
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    /**
      * @return orderType
      */
     public String getOrderType() {
@@ -161,18 +196,36 @@ public class DescribeDesktopTypesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
+     * @return sortType
+     */
+    public String getSortType() {
+        return this.sortType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDesktopTypesRequest, Builder> {
         private String appliedScope; 
         private Integer cpuCount; 
         private String desktopGroupIdForModify; 
         private String desktopIdForModify; 
         private String desktopTypeId; 
+        private java.util.List < String > desktopTypeIdList; 
         private Float gpuCount; 
         private String gpuDriverType; 
         private String instanceTypeFamily; 
         private Integer memorySize; 
+        private String orderBy; 
         private String orderType; 
         private String regionId; 
+        private String scope; 
+        private String sortType; 
 
         private Builder() {
             super();
@@ -185,16 +238,23 @@ public class DescribeDesktopTypesRequest extends Request {
             this.desktopGroupIdForModify = request.desktopGroupIdForModify;
             this.desktopIdForModify = request.desktopIdForModify;
             this.desktopTypeId = request.desktopTypeId;
+            this.desktopTypeIdList = request.desktopTypeIdList;
             this.gpuCount = request.gpuCount;
             this.gpuDriverType = request.gpuDriverType;
             this.instanceTypeFamily = request.instanceTypeFamily;
             this.memorySize = request.memorySize;
+            this.orderBy = request.orderBy;
             this.orderType = request.orderType;
             this.regionId = request.regionId;
+            this.scope = request.scope;
+            this.sortType = request.sortType;
         } 
 
         /**
-         * Applicable Scope of specifications. Default value: `Public`
+         * <p>Applicable Scope of specifications. Default value: <code>Public</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder appliedScope(String appliedScope) {
             this.putQueryParameter("AppliedScope", appliedScope);
@@ -203,7 +263,10 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The number of vCPUs.
+         * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.putQueryParameter("CpuCount", cpuCount);
@@ -212,7 +275,10 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer pool when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer pool is included in the response.
+         * <p>The ID of the cloud computer pool when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer pool is included in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-abcdefg****</p>
          */
         public Builder desktopGroupIdForModify(String desktopGroupIdForModify) {
             this.putQueryParameter("DesktopGroupIdForModify", desktopGroupIdForModify);
@@ -221,7 +287,10 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer is included in the response.
+         * <p>The ID of the cloud computer when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer is included in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopIdForModify(String desktopIdForModify) {
             this.putQueryParameter("DesktopIdForModify", desktopIdForModify);
@@ -230,172 +299,155 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The IDs of the instance types of cloud computers.
-         * <p>
+         * <p>The IDs of the instance types of cloud computers.</p>
+         * <blockquote>
+         * <p> If the values of the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters are empty, all instance types of cloud computers are queried.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>eds.hf.4c8g</p>
+         * <!-- -->
          * 
-         * >  If the values of the `InstanceTypeFamily` and `DesktopTypeId` parameters are empty, all instance types of cloud computers are queried.
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.basic.large</p>
+         * <!-- -->
          * 
-         * *   eds.hf.4c8g
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.advanced.large</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.basic.small</p>
+         * <!-- -->
          * 
-         * *   ecd.basic.large
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.graphics.2xlarge</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.hf.8c16g</p>
+         * <!-- -->
          * 
-         * *   ecd.advanced.large
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.hf.12c24g</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.general.8c16g</p>
+         * <!-- -->
          * 
-         * *   ecd.basic.small
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.general.16c32g</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.advanced.xlarge</p>
+         * <!-- -->
          * 
-         * *   ecd.graphics.2xlarge
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.graphics.16c1t4</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.graphics.xlarge</p>
+         * <!-- -->
          * 
-         * *   eds.hf.8c16g
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.performance.2xlarge</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.general.8c32g</p>
+         * <!-- -->
          * 
-         * *   eds.hf.12c24g
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.general.2c2g</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.general.2c4g</p>
+         * <!-- -->
          * 
-         * *   eds.general.8c16g
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.graphics.24c1t4</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.general.4c8g</p>
+         * <!-- -->
          * 
-         * *   eds.general.16c32g
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.general.4c16g</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.general.2c8g</p>
+         * <!-- -->
          * 
-         * *   ecd.advanced.xlarge
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   eds.graphics.16c1t4
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   ecd.graphics.xlarge
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   ecd.performance.2xlarge
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   eds.general.8c32g
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   eds.general.2c2g
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   eds.general.2c4g
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   eds.graphics.24c1t4
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   eds.general.4c8g
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   eds.general.4c16g
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   eds.general.2c8g
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>ecd.graphics.xlarge</p>
          */
         public Builder desktopTypeId(String desktopTypeId) {
             this.putQueryParameter("DesktopTypeId", desktopTypeId);
@@ -404,7 +456,19 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The number of GPUs.
+         * DesktopTypeIdList.
+         */
+        public Builder desktopTypeIdList(java.util.List < String > desktopTypeIdList) {
+            this.putQueryParameter("DesktopTypeIdList", desktopTypeIdList);
+            this.desktopTypeIdList = desktopTypeIdList;
+            return this;
+        }
+
+        /**
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpuCount(Float gpuCount) {
             this.putQueryParameter("GpuCount", gpuCount);
@@ -422,68 +486,64 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The name of the instance family.
-         * <p>
+         * <p>The name of the instance family.</p>
+         * <blockquote>
+         * <p> If the values of the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters are empty, all instance families of cloud computers are queried.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>ecd.advanced</p>
+         * <!-- -->
          * 
-         * >  If the values of the `InstanceTypeFamily` and `DesktopTypeId` parameters are empty, all instance families of cloud computers are queried.
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
+         * </li>
+         * <li><p>eds.graphics</p>
+         * <!-- -->
          * 
-         * *   ecd.advanced
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.basic</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.hf</p>
+         * <!-- -->
          * 
-         * *   eds.graphics
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.graphics</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>eds.general</p>
+         * <!-- -->
          * 
-         * *   ecd.basic
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>ecd.performance</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         * *   eds.hf
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   ecd.graphics
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   eds.general
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   ecd.performance
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>ecd.graphics</p>
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -492,7 +552,10 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The memory size. Unit: MiB.
+         * <p>The memory size. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder memorySize(Integer memorySize) {
             this.putQueryParameter("MemorySize", memorySize);
@@ -501,7 +564,19 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The order type.
+         * OrderBy.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+         * <p>The order type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOWNGRADE</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -510,11 +585,33 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Scope.
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
+            return this;
+        }
+
+        /**
+         * SortType.
+         */
+        public Builder sortType(String sortType) {
+            this.putQueryParameter("SortType", sortType);
+            this.sortType = sortType;
             return this;
         }
 

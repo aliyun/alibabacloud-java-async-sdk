@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCloudDriveUsersRequest} extends {@link RequestModel}
  *
  * <p>ModifyCloudDriveUsersRequest</p>
@@ -112,7 +113,10 @@ public class ModifyCloudDriveUsersRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-596198****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -121,7 +125,7 @@ public class ModifyCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>This parameter is required.</p>
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -130,7 +134,10 @@ public class ModifyCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,34 +146,30 @@ public class ModifyCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * The status of Cloud Drive Service users.
-         * <p>
+         * <p>The status of Cloud Drive Service users.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>disabled</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   disabled
+         * <p>unavailable</p>
+         * <!-- -->
+         * </li>
+         * <li><p>enabled</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>available</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     unavailable
-         * 
-         *     <!-- -->
-         * 
-         * *   enabled
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     available
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -175,7 +178,10 @@ public class ModifyCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * The maximum storage space of a user. Unit: bytes.
+         * <p>The maximum storage space of a user. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder userMaxSize(Long userMaxSize) {
             this.putQueryParameter("UserMaxSize", userMaxSize);

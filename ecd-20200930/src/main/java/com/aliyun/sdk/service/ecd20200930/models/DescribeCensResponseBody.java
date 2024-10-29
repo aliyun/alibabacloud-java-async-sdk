@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCensResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCensResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the CEN instances.
+         * <p>Details of the CEN instances.</p>
          */
         public Builder cens(java.util.List < Cens> cens) {
             this.cens = cens;
@@ -93,7 +94,10 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of CEN instances returned.
+         * <p>The total number of CEN instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeCensResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCensResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCensResponseBody</p>
+     */
     public static class PackageIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PackageId")
         private String packageId;
@@ -157,7 +176,10 @@ public class DescribeCensResponseBody extends TeaModel {
             private String packageId; 
 
             /**
-             * The ID of the bandwidth plan that is bound to the CEN instance.
+             * <p>The ID of the bandwidth plan that is bound to the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cenbwp-4c2zaavbvh5f42****</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -171,6 +193,12 @@ public class DescribeCensResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCensResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCensResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -210,7 +238,10 @@ public class DescribeCensResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -218,7 +249,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -232,6 +266,12 @@ public class DescribeCensResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCensResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCensResponseBody</p>
+     */
     public static class Cens extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
@@ -355,7 +395,10 @@ public class DescribeCensResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ID of the CEN instance.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-3gwy16dojz1m65****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -363,7 +406,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CEN instance was created.
+             * <p>The time when the CEN instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-16T08:46Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -371,7 +417,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the CEN instance.
+             * <p>The description of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -379,20 +428,22 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 level.
-             * <p>
+             * <p>The IPv6 level.</p>
+             * <blockquote>
+             * <p> IPv6 is not supported.</p>
+             * </blockquote>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li><p>DISABLED</p>
+             * <!-- -->
              * 
-             * >  IPv6 is not supported.
+             * <!-- -->
              * 
-             * Valid value:
+             * <!-- --></li>
+             * </ul>
              * 
-             * *   DISABLED
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>DISABLED</p>
              */
             public Builder ipv6Level(String ipv6Level) {
                 this.ipv6Level = ipv6Level;
@@ -400,7 +451,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CEN instance.
+             * <p>The name of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testCen</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -408,7 +462,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth plans that are bound to the CEN instance.
+             * <p>The bandwidth plans that are bound to the CEN instance.</p>
              */
             public Builder packageIds(java.util.List < PackageIds> packageIds) {
                 this.packageIds = packageIds;
@@ -416,12 +470,14 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The tolerated level of CIDR block conflict.
-             * <p>
+             * <p>The tolerated level of CIDR block conflict.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>REDUCED: CIDR block conflicts are allowed, but the conflicting CIDR blocks cannot be identical.</li>
+             * </ul>
              * 
-             * Valid value:
-             * 
-             * *   REDUCED: CIDR block conflicts are allowed, but the conflicting CIDR blocks cannot be identical.
+             * <strong>example:</strong>
+             * <p>REDUCED</p>
              */
             public Builder protectionLevel(String protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -429,34 +485,33 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CEN instance.
-             * <p>
+             * <p>The status of the CEN instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Creating</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Creating
+             * <!-- -->
+             * </li>
+             * <li><p>Active</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Deleting</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Active
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Deleting
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -464,7 +519,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the CEN instance.
+             * <p>The tags of the CEN instance.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

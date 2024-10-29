@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyAutoSnapshotPolicyRequest</p>
@@ -112,7 +113,10 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The CRON expression.
+         * <p>The CRON expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 20 16 ? * 1,2,3,4,5,6,7</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
@@ -121,7 +125,11 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy.
+         * <p>The ID of the automatic snapshot policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-itcmrhqt01tdo****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -130,7 +138,10 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). This parameter is empty by default.
+         * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automatic system snapshot</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -139,7 +150,11 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +163,10 @@ public class ModifyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.
+         * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);

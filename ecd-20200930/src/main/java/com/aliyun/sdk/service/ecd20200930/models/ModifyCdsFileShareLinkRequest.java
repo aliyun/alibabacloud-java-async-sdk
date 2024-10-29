@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCdsFileShareLinkRequest} extends {@link RequestModel}
  *
  * <p>ModifyCdsFileShareLinkRequest</p>
@@ -296,7 +297,11 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai+cds-135515****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -305,7 +310,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The description of the file sharing task. The description must be 0 to 1,024 characters in length.
+         * <p>The description of the file sharing task. The description must be 0 to 1,024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -314,26 +322,26 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to prohibit the download of the files that are being shared.
-         * <p>
+         * <p>Specifies whether to prohibit the download of the files that are being shared.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   false
+         * <!-- -->
+         * </li>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   true
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableDownload(Boolean disableDownload) {
             this.putQueryParameter("DisableDownload", disableDownload);
@@ -342,26 +350,26 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to prohibit the preview of the files that are being shared.
-         * <p>
+         * <p>Specifies whether to prohibit the preview of the files that are being shared.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disablePreview(Boolean disablePreview) {
             this.putQueryParameter("DisablePreview", disablePreview);
@@ -370,26 +378,26 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to prohibit the dump of the files that are being shared.
-         * <p>
+         * <p>Specifies whether to prohibit the dump of the files that are being shared.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   false
+         * <!-- -->
+         * </li>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   true
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableSave(Boolean disableSave) {
             this.putQueryParameter("DisableSave", disableSave);
@@ -398,7 +406,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the shared files are downloaded. The value of this parameter must be equal to or greater than 0.
+         * <p>The number of times that the shared files are downloaded. The value of this parameter must be equal to or greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder downloadCount(Long downloadCount) {
             this.putQueryParameter("DownloadCount", downloadCount);
@@ -407,7 +418,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.
+         * <p>The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder downloadLimit(Long downloadLimit) {
             this.putQueryParameter("DownloadLimit", downloadLimit);
@@ -416,7 +430,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The time when the file sharing link expires. The value of this parameter follows the RFC 3339 standard. Example: "2020-06-28T11:33:00.000+08:00". If this parameter is set to "", the file sharing link never expires.
+         * <p>The time when the file sharing link expires. The value of this parameter follows the RFC 3339 standard. Example: &quot;2020-06-28T11:33:00.000+08:00&quot;. If this parameter is set to &quot;&quot;, the file sharing link never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20T06:30:22.365Z</p>
          */
         public Builder expiration(String expiration) {
             this.putQueryParameter("Expiration", expiration);
@@ -425,7 +442,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the shared files are previewed. The value of this parameter must be equal to or greater than 0.
+         * <p>The number of times that the shared files are previewed. The value of this parameter must be equal to or greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder previewCount(Long previewCount) {
             this.putQueryParameter("PreviewCount", previewCount);
@@ -434,7 +454,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.
+         * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder previewLimit(Long previewLimit) {
             this.putQueryParameter("PreviewLimit", previewLimit);
@@ -443,7 +466,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the shared files are reported. The value of this parameter must be equal to or greater than 0.
+         * <p>The number of times that the shared files are reported. The value of this parameter must be equal to or greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder reportCount(Long reportCount) {
             this.putQueryParameter("ReportCount", reportCount);
@@ -452,7 +478,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the shared files are dumped. The value of this parameter must be equal to or greater than 0.
+         * <p>The number of times that the shared files are dumped. The value of this parameter must be equal to or greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder saveCount(Long saveCount) {
             this.putQueryParameter("SaveCount", saveCount);
@@ -461,7 +490,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.
+         * <p>The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder saveLimit(Long saveLimit) {
             this.putQueryParameter("SaveLimit", saveLimit);
@@ -470,7 +502,11 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The ID of the file sharing task.
+         * <p>The ID of the file sharing task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1Fs****</p>
          */
         public Builder shareId(String shareId) {
             this.putQueryParameter("ShareId", shareId);
@@ -479,10 +515,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The name of the file sharing task. If you do not configure this parameter, the sharing task name is the first ID that is returned in the file_id_list value.
-         * <p>
-         * 
-         * >  The sharing task name must be 0 to 128 characters in length.
+         * <p>The name of the file sharing task. If you do not configure this parameter, the sharing task name is the first ID that is returned in the file_id_list value.</p>
+         * <blockquote>
+         * <p> The sharing task name must be 0 to 128 characters in length.</p>
+         * </blockquote>
          */
         public Builder shareName(String shareName) {
             this.putQueryParameter("ShareName", shareName);
@@ -491,7 +527,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The length of the access code. Valid values: 6 to 8. Unit: bytes. If you leave this parameter empty or set it to null, no access code is required. If you use a token to share files, you do not need to configure this parameter. The access code can contain only visible ASCII characters.
+         * <p>The length of the access code. Valid values: 6 to 8. Unit: bytes. If you leave this parameter empty or set it to null, no access code is required. If you use a token to share files, you do not need to configure this parameter. The access code can contain only visible ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder sharePwd(String sharePwd) {
             this.putQueryParameter("SharePwd", sharePwd);
@@ -500,26 +539,26 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The sharing status.
-         * <p>
+         * <p>The sharing status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>disabled: The sharing task is canceled.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   disabled: The sharing task is canceled.
+         * <!-- -->
+         * </li>
+         * <li><p>enabled: The sharing task is valid.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   enabled: The sharing task is valid.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -528,7 +567,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the videos are previewed in the shared files. The value of this parameter must be equal to or greater than 0.
+         * <p>The number of times that the videos are previewed in the shared files. The value of this parameter must be equal to or greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder videoPreviewCount(Long videoPreviewCount) {
             this.putQueryParameter("VideoPreviewCount", videoPreviewCount);

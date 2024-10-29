@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFotaPendingDesktopsRequest} extends {@link RequestModel}
  *
  * <p>DescribeFotaPendingDesktopsRequest</p>
@@ -139,7 +140,10 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud computer.
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -148,7 +152,10 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The name of the cloud computer.
+         * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -157,11 +164,14 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100.</li>
+         * <li>Default value: 20.</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 100.
-         * *   Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -170,7 +180,10 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -179,7 +192,10 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the office network. You can call the [DescribeOfficeSites](~~216071~~) operation to obtain the value of this parameter.
+         * <p>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -188,7 +204,11 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by Elastic Desktop Service.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -197,7 +217,10 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the image update task. You can call the [DescribeFotaTasks](~~437001~~) operation to obtain the value of this parameter.
+         * <p>The ID of the image update task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aot-c4khwrp9ocml4****</p>
          */
         public Builder taskUid(String taskUid) {
             this.putQueryParameter("TaskUid", taskUid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDesktopOversoldUserGroupRequest} extends {@link RequestModel}
  *
  * <p>AddDesktopOversoldUserGroupRequest</p>
@@ -160,6 +161,12 @@ public class AddDesktopOversoldUserGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddDesktopOversoldUserGroupRequest} extends {@link TeaModel}
+     *
+     * <p>AddDesktopOversoldUserGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

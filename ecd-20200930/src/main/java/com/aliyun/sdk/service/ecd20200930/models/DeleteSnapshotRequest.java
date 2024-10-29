@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnapshotRequest} extends {@link RequestModel}
  *
  * <p>DeleteSnapshotRequest</p>
@@ -69,7 +70,11 @@ public class DeleteSnapshotRequest extends Request {
         } 
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +83,11 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * The snapshot IDs. You can specify 1 to 100 IDs.
+         * <p>The snapshot IDs. You can specify 1 to 100 IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2ze81owrnv9pity4****</p>
          */
         public Builder snapshotId(java.util.List < String > snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

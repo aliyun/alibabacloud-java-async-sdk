@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagePermissionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImagePermissionResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeImagePermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the Alibaba Cloud accounts with which the image is shared.
+         * <p>The IDs of the Alibaba Cloud accounts with which the image is shared.</p>
          */
         public Builder aliUids(java.util.List < String > aliUids) {
             this.aliUids = aliUids;
@@ -57,7 +58,10 @@ public class DescribeImagePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

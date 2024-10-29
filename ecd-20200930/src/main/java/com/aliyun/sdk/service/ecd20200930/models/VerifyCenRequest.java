@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyCenRequest} extends {@link RequestModel}
  *
  * <p>VerifyCenRequest</p>
@@ -112,7 +113,11 @@ public class VerifyCenRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-3gwy16dojz1m65****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -121,11 +126,14 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account to which the CEN instance belongs.
-         * <p>
+         * <p>The Alibaba Cloud account to which the CEN instance belongs.</p>
+         * <ul>
+         * <li>If you own the CEN instance, you can skip this parameter.</li>
+         * <li>If you do not own the CEN instance, you must specify the ID of the account that owns the CEN instance.</li>
+         * </ul>
          * 
-         * *   If you own the CEN instance, you can skip this parameter.
-         * *   If you do not own the CEN instance, you must specify the ID of the account that owns the CEN instance.
+         * <strong>example:</strong>
+         * <p>102681951715****</p>
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -134,7 +142,11 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * The IPv4 CIDR block of the associated office network.
+         * <p>The IPv4 CIDR block of the associated office network.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -143,7 +155,11 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,7 +168,10 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * The verification code. If you do not own the CEN instance, you must call the [SendVerifyCode](~~436847~~) operation to obtain a verification code.
+         * <p>The verification code. If you do not own the CEN instance, you must call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain a verification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

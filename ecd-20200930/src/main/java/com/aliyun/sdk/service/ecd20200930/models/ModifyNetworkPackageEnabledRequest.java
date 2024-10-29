@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNetworkPackageEnabledRequest} extends {@link RequestModel}
  *
  * <p>ModifyNetworkPackageEnabledRequest</p>
@@ -83,26 +84,26 @@ public class ModifyNetworkPackageEnabledRequest extends Request {
         } 
 
         /**
-         * Specifies whether to restore the premium bandwidth plan of the cloud computer.
-         * <p>
+         * <p>Specifies whether to restore the premium bandwidth plan of the cloud computer.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -111,7 +112,11 @@ public class ModifyNetworkPackageEnabledRequest extends Request {
         }
 
         /**
-         * The ID of the premium bandwidth plan.
+         * <p>The ID of the premium bandwidth plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-cfedn7r2pe48g****</p>
          */
         public Builder networkPackageId(String networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -120,7 +125,11 @@ public class ModifyNetworkPackageEnabledRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

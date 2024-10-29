@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DissociateNetworkPackageRequest} extends {@link RequestModel}
  *
  * <p>DissociateNetworkPackageRequest</p>
@@ -69,7 +70,11 @@ public class DissociateNetworkPackageRequest extends Request {
         } 
 
         /**
-         * The ID of the premium bandwidth plan. You can call the [DescribeNetworkPackages](~~216079~~) operation to obtain the ID.
+         * <p>The ID of the premium bandwidth plan. You can call the <a href="https://help.aliyun.com/document_detail/216079.html">DescribeNetworkPackages</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-*********</p>
          */
         public Builder networkPackageId(String networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -78,7 +83,11 @@ public class DissociateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

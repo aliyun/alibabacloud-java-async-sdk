@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCdsFileShareLinkResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCdsFileShareLinkResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.
+         * <p>The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The data information.
+         * <p>The data information.</p>
          */
         public Builder data(CdsFileShareLinkModel data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned. This parameter is not returned if the value of Code is success.
+         * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7E4322D-D679-5ACB-A909-490D2F0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,26 +127,26 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The request status.
-         * <p>
+         * <p>The request status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true: The request is successful.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true: The request is successful.
+         * <!-- -->
+         * </li>
+         * <li><p>false: The request fails.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false: The request fails.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

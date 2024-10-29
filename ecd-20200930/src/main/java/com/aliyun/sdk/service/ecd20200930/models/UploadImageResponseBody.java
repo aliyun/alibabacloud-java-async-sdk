@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadImageResponseBody} extends {@link TeaModel}
  *
  * <p>UploadImageResponseBody</p>
@@ -49,7 +50,10 @@ public class UploadImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the custom image.
+         * <p>The ID of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-d4dwr5tgrgvd****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -57,7 +61,10 @@ public class UploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CC66B0A-BA3B-5D87-BFBE-11AAAD7A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

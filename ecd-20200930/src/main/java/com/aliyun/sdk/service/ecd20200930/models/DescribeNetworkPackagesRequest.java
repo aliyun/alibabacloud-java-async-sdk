@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkPackagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeNetworkPackagesRequest</p>
@@ -111,14 +112,17 @@ public class DescribeNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * The charge type of the pay-as-you-go premium bandwidth plan.
-         * <p>
+         * <p>The charge type of the pay-as-you-go premium bandwidth plan.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>PayByTraffic: charges by data transfer.</p>
+         * </li>
+         * <li><p>PayByBandwidth: charges by fixed bandwidth.</p>
+         * </li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   PayByTraffic: charges by data transfer.
-         * 
-         * *   PayByBandwidth: charges by fixed bandwidth.
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -127,11 +131,14 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 100</li>
+         * <li>Default value: 10</li>
+         * </ul>
          * 
-         * *   Maximum value: 100
-         * *   Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -140,7 +147,10 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the premium bandwidth plan. You can specify 1 to 100 IDs.
+         * <p>The ID of the premium bandwidth plan. You can specify 1 to 100 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-amtp8e8q1o9e4****</p>
          */
         public Builder networkPackageId(java.util.List < String > networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -149,7 +159,10 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query.
+         * <p>The token that determines the start point of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -158,7 +171,11 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

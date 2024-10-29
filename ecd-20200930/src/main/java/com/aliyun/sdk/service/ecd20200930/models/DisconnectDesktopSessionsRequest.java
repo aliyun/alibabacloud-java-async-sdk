@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisconnectDesktopSessionsRequest} extends {@link RequestModel}
  *
  * <p>DisconnectDesktopSessionsRequest</p>
@@ -83,7 +84,10 @@ public class DisconnectDesktopSessionsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to perform precheck. If you perform precheck, the system does not disconnect from desktop sessions. Only the sessions that do not meet specific conditions are returned.
+         * <p>Specifies whether to perform precheck. If you perform precheck, the system does not disconnect from desktop sessions. Only the sessions that do not meet specific conditions are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder preCheck(Boolean preCheck) {
             this.putQueryParameter("PreCheck", preCheck);
@@ -92,7 +96,11 @@ public class DisconnectDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +109,8 @@ public class DisconnectDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The session details.
+         * <p>The session details.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sessions(java.util.List < Sessions> sessions) {
             this.putQueryParameter("Sessions", sessions);
@@ -116,6 +125,12 @@ public class DisconnectDesktopSessionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DisconnectDesktopSessionsRequest} extends {@link TeaModel}
+     *
+     * <p>DisconnectDesktopSessionsRequest</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
@@ -155,7 +170,10 @@ public class DisconnectDesktopSessionsRequest extends Request {
             private String endUserId; 
 
             /**
-             * The cloud desktop ID.
+             * <p>The cloud desktop ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-90g15fkhsxxxn0unj</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -163,7 +181,10 @@ public class DisconnectDesktopSessionsRequest extends Request {
             }
 
             /**
-             * The end user ID.
+             * <p>The end user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wy01</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;

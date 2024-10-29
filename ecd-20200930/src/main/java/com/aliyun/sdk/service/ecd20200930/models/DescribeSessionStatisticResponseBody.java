@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSessionStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSessionStatisticResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5528624-C6ED-5CA4-A4A2-7C30DBF2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics.
+         * <p>The statistics.</p>
          */
         public Builder statistic(java.util.List < Statistic> statistic) {
             this.statistic = statistic;
@@ -77,7 +81,10 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of sessions returned.
+         * <p>The total number of sessions returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSessionStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSessionStatisticResponseBody</p>
+     */
     public static class Statistic extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -129,7 +142,10 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
             private Long timePoint; 
 
             /**
-             * The total number of sessions in the time range.
+             * <p>The total number of sessions in the time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -137,7 +153,10 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time.
+             * <p>The point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1690164443508</p>
              */
             public Builder timePoint(Long timePoint) {
                 this.timePoint = timePoint;

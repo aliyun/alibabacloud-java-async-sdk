@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDesktopGroupDetailRequest} extends {@link RequestModel}
  *
  * <p>GetDesktopGroupDetailRequest</p>
@@ -69,7 +70,11 @@ public class GetDesktopGroupDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud computer pool.
+         * <p>The ID of the cloud computer pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -78,7 +83,11 @@ public class GetDesktopGroupDetailRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

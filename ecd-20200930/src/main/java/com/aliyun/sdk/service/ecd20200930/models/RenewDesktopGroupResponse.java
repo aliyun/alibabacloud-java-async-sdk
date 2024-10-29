@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewDesktopGroupResponse} extends {@link TeaModel}
  *
  * <p>RenewDesktopGroupResponse</p>

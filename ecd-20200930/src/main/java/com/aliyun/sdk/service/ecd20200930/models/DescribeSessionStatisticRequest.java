@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSessionStatisticRequest} extends {@link RequestModel}
  *
  * <p>DescribeSessionStatisticRequest</p>
@@ -123,7 +124,10 @@ public class DescribeSessionStatisticRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677808889806</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -132,7 +136,10 @@ public class DescribeSessionStatisticRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai+dir-259382****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -141,11 +148,14 @@ public class DescribeSessionStatisticRequest extends Request {
         }
 
         /**
-         * The query interval. Unit: seconds. Valid values:
-         * <p>
+         * <p>The query interval. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li>60</li>
+         * <li>120</li>
+         * </ul>
          * 
-         * *   60
-         * *   120
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -154,7 +164,10 @@ public class DescribeSessionStatisticRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +176,10 @@ public class DescribeSessionStatisticRequest extends Request {
         }
 
         /**
-         * Specifies to search for session information by region ID. This parameter is used to filter desktop information of a specific region.
+         * <p>Specifies to search for session information by region ID. This parameter is used to filter desktop information of a specific region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder searchRegionId(String searchRegionId) {
             this.putQueryParameter("SearchRegionId", searchRegionId);
@@ -172,7 +188,10 @@ public class DescribeSessionStatisticRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679449506572</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFotaPendingDesktopsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFotaPendingDesktopsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The cloud computers whose images can be and are pending to be updated to the version specified in `TaskUid`.
+         * <p>The cloud computers whose images can be and are pending to be updated to the version specified in <code>TaskUid</code>.</p>
          */
         public Builder fotaPendingDesktops(java.util.List < FotaPendingDesktops> fotaPendingDesktops) {
             this.fotaPendingDesktops = fotaPendingDesktops;
@@ -101,7 +105,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +127,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +143,12 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFotaPendingDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFotaPendingDesktopsResponseBody</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
@@ -157,7 +176,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             private String endUserId; 
 
             /**
-             * The ID of the end user that connects to the cloud computer.
+             * <p>The ID of the end user that connects to the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>end user id</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -171,6 +193,12 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFotaPendingDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFotaPendingDesktopsResponseBody</p>
+     */
     public static class FotaPendingDesktops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentAppVersion")
         private String currentAppVersion;
@@ -270,7 +298,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             private Long status; 
 
             /**
-             * The current version of the image used by the cloud computer.
+             * <p>The current version of the image used by the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1-D-20220513.143129</p>
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -278,7 +309,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud computer.
+             * <p>The ID of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-bvdtu3jn97o1r****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -286,7 +320,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud computer.
+             * <p>The name of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestDesktop</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -294,7 +331,12 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>To be hidden</p>
              */
             public Builder fotaProject(String fotaProject) {
                 this.fotaProject = fotaProject;
@@ -302,7 +344,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the office network.
+             * <p>The ID of the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-815419****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -310,7 +355,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The connected sessions.
+             * <p>The connected sessions.</p>
              */
             public Builder sessions(java.util.List < Sessions> sessions) {
                 this.sessions = sessions;
@@ -318,19 +363,21 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud computer.
-             * <p>
+             * <p>The status of the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>0: The cloud computer is being created.</li>
+             * <li>1: The cloud computer is being started.</li>
+             * <li>2: The cloud computer is running.</li>
+             * <li>3: The cloud computer is being stopped.</li>
+             * <li>5: The cloud computer is stopped.</li>
+             * <li>6: The cloud computer expires.</li>
+             * <li>7: The cloud computer is deleted.</li>
+             * <li>9: Failed to create the cloud computer.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   0: The cloud computer is being created.
-             * *   1: The cloud computer is being started.
-             * *   2: The cloud computer is running.
-             * *   3: The cloud computer is being stopped.
-             * *   5: The cloud computer is stopped.
-             * *   6: The cloud computer expires.
-             * *   7: The cloud computer is deleted.
-             * *   9: Failed to create the cloud computer.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Long status) {
                 this.status = status;

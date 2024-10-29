@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudDriveUsersResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCloudDriveUsersResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateCloudDriveUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05F0A7AE-17F1-53DF-BD99-ABF936FA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

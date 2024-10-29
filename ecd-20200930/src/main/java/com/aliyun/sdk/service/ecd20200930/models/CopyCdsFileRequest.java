@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyCdsFileRequest} extends {@link RequestModel}
  *
  * <p>CopyCdsFileRequest</p>
@@ -169,26 +170,26 @@ public class CopyCdsFileRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically rename the file if a file that has the same name exists in the folder to which you want to copy the file. Default value: false.
-         * <p>
+         * <p>Specifies whether to automatically rename the file if a file that has the same name exists in the folder to which you want to copy the file. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRename(Boolean autoRename) {
             this.putQueryParameter("AutoRename", autoRename);
@@ -197,7 +198,11 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-352282****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -206,7 +211,10 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * The user ID that you want to use to access the cloud disk.
+         * <p>The user ID that you want to use to access the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -215,7 +223,11 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * The file ID. You can call the CreateCdsFile operation to query the file ID.
+         * <p>The file ID. You can call the CreateCdsFile operation to query the file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>640985a0ca2f71f489d2497682ca0bf468de****</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -224,10 +236,13 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * 目标复制文件所在的个人空间ID（即UserId，您可以在DescribeCloudDriveUsers接口返回的报文中获取。）或者目标复制文件所在的团队空间ID（即GroupId，您可以在DescribeCloudDriveGroups接口返回的报文中获取。）
-         * <p>
-         * > FileReceiverId和FileReceiverType都为空时，默认复制到文件所在的个人空间。
-         * >
+         * <p>目标复制文件所在的个人空间ID（即UserId，您可以在DescribeCloudDriveUsers接口返回的报文中获取。）或者目标复制文件所在的团队空间ID（即GroupId，您可以在DescribeCloudDriveGroups接口返回的报文中获取。）</p>
+         * <blockquote>
+         * <p>FileReceiverId和FileReceiverType都为空时，默认复制到文件所在的个人空间。</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>user02</p>
          */
         public Builder fileReceiverId(String fileReceiverId) {
             this.putQueryParameter("FileReceiverId", fileReceiverId);
@@ -236,7 +251,10 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * 文件所属的空间类型。
+         * <p>文件所属的空间类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder fileReceiverType(String fileReceiverType) {
             this.putQueryParameter("FileReceiverType", fileReceiverType);
@@ -254,7 +272,11 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder of the folder to which you want to copy the file. If you want to copy the file to the root directory, set this parameter to root.
+         * <p>The ID of the parent folder of the folder to which you want to copy the file. If you want to copy the file to the root directory, set this parameter to root.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -263,7 +285,11 @@ public class CopyCdsFileRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

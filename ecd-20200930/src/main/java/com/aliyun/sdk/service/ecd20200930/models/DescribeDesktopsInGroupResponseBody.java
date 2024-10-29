@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopsInGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDesktopsInGroupResponseBody</p>
@@ -157,7 +158,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         private Integer stoppedPrePaidDesktopsCount; 
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -165,7 +169,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subscription cloud computers that are in the Connected state.
+         * <p>The number of subscription cloud computers that are in the Connected state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder onlinePrePaidDesktopsCount(Integer onlinePrePaidDesktopsCount) {
             this.onlinePrePaidDesktopsCount = onlinePrePaidDesktopsCount;
@@ -173,7 +180,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The details about subscription cloud computers.
+         * <p>The details about subscription cloud computers.</p>
          */
         public Builder paidDesktops(java.util.List < PaidDesktops> paidDesktops) {
             this.paidDesktops = paidDesktops;
@@ -181,7 +188,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of queried subscription cloud computers.
+         * <p>The total number of queried subscription cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder paidDesktopsCount(Integer paidDesktopsCount) {
             this.paidDesktopsCount = paidDesktopsCount;
@@ -189,7 +199,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The details about pay-as-you-go cloud computers.
+         * <p>The details about pay-as-you-go cloud computers.</p>
          */
         public Builder postPaidDesktops(java.util.List < PostPaidDesktops> postPaidDesktops) {
             this.postPaidDesktops = postPaidDesktops;
@@ -197,7 +207,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of queried pay-as-you-go cloud computers.
+         * <p>The total number of queried pay-as-you-go cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder postPaidDesktopsCount(Integer postPaidDesktopsCount) {
             this.postPaidDesktopsCount = postPaidDesktopsCount;
@@ -205,7 +218,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total amount of bills for pay-as-you-go cloud computers.
+         * <p>The total amount of bills for pay-as-you-go cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder postPaidDesktopsTotalAmount(Integer postPaidDesktopsTotalAmount) {
             this.postPaidDesktopsTotalAmount = postPaidDesktopsTotalAmount;
@@ -213,7 +229,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -221,7 +240,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subscription cloud computers that are in the Running state.
+         * <p>The number of subscription cloud computers that are in the Running state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder runningPrePaidDesktopsCount(Integer runningPrePaidDesktopsCount) {
             this.runningPrePaidDesktopsCount = runningPrePaidDesktopsCount;
@@ -229,7 +251,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subscription cloud computers that are in the Stopped state.
+         * <p>The number of subscription cloud computers that are in the Stopped state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder stopedPrePaidDesktopsCount(Integer stopedPrePaidDesktopsCount) {
             this.stopedPrePaidDesktopsCount = stopedPrePaidDesktopsCount;
@@ -237,7 +262,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subscription cloud computers that are in the Stopped state.
+         * <p>The number of subscription cloud computers that are in the Stopped state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder stoppedPrePaidDesktopsCount(Integer stoppedPrePaidDesktopsCount) {
             this.stoppedPrePaidDesktopsCount = stoppedPrePaidDesktopsCount;
@@ -250,6 +278,12 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDesktopsInGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopsInGroupResponseBody</p>
+     */
     public static class PaidDesktops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
@@ -517,34 +551,33 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private Integer systemDiskSize; 
 
             /**
-             * The connection status of the cloud computer.
-             * <p>
+             * <p>The connection status of the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Unknown</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Unknown
+             * <!-- -->
+             * </li>
+             * <li><p>Connected</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Disconnected</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Connected
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Disconnected
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Connected</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -552,7 +585,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud computer.
+             * <p>The ID of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ud-7ftf5b6yu77b0****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -560,7 +596,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud computer.
+             * <p>The name of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -568,74 +607,68 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud computer.
-             * <p>
+             * <p>The status of the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Stopped</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Stopped
+             * <!-- -->
+             * </li>
+             * <li><p>Starting</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Rebuilding</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Starting
+             * <!-- -->
+             * </li>
+             * <li><p>Running</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Stopping</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Rebuilding
+             * <!-- -->
+             * </li>
+             * <li><p>Expired</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Deleted</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Running
+             * <!-- -->
+             * </li>
+             * <li><p>Pending</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Stopping
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Expired
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Deleted
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Pending
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -643,26 +676,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk.
-             * <p>
+             * <p>The type of the disk.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SYSTEM: system disk</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   SYSTEM: system disk
+             * <!-- -->
+             * </li>
+             * <li><p>DATA: data disk</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   DATA: data disk
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -670,7 +703,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the authorized user of the cloud computer.
+             * <p>The ID of the authorized user of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -678,7 +714,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
+             * <p>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -686,7 +722,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the authorized user.
+             * <p>The username of the authorized user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserName(String endUserName) {
                 this.endUserName = endUserName;
@@ -694,7 +733,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
+             * <p>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
              */
             public Builder endUserNames(java.util.List < String > endUserNames) {
                 this.endUserNames = endUserNames;
@@ -702,7 +741,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The image version.
+             * <p>The image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1.0-R-20220914.17****</p>
              */
             public Builder fotaVersion(String fotaVersion) {
                 this.fotaVersion = fotaVersion;
@@ -710,7 +752,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the GPU driver.
+             * <p>The version of the GPU driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -718,7 +763,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-hn5v2mmk0****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -726,7 +774,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The image name.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Win10_ZC</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -734,26 +785,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The flag that is used to manage the cloud computer.
-             * <p>
+             * <p>The flag that is used to manage the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Updating: The configurations of the cloud computer are being updated.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Updating: The configurations of the cloud computer are being updated.
+             * <!-- -->
+             * </li>
+             * <li><p>NoFlag: No flags are attached to the cloud computer.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   NoFlag: No flags are attached to the cloud computer.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>NoFlag</p>
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -761,7 +812,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The flags that are used to manage the cloud computers.
+             * <p>The flags that are used to manage the cloud computers.</p>
              */
             public Builder managementFlags(java.util.List < String > managementFlags) {
                 this.managementFlags = managementFlags;
@@ -769,7 +820,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the member network interface controller (NIC) of the instance.
+             * <p>The IP address of the member network interface controller (NIC) of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder memberEniIp(String memberEniIp) {
                 this.memberEniIp = memberEniIp;
@@ -777,26 +831,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The OS.
-             * <p>
+             * <p>The OS.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Linux</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Linux
+             * <!-- -->
+             * </li>
+             * <li><p>Windows</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Windows
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -804,7 +858,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the primary NIC of the instance.
+             * <p>The IP address of the primary NIC of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder primaryEniIp(String primaryEniIp) {
                 this.primaryEniIp = primaryEniIp;
@@ -812,26 +869,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol.
-             * <p>
+             * <p>The protocol.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>HDX: High-definition Experience (HDX) protocol</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   HDX: High-definition Experience (HDX) protocol
+             * <!-- -->
+             * </li>
+             * <li><p>ASP: Adaptive Streaming Protocol (ASP) protocol provided by Alibaba Cloud</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   ASP: Adaptive Streaming Protocol (ASP) protocol provided by Alibaba Cloud
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>ASP</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -839,7 +896,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud computer was reset.
+             * <p>The time when the cloud computer was reset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-03 08:48:08</p>
              */
             public Builder resetTime(String resetTime) {
                 this.resetTime = resetTime;
@@ -847,7 +907,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The system disk size. Unit: GiB.
+             * <p>The system disk size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -861,6 +924,12 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDesktopsInGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopsInGroupResponseBody</p>
+     */
     public static class PostPaidDesktops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
@@ -1164,34 +1233,33 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private Integer systemDiskSize; 
 
             /**
-             * The connection status of the cloud computer.
-             * <p>
+             * <p>The connection status of the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Unknown</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Unknown
+             * <!-- -->
+             * </li>
+             * <li><p>Connected</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Disconnected</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Connected
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Disconnected
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Connected</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -1199,7 +1267,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the cloud computer.
+             * <p>The retention period of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4153958447</p>
              */
             public Builder createDuration(String createDuration) {
                 this.createDuration = createDuration;
@@ -1207,7 +1278,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud computer was created.
+             * <p>The time when the cloud computer was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-21T06:34:57Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1215,7 +1289,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud computer.
+             * <p>The ID of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ud-2i8qxpv6t1a07****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -1223,7 +1300,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud computer.
+             * <p>The name of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -1231,74 +1311,68 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud computer.
-             * <p>
+             * <p>The status of the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Stopped</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Stopped
+             * <!-- -->
+             * </li>
+             * <li><p>Starting</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Rebuilding</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Starting
+             * <!-- -->
+             * </li>
+             * <li><p>Running</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Stopping</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Rebuilding
+             * <!-- -->
+             * </li>
+             * <li><p>Expired</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Deleted</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Running
+             * <!-- -->
+             * </li>
+             * <li><p>Pending</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Stopping
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Expired
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Deleted
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Pending
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Stopped</p>
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -1306,26 +1380,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk.
-             * <p>
+             * <p>The type of the disk.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SYSTEM: system disk</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   SYSTEM: system disk
+             * <!-- -->
+             * </li>
+             * <li><p>DATA: data disk</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   DATA: data disk
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1333,7 +1407,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the authorized user.
+             * <p>The ID of the authorized user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -1341,7 +1418,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
+             * <p>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -1349,7 +1426,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the authorized user.
+             * <p>The username of the authorized user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserName(String endUserName) {
                 this.endUserName = endUserName;
@@ -1357,7 +1437,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
+             * <p>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
              */
             public Builder endUserNames(java.util.List < String > endUserNames) {
                 this.endUserNames = endUserNames;
@@ -1365,7 +1445,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The image version.
+             * <p>The image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1.0-R-20220914.17****</p>
              */
             public Builder fotaVersion(String fotaVersion) {
                 this.fotaVersion = fotaVersion;
@@ -1373,7 +1456,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the GPU driver.
+             * <p>The version of the GPU driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -1381,7 +1467,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-hn5v2mmk0****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1389,7 +1478,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The image name.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Win10_ZC</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1397,26 +1489,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The flag that is used to manage the cloud computer.
-             * <p>
+             * <p>The flag that is used to manage the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Updating: The configurations of the cloud computer are being updated.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Updating: The configurations of the cloud computer are being updated.
+             * <!-- -->
+             * </li>
+             * <li><p>NoFlag: No flags are attached to the cloud computer.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   NoFlag: No flags are attached to the cloud computer.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>NoFlag</p>
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -1424,7 +1516,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The flags that are used to manage the cloud computers.
+             * <p>The flags that are used to manage the cloud computers.</p>
              */
             public Builder managementFlags(java.util.List < String > managementFlags) {
                 this.managementFlags = managementFlags;
@@ -1432,7 +1524,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the member NIC of the instance.
+             * <p>The IP address of the member NIC of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder memberEniIp(String memberEniIp) {
                 this.memberEniIp = memberEniIp;
@@ -1440,26 +1535,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The OS.
-             * <p>
+             * <p>The OS.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Linux</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Linux
+             * <!-- -->
+             * </li>
+             * <li><p>Windows</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Windows
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1467,7 +1562,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the primary NIC of the instance.
+             * <p>The IP address of the primary NIC of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder primaryEniIp(String primaryEniIp) {
                 this.primaryEniIp = primaryEniIp;
@@ -1475,26 +1573,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol.
-             * <p>
+             * <p>The protocol.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>HDX: HDX protocol</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   HDX: HDX protocol
+             * <!-- -->
+             * </li>
+             * <li><p>ASP: ASP protocol provided by Alibaba Cloud</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   ASP: ASP protocol provided by Alibaba Cloud
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>HDX</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1502,7 +1600,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud computer was released.
+             * <p>The time when the cloud computer was released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-21T16:34:57Z</p>
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -1510,7 +1611,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud computer was reset.
+             * <p>The time when the cloud computer was reset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-03 08:48:08</p>
              */
             public Builder resetTime(String resetTime) {
                 this.resetTime = resetTime;
@@ -1518,7 +1622,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The system disk size. Unit: GiB.
+             * <p>The system disk size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

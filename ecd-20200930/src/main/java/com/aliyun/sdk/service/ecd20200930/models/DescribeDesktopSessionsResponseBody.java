@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopSessionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDesktopSessionsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3EC4A6DB-EC8D-55B0-9038-543DE671****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the session.
+         * <p>Details of the session.</p>
          */
         public Builder sessions(java.util.List < Sessions> sessions) {
             this.sessions = sessions;
@@ -77,7 +81,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDesktopSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopSessionsResponseBody</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
@@ -333,7 +346,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             private Long totalConnectionTime; 
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.21.XX.XX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -341,7 +357,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The client OS.
+             * <p>The client OS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>windows_&quot;Windows10Enterprise&quot;10.0(Build22000)</p>
              */
             public Builder clientOS(String clientOS) {
                 this.clientOS = clientOS;
@@ -349,7 +368,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The client version.
+             * <p>The client version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.0-R-20221030.08****</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -357,7 +379,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud computer.
+             * <p>The ID of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-g6t1ukbaea****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -365,7 +390,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud computer.
+             * <p>The name of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDesktop</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -373,7 +401,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the remote assistance. Unit: seconds.
+             * <p>The duration of the remote assistance. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder endUserApplyCoordinateTime(Long endUserApplyCoordinateTime) {
                 this.endUserApplyCoordinateTime = endUserApplyCoordinateTime;
@@ -381,7 +412,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the end user.
+             * <p>The ID of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -389,7 +423,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the last connection to the cloud computer. Unit: seconds.
+             * <p>The duration of the last connection to the cloud computer. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder latestConnectionTime(Long latestConnectionTime) {
                 this.latestConnectionTime = latestConnectionTime;
@@ -397,7 +434,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the office network.
+             * <p>The ID of the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-8904****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -405,7 +445,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the office network.
+             * <p>The name of the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DemoOfficeSite</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -421,13 +464,15 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The OS.
-             * <p>
+             * <p>The OS.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Linux</li>
+             * <li>Windows</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Linux
-             * *   Windows
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -435,13 +480,15 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type.
-             * <p>
+             * <p>The protocol type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>HDX</li>
+             * <li>ASP</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   HDX
-             * *   ASP
+             * <strong>example:</strong>
+             * <p>ASP</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -449,7 +496,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the session.
+             * <p>The end time of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-28T02:31:43Z</p>
              */
             public Builder sessionEndTime(String sessionEndTime) {
                 this.sessionEndTime = sessionEndTime;
@@ -457,7 +507,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The idle duration of the session. Unit: seconds.
+             * <p>The idle duration of the session. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder sessionIdleTime(Long sessionIdleTime) {
                 this.sessionIdleTime = sessionIdleTime;
@@ -465,7 +518,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the session.
+             * <p>The start time of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-28T02:31:43Z</p>
              */
             public Builder sessionStartTime(String sessionStartTime) {
                 this.sessionStartTime = sessionStartTime;
@@ -473,13 +529,15 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the session.
-             * <p>
+             * <p>The state of the session.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Connected</li>
+             * <li>Disconnected</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Connected
-             * *   Disconnected
+             * <strong>example:</strong>
+             * <p>Connected</p>
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -495,7 +553,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The total connection duration. Unit: seconds.
+             * <p>The total connection duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
              */
             public Builder totalConnectionTime(Long totalConnectionTime) {
                 this.totalConnectionTime = totalConnectionTime;

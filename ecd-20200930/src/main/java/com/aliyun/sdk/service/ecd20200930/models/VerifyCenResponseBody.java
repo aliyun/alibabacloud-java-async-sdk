@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyCenResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyCenResponseBody</p>
@@ -73,7 +74,7 @@ public class VerifyCenResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when the `Status` value is `Conflict`.
+         * <p>The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when the <code>Status</code> value is <code>Conflict</code>.</p>
          */
         public Builder cidrBlocks(java.util.List < String > cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
@@ -81,7 +82,10 @@ public class VerifyCenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AF9D857-AE96-53D6-B317-5DD665EC4EC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +93,7 @@ public class VerifyCenResponseBody extends TeaModel {
         }
 
         /**
-         * The routes provided by the CEN instance.
+         * <p>The routes provided by the CEN instance.</p>
          */
         public Builder routeEntries(java.util.List < RouteEntries> routeEntries) {
             this.routeEntries = routeEntries;
@@ -97,17 +101,19 @@ public class VerifyCenResponseBody extends TeaModel {
         }
 
         /**
-         * The check result of CIDR block conflict.
-         * <p>
+         * <p>The check result of CIDR block conflict.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>InvalidCen.CenUidInvalid: The Alibaba Cloud account is invalid or the Alibaba Cloud account does not have the permission to access Elastic Desktop Service.</li>
+         * <li>VerifyCode.InvalidTokenCode: The verification code is invalid.</li>
+         * <li>VerifyCode.ReachTokenRetryTime: The maximum number of times for entering a verification code reaches the limit.</li>
+         * <li>Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.</li>
+         * <li>Access: The verification is passed. If the verification result for all routes is Access, Access is returned for this parameter.</li>
+         * <li>InvalidCen.ParameterCenInstanceId: The Alibaba Cloud account does not own the CEN instance.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   InvalidCen.CenUidInvalid: The Alibaba Cloud account is invalid or the Alibaba Cloud account does not have the permission to access Elastic Desktop Service.
-         * *   VerifyCode.InvalidTokenCode: The verification code is invalid.
-         * *   VerifyCode.ReachTokenRetryTime: The maximum number of times for entering a verification code reaches the limit.
-         * *   Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.
-         * *   Access: The verification is passed. If the verification result for all routes is Access, Access is returned for this parameter.
-         * *   InvalidCen.ParameterCenInstanceId: The Alibaba Cloud account does not own the CEN instance.
+         * <strong>example:</strong>
+         * <p>Access</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -120,6 +126,12 @@ public class VerifyCenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyCenResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyCenResponseBody</p>
+     */
     public static class RouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
@@ -183,7 +195,10 @@ public class VerifyCenResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The CIDR block of the route.
+             * <p>The CIDR block of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.111.3****</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -191,7 +206,10 @@ public class VerifyCenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance corresponding to the route.
+             * <p>The ID of the instance corresponding to the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf62bu0xs5j8md54p****</p>
              */
             public Builder nextHopInstanceId(String nextHopInstanceId) {
                 this.nextHopInstanceId = nextHopInstanceId;
@@ -199,7 +217,10 @@ public class VerifyCenResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the route.
+             * <p>The region ID of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -207,13 +228,15 @@ public class VerifyCenResponseBody extends TeaModel {
             }
 
             /**
-             * The verification result of the route.
-             * <p>
+             * <p>The verification result of the route.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Conflict: A CIDR block conflict exists.</li>
+             * <li>Access: The verification is passed.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Conflict: A CIDR block conflict exists.
-             * *   Access: The verification is passed.
+             * <strong>example:</strong>
+             * <p>Access</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConnectionTicketRequest} extends {@link RequestModel}
  *
  * <p>GetConnectionTicketRequest</p>
@@ -180,11 +181,28 @@ public class GetConnectionTicketRequest extends Request {
         } 
 
         /**
-         * The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:
-         * <p>
+         * <p>The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:</p>
+         * <ul>
+         * <li>appPath: the path of the application startup file. Example: <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double slashes (\) as the delimiter. Type of the parameter value: string.</li>
+         * <li>appParameter: the startup arguments of the application. Example: <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate multiple arguments with spaces. Type of the parameter value: string.</li>
+         * </ul>
          * 
-         * *   appPath: the path of the application startup file. Example: `"C:\\Program Files (x86)\\000\\000.exe"`. Use double slashes (\\\) as the delimiter. Type of the parameter value: string.
-         * *   appParameter: the startup arguments of the application. Example: `"meetingid 000 meetingname aaa"`. Separate multiple arguments with spaces. Type of the parameter value: string.
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;startApplication&quot;: {
+         *             &quot;startApplicationList&quot;: [
+         *                   {
+         *                         &quot;sessionName&quot;: &quot;&quot;,
+         *                         &quot;appList&quot;: [
+         *                               {
+         *                                     &quot;appPath&quot;: &quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot;,
+         *                                     &quot;appParameter&quot;: &quot;<a href="http://www.example.com">www.example.com</a> <a href="http://www.example1.com">www.example1.com</a>&quot;
+         *                               }
+         *                         ]
+         *                   }
+         *             ]
+         *       }
+         * }</p>
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -193,7 +211,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer for which you want to generate a connection credential. This parameter is required.
+         * <p>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -202,7 +223,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.
+         * <p>The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -220,7 +244,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The password of the current end user of the cloud computer.
+         * <p>The password of the current end user of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ab123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -229,7 +256,11 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -256,7 +287,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer connection task.
+         * <p>The ID of the cloud computer connection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2afbad19-778a-4fc5-9674-1f19c63862da</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -265,7 +299,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click **About** on the client logon page to view the identifier of the client.
+         * <p>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click <strong>About</strong> on the client logon page to view the identifier of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28c80e90-f71e-4c23-93d6-1225329cf949</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

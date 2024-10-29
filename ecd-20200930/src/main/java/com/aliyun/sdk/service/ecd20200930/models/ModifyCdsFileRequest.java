@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCdsFileRequest} extends {@link RequestModel}
  *
  * <p>ModifyCdsFileRequest</p>
@@ -141,7 +142,11 @@ public class ModifyCdsFileRequest extends Request {
         } 
 
         /**
-         * The cloud disk ID.
+         * <p>The cloud disk ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-64326*****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -150,46 +155,39 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * The processing mode of files that have the same name.
-         * <p>
+         * <p>The processing mode of files that have the same name.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>refuse</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   refuse
+         * <p>refuses to create a file that has the same name as the file in the cloud.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>auto_rename</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>automatically renames a file if the file has the same name as another file. By default, the current point in time is appended. Example: xxx20060102_150405.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>ignore</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     refuses to create a file that has the same name as the file in the cloud.
+         * <p>allows files with the same name.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   auto_rename
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     automatically renames a file if the file has the same name as another file. By default, the current point in time is appended. Example: xxx20060102\_150405.
-         * 
-         *     <!-- -->
-         * 
-         * *   ignore
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     allows files with the same name.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         public Builder conflictPolicy(String conflictPolicy) {
             this.putQueryParameter("ConflictPolicy", conflictPolicy);
@@ -198,7 +196,10 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * The ID of the end user who uses the cloud disk.
+         * <p>The ID of the end user who uses the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -207,7 +208,11 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6333e553a133ce21e6f747cf948bb9ef95d7****</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -216,7 +221,11 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * The file name.
+         * <p>The file name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.txt</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -225,7 +234,10 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-i1ruuudp92qpj****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -234,7 +246,11 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

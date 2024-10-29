@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOfficeSiteMfaEnabledRequest} extends {@link RequestModel}
  *
  * <p>ModifyOfficeSiteMfaEnabledRequest</p>
@@ -84,26 +85,27 @@ public class ModifyOfficeSiteMfaEnabledRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable MFA.
-         * <p>
+         * <p>Specifies whether to enable MFA.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
@@ -112,7 +114,11 @@ public class ModifyOfficeSiteMfaEnabledRequest extends Request {
         }
 
         /**
-         * The office network ID.
+         * <p>The office network ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -121,7 +127,11 @@ public class ModifyOfficeSiteMfaEnabledRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

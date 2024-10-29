@@ -40,8 +40,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
-      *
+     * <b>description</b> :
+     * <p>If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.</p>
+     * 
+     * @param request the request parameters of ActivateOfficeSite  ActivateOfficeSiteRequest
+     * @return ActivateOfficeSiteResponse
      */
     @Override
     public CompletableFuture<ActivateOfficeSiteResponse> activateOfficeSite(ActivateOfficeSiteRequest request) {
@@ -57,6 +60,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddDesktopOversoldUserGroup  AddDesktopOversoldUserGroupRequest
+     * @return AddDesktopOversoldUserGroupResponse
+     */
     @Override
     public CompletableFuture<AddDesktopOversoldUserGroupResponse> addDesktopOversoldUserGroup(AddDesktopOversoldUserGroupRequest request) {
         try {
@@ -72,8 +79,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.
-      *
+     * <b>description</b> :
+     * <p>Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.</p>
+     * 
+     * @param request the request parameters of AddDevices  AddDevicesRequest
+     * @return AddDevicesResponse
      */
     @Override
     public CompletableFuture<AddDevicesResponse> addDevices(AddDevicesRequest request) {
@@ -90,8 +100,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</p>
+     * 
+     * @param request the request parameters of AddFilePermission  AddFilePermissionRequest
+     * @return AddFilePermissionResponse
      */
     @Override
     public CompletableFuture<AddFilePermissionResponse> addFilePermission(AddFilePermissionRequest request) {
@@ -107,6 +120,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUserToDesktopGroup  AddUserToDesktopGroupRequest
+     * @return AddUserToDesktopGroupResponse
+     */
     @Override
     public CompletableFuture<AddUserToDesktopGroupResponse> addUserToDesktopGroup(AddUserToDesktopGroupRequest request) {
         try {
@@ -121,6 +138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUserToDesktopOversoldUserGroup  AddUserToDesktopOversoldUserGroupRequest
+     * @return AddUserToDesktopOversoldUserGroupResponse
+     */
     @Override
     public CompletableFuture<AddUserToDesktopOversoldUserGroupResponse> addUserToDesktopOversoldUserGroup(AddUserToDesktopOversoldUserGroupRequest request) {
         try {
@@ -136,9 +157,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-      * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.
-      *
+     * <b>description</b> :
+     * <p>You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups &gt; Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More &gt; Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
+     * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.</p>
+     * 
+     * @param request the request parameters of ApplyAutoSnapshotPolicy  ApplyAutoSnapshotPolicyRequest
+     * @return ApplyAutoSnapshotPolicyResponse
      */
     @Override
     public CompletableFuture<ApplyAutoSnapshotPolicyResponse> applyAutoSnapshotPolicy(ApplyAutoSnapshotPolicyRequest request) {
@@ -154,6 +178,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyCoordinatePrivilege  ApplyCoordinatePrivilegeRequest
+     * @return ApplyCoordinatePrivilegeResponse
+     */
     @Override
     public CompletableFuture<ApplyCoordinatePrivilegeResponse> applyCoordinatePrivilege(ApplyCoordinatePrivilegeRequest request) {
         try {
@@ -168,6 +196,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyCoordinationForMonitoring  ApplyCoordinationForMonitoringRequest
+     * @return ApplyCoordinationForMonitoringResponse
+     */
     @Override
     public CompletableFuture<ApplyCoordinationForMonitoringResponse> applyCoordinationForMonitoring(ApplyCoordinationForMonitoringRequest request) {
         try {
@@ -183,8 +215,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud computers for which you want to allow image updates must be in the Running state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computers for which you want to allow image updates must be in the Running state.</p>
+     * 
+     * @param request the request parameters of ApproveFotaUpdate  ApproveFotaUpdateRequest
+     * @return ApproveFotaUpdateResponse
      */
     @Override
     public CompletableFuture<ApproveFotaUpdateResponse> approveFotaUpdate(ApproveFotaUpdateRequest request) {
@@ -200,6 +235,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociateNetworkPackage  AssociateNetworkPackageRequest
+     * @return AssociateNetworkPackageResponse
+     */
     @Override
     public CompletableFuture<AssociateNetworkPackageResponse> associateNetworkPackage(AssociateNetworkPackageRequest request) {
         try {
@@ -215,11 +254,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Prerequisites
-      * *   A CEN instance is created.
-      * *   The office network is an advanced office network, and the account system type is convenient account.
-      * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
-      *
+     * <b>description</b> :
+     * <p>Prerequisites</p>
+     * <ul>
+     * <li>A CEN instance is created.</li>
+     * <li>The office network is an advanced office network, and the account system type is convenient account.<blockquote>
+     * <p> The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of AttachCen  AttachCenRequest
+     * @return AttachCenResponse
      */
     @Override
     public CompletableFuture<AttachCenResponse> attachCen(AttachCenRequest request) {
@@ -235,6 +281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachEndUser  AttachEndUserRequest
+     * @return AttachEndUserResponse
+     */
     @Override
     public CompletableFuture<AttachEndUserResponse> attachEndUser(AttachEndUserRequest request) {
         try {
@@ -249,6 +299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelAutoSnapshotPolicy  CancelAutoSnapshotPolicyRequest
+     * @return CancelAutoSnapshotPolicyResponse
+     */
     @Override
     public CompletableFuture<CancelAutoSnapshotPolicyResponse> cancelAutoSnapshotPolicy(CancelAutoSnapshotPolicyRequest request) {
         try {
@@ -263,6 +317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelCdsFileShareLink  CancelCdsFileShareLinkRequest
+     * @return CancelCdsFileShareLinkResponse
+     */
     @Override
     public CompletableFuture<CancelCdsFileShareLinkResponse> cancelCdsFileShareLink(CancelCdsFileShareLinkRequest request) {
         try {
@@ -277,6 +335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelCoordinationForMonitoring  CancelCoordinationForMonitoringRequest
+     * @return CancelCoordinationForMonitoringResponse
+     */
     @Override
     public CompletableFuture<CancelCoordinationForMonitoringResponse> cancelCoordinationForMonitoring(CancelCoordinationForMonitoringRequest request) {
         try {
@@ -291,6 +353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelCopyImage  CancelCopyImageRequest
+     * @return CancelCopyImageResponse
+     */
     @Override
     public CompletableFuture<CancelCopyImageResponse> cancelCopyImage(CancelCopyImageRequest request) {
         try {
@@ -305,6 +371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ClonePolicyGroup  ClonePolicyGroupRequest
+     * @return ClonePolicyGroupResponse
+     */
     @Override
     public CompletableFuture<ClonePolicyGroupResponse> clonePolicyGroup(ClonePolicyGroupRequest request) {
         try {
@@ -319,6 +389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CompleteCdsFile  CompleteCdsFileRequest
+     * @return CompleteCdsFileResponse
+     */
     @Override
     public CompletableFuture<CompleteCdsFileResponse> completeCdsFile(CompleteCdsFileRequest request) {
         try {
@@ -333,6 +407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigADConnectorTrust  ConfigADConnectorTrustRequest
+     * @return ConfigADConnectorTrustResponse
+     */
     @Override
     public CompletableFuture<ConfigADConnectorTrustResponse> configADConnectorTrust(ConfigADConnectorTrustRequest request) {
         try {
@@ -347,6 +425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigADConnectorUser  ConfigADConnectorUserRequest
+     * @return ConfigADConnectorUserResponse
+     */
     @Override
     public CompletableFuture<ConfigADConnectorUserResponse> configADConnectorUser(ConfigADConnectorUserRequest request) {
         try {
@@ -361,6 +443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopyCdsFile  CopyCdsFileRequest
+     * @return CopyCdsFileResponse
+     */
     @Override
     public CompletableFuture<CopyCdsFileResponse> copyCdsFile(CopyCdsFileRequest request) {
         try {
@@ -375,6 +461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopyImage  CopyImageRequest
+     * @return CopyImageResponse
+     */
     @Override
     public CompletableFuture<CopyImageResponse> copyImage(CopyImageRequest request) {
         try {
@@ -390,8 +480,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](~~188395~~).
-      *
+     * <b>description</b> :
+     * <p>An AD directory is used to connect to an enterprise\&quot;s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</p>
+     * 
+     * @param request the request parameters of CreateADConnectorDirectory  CreateADConnectorDirectoryRequest
+     * @return CreateADConnectorDirectoryResponse
      */
     @Override
     public CompletableFuture<CreateADConnectorDirectoryResponse> createADConnectorDirectory(CreateADConnectorDirectoryRequest request) {
@@ -408,14 +501,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](~~188395~~).
-      * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
-      * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
-      * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship with the AD office network.
-      * 3.  Call the [ListUserAdOrganizationUnits](~~311259~~) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and administrator for the AD office network.
-      *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
-      * For more information, see [Create and manage enterprise AD office networks](~~214469~~).
-      *
+     * <b>description</b> :
+     * <p>When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.
+     * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:</p>
+     * <ol>
+     * <li>Configure a conditional forwarder in a Domain Name System (DNS) server.</li>
+     * <li>Configure a trust relationship in an AD domain controller and call the <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> operation to configure the trust relationship with the AD office network.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> operation to query a list of organizational units (OUs) of the AD domain, and call the <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> operation to specify an OU and administrator for the AD office network.<blockquote>
+     * <p> When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage enterprise AD office networks</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ol>
+     * 
+     * @param request the request parameters of CreateADConnectorOfficeSite  CreateADConnectorOfficeSiteRequest
+     * @return CreateADConnectorOfficeSiteResponse
      */
     @Override
     public CompletableFuture<CreateADConnectorOfficeSiteResponse> createADConnectorOfficeSite(CreateADConnectorOfficeSiteRequest request) {
@@ -431,6 +531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAndBindNasFileSystem  CreateAndBindNasFileSystemRequest
+     * @return CreateAndBindNasFileSystemResponse
+     */
     @Override
     public CompletableFuture<CreateAndBindNasFileSystemResponse> createAndBindNasFileSystem(CreateAndBindNasFileSystemRequest request) {
         try {
@@ -446,8 +550,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.
-      *
+     * <b>description</b> :
+     * <p>You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.</p>
+     * 
+     * @param request the request parameters of CreateAutoSnapshotPolicy  CreateAutoSnapshotPolicyRequest
+     * @return CreateAutoSnapshotPolicyResponse
      */
     @Override
     public CompletableFuture<CreateAutoSnapshotPolicyResponse> createAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest request) {
@@ -464,8 +571,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
-      *
+     * <b>description</b> :
+     * <p>Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.</p>
+     * 
+     * @param request the request parameters of CreateBundle  CreateBundleRequest
+     * @return CreateBundleResponse
      */
     @Override
     public CompletableFuture<CreateBundleResponse> createBundle(CreateBundleRequest request) {
@@ -482,8 +592,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
-      *
+     * <b>description</b> :
+     * <p>After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.</p>
+     * 
+     * @param request the request parameters of CreateCdsFile  CreateCdsFileRequest
+     * @return CreateCdsFileResponse
      */
     @Override
     public CompletableFuture<CreateCdsFileResponse> createCdsFile(CreateCdsFileRequest request) {
@@ -499,6 +612,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCdsFileShareLink  CreateCdsFileShareLinkRequest
+     * @return CreateCdsFileShareLinkResponse
+     */
     @Override
     public CompletableFuture<CreateCdsFileShareLinkResponse> createCdsFileShareLink(CreateCdsFileShareLinkRequest request) {
         try {
@@ -513,6 +630,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCloudDriveService  CreateCloudDriveServiceRequest
+     * @return CreateCloudDriveServiceResponse
+     */
     @Override
     public CompletableFuture<CreateCloudDriveServiceResponse> createCloudDriveService(CreateCloudDriveServiceRequest request) {
         try {
@@ -527,6 +648,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCloudDriveUsers  CreateCloudDriveUsersRequest
+     * @return CreateCloudDriveUsersResponse
+     */
     @Override
     public CompletableFuture<CreateCloudDriveUsersResponse> createCloudDriveUsers(CreateCloudDriveUsersRequest request) {
         try {
@@ -542,10 +667,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation to create a desktop group, make sure that the following operations are complete:
-      * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~) of desktop groups.
-      * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation to create a desktop group, make sure that the following operations are complete:</p>
+     * <ul>
+     * <li>You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a> of desktop groups.</li>
+     * <li>Resources, such as workspaces, users, desktop templates, and policies, are created.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateDesktopGroup  CreateDesktopGroupRequest
+     * @return CreateDesktopGroupResponse
      */
     @Override
     public CompletableFuture<CreateDesktopGroupResponse> createDesktopGroup(CreateDesktopGroupRequest request) {
@@ -561,6 +691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDesktopOversoldGroup  CreateDesktopOversoldGroupRequest
+     * @return CreateDesktopOversoldGroupResponse
+     */
     @Override
     public CompletableFuture<CreateDesktopOversoldGroupResponse> createDesktopOversoldGroup(CreateDesktopOversoldGroupRequest request) {
         try {
@@ -576,14 +710,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you create cloud computers, complete the following preparations:
-      * *   An office network (formerly called workspace) and users are created. For more information, see:
-      *     *   Convenience office network: [CreateSimpleOfficeSite](~~215416~~) and [CreateUsers](~~437832~~).
-      *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](~~215417~~) and [Create an AD user](~~188619~~).
-      * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](~~188883~~) operation to create a template.
-      * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](~~188889~~) operation to create a policy.
-      * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
-      *
+     * <b>description</b> :
+     * <p>Before you create cloud computers, complete the following preparations:</p>
+     * <ul>
+     * <li>An office network (formerly called workspace) and users are created. For more information, see:<ul>
+     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>Active Directory (AD) office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create an AD user</a>.</li>
+     * </ul>
+     * </li>
+     * <li>Make sure a cloud computer template exists. If no cloud computer template exists, call the <a href="https://help.aliyun.com/document_detail/188883.html">CreateBundle</a> operation to create a template.</li>
+     * <li>Make sure a policy exists. If no policy exists, call the <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> operation to create a policy.
+     * If you want the cloud computers to automatically execute a custom command script, you can use the <code>UserCommands</code> field to configure a custom command.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateDesktops  CreateDesktopsRequest
+     * @return CreateDesktopsResponse
      */
     @Override
     public CompletableFuture<CreateDesktopsResponse> createDesktops(CreateDesktopsRequest request) {
@@ -599,6 +740,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDiskEncryptionService  CreateDiskEncryptionServiceRequest
+     * @return CreateDiskEncryptionServiceResponse
+     */
     @Override
     public CompletableFuture<CreateDiskEncryptionServiceResponse> createDiskEncryptionService(CreateDiskEncryptionServiceRequest request) {
         try {
@@ -613,6 +758,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateImage  CreateImageRequest
+     * @return CreateImageResponse
+     */
     @Override
     public CompletableFuture<CreateImageResponse> createImage(CreateImageRequest request) {
         try {
@@ -627,6 +776,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNASFileSystem  CreateNASFileSystemRequest
+     * @return CreateNASFileSystemResponse
+     */
     @Override
     public CompletableFuture<CreateNASFileSystemResponse> createNASFileSystem(CreateNASFileSystemRequest request) {
         try {
@@ -641,6 +794,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNetworkPackage  CreateNetworkPackageRequest
+     * @return CreateNetworkPackageResponse
+     */
     @Override
     public CompletableFuture<CreateNetworkPackageResponse> createNetworkPackage(CreateNetworkPackageRequest request) {
         try {
@@ -656,8 +813,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see [Policy overview](~~189345~~).
-      *
+     * <b>description</b> :
+     * <p>A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
+     * 
+     * @param request the request parameters of CreatePolicyGroup  CreatePolicyGroupRequest
+     * @return CreatePolicyGroupResponse
      */
     @Override
     public CompletableFuture<CreatePolicyGroupResponse> createPolicyGroup(CreatePolicyGroupRequest request) {
@@ -674,10 +834,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you create a RAM directory, complete the following preparations:
-      * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.
-      * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the [DescribeZones](~~196648~~) operation to obtain the most recent zone list for a region supported by Elastic Desktop Service
-      *
+     * <b>description</b> :
+     * <p>Before you create a RAM directory, complete the following preparations:</p>
+     * <ul>
+     * <li>Call the <code>CreateVpc</code> operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.</li>
+     * <li>Call the <code>CreateVSwitch</code> operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> operation to obtain the most recent zone list for a region supported by Elastic Desktop Service</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRAMDirectory  CreateRAMDirectoryRequest
+     * @return CreateRAMDirectoryResponse
      */
     @Override
     public CompletableFuture<CreateRAMDirectoryResponse> createRAMDirectory(CreateRAMDirectoryRequest request) {
@@ -693,6 +858,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSimpleOfficeSite  CreateSimpleOfficeSiteRequest
+     * @return CreateSimpleOfficeSiteResponse
+     */
     @Override
     public CompletableFuture<CreateSimpleOfficeSiteResponse> createSimpleOfficeSite(CreateSimpleOfficeSiteRequest request) {
         try {
@@ -708,8 +877,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud computer must be in the **Running** or **Stopped** state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computer must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</p>
+     * 
+     * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
+     * @return CreateSnapshotResponse
      */
     @Override
     public CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request) {
@@ -725,6 +897,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAutoSnapshotPolicy  DeleteAutoSnapshotPolicyRequest
+     * @return DeleteAutoSnapshotPolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteAutoSnapshotPolicyResponse> deleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest request) {
         try {
@@ -739,6 +915,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBundles  DeleteBundlesRequest
+     * @return DeleteBundlesResponse
+     */
     @Override
     public CompletableFuture<DeleteBundlesResponse> deleteBundles(DeleteBundlesRequest request) {
         try {
@@ -753,6 +933,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCdsFile  DeleteCdsFileRequest
+     * @return DeleteCdsFileResponse
+     */
     @Override
     public CompletableFuture<DeleteCdsFileResponse> deleteCdsFile(DeleteCdsFileRequest request) {
         try {
@@ -767,6 +951,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCloudDriveGroups  DeleteCloudDriveGroupsRequest
+     * @return DeleteCloudDriveGroupsResponse
+     */
     @Override
     public CompletableFuture<DeleteCloudDriveGroupsResponse> deleteCloudDriveGroups(DeleteCloudDriveGroupsRequest request) {
         try {
@@ -781,6 +969,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCloudDriveUsers  DeleteCloudDriveUsersRequest
+     * @return DeleteCloudDriveUsersResponse
+     */
     @Override
     public CompletableFuture<DeleteCloudDriveUsersResponse> deleteCloudDriveUsers(DeleteCloudDriveUsersRequest request) {
         try {
@@ -796,10 +988,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
-      * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
-      * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
-      *
+     * <b>description</b> :
+     * <p>  Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.</p>
+     * <ul>
+     * <li>You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.</li>
+     * <li>If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteDesktopGroup  DeleteDesktopGroupRequest
+     * @return DeleteDesktopGroupResponse
      */
     @Override
     public CompletableFuture<DeleteDesktopGroupResponse> deleteDesktopGroup(DeleteDesktopGroupRequest request) {
@@ -815,6 +1012,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDesktops  DeleteDesktopsRequest
+     * @return DeleteDesktopsResponse
+     */
     @Override
     public CompletableFuture<DeleteDesktopsResponse> deleteDesktops(DeleteDesktopsRequest request) {
         try {
@@ -830,8 +1031,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the operation to manage client devices.
-      *
+     * <b>description</b> :
+     * <p>You can call the operation to manage client devices.</p>
+     * 
+     * @param request the request parameters of DeleteDevices  DeleteDevicesRequest
+     * @return DeleteDevicesResponse
      */
     @Override
     public CompletableFuture<DeleteDevicesResponse> deleteDevices(DeleteDevicesRequest request) {
@@ -848,8 +1052,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot delete a directory that has a cloud computer or is used by a cloud computer.
-      *
+     * <b>description</b> :
+     * <p>You cannot delete a directory that has a cloud computer or is used by a cloud computer.</p>
+     * 
+     * @param request the request parameters of DeleteDirectories  DeleteDirectoriesRequest
+     * @return DeleteDirectoriesResponse
      */
     @Override
     public CompletableFuture<DeleteDirectoriesResponse> deleteDirectories(DeleteDirectoriesRequest request) {
@@ -865,6 +1072,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEduRoom  DeleteEduRoomRequest
+     * @return DeleteEduRoomResponse
+     */
     @Override
     public CompletableFuture<DeleteEduRoomResponse> deleteEduRoom(DeleteEduRoomRequest request) {
         try {
@@ -880,9 +1091,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Images include system images and custom images. System images cannot be deleted.
-      * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](~~436972~~) operation to delete the cloud computer template before you delete the image.
-      *
+     * <b>description</b> :
+     * <p>  Images include system images and custom images. System images cannot be deleted.</p>
+     * <ul>
+     * <li>If an image that you want to delete is referenced by a cloud computer template, call the <a href="https://help.aliyun.com/document_detail/436972.html">DeleteBundles</a> operation to delete the cloud computer template before you delete the image.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteImages  DeleteImagesRequest
+     * @return DeleteImagesResponse
      */
     @Override
     public CompletableFuture<DeleteImagesResponse> deleteImages(DeleteImagesRequest request) {
@@ -899,9 +1115,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
-      * ><warning>If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.></warning>
-      *
+     * <b>description</b> :
+     * <p>Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
+     * <blockquote>
+     * <p>Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteNASFileSystems  DeleteNASFileSystemsRequest
+     * @return DeleteNASFileSystemsResponse
      */
     @Override
     public CompletableFuture<DeleteNASFileSystemsResponse> deleteNASFileSystems(DeleteNASFileSystemsRequest request) {
@@ -917,6 +1138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNetworkPackages  DeleteNetworkPackagesRequest
+     * @return DeleteNetworkPackagesResponse
+     */
     @Override
     public CompletableFuture<DeleteNetworkPackagesResponse> deleteNetworkPackages(DeleteNetworkPackagesRequest request) {
         try {
@@ -932,11 +1157,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you delete an office network, make sure that the following operations are complete:
-      * *   All cloud computers in the office network are released.
-      * *   The data that you want to retain is backed up.
-      * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
-      *
+     * <b>description</b> :
+     * <p>Before you delete an office network, make sure that the following operations are complete:</p>
+     * <ul>
+     * <li>All cloud computers in the office network are released.</li>
+     * <li>The data that you want to retain is backed up.<blockquote>
+     * <p> Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteOfficeSites  DeleteOfficeSitesRequest
+     * @return DeleteOfficeSitesResponse
      */
     @Override
     public CompletableFuture<DeleteOfficeSitesResponse> deleteOfficeSites(DeleteOfficeSitesRequest request) {
@@ -952,6 +1184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePolicyGroups  DeletePolicyGroupsRequest
+     * @return DeletePolicyGroupsResponse
+     */
     @Override
     public CompletableFuture<DeletePolicyGroupsResponse> deletePolicyGroups(DeletePolicyGroupsRequest request) {
         try {
@@ -967,8 +1203,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the IDs of the snapshots that you specify do not exist, requests are ignored.
-      *
+     * <b>description</b> :
+     * <p>If the IDs of the snapshots that you specify do not exist, requests are ignored.</p>
+     * 
+     * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
+     * @return DeleteSnapshotResponse
      */
     @Override
     public CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request) {
@@ -985,8 +1224,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
-      *
+     * <b>description</b> :
+     * <p>If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.</p>
+     * 
+     * @param request the request parameters of DeleteVirtualMFADevice  DeleteVirtualMFADeviceRequest
+     * @return DeleteVirtualMFADeviceResponse
      */
     @Override
     public CompletableFuture<DeleteVirtualMFADeviceResponse> deleteVirtualMFADevice(DeleteVirtualMFADeviceRequest request) {
@@ -1002,6 +1244,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAclEntries  DescribeAclEntriesRequest
+     * @return DescribeAclEntriesResponse
+     */
     @Override
     public CompletableFuture<DescribeAclEntriesResponse> describeAclEntries(DescribeAclEntriesRequest request) {
         try {
@@ -1017,8 +1263,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
-      *
+     * <b>description</b> :
+     * <p>You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment &gt; Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.</p>
+     * 
+     * @param request the request parameters of DescribeAutoSnapshotPolicy  DescribeAutoSnapshotPolicyRequest
+     * @return DescribeAutoSnapshotPolicyResponse
      */
     @Override
     public CompletableFuture<DescribeAutoSnapshotPolicyResponse> describeAutoSnapshotPolicy(DescribeAutoSnapshotPolicyRequest request) {
@@ -1034,6 +1283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBundles  DescribeBundlesRequest
+     * @return DescribeBundlesResponse
+     */
     @Override
     public CompletableFuture<DescribeBundlesResponse> describeBundles(DescribeBundlesRequest request) {
         try {
@@ -1048,6 +1301,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCdsFileShareLinks  DescribeCdsFileShareLinksRequest
+     * @return DescribeCdsFileShareLinksResponse
+     */
     @Override
     public CompletableFuture<DescribeCdsFileShareLinksResponse> describeCdsFileShareLinks(DescribeCdsFileShareLinksRequest request) {
         try {
@@ -1062,6 +1319,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCens  DescribeCensRequest
+     * @return DescribeCensResponse
+     */
     @Override
     public CompletableFuture<DescribeCensResponse> describeCens(DescribeCensRequest request) {
         try {
@@ -1077,8 +1338,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
-      *
+     * <b>description</b> :
+     * <p>You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.</p>
+     * 
+     * @param request the request parameters of DescribeClientEvents  DescribeClientEventsRequest
+     * @return DescribeClientEventsResponse
      */
     @Override
     public CompletableFuture<DescribeClientEventsResponse> describeClientEvents(DescribeClientEventsRequest request) {
@@ -1094,6 +1358,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCloudDriveGroups  DescribeCloudDriveGroupsRequest
+     * @return DescribeCloudDriveGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeCloudDriveGroupsResponse> describeCloudDriveGroups(DescribeCloudDriveGroupsRequest request) {
         try {
@@ -1108,6 +1376,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCloudDrivePermissions  DescribeCloudDrivePermissionsRequest
+     * @return DescribeCloudDrivePermissionsResponse
+     */
     @Override
     public CompletableFuture<DescribeCloudDrivePermissionsResponse> describeCloudDrivePermissions(DescribeCloudDrivePermissionsRequest request) {
         try {
@@ -1122,6 +1394,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCloudDriveUsers  DescribeCloudDriveUsersRequest
+     * @return DescribeCloudDriveUsersResponse
+     */
     @Override
     public CompletableFuture<DescribeCloudDriveUsersResponse> describeCloudDriveUsers(DescribeCloudDriveUsersRequest request) {
         try {
@@ -1136,6 +1412,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomizedListHeaders  DescribeCustomizedListHeadersRequest
+     * @return DescribeCustomizedListHeadersResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomizedListHeadersResponse> describeCustomizedListHeaders(DescribeCustomizedListHeadersRequest request) {
         try {
@@ -1150,6 +1430,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDesktopGroupSessions  DescribeDesktopGroupSessionsRequest
+     * @return DescribeDesktopGroupSessionsResponse
+     */
     @Override
     public CompletableFuture<DescribeDesktopGroupSessionsResponse> describeDesktopGroupSessions(DescribeDesktopGroupSessionsRequest request) {
         try {
@@ -1164,6 +1448,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDesktopGroups  DescribeDesktopGroupsRequest
+     * @return DescribeDesktopGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeDesktopGroupsResponse> describeDesktopGroups(DescribeDesktopGroupsRequest request) {
         try {
@@ -1178,6 +1466,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDesktopInfo  DescribeDesktopInfoRequest
+     * @return DescribeDesktopInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeDesktopInfoResponse> describeDesktopInfo(DescribeDesktopInfoRequest request) {
         try {
@@ -1192,6 +1484,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDesktopOversoldGroup  DescribeDesktopOversoldGroupRequest
+     * @return DescribeDesktopOversoldGroupResponse
+     */
     @Override
     public CompletableFuture<DescribeDesktopOversoldGroupResponse> describeDesktopOversoldGroup(DescribeDesktopOversoldGroupRequest request) {
         try {
@@ -1206,6 +1502,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDesktopOversoldUser  DescribeDesktopOversoldUserRequest
+     * @return DescribeDesktopOversoldUserResponse
+     */
     @Override
     public CompletableFuture<DescribeDesktopOversoldUserResponse> describeDesktopOversoldUser(DescribeDesktopOversoldUserRequest request) {
         try {
@@ -1220,6 +1520,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDesktopOversoldUserGroup  DescribeDesktopOversoldUserGroupRequest
+     * @return DescribeDesktopOversoldUserGroupResponse
+     */
     @Override
     public CompletableFuture<DescribeDesktopOversoldUserGroupResponse> describeDesktopOversoldUserGroup(DescribeDesktopOversoldUserGroupRequest request) {
         try {
@@ -1235,8 +1539,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can only query data within the last 30 days.
-      *
+     * <b>description</b> :
+     * <p>You can only query data within the last 30 days.</p>
+     * 
+     * @param request the request parameters of DescribeDesktopSessions  DescribeDesktopSessionsRequest
+     * @return DescribeDesktopSessionsResponse
      */
     @Override
     public CompletableFuture<DescribeDesktopSessionsResponse> describeDesktopSessions(DescribeDesktopSessionsRequest request) {
@@ -1253,8 +1560,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
-      *
+     * <b>description</b> :
+     * <p>When no values are specified for the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters for a cloud desktop, all types of cloud desktops are queried.</p>
+     * 
+     * @param request the request parameters of DescribeDesktopTypes  DescribeDesktopTypesRequest
+     * @return DescribeDesktopTypesResponse
      */
     @Override
     public CompletableFuture<DescribeDesktopTypesResponse> describeDesktopTypes(DescribeDesktopTypesRequest request) {
@@ -1270,6 +1580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDesktops  DescribeDesktopsRequest
+     * @return DescribeDesktopsResponse
+     */
     @Override
     public CompletableFuture<DescribeDesktopsResponse> describeDesktops(DescribeDesktopsRequest request) {
         try {
@@ -1284,6 +1598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDesktopsInGroup  DescribeDesktopsInGroupRequest
+     * @return DescribeDesktopsInGroupResponse
+     */
     @Override
     public CompletableFuture<DescribeDesktopsInGroupResponse> describeDesktopsInGroup(DescribeDesktopsInGroupRequest request) {
         try {
@@ -1298,6 +1616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDevices  DescribeDevicesRequest
+     * @return DescribeDevicesResponse
+     */
     @Override
     public CompletableFuture<DescribeDevicesResponse> describeDevices(DescribeDevicesRequest request) {
         try {
@@ -1312,6 +1634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDirectories  DescribeDirectoriesRequest
+     * @return DescribeDirectoriesResponse
+     */
     @Override
     public CompletableFuture<DescribeDirectoriesResponse> describeDirectories(DescribeDirectoriesRequest request) {
         try {
@@ -1326,6 +1652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFlowMetric  DescribeFlowMetricRequest
+     * @return DescribeFlowMetricResponse
+     */
     @Override
     public CompletableFuture<DescribeFlowMetricResponse> describeFlowMetric(DescribeFlowMetricRequest request) {
         try {
@@ -1341,8 +1671,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can query only the traffic data in the last 90 days.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can query only the traffic data in the last 90 days.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeFlowStatistic  DescribeFlowStatisticRequest
+     * @return DescribeFlowStatisticResponse
      */
     @Override
     public CompletableFuture<DescribeFlowStatisticResponse> describeFlowStatistic(DescribeFlowStatisticRequest request) {
@@ -1358,6 +1693,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFotaPendingDesktops  DescribeFotaPendingDesktopsRequest
+     * @return DescribeFotaPendingDesktopsResponse
+     */
     @Override
     public CompletableFuture<DescribeFotaPendingDesktopsResponse> describeFotaPendingDesktops(DescribeFotaPendingDesktopsRequest request) {
         try {
@@ -1372,6 +1711,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFotaTasks  DescribeFotaTasksRequest
+     * @return DescribeFotaTasksResponse
+     */
     @Override
     public CompletableFuture<DescribeFotaTasksResponse> describeFotaTasks(DescribeFotaTasksRequest request) {
         try {
@@ -1386,6 +1729,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGuestApplications  DescribeGuestApplicationsRequest
+     * @return DescribeGuestApplicationsResponse
+     */
     @Override
     public CompletableFuture<DescribeGuestApplicationsResponse> describeGuestApplications(DescribeGuestApplicationsRequest request) {
         try {
@@ -1400,6 +1747,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageModifiedRecords  DescribeImageModifiedRecordsRequest
+     * @return DescribeImageModifiedRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeImageModifiedRecordsResponse> describeImageModifiedRecords(DescribeImageModifiedRecordsRequest request) {
         try {
@@ -1415,8 +1766,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the [ModifyImagePermission](~~436982~~) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
-      *
+     * <b>description</b> :
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/436982.html">ModifyImagePermission</a> operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.</p>
+     * 
+     * @param request the request parameters of DescribeImagePermission  DescribeImagePermissionRequest
+     * @return DescribeImagePermissionResponse
      */
     @Override
     public CompletableFuture<DescribeImagePermissionResponse> describeImagePermission(DescribeImagePermissionRequest request) {
@@ -1432,6 +1786,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImages  DescribeImagesRequest
+     * @return DescribeImagesResponse
+     */
     @Override
     public CompletableFuture<DescribeImagesResponse> describeImages(DescribeImagesRequest request) {
         try {
@@ -1447,9 +1805,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
-      * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
-      *
+     * <b>description</b> :
+     * <p>  After you run a command, it may not succeed. You can call this operation to query the execution result.</p>
+     * <ul>
+     * <li>You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeInvocations  DescribeInvocationsRequest
+     * @return DescribeInvocationsResponse
      */
     @Override
     public CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request) {
@@ -1465,6 +1828,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeKmsKeys  DescribeKmsKeysRequest
+     * @return DescribeKmsKeysResponse
+     */
     @Override
     public CompletableFuture<DescribeKmsKeysResponse> describeKmsKeys(DescribeKmsKeysRequest request) {
         try {
@@ -1479,6 +1846,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeModificationPrice  DescribeModificationPriceRequest
+     * @return DescribeModificationPriceResponse
+     */
     @Override
     public CompletableFuture<DescribeModificationPriceResponse> describeModificationPrice(DescribeModificationPriceRequest request) {
         try {
@@ -1493,6 +1864,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNASFileSystems  DescribeNASFileSystemsRequest
+     * @return DescribeNASFileSystemsResponse
+     */
     @Override
     public CompletableFuture<DescribeNASFileSystemsResponse> describeNASFileSystems(DescribeNASFileSystemsRequest request) {
         try {
@@ -1507,6 +1882,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNetworkPackages  DescribeNetworkPackagesRequest
+     * @return DescribeNetworkPackagesResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworkPackagesResponse> describeNetworkPackages(DescribeNetworkPackagesRequest request) {
         try {
@@ -1521,6 +1900,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeOfficeSites  DescribeOfficeSitesRequest
+     * @return DescribeOfficeSitesResponse
+     */
     @Override
     public CompletableFuture<DescribeOfficeSitesResponse> describeOfficeSites(DescribeOfficeSitesRequest request) {
         try {
@@ -1535,6 +1918,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePolicyGroups  DescribePolicyGroupsRequest
+     * @return DescribePolicyGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribePolicyGroupsResponse> describePolicyGroups(DescribePolicyGroupsRequest request) {
         try {
@@ -1550,13 +1937,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
-      * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
-      * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
-      * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
-      * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
-      *
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:</p>
+     * <ul>
+     * <li>If you set ResourceType to OfficeSite, you must specify InstanceType.</li>
+     * <li>If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.</li>
+     * <li>If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.<blockquote>
+     * <p>Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop types</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribePrice  DescribePriceRequest
+     * @return DescribePriceResponse
      */
     @Override
     public CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request) {
@@ -1572,6 +1966,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePriceForCreateDesktopOversoldGroup  DescribePriceForCreateDesktopOversoldGroupRequest
+     * @return DescribePriceForCreateDesktopOversoldGroupResponse
+     */
     @Override
     public CompletableFuture<DescribePriceForCreateDesktopOversoldGroupResponse> describePriceForCreateDesktopOversoldGroup(DescribePriceForCreateDesktopOversoldGroupRequest request) {
         try {
@@ -1586,6 +1984,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePriceForModifyDesktopOversoldGroupSale  DescribePriceForModifyDesktopOversoldGroupSaleRequest
+     * @return DescribePriceForModifyDesktopOversoldGroupSaleResponse
+     */
     @Override
     public CompletableFuture<DescribePriceForModifyDesktopOversoldGroupSaleResponse> describePriceForModifyDesktopOversoldGroupSale(DescribePriceForModifyDesktopOversoldGroupSaleRequest request) {
         try {
@@ -1600,6 +2002,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePriceForRenewDesktopOversoldGroup  DescribePriceForRenewDesktopOversoldGroupRequest
+     * @return DescribePriceForRenewDesktopOversoldGroupResponse
+     */
     @Override
     public CompletableFuture<DescribePriceForRenewDesktopOversoldGroupResponse> describePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request) {
         try {
@@ -1614,6 +2020,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRecordings  DescribeRecordingsRequest
+     * @return DescribeRecordingsResponse
+     */
     @Override
     public CompletableFuture<DescribeRecordingsResponse> describeRecordings(DescribeRecordingsRequest request) {
         try {
@@ -1628,6 +2038,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRefundPrice  DescribeRefundPriceRequest
+     * @return DescribeRefundPriceResponse
+     */
     @Override
     public CompletableFuture<DescribeRefundPriceResponse> describeRefundPrice(DescribeRefundPriceRequest request) {
         try {
@@ -1642,6 +2056,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -1656,6 +2074,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRenewalPrice  DescribeRenewalPriceRequest
+     * @return DescribeRenewalPriceResponse
+     */
     @Override
     public CompletableFuture<DescribeRenewalPriceResponse> describeRenewalPrice(DescribeRenewalPriceRequest request) {
         try {
@@ -1671,9 +2093,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
-      * *   You can query session statistics for the past hour.
-      *
+     * <b>description</b> :
+     * <p>  This is a central operation and can be called only by using services in the China (Shanghai) region.</p>
+     * <ul>
+     * <li>You can query session statistics for the past hour.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSessionStatistic  DescribeSessionStatisticRequest
+     * @return DescribeSessionStatisticResponse
      */
     @Override
     public CompletableFuture<DescribeSessionStatisticResponse> describeSessionStatistic(DescribeSessionStatisticRequest request) {
@@ -1689,6 +2116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSnapshots  DescribeSnapshotsRequest
+     * @return DescribeSnapshotsResponse
+     */
     @Override
     public CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request) {
         try {
@@ -1703,6 +2134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserConnectTime  DescribeUserConnectTimeRequest
+     * @return DescribeUserConnectTimeResponse
+     */
     @Override
     public CompletableFuture<DescribeUserConnectTimeResponse> describeUserConnectTime(DescribeUserConnectTimeRequest request) {
         try {
@@ -1717,6 +2152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserConnectionRecords  DescribeUserConnectionRecordsRequest
+     * @return DescribeUserConnectionRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeUserConnectionRecordsResponse> describeUserConnectionRecords(DescribeUserConnectionRecordsRequest request) {
         try {
@@ -1731,6 +2170,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserProfilePathRules  DescribeUserProfilePathRulesRequest
+     * @return DescribeUserProfilePathRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeUserProfilePathRulesResponse> describeUserProfilePathRules(DescribeUserProfilePathRulesRequest request) {
         try {
@@ -1745,6 +2188,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUsersInGroup  DescribeUsersInGroupRequest
+     * @return DescribeUsersInGroupResponse
+     */
     @Override
     public CompletableFuture<DescribeUsersInGroupResponse> describeUsersInGroup(DescribeUsersInGroupRequest request) {
         try {
@@ -1759,6 +2206,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUsersPassword  DescribeUsersPasswordRequest
+     * @return DescribeUsersPasswordResponse
+     */
     @Override
     public CompletableFuture<DescribeUsersPasswordResponse> describeUsersPassword(DescribeUsersPasswordRequest request) {
         try {
@@ -1773,6 +2224,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVirtualMFADevices  DescribeVirtualMFADevicesRequest
+     * @return DescribeVirtualMFADevicesResponse
+     */
     @Override
     public CompletableFuture<DescribeVirtualMFADevicesResponse> describeVirtualMFADevices(DescribeVirtualMFADevicesRequest request) {
         try {
@@ -1787,6 +2242,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeZones  DescribeZonesRequest
+     * @return DescribeZonesResponse
+     */
     @Override
     public CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request) {
         try {
@@ -1801,6 +2260,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachCen  DetachCenRequest
+     * @return DetachCenResponse
+     */
     @Override
     public CompletableFuture<DetachCenResponse> detachCen(DetachCenRequest request) {
         try {
@@ -1815,6 +2278,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachEndUser  DetachEndUserRequest
+     * @return DetachEndUserResponse
+     */
     @Override
     public CompletableFuture<DetachEndUserResponse> detachEndUser(DetachEndUserRequest request) {
         try {
@@ -1829,6 +2296,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableDesktopsInGroup  DisableDesktopsInGroupRequest
+     * @return DisableDesktopsInGroupResponse
+     */
     @Override
     public CompletableFuture<DisableDesktopsInGroupResponse> disableDesktopsInGroup(DisableDesktopsInGroupRequest request) {
         try {
@@ -1843,6 +2314,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisconnectDesktopSessions  DisconnectDesktopSessionsRequest
+     * @return DisconnectDesktopSessionsResponse
+     */
     @Override
     public CompletableFuture<DisconnectDesktopSessionsResponse> disconnectDesktopSessions(DisconnectDesktopSessionsRequest request) {
         try {
@@ -1857,6 +2332,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DissociateNetworkPackage  DissociateNetworkPackageRequest
+     * @return DissociateNetworkPackageResponse
+     */
     @Override
     public CompletableFuture<DissociateNetworkPackageResponse> dissociateNetworkPackage(DissociateNetworkPackageRequest request) {
         try {
@@ -1871,6 +2350,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadCdsFile  DownloadCdsFileRequest
+     * @return DownloadCdsFileResponse
+     */
     @Override
     public CompletableFuture<DownloadCdsFileResponse> downloadCdsFile(DownloadCdsFileRequest request) {
         try {
@@ -1885,6 +2368,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportClientEvents  ExportClientEventsRequest
+     * @return ExportClientEventsResponse
+     */
     @Override
     public CompletableFuture<ExportClientEventsResponse> exportClientEvents(ExportClientEventsRequest request) {
         try {
@@ -1899,6 +2386,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportDesktopGroupInfo  ExportDesktopGroupInfoRequest
+     * @return ExportDesktopGroupInfoResponse
+     */
     @Override
     public CompletableFuture<ExportDesktopGroupInfoResponse> exportDesktopGroupInfo(ExportDesktopGroupInfoRequest request) {
         try {
@@ -1914,23 +2405,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
-      * *   Cloud computer ID and name
-      * *   Office network ID and name
-      * *   The instance type, OS and protocol of the cloud computer
-      * *   System disk and data disk of the cloud computer
-      * *   The status
-      * *   Purchase method
-      * *   The time when the cloud computer expires
-      * *   Remaining duration and total duration
-      * *   Number of assigned users and number of current users
-      * *   Office network type
-      * *   The time when the cloud computer was created
-      * *   Tags
-      * *   Encryption status
-      * *   IP
-      * *   The hostname
-      *
+     * <b>description</b> :
+     * <p>The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:</p>
+     * <ul>
+     * <li>Cloud computer ID and name</li>
+     * <li>Office network ID and name</li>
+     * <li>The instance type, OS and protocol of the cloud computer</li>
+     * <li>System disk and data disk of the cloud computer</li>
+     * <li>The status</li>
+     * <li>Purchase method</li>
+     * <li>The time when the cloud computer expires</li>
+     * <li>Remaining duration and total duration</li>
+     * <li>Number of assigned users and number of current users</li>
+     * <li>Office network type</li>
+     * <li>The time when the cloud computer was created</li>
+     * <li>Tags</li>
+     * <li>Encryption status</li>
+     * <li>IP</li>
+     * <li>The hostname</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ExportDesktopListInfo  ExportDesktopListInfoRequest
+     * @return ExportDesktopListInfoResponse
      */
     @Override
     public CompletableFuture<ExportDesktopListInfoResponse> exportDesktopListInfo(ExportDesktopListInfoRequest request) {
@@ -1946,6 +2442,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAsyncTask  GetAsyncTaskRequest
+     * @return GetAsyncTaskResponse
+     */
     @Override
     public CompletableFuture<GetAsyncTaskResponse> getAsyncTask(GetAsyncTaskRequest request) {
         try {
@@ -1961,8 +2461,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud computer must be in the Running state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computer must be in the Running state.</p>
+     * 
+     * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
+     * @return GetConnectionTicketResponse
      */
     @Override
     public CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request) {
@@ -1978,6 +2481,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCoordinateTicket  GetCoordinateTicketRequest
+     * @return GetCoordinateTicketResponse
+     */
     @Override
     public CompletableFuture<GetCoordinateTicketResponse> getCoordinateTicket(GetCoordinateTicketRequest request) {
         try {
@@ -1992,6 +2499,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDesktopGroupDetail  GetDesktopGroupDetailRequest
+     * @return GetDesktopGroupDetailResponse
+     */
     @Override
     public CompletableFuture<GetDesktopGroupDetailResponse> getDesktopGroupDetail(GetDesktopGroupDetailRequest request) {
         try {
@@ -2006,6 +2517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOfficeSiteSsoStatus  GetOfficeSiteSsoStatusRequest
+     * @return GetOfficeSiteSsoStatusResponse
+     */
     @Override
     public CompletableFuture<GetOfficeSiteSsoStatusResponse> getOfficeSiteSsoStatus(GetOfficeSiteSsoStatusRequest request) {
         try {
@@ -2021,8 +2536,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</p>
+     * 
+     * @param request the request parameters of GetSpMetadata  GetSpMetadataRequest
+     * @return GetSpMetadataResponse
      */
     @Override
     public CompletableFuture<GetSpMetadataResponse> getSpMetadata(GetSpMetadataRequest request) {
@@ -2039,8 +2557,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
-      *
+     * <b>description</b> :
+     * <p>Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.</p>
+     * 
+     * @param request the request parameters of HibernateDesktops  HibernateDesktopsRequest
+     * @return HibernateDesktopsResponse
      */
     @Override
     public CompletableFuture<HibernateDesktopsResponse> hibernateDesktops(HibernateDesktopsRequest request) {
@@ -2056,6 +2577,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCdsFiles  ListCdsFilesRequest
+     * @return ListCdsFilesResponse
+     */
     @Override
     public CompletableFuture<ListCdsFilesResponse> listCdsFiles(ListCdsFilesRequest request) {
         try {
@@ -2071,8 +2596,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
-      *
+     * <b>description</b> :
+     * <p>If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.</p>
+     * 
+     * @param request the request parameters of ListDirectoryUsers  ListDirectoryUsersRequest
+     * @return ListDirectoryUsersResponse
      */
     @Override
     public CompletableFuture<ListDirectoryUsersResponse> listDirectoryUsers(ListDirectoryUsersRequest request) {
@@ -2088,6 +2616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFilePermission  ListFilePermissionRequest
+     * @return ListFilePermissionResponse
+     */
     @Override
     public CompletableFuture<ListFilePermissionResponse> listFilePermission(ListFilePermissionRequest request) {
         try {
@@ -2102,6 +2634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOfficeSiteOverview  ListOfficeSiteOverviewRequest
+     * @return ListOfficeSiteOverviewResponse
+     */
     @Override
     public CompletableFuture<ListOfficeSiteOverviewResponse> listOfficeSiteOverview(ListOfficeSiteOverviewRequest request) {
         try {
@@ -2116,6 +2652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOfficeSiteUsers  ListOfficeSiteUsersRequest
+     * @return ListOfficeSiteUsersResponse
+     */
     @Override
     public CompletableFuture<ListOfficeSiteUsersResponse> listOfficeSiteUsers(ListOfficeSiteUsersRequest request) {
         try {
@@ -2131,8 +2671,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
-      *
+     * <b>description</b> :
+     * <p>You must use at least one of the following parameters in the request to determine the object that you want to query: <code>ResourceId.N</code>, <code>Tag.N.Key</code>, and <code>Tag.N.Value</code>.</p>
+     * 
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
      */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
@@ -2148,6 +2691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserAdOrganizationUnits  ListUserAdOrganizationUnitsRequest
+     * @return ListUserAdOrganizationUnitsResponse
+     */
     @Override
     public CompletableFuture<ListUserAdOrganizationUnitsResponse> listUserAdOrganizationUnits(ListUserAdOrganizationUnitsRequest request) {
         try {
@@ -2163,8 +2710,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
-      *
+     * <b>description</b> :
+     * <p>After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the <a href="https://help.aliyun.com/document_detail/206212.html">UnlockVirtualMFADevice</a> operation to unlock the device.</p>
+     * 
+     * @param request the request parameters of LockVirtualMFADevice  LockVirtualMFADeviceRequest
+     * @return LockVirtualMFADeviceResponse
      */
     @Override
     public CompletableFuture<LockVirtualMFADeviceResponse> lockVirtualMFADevice(LockVirtualMFADeviceRequest request) {
@@ -2180,6 +2730,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MigrateDesktops  MigrateDesktopsRequest
+     * @return MigrateDesktopsResponse
+     */
     @Override
     public CompletableFuture<MigrateDesktopsResponse> migrateDesktops(MigrateDesktopsRequest request) {
         try {
@@ -2194,6 +2748,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MigrateImageProtocol  MigrateImageProtocolRequest
+     * @return MigrateImageProtocolResponse
+     */
     @Override
     public CompletableFuture<MigrateImageProtocolResponse> migrateImageProtocol(MigrateImageProtocolRequest request) {
         try {
@@ -2209,8 +2767,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
-      *
+     * <b>description</b> :
+     * <p>You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: <code>DomainName</code>, <code>SubDomainName</code>, <code>DnsAddress.N</code>, and <code>SubDomainDnsAddress</code>.</p>
+     * 
+     * @param request the request parameters of ModifyADConnectorDirectory  ModifyADConnectorDirectoryRequest
+     * @return ModifyADConnectorDirectoryResponse
      */
     @Override
     public CompletableFuture<ModifyADConnectorDirectoryResponse> modifyADConnectorDirectory(ModifyADConnectorDirectoryRequest request) {
@@ -2227,8 +2788,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
-      *
+     * <b>description</b> :
+     * <p>You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the <code>ERROR</code> or <code>REGISTERED</code> state. The parameters include <code>DomainName</code>, <code>SubDomainName</code>, <code>DnsAddress.N</code>, and <code>SubDomainDnsAddress.N</code>.</p>
+     * 
+     * @param request the request parameters of ModifyADConnectorOfficeSite  ModifyADConnectorOfficeSiteRequest
+     * @return ModifyADConnectorOfficeSiteResponse
      */
     @Override
     public CompletableFuture<ModifyADConnectorOfficeSiteResponse> modifyADConnectorOfficeSite(ModifyADConnectorOfficeSiteRequest request) {
@@ -2245,8 +2809,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
-      *
+     * <b>description</b> :
+     * <p>You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.</p>
+     * 
+     * @param request the request parameters of ModifyAclEntries  ModifyAclEntriesRequest
+     * @return ModifyAclEntriesResponse
      */
     @Override
     public CompletableFuture<ModifyAclEntriesResponse> modifyAclEntries(ModifyAclEntriesRequest request) {
@@ -2262,6 +2829,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAutoSnapshotPolicy  ModifyAutoSnapshotPolicyRequest
+     * @return ModifyAutoSnapshotPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyAutoSnapshotPolicyResponse> modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request) {
         try {
@@ -2277,8 +2848,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only custom desktop templates can be modified.
-      *
+     * <b>description</b> :
+     * <p>Only custom desktop templates can be modified.</p>
+     * 
+     * @param request the request parameters of ModifyBundle  ModifyBundleRequest
+     * @return ModifyBundleResponse
      */
     @Override
     public CompletableFuture<ModifyBundleResponse> modifyBundle(ModifyBundleRequest request) {
@@ -2294,6 +2868,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCdsFile  ModifyCdsFileRequest
+     * @return ModifyCdsFileResponse
+     */
     @Override
     public CompletableFuture<ModifyCdsFileResponse> modifyCdsFile(ModifyCdsFileRequest request) {
         try {
@@ -2308,6 +2886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCdsFileShareLink  ModifyCdsFileShareLinkRequest
+     * @return ModifyCdsFileShareLinkResponse
+     */
     @Override
     public CompletableFuture<ModifyCdsFileShareLinkResponse> modifyCdsFileShareLink(ModifyCdsFileShareLinkRequest request) {
         try {
@@ -2322,6 +2904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCloudDriveGroups  ModifyCloudDriveGroupsRequest
+     * @return ModifyCloudDriveGroupsResponse
+     */
     @Override
     public CompletableFuture<ModifyCloudDriveGroupsResponse> modifyCloudDriveGroups(ModifyCloudDriveGroupsRequest request) {
         try {
@@ -2336,6 +2922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCloudDrivePermission  ModifyCloudDrivePermissionRequest
+     * @return ModifyCloudDrivePermissionResponse
+     */
     @Override
     public CompletableFuture<ModifyCloudDrivePermissionResponse> modifyCloudDrivePermission(ModifyCloudDrivePermissionRequest request) {
         try {
@@ -2350,6 +2940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCloudDriveUsers  ModifyCloudDriveUsersRequest
+     * @return ModifyCloudDriveUsersResponse
+     */
     @Override
     public CompletableFuture<ModifyCloudDriveUsersResponse> modifyCloudDriveUsers(ModifyCloudDriveUsersRequest request) {
         try {
@@ -2364,6 +2958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCustomizedListHeaders  ModifyCustomizedListHeadersRequest
+     * @return ModifyCustomizedListHeadersResponse
+     */
     @Override
     public CompletableFuture<ModifyCustomizedListHeadersResponse> modifyCustomizedListHeaders(ModifyCustomizedListHeadersRequest request) {
         try {
@@ -2379,10 +2977,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](~~188395~~).
-      * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
-      * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
-      *
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.</li>
+     * <li>After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyDesktopChargeType  ModifyDesktopChargeTypeRequest
+     * @return ModifyDesktopChargeTypeResponse
      */
     @Override
     public CompletableFuture<ModifyDesktopChargeTypeResponse> modifyDesktopChargeType(ModifyDesktopChargeTypeRequest request) {
@@ -2399,8 +3002,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
-      *
+     * <b>description</b> :
+     * <p>After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.</p>
+     * 
+     * @param request the request parameters of ModifyDesktopGroup  ModifyDesktopGroupRequest
+     * @return ModifyDesktopGroupResponse
      */
     @Override
     public CompletableFuture<ModifyDesktopGroupResponse> modifyDesktopGroup(ModifyDesktopGroupRequest request) {
@@ -2417,8 +3023,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
-      *
+     * <b>description</b> :
+     * <p>The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.</p>
+     * 
+     * @param request the request parameters of ModifyDesktopHostName  ModifyDesktopHostNameRequest
+     * @return ModifyDesktopHostNameResponse
      */
     @Override
     public CompletableFuture<ModifyDesktopHostNameResponse> modifyDesktopHostName(ModifyDesktopHostNameRequest request) {
@@ -2434,6 +3043,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDesktopName  ModifyDesktopNameRequest
+     * @return ModifyDesktopNameResponse
+     */
     @Override
     public CompletableFuture<ModifyDesktopNameResponse> modifyDesktopName(ModifyDesktopNameRequest request) {
         try {
@@ -2448,6 +3061,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDesktopOversoldGroup  ModifyDesktopOversoldGroupRequest
+     * @return ModifyDesktopOversoldGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyDesktopOversoldGroupResponse> modifyDesktopOversoldGroup(ModifyDesktopOversoldGroupRequest request) {
         try {
@@ -2462,6 +3079,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDesktopOversoldGroupSale  ModifyDesktopOversoldGroupSaleRequest
+     * @return ModifyDesktopOversoldGroupSaleResponse
+     */
     @Override
     public CompletableFuture<ModifyDesktopOversoldGroupSaleResponse> modifyDesktopOversoldGroupSale(ModifyDesktopOversoldGroupSaleRequest request) {
         try {
@@ -2476,6 +3097,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDesktopOversoldUserGroup  ModifyDesktopOversoldUserGroupRequest
+     * @return ModifyDesktopOversoldUserGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyDesktopOversoldUserGroupResponse> modifyDesktopOversoldUserGroup(ModifyDesktopOversoldUserGroupRequest request) {
         try {
@@ -2491,17 +3116,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
-      * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](~~188609~~). You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
-      * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
-      *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
-      *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
-      *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
-      *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
-      *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
-      *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
-      * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
-      *
+     * <b>description</b> :
+     * <p>Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.</p>
+     * <ul>
+     * <li>Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud computer types</a>. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</li>
+     * <li>You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: <code>DesktopType</code>, <code>RootDiskSizeGib</code>, and <code>UserDiskSizeGib</code>. Take note of the following items:<ul>
+     * <li>The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.</li>
+     * <li>You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.</li>
+     * <li>The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.</li>
+     * <li>If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.</li>
+     * <li>We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.</li>
+     * <li>When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.</li>
+     * </ul>
+     * </li>
+     * <li>After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyDesktopSpec  ModifyDesktopSpecRequest
+     * @return ModifyDesktopSpecResponse
      */
     @Override
     public CompletableFuture<ModifyDesktopSpecResponse> modifyDesktopSpec(ModifyDesktopSpecRequest request) {
@@ -2517,6 +3149,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDesktopTimer  ModifyDesktopTimerRequest
+     * @return ModifyDesktopTimerResponse
+     */
     @Override
     public CompletableFuture<ModifyDesktopTimerResponse> modifyDesktopTimer(ModifyDesktopTimerRequest request) {
         try {
@@ -2532,8 +3168,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud desktops that you want to restart by calling this operation must be in the Running state.
-      *
+     * <b>description</b> :
+     * <p>The cloud desktops that you want to restart by calling this operation must be in the Running state.</p>
+     * 
+     * @param request the request parameters of ModifyDesktopsPolicyGroup  ModifyDesktopsPolicyGroupRequest
+     * @return ModifyDesktopsPolicyGroupResponse
      */
     @Override
     public CompletableFuture<ModifyDesktopsPolicyGroupResponse> modifyDesktopsPolicyGroup(ModifyDesktopsPolicyGroupRequest request) {
@@ -2550,17 +3189,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
-      * *   Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.
-      * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-      * 1\\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-      * 2\\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-      * 3\\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-      * 4\\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-      * 5\\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-      * 6\\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.
-      * *   The changes do not affect your personal data on the cloud desktop.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.</p>
+     * <ul>
+     * <li>Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.</li>
+     * <li>When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
+     * 1\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
+     * 2\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
+     * 3\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
+     * 4\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
+     * 5\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
+     * 6\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.</li>
+     * <li>The changes do not affect your personal data on the cloud desktop.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyDiskSpec  ModifyDiskSpecRequest
+     * @return ModifyDiskSpecResponse
      */
     @Override
     public CompletableFuture<ModifyDiskSpecResponse> modifyDiskSpec(ModifyDiskSpecRequest request) {
@@ -2577,10 +3221,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The cloud computer must be in the Running state.
-      * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](~~436815~~) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
-      * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
-      *
+     * <b>description</b> :
+     * <p>  The cloud computer must be in the Running state.</p>
+     * <ul>
+     * <li>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <code>ManagementFlags</code> response parameter indicates the assignment of the cloud computer. A value of <code>ASSIGNING</code> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</li>
+     * <li>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyEntitlement  ModifyEntitlementRequest
+     * @return ModifyEntitlementResponse
      */
     @Override
     public CompletableFuture<ModifyEntitlementResponse> modifyEntitlement(ModifyEntitlementRequest request) {
@@ -2597,8 +3246,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to modify the attributes of only custom images that are in the Available state.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to modify the attributes of only custom images that are in the Available state.</p>
+     * 
+     * @param request the request parameters of ModifyImageAttribute  ModifyImageAttributeRequest
+     * @return ModifyImageAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyImageAttributeResponse> modifyImageAttribute(ModifyImageAttributeRequest request) {
@@ -2615,20 +3267,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Security of shared images
-      * Elastic Desktop Service cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
-      * ### [](#)Quota and billing
-      * *   A shared image does not count against the image quotas of principals to which the image is shared.
-      * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
-      * *   You are not charged for shared images.
-      * ### [](#)Supported sharing behaviors
-      * *   You can share custom images with other Alibaba Cloud accounts.
-      * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
-      * ### [](#)Unsupported sharing behaviors
-      * *   You cannot share images that are shared by other Alibaba Cloud accounts.
-      * *   You cannot share encrypted images.
-      * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](~~436978~~).
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Security of shared images</h3>
+     * <p>Elastic Desktop Service cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.</p>
+     * <h3><a href="#"></a>Quota and billing</h3>
+     * <ul>
+     * <li>A shared image does not count against the image quotas of principals to which the image is shared.</li>
+     * <li>After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.</li>
+     * <li>You are not charged for shared images.</li>
+     * </ul>
+     * <h3><a href="#"></a>Supported sharing behaviors</h3>
+     * <ul>
+     * <li>You can share custom images with other Alibaba Cloud accounts.</li>
+     * <li>You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).</li>
+     * </ul>
+     * <h3><a href="#"></a>Unsupported sharing behaviors</h3>
+     * <ul>
+     * <li>You cannot share images that are shared by other Alibaba Cloud accounts.</li>
+     * <li>You cannot share encrypted images.</li>
+     * <li>You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see <a href="https://help.aliyun.com/document_detail/436978.html">CopyImage</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyImagePermission  ModifyImagePermissionRequest
+     * @return ModifyImagePermissionResponse
      */
     @Override
     public CompletableFuture<ModifyImagePermissionResponse> modifyImagePermission(ModifyImagePermissionRequest request) {
@@ -2645,8 +3306,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
-      *
+     * <b>description</b> :
+     * <p>When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> operation to create a mount target.</p>
+     * 
+     * @param request the request parameters of ModifyNASDefaultMountTarget  ModifyNASDefaultMountTargetRequest
+     * @return ModifyNASDefaultMountTargetResponse
      */
     @Override
     public CompletableFuture<ModifyNASDefaultMountTargetResponse> modifyNASDefaultMountTarget(ModifyNASDefaultMountTargetRequest request) {
@@ -2662,6 +3326,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyNetworkPackageBandwidth  ModifyNetworkPackageBandwidthRequest
+     * @return ModifyNetworkPackageBandwidthResponse
+     */
     @Override
     public CompletableFuture<ModifyNetworkPackageBandwidthResponse> modifyNetworkPackageBandwidth(ModifyNetworkPackageBandwidthRequest request) {
         try {
@@ -2677,8 +3345,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
-      *
+     * <b>description</b> :
+     * <p>If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.</p>
+     * 
+     * @param request the request parameters of ModifyNetworkPackageEnabled  ModifyNetworkPackageEnabledRequest
+     * @return ModifyNetworkPackageEnabledResponse
      */
     @Override
     public CompletableFuture<ModifyNetworkPackageEnabledResponse> modifyNetworkPackageEnabled(ModifyNetworkPackageEnabledRequest request) {
@@ -2694,6 +3365,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyOfficeSiteAttribute  ModifyOfficeSiteAttributeRequest
+     * @return ModifyOfficeSiteAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyOfficeSiteAttributeResponse> modifyOfficeSiteAttribute(ModifyOfficeSiteAttributeRequest request) {
         try {
@@ -2708,6 +3383,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyOfficeSiteCrossDesktopAccess  ModifyOfficeSiteCrossDesktopAccessRequest
+     * @return ModifyOfficeSiteCrossDesktopAccessResponse
+     */
     @Override
     public CompletableFuture<ModifyOfficeSiteCrossDesktopAccessResponse> modifyOfficeSiteCrossDesktopAccess(ModifyOfficeSiteCrossDesktopAccessRequest request) {
         try {
@@ -2722,6 +3401,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyOfficeSiteMfaEnabled  ModifyOfficeSiteMfaEnabledRequest
+     * @return ModifyOfficeSiteMfaEnabledResponse
+     */
     @Override
     public CompletableFuture<ModifyOfficeSiteMfaEnabledResponse> modifyOfficeSiteMfaEnabled(ModifyOfficeSiteMfaEnabledRequest request) {
         try {
@@ -2736,6 +3419,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPolicyGroup  ModifyPolicyGroupRequest
+     * @return ModifyPolicyGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request) {
         try {
@@ -2751,8 +3438,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can modify end users only for cloud computers that are in the Running state.
-      *
+     * <b>description</b> :
+     * <p>You can modify end users only for cloud computers that are in the Running state.</p>
+     * 
+     * @param request the request parameters of ModifyUserEntitlement  ModifyUserEntitlementRequest
+     * @return ModifyUserEntitlementResponse
      */
     @Override
     public CompletableFuture<ModifyUserEntitlementResponse> modifyUserEntitlement(ModifyUserEntitlementRequest request) {
@@ -2768,6 +3458,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyUserToDesktopGroup  ModifyUserToDesktopGroupRequest
+     * @return ModifyUserToDesktopGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyUserToDesktopGroupResponse> modifyUserToDesktopGroup(ModifyUserToDesktopGroupRequest request) {
         try {
@@ -2782,6 +3476,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MoveCdsFile  MoveCdsFileRequest
+     * @return MoveCdsFileResponse
+     */
     @Override
     public CompletableFuture<MoveCdsFileResponse> moveCdsFile(MoveCdsFileRequest request) {
         try {
@@ -2797,8 +3495,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud computers that you want to restart must be in the Running state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to restart must be in the Running state.</p>
+     * 
+     * @param request the request parameters of RebootDesktops  RebootDesktopsRequest
+     * @return RebootDesktopsResponse
      */
     @Override
     public CompletableFuture<RebootDesktopsResponse> rebootDesktops(RebootDesktopsRequest request) {
@@ -2815,13 +3516,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Take note of the following limits when you change an image:
-      * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
-      * *   GPU images and non-GPU images cannot be exchanged. Graphic-based cloud computers can only use GPU-accelerated images. The other cloud computers can only use non-GPU-accelerated images.
-      * After the image of a cloud computer is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
-      * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer become unavailable. The system automatically deletes the snapshots.
-      * *   If the OS of the image is changed, the data in the data disk of the original cloud computer is cleared, and the snapshots that are created based on the data disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disk of the original cloud computer is retained, and the snapshots that are created based on the data disk of the original cloud computer can still be used.
-      *
+     * <b>description</b> :
+     * <p>Take note of the following limits when you change an image:</p>
+     * <ul>
+     * <li>You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).</li>
+     * <li>GPU images and non-GPU images cannot be exchanged. Graphic-based cloud computers can only use GPU-accelerated images. The other cloud computers can only use non-GPU-accelerated images.
+     * After the image of a cloud computer is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:</li>
+     * <li>Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer become unavailable. The system automatically deletes the snapshots.</li>
+     * <li>If the OS of the image is changed, the data in the data disk of the original cloud computer is cleared, and the snapshots that are created based on the data disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disk of the original cloud computer is retained, and the snapshots that are created based on the data disk of the original cloud computer can still be used.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RebuildDesktops  RebuildDesktopsRequest
+     * @return RebuildDesktopsResponse
      */
     @Override
     public CompletableFuture<RebuildDesktopsResponse> rebuildDesktops(RebuildDesktopsRequest request) {
@@ -2837,6 +3543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveFilePermission  RemoveFilePermissionRequest
+     * @return RemoveFilePermissionResponse
+     */
     @Override
     public CompletableFuture<RemoveFilePermissionResponse> removeFilePermission(RemoveFilePermissionRequest request) {
         try {
@@ -2851,6 +3561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUserFromDesktopGroup  RemoveUserFromDesktopGroupRequest
+     * @return RemoveUserFromDesktopGroupResponse
+     */
     @Override
     public CompletableFuture<RemoveUserFromDesktopGroupResponse> removeUserFromDesktopGroup(RemoveUserFromDesktopGroupRequest request) {
         try {
@@ -2865,6 +3579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUserFromDesktopOversoldUserGroup  RemoveUserFromDesktopOversoldUserGroupRequest
+     * @return RemoveUserFromDesktopOversoldUserGroupResponse
+     */
     @Override
     public CompletableFuture<RemoveUserFromDesktopOversoldUserGroupResponse> removeUserFromDesktopOversoldUserGroup(RemoveUserFromDesktopOversoldUserGroupRequest request) {
         try {
@@ -2879,6 +3597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewDesktopGroup  RenewDesktopGroupRequest
+     * @return RenewDesktopGroupResponse
+     */
     @Override
     public CompletableFuture<RenewDesktopGroupResponse> renewDesktopGroup(RenewDesktopGroupRequest request) {
         try {
@@ -2893,6 +3615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewDesktopOversoldGroup  RenewDesktopOversoldGroupRequest
+     * @return RenewDesktopOversoldGroupResponse
+     */
     @Override
     public CompletableFuture<RenewDesktopOversoldGroupResponse> renewDesktopOversoldGroup(RenewDesktopOversoldGroupRequest request) {
         try {
@@ -2907,6 +3633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewDesktops  RenewDesktopsRequest
+     * @return RenewDesktopsResponse
+     */
     @Override
     public CompletableFuture<RenewDesktopsResponse> renewDesktops(RenewDesktopsRequest request) {
         try {
@@ -2921,6 +3651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewNetworkPackages  RenewNetworkPackagesRequest
+     * @return RenewNetworkPackagesResponse
+     */
     @Override
     public CompletableFuture<RenewNetworkPackagesResponse> renewNetworkPackages(RenewNetworkPackagesRequest request) {
         try {
@@ -2936,8 +3670,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can call this operation to reset only cloud computers in a cloud computer pool.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to reset only cloud computers in a cloud computer pool.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ResetDesktops  ResetDesktopsRequest
+     * @return ResetDesktopsResponse
      */
     @Override
     public CompletableFuture<ResetDesktopsResponse> resetDesktops(ResetDesktopsRequest request) {
@@ -2954,8 +3693,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
-      *
+     * <b>description</b> :
+     * <p>When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.</p>
+     * 
+     * @param request the request parameters of ResetNASDefaultMountTarget  ResetNASDefaultMountTargetRequest
+     * @return ResetNASDefaultMountTargetResponse
      */
     @Override
     public CompletableFuture<ResetNASDefaultMountTargetResponse> resetNASDefaultMountTarget(ResetNASDefaultMountTargetRequest request) {
@@ -2972,11 +3714,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that the following operations are performed:
-      * *   The data that you want to retain is backed up.
-      *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
-      * *   The cloud computer to which the disk belongs is stopped.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the following operations are performed:</p>
+     * <ul>
+     * <li>The data that you want to retain is backed up.<blockquote>
+     * <p>The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.</p>
+     * </blockquote>
+     * </li>
+     * <li>The cloud computer to which the disk belongs is stopped.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ResetSnapshot  ResetSnapshotRequest
+     * @return ResetSnapshotResponse
      */
     @Override
     public CompletableFuture<ResetSnapshotResponse> resetSnapshot(ResetSnapshotRequest request) {
@@ -2992,6 +3741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeCoordinatePrivilege  RevokeCoordinatePrivilegeRequest
+     * @return RevokeCoordinatePrivilegeResponse
+     */
     @Override
     public CompletableFuture<RevokeCoordinatePrivilegeResponse> revokeCoordinatePrivilege(RevokeCoordinatePrivilegeRequest request) {
         try {
@@ -3007,8 +3760,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
-      *
+     * <b>description</b> :
+     * <p>You can use the RunCommand operation to run scripts only on Windows cloud desktops.</p>
+     * 
+     * @param request the request parameters of RunCommand  RunCommandRequest
+     * @return RunCommandResponse
      */
     @Override
     public CompletableFuture<RunCommandResponse> runCommand(RunCommandRequest request) {
@@ -3025,8 +3781,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
-      *
+     * <b>description</b> :
+     * <p>You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * 
+     * @param request the request parameters of SendVerifyCode  SendVerifyCodeRequest
+     * @return SendVerifyCodeResponse
      */
     @Override
     public CompletableFuture<SendVerifyCodeResponse> sendVerifyCode(SendVerifyCodeRequest request) {
@@ -3042,6 +3801,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDesktopGroupScaleTimer  SetDesktopGroupScaleTimerRequest
+     * @return SetDesktopGroupScaleTimerResponse
+     */
     @Override
     public CompletableFuture<SetDesktopGroupScaleTimerResponse> setDesktopGroupScaleTimer(SetDesktopGroupScaleTimerRequest request) {
         try {
@@ -3056,6 +3819,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDesktopGroupTimer  SetDesktopGroupTimerRequest
+     * @return SetDesktopGroupTimerResponse
+     */
     @Override
     public CompletableFuture<SetDesktopGroupTimerResponse> setDesktopGroupTimer(SetDesktopGroupTimerRequest request) {
         try {
@@ -3070,6 +3837,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDesktopGroupTimerStatus  SetDesktopGroupTimerStatusRequest
+     * @return SetDesktopGroupTimerStatusResponse
+     */
     @Override
     public CompletableFuture<SetDesktopGroupTimerStatusResponse> setDesktopGroupTimerStatus(SetDesktopGroupTimerStatusRequest request) {
         try {
@@ -3084,6 +3855,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDesktopMaintenance  SetDesktopMaintenanceRequest
+     * @return SetDesktopMaintenanceResponse
+     */
     @Override
     public CompletableFuture<SetDesktopMaintenanceResponse> setDesktopMaintenance(SetDesktopMaintenanceRequest request) {
         try {
@@ -3099,8 +3874,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is supported only for AD directories, not for RAM directories.
-      *
+     * <b>description</b> :
+     * <p>This operation is supported only for AD directories, not for RAM directories.</p>
+     * 
+     * @param request the request parameters of SetDirectorySsoStatus  SetDirectorySsoStatusRequest
+     * @return SetDirectorySsoStatusResponse
      */
     @Override
     public CompletableFuture<SetDirectorySsoStatusResponse> setDirectorySsoStatus(SetDirectorySsoStatusRequest request) {
@@ -3117,8 +3895,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</p>
+     * 
+     * @param request the request parameters of SetIdpMetadata  SetIdpMetadataRequest
+     * @return SetIdpMetadataResponse
      */
     @Override
     public CompletableFuture<SetIdpMetadataResponse> setIdpMetadata(SetIdpMetadataRequest request) {
@@ -3134,6 +3915,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetOfficeSiteSsoStatus  SetOfficeSiteSsoStatusRequest
+     * @return SetOfficeSiteSsoStatusResponse
+     */
     @Override
     public CompletableFuture<SetOfficeSiteSsoStatusResponse> setOfficeSiteSsoStatus(SetOfficeSiteSsoStatusRequest request) {
         try {
@@ -3148,6 +3933,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetUserProfilePathRules  SetUserProfilePathRulesRequest
+     * @return SetUserProfilePathRulesResponse
+     */
     @Override
     public CompletableFuture<SetUserProfilePathRulesResponse> setUserProfilePathRules(SetUserProfilePathRulesRequest request) {
         try {
@@ -3163,8 +3952,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud computers that you want to start must be in the Stopped state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to start must be in the Stopped state.</p>
+     * 
+     * @param request the request parameters of StartDesktops  StartDesktopsRequest
+     * @return StartDesktopsResponse
      */
     @Override
     public CompletableFuture<StartDesktopsResponse> startDesktops(StartDesktopsRequest request) {
@@ -3181,8 +3973,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud computers that you want to stop must be in the Running state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to stop must be in the Running state.</p>
+     * 
+     * @param request the request parameters of StopDesktops  StopDesktopsRequest
+     * @return StopDesktopsResponse
      */
     @Override
     public CompletableFuture<StopDesktopsResponse> stopDesktops(StopDesktopsRequest request) {
@@ -3199,8 +3994,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
-      *
+     * <b>description</b> :
+     * <p>When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.</p>
+     * 
+     * @param request the request parameters of StopInvocation  StopInvocationRequest
+     * @return StopInvocationResponse
      */
     @Override
     public CompletableFuture<StopInvocationResponse> stopInvocation(StopInvocationRequest request) {
@@ -3217,8 +4015,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If TagKey is specified, the new TagValue value overrides the original TagValue value.
-      *
+     * <b>description</b> :
+     * <p>If TagKey is specified, the new TagValue value overrides the original TagValue value.</p>
+     * 
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
      */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
@@ -3234,6 +4035,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindUserDesktop  UnbindUserDesktopRequest
+     * @return UnbindUserDesktopResponse
+     */
     @Override
     public CompletableFuture<UnbindUserDesktopResponse> unbindUserDesktop(UnbindUserDesktopRequest request) {
         try {
@@ -3248,6 +4053,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnlockVirtualMFADevice  UnlockVirtualMFADeviceRequest
+     * @return UnlockVirtualMFADeviceResponse
+     */
     @Override
     public CompletableFuture<UnlockVirtualMFADeviceResponse> unlockVirtualMFADevice(UnlockVirtualMFADeviceRequest request) {
         try {
@@ -3262,6 +4071,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -3277,8 +4090,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the Elastic Desktop Service console and choose **Operations > Image Updates** in the left-side navigation pane.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the Elastic Desktop Service console and choose <strong>Operations &gt; Image Updates</strong> in the left-side navigation pane.</p>
+     * 
+     * @param request the request parameters of UpdateFotaTask  UpdateFotaTaskRequest
+     * @return UpdateFotaTaskResponse
      */
     @Override
     public CompletableFuture<UpdateFotaTaskResponse> updateFotaTask(UpdateFotaTaskRequest request) {
@@ -3295,8 +4111,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can upload only Windows images.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can upload only Windows images.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of UploadImage  UploadImageRequest
+     * @return UploadImageResponse
      */
     @Override
     public CompletableFuture<UploadImageResponse> uploadImage(UploadImageRequest request) {
@@ -3312,6 +4133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyCen  VerifyCenRequest
+     * @return VerifyCenResponse
+     */
     @Override
     public CompletableFuture<VerifyCenResponse> verifyCen(VerifyCenRequest request) {
         try {
@@ -3326,6 +4151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of WakeupDesktops  WakeupDesktopsRequest
+     * @return WakeupDesktopsResponse
+     */
     @Override
     public CompletableFuture<WakeupDesktopsResponse> wakeupDesktops(WakeupDesktopsRequest request) {
         try {

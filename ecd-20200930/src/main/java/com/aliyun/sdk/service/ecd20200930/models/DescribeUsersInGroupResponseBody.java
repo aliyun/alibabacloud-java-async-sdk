@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsersInGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUsersInGroupResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         private Integer usersCount; 
 
         /**
-         * The list of authorized users.
+         * <p>The list of authorized users.</p>
          */
         public Builder endUsers(java.util.List < EndUsers> endUsers) {
             this.endUsers = endUsers;
@@ -93,7 +94,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to start the next query.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +105,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of authorized users that is connected to cloud computers in the cloud computer pool.
+         * <p>The total number of authorized users that is connected to cloud computers in the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder onlineUsersCount(Integer onlineUsersCount) {
             this.onlineUsersCount = onlineUsersCount;
@@ -109,7 +116,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of authorized users of the cloud computer pool.
+         * <p>The total number of authorized users of the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usersCount(Integer usersCount) {
             this.usersCount = usersCount;
@@ -130,6 +143,12 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUsersInGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersInGroupResponseBody</p>
+     */
     public static class ExternalInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExternalName")
         private String externalName;
@@ -169,7 +188,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String jobNumber; 
 
             /**
-             * The external name.
+             * <p>The external name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nameDemo</p>
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -177,7 +199,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The employee ID.
+             * <p>The employee ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder jobNumber(String jobNumber) {
                 this.jobNumber = jobNumber;
@@ -191,6 +216,12 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUsersInGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersInGroupResponseBody</p>
+     */
     public static class PropertyValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
@@ -230,7 +261,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * The property value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -238,7 +272,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the property value.
+             * <p>The ID of the property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -252,6 +289,12 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUsersInGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersInGroupResponseBody</p>
+     */
     public static class UserSetPropertiesModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
@@ -339,7 +382,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The property ID.
+             * <p>The property ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -347,7 +393,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The property name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -355,13 +404,15 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The property type.
-             * <p>
+             * <p>The property type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>1: system property</li>
+             * <li>2: custom property</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   1: system property
-             * *   2: custom property
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder propertyType(Integer propertyType) {
                 this.propertyType = propertyType;
@@ -369,7 +420,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Details about property values.
+             * <p>Details about property values.</p>
              */
             public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;
@@ -377,7 +428,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -385,7 +439,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nameDemo</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -399,6 +456,12 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUsersInGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersInGroupResponseBody</p>
+     */
     public static class EndUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
@@ -570,13 +633,15 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
-             * The connection status.
-             * <p>
+             * <p>The connection status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>0: disconnected</li>
+             * <li>1: connecting</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   0: disconnected
-             * *   1: connecting
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -584,7 +649,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud computer.
+             * <p>The ID of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-gx2x1dhsmucyy****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -592,7 +660,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud computer.
+             * <p>The name of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -600,7 +671,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the enterprise AD account.
+             * <p>The display name of the enterprise AD account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -608,7 +682,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the authorized user.
+             * <p>The email address of the authorized user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder endUserEmail(String endUserEmail) {
                 this.endUserEmail = endUserEmail;
@@ -616,7 +693,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the authorized user.
+             * <p>The ID of the authorized user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -624,7 +704,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the authorized user.
+             * <p>The username of the authorized user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserName(String endUserName) {
                 this.endUserName = endUserName;
@@ -632,7 +715,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the authorized user.
+             * <p>The mobile number of the authorized user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder endUserPhone(String endUserPhone) {
                 this.endUserPhone = endUserPhone;
@@ -640,7 +726,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Note</p>
              */
             public Builder endUserRemark(String endUserRemark) {
                 this.endUserRemark = endUserRemark;
@@ -648,13 +737,15 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The user account type.
-             * <p>
+             * <p>The user account type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SIMPLE: convenience account</li>
+             * <li>AD_CONNECTOR: enterprise Active Directory (AD) account</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   SIMPLE: convenience account
-             * *   AD_CONNECTOR: enterprise Active Directory (AD) account
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder endUserType(String endUserType) {
                 this.endUserType = endUserType;
@@ -662,7 +753,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The appended information.
+             * <p>The appended information.</p>
              */
             public Builder externalInfo(ExternalInfo externalInfo) {
                 this.externalInfo = externalInfo;
@@ -670,7 +761,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud computer that is used by the user.
+             * <p>The ID of the cloud computer that is used by the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ud-i896ze8hazpvl****</p>
              */
             public Builder userDesktopId(String userDesktopId) {
                 this.userDesktopId = userDesktopId;
@@ -678,7 +772,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the seats of users.
+             * <p>Details about the seats of users.</p>
              */
             public Builder userSetPropertiesModels(java.util.List < UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;

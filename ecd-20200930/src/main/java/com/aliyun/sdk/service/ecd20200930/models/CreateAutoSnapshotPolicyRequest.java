@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateAutoSnapshotPolicyRequest</p>
@@ -99,7 +100,11 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The CRON expression for periodic scheduling.
+         * <p>The CRON expression for periodic scheduling.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 2 ? * 1-7</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
@@ -108,7 +113,11 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). This parameter is empty by default.
+         * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). This parameter is empty by default.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_auto_policy</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -117,7 +126,11 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +139,11 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.
+         * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);

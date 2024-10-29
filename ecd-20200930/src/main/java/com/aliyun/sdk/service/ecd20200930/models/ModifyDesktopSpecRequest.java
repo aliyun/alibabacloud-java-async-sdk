@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesktopSpecRequest</p>
@@ -183,30 +184,28 @@ public class ModifyDesktopSpecRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the auto-payment feature.
-         * <p>
+         * <p>Specifies whether to enable the auto-payment feature.</p>
+         * <p>Default value: true. Valid values:</p>
+         * <ul>
+         * <li><p>true: enables the auto-payment feature.</p>
+         * <!-- -->
          * 
-         * Default value: true. Valid values:
+         * <!-- -->
          * 
-         * *   true: enables the auto-payment feature.
+         * <p>Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, an exception occurs on your order.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, an exception occurs on your order.
-         * 
-         *     <!-- -->
-         * 
-         * *   false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -215,7 +214,10 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The ID of a cloud computer.
+         * <p>The ID of a cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-4543qyik164a4****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -224,7 +226,11 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The destination instance type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
+         * <p>The destination instance type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.general.2c8g</p>
          */
         public Builder desktopType(String desktopType) {
             this.putQueryParameter("DesktopType", desktopType);
@@ -233,7 +239,10 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The ID of the promotional activity.
+         * <p>The ID of the promotional activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500033080110596</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -242,7 +251,11 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -269,7 +282,10 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.
+         * <p>The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
@@ -278,42 +294,40 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The performance level (PL) of the data disk. Default value: PL0.
-         * <p>
+         * <p>The performance level (PL) of the data disk. Default value: PL0.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>PL1</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   PL1
+         * <!-- -->
+         * </li>
+         * <li><p>PL0</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>PL3</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   PL0
+         * <!-- -->
+         * </li>
+         * <li><p>PL2</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   PL3
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   PL2
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
             this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);
@@ -322,11 +336,14 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The destination data disk size. Unit: GiB.
-         * <p>
+         * <p>The destination data disk size. Unit: GiB.</p>
+         * <ul>
+         * <li>The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.</li>
+         * <li>The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.</li>
+         * </ul>
          * 
-         * *   The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.
-         * *   The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder userDiskSizeGib(Integer userDiskSizeGib) {
             this.putQueryParameter("UserDiskSizeGib", userDiskSizeGib);
@@ -341,6 +358,12 @@ public class ModifyDesktopSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDesktopSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDesktopSpecRequest</p>
+     */
     public static class ResourceSpecs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
@@ -392,7 +415,10 @@ public class ModifyDesktopSpecRequest extends Request {
             private Integer userDiskSizeGib; 
 
             /**
-             * The ID of a cloud computer.
+             * <p>The ID of a cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-4543qyik164a4****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -400,7 +426,10 @@ public class ModifyDesktopSpecRequest extends Request {
             }
 
             /**
-             * The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.
+             * <p>The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
                 this.rootDiskSizeGib = rootDiskSizeGib;
@@ -408,11 +437,14 @@ public class ModifyDesktopSpecRequest extends Request {
             }
 
             /**
-             * The destination data disk size. Unit: GiB.
-             * <p>
+             * <p>The destination data disk size. Unit: GiB.</p>
+             * <ul>
+             * <li>The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.</li>
+             * <li>The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.</li>
+             * </ul>
              * 
-             * *   The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.
-             * *   The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder userDiskSizeGib(Integer userDiskSizeGib) {
                 this.userDiskSizeGib = userDiskSizeGib;

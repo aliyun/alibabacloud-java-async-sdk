@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserConnectionRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserConnectionRecordsRequest</p>
@@ -224,7 +225,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         } 
 
         /**
-         * The duration when the cloud desktop is connected, which is the minimum value for condition filtering.
+         * <p>The duration when the cloud desktop is connected, which is the minimum value for condition filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder connectDurationFrom(Long connectDurationFrom) {
             this.putQueryParameter("ConnectDurationFrom", connectDurationFrom);
@@ -233,7 +237,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The duration when the cloud desktop is connected, which is the maximum value for condition filtering.
+         * <p>The duration when the cloud desktop is connected, which is the maximum value for condition filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder connectDurationTo(Long connectDurationTo) {
             this.putQueryParameter("ConnectDurationTo", connectDurationTo);
@@ -242,7 +249,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The time when the cloud desktop stops to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The time when the cloud desktop stops to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631266200000</p>
          */
         public Builder connectEndTimeFrom(Long connectEndTimeFrom) {
             this.putQueryParameter("ConnectEndTimeFrom", connectEndTimeFrom);
@@ -251,7 +261,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The time when the cloud desktop stops to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The time when the cloud desktop stops to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631268000000</p>
          */
         public Builder connectEndTimeTo(Long connectEndTimeTo) {
             this.putQueryParameter("ConnectEndTimeTo", connectEndTimeTo);
@@ -260,7 +273,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The time when the cloud desktop starts to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The time when the cloud desktop starts to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631239200000</p>
          */
         public Builder connectStartTimeFrom(Long connectStartTimeFrom) {
             this.putQueryParameter("ConnectStartTimeFrom", connectStartTimeFrom);
@@ -269,7 +285,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The time when the cloud desktop starts to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The time when the cloud desktop starts to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631241000000</p>
          */
         public Builder connectStartTimeTo(Long connectStartTimeTo) {
             this.putQueryParameter("ConnectStartTimeTo", connectStartTimeTo);
@@ -278,7 +297,11 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer pool.
+         * <p>The ID of the cloud computer pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -287,7 +310,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer.
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-138dsptkrt00u****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -296,7 +322,11 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the authorized user.
+         * <p>The ID of the authorized user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -305,26 +335,26 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The type of the user account.
-         * <p>
+         * <p>The type of the user account.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>SIMPLE: convenience account</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   SIMPLE: convenience account
+         * <!-- -->
+         * </li>
+         * <li><p>AD_CONNECTOR: enterprise AD account</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   AD_CONNECTOR: enterprise AD account
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         public Builder endUserType(String endUserType) {
             this.putQueryParameter("EndUserType", endUserType);
@@ -333,7 +363,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -342,7 +375,10 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -351,7 +387,11 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

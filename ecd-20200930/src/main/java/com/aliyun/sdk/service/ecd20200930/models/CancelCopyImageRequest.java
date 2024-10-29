@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelCopyImageRequest} extends {@link RequestModel}
  *
  * <p>CancelCopyImageRequest</p>
@@ -69,7 +70,11 @@ public class CancelCopyImageRequest extends Request {
         } 
 
         /**
-         * The ID of the new image in the destination region.
+         * <p>The ID of the new image in the destination region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-gx2x1dhsmusr2****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -78,7 +83,11 @@ public class CancelCopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the image is copied.
+         * <p>The ID of the region to which the image is copied.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

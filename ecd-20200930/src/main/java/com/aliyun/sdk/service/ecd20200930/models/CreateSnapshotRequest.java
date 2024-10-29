@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSnapshotRequest} extends {@link RequestModel}
  *
  * <p>CreateSnapshotRequest</p>
@@ -114,7 +115,10 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
-         * The description of the snapshot. The description can be up to 128 characters in length.
+         * <p>The description of the snapshot. The description can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -123,7 +127,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer.
+         * <p>The ID of the cloud computer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****&quot;</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -132,7 +140,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +153,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (\_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+         * <p>The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-). The name cannot start with <code>auto</code> because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -150,26 +166,27 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The type of the disk for which you want to create a snapshot.
-         * <p>
+         * <p>The type of the disk for which you want to create a snapshot.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>system: system disk</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   system: system disk
+         * <!-- -->
+         * </li>
+         * <li><p>data: data disk</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         * *   data: data disk
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);

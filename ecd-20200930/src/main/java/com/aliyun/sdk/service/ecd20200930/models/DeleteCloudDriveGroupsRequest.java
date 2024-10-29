@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudDriveGroupsRequest} extends {@link RequestModel}
  *
  * <p>DeleteCloudDriveGroupsRequest</p>
@@ -83,7 +84,11 @@ public class DeleteCloudDriveGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk in Cloud Drive Service.
+         * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-532033****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -92,7 +97,7 @@ public class DeleteCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The IDs of the teams that you want to delete. You can delete multiple teams at a time.
+         * <p>The IDs of the teams that you want to delete. You can delete multiple teams at a time.</p>
          */
         public Builder groupId(java.util.List < String > groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -101,7 +106,11 @@ public class DeleteCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

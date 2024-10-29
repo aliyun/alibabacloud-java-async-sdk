@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribePolicyGroupsRequest</p>
@@ -111,11 +112,14 @@ public class DescribePolicyGroupsRequest extends Request {
         } 
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100</li>
+         * <li>Default value: 10</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 100
-         * *   Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -124,7 +128,10 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -133,7 +140,10 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * The policy IDs. You can specify one or more policy IDs.
+         * <p>The policy IDs. You can specify one or more policy IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system-all-enabled-policy</p>
          */
         public Builder policyGroupId(java.util.List < String > policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -142,7 +152,11 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,14 +165,16 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * The effective scope of the policy. Valid values:
-         * <p>
+         * <p>The effective scope of the policy. Valid values:</p>
+         * <ul>
+         * <li>GLOBAL: The policy takes effect globally.</li>
+         * <li>IP: The policy takes effect based on the IP address.</li>
+         * <li>ALL: The policy takes effect without limits.</li>
+         * </ul>
+         * <p>Default value: GLOBAL.</p>
          * 
-         * *   GLOBAL: The policy takes effect globally.
-         * *   IP: The policy takes effect based on the IP address.
-         * *   ALL: The policy takes effect without limits.
-         * 
-         * Default value: GLOBAL.
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

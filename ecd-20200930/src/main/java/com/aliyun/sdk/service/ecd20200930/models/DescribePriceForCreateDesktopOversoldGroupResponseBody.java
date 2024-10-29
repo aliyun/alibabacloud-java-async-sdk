@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceForCreateDesktopOversoldGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePriceForCreateDesktopOversoldGroupResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribePriceForCreateDesktopOversoldGroupResponseBody extends TeaM
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceForCreateDesktopOversoldGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceForCreateDesktopOversoldGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private String price;

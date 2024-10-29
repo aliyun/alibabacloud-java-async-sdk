@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>AddDevicesResponseBody</p>
@@ -61,7 +62,10 @@ public class AddDevicesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The execution result. If the request was successful, `success` is returned. If the request failed, an error message is returned.
+         * <p>The execution result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +73,10 @@ public class AddDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message. This parameter is not returned if the value of Code is `success`.
+         * <p>The returned error message. This parameter is not returned if the value of Code is <code>success</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The parameter is not specified.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +84,10 @@ public class AddDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

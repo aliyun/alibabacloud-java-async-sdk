@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private java.util.List < Zones> zones; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of zones.
+         * <p>Details of zones.</p>
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -70,6 +74,12 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -97,7 +107,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

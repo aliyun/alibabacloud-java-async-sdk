@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateADConnectorDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateADConnectorDirectoryResponseBody</p>
@@ -73,7 +74,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         private String trustPassword; 
 
         /**
-         * The details of AD connectors.
+         * <p>The details of AD connectors.</p>
          */
         public Builder adConnectors(java.util.List < AdConnectors> adConnectors) {
             this.adConnectors = adConnectors;
@@ -81,7 +82,10 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the AD directory.
+         * <p>The ID of the AD directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -89,7 +93,10 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE99D5E-93A1-493F-B1CB-0ABD4D05BEFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The AD trust password.
+         * <p>The AD trust password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82Tg****</p>
          */
         public Builder trustPassword(String trustPassword) {
             this.trustPassword = trustPassword;
@@ -110,6 +120,12 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateADConnectorDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateADConnectorDirectoryResponseBody</p>
+     */
     public static class AdConnectors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -137,7 +153,10 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
             private String address; 
 
             /**
-             * The connection address.
+             * <p>The connection address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>127.0.**.**</code></p>
              */
             public Builder address(String address) {
                 this.address = address;

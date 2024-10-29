@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsersInGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeUsersInGroupRequest</p>
@@ -181,13 +182,15 @@ public class DescribeUsersInGroupRequest extends Request {
         } 
 
         /**
-         * The status of the desktop connection for the end user.
-         * <p>
+         * <p>The status of the desktop connection for the end user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: Disconnected.</li>
+         * <li>1: Connected.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * - 0: Disconnected.
-         * - 1: Connected.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder connectState(Integer connectState) {
             this.putQueryParameter("ConnectState", connectState);
@@ -196,7 +199,11 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The ID of the cloud computer pool.
+         * <p>The ID of the cloud computer pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-8ttn55ujj8nj8****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -205,7 +212,10 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The ID of the authorized user.
+         * <p>The ID of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -214,7 +224,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the authorized users.
+         * <p>The IDs of the authorized users.</p>
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -223,7 +233,10 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.
+         * <p>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -232,11 +245,14 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -245,7 +261,10 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -254,7 +273,10 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The ID of the organization to which the end user belongs.
+         * <p>The ID of the organization to which the end user belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-d0fua2oyukw8j****</p>
          */
         public Builder orgId(String orgId) {
             this.putQueryParameter("OrgId", orgId);
@@ -263,26 +285,26 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to query user details.
-         * <p>
+         * <p>Specifies whether to query user details.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true (default)</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true (default)
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder queryUserDetail(Boolean queryUserDetail) {
             this.putQueryParameter("QueryUserDetail", queryUserDetail);
@@ -291,7 +313,11 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

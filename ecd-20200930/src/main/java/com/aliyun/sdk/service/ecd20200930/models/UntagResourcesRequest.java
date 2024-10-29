@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -112,7 +113,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to unbind all tags from the resource. This parameter takes effect only when TagKey.N is not specified. Default value: false.
+         * <p>Specifies whether to unbind all tags from the resource. This parameter takes effect only when TagKey.N is not specified. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -121,7 +125,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +138,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.
+         * <p>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-ia2zw38bi6cm7****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,12 +151,15 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ALIYUN::GWS::INSTANCE: cloud computer.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * * ALIYUN::GWS::INSTANCE: cloud computer.
+         * <strong>example:</strong>
+         * <p>ALIYUN::GWS::INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -153,7 +168,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys. You can specify 1 to 20 tag keys.
+         * <p>The tag keys. You can specify 1 to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

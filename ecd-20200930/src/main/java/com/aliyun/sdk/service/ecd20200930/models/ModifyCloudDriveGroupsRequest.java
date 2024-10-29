@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCloudDriveGroupsRequest} extends {@link RequestModel}
  *
  * <p>ModifyCloudDriveGroupsRequest</p>
@@ -111,7 +112,11 @@ public class ModifyCloudDriveGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk in Cloud Drive Service.
+         * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai+cds-135515****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -120,7 +125,7 @@ public class ModifyCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The IDs of the teams.
+         * <p>The IDs of the teams.</p>
          */
         public Builder groupId(java.util.List < String > groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -129,7 +134,11 @@ public class ModifyCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,13 +147,15 @@ public class ModifyCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The status of the team space. Valid values:
-         * <p>
+         * <p>The status of the team space. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>Default value: enabled.</p>
          * 
-         * *   enabled
-         * *   disabled
-         * 
-         * Default value: enabled.
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -153,7 +164,10 @@ public class ModifyCloudDriveGroupsRequest extends Request {
         }
 
         /**
-         * The total capacity of the team space.
+         * <p>The total capacity of the team space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32212254720</p>
          */
         public Builder totalSize(Long totalSize) {
             this.putQueryParameter("TotalSize", totalSize);

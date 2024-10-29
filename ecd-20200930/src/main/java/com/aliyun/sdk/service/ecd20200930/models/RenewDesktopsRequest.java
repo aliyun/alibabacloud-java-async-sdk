@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewDesktopsRequest} extends {@link RequestModel}
  *
  * <p>RenewDesktopsRequest</p>
@@ -153,30 +154,28 @@ public class RenewDesktopsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the auto-payment feature.
-         * <p>
+         * <p>Specifies whether to enable the auto-payment feature.</p>
+         * <p>Default value: true. Valid values:</p>
+         * <ul>
+         * <li><p>true: enables the auto-payment feature.</p>
+         * <!-- -->
          * 
-         * Default value: true. Valid values:
+         * <!-- -->
          * 
-         * *   true: enables the auto-payment feature.
+         * <p>Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.
-         * 
-         *     <!-- -->
-         * 
-         * *   false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -194,7 +193,11 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.
+         * <p>The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-ia2zw38bi6cm7****</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -203,13 +206,15 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The renewal duration. Valid values of this parameter are determined by the value of the `PeriodUnit` parameter.
-         * <p>
+         * <p>The renewal duration. Valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
+         * <ul>
+         * <li>Valid values if you set the <code>PeriodUnit</code> parameter to <code>Month</code>: 1, 2, 3, and 6</li>
+         * <li>Valid values if you set the <code>PeriodUnit</code> parameter to <code>Year</code>: 1, 2, 3, 4, 5, and 6</li>
+         * </ul>
+         * <p>Default value: 1.</p>
          * 
-         * *   Valid values if you set the `PeriodUnit` parameter to `Month`: 1, 2, 3, and 6
-         * *   Valid values if you set the `PeriodUnit` parameter to `Year`: 1, 2, 3, 4, 5, and 6
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -218,26 +223,26 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The unit of the renewal duration specified by the `Period` parameter.
-         * <p>
+         * <p>The unit of the renewal duration specified by the <code>Period</code> parameter.</p>
+         * <p>Default value: Month. Valid values:</p>
+         * <ul>
+         * <li><p>Month</p>
+         * <!-- -->
          * 
-         * Default value: Month. Valid values:
+         * <!-- -->
          * 
-         * *   Month
+         * <!-- -->
+         * </li>
+         * <li><p>Year</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   Year
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -246,7 +251,10 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the promotional activity.
+         * <p>The ID of the promotional activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500030980150146</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -255,7 +263,11 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

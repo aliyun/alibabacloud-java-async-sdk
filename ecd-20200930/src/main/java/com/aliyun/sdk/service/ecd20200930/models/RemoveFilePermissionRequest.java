@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveFilePermissionRequest} extends {@link RequestModel}
  *
  * <p>RemoveFilePermissionRequest</p>
@@ -127,7 +128,11 @@ public class RemoveFilePermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk in Cloud Drive Service.
+         * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-066224****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -136,7 +141,10 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * The user ID.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -145,7 +153,11 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * The file ID. The ID is a unique identifier for the file.
+         * <p>The file ID. The ID is a unique identifier for the file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6333e553a133ce21e6f747cf948bb9ef95d7****</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -154,7 +166,7 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -163,7 +175,8 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * The users that you want to authorize.
+         * <p>The users that you want to authorize.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder memberList(java.util.List < MemberList> memberList) {
             String memberListShrink = shrink(memberList, "MemberList", "json");
@@ -173,7 +186,11 @@ public class RemoveFilePermissionRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -188,6 +205,12 @@ public class RemoveFilePermissionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveFilePermissionRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveFilePermissionRequest</p>
+     */
     public static class CdsIdentity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -229,7 +252,11 @@ public class RemoveFilePermissionRequest extends Request {
             private String type; 
 
             /**
-             * The user ID or group ID.
+             * <p>The user ID or group ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>249dsfseee643h33g3dv****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -237,34 +264,31 @@ public class RemoveFilePermissionRequest extends Request {
             }
 
             /**
-             * The object type.
-             * <p>
+             * <p>The object type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>IT_Group</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   IT_Group
+             * <p>group</p>
+             * <!-- -->
+             * </li>
+             * <li><p>IT_User</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>user</p>
+             * <!-- --></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             *     <!-- -->
-             * 
-             *     group
-             * 
-             *     <!-- -->
-             * 
-             * *   IT_User
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     user
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>IT_User</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,6 +302,12 @@ public class RemoveFilePermissionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RemoveFilePermissionRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveFilePermissionRequest</p>
+     */
     public static class MemberList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CdsIdentity")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -319,7 +349,8 @@ public class RemoveFilePermissionRequest extends Request {
             private String roleId; 
 
             /**
-             * The permission information.
+             * <p>The permission information.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder cdsIdentity(CdsIdentity cdsIdentity) {
                 this.cdsIdentity = cdsIdentity;
@@ -327,166 +358,130 @@ public class RemoveFilePermissionRequest extends Request {
             }
 
             /**
-             * The role ID. You can configure permissions on roles or actions. This parameter is used to specify the permissions on roles, which conflicts with the ActionList parameter. When you configure both the parameters, this parameter shall prevail.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   SystemFileEditorWithoutShareLink
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to edit files but cannot share files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileUploaderAndDownloaderWithShareLink
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to upload, download, and share files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileDownloader
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to download files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileEditorWithoutDelete
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to edit files but cannot delete files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileOwner
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to collaborate with others
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileDownloaderWithShareLink
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to download and share files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileUploaderAndViewer
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to preview or upload files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileViewer
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to preview files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileEditor
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to edit files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileUploaderWithShareLink
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to upload or share files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileUploader
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permission to upload files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileUploaderAndDownloader
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to upload or download files
-             * 
-             *     <!-- -->
-             * 
-             * *   SystemFileMetaViewer
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the role that has the permissions to view files
-             * 
-             *     <!-- -->
+             * <p>The role ID. You can configure permissions on roles or actions. This parameter is used to specify the permissions on roles, which conflicts with the ActionList parameter. When you configure both the parameters, this parameter shall prevail.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SystemFileEditorWithoutShareLink</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to edit files but cannot share files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileUploaderAndDownloaderWithShareLink</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to upload, download, and share files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileDownloader</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to download files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileEditorWithoutDelete</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to edit files but cannot delete files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileOwner</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to collaborate with others</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileDownloaderWithShareLink</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to download and share files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileUploaderAndViewer</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to preview or upload files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileViewer</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to preview files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileEditor</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to edit files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileUploaderWithShareLink</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to upload or share files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileUploader</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permission to upload files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileUploaderAndDownloader</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to upload or download files</p>
+             * <!-- -->
+             * </li>
+             * <li><p>SystemFileMetaViewer</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the role that has the permissions to view files</p>
+             * <!-- --></li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SystemFileUploaderAndDownloader</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;

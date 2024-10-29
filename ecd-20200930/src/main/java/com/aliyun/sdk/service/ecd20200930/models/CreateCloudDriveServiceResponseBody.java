@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudDriveServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCloudDriveServiceResponseBody</p>
@@ -145,7 +146,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the attached cloud disk.
+         * <p>The ID of the attached cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-7782057786</p>
          */
         public Builder cdsId(String cdsId) {
             this.cdsId = cdsId;
@@ -153,7 +157,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the cloud disk that is created in Cloud Drive Service.
+         * <p>The name of the cloud disk that is created in Cloud Drive Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDS_Windows_1126</p>
          */
         public Builder cdsName(String cdsName) {
             this.cdsName = cdsName;
@@ -193,7 +200,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum capacity of each instance in Cloud Drive Service. Unit: GiB
+         * <p>The maximum capacity of each instance in Cloud Drive Service. Unit: GiB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>213674622976</p>
          */
         public Builder maxSize(String maxSize) {
             this.maxSize = maxSize;
@@ -217,7 +227,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>062B1439-709A-580E-85DF-CE97A1560565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,6 +243,12 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCloudDriveServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCloudDriveServiceResponseBody</p>
+     */
     public static class ConflictCds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CdsId")
         private String cdsId;
@@ -269,7 +288,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The ID of the attached cloud disk.
+             * <p>The ID of the attached cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+cds-7782057786</p>
              */
             public Builder cdsId(String cdsId) {
                 this.cdsId = cdsId;
@@ -291,6 +313,12 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCloudDriveServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCloudDriveServiceResponseBody</p>
+     */
     public static class ConflictOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CdsId")
         private String cdsId;
@@ -342,7 +370,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The ID of the attached cloud disk.
+             * <p>The ID of the attached cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+cds-7782057786</p>
              */
             public Builder cdsId(String cdsId) {
                 this.cdsId = cdsId;
@@ -372,6 +403,12 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCloudDriveServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCloudDriveServiceResponseBody</p>
+     */
     public static class ConflictCdsAndOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConflictCds")
         private java.util.List < ConflictCds> conflictCds;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WakeupDesktopsResponse} extends {@link TeaModel}
  *
  * <p>WakeupDesktopsResponse</p>

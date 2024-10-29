@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDesktopSessionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDesktopSessionsRequest</p>
@@ -217,7 +218,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.
+         * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -226,7 +227,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The name of the cloud computer.
+         * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoComputer</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -235,7 +239,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-13T02:51:43Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -244,7 +251,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the end user.
+         * <p>The ID of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -253,7 +263,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the office network.
+         * <p>The ID of the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -262,7 +275,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -271,7 +287,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,7 +299,11 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by Elastic Desktop Service.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -289,13 +312,15 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The state of the session.
-         * <p>
+         * <p>The state of the session.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Connected</li>
+         * <li>Disconnected</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Connected
-         * *   Disconnected
+         * <strong>example:</strong>
+         * <p>Connected</p>
          */
         public Builder sessionStatus(String sessionStatus) {
             this.putQueryParameter("SessionStatus", sessionStatus);
@@ -304,7 +329,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The start of the time range to query.
+         * <p>The start of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-28T02:31:43Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

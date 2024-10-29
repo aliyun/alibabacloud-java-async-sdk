@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachEndUserRequest} extends {@link RequestModel}
  *
  * <p>AttachEndUserRequest</p>
@@ -140,7 +141,10 @@ public class AttachEndUserRequest extends Request {
         } 
 
         /**
-         * The address of the Active Directory (AD) office network.
+         * <p>The address of the Active Directory (AD) office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xn--0zw****</p>
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -149,12 +153,15 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * The type of the client.
-         * <p>
+         * <p>The type of the client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: hardware client.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   1: hardware client.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder clientType(Integer clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -163,7 +170,11 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * The serial number (SN) of the hardware client.
+         * <p>The serial number (SN) of the hardware client.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111810122200F0C24CF7F1BF-<em>05AY</em>***</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -172,7 +183,10 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the convenient office network.
+         * <p>The ID of the convenient office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -181,7 +195,11 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the user that you want to bind to the hardware client.
+         * <p>The ID of the user that you want to bind to the hardware client.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>moli</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -190,7 +208,10 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,13 +220,15 @@ public class AttachEndUserRequest extends Request {
         }
 
         /**
-         * The account type of the user.
-         * <p>
+         * <p>The account type of the user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AD: enterprise AD account.</li>
+         * <li>SIMPLE: convenience account</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   AD: enterprise AD account.
-         * *   SIMPLE: convenience account
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

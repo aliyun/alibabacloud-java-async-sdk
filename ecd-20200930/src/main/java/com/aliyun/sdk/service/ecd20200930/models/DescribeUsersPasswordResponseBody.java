@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsersPasswordResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUsersPasswordResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The authorized users of the cloud computer.
+         * <p>The authorized users of the cloud computer.</p>
          */
         public Builder desktopUsers(java.util.List < DesktopUsers> desktopUsers) {
             this.desktopUsers = desktopUsers;
@@ -57,7 +58,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7B4B17B-5C8A-514C-AA4D-F8090E3A63E9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUsersPasswordResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersPasswordResponseBody</p>
+     */
     public static class DesktopUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -121,7 +131,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             private String password; 
 
             /**
-             * The display name of the end user.
+             * <p>The display name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice_1365*****</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -129,7 +142,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the end user.
+             * <p>The ID of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -137,7 +153,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * The password of the end user.
+             * <p>The password of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tes123</p>
              */
             public Builder password(String password) {
                 this.password = password;
