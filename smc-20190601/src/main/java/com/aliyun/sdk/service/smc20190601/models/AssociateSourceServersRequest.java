@@ -7,16 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CutOverReplicationJobRequest} extends {@link RequestModel}
+ * {@link AssociateSourceServersRequest} extends {@link RequestModel}
  *
- * <p>CutOverReplicationJobRequest</p>
+ * <p>AssociateSourceServersRequest</p>
  */
-public class CutOverReplicationJobRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("JobId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String jobId;
-
+public class AssociateSourceServersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
@@ -26,35 +21,34 @@ public class CutOverReplicationJobRequest extends Request {
     private String resourceOwnerAccount;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SyncData")
-    private Boolean syncData;
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List < String > sourceId;
 
-    private CutOverReplicationJobRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkgroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String workgroupId;
+
+    private AssociateSourceServersRequest(Builder builder) {
         super(builder);
-        this.jobId = builder.jobId;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.syncData = builder.syncData;
+        this.sourceId = builder.sourceId;
+        this.workgroupId = builder.workgroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CutOverReplicationJobRequest create() {
+    public static AssociateSourceServersRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return jobId
-     */
-    public String getJobId() {
-        return this.jobId;
     }
 
     /**
@@ -72,42 +66,36 @@ public class CutOverReplicationJobRequest extends Request {
     }
 
     /**
-     * @return syncData
+     * @return sourceId
      */
-    public Boolean getSyncData() {
-        return this.syncData;
+    public java.util.List < String > getSourceId() {
+        return this.sourceId;
     }
 
-    public static final class Builder extends Request.Builder<CutOverReplicationJobRequest, Builder> {
-        private String jobId; 
+    /**
+     * @return workgroupId
+     */
+    public String getWorkgroupId() {
+        return this.workgroupId;
+    }
+
+    public static final class Builder extends Request.Builder<AssociateSourceServersRequest, Builder> {
         private Long ownerId; 
         private String resourceOwnerAccount; 
-        private Boolean syncData; 
+        private java.util.List < String > sourceId; 
+        private String workgroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CutOverReplicationJobRequest request) {
+        private Builder(AssociateSourceServersRequest request) {
             super(request);
-            this.jobId = request.jobId;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.syncData = request.syncData;
+            this.sourceId = request.sourceId;
+            this.workgroupId = request.workgroupId;
         } 
-
-        /**
-         * <p>The ID of the incremental migration job.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>j-bp1fnx5y3djc4cop****</p>
-         */
-        public Builder jobId(String jobId) {
-            this.putQueryParameter("JobId", jobId);
-            this.jobId = jobId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -128,25 +116,31 @@ public class CutOverReplicationJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to migrate full data for the last time. Valid Values:</p>
-         * <ul>
-         * <li>true: migrates full data for the last time.</li>
-         * <li>false: does not migrate full data for the last time.</li>
-         * </ul>
-         * <p>Default value: false.</p>
+         * <p>The IDs of migration sources. You can specify up to 50 IDs.</p>
+         * <p>This parameter is required.</p>
+         */
+        public Builder sourceId(java.util.List < String > sourceId) {
+            this.putQueryParameter("SourceId", sourceId);
+            this.sourceId = sourceId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the workgroup.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>w-***</p>
          */
-        public Builder syncData(Boolean syncData) {
-            this.putQueryParameter("SyncData", syncData);
-            this.syncData = syncData;
+        public Builder workgroupId(String workgroupId) {
+            this.putQueryParameter("WorkgroupId", workgroupId);
+            this.workgroupId = workgroupId;
             return this;
         }
 
         @Override
-        public CutOverReplicationJobRequest build() {
-            return new CutOverReplicationJobRequest(this);
+        public AssociateSourceServersRequest build() {
+            return new AssociateSourceServersRequest(this);
         } 
 
     } 

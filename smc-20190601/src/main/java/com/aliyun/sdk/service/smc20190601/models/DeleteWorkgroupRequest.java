@@ -7,16 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteReplicationJobRequest} extends {@link RequestModel}
+ * {@link DeleteWorkgroupRequest} extends {@link RequestModel}
  *
- * <p>DeleteReplicationJobRequest</p>
+ * <p>DeleteWorkgroupRequest</p>
  */
-public class DeleteReplicationJobRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("JobId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String jobId;
-
+public class DeleteWorkgroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
@@ -25,31 +20,29 @@ public class DeleteReplicationJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    private DeleteReplicationJobRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkgroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String workgroupId;
+
+    private DeleteWorkgroupRequest(Builder builder) {
         super(builder);
-        this.jobId = builder.jobId;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.workgroupId = builder.workgroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteReplicationJobRequest create() {
+    public static DeleteWorkgroupRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return jobId
-     */
-    public String getJobId() {
-        return this.jobId;
     }
 
     /**
@@ -66,34 +59,28 @@ public class DeleteReplicationJobRequest extends Request {
         return this.resourceOwnerAccount;
     }
 
-    public static final class Builder extends Request.Builder<DeleteReplicationJobRequest, Builder> {
-        private String jobId; 
+    /**
+     * @return workgroupId
+     */
+    public String getWorkgroupId() {
+        return this.workgroupId;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteWorkgroupRequest, Builder> {
         private Long ownerId; 
         private String resourceOwnerAccount; 
+        private String workgroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteReplicationJobRequest request) {
+        private Builder(DeleteWorkgroupRequest request) {
             super(request);
-            this.jobId = request.jobId;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.workgroupId = request.workgroupId;
         } 
-
-        /**
-         * <p>The migration job ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>j-bp17m1vi6x21qhqk****</p>
-         */
-        public Builder jobId(String jobId) {
-            this.putQueryParameter("JobId", jobId);
-            this.jobId = jobId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -113,9 +100,22 @@ public class DeleteReplicationJobRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The workgroup ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-***</p>
+         */
+        public Builder workgroupId(String workgroupId) {
+            this.putQueryParameter("WorkgroupId", workgroupId);
+            this.workgroupId = workgroupId;
+            return this;
+        }
+
         @Override
-        public DeleteReplicationJobRequest build() {
-            return new DeleteReplicationJobRequest(this);
+        public DeleteWorkgroupRequest build() {
+            return new DeleteWorkgroupRequest(this);
         } 
 
     } 

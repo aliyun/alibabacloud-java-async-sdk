@@ -7,15 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteSourceServerRequest} extends {@link RequestModel}
+ * {@link DisassociateSourceServersRequest} extends {@link RequestModel}
  *
- * <p>DeleteSourceServerRequest</p>
+ * <p>DisassociateSourceServersRequest</p>
  */
-public class DeleteSourceServerRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Force")
-    private Boolean force;
-
+public class DisassociateSourceServersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
@@ -27,34 +23,32 @@ public class DeleteSourceServerRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String sourceId;
+    private java.util.List < String > sourceId;
 
-    private DeleteSourceServerRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkgroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String workgroupId;
+
+    private DisassociateSourceServersRequest(Builder builder) {
         super(builder);
-        this.force = builder.force;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.sourceId = builder.sourceId;
+        this.workgroupId = builder.workgroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteSourceServerRequest create() {
+    public static DisassociateSourceServersRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return force
-     */
-    public Boolean getForce() {
-        return this.force;
     }
 
     /**
@@ -74,43 +68,34 @@ public class DeleteSourceServerRequest extends Request {
     /**
      * @return sourceId
      */
-    public String getSourceId() {
+    public java.util.List < String > getSourceId() {
         return this.sourceId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteSourceServerRequest, Builder> {
-        private Boolean force; 
+    /**
+     * @return workgroupId
+     */
+    public String getWorkgroupId() {
+        return this.workgroupId;
+    }
+
+    public static final class Builder extends Request.Builder<DisassociateSourceServersRequest, Builder> {
         private Long ownerId; 
         private String resourceOwnerAccount; 
-        private String sourceId; 
+        private java.util.List < String > sourceId; 
+        private String workgroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteSourceServerRequest request) {
+        private Builder(DisassociateSourceServersRequest request) {
             super(request);
-            this.force = request.force;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.sourceId = request.sourceId;
+            this.workgroupId = request.workgroupId;
         } 
-
-        /**
-         * <p>Specifies whether to forcibly delete the migration source. Valid values:</p>
-         * <ul>
-         * <li>true: forcibly deletes the migration source and the migration job created for the migration source, and releases the intermediate resources of the migration job.</li>
-         * <li>false: does not delete the migration source if a migration job is created for the migration source.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        public Builder force(Boolean force) {
-            this.putQueryParameter("Force", force);
-            this.force = force;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -131,21 +116,31 @@ public class DeleteSourceServerRequest extends Request {
         }
 
         /**
-         * <p>The migration source ID.</p>
+         * <p>The IDs of migration sources that you want to disassociate from the workgroup. You can specify up to 50 migration sources.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-bp17m1vi6x20c6g6****</p>
          */
-        public Builder sourceId(String sourceId) {
+        public Builder sourceId(java.util.List < String > sourceId) {
             this.putQueryParameter("SourceId", sourceId);
             this.sourceId = sourceId;
             return this;
         }
 
+        /**
+         * <p>The ID of the workgroup.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-***</p>
+         */
+        public Builder workgroupId(String workgroupId) {
+            this.putQueryParameter("WorkgroupId", workgroupId);
+            this.workgroupId = workgroupId;
+            return this;
+        }
+
         @Override
-        public DeleteSourceServerRequest build() {
-            return new DeleteSourceServerRequest(this);
+        public DisassociateSourceServersRequest build() {
+            return new DisassociateSourceServersRequest(this);
         } 
 
     } 

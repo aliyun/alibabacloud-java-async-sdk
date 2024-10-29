@@ -84,6 +84,7 @@ public class DisableAccessTokenRequest extends Request {
 
         /**
          * <p>The ID of the activation code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>at-bp12g5gwup0yzmce****</p>

@@ -84,6 +84,7 @@ public class DeleteAccessTokenRequest extends Request {
 
         /**
          * <p>The ID of the activation code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>at-bp1akz2zp67r0k6r****</p>

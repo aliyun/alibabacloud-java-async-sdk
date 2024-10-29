@@ -1109,7 +1109,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>The time when the migration job ended. The time follows the <a href="~~25696~~">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the migration job ended. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * <blockquote>
              * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
              * </blockquote>
@@ -1134,7 +1134,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the migration job was started. The time follows the <a href="~~25696~~">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the migration job was started. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * <blockquote>
              * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
              * </blockquote>
@@ -2106,7 +2106,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the migration job was complete. The time follows the <a href="~~25696~~">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the migration job was complete. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * <blockquote>
              * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
              * </blockquote>
@@ -2362,10 +2362,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the migration job is scheduled to run. The time follows the <a href="~~25696~~">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. The time must meet the following requirements:</p>
+             * <p>The time when the migration job is scheduled to run. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. The time must meet the following requirements:</p>
              * <ul>
              * <li>The value must be within 30 days after the current time.</li>
-             * <li>If you do not specify this parameter, you must manually start the migration job after the migration job is created. You can call the <a href="~~121823~~">StartReplicationJob</a> operation to start the migration job.</li>
+             * <li>If you do not specify this parameter, you must manually start the migration job after the migration job is created. You can call the <a href="https://help.aliyun.com/document_detail/121823.html">StartReplicationJob</a> operation to start the migration job.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2388,7 +2388,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the migration job was started. The time follows the <a href="~~25696~~">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the migration job was started. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * <blockquote>
              * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
              * </blockquote>
@@ -2499,7 +2499,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the migration job expired. The time follows the <a href="~~25696~~">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the migration job expired. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * <blockquote>
              * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
              * </blockquote>

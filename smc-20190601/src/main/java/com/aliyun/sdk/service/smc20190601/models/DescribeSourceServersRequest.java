@@ -244,7 +244,7 @@ public class DescribeSourceServersRequest extends Request {
 
         /**
          * <p>The page number. Pages start from page 1.</p>
-         * <p>Default value: 1</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -338,7 +338,10 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * WorkgroupId.
+         * <p>工作组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-bp1ja22kdqphehlj****</p>
          */
         public Builder workgroupId(String workgroupId) {
             this.putQueryParameter("WorkgroupId", workgroupId);

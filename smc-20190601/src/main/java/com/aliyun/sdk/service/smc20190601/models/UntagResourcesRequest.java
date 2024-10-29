@@ -153,6 +153,7 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>The IDs of N SMC resources. SMC resources include migration sources and jobs. Valid values of N: 1 to 50.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bw526m1vi6x20c6g****</p>
@@ -178,6 +179,7 @@ public class UntagResourcesRequest extends Request {
          * <li>sourceserver: migration source.</li>
          * <li>replicationjob: migration job.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>sourceserver</p>

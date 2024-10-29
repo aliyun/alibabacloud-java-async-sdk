@@ -518,7 +518,7 @@ public class CreateReplicationJobRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -530,7 +530,7 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the destination Docker container image. For more information about Docker container images, see <a href="~~60744~~">Terms</a>.</p>
+         * <p>The namespace of the destination Docker container image. For more information about Docker container images, see <a href="https://help.aliyun.com/document_detail/60744.html">Terms</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>testNamespace</p>
@@ -542,7 +542,7 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * <p>The repository that stores the destination Docker container image. For more information about Docker container images, see <a href="~~60744~~">Terms</a>.</p>
+         * <p>The repository that stores the destination Docker container image. For more information about Docker container images, see <a href="https://help.aliyun.com/document_detail/60744.html">Terms</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>testRepository</p>
@@ -554,7 +554,7 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * <p>The tag of the destination Docker container image. For more information about Docker container images, see <a href="~~60744~~">Terms</a>.</p>
+         * <p>The tag of the destination Docker container image. For more information about Docker container images, see <a href="https://help.aliyun.com/document_detail/60744.html">Terms</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS:v1</p>
@@ -655,10 +655,10 @@ public class CreateReplicationJobRequest extends Request {
 
         /**
          * <p>The type of the intermediate instance.</p>
-         * <p>You can call the <a href="~~25620~~">DescribeInstanceTypes</a> operation to obtain the ECS instance types.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to obtain the ECS instance types.</p>
          * <ul>
          * <li>If you specify this parameter, SMC creates an intermediate instance of the specified instance type. If the specified instance type is unavailable, you cannot create the migration job.</li>
-         * <li>If you do not specify this parameter, SMC selects an available instance type in a specific order to create an intermediate instance. For more information, see <a href="~~121707~~">SMC FAQ</a>.</li>
+         * <li>If you do not specify this parameter, SMC selects an available instance type in a specific order to create an intermediate instance. For more information, see <a href="https://help.aliyun.com/document_detail/121707.html">SMC FAQ</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -718,7 +718,7 @@ public class CreateReplicationJobRequest extends Request {
          * <li>An empty value specifies no license.</li>
          * <li>A value of BYOL specifies Bring Your Own License (BYOL).</li>
          * </ul>
-         * <p>For more information, see <a href="~~121707~~">SMC FAQ</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/121707.html">SMC FAQ</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>BYOL</p>
@@ -787,7 +787,8 @@ public class CreateReplicationJobRequest extends Request {
 
         /**
          * <p>The ID of the Alibaba Cloud region to which you want to migrate the source server.</p>
-         * <p>For example, if you want to migrate the source server to the China (Hangzhou) region, set this parameter to <code>cn-hangzhou</code>. You can call the <a href="~~25609~~">DescribeRegions</a> operation to query the latest regions.</p>
+         * <p>For example, if you want to migrate the source server to the China (Hangzhou) region, set this parameter to <code>cn-hangzhou</code>. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest regions.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -806,7 +807,7 @@ public class CreateReplicationJobRequest extends Request {
          * <li>compress_level: the compression ratio of data to be transmitted.</li>
          * <li>checksum: specifies whether to enable checksum verification.</li>
          * </ul>
-         * <p>For more information about replication drivers, see the response parameter <code>SourceServers.ReplicationDriver</code> of the <a href="~~121818~~">DescribeSourceServers</a> operation.</p>
+         * <p>For more information about replication drivers, see the response parameter <code>SourceServers.ReplicationDriver</code> of the <a href="https://help.aliyun.com/document_detail/121818.html">DescribeSourceServers</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;bandwidth_limit&quot;:0,&quot;compress_level&quot;:1,&quot;checksum&quot;:true}</p>
@@ -864,7 +865,7 @@ public class CreateReplicationJobRequest extends Request {
          * <li>The value must be within 30 days after the current time.</li>
          * </ul>
          * <blockquote>
-         * <p> If you do not specify this parameter, you must manually start the migration job after the job is created. You can call the <a href="~~121823~~">StartReplicationJob</a> operation to start the migration job.</p>
+         * <p> If you do not specify this parameter, you must manually start the migration job after the job is created. You can call the <a href="https://help.aliyun.com/document_detail/121823.html">StartReplicationJob</a> operation to start the migration job.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -878,6 +879,7 @@ public class CreateReplicationJobRequest extends Request {
 
         /**
          * <p>The ID of the source server.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp1e2fsl57knvuug****</p>

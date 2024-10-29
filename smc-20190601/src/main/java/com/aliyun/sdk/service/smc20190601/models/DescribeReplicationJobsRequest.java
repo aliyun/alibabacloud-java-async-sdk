@@ -342,7 +342,7 @@ public class DescribeReplicationJobsRequest extends Request {
 
         /**
          * <p>The ID of the Alibaba Cloud region to which you want to migrate the source server.</p>
-         * <p>For example, if you want to migrate a source server to the China (Hangzhou) region, set this parameter to <code>cn-hangzhou</code>. You can call the <a href="~~25609~~">DescribeRegions</a> operation to query the latest regions.</p>
+         * <p>For example, if you want to migrate a source server to the China (Hangzhou) region, set this parameter to <code>cn-hangzhou</code>. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

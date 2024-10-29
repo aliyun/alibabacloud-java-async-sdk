@@ -405,7 +405,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The namespace of the destination Docker container image. For more information about Docker container images, see <a href="~~60744~~">Terms</a>.</p>
+         * <p>The namespace of the destination Docker container image. For more information about Docker container images, see <a href="https://help.aliyun.com/document_detail/60744.html">Terms</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>testNamespace</p>
@@ -417,7 +417,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         }
 
         /**
-         * <p>The repository that stores the destination Docker container image. For more information about Docker container images, see <a href="~~60744~~">Terms</a>.</p>
+         * <p>The repository that stores the destination Docker container image. For more information about Docker container images, see <a href="https://help.aliyun.com/document_detail/60744.html">Terms</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>testRepository</p>
@@ -429,7 +429,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         }
 
         /**
-         * <p>The tag of the destination Docker container image. For more information about Docker container images, see <a href="~~60744~~">Terms</a>.</p>
+         * <p>The tag of the destination Docker container image. For more information about Docker container images, see <a href="https://help.aliyun.com/document_detail/60744.html">Terms</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS:v1</p>
@@ -520,7 +520,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
 
         /**
          * <p>The type of the intermediate instance.</p>
-         * <p>You can call the <a href="~~25620~~">DescribeInstanceTypes</a> operation to query the ECS instance types.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the ECS instance types.</p>
          * <ul>
          * <li>If you specify this parameter, SMC creates an intermediate instance of the specified instance type. If the specified instance type is unavailable, you cannot create the migration job.</li>
          * <li>If you do not specify this parameter, SMC selects an available instance type in a specific order to create an intermediate instance. For more information,</li>
@@ -538,6 +538,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
 
         /**
          * <p>The migration job ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>j-bp19vlwm0tyigbmj****</p>
@@ -634,7 +635,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
          * <li>compress_level: the compression ratio of data to be transmitted.</li>
          * <li>checksum: specifies whether to enable checksum verification</li>
          * </ul>
-         * <p>For more information about the replication driver, see the response parameter <code>SourceServers.ReplicationDriver</code> of the <a href="~~2402126~~">DescribeSourceServers</a> operation.</p>
+         * <p>For more information about the replication driver, see the response parameter <code>SourceServers.ReplicationDriver</code> of the <a href="https://help.aliyun.com/document_detail/2402126.html">DescribeSourceServers</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;bandwidth_limit&quot;:0,&quot;compress_level&quot;:1,&quot;checksum&quot;:true}</p>
@@ -658,7 +659,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
          * <p>The time when the migration job is executed. SMC starts the migration job at the specified time.</p>
          * <p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. For example, 2018-01-01T12:00:00Z indicates 20:00:00 on January 1, 2018 (UTC+8).</p>
          * <blockquote>
-         * <p> If ScheduledStartTime is left empty, SMC does not automatically start the migration job. In this case, you must call the <a href="~~121823~~">StartReplicationJob</a> operation to start the migration job.</p>
+         * <p> If ScheduledStartTime is left empty, SMC does not automatically start the migration job. In this case, you must call the <a href="https://help.aliyun.com/document_detail/121823.html">StartReplicationJob</a> operation to start the migration job.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

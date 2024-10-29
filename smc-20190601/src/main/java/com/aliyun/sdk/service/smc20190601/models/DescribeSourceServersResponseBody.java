@@ -564,7 +564,11 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>Indicates whether block replication is enabled for the data disk partition.</p>
+             * <p>数据盘分区是否开启块复制。可能值：</p>
+             * <ul>
+             * <li>true：数据盘分区开启块复制。</li>
+             * <li>false：数据盘分区不开启块复制。</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -575,7 +579,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the data disk.</p>
+             * <p>数据盘分区路径。</p>
              * 
              * <strong>example:</strong>
              * <p>/home/data</p>
@@ -586,7 +590,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk partition. Unit: byte.</p>
+             * <p>数据盘分区大小。单位：Byte。</p>
              * 
              * <strong>example:</strong>
              * <p>21474836480</p>
@@ -597,7 +601,15 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>数据盘分区类型。可能值：</p>
+             * <ul>
+             * <li>Normal：普通分区。</li>
+             * <li>System：系统分区。</li>
+             * <li>Boot：启动分区。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -715,7 +727,10 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private Integer size; 
 
             /**
-             * Offset.
+             * <p>数据盘首个分区的起始偏移。单位：Byte。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder offset(Long offset) {
                 this.offset = offset;
@@ -723,7 +738,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the data disk partition.</p>
+             * <p>数据盘分区信息。</p>
              */
             public Builder parts(DataParts parts) {
                 this.parts = parts;
@@ -731,10 +746,10 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB.</p>
+             * <p>迁移源的数据磁盘大小。单位：GiB。</p>
              * 
              * <strong>example:</strong>
-             * <p>20</p>
+             * <p>80</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -864,7 +879,11 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>Indicates whether block replication is enabled for the data disk partition.</p>
+             * <p>系统盘分区是否支持块复制。可能值：</p>
+             * <ul>
+             * <li>true：系统盘分区支持块复制。</li>
+             * <li>false：系统盘分区不支持块复制。</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -875,7 +894,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the data disk.</p>
+             * <p>系统盘分区路径。</p>
              * 
              * <strong>example:</strong>
              * <p>/home/data</p>
@@ -886,7 +905,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk partition. Unit: byte.</p>
+             * <p>系统盘分区大小。单位：Byte。</p>
              * 
              * <strong>example:</strong>
              * <p>21474836480</p>
@@ -897,7 +916,15 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>系统盘分区类型。可能值：</p>
+             * <ul>
+             * <li>Normal：普通分区。</li>
+             * <li>System：系统分区。</li>
+             * <li>Boot：启动分区。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1015,7 +1042,10 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private Integer size; 
 
             /**
-             * Offset.
+             * <p>系统盘首个分区的起始偏移。单位：Byte。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder offset(Long offset) {
                 this.offset = offset;
@@ -1023,7 +1053,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the data disk partition.</p>
+             * <p>系统盘分区信息。</p>
              */
             public Builder parts(SystemParts parts) {
                 this.parts = parts;
@@ -1031,10 +1061,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB.</p>
+             * <p>迁移源系统盘的大小，单位：GiB。取值范围为20~32768。</p>
+             * <blockquote>
+             * <p>参数取值需要大于源服务器数据盘实际占用大小。例如，源数据盘大小为500 GiB，实际占用100 GiB，则该参数取值需大于100 GiB。</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>20</p>
+             * <p>100</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1093,7 +1126,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private System system; 
 
             /**
-             * Data.
+             * <p>数据盘信息列表。</p>
              */
             public Builder data(DisksData data) {
                 this.data = data;
@@ -1101,7 +1134,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * System.
+             * <p>系统盘信息。</p>
              */
             public Builder system(System system) {
                 this.system = system;
@@ -1763,7 +1796,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * <p>磁盘信息。</p>
              */
             public Builder disks(Disks disks) {
                 this.disks = disks;
@@ -1943,7 +1976,10 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * WorkgroupId.
+             * <p>工作组ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-bp1ja22kdqphehlj****</p>
              */
             public Builder workgroupId(String workgroupId) {
                 this.workgroupId = workgroupId;

@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifySourceServerAttributeRequest} extends {@link RequestModel}
+ * {@link ModifyWorkgroupAttributeRequest} extends {@link RequestModel}
  *
- * <p>ModifySourceServerAttributeRequest</p>
+ * <p>ModifyWorkgroupAttributeRequest</p>
  */
-public class ModifySourceServerAttributeRequest extends Request {
+public class ModifyWorkgroupAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
@@ -29,24 +29,24 @@ public class ModifySourceServerAttributeRequest extends Request {
     private String resourceOwnerAccount;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SourceId")
+    @com.aliyun.core.annotation.NameInMap("WorkgroupId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String sourceId;
+    private String workgroupId;
 
-    private ModifySourceServerAttributeRequest(Builder builder) {
+    private ModifyWorkgroupAttributeRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.name = builder.name;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.sourceId = builder.sourceId;
+        this.workgroupId = builder.workgroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifySourceServerAttributeRequest create() {
+    public static ModifyWorkgroupAttributeRequest create() {
         return builder().build();
     }
 
@@ -84,37 +84,38 @@ public class ModifySourceServerAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceId
+     * @return workgroupId
      */
-    public String getSourceId() {
-        return this.sourceId;
+    public String getWorkgroupId() {
+        return this.workgroupId;
     }
 
-    public static final class Builder extends Request.Builder<ModifySourceServerAttributeRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyWorkgroupAttributeRequest, Builder> {
         private String description; 
         private String name; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
-        private String sourceId; 
+        private String workgroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifySourceServerAttributeRequest request) {
+        private Builder(ModifyWorkgroupAttributeRequest request) {
             super(request);
             this.description = request.description;
             this.name = request.name;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.sourceId = request.sourceId;
+            this.workgroupId = request.workgroupId;
         } 
 
         /**
-         * <p>The description of the migration source. The description can be up to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The new description of the workgroup.</p>
+         * <p>The description must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a source server.</p>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -123,10 +124,10 @@ public class ModifySourceServerAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the migration source. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The new name of the workgroup. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
-         * <p>testSourceServerName</p>
+         * <p>testMigrationTaskName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -153,21 +154,21 @@ public class ModifySourceServerAttributeRequest extends Request {
         }
 
         /**
-         * <p>The migration source ID.</p>
+         * <p>The workgroup ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>s-bp17m1vi6x20c6g6****</p>
+         * <p>w-***</p>
          */
-        public Builder sourceId(String sourceId) {
-            this.putQueryParameter("SourceId", sourceId);
-            this.sourceId = sourceId;
+        public Builder workgroupId(String workgroupId) {
+            this.putQueryParameter("WorkgroupId", workgroupId);
+            this.workgroupId = workgroupId;
             return this;
         }
 
         @Override
-        public ModifySourceServerAttributeRequest build() {
-            return new ModifySourceServerAttributeRequest(this);
+        public ModifyWorkgroupAttributeRequest build() {
+            return new ModifyWorkgroupAttributeRequest(this);
         } 
 
     } 

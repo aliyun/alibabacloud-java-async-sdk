@@ -7,11 +7,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifySourceServerAttributeRequest} extends {@link RequestModel}
+ * {@link CreateWorkgroupRequest} extends {@link RequestModel}
  *
- * <p>ModifySourceServerAttributeRequest</p>
+ * <p>CreateWorkgroupRequest</p>
  */
-public class ModifySourceServerAttributeRequest extends Request {
+public class CreateWorkgroupRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
@@ -28,31 +32,33 @@ public class ModifySourceServerAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SourceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String sourceId;
-
-    private ModifySourceServerAttributeRequest(Builder builder) {
+    private CreateWorkgroupRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.name = builder.name;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.sourceId = builder.sourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifySourceServerAttributeRequest create() {
+    public static CreateWorkgroupRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -83,38 +89,44 @@ public class ModifySourceServerAttributeRequest extends Request {
         return this.resourceOwnerAccount;
     }
 
-    /**
-     * @return sourceId
-     */
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
-    public static final class Builder extends Request.Builder<ModifySourceServerAttributeRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateWorkgroupRequest, Builder> {
+        private String clientToken; 
         private String description; 
         private String name; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
-        private String sourceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifySourceServerAttributeRequest request) {
+        private Builder(CreateWorkgroupRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.name = request.name;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.sourceId = request.sourceId;
         } 
 
         /**
-         * <p>The description of the migration source. The description can be up to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a source server.</p>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The description of the workgroup.</p>
+         * <p>The description must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -123,10 +135,14 @@ public class ModifySourceServerAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the migration source. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the workgroup. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be unique.</li>
+         * <li>The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>testSourceServerName</p>
+         * <p>testWorkgroupName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -152,22 +168,9 @@ public class ModifySourceServerAttributeRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The migration source ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-bp17m1vi6x20c6g6****</p>
-         */
-        public Builder sourceId(String sourceId) {
-            this.putQueryParameter("SourceId", sourceId);
-            this.sourceId = sourceId;
-            return this;
-        }
-
         @Override
-        public ModifySourceServerAttributeRequest build() {
-            return new ModifySourceServerAttributeRequest(this);
+        public CreateWorkgroupRequest build() {
+            return new CreateWorkgroupRequest(this);
         } 
 
     } 

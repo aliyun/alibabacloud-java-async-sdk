@@ -84,6 +84,7 @@ public class StopReplicationJobRequest extends Request {
 
         /**
          * <p>The migration job ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>j-bw526m1vi6x21qh****</p>

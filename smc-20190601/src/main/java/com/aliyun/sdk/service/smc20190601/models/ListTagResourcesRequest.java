@@ -172,6 +172,7 @@ public class ListTagResourcesRequest extends Request {
          * <li>sourceserver: migration source.</li>
          * <li>replicationjob: migration job.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>sourceserver</p>

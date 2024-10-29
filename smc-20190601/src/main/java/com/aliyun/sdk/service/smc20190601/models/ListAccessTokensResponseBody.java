@@ -289,7 +289,7 @@ public class ListAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the activation code was created. The time follows the <a href="~~25696~~">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the activation code was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-09T02:35:44Z</p>

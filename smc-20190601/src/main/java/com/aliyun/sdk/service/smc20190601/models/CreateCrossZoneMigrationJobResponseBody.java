@@ -50,7 +50,10 @@ public class CreateCrossZoneMigrationJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * <p>The ID of the migration job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bp17bclvg344jlyt****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +61,10 @@ public class CreateCrossZoneMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9DBD2F8-DE5A-5844-BA6F-957A996CBD78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
