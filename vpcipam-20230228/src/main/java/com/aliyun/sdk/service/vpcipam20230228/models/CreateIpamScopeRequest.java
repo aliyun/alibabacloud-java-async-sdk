@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpamScopeRequest} extends {@link RequestModel}
  *
  * <p>CreateIpamScopeRequest</p>
@@ -227,7 +228,10 @@ public class CreateIpamScopeRequest extends Request {
         }
 
         /**
-         * IpamId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-ccxbnsbhew0d6t****</p>
          */
         public Builder ipamId(String ipamId) {
             this.putQueryParameter("IpamId", ipamId);
@@ -281,7 +285,10 @@ public class CreateIpamScopeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -323,6 +330,12 @@ public class CreateIpamScopeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateIpamScopeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIpamScopeRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpamScopesResponseBody} extends {@link TeaModel}
  *
  * <p>ListIpamScopesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListIpamScopesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIpamScopesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpamScopesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -211,6 +218,12 @@ public class ListIpamScopesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIpamScopesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpamScopesResponseBody</p>
+     */
     public static class IpamScopes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteIpamScopeResponse} extends {@link TeaModel}
+ * {@link UpdateIpamPoolAllocationResponse} extends {@link TeaModel}
  *
- * <p>DeleteIpamScopeResponse</p>
+ * <p>UpdateIpamPoolAllocationResponse</p>
  */
-public class DeleteIpamScopeResponse extends Response {
+public class UpdateIpamPoolAllocationResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DeleteIpamScopeResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteIpamScopeResponseBody body;
+    private UpdateIpamPoolAllocationResponseBody body;
 
-    private DeleteIpamScopeResponse(BuilderImpl builder) {
+    private UpdateIpamPoolAllocationResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteIpamScopeResponse create() {
+    public static UpdateIpamPoolAllocationResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DeleteIpamScopeResponse extends Response {
     /**
      * @return body
      */
-    public DeleteIpamScopeResponseBody getBody() {
+    public UpdateIpamPoolAllocationResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteIpamScopeResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateIpamPoolAllocationResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteIpamScopeResponseBody body);
+        Builder body(UpdateIpamPoolAllocationResponseBody body);
 
         @Override
-        DeleteIpamScopeResponse build();
+        UpdateIpamPoolAllocationResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteIpamScopeResponse, Builder>
+            extends Response.BuilderImpl<UpdateIpamPoolAllocationResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteIpamScopeResponseBody body; 
+        private UpdateIpamPoolAllocationResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteIpamScopeResponse response) {
+        private BuilderImpl(UpdateIpamPoolAllocationResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DeleteIpamScopeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteIpamScopeResponseBody body) {
+        public Builder body(UpdateIpamPoolAllocationResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteIpamScopeResponse build() {
-            return new DeleteIpamScopeResponse(this);
+        public UpdateIpamPoolAllocationResponse build() {
+            return new UpdateIpamPoolAllocationResponse(this);
         } 
 
     } 

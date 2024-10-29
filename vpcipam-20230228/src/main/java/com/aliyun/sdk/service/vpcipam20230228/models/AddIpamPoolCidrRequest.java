@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddIpamPoolCidrRequest} extends {@link RequestModel}
  *
  * <p>AddIpamPoolCidrRequest</p>
@@ -112,7 +113,10 @@ public class AddIpamPoolCidrRequest extends Request {
         } 
 
         /**
-         * Cidr.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         public Builder cidr(String cidr) {
             this.putQueryParameter("Cidr", cidr);
@@ -139,7 +143,10 @@ public class AddIpamPoolCidrRequest extends Request {
         }
 
         /**
-         * IpamPoolId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-6rcq3tobayc20t****</p>
          */
         public Builder ipamPoolId(String ipamPoolId) {
             this.putQueryParameter("IpamPoolId", ipamPoolId);
@@ -148,7 +155,10 @@ public class AddIpamPoolCidrRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

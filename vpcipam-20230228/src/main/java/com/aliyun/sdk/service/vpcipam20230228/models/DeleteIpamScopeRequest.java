@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIpamScopeRequest} extends {@link RequestModel}
  *
  * <p>DeleteIpamScopeRequest</p>
@@ -171,7 +172,10 @@ public class DeleteIpamScopeRequest extends Request {
         }
 
         /**
-         * IpamScopeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-scope-glfmcyldpm8lsy****</p>
          */
         public Builder ipamScopeId(String ipamScopeId) {
             this.putQueryParameter("IpamScopeId", ipamScopeId);
@@ -198,7 +202,10 @@ public class DeleteIpamScopeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

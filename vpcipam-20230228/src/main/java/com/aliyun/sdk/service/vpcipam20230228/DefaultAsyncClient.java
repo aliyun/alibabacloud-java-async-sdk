@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddIpamPoolCidr  AddIpamPoolCidrRequest
+     * @return AddIpamPoolCidrResponse
+     */
     @Override
     public CompletableFuture<AddIpamPoolCidrResponse> addIpamPoolCidr(AddIpamPoolCidrRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIpam  CreateIpamRequest
+     * @return CreateIpamResponse
+     */
     @Override
     public CompletableFuture<CreateIpamResponse> createIpam(CreateIpamRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIpamPool  CreateIpamPoolRequest
+     * @return CreateIpamPoolResponse
+     */
     @Override
     public CompletableFuture<CreateIpamPoolResponse> createIpamPool(CreateIpamPoolRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIpamPoolAllocation  CreateIpamPoolAllocationRequest
+     * @return CreateIpamPoolAllocationResponse
+     */
     @Override
     public CompletableFuture<CreateIpamPoolAllocationResponse> createIpamPoolAllocation(CreateIpamPoolAllocationRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIpamScope  CreateIpamScopeRequest
+     * @return CreateIpamScopeResponse
+     */
     @Override
     public CompletableFuture<CreateIpamScopeResponse> createIpamScope(CreateIpamScopeRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIpam  DeleteIpamRequest
+     * @return DeleteIpamResponse
+     */
     @Override
     public CompletableFuture<DeleteIpamResponse> deleteIpam(DeleteIpamRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIpamPool  DeleteIpamPoolRequest
+     * @return DeleteIpamPoolResponse
+     */
     @Override
     public CompletableFuture<DeleteIpamPoolResponse> deleteIpamPool(DeleteIpamPoolRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIpamPoolAllocation  DeleteIpamPoolAllocationRequest
+     * @return DeleteIpamPoolAllocationResponse
+     */
     @Override
     public CompletableFuture<DeleteIpamPoolAllocationResponse> deleteIpamPoolAllocation(DeleteIpamPoolAllocationRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIpamPoolCidr  DeleteIpamPoolCidrRequest
+     * @return DeleteIpamPoolCidrResponse
+     */
     @Override
     public CompletableFuture<DeleteIpamPoolCidrResponse> deleteIpamPoolCidr(DeleteIpamPoolCidrRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIpamScope  DeleteIpamScopeRequest
+     * @return DeleteIpamScopeResponse
+     */
     @Override
     public CompletableFuture<DeleteIpamScopeResponse> deleteIpamScope(DeleteIpamScopeRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVpcIpamServiceStatus  GetVpcIpamServiceStatusRequest
+     * @return GetVpcIpamServiceStatusResponse
+     */
     @Override
     public CompletableFuture<GetVpcIpamServiceStatusResponse> getVpcIpamServiceStatus(GetVpcIpamServiceStatusRequest request) {
         try {
@@ -207,6 +255,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpamDiscoveredResource  ListIpamDiscoveredResourceRequest
+     * @return ListIpamDiscoveredResourceResponse
+     */
+    @Override
+    public CompletableFuture<ListIpamDiscoveredResourceResponse> listIpamDiscoveredResource(ListIpamDiscoveredResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListIpamDiscoveredResource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListIpamDiscoveredResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListIpamDiscoveredResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListIpamPoolAllocations  ListIpamPoolAllocationsRequest
+     * @return ListIpamPoolAllocationsResponse
+     */
     @Override
     public CompletableFuture<ListIpamPoolAllocationsResponse> listIpamPoolAllocations(ListIpamPoolAllocationsRequest request) {
         try {
@@ -221,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpamPoolCidrs  ListIpamPoolCidrsRequest
+     * @return ListIpamPoolCidrsResponse
+     */
     @Override
     public CompletableFuture<ListIpamPoolCidrsResponse> listIpamPoolCidrs(ListIpamPoolCidrsRequest request) {
         try {
@@ -235,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpamPools  ListIpamPoolsRequest
+     * @return ListIpamPoolsResponse
+     */
     @Override
     public CompletableFuture<ListIpamPoolsResponse> listIpamPools(ListIpamPoolsRequest request) {
         try {
@@ -249,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpamResourceCidrs  ListIpamResourceCidrsRequest
+     * @return ListIpamResourceCidrsResponse
+     */
     @Override
     public CompletableFuture<ListIpamResourceCidrsResponse> listIpamResourceCidrs(ListIpamResourceCidrsRequest request) {
         try {
@@ -263,6 +345,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpamResourceDiscoveries  ListIpamResourceDiscoveriesRequest
+     * @return ListIpamResourceDiscoveriesResponse
+     */
+    @Override
+    public CompletableFuture<ListIpamResourceDiscoveriesResponse> listIpamResourceDiscoveries(ListIpamResourceDiscoveriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListIpamResourceDiscoveries").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListIpamResourceDiscoveriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListIpamResourceDiscoveriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListIpamScopes  ListIpamScopesRequest
+     * @return ListIpamScopesResponse
+     */
     @Override
     public CompletableFuture<ListIpamScopesResponse> listIpamScopes(ListIpamScopesRequest request) {
         try {
@@ -277,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpams  ListIpamsRequest
+     * @return ListIpamsResponse
+     */
     @Override
     public CompletableFuture<ListIpamsResponse> listIpams(ListIpamsRequest request) {
         try {
@@ -291,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -305,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenVpcIpamService  OpenVpcIpamServiceRequest
+     * @return OpenVpcIpamServiceResponse
+     */
     @Override
     public CompletableFuture<OpenVpcIpamServiceResponse> openVpcIpamService(OpenVpcIpamServiceRequest request) {
         try {
@@ -319,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -333,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -347,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIpam  UpdateIpamRequest
+     * @return UpdateIpamResponse
+     */
     @Override
     public CompletableFuture<UpdateIpamResponse> updateIpam(UpdateIpamRequest request) {
         try {
@@ -361,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIpamPool  UpdateIpamPoolRequest
+     * @return UpdateIpamPoolResponse
+     */
     @Override
     public CompletableFuture<UpdateIpamPoolResponse> updateIpamPool(UpdateIpamPoolRequest request) {
         try {
@@ -375,6 +507,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIpamPoolAllocation  UpdateIpamPoolAllocationRequest
+     * @return UpdateIpamPoolAllocationResponse
+     */
+    @Override
+    public CompletableFuture<UpdateIpamPoolAllocationResponse> updateIpamPoolAllocation(UpdateIpamPoolAllocationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateIpamPoolAllocation").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateIpamPoolAllocationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateIpamPoolAllocationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateIpamScope  UpdateIpamScopeRequest
+     * @return UpdateIpamScopeResponse
+     */
     @Override
     public CompletableFuture<UpdateIpamScopeResponse> updateIpamScope(UpdateIpamScopeRequest request) {
         try {

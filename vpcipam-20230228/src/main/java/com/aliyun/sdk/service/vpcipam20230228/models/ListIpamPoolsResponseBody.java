@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpamPoolsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIpamPoolsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListIpamPoolsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIpamPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpamPoolsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -211,6 +218,12 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIpamPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpamPoolsResponseBody</p>
+     */
     public static class IpamPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationDefaultCidrMask")
         private Integer allocationDefaultCidrMask;

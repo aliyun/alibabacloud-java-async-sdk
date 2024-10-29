@@ -7,31 +7,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateIpamRequest} extends {@link RequestModel}
+ * {@link ListIpamResourceDiscoveriesRequest} extends {@link RequestModel}
  *
- * <p>CreateIpamRequest</p>
+ * <p>ListIpamResourceDiscoveriesRequest</p>
  */
-public class CreateIpamRequest extends Request {
+public class ListIpamResourceDiscoveriesRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
+    @com.aliyun.core.annotation.NameInMap("IpamResourceDiscoveryIds")
+    private java.util.List < String > ipamResourceDiscoveryIds;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DryRun")
-    private Boolean dryRun;
+    @com.aliyun.core.annotation.NameInMap("IpamResourceDiscoveryName")
+    private String ipamResourceDiscoveryName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IpamDescription")
-    private String ipamDescription;
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
+    private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IpamName")
-    private String ipamName;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OperatingRegionList")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > operatingRegionList;
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -59,30 +55,34 @@ public class CreateIpamRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
-    private CreateIpamRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
+    private ListIpamResourceDiscoveriesRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
-        this.dryRun = builder.dryRun;
-        this.ipamDescription = builder.ipamDescription;
-        this.ipamName = builder.ipamName;
-        this.operatingRegionList = builder.operatingRegionList;
+        this.ipamResourceDiscoveryIds = builder.ipamResourceDiscoveryIds;
+        this.ipamResourceDiscoveryName = builder.ipamResourceDiscoveryName;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.tag = builder.tag;
+        this.tags = builder.tags;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateIpamRequest create() {
+    public static ListIpamResourceDiscoveriesRequest create() {
         return builder().build();
     }
 
@@ -92,38 +92,31 @@ public class CreateIpamRequest extends Request {
     }
 
     /**
-     * @return clientToken
+     * @return ipamResourceDiscoveryIds
      */
-    public String getClientToken() {
-        return this.clientToken;
+    public java.util.List < String > getIpamResourceDiscoveryIds() {
+        return this.ipamResourceDiscoveryIds;
     }
 
     /**
-     * @return dryRun
+     * @return ipamResourceDiscoveryName
      */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getIpamResourceDiscoveryName() {
+        return this.ipamResourceDiscoveryName;
     }
 
     /**
-     * @return ipamDescription
+     * @return maxResults
      */
-    public String getIpamDescription() {
-        return this.ipamDescription;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
-     * @return ipamName
+     * @return nextToken
      */
-    public String getIpamName() {
-        return this.ipamName;
-    }
-
-    /**
-     * @return operatingRegionList
-     */
-    public java.util.List < String > getOperatingRegionList() {
-        return this.operatingRegionList;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -169,88 +162,86 @@ public class CreateIpamRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return tags
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public java.util.List < Tags> getTags() {
+        return this.tags;
     }
 
-    public static final class Builder extends Request.Builder<CreateIpamRequest, Builder> {
-        private String clientToken; 
-        private Boolean dryRun; 
-        private String ipamDescription; 
-        private String ipamName; 
-        private java.util.List < String > operatingRegionList; 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    public static final class Builder extends Request.Builder<ListIpamResourceDiscoveriesRequest, Builder> {
+        private java.util.List < String > ipamResourceDiscoveryIds; 
+        private String ipamResourceDiscoveryName; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List < Tags> tags; 
+        private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateIpamRequest request) {
+        private Builder(ListIpamResourceDiscoveriesRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
-            this.dryRun = request.dryRun;
-            this.ipamDescription = request.ipamDescription;
-            this.ipamName = request.ipamName;
-            this.operatingRegionList = request.operatingRegionList;
+            this.ipamResourceDiscoveryIds = request.ipamResourceDiscoveryIds;
+            this.ipamResourceDiscoveryName = request.ipamResourceDiscoveryName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.tag = request.tag;
+            this.tags = request.tags;
+            this.type = request.type;
         } 
 
         /**
-         * ClientToken.
+         * IpamResourceDiscoveryIds.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder ipamResourceDiscoveryIds(java.util.List < String > ipamResourceDiscoveryIds) {
+            this.putQueryParameter("IpamResourceDiscoveryIds", ipamResourceDiscoveryIds);
+            this.ipamResourceDiscoveryIds = ipamResourceDiscoveryIds;
             return this;
         }
 
         /**
-         * DryRun.
+         * IpamResourceDiscoveryName.
          */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
+        public Builder ipamResourceDiscoveryName(String ipamResourceDiscoveryName) {
+            this.putQueryParameter("IpamResourceDiscoveryName", ipamResourceDiscoveryName);
+            this.ipamResourceDiscoveryName = ipamResourceDiscoveryName;
             return this;
         }
 
         /**
-         * IpamDescription.
+         * MaxResults.
          */
-        public Builder ipamDescription(String ipamDescription) {
-            this.putQueryParameter("IpamDescription", ipamDescription);
-            this.ipamDescription = ipamDescription;
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * IpamName.
+         * NextToken.
          */
-        public Builder ipamName(String ipamName) {
-            this.putQueryParameter("IpamName", ipamName);
-            this.ipamName = ipamName;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         */
-        public Builder operatingRegionList(java.util.List < String > operatingRegionList) {
-            this.putQueryParameter("OperatingRegionList", operatingRegionList);
-            this.operatingRegionList = operatingRegionList;
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -312,35 +303,44 @@ public class CreateIpamRequest extends Request {
         }
 
         /**
-         * Tag.
+         * Tags.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
         @Override
-        public CreateIpamRequest build() {
-            return new CreateIpamRequest(this);
+        public ListIpamResourceDiscoveriesRequest build() {
+            return new ListIpamResourceDiscoveriesRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateIpamRequest} extends {@link TeaModel}
+     * {@link ListIpamResourceDiscoveriesRequest} extends {@link TeaModel}
      *
-     * <p>CreateIpamRequest</p>
+     * <p>ListIpamResourceDiscoveriesRequest</p>
      */
-    public static class Tag extends TeaModel {
+    public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Tag(Builder builder) {
+        private Tags(Builder builder) {
             this.key = builder.key;
             this.value = builder.value;
         }
@@ -349,7 +349,7 @@ public class CreateIpamRequest extends Request {
             return new Builder();
         }
 
-        public static Tag create() {
+        public static Tags create() {
             return builder().build();
         }
 
@@ -387,8 +387,8 @@ public class CreateIpamRequest extends Request {
                 return this;
             }
 
-            public Tag build() {
-                return new Tag(this);
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

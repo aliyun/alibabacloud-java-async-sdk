@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
@@ -155,7 +156,10 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * NewResourceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek3ctkufaw****</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -182,7 +186,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -191,7 +198,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-uq5dcfc2eqhpf4****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -218,7 +228,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

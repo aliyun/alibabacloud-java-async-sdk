@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpamPoolCidrsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIpamPoolCidrsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIpamPoolCidrsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpamPoolCidrsResponseBody</p>
+     */
     public static class IpamPoolCidrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;

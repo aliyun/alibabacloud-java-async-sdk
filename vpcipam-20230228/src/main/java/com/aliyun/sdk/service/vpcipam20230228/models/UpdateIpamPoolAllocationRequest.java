@@ -7,19 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateIpamPoolAllocationRequest} extends {@link RequestModel}
+ * {@link UpdateIpamPoolAllocationRequest} extends {@link RequestModel}
  *
- * <p>CreateIpamPoolAllocationRequest</p>
+ * <p>UpdateIpamPoolAllocationRequest</p>
  */
-public class CreateIpamPoolAllocationRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Cidr")
-    private String cidr;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CidrMask")
-    private Integer cidrMask;
-
+public class UpdateIpamPoolAllocationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
@@ -33,28 +25,26 @@ public class CreateIpamPoolAllocationRequest extends Request {
     private String ipamPoolAllocationDescription;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IpamPoolAllocationName")
-    private String ipamPoolAllocationName;
+    @com.aliyun.core.annotation.NameInMap("IpamPoolAllocationId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String ipamPoolAllocationId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IpamPoolId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String ipamPoolId;
+    @com.aliyun.core.annotation.NameInMap("IpamPoolAllocationName")
+    private String ipamPoolAllocationName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private CreateIpamPoolAllocationRequest(Builder builder) {
+    private UpdateIpamPoolAllocationRequest(Builder builder) {
         super(builder);
-        this.cidr = builder.cidr;
-        this.cidrMask = builder.cidrMask;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ipamPoolAllocationDescription = builder.ipamPoolAllocationDescription;
+        this.ipamPoolAllocationId = builder.ipamPoolAllocationId;
         this.ipamPoolAllocationName = builder.ipamPoolAllocationName;
-        this.ipamPoolId = builder.ipamPoolId;
         this.regionId = builder.regionId;
     }
 
@@ -62,27 +52,13 @@ public class CreateIpamPoolAllocationRequest extends Request {
         return new Builder();
     }
 
-    public static CreateIpamPoolAllocationRequest create() {
+    public static UpdateIpamPoolAllocationRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return cidr
-     */
-    public String getCidr() {
-        return this.cidr;
-    }
-
-    /**
-     * @return cidrMask
-     */
-    public Integer getCidrMask() {
-        return this.cidrMask;
     }
 
     /**
@@ -107,17 +83,17 @@ public class CreateIpamPoolAllocationRequest extends Request {
     }
 
     /**
+     * @return ipamPoolAllocationId
+     */
+    public String getIpamPoolAllocationId() {
+        return this.ipamPoolAllocationId;
+    }
+
+    /**
      * @return ipamPoolAllocationName
      */
     public String getIpamPoolAllocationName() {
         return this.ipamPoolAllocationName;
-    }
-
-    /**
-     * @return ipamPoolId
-     */
-    public String getIpamPoolId() {
-        return this.ipamPoolId;
     }
 
     /**
@@ -127,49 +103,27 @@ public class CreateIpamPoolAllocationRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<CreateIpamPoolAllocationRequest, Builder> {
-        private String cidr; 
-        private Integer cidrMask; 
+    public static final class Builder extends Request.Builder<UpdateIpamPoolAllocationRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String ipamPoolAllocationDescription; 
+        private String ipamPoolAllocationId; 
         private String ipamPoolAllocationName; 
-        private String ipamPoolId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateIpamPoolAllocationRequest request) {
+        private Builder(UpdateIpamPoolAllocationRequest request) {
             super(request);
-            this.cidr = request.cidr;
-            this.cidrMask = request.cidrMask;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ipamPoolAllocationDescription = request.ipamPoolAllocationDescription;
+            this.ipamPoolAllocationId = request.ipamPoolAllocationId;
             this.ipamPoolAllocationName = request.ipamPoolAllocationName;
-            this.ipamPoolId = request.ipamPoolId;
             this.regionId = request.regionId;
         } 
-
-        /**
-         * Cidr.
-         */
-        public Builder cidr(String cidr) {
-            this.putQueryParameter("Cidr", cidr);
-            this.cidr = cidr;
-            return this;
-        }
-
-        /**
-         * CidrMask.
-         */
-        public Builder cidrMask(Integer cidrMask) {
-            this.putQueryParameter("CidrMask", cidrMask);
-            this.cidrMask = cidrMask;
-            return this;
-        }
 
         /**
          * ClientToken.
@@ -199,23 +153,23 @@ public class CreateIpamPoolAllocationRequest extends Request {
         }
 
         /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-alloc-112za33e4****</p>
+         */
+        public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
+            this.putQueryParameter("IpamPoolAllocationId", ipamPoolAllocationId);
+            this.ipamPoolAllocationId = ipamPoolAllocationId;
+            return this;
+        }
+
+        /**
          * IpamPoolAllocationName.
          */
         public Builder ipamPoolAllocationName(String ipamPoolAllocationName) {
             this.putQueryParameter("IpamPoolAllocationName", ipamPoolAllocationName);
             this.ipamPoolAllocationName = ipamPoolAllocationName;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipam-pool-6rcq3tobayc20t****</p>
-         */
-        public Builder ipamPoolId(String ipamPoolId) {
-            this.putQueryParameter("IpamPoolId", ipamPoolId);
-            this.ipamPoolId = ipamPoolId;
             return this;
         }
 
@@ -232,8 +186,8 @@ public class CreateIpamPoolAllocationRequest extends Request {
         }
 
         @Override
-        public CreateIpamPoolAllocationRequest build() {
-            return new CreateIpamPoolAllocationRequest(this);
+        public UpdateIpamPoolAllocationRequest build() {
+            return new UpdateIpamPoolAllocationRequest(this);
         } 
 
     } 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIpamPoolRequest} extends {@link RequestModel}
  *
  * <p>DeleteIpamPoolRequest</p>
@@ -171,7 +172,10 @@ public class DeleteIpamPoolRequest extends Request {
         }
 
         /**
-         * IpamPoolId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-6rcq3tobayc20t****</p>
          */
         public Builder ipamPoolId(String ipamPoolId) {
             this.putQueryParameter("IpamPoolId", ipamPoolId);
@@ -198,7 +202,10 @@ public class DeleteIpamPoolRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

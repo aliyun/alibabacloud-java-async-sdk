@@ -6,15 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIpamPoolAllocationRequest} extends {@link RequestModel}
  *
  * <p>DeleteIpamPoolAllocationRequest</p>
  */
 public class DeleteIpamPoolAllocationRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Cidr")
-    private String cidr;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
@@ -29,21 +26,15 @@ public class DeleteIpamPoolAllocationRequest extends Request {
     private String ipamPoolAllocationId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IpamPoolId")
-    private String ipamPoolId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteIpamPoolAllocationRequest(Builder builder) {
         super(builder);
-        this.cidr = builder.cidr;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ipamPoolAllocationId = builder.ipamPoolAllocationId;
-        this.ipamPoolId = builder.ipamPoolId;
         this.regionId = builder.regionId;
     }
 
@@ -58,13 +49,6 @@ public class DeleteIpamPoolAllocationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return cidr
-     */
-    public String getCidr() {
-        return this.cidr;
     }
 
     /**
@@ -89,13 +73,6 @@ public class DeleteIpamPoolAllocationRequest extends Request {
     }
 
     /**
-     * @return ipamPoolId
-     */
-    public String getIpamPoolId() {
-        return this.ipamPoolId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -103,11 +80,9 @@ public class DeleteIpamPoolAllocationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteIpamPoolAllocationRequest, Builder> {
-        private String cidr; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ipamPoolAllocationId; 
-        private String ipamPoolId; 
         private String regionId; 
 
         private Builder() {
@@ -116,22 +91,11 @@ public class DeleteIpamPoolAllocationRequest extends Request {
 
         private Builder(DeleteIpamPoolAllocationRequest request) {
             super(request);
-            this.cidr = request.cidr;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ipamPoolAllocationId = request.ipamPoolAllocationId;
-            this.ipamPoolId = request.ipamPoolId;
             this.regionId = request.regionId;
         } 
-
-        /**
-         * Cidr.
-         */
-        public Builder cidr(String cidr) {
-            this.putQueryParameter("Cidr", cidr);
-            this.cidr = cidr;
-            return this;
-        }
 
         /**
          * ClientToken.
@@ -152,7 +116,10 @@ public class DeleteIpamPoolAllocationRequest extends Request {
         }
 
         /**
-         * IpamPoolAllocationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-alloc-c4vhvr3b22mmc6****</p>
          */
         public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
             this.putQueryParameter("IpamPoolAllocationId", ipamPoolAllocationId);
@@ -161,16 +128,10 @@ public class DeleteIpamPoolAllocationRequest extends Request {
         }
 
         /**
-         * IpamPoolId.
-         */
-        public Builder ipamPoolId(String ipamPoolId) {
-            this.putQueryParameter("IpamPoolId", ipamPoolId);
-            this.ipamPoolId = ipamPoolId;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

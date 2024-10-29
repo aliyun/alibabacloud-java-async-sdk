@@ -7,15 +7,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteIpamResponseBody} extends {@link TeaModel}
+ * {@link UpdateIpamPoolAllocationResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteIpamResponseBody</p>
+ * <p>UpdateIpamPoolAllocationResponseBody</p>
  */
-public class DeleteIpamResponseBody extends TeaModel {
+public class UpdateIpamPoolAllocationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteIpamResponseBody(Builder builder) {
+    private UpdateIpamPoolAllocationResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class DeleteIpamResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteIpamResponseBody create() {
+    public static UpdateIpamPoolAllocationResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class DeleteIpamResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteIpamResponseBody build() {
-            return new DeleteIpamResponseBody(this);
+        public UpdateIpamPoolAllocationResponseBody build() {
+            return new UpdateIpamPoolAllocationResponseBody(this);
         } 
 
     } 

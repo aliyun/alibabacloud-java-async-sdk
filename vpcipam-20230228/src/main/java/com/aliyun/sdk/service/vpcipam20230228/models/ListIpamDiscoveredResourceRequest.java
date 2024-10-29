@@ -7,21 +7,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListIpamResourceCidrsRequest} extends {@link RequestModel}
+ * {@link ListIpamDiscoveredResourceRequest} extends {@link RequestModel}
  *
- * <p>ListIpamResourceCidrsRequest</p>
+ * <p>ListIpamDiscoveredResourceRequest</p>
  */
-public class ListIpamResourceCidrsRequest extends Request {
+public class ListIpamDiscoveredResourceRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IpamPoolId")
-    private String ipamPoolId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IpamScopeId")
-    private String ipamScopeId;
+    @com.aliyun.core.annotation.NameInMap("IpamResourceDiscoveryId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String ipamResourceDiscoveryId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
@@ -34,39 +32,29 @@ public class ListIpamResourceCidrsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceId")
-    private String resourceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String resourceRegionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("VpcId")
-    private String vpcId;
-
-    private ListIpamResourceCidrsRequest(Builder builder) {
+    private ListIpamDiscoveredResourceRequest(Builder builder) {
         super(builder);
-        this.ipamPoolId = builder.ipamPoolId;
-        this.ipamScopeId = builder.ipamScopeId;
+        this.ipamResourceDiscoveryId = builder.ipamResourceDiscoveryId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
-        this.resourceId = builder.resourceId;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceRegionId = builder.resourceRegionId;
         this.resourceType = builder.resourceType;
-        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListIpamResourceCidrsRequest create() {
+    public static ListIpamDiscoveredResourceRequest create() {
         return builder().build();
     }
 
@@ -76,17 +64,10 @@ public class ListIpamResourceCidrsRequest extends Request {
     }
 
     /**
-     * @return ipamPoolId
+     * @return ipamResourceDiscoveryId
      */
-    public String getIpamPoolId() {
-        return this.ipamPoolId;
-    }
-
-    /**
-     * @return ipamScopeId
-     */
-    public String getIpamScopeId() {
-        return this.ipamScopeId;
+    public String getIpamResourceDiscoveryId() {
+        return this.ipamResourceDiscoveryId;
     }
 
     /**
@@ -111,17 +92,10 @@ public class ListIpamResourceCidrsRequest extends Request {
     }
 
     /**
-     * @return resourceId
+     * @return resourceRegionId
      */
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getResourceRegionId() {
+        return this.resourceRegionId;
     }
 
     /**
@@ -131,56 +105,37 @@ public class ListIpamResourceCidrsRequest extends Request {
         return this.resourceType;
     }
 
-    /**
-     * @return vpcId
-     */
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public static final class Builder extends Request.Builder<ListIpamResourceCidrsRequest, Builder> {
-        private String ipamPoolId; 
-        private String ipamScopeId; 
+    public static final class Builder extends Request.Builder<ListIpamDiscoveredResourceRequest, Builder> {
+        private String ipamResourceDiscoveryId; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private String resourceId; 
-        private Long resourceOwnerId; 
+        private String resourceRegionId; 
         private String resourceType; 
-        private String vpcId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListIpamResourceCidrsRequest request) {
+        private Builder(ListIpamDiscoveredResourceRequest request) {
             super(request);
-            this.ipamPoolId = request.ipamPoolId;
-            this.ipamScopeId = request.ipamScopeId;
+            this.ipamResourceDiscoveryId = request.ipamResourceDiscoveryId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
-            this.resourceId = request.resourceId;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceRegionId = request.resourceRegionId;
             this.resourceType = request.resourceType;
-            this.vpcId = request.vpcId;
         } 
 
         /**
-         * IpamPoolId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
          */
-        public Builder ipamPoolId(String ipamPoolId) {
-            this.putQueryParameter("IpamPoolId", ipamPoolId);
-            this.ipamPoolId = ipamPoolId;
-            return this;
-        }
-
-        /**
-         * IpamScopeId.
-         */
-        public Builder ipamScopeId(String ipamScopeId) {
-            this.putQueryParameter("IpamScopeId", ipamScopeId);
-            this.ipamScopeId = ipamScopeId;
+        public Builder ipamResourceDiscoveryId(String ipamResourceDiscoveryId) {
+            this.putQueryParameter("IpamResourceDiscoveryId", ipamResourceDiscoveryId);
+            this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
             return this;
         }
 
@@ -215,20 +170,14 @@ public class ListIpamResourceCidrsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
-        public Builder resourceId(String resourceId) {
-            this.putQueryParameter("ResourceId", resourceId);
-            this.resourceId = resourceId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder resourceRegionId(String resourceRegionId) {
+            this.putQueryParameter("ResourceRegionId", resourceRegionId);
+            this.resourceRegionId = resourceRegionId;
             return this;
         }
 
@@ -241,18 +190,9 @@ public class ListIpamResourceCidrsRequest extends Request {
             return this;
         }
 
-        /**
-         * VpcId.
-         */
-        public Builder vpcId(String vpcId) {
-            this.putQueryParameter("VpcId", vpcId);
-            this.vpcId = vpcId;
-            return this;
-        }
-
         @Override
-        public ListIpamResourceCidrsRequest build() {
-            return new ListIpamResourceCidrsRequest(this);
+        public ListIpamDiscoveredResourceRequest build() {
+            return new ListIpamDiscoveredResourceRequest(this);
         } 
 
     } 

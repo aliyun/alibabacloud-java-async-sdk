@@ -7,19 +7,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListIpamResourceCidrsResponseBody} extends {@link TeaModel}
+ * {@link ListIpamDiscoveredResourceResponseBody} extends {@link TeaModel}
  *
- * <p>ListIpamResourceCidrsResponseBody</p>
+ * <p>ListIpamDiscoveredResourceResponseBody</p>
  */
-public class ListIpamResourceCidrsResponseBody extends TeaModel {
+public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Count")
-    private Long count;
+    private Integer count;
 
-    @com.aliyun.core.annotation.NameInMap("IpamResourceCidrs")
-    private java.util.List < IpamResourceCidrs> ipamResourceCidrs;
+    @com.aliyun.core.annotation.NameInMap("IpamDiscoveredResources")
+    private java.util.List < IpamDiscoveredResources> ipamDiscoveredResources;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
-    private Long maxResults;
+    private Integer maxResults;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -30,9 +30,9 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    private ListIpamResourceCidrsResponseBody(Builder builder) {
+    private ListIpamDiscoveredResourceResponseBody(Builder builder) {
         this.count = builder.count;
-        this.ipamResourceCidrs = builder.ipamResourceCidrs;
+        this.ipamDiscoveredResources = builder.ipamDiscoveredResources;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
@@ -43,28 +43,28 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListIpamResourceCidrsResponseBody create() {
+    public static ListIpamDiscoveredResourceResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return count
      */
-    public Long getCount() {
+    public Integer getCount() {
         return this.count;
     }
 
     /**
-     * @return ipamResourceCidrs
+     * @return ipamDiscoveredResources
      */
-    public java.util.List < IpamResourceCidrs> getIpamResourceCidrs() {
-        return this.ipamResourceCidrs;
+    public java.util.List < IpamDiscoveredResources> getIpamDiscoveredResources() {
+        return this.ipamDiscoveredResources;
     }
 
     /**
      * @return maxResults
      */
-    public Long getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -90,9 +90,9 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long count; 
-        private java.util.List < IpamResourceCidrs> ipamResourceCidrs; 
-        private Long maxResults; 
+        private Integer count; 
+        private java.util.List < IpamDiscoveredResources> ipamDiscoveredResources; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
@@ -100,23 +100,23 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         /**
          * Count.
          */
-        public Builder count(Long count) {
+        public Builder count(Integer count) {
             this.count = count;
             return this;
         }
 
         /**
-         * IpamResourceCidrs.
+         * IpamDiscoveredResources.
          */
-        public Builder ipamResourceCidrs(java.util.List < IpamResourceCidrs> ipamResourceCidrs) {
-            this.ipamResourceCidrs = ipamResourceCidrs;
+        public Builder ipamDiscoveredResources(java.util.List < IpamDiscoveredResources> ipamDiscoveredResources) {
+            this.ipamDiscoveredResources = ipamDiscoveredResources;
             return this;
         }
 
         /**
          * MaxResults.
          */
-        public Builder maxResults(Long maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
@@ -145,48 +145,33 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             return this;
         }
 
-        public ListIpamResourceCidrsResponseBody build() {
-            return new ListIpamResourceCidrsResponseBody(this);
+        public ListIpamDiscoveredResourceResponseBody build() {
+            return new ListIpamDiscoveredResourceResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListIpamResourceCidrsResponseBody} extends {@link TeaModel}
+     * {@link ListIpamDiscoveredResourceResponseBody} extends {@link TeaModel}
      *
-     * <p>ListIpamResourceCidrsResponseBody</p>
+     * <p>ListIpamDiscoveredResourceResponseBody</p>
      */
-    public static class IpamResourceCidrs extends TeaModel {
+    public static class IpamDiscoveredResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
         @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @com.aliyun.core.annotation.NameInMap("ComplianceStatus")
-        private String complianceStatus;
+        @com.aliyun.core.annotation.NameInMap("DiscoveryTime")
+        private String discoveryTime;
 
         @com.aliyun.core.annotation.NameInMap("IpUsage")
         private String ipUsage;
 
-        @com.aliyun.core.annotation.NameInMap("IpamAllocationId")
-        private String ipamAllocationId;
-
-        @com.aliyun.core.annotation.NameInMap("IpamId")
-        private String ipamId;
-
-        @com.aliyun.core.annotation.NameInMap("IpamPoolId")
-        private String ipamPoolId;
-
-        @com.aliyun.core.annotation.NameInMap("IpamScopeId")
-        private String ipamScopeId;
-
-        @com.aliyun.core.annotation.NameInMap("ManagementStatus")
-        private String managementStatus;
-
-        @com.aliyun.core.annotation.NameInMap("OverlapStatus")
-        private String overlapStatus;
+        @com.aliyun.core.annotation.NameInMap("IpamResourceDiscoveryId")
+        private String ipamResourceDiscoveryId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -203,29 +188,20 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceCidr")
         private String sourceCidr;
 
-        @com.aliyun.core.annotation.NameInMap("Status")
-        private String status;
-
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        private IpamResourceCidrs(Builder builder) {
+        private IpamDiscoveredResources(Builder builder) {
             this.aliUid = builder.aliUid;
             this.cidr = builder.cidr;
-            this.complianceStatus = builder.complianceStatus;
+            this.discoveryTime = builder.discoveryTime;
             this.ipUsage = builder.ipUsage;
-            this.ipamAllocationId = builder.ipamAllocationId;
-            this.ipamId = builder.ipamId;
-            this.ipamPoolId = builder.ipamPoolId;
-            this.ipamScopeId = builder.ipamScopeId;
-            this.managementStatus = builder.managementStatus;
-            this.overlapStatus = builder.overlapStatus;
+            this.ipamResourceDiscoveryId = builder.ipamResourceDiscoveryId;
             this.resourceId = builder.resourceId;
             this.resourceOwnerId = builder.resourceOwnerId;
             this.resourceRegionId = builder.resourceRegionId;
             this.resourceType = builder.resourceType;
             this.sourceCidr = builder.sourceCidr;
-            this.status = builder.status;
             this.vpcId = builder.vpcId;
         }
 
@@ -233,7 +209,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static IpamResourceCidrs create() {
+        public static IpamDiscoveredResources create() {
             return builder().build();
         }
 
@@ -252,10 +228,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * @return complianceStatus
+         * @return discoveryTime
          */
-        public String getComplianceStatus() {
-            return this.complianceStatus;
+        public String getDiscoveryTime() {
+            return this.discoveryTime;
         }
 
         /**
@@ -266,45 +242,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * @return ipamAllocationId
+         * @return ipamResourceDiscoveryId
          */
-        public String getIpamAllocationId() {
-            return this.ipamAllocationId;
-        }
-
-        /**
-         * @return ipamId
-         */
-        public String getIpamId() {
-            return this.ipamId;
-        }
-
-        /**
-         * @return ipamPoolId
-         */
-        public String getIpamPoolId() {
-            return this.ipamPoolId;
-        }
-
-        /**
-         * @return ipamScopeId
-         */
-        public String getIpamScopeId() {
-            return this.ipamScopeId;
-        }
-
-        /**
-         * @return managementStatus
-         */
-        public String getManagementStatus() {
-            return this.managementStatus;
-        }
-
-        /**
-         * @return overlapStatus
-         */
-        public String getOverlapStatus() {
-            return this.overlapStatus;
+        public String getIpamResourceDiscoveryId() {
+            return this.ipamResourceDiscoveryId;
         }
 
         /**
@@ -343,13 +284,6 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -359,20 +293,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public static final class Builder {
             private Long aliUid; 
             private String cidr; 
-            private String complianceStatus; 
+            private String discoveryTime; 
             private String ipUsage; 
-            private String ipamAllocationId; 
-            private String ipamId; 
-            private String ipamPoolId; 
-            private String ipamScopeId; 
-            private String managementStatus; 
-            private String overlapStatus; 
+            private String ipamResourceDiscoveryId; 
             private String resourceId; 
             private Long resourceOwnerId; 
             private String resourceRegionId; 
             private String resourceType; 
             private String sourceCidr; 
-            private String status; 
             private String vpcId; 
 
             /**
@@ -392,10 +320,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * ComplianceStatus.
+             * DiscoveryTime.
              */
-            public Builder complianceStatus(String complianceStatus) {
-                this.complianceStatus = complianceStatus;
+            public Builder discoveryTime(String discoveryTime) {
+                this.discoveryTime = discoveryTime;
                 return this;
             }
 
@@ -408,50 +336,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamAllocationId.
+             * IpamResourceDiscoveryId.
              */
-            public Builder ipamAllocationId(String ipamAllocationId) {
-                this.ipamAllocationId = ipamAllocationId;
-                return this;
-            }
-
-            /**
-             * IpamId.
-             */
-            public Builder ipamId(String ipamId) {
-                this.ipamId = ipamId;
-                return this;
-            }
-
-            /**
-             * IpamPoolId.
-             */
-            public Builder ipamPoolId(String ipamPoolId) {
-                this.ipamPoolId = ipamPoolId;
-                return this;
-            }
-
-            /**
-             * IpamScopeId.
-             */
-            public Builder ipamScopeId(String ipamScopeId) {
-                this.ipamScopeId = ipamScopeId;
-                return this;
-            }
-
-            /**
-             * ManagementStatus.
-             */
-            public Builder managementStatus(String managementStatus) {
-                this.managementStatus = managementStatus;
-                return this;
-            }
-
-            /**
-             * OverlapStatus.
-             */
-            public Builder overlapStatus(String overlapStatus) {
-                this.overlapStatus = overlapStatus;
+            public Builder ipamResourceDiscoveryId(String ipamResourceDiscoveryId) {
+                this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
                 return this;
             }
 
@@ -496,14 +384,6 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
              * VpcId.
              */
             public Builder vpcId(String vpcId) {
@@ -511,8 +391,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
                 return this;
             }
 
-            public IpamResourceCidrs build() {
-                return new IpamResourceCidrs(this);
+            public IpamDiscoveredResources build() {
+                return new IpamDiscoveredResources(this);
             } 
 
         } 

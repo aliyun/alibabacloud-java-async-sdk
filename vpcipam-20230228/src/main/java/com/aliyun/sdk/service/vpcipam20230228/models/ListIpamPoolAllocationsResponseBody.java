@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpamPoolAllocationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIpamPoolAllocationsResponseBody</p>
@@ -150,6 +151,12 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIpamPoolAllocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpamPoolAllocationsResponseBody</p>
+     */
     public static class IpamPoolAllocations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
@@ -157,8 +164,14 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("IpamPoolAllocationDescription")
+        private String ipamPoolAllocationDescription;
+
         @com.aliyun.core.annotation.NameInMap("IpamPoolAllocationId")
         private String ipamPoolAllocationId;
+
+        @com.aliyun.core.annotation.NameInMap("IpamPoolAllocationName")
+        private String ipamPoolAllocationName;
 
         @com.aliyun.core.annotation.NameInMap("IpamPoolId")
         private String ipamPoolId;
@@ -187,7 +200,9 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         private IpamPoolAllocations(Builder builder) {
             this.cidr = builder.cidr;
             this.creationTime = builder.creationTime;
+            this.ipamPoolAllocationDescription = builder.ipamPoolAllocationDescription;
             this.ipamPoolAllocationId = builder.ipamPoolAllocationId;
+            this.ipamPoolAllocationName = builder.ipamPoolAllocationName;
             this.ipamPoolId = builder.ipamPoolId;
             this.regionId = builder.regionId;
             this.resourceId = builder.resourceId;
@@ -221,10 +236,24 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipamPoolAllocationDescription
+         */
+        public String getIpamPoolAllocationDescription() {
+            return this.ipamPoolAllocationDescription;
+        }
+
+        /**
          * @return ipamPoolAllocationId
          */
         public String getIpamPoolAllocationId() {
             return this.ipamPoolAllocationId;
+        }
+
+        /**
+         * @return ipamPoolAllocationName
+         */
+        public String getIpamPoolAllocationName() {
+            return this.ipamPoolAllocationName;
         }
 
         /**
@@ -286,7 +315,9 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         public static final class Builder {
             private String cidr; 
             private String creationTime; 
+            private String ipamPoolAllocationDescription; 
             private String ipamPoolAllocationId; 
+            private String ipamPoolAllocationName; 
             private String ipamPoolId; 
             private String regionId; 
             private String resourceId; 
@@ -313,10 +344,26 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
+             * IpamPoolAllocationDescription.
+             */
+            public Builder ipamPoolAllocationDescription(String ipamPoolAllocationDescription) {
+                this.ipamPoolAllocationDescription = ipamPoolAllocationDescription;
+                return this;
+            }
+
+            /**
              * IpamPoolAllocationId.
              */
             public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
                 this.ipamPoolAllocationId = ipamPoolAllocationId;
+                return this;
+            }
+
+            /**
+             * IpamPoolAllocationName.
+             */
+            public Builder ipamPoolAllocationName(String ipamPoolAllocationName) {
+                this.ipamPoolAllocationName = ipamPoolAllocationName;
                 return this;
             }
 
