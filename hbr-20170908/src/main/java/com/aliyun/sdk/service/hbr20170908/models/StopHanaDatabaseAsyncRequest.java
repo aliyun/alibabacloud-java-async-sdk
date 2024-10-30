@@ -96,6 +96,7 @@ public class StopHanaDatabaseAsyncRequest extends Request {
 
         /**
          * <p>The database name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>BWP</p>

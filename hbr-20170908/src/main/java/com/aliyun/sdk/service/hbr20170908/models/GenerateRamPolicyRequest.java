@@ -103,6 +103,7 @@ public class GenerateRamPolicyRequest extends Request {
          * <li>custom: custom policy</li>
          * <li>system: system policy</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>system</p>
@@ -143,6 +144,7 @@ public class GenerateRamPolicyRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-0007al3m******7ao</p>

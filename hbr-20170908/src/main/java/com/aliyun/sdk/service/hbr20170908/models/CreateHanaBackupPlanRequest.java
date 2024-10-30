@@ -176,6 +176,7 @@ public class CreateHanaBackupPlanRequest extends Request {
          * <li>INCREMENTAL: incremental backup</li>
          * <li>DIFFERENTIAL: differential backup</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -188,6 +189,7 @@ public class CreateHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-00024vyjj9******v</p>
@@ -200,6 +202,7 @@ public class CreateHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEMDB</p>
@@ -212,6 +215,7 @@ public class CreateHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The name of the backup plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>plan-20220110-113108</p>
@@ -240,6 +244,7 @@ public class CreateHanaBackupPlanRequest extends Request {
          * <li>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
          * <li>interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>I|1602673264|P1D</p>
@@ -252,6 +257,7 @@ public class CreateHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-0002pcwhdn******wmi</p>

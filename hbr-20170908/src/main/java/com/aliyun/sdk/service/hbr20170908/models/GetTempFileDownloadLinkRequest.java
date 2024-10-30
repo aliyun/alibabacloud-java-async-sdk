@@ -56,6 +56,7 @@ public class GetTempFileDownloadLinkRequest extends Request {
 
         /**
          * <p>The key that is used to download a file.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>temp/1797733170015112/report/r-000jdzknbp39cnf9hs99/r-000jdzknbp39cnf9hs99-total.csv</p>

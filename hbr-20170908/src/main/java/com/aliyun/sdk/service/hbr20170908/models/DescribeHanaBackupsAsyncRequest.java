@@ -281,6 +281,7 @@ public class DescribeHanaBackupsAsyncRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-00098******yuqvu</p>

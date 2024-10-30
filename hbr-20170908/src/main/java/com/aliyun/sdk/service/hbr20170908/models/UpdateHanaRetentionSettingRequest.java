@@ -141,6 +141,7 @@ public class UpdateHanaRetentionSettingRequest extends Request {
 
         /**
          * <p>The database name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEMDB</p>
@@ -157,6 +158,7 @@ public class UpdateHanaRetentionSettingRequest extends Request {
          * <li>true: The backup is permanently retained.</li>
          * <li>false: The backup is retained for the specified number of days.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -169,6 +171,7 @@ public class UpdateHanaRetentionSettingRequest extends Request {
 
         /**
          * <p>The retention period of the backup data. Unit: days. If you set the Disabled parameter to false, the backup is retained for the number of days specified by this parameter.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -185,6 +188,7 @@ public class UpdateHanaRetentionSettingRequest extends Request {
          * <li>startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
          * <li>interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour, and P1D indicates an interval of one day.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>I|0|P1D</p>

@@ -100,6 +100,7 @@ public class EnableHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-0001zfcn******0pr3</p>
@@ -112,6 +113,7 @@ public class EnableHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>plan-*********************</p>
@@ -136,6 +138,7 @@ public class EnableHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-00030j3c******sn</p>

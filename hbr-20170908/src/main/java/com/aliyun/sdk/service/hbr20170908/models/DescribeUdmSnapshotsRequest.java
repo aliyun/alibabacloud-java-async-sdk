@@ -169,6 +169,7 @@ public class DescribeUdmSnapshotsRequest extends Request {
 
         /**
          * <p>The end of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1643092168</p>
@@ -223,6 +224,7 @@ public class DescribeUdmSnapshotsRequest extends Request {
          * <li><strong>UDM_ECS_DISK</strong>: disk backup subtask of ECS instance backup</li>
          * <li><strong>UDM_DISK</strong>: disk backup</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>UDM_ECS</p>
@@ -235,6 +237,7 @@ public class DescribeUdmSnapshotsRequest extends Request {
 
         /**
          * <p>The beginning of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1642057551</p>
@@ -247,6 +250,7 @@ public class DescribeUdmSnapshotsRequest extends Request {
 
         /**
          * <p>The ID of the region where the ECS instance resides.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

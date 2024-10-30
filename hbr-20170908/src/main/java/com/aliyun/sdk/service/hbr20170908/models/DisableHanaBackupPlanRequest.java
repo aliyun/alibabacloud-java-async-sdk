@@ -100,6 +100,7 @@ public class DisableHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-0003tu******y5oc</p>
@@ -112,6 +113,7 @@ public class DisableHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-0006o11ectqr650ceoct</p>
@@ -136,6 +138,7 @@ public class DisableHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-000f9z******vilrr</p>

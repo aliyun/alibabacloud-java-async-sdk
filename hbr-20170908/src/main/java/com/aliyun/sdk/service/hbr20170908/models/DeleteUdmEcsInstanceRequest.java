@@ -56,6 +56,7 @@ public class DeleteUdmEcsInstanceRequest extends Request {
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2zed************tlrm</p>

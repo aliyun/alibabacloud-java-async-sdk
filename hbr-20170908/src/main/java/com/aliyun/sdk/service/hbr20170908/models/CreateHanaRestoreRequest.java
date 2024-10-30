@@ -309,6 +309,7 @@ public class CreateHanaRestoreRequest extends Request {
 
         /**
          * <p>The backup prefix.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE_DATA_BACKUP_2022_05_02_15_39</p>
@@ -345,6 +346,7 @@ public class CreateHanaRestoreRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance that you want to restore.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-000fbrs5******ka9w</p>
@@ -357,6 +359,7 @@ public class CreateHanaRestoreRequest extends Request {
 
         /**
          * <p>The name of the database that you want to restore.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>TS2</p>
@@ -399,6 +402,7 @@ public class CreateHanaRestoreRequest extends Request {
          * <li><strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>: restores the database to a specified backup.</li>
          * <li><strong>RECOVERY_TO_LOG_POSITION</strong>: restores the database to a specified log position.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>RECOVERY_TO_POINT_IN_TIME</p>

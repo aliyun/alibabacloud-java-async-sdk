@@ -122,6 +122,7 @@ public class UpdateVaultRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-*********************</p>

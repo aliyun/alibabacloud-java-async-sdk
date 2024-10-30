@@ -246,6 +246,7 @@ public class CreateClientsRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-0001ufe******kgm</p>

@@ -56,6 +56,7 @@ public class DeleteBackupClientRequest extends Request {
 
         /**
          * <p>The ID of the Cloud Backup client.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>c-*********************</p>

@@ -217,6 +217,7 @@ public class CreateReplicationVaultRequest extends Request {
 
         /**
          * <p>The ID of the region where the source vault resides.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -229,6 +230,7 @@ public class CreateReplicationVaultRequest extends Request {
 
         /**
          * <p>The ID of the source vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-*********************</p>
@@ -241,6 +243,7 @@ public class CreateReplicationVaultRequest extends Request {
 
         /**
          * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>mirrorvaultname</p>
@@ -253,6 +256,7 @@ public class CreateReplicationVaultRequest extends Request {
 
         /**
          * <p>The ID of the region where the backup vault resides.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

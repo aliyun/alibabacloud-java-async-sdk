@@ -56,6 +56,7 @@ public class DeleteBackupClientResourceRequest extends Request {
 
         /**
          * <p>The IDs of HBR clients. The value can be a JSON array that consists of up to 100 client IDs. Separate the IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;c-0007kyu045r0********&quot;, &quot;c-000b6818umvo********&quot;]</p>

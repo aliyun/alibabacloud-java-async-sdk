@@ -204,6 +204,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Archive")
         private Integer archive;
 
+        @com.aliyun.core.annotation.NameInMap("CommonFileSystem")
+        private Integer commonFileSystem;
+
         @com.aliyun.core.annotation.NameInMap("CommonNas")
         private Integer commonNas;
 
@@ -245,6 +248,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
         private BackupPlanStatistics(Builder builder) {
             this.archive = builder.archive;
+            this.commonFileSystem = builder.commonFileSystem;
             this.commonNas = builder.commonNas;
             this.csg = builder.csg;
             this.ecsFile = builder.ecsFile;
@@ -273,6 +277,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
          */
         public Integer getArchive() {
             return this.archive;
+        }
+
+        /**
+         * @return commonFileSystem
+         */
+        public Integer getCommonFileSystem() {
+            return this.commonFileSystem;
         }
 
         /**
@@ -368,6 +379,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer archive; 
+            private Integer commonFileSystem; 
             private Integer commonNas; 
             private Integer csg; 
             private Integer ecsFile; 
@@ -390,6 +402,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
              */
             public Builder archive(Integer archive) {
                 this.archive = archive;
+                return this;
+            }
+
+            /**
+             * CommonFileSystem.
+             */
+            public Builder commonFileSystem(Integer commonFileSystem) {
+                this.commonFileSystem = commonFileSystem;
                 return this;
             }
 

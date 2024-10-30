@@ -96,6 +96,7 @@ public class StartHanaDatabaseAsyncRequest extends Request {
 
         /**
          * <p>The database name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>HXE</p>

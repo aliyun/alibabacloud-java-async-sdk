@@ -84,6 +84,7 @@ public class EnableBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>plan-*********************</p>

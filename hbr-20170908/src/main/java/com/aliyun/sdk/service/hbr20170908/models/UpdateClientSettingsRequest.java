@@ -254,6 +254,7 @@ public class UpdateClientSettingsRequest extends Request {
 
         /**
          * <p>The ID of the HBR client.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>c-*********************</p>

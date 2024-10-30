@@ -402,6 +402,7 @@ public class UpdateBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>plan-20211***735</p>

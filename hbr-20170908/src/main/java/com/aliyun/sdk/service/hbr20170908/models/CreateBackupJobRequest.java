@@ -490,6 +490,7 @@ public class CreateBackupJobRequest extends Request {
          * <li><strong>UDM_ECS</strong>: ECS instances</li>
          * <li><strong>CONTAINER</strong>: containers</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTAINER</p>

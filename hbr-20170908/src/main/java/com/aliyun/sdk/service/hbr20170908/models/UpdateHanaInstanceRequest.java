@@ -246,6 +246,7 @@ public class UpdateHanaInstanceRequest extends Request {
 
         /**
          * <p>The instance number of the SAP HANA system.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>00</p>
@@ -286,6 +287,7 @@ public class UpdateHanaInstanceRequest extends Request {
          * <li>true: The SAP HANA database is connected over SSL.</li>
          * <li>false: The SAP HANA database is not connected over SSL.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -314,6 +316,7 @@ public class UpdateHanaInstanceRequest extends Request {
          * <li>true: The SSL certificate of the SAP HANA database is verified.</li>
          * <li>false: The SSL certificate of the SAP HANA database is not verified.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

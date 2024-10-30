@@ -86,6 +86,7 @@ public class ChangeResourceGroupRequest extends Request {
 
         /**
          * <p>The ID of the new resource group. You can view the available resource groups in the Resource Management console.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -98,6 +99,7 @@ public class ChangeResourceGroupRequest extends Request {
 
         /**
          * <p>The ID of the resource. The value of this parameter varies with the resource type. For example, if the ResourceType parameter is set to vault, the ResourceId parameter specifies the ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-0002vido6j5zyh5k****</p>
@@ -115,6 +117,7 @@ public class ChangeResourceGroupRequest extends Request {
          * <li><strong>client</strong>: backup client</li>
          * <li><strong>hanainstance</strong>: SAP HANA instance</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vault</p>

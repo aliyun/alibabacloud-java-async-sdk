@@ -100,6 +100,7 @@ public class DeleteHanaInstanceRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-000g4z09******9cfc</p>
@@ -124,6 +125,7 @@ public class DeleteHanaInstanceRequest extends Request {
 
         /**
          * <p>The security identifier (SID) of the SAP HANA database. You must specify a valid SID. The SID must be three characters in length and start with a letter. For more information, see <a href="https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?">How to find sid user and instance number of HANA db?</a></p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>HXE</p>
@@ -136,6 +138,7 @@ public class DeleteHanaInstanceRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-0008n2******ax3</p>

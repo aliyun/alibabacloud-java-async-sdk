@@ -154,6 +154,7 @@ public class UpdateHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-0005dhe******f38</p>
@@ -166,6 +167,7 @@ public class UpdateHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-000br3cm4dqvmtph7cul</p>
@@ -218,6 +220,7 @@ public class UpdateHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-0000rcw******5c6</p>

@@ -127,6 +127,7 @@ public class DescribeHanaBackupPlansRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-000chxz******lz7bk</p>

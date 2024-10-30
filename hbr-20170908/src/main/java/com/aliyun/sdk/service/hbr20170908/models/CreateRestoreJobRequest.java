@@ -533,6 +533,7 @@ public class CreateRestoreJobRequest extends Request {
          * <li><strong>OTS_TABLE</strong>: restores data to Tablestore instances.</li>
          * <li><strong>UDM_ECS_ROLLBACK</strong>: restores data to ECS instances.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS_FILE</p>
@@ -576,6 +577,7 @@ public class CreateRestoreJobRequest extends Request {
          * <li><strong>OTS_TABLE</strong>: Tablestore instances</li>
          * <li><strong>UDM_ECS</strong>: ECS instances</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS_FILE</p>

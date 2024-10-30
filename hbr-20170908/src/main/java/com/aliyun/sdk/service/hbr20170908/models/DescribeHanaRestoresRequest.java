@@ -181,6 +181,7 @@ public class DescribeHanaRestoresRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-000b******soejg</p>

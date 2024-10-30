@@ -465,6 +465,7 @@ public class CreateBackupPlanRequest extends Request {
 
         /**
          * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -721,6 +722,7 @@ public class CreateBackupPlanRequest extends Request {
 
         /**
          * <p>The name of the backup schedule. The name must be 1 to 64 characters in length. The name of a backup schedule for each type of data source must be unique within a backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>planname</p>
@@ -770,6 +772,7 @@ public class CreateBackupPlanRequest extends Request {
          * <li><strong>startTime</strong>: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
          * <li><strong>interval</strong>: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>I|1602673264|P1D</p>
@@ -789,6 +792,7 @@ public class CreateBackupPlanRequest extends Request {
          * <li><strong>OTS</strong>: backs up Tablestore instances.</li>
          * <li><strong>UDM_ECS</strong>: backs up ECS instances.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS_FILE</p>

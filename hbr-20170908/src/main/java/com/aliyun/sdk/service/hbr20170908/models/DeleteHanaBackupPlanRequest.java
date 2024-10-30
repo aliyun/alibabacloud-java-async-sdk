@@ -100,6 +100,7 @@ public class DeleteHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-000br3******0ooy2</p>
@@ -112,6 +113,7 @@ public class DeleteHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup plan.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-00035lc8pwp1azdf3qku</p>
@@ -136,6 +138,7 @@ public class DeleteHanaBackupPlanRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-0007o******1ssno</p>

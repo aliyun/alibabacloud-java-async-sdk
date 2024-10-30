@@ -180,6 +180,7 @@ public class DeleteSnapshotRequest extends Request {
 
         /**
          * <p>The ID of the backup snapshot.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>s-*********************</p>

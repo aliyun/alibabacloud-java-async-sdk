@@ -107,7 +107,10 @@ public class ExecutePolicyV2Request extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000************hky</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -116,7 +119,10 @@ public class ExecutePolicyV2Request extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-0002*****ux8</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

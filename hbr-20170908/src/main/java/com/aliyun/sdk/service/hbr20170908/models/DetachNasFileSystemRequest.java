@@ -113,6 +113,7 @@ public class DetachNasFileSystemRequest extends Request {
 
         /**
          * <p>The time when the file system was created. The value must be a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1607436917</p>
@@ -165,6 +166,7 @@ public class DetachNasFileSystemRequest extends Request {
 
         /**
          * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>005494</p>

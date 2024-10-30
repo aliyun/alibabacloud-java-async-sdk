@@ -424,6 +424,7 @@ public class CreateHanaInstanceRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-0003v4a******gfv2</p>

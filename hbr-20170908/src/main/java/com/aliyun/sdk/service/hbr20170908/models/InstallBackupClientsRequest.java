@@ -138,6 +138,7 @@ public class InstallBackupClientsRequest extends Request {
 
         /**
          * <p>The IDs of the ECS instances. You can specify up to 20 IDs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;i-0xi5wj5*****v3j3bh2gj5&quot;]</p>

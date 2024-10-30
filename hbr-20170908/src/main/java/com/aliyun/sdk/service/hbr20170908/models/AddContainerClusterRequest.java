@@ -114,6 +114,7 @@ public class AddContainerClusterRequest extends Request {
 
         /**
          * <p>The type of the cluster. Only Container Service for Kubernetes (ACK) clusters are supported.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ACK</p>
@@ -138,6 +139,7 @@ public class AddContainerClusterRequest extends Request {
 
         /**
          * <p>The ID of the cluster that you want to register.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cca8f35f0e0d84540b49d994511c2c87a</p>
@@ -166,6 +168,7 @@ public class AddContainerClusterRequest extends Request {
          * <li><strong>CLASSIC</strong>: the classic network</li>
          * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>

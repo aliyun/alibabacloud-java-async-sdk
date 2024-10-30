@@ -194,6 +194,7 @@ public class UpdatePolicyBindingRequest extends Request {
 
         /**
          * <p>The ID of the data source.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1************dtv</p>
@@ -252,6 +253,7 @@ public class UpdatePolicyBindingRequest extends Request {
 
         /**
          * <p>The ID of the backup policy.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>po-000************ky9</p>
@@ -276,6 +278,7 @@ public class UpdatePolicyBindingRequest extends Request {
          * <ul>
          * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>UDM_ECS</p>

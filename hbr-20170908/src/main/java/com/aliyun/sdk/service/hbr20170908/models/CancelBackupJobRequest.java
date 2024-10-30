@@ -70,6 +70,7 @@ public class CancelBackupJobRequest extends Request {
 
         /**
          * <p>The ID of the backup job.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>j-******************************</p>

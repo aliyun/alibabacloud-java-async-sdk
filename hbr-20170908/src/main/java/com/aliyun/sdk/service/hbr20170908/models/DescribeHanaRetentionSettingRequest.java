@@ -85,6 +85,7 @@ public class DescribeHanaRetentionSettingRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-0002ys1i******wwtf</p>
@@ -109,6 +110,7 @@ public class DescribeHanaRetentionSettingRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-000ii8t******ntrt2</p>

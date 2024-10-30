@@ -200,6 +200,7 @@ public class DescribeBackupClientsRequest extends Request {
          * <li><strong>ECS_CLIENT</strong>: HBR client for Elastic Compute Service (ECS) file backup</li>
          * <li><strong>CONTAINER_CLIENT</strong>: HBR client for container backup</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS_CLIENT</p>

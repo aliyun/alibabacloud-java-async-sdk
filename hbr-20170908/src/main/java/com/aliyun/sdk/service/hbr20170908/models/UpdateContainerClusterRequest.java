@@ -111,7 +111,10 @@ public class UpdateContainerClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-000**************134</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

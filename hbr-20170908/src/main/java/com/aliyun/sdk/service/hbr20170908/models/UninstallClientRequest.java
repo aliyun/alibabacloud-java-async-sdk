@@ -84,6 +84,7 @@ public class UninstallClientRequest extends Request {
 
         /**
          * <p>The ID of the HBR client.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>c-000iuqo******zi3rn</p>

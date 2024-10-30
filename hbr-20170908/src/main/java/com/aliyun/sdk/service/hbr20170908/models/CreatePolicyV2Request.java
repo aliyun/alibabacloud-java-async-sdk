@@ -616,6 +616,7 @@ public class CreatePolicyV2Request extends Request {
              * <li><strong>TRANSITION</strong>: lifecycle rule</li>
              * <li><strong>REPLICATION</strong>: replication rule</li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>BACKUP</p>
