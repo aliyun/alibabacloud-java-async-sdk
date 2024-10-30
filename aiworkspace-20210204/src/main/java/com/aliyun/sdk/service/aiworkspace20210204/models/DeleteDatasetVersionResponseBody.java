@@ -12,7 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteDatasetVersionResponseBody</p>
  */
 public class DeleteDatasetVersionResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteDatasetVersionResponseBody(Builder builder) {
@@ -38,7 +38,7 @@ public class DeleteDatasetVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * requestId.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

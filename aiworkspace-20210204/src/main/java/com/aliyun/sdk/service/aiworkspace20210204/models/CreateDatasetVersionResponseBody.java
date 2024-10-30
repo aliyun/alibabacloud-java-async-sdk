@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDatasetVersionResponseBody</p>
  */
 public class CreateDatasetVersionResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
     @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
-    @com.aliyun.core.annotation.NameInMap("requestId")
-    private String requestId;
-
     private CreateDatasetVersionResponseBody(Builder builder) {
-        this.versionName = builder.versionName;
         this.requestId = builder.requestId;
+        this.versionName = builder.versionName;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class CreateDatasetVersionResponseBody extends TeaModel {
     }
 
     /**
-     * @return versionName
-     */
-    public String getVersionName() {
-        return this.versionName;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return versionName
+     */
+    public String getVersionName() {
+        return this.versionName;
+    }
+
     public static final class Builder {
-        private String versionName; 
         private String requestId; 
+        private String versionName; 
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
 
         /**
          * VersionName.
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;
-            return this;
-        }
-
-        /**
-         * requestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 

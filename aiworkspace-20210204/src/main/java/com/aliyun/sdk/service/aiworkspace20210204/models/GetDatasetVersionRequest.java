@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetDatasetVersionRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("DatasetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetId;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("VersionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
     private GetDatasetVersionRequest(Builder builder) {
@@ -68,7 +70,10 @@ public class GetDatasetVersionRequest extends Request {
         } 
 
         /**
-         * DatasetId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-lfd60v0p****ujtsdx</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("DatasetId", datasetId);
@@ -77,7 +82,10 @@ public class GetDatasetVersionRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("VersionName", versionName);

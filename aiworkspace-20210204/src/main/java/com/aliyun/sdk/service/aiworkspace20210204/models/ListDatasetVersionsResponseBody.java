@@ -21,18 +21,18 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
-
-    @com.aliyun.core.annotation.NameInMap("requestId")
-    private String requestId;
 
     private ListDatasetVersionsResponseBody(Builder builder) {
         this.datasetVersions = builder.datasetVersions;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.totalCount = builder.totalCount;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -65,25 +65,25 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
     }
 
     /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List < DatasetVersion > datasetVersions; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private Integer totalCount; 
         private String requestId; 
+        private Integer totalCount; 
 
         /**
          * DatasetVersions.
@@ -110,18 +110,18 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * RequestId.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * requestId.
+         * TotalCount.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

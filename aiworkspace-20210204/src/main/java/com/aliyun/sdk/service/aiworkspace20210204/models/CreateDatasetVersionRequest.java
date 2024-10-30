@@ -27,6 +27,7 @@ public class CreateDatasetVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceType;
 
     @com.aliyun.core.annotation.Body
@@ -43,6 +44,7 @@ public class CreateDatasetVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Property")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String property;
 
     @com.aliyun.core.annotation.Body
@@ -55,6 +57,7 @@ public class CreateDatasetVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Uri")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uri;
 
     private CreateDatasetVersionRequest(Builder builder) {
@@ -225,7 +228,10 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);
@@ -261,7 +267,10 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * Property.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECTORY</p>
          */
         public Builder property(String property) {
             this.putBodyParameter("Property", property);
@@ -288,7 +297,10 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);
