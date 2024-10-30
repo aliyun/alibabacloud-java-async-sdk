@@ -25,6 +25,9 @@ public class ChannelProperties extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("huaweiChannelImportance")
     private String huaweiChannelImportance;
 
+    @com.aliyun.core.annotation.NameInMap("huaweiMessageUrgency")
+    private String huaweiMessageUrgency;
+
     @com.aliyun.core.annotation.NameInMap("mainActivity")
     @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String mainActivity;
@@ -32,6 +35,9 @@ public class ChannelProperties extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("oppoChannelId")
     @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String oppoChannelId;
+
+    @com.aliyun.core.annotation.NameInMap("useHuaweiMessage")
+    private String useHuaweiMessage;
 
     @com.aliyun.core.annotation.NameInMap("vivoAddBadge")
     private String vivoAddBadge;
@@ -48,8 +54,10 @@ public class ChannelProperties extends TeaModel {
         this.channelFcm = builder.channelFcm;
         this.huaweiChannelCategory = builder.huaweiChannelCategory;
         this.huaweiChannelImportance = builder.huaweiChannelImportance;
+        this.huaweiMessageUrgency = builder.huaweiMessageUrgency;
         this.mainActivity = builder.mainActivity;
         this.oppoChannelId = builder.oppoChannelId;
+        this.useHuaweiMessage = builder.useHuaweiMessage;
         this.vivoAddBadge = builder.vivoAddBadge;
         this.vivoCategory = builder.vivoCategory;
         this.xiaomiChannelId = builder.xiaomiChannelId;
@@ -92,6 +100,13 @@ public class ChannelProperties extends TeaModel {
     }
 
     /**
+     * @return huaweiMessageUrgency
+     */
+    public String getHuaweiMessageUrgency() {
+        return this.huaweiMessageUrgency;
+    }
+
+    /**
      * @return mainActivity
      */
     public String getMainActivity() {
@@ -103,6 +118,13 @@ public class ChannelProperties extends TeaModel {
      */
     public String getOppoChannelId() {
         return this.oppoChannelId;
+    }
+
+    /**
+     * @return useHuaweiMessage
+     */
+    public String getUseHuaweiMessage() {
+        return this.useHuaweiMessage;
     }
 
     /**
@@ -131,8 +153,10 @@ public class ChannelProperties extends TeaModel {
         private String channelFcm; 
         private String huaweiChannelCategory; 
         private String huaweiChannelImportance; 
+        private String huaweiMessageUrgency; 
         private String mainActivity; 
         private String oppoChannelId; 
+        private String useHuaweiMessage; 
         private String vivoAddBadge; 
         private String vivoCategory; 
         private String xiaomiChannelId; 
@@ -170,6 +194,14 @@ public class ChannelProperties extends TeaModel {
         }
 
         /**
+         * huaweiMessageUrgency.
+         */
+        public Builder huaweiMessageUrgency(String huaweiMessageUrgency) {
+            this.huaweiMessageUrgency = huaweiMessageUrgency;
+            return this;
+        }
+
+        /**
          * mainActivity.
          */
         public Builder mainActivity(String mainActivity) {
@@ -182,6 +214,14 @@ public class ChannelProperties extends TeaModel {
          */
         public Builder oppoChannelId(String oppoChannelId) {
             this.oppoChannelId = oppoChannelId;
+            return this;
+        }
+
+        /**
+         * useHuaweiMessage.
+         */
+        public Builder useHuaweiMessage(String useHuaweiMessage) {
+            this.useHuaweiMessage = useHuaweiMessage;
             return this;
         }
 

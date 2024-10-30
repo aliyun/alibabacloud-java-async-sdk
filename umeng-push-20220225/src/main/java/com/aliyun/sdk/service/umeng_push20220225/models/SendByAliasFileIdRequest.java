@@ -57,6 +57,10 @@ public class SendByAliasFileIdRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ThirdPartyId")
     private String thirdPartyId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("callbackParams")
+    private String callbackParams;
+
     private SendByAliasFileIdRequest(Builder builder) {
         super(builder);
         this.aliasType = builder.aliasType;
@@ -70,6 +74,7 @@ public class SendByAliasFileIdRequest extends Request {
         this.receiptType = builder.receiptType;
         this.receiptUrl = builder.receiptUrl;
         this.thirdPartyId = builder.thirdPartyId;
+        this.callbackParams = builder.callbackParams;
     }
 
     public static Builder builder() {
@@ -162,6 +167,13 @@ public class SendByAliasFileIdRequest extends Request {
         return this.thirdPartyId;
     }
 
+    /**
+     * @return callbackParams
+     */
+    public String getCallbackParams() {
+        return this.callbackParams;
+    }
+
     public static final class Builder extends Request.Builder<SendByAliasFileIdRequest, Builder> {
         private String aliasType; 
         private AndroidPayload androidPayload; 
@@ -174,6 +186,7 @@ public class SendByAliasFileIdRequest extends Request {
         private Integer receiptType; 
         private String receiptUrl; 
         private String thirdPartyId; 
+        private String callbackParams; 
 
         private Builder() {
             super();
@@ -192,6 +205,7 @@ public class SendByAliasFileIdRequest extends Request {
             this.receiptType = request.receiptType;
             this.receiptUrl = request.receiptUrl;
             this.thirdPartyId = request.thirdPartyId;
+            this.callbackParams = request.callbackParams;
         } 
 
         /**
@@ -297,6 +311,15 @@ public class SendByAliasFileIdRequest extends Request {
         public Builder thirdPartyId(String thirdPartyId) {
             this.putBodyParameter("ThirdPartyId", thirdPartyId);
             this.thirdPartyId = thirdPartyId;
+            return this;
+        }
+
+        /**
+         * callbackParams.
+         */
+        public Builder callbackParams(String callbackParams) {
+            this.putBodyParameter("callbackParams", callbackParams);
+            this.callbackParams = callbackParams;
             return this;
         }
 
