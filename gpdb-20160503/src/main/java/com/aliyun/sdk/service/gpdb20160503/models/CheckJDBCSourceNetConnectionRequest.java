@@ -97,7 +97,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,10 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <p>Either DataSourceId or JdbcConnectionString must be specified as input, otherwise an error will occur. If both parameters are specified, JdbcConnectionString will be used preferentially.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -119,10 +122,10 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * <p>The JDBC connection string.</p>
+         * <p>JDBC connection string.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>jdbc:mysql://rm-xxx.mysql.rds.aliyuncs.com:3306/testadmin</p>
          */
         public Builder jdbcConnectionString(String jdbcConnectionString) {
             this.putQueryParameter("JdbcConnectionString", jdbcConnectionString);
@@ -131,7 +134,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region where the instance is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

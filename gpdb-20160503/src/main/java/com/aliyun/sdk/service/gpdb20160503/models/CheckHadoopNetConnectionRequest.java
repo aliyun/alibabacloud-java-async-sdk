@@ -97,11 +97,11 @@ public class CheckHadoopNetConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CheckHadoopNetConnection</p>
+         * <p>gp-xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -110,7 +110,14 @@ public class CheckHadoopNetConnectionRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <ol>
+         * <li>Either DataSourceId or EmrInstanceId must be specified as input, otherwise an error will occur.</li>
+         * <li>If both of the above parameters are specified, EmrInstanceId will be used preferentially.</li>
+         * <li>If the data source specified by DataSourceId is a self-built Hadoop cluster, an error will occur directly.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>126</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -119,7 +126,7 @@ public class CheckHadoopNetConnectionRequest extends Request {
         }
 
         /**
-         * <p>The E-MapReduce (EMR) Hadoop cluster ID.</p>
+         * <p>EMR instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-xxx</p>
@@ -131,7 +138,10 @@ public class CheckHadoopNetConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -62,10 +62,10 @@ public class CheckJDBCSourceNetConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The returned message. If the connection failed, an error message is returned. Otherwise, a pair of double quotation marks (&quot;&quot;) is returned.</p>
+         * <p>Return message: Error message returned when the connection fails, otherwise returns an empty string (&quot;&quot;).</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>connection timeout</p>
          */
         public Builder connectionMessage(String connectionMessage) {
             this.connectionMessage = connectionMessage;
@@ -73,10 +73,12 @@ public class CheckJDBCSourceNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The connection status. Valid values:</p>
+         * <p>Service status:</p>
          * <ul>
-         * <li>Success</li>
-         * <li>Failed</li>
+         * <li><p>Network connected: Success</p>
+         * </li>
+         * <li><p>Network not connected: Failed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,7 +90,7 @@ public class CheckJDBCSourceNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>

@@ -177,6 +177,9 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
+        @com.aliyun.core.annotation.NameInMap("QueryId")
+        private String queryId;
+
         @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
@@ -185,6 +188,9 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ScanRowCounts")
         private Long scanRowCounts;
+
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private String sessionId;
 
         @com.aliyun.core.annotation.NameInMap("SourceIP")
         private String sourceIP;
@@ -203,9 +209,11 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             this.operationClass = builder.operationClass;
             this.operationExecuteTime = builder.operationExecuteTime;
             this.operationType = builder.operationType;
+            this.queryId = builder.queryId;
             this.returnRowCounts = builder.returnRowCounts;
             this.SQLText = builder.SQLText;
             this.scanRowCounts = builder.scanRowCounts;
+            this.sessionId = builder.sessionId;
             this.sourceIP = builder.sourceIP;
             this.sourcePort = builder.sourcePort;
         }
@@ -289,6 +297,13 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return queryId
+         */
+        public String getQueryId() {
+            return this.queryId;
+        }
+
+        /**
          * @return returnRowCounts
          */
         public Long getReturnRowCounts() {
@@ -307,6 +322,13 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
          */
         public Long getScanRowCounts() {
             return this.scanRowCounts;
+        }
+
+        /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
         }
 
         /**
@@ -334,9 +356,11 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             private String operationClass; 
             private String operationExecuteTime; 
             private String operationType; 
+            private String queryId; 
             private Long returnRowCounts; 
             private String SQLText; 
             private Long scanRowCounts; 
+            private String sessionId; 
             private String sourceIP; 
             private Integer sourcePort; 
 
@@ -449,6 +473,14 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
+             * QueryId.
+             */
+            public Builder queryId(String queryId) {
+                this.queryId = queryId;
+                return this;
+            }
+
+            /**
              * <p>The number of entries returned.</p>
              * 
              * <strong>example:</strong>
@@ -478,6 +510,14 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
              */
             public Builder scanRowCounts(Long scanRowCounts) {
                 this.scanRowCounts = scanRowCounts;
+                return this;
+            }
+
+            /**
+             * SessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
                 return this;
             }
 
