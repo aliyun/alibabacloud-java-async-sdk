@@ -50,7 +50,7 @@ public class GetProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Project.
+         * <p>The information about the workspace.</p>
          */
         public Builder project(Project project) {
             this.project = project;
@@ -58,7 +58,10 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +119,10 @@ public class GetProjectResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>batch</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -124,7 +130,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>blue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -291,7 +300,10 @@ public class GetProjectResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AliyunResourceGroupId.
+             * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzbn7pti3zfa</p>
              */
             public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
                 this.aliyunResourceGroupId = aliyunResourceGroupId;
@@ -299,7 +311,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunResourceTags.
+             * <p>The tags.</p>
              */
             public Builder aliyunResourceTags(java.util.List < AliyunResourceTags> aliyunResourceTags) {
                 this.aliyunResourceTags = aliyunResourceTags;
@@ -307,7 +319,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the workspace.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -315,7 +327,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * DevEnvironmentEnabled.
+             * <p>Indicates whether the development environment is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</li>
+             * <li>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder devEnvironmentEnabled(Boolean devEnvironmentEnabled) {
                 this.devEnvironmentEnabled = devEnvironmentEnabled;
@@ -323,7 +342,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * DevRoleDisabled.
+             * <p>Indicates whether the Develop role is disabled. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder devRoleDisabled(Boolean devRoleDisabled) {
                 this.devRoleDisabled = devRoleDisabled;
@@ -331,7 +357,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the workspace.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -339,7 +365,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28477242</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -347,7 +376,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sora_finance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -355,7 +387,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the Alibaba Cloud account to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>207947397706614299</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -363,7 +398,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * PaiTaskEnabled.
+             * <p>Indicates whether scheduling of Platform for AI (PAI) tasks is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
+             * <li>false: Scheduling of PAI tasks is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder paiTaskEnabled(Boolean paiTaskEnabled) {
                 this.paiTaskEnabled = paiTaskEnabled;
@@ -371,7 +413,34 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Available</li>
+             * <li>Initializing</li>
+             * <li>InitFailed</li>
+             * <li>Forbidden</li>
+             * <li>Deleting</li>
+             * <li>DeleteFailed</li>
+             * <li>Frozen</li>
+             * <li>Updating</li>
+             * <li>UpdateFailed</li>
+             * </ul>
+             * <!---->
+             * 
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
