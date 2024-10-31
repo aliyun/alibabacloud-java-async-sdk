@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sts20150401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssumeRoleResponseBody} extends {@link TeaModel}
  *
  * <p>AssumeRoleResponseBody</p>
  */
 public class AssumeRoleResponseBody extends TeaModel {
-    @NameInMap("AssumedRoleUser")
+    @com.aliyun.core.annotation.NameInMap("AssumedRoleUser")
     private AssumedRoleUser assumedRoleUser;
 
-    @NameInMap("Credentials")
+    @com.aliyun.core.annotation.NameInMap("Credentials")
     private Credentials credentials;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssumeRoleResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class AssumeRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The temporary identity that you use to assume the RAM role.
+         * <p>The temporary identity that you use to assume the RAM role.</p>
          */
         public Builder assumedRoleUser(AssumedRoleUser assumedRoleUser) {
             this.assumedRoleUser = assumedRoleUser;
@@ -70,7 +70,7 @@ public class AssumeRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The STS credentials.
+         * <p>The STS credentials.</p>
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -78,7 +78,10 @@ public class AssumeRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6894B13B-6D71-4EF5-88FA-F32781734A7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +94,17 @@ public class AssumeRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssumeRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssumeRoleResponseBody</p>
+     */
     public static class AssumedRoleUser extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("AssumedRoleId")
+        @com.aliyun.core.annotation.NameInMap("AssumedRoleId")
         private String assumedRoleId;
 
         private AssumedRoleUser(Builder builder) {
@@ -130,7 +139,10 @@ public class AssumeRoleResponseBody extends TeaModel {
             private String assumedRoleId; 
 
             /**
-             * The ARN of the temporary identity that you use to assume the RAM role.
+             * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456789012****:role/adminrole/alice</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -138,7 +150,10 @@ public class AssumeRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the temporary identity that you use to assume the RAM role.
+             * <p>The ID of the temporary identity that you use to assume the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34458433936495****:alice</p>
              */
             public Builder assumedRoleId(String assumedRoleId) {
                 this.assumedRoleId = assumedRoleId;
@@ -152,17 +167,23 @@ public class AssumeRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssumeRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssumeRoleResponseBody</p>
+     */
     public static class Credentials extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("Expiration")
+        @com.aliyun.core.annotation.NameInMap("Expiration")
         private String expiration;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
         private Credentials(Builder builder) {
@@ -215,7 +236,10 @@ public class AssumeRoleResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * The AccessKey ID.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.L4aBSCSJVMuKg5U1****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -223,7 +247,10 @@ public class AssumeRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wyLTSmsyPGP1ohvvw8xYgB29dlGI8KMiH2pK****</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -231,7 +258,10 @@ public class AssumeRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the STS token expires. The time is displayed in UTC.
+             * <p>The time when the STS token expires. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-04-09T11:52:19Z</p>
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -239,10 +269,13 @@ public class AssumeRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The STS token.
-             * <p>
+             * <p>The STS token.</p>
+             * <blockquote>
+             * <p>Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
+             * </blockquote>
              * 
-             * > Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

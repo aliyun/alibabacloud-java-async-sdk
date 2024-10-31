@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sts20150401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssumeRoleWithOIDCResponseBody} extends {@link TeaModel}
  *
  * <p>AssumeRoleWithOIDCResponseBody</p>
  */
 public class AssumeRoleWithOIDCResponseBody extends TeaModel {
-    @NameInMap("AssumedRoleUser")
+    @com.aliyun.core.annotation.NameInMap("AssumedRoleUser")
     private AssumedRoleUser assumedRoleUser;
 
-    @NameInMap("Credentials")
+    @com.aliyun.core.annotation.NameInMap("Credentials")
     private Credentials credentials;
 
-    @NameInMap("OIDCTokenInfo")
+    @com.aliyun.core.annotation.NameInMap("OIDCTokenInfo")
     private OIDCTokenInfo OIDCTokenInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssumeRoleWithOIDCResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The temporary identity that you use to assume the RAM role.
+         * <p>The temporary identity that you use to assume the RAM role.</p>
          */
         public Builder assumedRoleUser(AssumedRoleUser assumedRoleUser) {
             this.assumedRoleUser = assumedRoleUser;
@@ -82,7 +82,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         }
 
         /**
-         * The access credentials.
+         * <p>The access credentials.</p>
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -90,7 +90,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the OIDC token.
+         * <p>The information about the OIDC token.</p>
          */
         public Builder OIDCTokenInfo(OIDCTokenInfo OIDCTokenInfo) {
             this.OIDCTokenInfo = OIDCTokenInfo;
@@ -98,7 +98,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D57EAD2-8723-1F26-B69C-F8707D8B565D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +114,17 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssumeRoleWithOIDCResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssumeRoleWithOIDCResponseBody</p>
+     */
     public static class AssumedRoleUser extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("AssumedRoleId")
+        @com.aliyun.core.annotation.NameInMap("AssumedRoleId")
         private String assumedRoleId;
 
         private AssumedRoleUser(Builder builder) {
@@ -150,7 +159,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             private String assumedRoleId; 
 
             /**
-             * The ARN of the temporary identity that you use to assume the RAM role.
+             * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::113511544585****:role/testoidc/TestOidcAssumedRoleSession</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -158,7 +170,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the temporary identity that you use to assume the RAM role.
+             * <p>The ID of the temporary identity that you use to assume the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33157794895460****</p>
              */
             public Builder assumedRoleId(String assumedRoleId) {
                 this.assumedRoleId = assumedRoleId;
@@ -172,17 +187,23 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssumeRoleWithOIDCResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssumeRoleWithOIDCResponseBody</p>
+     */
     public static class Credentials extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("Expiration")
+        @com.aliyun.core.annotation.NameInMap("Expiration")
         private String expiration;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
         private Credentials(Builder builder) {
@@ -235,7 +256,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * The AccessKey ID.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.NUgYrLnoC37mZZCNnAbez****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -243,7 +267,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVwjCkNzTMupZ8NbTCxCBRq3K16jtcWFTJAyBEv2****</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -251,7 +278,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the STS token expires. The time is displayed in UTC.
+             * <p>The time when the STS token expires. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-20T04:27:09Z</p>
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -259,10 +289,13 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * The STS token.
-             * <p>
+             * <p>The STS token.</p>
+             * <blockquote>
+             * <p>Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
+             * </blockquote>
              * 
-             * > Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.
+             * <strong>example:</strong>
+             * <p>CAIShwJ1q6Ft5B2yfSjIr5bSEsj4g7BihPWGWHz****</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -276,23 +309,29 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssumeRoleWithOIDCResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssumeRoleWithOIDCResponseBody</p>
+     */
     public static class OIDCTokenInfo extends TeaModel {
-        @NameInMap("ClientIds")
+        @com.aliyun.core.annotation.NameInMap("ClientIds")
         private String clientIds;
 
-        @NameInMap("ExpirationTime")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTime")
         private String expirationTime;
 
-        @NameInMap("IssuanceTime")
+        @com.aliyun.core.annotation.NameInMap("IssuanceTime")
         private String issuanceTime;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
-        @NameInMap("VerificationInfo")
+        @com.aliyun.core.annotation.NameInMap("VerificationInfo")
         private String verificationInfo;
 
         private OIDCTokenInfo(Builder builder) {
@@ -363,10 +402,11 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             private String verificationInfo; 
 
             /**
-             * The audience. If multiple audiences are returned, the audiences are separated by commas (,).
-             * <p>
+             * <p>The audience. If multiple audiences are returned, the audiences are separated by commas (,).</p>
+             * <p>The audience is represented by the <code>aud</code> field in the OIDC Token.</p>
              * 
-             * The audience is represented by the `aud` field in the OIDC Token.
+             * <strong>example:</strong>
+             * <p>496271242565057****</p>
              */
             public Builder clientIds(String clientIds) {
                 this.clientIds = clientIds;
@@ -374,7 +414,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The time when the OIDC token expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-20T04:27:09Z</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -382,7 +425,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * IssuanceTime.
+             * <p>The time when the OIDC token was issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-20T03:27:09Z</p>
              */
             public Builder issuanceTime(String issuanceTime) {
                 this.issuanceTime = issuanceTime;
@@ -390,10 +436,11 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the issuer,
-             * <p>
+             * <p>The URL of the issuer,</p>
+             * <p>which is represented by the <code>iss</code> field in the OIDC Token.</p>
              * 
-             * which is represented by the `iss` field in the OIDC Token.
+             * <strong>example:</strong>
+             * <p><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -401,10 +448,11 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * The subject,
-             * <p>
+             * <p>The subject,</p>
+             * <p>which is represented by the <code>sub</code> field in the OIDC Token.</p>
              * 
-             * which is represented by the `sub` field in the OIDC Token.
+             * <strong>example:</strong>
+             * <p>KryrkIdjylZb7agUgCEf****</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -412,7 +460,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * VerificationInfo.
+             * <p>The verification information about the OIDC token. For more information, see <a href="https://help.aliyun.com/document_detail/327123.html">Manage an OIDC IdP</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder verificationInfo(String verificationInfo) {
                 this.verificationInfo = verificationInfo;

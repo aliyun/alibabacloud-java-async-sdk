@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sts20150401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCallerIdentityResponseBody} extends {@link TeaModel}
  *
  * <p>GetCallerIdentityResponseBody</p>
  */
 public class GetCallerIdentityResponseBody extends TeaModel {
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("IdentityType")
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
     private String identityType;
 
-    @NameInMap("PrincipalId")
+    @com.aliyun.core.annotation.NameInMap("PrincipalId")
     private String principalId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RoleId")
+    @com.aliyun.core.annotation.NameInMap("RoleId")
     private String roleId;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private GetCallerIdentityResponseBody(Builder builder) {
