@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunScriptPlanningRequest} extends {@link RequestModel}
  *
  * <p>RunScriptPlanningRequest</p>
@@ -180,7 +181,10 @@ public class RunScriptPlanningRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-e9zzbkg0aj2mlXX</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -234,7 +238,10 @@ public class RunScriptPlanningRequest extends Request {
         }
 
         /**
-         * scriptSummary.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>在一个宁静的小镇上，每个家庭都在同一天收到一个神秘的、没有标记的包裹。</p>
          */
         public Builder scriptSummary(String scriptSummary) {
             this.putBodyParameter("scriptSummary", scriptSummary);

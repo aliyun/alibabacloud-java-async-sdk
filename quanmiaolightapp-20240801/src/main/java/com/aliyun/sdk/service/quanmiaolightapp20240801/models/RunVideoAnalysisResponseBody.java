@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
  *
  * <p>RunVideoAnalysisResponseBody</p>
@@ -90,6 +91,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class RunVideoAnalysisResponseBodyHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("errorCode")
         private String errorCode;
@@ -251,6 +258,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
@@ -332,6 +345,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoShotAnalysisResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
@@ -413,6 +432,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoAnalysisResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
@@ -514,6 +539,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoCaptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
@@ -635,6 +666,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoCaptionResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
@@ -696,6 +733,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoGenerateResultUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
@@ -777,6 +820,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoGenerateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
@@ -858,6 +907,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoMindMappingGenerateResultUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
@@ -939,6 +994,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class ChildNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -980,6 +1041,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoMindMappingsChildNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("childNodes")
         private java.util.List < ChildNodes> childNodes;
@@ -1041,6 +1108,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoMindMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("childNodes")
         private java.util.List < VideoMindMappingsChildNodes> childNodes;
@@ -1102,6 +1175,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoMindMappingGenerateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
@@ -1203,6 +1282,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoTitleGenerateResultUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
@@ -1284,6 +1369,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class VideoTitleGenerateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
@@ -1365,6 +1456,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("videoAnalysisResult")
         private VideoAnalysisResult videoAnalysisResult;
@@ -1486,6 +1583,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class PayloadUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
@@ -1567,6 +1670,12 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
     public static class Payload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
         private Output output;

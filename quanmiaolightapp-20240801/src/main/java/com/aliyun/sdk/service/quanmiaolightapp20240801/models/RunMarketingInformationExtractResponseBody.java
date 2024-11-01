@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunMarketingInformationExtractResponseBody} extends {@link TeaModel}
  *
  * <p>RunMarketingInformationExtractResponseBody</p>
@@ -90,6 +91,12 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunMarketingInformationExtractResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunMarketingInformationExtractResponseBody</p>
+     */
     public static class RunMarketingInformationExtractResponseBodyHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("event")
         private String event;
@@ -231,6 +238,12 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunMarketingInformationExtractResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunMarketingInformationExtractResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
@@ -272,6 +285,12 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunMarketingInformationExtractResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunMarketingInformationExtractResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
@@ -353,6 +372,12 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunMarketingInformationExtractResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunMarketingInformationExtractResponseBody</p>
+     */
     public static class Payload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
         private Output output;

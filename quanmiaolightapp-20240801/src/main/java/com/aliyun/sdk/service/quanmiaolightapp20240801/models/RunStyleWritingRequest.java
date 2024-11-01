@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunStyleWritingRequest} extends {@link RequestModel}
  *
  * <p>RunStyleWritingRequest</p>
@@ -128,7 +129,10 @@ public class RunStyleWritingRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-2setzb9xb8mx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -146,7 +150,7 @@ public class RunStyleWritingRequest extends Request {
         }
 
         /**
-         * learningSamples.
+         * <p>This parameter is required.</p>
          */
         public Builder learningSamples(java.util.List < String > learningSamples) {
             String learningSamplesShrink = shrink(learningSamples, "learningSamples", "json");
@@ -156,7 +160,7 @@ public class RunStyleWritingRequest extends Request {
         }
 
         /**
-         * referenceMaterials.
+         * <p>This parameter is required.</p>
          */
         public Builder referenceMaterials(java.util.List < String > referenceMaterials) {
             String referenceMaterialsShrink = shrink(referenceMaterials, "referenceMaterials", "json");
@@ -175,7 +179,7 @@ public class RunStyleWritingRequest extends Request {
         }
 
         /**
-         * writingTheme.
+         * <p>This parameter is required.</p>
          */
         public Builder writingTheme(String writingTheme) {
             this.putBodyParameter("writingTheme", writingTheme);

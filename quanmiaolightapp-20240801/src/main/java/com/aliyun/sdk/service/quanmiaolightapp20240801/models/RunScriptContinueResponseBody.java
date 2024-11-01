@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunScriptContinueResponseBody} extends {@link TeaModel}
  *
  * <p>RunScriptContinueResponseBody</p>
@@ -90,6 +91,12 @@ public class RunScriptContinueResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunScriptContinueResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunScriptContinueResponseBody</p>
+     */
     public static class RunScriptContinueResponseBodyHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("errorCode")
         private String errorCode;
@@ -271,6 +278,12 @@ public class RunScriptContinueResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunScriptContinueResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunScriptContinueResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
@@ -312,6 +325,12 @@ public class RunScriptContinueResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunScriptContinueResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunScriptContinueResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
@@ -393,6 +412,12 @@ public class RunScriptContinueResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunScriptContinueResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunScriptContinueResponseBody</p>
+     */
     public static class Payload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
         private Output output;

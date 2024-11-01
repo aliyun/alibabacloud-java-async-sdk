@@ -7,45 +7,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunMarketingInformationWritingResponseBody} extends {@link TeaModel}
+ * {@link RunHotTopicSummaryResponseBody} extends {@link TeaModel}
  *
- * <p>RunMarketingInformationWritingResponseBody</p>
+ * <p>RunHotTopicSummaryResponseBody</p>
  */
-public class RunMarketingInformationWritingResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("end")
-    private Boolean end;
-
+public class RunHotTopicSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("header")
-    private RunMarketingInformationWritingResponseBodyHeader header;
+    private RunHotTopicSummaryResponseBodyHeader header;
 
     @com.aliyun.core.annotation.NameInMap("payload")
     private Payload payload;
 
-    private RunMarketingInformationWritingResponseBody(Builder builder) {
-        this.end = builder.end;
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    private RunHotTopicSummaryResponseBody(Builder builder) {
         this.header = builder.header;
         this.payload = builder.payload;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RunMarketingInformationWritingResponseBody create() {
+    public static RunHotTopicSummaryResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return end
-     */
-    public Boolean getEnd() {
-        return this.end;
     }
 
     /**
      * @return header
      */
-    public RunMarketingInformationWritingResponseBodyHeader getHeader() {
+    public RunHotTopicSummaryResponseBodyHeader getHeader() {
         return this.header;
     }
 
@@ -56,23 +49,22 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
         return this.payload;
     }
 
-    public static final class Builder {
-        private Boolean end; 
-        private RunMarketingInformationWritingResponseBodyHeader header; 
-        private Payload payload; 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        /**
-         * end.
-         */
-        public Builder end(Boolean end) {
-            this.end = end;
-            return this;
-        }
+    public static final class Builder {
+        private RunHotTopicSummaryResponseBodyHeader header; 
+        private Payload payload; 
+        private String requestId; 
 
         /**
          * header.
          */
-        public Builder header(RunMarketingInformationWritingResponseBodyHeader header) {
+        public Builder header(RunHotTopicSummaryResponseBodyHeader header) {
             this.header = header;
             return this;
         }
@@ -85,27 +77,38 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
             return this;
         }
 
-        public RunMarketingInformationWritingResponseBody build() {
-            return new RunMarketingInformationWritingResponseBody(this);
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D0E915E-655D-59A8-894F-93873F73AAE5</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public RunHotTopicSummaryResponseBody build() {
+            return new RunHotTopicSummaryResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RunMarketingInformationWritingResponseBody} extends {@link TeaModel}
+     * {@link RunHotTopicSummaryResponseBody} extends {@link TeaModel}
      *
-     * <p>RunMarketingInformationWritingResponseBody</p>
+     * <p>RunHotTopicSummaryResponseBody</p>
      */
-    public static class RunMarketingInformationWritingResponseBodyHeader extends TeaModel {
+    public static class RunHotTopicSummaryResponseBodyHeader extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("errorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("errorMessage")
+        private String errorMessage;
+
         @com.aliyun.core.annotation.NameInMap("event")
         private String event;
-
-        @com.aliyun.core.annotation.NameInMap("eventInfo")
-        private String eventInfo;
-
-        @com.aliyun.core.annotation.NameInMap("requestId")
-        private String requestId;
 
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
@@ -116,10 +119,10 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("traceId")
         private String traceId;
 
-        private RunMarketingInformationWritingResponseBodyHeader(Builder builder) {
+        private RunHotTopicSummaryResponseBodyHeader(Builder builder) {
+            this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
             this.event = builder.event;
-            this.eventInfo = builder.eventInfo;
-            this.requestId = builder.requestId;
             this.sessionId = builder.sessionId;
             this.taskId = builder.taskId;
             this.traceId = builder.traceId;
@@ -129,8 +132,22 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static RunMarketingInformationWritingResponseBodyHeader create() {
+        public static RunHotTopicSummaryResponseBodyHeader create() {
             return builder().build();
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -138,20 +155,6 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
          */
         public String getEvent() {
             return this.event;
-        }
-
-        /**
-         * @return eventInfo
-         */
-        public String getEventInfo() {
-            return this.eventInfo;
-        }
-
-        /**
-         * @return requestId
-         */
-        public String getRequestId() {
-            return this.requestId;
         }
 
         /**
@@ -176,34 +179,34 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String errorCode; 
+            private String errorMessage; 
             private String event; 
-            private String eventInfo; 
-            private String requestId; 
             private String sessionId; 
             private String taskId; 
             private String traceId; 
+
+            /**
+             * errorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * errorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
 
             /**
              * event.
              */
             public Builder event(String event) {
                 this.event = event;
-                return this;
-            }
-
-            /**
-             * eventInfo.
-             */
-            public Builder eventInfo(String eventInfo) {
-                this.eventInfo = eventInfo;
-                return this;
-            }
-
-            /**
-             * requestId.
-             */
-            public Builder requestId(String requestId) {
-                this.requestId = requestId;
                 return this;
             }
 
@@ -231,8 +234,8 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
                 return this;
             }
 
-            public RunMarketingInformationWritingResponseBodyHeader build() {
-                return new RunMarketingInformationWritingResponseBodyHeader(this);
+            public RunHotTopicSummaryResponseBodyHeader build() {
+                return new RunHotTopicSummaryResponseBodyHeader(this);
             } 
 
         } 
@@ -240,16 +243,20 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunMarketingInformationWritingResponseBody} extends {@link TeaModel}
+     * {@link RunHotTopicSummaryResponseBody} extends {@link TeaModel}
      *
-     * <p>RunMarketingInformationWritingResponseBody</p>
+     * <p>RunHotTopicSummaryResponseBody</p>
      */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
 
+        @com.aliyun.core.annotation.NameInMap("topicId")
+        private String topicId;
+
         private Output(Builder builder) {
             this.text = builder.text;
+            this.topicId = builder.topicId;
         }
 
         public static Builder builder() {
@@ -267,14 +274,30 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
             return this.text;
         }
 
+        /**
+         * @return topicId
+         */
+        public String getTopicId() {
+            return this.topicId;
+        }
+
         public static final class Builder {
             private String text; 
+            private String topicId; 
 
             /**
              * text.
              */
             public Builder text(String text) {
                 this.text = text;
+                return this;
+            }
+
+            /**
+             * topicId.
+             */
+            public Builder topicId(String topicId) {
+                this.topicId = topicId;
                 return this;
             }
 
@@ -287,9 +310,9 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunMarketingInformationWritingResponseBody} extends {@link TeaModel}
+     * {@link RunHotTopicSummaryResponseBody} extends {@link TeaModel}
      *
-     * <p>RunMarketingInformationWritingResponseBody</p>
+     * <p>RunHotTopicSummaryResponseBody</p>
      */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
@@ -374,9 +397,9 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunMarketingInformationWritingResponseBody} extends {@link TeaModel}
+     * {@link RunHotTopicSummaryResponseBody} extends {@link TeaModel}
      *
-     * <p>RunMarketingInformationWritingResponseBody</p>
+     * <p>RunHotTopicSummaryResponseBody</p>
      */
     public static class Payload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")

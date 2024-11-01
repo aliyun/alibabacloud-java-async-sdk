@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotTopicSummariesResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotTopicSummariesResponseBody</p>
@@ -210,6 +211,12 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotTopicSummariesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotTopicSummariesResponseBody</p>
+     */
     public static class Comments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
@@ -251,6 +258,12 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotTopicSummariesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotTopicSummariesResponseBody</p>
+     */
     public static class News extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("comments")
         private java.util.List < Comments> comments;
@@ -358,7 +371,10 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * url
+             * <p>url</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx">http://xxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -372,6 +388,12 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotTopicSummariesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotTopicSummariesResponseBody</p>
+     */
     public static class Summaries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("summary")
         private String summary;
@@ -433,6 +455,12 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotTopicSummariesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotTopicSummariesResponseBody</p>
+     */
     public static class Summary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("summaries")
         private java.util.List < Summaries> summaries;
@@ -474,6 +502,12 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotTopicSummariesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotTopicSummariesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;

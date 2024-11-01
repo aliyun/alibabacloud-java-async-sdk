@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GenerateBroadcastNewsResponse} extends {@link TeaModel}
+ * {@link RunHotTopicSummaryResponse} extends {@link TeaModel}
  *
- * <p>GenerateBroadcastNewsResponse</p>
+ * <p>RunHotTopicSummaryResponse</p>
  */
-public class GenerateBroadcastNewsResponse extends Response {
+public class RunHotTopicSummaryResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GenerateBroadcastNewsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GenerateBroadcastNewsResponseBody body;
+    private RunHotTopicSummaryResponseBody body;
 
-    private GenerateBroadcastNewsResponse(BuilderImpl builder) {
+    private RunHotTopicSummaryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GenerateBroadcastNewsResponse create() {
+    public static RunHotTopicSummaryResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GenerateBroadcastNewsResponse extends Response {
     /**
      * @return body
      */
-    public GenerateBroadcastNewsResponseBody getBody() {
+    public RunHotTopicSummaryResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GenerateBroadcastNewsResponse, Builder> {
+    public interface Builder extends Response.Builder<RunHotTopicSummaryResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GenerateBroadcastNewsResponseBody body);
+        Builder body(RunHotTopicSummaryResponseBody body);
 
         @Override
-        GenerateBroadcastNewsResponse build();
+        RunHotTopicSummaryResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GenerateBroadcastNewsResponse, Builder>
+            extends Response.BuilderImpl<RunHotTopicSummaryResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GenerateBroadcastNewsResponseBody body; 
+        private RunHotTopicSummaryResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GenerateBroadcastNewsResponse response) {
+        private BuilderImpl(RunHotTopicSummaryResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GenerateBroadcastNewsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GenerateBroadcastNewsResponseBody body) {
+        public Builder body(RunHotTopicSummaryResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GenerateBroadcastNewsResponse build() {
-            return new GenerateBroadcastNewsResponse(this);
+        public RunHotTopicSummaryResponse build() {
+            return new RunHotTopicSummaryResponse(this);
         } 
 
     } 

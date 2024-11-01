@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateBroadcastNewsRequest} extends {@link RequestModel}
  *
  * <p>GenerateBroadcastNewsRequest</p>
@@ -92,7 +93,10 @@ public class GenerateBroadcastNewsRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -101,7 +105,7 @@ public class GenerateBroadcastNewsRequest extends Request {
         }
 
         /**
-         * prompt.
+         * <p>This parameter is required.</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("prompt", prompt);

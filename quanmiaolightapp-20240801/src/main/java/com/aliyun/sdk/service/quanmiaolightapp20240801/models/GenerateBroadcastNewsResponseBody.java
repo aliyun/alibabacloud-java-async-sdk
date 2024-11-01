@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateBroadcastNewsResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateBroadcastNewsResponseBody</p>
@@ -150,6 +151,12 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateBroadcastNewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateBroadcastNewsResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("url")
         private String url;
@@ -191,6 +198,12 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateBroadcastNewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateBroadcastNewsResponseBody</p>
+     */
     public static class HotTopicSummaries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
@@ -352,6 +365,12 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateBroadcastNewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateBroadcastNewsResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
@@ -433,6 +452,12 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateBroadcastNewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateBroadcastNewsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotTopicSummaries")
         private java.util.List < HotTopicSummaries> hotTopicSummaries;

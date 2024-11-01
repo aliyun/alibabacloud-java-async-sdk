@@ -40,6 +40,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of GenerateBroadcastNews  GenerateBroadcastNewsRequest
+     * @return GenerateBroadcastNewsResponse
+     */
     @Override
     public CompletableFuture<GenerateBroadcastNewsResponse> generateBroadcastNews(GenerateBroadcastNewsRequest request) {
         try {
@@ -54,6 +58,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotTopicSummaries  ListHotTopicSummariesRequest
+     * @return ListHotTopicSummariesResponse
+     */
     @Override
     public CompletableFuture<ListHotTopicSummariesResponse> listHotTopicSummaries(ListHotTopicSummariesRequest request) {
         try {
@@ -68,6 +76,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunCommentGeneration  RunCommentGenerationRequest
+     * @return RunCommentGenerationResponse
+     */
     @Override
     public CompletableFuture<RunCommentGenerationResponse> runCommentGeneration(RunCommentGenerationRequest request) {
         try {
@@ -107,6 +119,96 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunHotTopicChat  RunHotTopicChatRequest
+     * @return RunHotTopicChatResponse
+     */
+    @Override
+    public CompletableFuture<RunHotTopicChatResponse> runHotTopicChat(RunHotTopicChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunHotTopicChat").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runHotTopicChat").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunHotTopicChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunHotTopicChatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> runHotTopicChatWithAsyncResponseHandler(RunHotTopicChatRequest request, AsyncResponseHandler<RunHotTopicChatResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunHotTopicChat").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runHotTopicChat").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(RunHotTopicChatResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((RunHotTopicChatResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunHotTopicChatResponseBody> runHotTopicChatWithResponseIterable(RunHotTopicChatRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunHotTopicChat").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runHotTopicChat").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunHotTopicChatResponseBodyIterator iterator = RunHotTopicChatResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunHotTopicSummary  RunHotTopicSummaryRequest
+     * @return RunHotTopicSummaryResponse
+     */
+    @Override
+    public CompletableFuture<RunHotTopicSummaryResponse> runHotTopicSummary(RunHotTopicSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunHotTopicSummary").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runHotTopicSummary").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunHotTopicSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunHotTopicSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> runHotTopicSummaryWithAsyncResponseHandler(RunHotTopicSummaryRequest request, AsyncResponseHandler<RunHotTopicSummaryResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunHotTopicSummary").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runHotTopicSummary").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(RunHotTopicSummaryResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((RunHotTopicSummaryResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunHotTopicSummaryResponseBody> runHotTopicSummaryWithResponseIterable(RunHotTopicSummaryRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunHotTopicSummary").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runHotTopicSummary").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunHotTopicSummaryResponseBodyIterator iterator = RunHotTopicSummaryResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunMarketingInformationExtract  RunMarketingInformationExtractRequest
+     * @return RunMarketingInformationExtractResponse
+     */
     @Override
     public CompletableFuture<RunMarketingInformationExtractResponse> runMarketingInformationExtract(RunMarketingInformationExtractRequest request) {
         try {
@@ -146,6 +248,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunMarketingInformationWriting  RunMarketingInformationWritingRequest
+     * @return RunMarketingInformationWritingResponse
+     */
     @Override
     public CompletableFuture<RunMarketingInformationWritingResponse> runMarketingInformationWriting(RunMarketingInformationWritingRequest request) {
         try {
@@ -185,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunScriptContinue  RunScriptContinueRequest
+     * @return RunScriptContinueResponse
+     */
     @Override
     public CompletableFuture<RunScriptContinueResponse> runScriptContinue(RunScriptContinueRequest request) {
         try {
@@ -224,6 +334,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunScriptPlanning  RunScriptPlanningRequest
+     * @return RunScriptPlanningResponse
+     */
     @Override
     public CompletableFuture<RunScriptPlanningResponse> runScriptPlanning(RunScriptPlanningRequest request) {
         try {
@@ -263,6 +377,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunStyleWriting  RunStyleWritingRequest
+     * @return RunStyleWritingResponse
+     */
     @Override
     public CompletableFuture<RunStyleWritingResponse> runStyleWriting(RunStyleWritingRequest request) {
         try {
@@ -302,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunVideoAnalysis  RunVideoAnalysisRequest
+     * @return RunVideoAnalysisResponse
+     */
     @Override
     public CompletableFuture<RunVideoAnalysisResponse> runVideoAnalysis(RunVideoAnalysisRequest request) {
         try {
