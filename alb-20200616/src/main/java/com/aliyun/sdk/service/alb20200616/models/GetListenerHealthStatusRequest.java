@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetListenerHealthStatusRequest} extends {@link RequestModel}
  *
  * <p>GetListenerHealthStatusRequest</p>
@@ -96,11 +97,14 @@ public class GetListenerHealthStatusRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the health check results of forwarding rules. Valid values:
-         * <p>
+         * <p>Specifies whether to return the health check results of forwarding rules. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeRule(Boolean includeRule) {
             this.putQueryParameter("IncludeRule", includeRule);
@@ -109,7 +113,11 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * The listener ID.
+         * <p>The listener ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -118,7 +126,10 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **30**. Default value: **20**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>30</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -127,11 +138,14 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query or no next queries are to be sent, ignore this parameter.</li>
+         * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query or no next queries are to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

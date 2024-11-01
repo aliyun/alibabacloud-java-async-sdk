@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecurityPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecurityPoliciesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +97,14 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The supported security policies.
+         * <p>The supported security policies.</p>
          */
         public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
@@ -121,7 +131,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +147,12 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecurityPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPoliciesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -173,7 +192,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +203,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+             * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -195,6 +220,12 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecurityPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPoliciesResponseBody</p>
+     */
     public static class SecurityPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ciphers")
         private java.util.List < String > ciphers;
@@ -306,7 +337,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The supported cipher suites.
+             * <p>The supported cipher suites.</p>
              */
             public Builder ciphers(java.util.List < String > ciphers) {
                 this.ciphers = ciphers;
@@ -314,7 +345,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the ACL was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-15T07:37:33Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -322,7 +356,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtop****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -330,7 +367,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security policy.
+             * <p>The ID of the security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtop****</p>
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -338,7 +378,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security policy.
+             * <p>The name of the security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-secrity</p>
              */
             public Builder securityPolicyName(String securityPolicyName) {
                 this.securityPolicyName = securityPolicyName;
@@ -346,11 +389,14 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the security policy. Valid values:
-             * <p>
+             * <p>The status of the security policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Configuring</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
              * 
-             * *   **Configuring**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder securityPolicyStatus(String securityPolicyStatus) {
                 this.securityPolicyStatus = securityPolicyStatus;
@@ -358,7 +404,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The supported TLS protocol versions.
+             * <p>The supported TLS protocol versions.</p>
              */
             public Builder TLSVersions(java.util.List < String > TLSVersions) {
                 this.TLSVersions = TLSVersions;
@@ -366,7 +412,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

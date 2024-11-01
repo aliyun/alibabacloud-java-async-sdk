@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAclResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAclResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the ACL.
+         * <p>The ID of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-hp34s2h0xx1ht4nwo****</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -69,7 +73,10 @@ public class CreateAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the asynchronous task.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -77,7 +84,10 @@ public class CreateAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

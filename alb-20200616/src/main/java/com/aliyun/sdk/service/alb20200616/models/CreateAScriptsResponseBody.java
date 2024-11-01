@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAScriptsResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAScriptsResponseBody</p>
@@ -61,7 +62,7 @@ public class CreateAScriptsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The AScript rule IDs.
+         * <p>The AScript rule IDs.</p>
          */
         public Builder aScriptIds(java.util.List < AScriptIds> aScriptIds) {
             this.aScriptIds = aScriptIds;
@@ -69,7 +70,10 @@ public class CreateAScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * The asynchronous task ID.
+         * <p>The asynchronous task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c607642-535e-4e06-9d77-df53049b****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -77,7 +81,10 @@ public class CreateAScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF0FE763-9603-558F-A55B-0F4B9A3E3C02</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class CreateAScriptsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAScriptsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAScriptsResponseBody</p>
+     */
     public static class AScriptIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AScriptId")
         private String aScriptId;
@@ -117,7 +130,10 @@ public class CreateAScriptsResponseBody extends TeaModel {
             private String aScriptId; 
 
             /**
-             * The AScript rule ID.
+             * <p>The AScript rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>as-xvq5igaa7uv6vr****</p>
              */
             public Builder aScriptId(String aScriptId) {
                 this.aScriptId = aScriptId;

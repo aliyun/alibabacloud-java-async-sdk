@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UnTagResourcesRequest</p>
@@ -111,11 +112,14 @@ public class UnTagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the specified resource. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -124,7 +128,11 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the resources from which you want to remove tags.
+         * <p>The IDs of the resources from which you want to remove tags.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-123</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -133,13 +141,17 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>acl</strong>: an access control list (ACL)</li>
+         * <li><strong>loadbalancer</strong>: an Application Load Balancer (ALB) instance</li>
+         * <li><strong>securitypolicy</strong>: a security policy</li>
+         * <li><strong>servergroup</strong>: a server group</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **acl**: an access control list (ACL)
-         * *   **loadbalancer**: an Application Load Balancer (ALB) instance
-         * *   **securitypolicy**: a security policy
-         * *   **servergroup**: a server group
+         * <strong>example:</strong>
+         * <p>loadbalancer</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +160,10 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that you want to remove.
+         * <p>The tags that you want to remove.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -157,7 +172,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The keys of the tags that you want to remove.
+         * <p>The keys of the tags that you want to remove.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);
@@ -172,6 +187,12 @@ public class UnTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UnTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>UnTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -211,7 +232,10 @@ public class UnTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that you want to remove. The key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The key cannot contain `http://` or `https://`.
+             * <p>The key of the tag that you want to remove. The tag key can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,7 +243,10 @@ public class UnTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag that you want to remove. The value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The value cannot contain `http://` or `https://`.
+             * <p>The value of the tag that you want to remove. The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

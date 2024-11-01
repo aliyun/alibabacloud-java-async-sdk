@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartListenerResponseBody} extends {@link TeaModel}
  *
  * <p>StartListenerResponseBody</p>
@@ -49,7 +50,10 @@ public class StartListenerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The asynchronous task ID.
+         * <p>The asynchronous task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class StartListenerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

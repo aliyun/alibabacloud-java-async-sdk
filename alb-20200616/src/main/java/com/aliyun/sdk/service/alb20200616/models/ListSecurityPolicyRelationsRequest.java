@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecurityPolicyRelationsRequest} extends {@link RequestModel}
  *
  * <p>ListSecurityPolicyRelationsRequest</p>
@@ -54,7 +55,8 @@ public class ListSecurityPolicyRelationsRequest extends Request {
         } 
 
         /**
-         * The security policy IDs. You can specify up to five IDs.
+         * <p>The security policy IDs. You can specify up to five IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder securityPolicyIds(java.util.List < String > securityPolicyIds) {
             this.putQueryParameter("SecurityPolicyIds", securityPolicyIds);

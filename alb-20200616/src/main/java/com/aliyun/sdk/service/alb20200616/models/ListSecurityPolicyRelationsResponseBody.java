@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecurityPolicyRelationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecurityPolicyRelationsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         private java.util.List < SecrityPolicyRelations> secrityPolicyRelations; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * The security policies and the listeners that are associated with the security policies.
+         * <p>The security policies and the listeners that are associated with the security policies.</p>
          */
         public Builder secrityPolicyRelations(java.util.List < SecrityPolicyRelations> secrityPolicyRelations) {
             this.secrityPolicyRelations = secrityPolicyRelations;
@@ -70,6 +74,12 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecurityPolicyRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPolicyRelationsResponseBody</p>
+     */
     public static class RelatedListeners extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
@@ -133,7 +143,10 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             private String loadBalancerId; 
 
             /**
-             * The listener ID.
+             * <p>The listener ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsn-0bfuc****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -141,7 +154,10 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The listener port.
+             * <p>The listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder listenerPort(Long listenerPort) {
                 this.listenerPort = listenerPort;
@@ -149,7 +165,10 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The listener protocol.
+             * <p>The listener protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;
@@ -157,7 +176,10 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The Server Load Balancer (SLB) instance ID.
+             * <p>The Server Load Balancer (SLB) instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1o94dp5i6ea****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -171,6 +193,12 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecurityPolicyRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPolicyRelationsResponseBody</p>
+     */
     public static class SecrityPolicyRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelatedListeners")
         private java.util.List < RelatedListeners> relatedListeners;
@@ -210,7 +238,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             private String securityPolicyId; 
 
             /**
-             * The listeners that are associated with the security policy.
+             * <p>The listeners that are associated with the security policy.</p>
              */
             public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
                 this.relatedListeners = relatedListeners;
@@ -218,7 +246,10 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The security policy ID.
+             * <p>The security policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scp-bp1bpn0kn9****</p>
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;

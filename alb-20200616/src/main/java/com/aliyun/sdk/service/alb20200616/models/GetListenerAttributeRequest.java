@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetListenerAttributeRequest} extends {@link RequestModel}
  *
  * <p>GetListenerAttributeRequest</p>
@@ -54,7 +55,11 @@ public class GetListenerAttributeRequest extends Request {
         } 
 
         /**
-         * The listener ID.
+         * <p>The listener ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);

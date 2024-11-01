@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddServersToServerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>AddServersToServerGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class AddServersToServerGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the asynchronous job.
+         * <p>The ID of the asynchronous job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class AddServersToServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

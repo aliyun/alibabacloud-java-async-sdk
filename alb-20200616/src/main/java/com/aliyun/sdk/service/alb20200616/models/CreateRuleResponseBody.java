@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRuleResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateRuleResponseBody extends TeaModel {
         private String ruleId; 
 
         /**
-         * The ID of the asynchronous task.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -69,7 +73,10 @@ public class CreateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540750</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The forwarding rule ID.
+         * <p>The forwarding rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-a3x3pg1yohq3lq****</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;

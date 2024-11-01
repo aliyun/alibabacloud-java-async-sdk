@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>GetListenerAttributeResponseBody</p>
@@ -277,7 +278,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         private XForwardedForConfig xForwardedForConfig; 
 
         /**
-         * The configurations of the access control lists (ACLs).
+         * <p>The configurations of the access control lists (ACLs).</p>
          */
         public Builder aclConfig(AclConfig aclConfig) {
             this.aclConfig = aclConfig;
@@ -285,7 +286,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * A list of default CA certificates.
+         * <p>A list of default CA certificates.</p>
          */
         public Builder caCertificates(java.util.List < CaCertificates> caCertificates) {
             this.caCertificates = caCertificates;
@@ -293,11 +294,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether mutual authentication is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether mutual authentication is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder caEnabled(Boolean caEnabled) {
             this.caEnabled = caEnabled;
@@ -305,7 +309,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * A list of certificates.
+         * <p>A list of certificates.</p>
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.certificates = certificates;
@@ -313,7 +317,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The actions of the default forwarding rule.
+         * <p>The actions of the default forwarding rule.</p>
          */
         public Builder defaultActions(java.util.List < DefaultActions> defaultActions) {
             this.defaultActions = defaultActions;
@@ -321,11 +325,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether GZIP compression is enabled to compress specific types of files. Valid values:
-         * <p>
+         * <p>Indicates whether GZIP compression is enabled to compress specific types of files. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder gzipEnabled(Boolean gzipEnabled) {
             this.gzipEnabled = gzipEnabled;
@@ -333,13 +340,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether HTTP/2 is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * > This parameter is available only when you create an HTTPS listener.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder http2Enabled(Boolean http2Enabled) {
             this.http2Enabled = http2Enabled;
@@ -347,10 +358,11 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period of an idle connection. Unit: seconds.
-         * <p>
+         * <p>The timeout period of an idle connection. Unit: seconds.</p>
+         * <p>If no requests are received within the specified timeout period, Application Load Balancer (ALB) closes the current connection. When a request is received, ALB establishes a new connection.</p>
          * 
-         * If no requests are received within the specified timeout period, Application Load Balancer (ALB) closes the current connection. When a request is received, ALB establishes a new connection.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = idleTimeout;
@@ -358,7 +370,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the listener.
+         * <p>The name of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder listenerDescription(String listenerDescription) {
             this.listenerDescription = listenerDescription;
@@ -366,7 +381,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -374,7 +392,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The frontend port that is used by the ALB instance.
+         * <p>The frontend port that is used by the ALB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -382,7 +403,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The listener protocol. Valid values: **HTTP**, **HTTPS**, and **QUIC**.
+         * <p>The listener protocol. Valid values: <strong>HTTP</strong>, <strong>HTTPS</strong>, and <strong>QUIC</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.listenerProtocol = listenerProtocol;
@@ -390,13 +414,16 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the listener. Valid values:
-         * <p>
+         * <p>The status of the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>Provisioning</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Configuring</strong></li>
+         * <li><strong>Stopped</strong></li>
+         * </ul>
          * 
-         * *   **Provisioning**
-         * *   **Running**
-         * *   **Configuring**
-         * *   **Stopped**
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder listenerStatus(String listenerStatus) {
             this.listenerStatus = listenerStatus;
@@ -404,7 +431,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ALB instance ID.
+         * <p>The ALB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1o94dp5i6ea****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -412,7 +442,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The logging configuration.
+         * <p>The logging configuration.</p>
          */
         public Builder logConfig(LogConfig logConfig) {
             this.logConfig = logConfig;
@@ -420,7 +450,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration information when the listener is associated with a QUIC listener.
+         * <p>The configuration information when the listener is associated with a QUIC listener.</p>
          */
         public Builder quicConfig(QuicConfig quicConfig) {
             this.quicConfig = quicConfig;
@@ -428,7 +458,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -436,10 +469,11 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period of a request. Unit: seconds.
-         * <p>
+         * <p>The timeout period of a request. Unit: seconds.</p>
+         * <p>If no responses are received from the backend server within the specified timeout period, ALB returns an <code>HTTP 504</code> error code to the client.</p>
          * 
-         * If no responses are received from the backend server within the specified timeout period, ALB returns an `HTTP 504` error code to the client.
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.requestTimeout = requestTimeout;
@@ -447,10 +481,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The security policy.
-         * <p>
+         * <p>The security policy.</p>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
          * 
-         * > This parameter is available only when you create an HTTPS listener.
+         * <strong>example:</strong>
+         * <p>tls_cipher_policy_1_1</p>
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.securityPolicyId = securityPolicyId;
@@ -458,7 +495,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -466,7 +503,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of the XForward headers.
+         * <p>The configuration of the XForward headers.</p>
          */
         public Builder xForwardedForConfig(XForwardedForConfig xForwardedForConfig) {
             this.xForwardedForConfig = xForwardedForConfig;
@@ -479,6 +516,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class AclRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
@@ -518,7 +561,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the ACL that is associated with the listener.
+             * <p>The ID of the ACL that is associated with the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-doc****</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -526,12 +572,15 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ACL is associated with the listener. Valid values:
-             * <p>
+             * <p>Indicates whether the ACL is associated with the listener. Valid values:</p>
+             * <ul>
+             * <li><strong>Associating</strong></li>
+             * <li><strong>Associated</strong></li>
+             * <li><strong>Dissociating</strong></li>
+             * </ul>
              * 
-             * *   **Associating**
-             * *   **Associated**
-             * *   **Dissociating**
+             * <strong>example:</strong>
+             * <p>Associating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -545,6 +594,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class AclConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclRelations")
         private java.util.List < AclRelations> aclRelations;
@@ -584,7 +639,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String aclType; 
 
             /**
-             * The IDs of the ACLs that are associated with the listener.
+             * <p>The IDs of the ACLs that are associated with the listener.</p>
              */
             public Builder aclRelations(java.util.List < AclRelations> aclRelations) {
                 this.aclRelations = aclRelations;
@@ -592,16 +647,18 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ACL. Valid values:
-             * <p>
+             * <p>The type of the ACL. Valid values:</p>
+             * <ul>
+             * <li><p><strong>White</strong>: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists are applicable to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured for a listener, only requests from IP addresses that are on the whitelist are forwarded by the listener.</p>
+             * <p>If you enable a whitelist but do not add an IP address to the whitelist, the listener forwards all requests.</p>
+             * </li>
+             * <li><p><strong>Black</strong>: a blacklist. Requests from the IP addresses or CIDR blocks in the network ACL are denied. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses or CIDR blocks to an application.</p>
+             * <p>If a blacklist is configured for a listener but no IP addresses are added to the blacklist, the listener forwards all requests.</p>
+             * </li>
+             * </ul>
              * 
-             * *   **White**: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists are applicable to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured for a listener, only requests from IP addresses that are on the whitelist are forwarded by the listener.
-             * 
-             *     If you enable a whitelist but do not add an IP address to the whitelist, the listener forwards all requests.
-             * 
-             * *   **Black**: a blacklist. Requests from the IP addresses or CIDR blocks in the network ACL are denied. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses or CIDR blocks to an application.
-             * 
-             *     If a blacklist is configured for a listener but no IP addresses are added to the blacklist, the listener forwards all requests.
+             * <strong>example:</strong>
+             * <p>White</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -615,6 +672,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class CaCertificates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
@@ -666,7 +729,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the default CA certificate.
+             * <p>The ID of the default CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139a00604bd-cn-east-hangzho****</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -674,11 +740,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate is a default certificate: Valid values:
-             * <p>
+             * <p>Indicates whether the certificate is a default certificate: Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -686,7 +755,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate.
+             * <p>The status of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Associated</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -700,6 +772,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class Certificates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
@@ -727,7 +805,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String certificateId; 
 
             /**
-             * The ID of the certificate. Only server certificates are supported.
+             * <p>The ID of the certificate. Only server certificates are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12315790212_166f8204689_1714763408_70998****</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -741,6 +822,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class ServerGroupTuples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
@@ -768,7 +855,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String serverGroupId; 
 
             /**
-             * The ID of the server group to which requests are forwarded.
+             * <p>The ID of the server group to which requests are forwarded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-cige6j****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -782,6 +872,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class ForwardGroupConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
         private java.util.List < ServerGroupTuples> serverGroupTuples;
@@ -809,7 +905,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private java.util.List < ServerGroupTuples> serverGroupTuples; 
 
             /**
-             * The server group to which requests are forwarded.
+             * <p>The server group to which requests are forwarded.</p>
              */
             public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -823,6 +919,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class DefaultActions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
         private ForwardGroupConfig forwardGroupConfig;
@@ -862,7 +964,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The configuration of the ForwardGroup action. This parameter is returned and takes effect when Type is set to **ForwardGroup**.
+             * <p>The configuration of the ForwardGroup action. This parameter is returned and takes effect when Type is set to <strong>ForwardGroup</strong>.</p>
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -870,10 +972,11 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the action.
-             * <p>
+             * <p>The type of the action.</p>
+             * <p>If <strong>ForwardGroup</strong> is returned, requests are forwarded to multiple vServer groups.</p>
              * 
-             * If **ForwardGroup** is returned, requests are forwarded to multiple vServer groups.
+             * <strong>example:</strong>
+             * <p>ForwardGroup</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -887,6 +990,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class AccessLogTracingConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TracingEnabled")
         private Boolean tracingEnabled;
@@ -938,13 +1047,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String tracingType; 
 
             /**
-             * Indicates whether Xtrace is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether Xtrace is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>You can set this parameter to <strong>true</strong> only if the AccessLogEnabled parameter is set to true.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > You can set this parameter to **true** only if the AccessLogEnabled parameter is set to true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tracingEnabled(Boolean tracingEnabled) {
                 this.tracingEnabled = tracingEnabled;
@@ -952,10 +1065,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling rate of Xtrace. Valid values: 1 to 10000.
-             * <p>
+             * <p>The sampling rate of Xtrace. Valid values: 1 to 10000.</p>
+             * <blockquote>
+             * <p>If <strong>TracingEnabled</strong> is set to <strong>true</strong>, this parameter is valid.</p>
+             * </blockquote>
              * 
-             * > If **TracingEnabled** is set to **true**, this parameter is valid.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder tracingSample(Integer tracingSample) {
                 this.tracingSample = tracingSample;
@@ -963,10 +1079,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The Xtrace type. Supported Xtrace type: **Zipkin**.
-             * <p>
+             * <p>The Xtrace type. Supported Xtrace type: <strong>Zipkin</strong>.</p>
+             * <blockquote>
+             * <p>If <strong>TracingEnabled</strong> is set to <strong>true</strong>, this parameter is valid.</p>
+             * </blockquote>
              * 
-             * > If **TracingEnabled** is set to **true**, this parameter is valid.
+             * <strong>example:</strong>
+             * <p>Zipkin</p>
              */
             public Builder tracingType(String tracingType) {
                 this.tracingType = tracingType;
@@ -980,6 +1099,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class LogConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessLogRecordCustomizedHeadersEnabled")
         private Boolean accessLogRecordCustomizedHeadersEnabled;
@@ -1019,11 +1144,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private AccessLogTracingConfig accessLogTracingConfig; 
 
             /**
-             * Indicates whether custom headers are recorded in the access log. Valid values:
-             * <p>
+             * <p>Indicates whether custom headers are recorded in the access log. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder accessLogRecordCustomizedHeadersEnabled(Boolean accessLogRecordCustomizedHeadersEnabled) {
                 this.accessLogRecordCustomizedHeadersEnabled = accessLogRecordCustomizedHeadersEnabled;
@@ -1031,7 +1159,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of Xtrace. Xtrace is used to record requests sent to ALB.
+             * <p>The configuration of Xtrace. Xtrace is used to record requests sent to ALB.</p>
              */
             public Builder accessLogTracingConfig(AccessLogTracingConfig accessLogTracingConfig) {
                 this.accessLogTracingConfig = accessLogTracingConfig;
@@ -1045,6 +1173,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class QuicConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuicListenerId")
         private String quicListenerId;
@@ -1084,10 +1218,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private Boolean quicUpgradeEnabled; 
 
             /**
-             * The ID of the QUIC listener. This parameter is returned when **QuicUpgradeEnabled** is set to **true**. Only HTTPS listeners support this parameter.
-             * <p>
+             * <p>The ID of the QUIC listener. This parameter is returned when <strong>QuicUpgradeEnabled</strong> is set to <strong>true</strong>. Only HTTPS listeners support this parameter.</p>
+             * <blockquote>
+             * <p>You must associate the HTTPS listener and the QUIC listener with the same ALB instance. In addition, make sure that the QUIC listener has never been associated with another listener.</p>
+             * </blockquote>
              * 
-             * > You must associate the HTTPS listener and the QUIC listener with the same ALB instance. In addition, make sure that the QUIC listener has never been associated with another listener.
+             * <strong>example:</strong>
+             * <p>lsn-333</p>
              */
             public Builder quicListenerId(String quicListenerId) {
                 this.quicListenerId = quicListenerId;
@@ -1095,13 +1232,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether QUIC upgrade is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether QUIC upgrade is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > Only HTTPS listeners support this parameter.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder quicUpgradeEnabled(Boolean quicUpgradeEnabled) {
                 this.quicUpgradeEnabled = quicUpgradeEnabled;
@@ -1115,6 +1256,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1154,7 +1301,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1162,7 +1312,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1176,6 +1329,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class XForwardedForConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertClientVerifyAlias")
         private String xForwardedForClientCertClientVerifyAlias;
@@ -1371,12 +1530,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private Boolean xForwardedForSLBPortEnabled; 
 
             /**
-             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertClientVerifyEnabled** is set to **true**.
-             * <p>
+             * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertClientVerifyEnabled</strong> is set to <strong>true</strong>.</p>
+             * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS listener.</p>
+             * </blockquote>
              * 
-             * The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>test_client-verify-alias_123456</p>
              */
             public Builder xForwardedForClientCertClientVerifyAlias(String xForwardedForClientCertClientVerifyAlias) {
                 this.xForwardedForClientCertClientVerifyAlias = xForwardedForClientCertClientVerifyAlias;
@@ -1384,13 +1545,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Clientcert-clientverify` header is used to retrieve the verification result of the client certificate. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Clientcert-clientverify</code> header is used to retrieve the verification result of the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientCertClientVerifyEnabled(Boolean xForwardedForClientCertClientVerifyEnabled) {
                 this.xForwardedForClientCertClientVerifyEnabled = xForwardedForClientCertClientVerifyEnabled;
@@ -1398,12 +1563,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertFingerprintEnabled** is set to **true**.
-             * <p>
+             * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertFingerprintEnabled</strong> is set to <strong>true</strong>.</p>
+             * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS listener.</p>
+             * </blockquote>
              * 
-             * The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>test_finger-print-alias_123456</p>
              */
             public Builder xForwardedForClientCertFingerprintAlias(String xForwardedForClientCertFingerprintAlias) {
                 this.xForwardedForClientCertFingerprintAlias = xForwardedForClientCertFingerprintAlias;
@@ -1411,13 +1578,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Clientcert-fingerprint` header is used to retrieve the fingerprint of the client certificate. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Clientcert-fingerprint</code> header is used to retrieve the fingerprint of the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientCertFingerprintEnabled(Boolean xForwardedForClientCertFingerprintEnabled) {
                 this.xForwardedForClientCertFingerprintEnabled = xForwardedForClientCertFingerprintEnabled;
@@ -1425,12 +1596,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.
-             * <p>
+             * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertIssuerDNEnabled</strong> is set to <strong>true</strong>.</p>
+             * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS listener.</p>
+             * </blockquote>
              * 
-             * The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>test_issue-dn-alias_123456</p>
              */
             public Builder xForwardedForClientCertIssuerDNAlias(String xForwardedForClientCertIssuerDNAlias) {
                 this.xForwardedForClientCertIssuerDNAlias = xForwardedForClientCertIssuerDNAlias;
@@ -1438,13 +1611,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Clientcert-issuerdn` header is used to retrieve information about the authority that issues the client certificate. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Clientcert-issuerdn</code> header is used to retrieve information about the authority that issues the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientCertIssuerDNEnabled(Boolean xForwardedForClientCertIssuerDNEnabled) {
                 this.xForwardedForClientCertIssuerDNEnabled = xForwardedForClientCertIssuerDNEnabled;
@@ -1452,12 +1629,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.
-             * <p>
+             * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertSubjectDNEnabled</strong> is set to <strong>true</strong>.</p>
+             * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS listener.</p>
+             * </blockquote>
              * 
-             * The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>test_subject-dn-alias_123456</p>
              */
             public Builder xForwardedForClientCertSubjectDNAlias(String xForwardedForClientCertSubjectDNAlias) {
                 this.xForwardedForClientCertSubjectDNAlias = xForwardedForClientCertSubjectDNAlias;
@@ -1465,13 +1644,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Clientcert-subjectdn` header is used to retrieve information about the owner of the client certificate. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Clientcert-subjectdn</code> header is used to retrieve information about the owner of the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientCertSubjectDNEnabled(Boolean xForwardedForClientCertSubjectDNEnabled) {
                 this.xForwardedForClientCertSubjectDNEnabled = xForwardedForClientCertSubjectDNEnabled;
@@ -1479,13 +1662,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Client-Ip` header is used to retrieve the source port of the ALB instance. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Client-Ip</code> header is used to retrieve the source port of the ALB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForClientSourceIpsEnabled(Boolean xForwardedForClientSourceIpsEnabled) {
                 this.xForwardedForClientSourceIpsEnabled = xForwardedForClientSourceIpsEnabled;
@@ -1493,10 +1680,11 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The trusted proxy IP address.
-             * <p>
+             * <p>The trusted proxy IP address.</p>
+             * <p>ALB traverses <code>X-Forwarded-For</code> backward and selects the first IP address that is not on the trusted IP address list as the real IP address of the client. The IP address is used in source IP address throttling.</p>
              * 
-             * ALB traverses `X-Forwarded-For` backward and selects the first IP address that is not on the trusted IP address list as the real IP address of the client. The IP address is used in source IP address throttling.
+             * <strong>example:</strong>
+             * <p>10.1.1.0/24</p>
              */
             public Builder xForwardedForClientSourceIpsTrusted(String xForwardedForClientSourceIpsTrusted) {
                 this.xForwardedForClientSourceIpsTrusted = xForwardedForClientSourceIpsTrusted;
@@ -1504,13 +1692,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Client-Port` header is used to retrieve the client port. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Client-Port</code> header is used to retrieve the client port. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTP or HTTPS listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTP or HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientSrcPortEnabled(Boolean xForwardedForClientSrcPortEnabled) {
                 this.xForwardedForClientSrcPortEnabled = xForwardedForClientSrcPortEnabled;
@@ -1518,13 +1710,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-For` header is used to retrieve the client IP address. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-For</code> header is used to retrieve the client IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTP or HTTPS listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTP or HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForEnabled(Boolean xForwardedForEnabled) {
                 this.xForwardedForEnabled = xForwardedForEnabled;
@@ -1532,13 +1728,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Proto` header is used to retrieve the listening protocol. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Proto</code> header is used to retrieve the listening protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForProtoEnabled(Boolean xForwardedForProtoEnabled) {
                 this.xForwardedForProtoEnabled = xForwardedForProtoEnabled;
@@ -1546,13 +1746,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>SLB-ID</code> header is used to retrieve the ID of the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForSLBIdEnabled(Boolean xForwardedForSLBIdEnabled) {
                 this.xForwardedForSLBIdEnabled = xForwardedForSLBIdEnabled;
@@ -1560,13 +1764,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Port` header is used to retrieve the listening port of the ALB instance. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Port</code> header is used to retrieve the listening port of the ALB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForSLBPortEnabled(Boolean xForwardedForSLBPortEnabled) {
                 this.xForwardedForSLBPortEnabled = xForwardedForSLBPortEnabled;

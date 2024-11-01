@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLoadBalancerAttributeRequest} extends {@link RequestModel}
  *
  * <p>GetLoadBalancerAttributeRequest</p>
@@ -54,7 +55,11 @@ public class GetLoadBalancerAttributeRequest extends Request {
         } 
 
         /**
-         * The ALB instance ID.
+         * <p>The ALB instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-o9ulmq5hgn68jk****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LoadBalancerLeaveSecurityGroupResponseBody} extends {@link TeaModel}
  *
  * <p>LoadBalancerLeaveSecurityGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class LoadBalancerLeaveSecurityGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the asynchronous task.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51c5b627-3500-487c-b17d-5cc583f0****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class LoadBalancerLeaveSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC0C96E4-7CCB-599C-9329-3A5DB6FF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRulesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRulesResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateRulesResponseBody extends TeaModel {
         private java.util.List < RuleIds> ruleIds; 
 
         /**
-         * The ID of the asynchronous task.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -69,7 +73,10 @@ public class CreateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,10 +84,10 @@ public class CreateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The priority of the forwarding rule. Valid values: **1 to 10000**. A lower value specifies a higher priority.
-         * <p>
-         * 
-         * > The priorities of the forwarding rules created for the same listener is unique.
+         * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A lower value specifies a higher priority.</p>
+         * <blockquote>
+         * <p>The priorities of the forwarding rules created for the same listener is unique.</p>
+         * </blockquote>
          */
         public Builder ruleIds(java.util.List < RuleIds> ruleIds) {
             this.ruleIds = ruleIds;
@@ -93,6 +100,12 @@ public class CreateRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRulesResponseBody</p>
+     */
     public static class RuleIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
@@ -132,10 +145,13 @@ public class CreateRulesResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * The priority of the forwarding rule. Valid values: **1 to 10000**. A smaller value indicates a higher priority.
-             * <p>
+             * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value indicates a higher priority.</p>
+             * <blockquote>
+             * <p>The priorities of the forwarding rules created for the same listener must be unique.</p>
+             * </blockquote>
              * 
-             * > The priorities of the forwarding rules created for the same listener must be unique.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -143,7 +159,10 @@ public class CreateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding rule ID.
+             * <p>The forwarding rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-a3x3pg1yohq3lq****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

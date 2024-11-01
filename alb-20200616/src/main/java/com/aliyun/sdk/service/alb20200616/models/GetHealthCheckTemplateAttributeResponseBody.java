@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHealthCheckTemplateAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>GetHealthCheckTemplateAttributeResponseBody</p>
@@ -205,7 +206,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         private Integer unhealthyThreshold; 
 
         /**
-         * The HTTP status codes that indicate a healthy backend server.
+         * <p>The HTTP status codes that indicate a healthy backend server.</p>
          */
         public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
             this.healthCheckCodes = healthCheckCodes;
@@ -213,10 +214,11 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The port that is used for health checks.
-         * <p>
+         * <p>The port that is used for health checks.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * 
-         * Valid values: **0** to **65535**.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -224,13 +226,17 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name that is used for health checks. Valid values:
-         * <p>
+         * <p>The domain name that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>$SERVER_IP</strong>: the private IP addresses of backend servers. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP addresses of backend servers as domain names for health checks.</li>
+         * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only if <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+         * </blockquote>
          * 
-         * *   **$SERVER_IP**: the private IP addresses of backend servers. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP addresses of backend servers as domain names for health checks.
-         * *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
-         * 
-         * >  This parameter takes effect only if `HealthCheckProtocol` is set to **HTTP** or **HTTPS**.
+         * <strong>example:</strong>
+         * <p>$SERVER_IP</p>
          */
         public Builder healthCheckHost(String healthCheckHost) {
             this.healthCheckHost = healthCheckHost;
@@ -238,12 +244,14 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP version for health checks.
-         * <p>
+         * <p>The HTTP version for health checks.</p>
+         * <p>Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **HTTP1.0** and **HTTP1.1**.
-         * 
-         * >  This parameter takes effect only if you set `HealthCheckProtocol` to **HTTP** or **HTTPS**.
+         * <strong>example:</strong>
+         * <p>HTTP1.0</p>
          */
         public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
             this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -251,7 +259,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The interval at which health checks are performed. Unit: seconds. Valid values: **1 to 50**.
+         * <p>The interval at which health checks are performed. Unit: seconds. Valid values: <strong>1 to 50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -259,14 +270,18 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP method that is used for health checks. Valid values:
-         * <p>
+         * <p>The HTTP method that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>HEAD</strong> (default): By default, HTTP and HTTPS health checks use the HEAD method.</li>
+         * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
+         * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+         * </blockquote>
          * 
-         * *   **HEAD** (default): By default, HTTP and HTTPS health checks use the HEAD method.
-         * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-         * *   **POST**: gRPC health checks use the POST method by default.
-         * 
-         * >  This parameter takes effect only if you set **HealthCheckProtocol** to **HTTP**, **HTTPS**, or **gRPC**.
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         public Builder healthCheckMethod(String healthCheckMethod) {
             this.healthCheckMethod = healthCheckMethod;
@@ -274,12 +289,14 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The URL that is used for health checks.
-         * <p>
+         * <p>The URL that is used for health checks.</p>
+         * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &amp;, and the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \&quot; , +</code>. The URL must start with a forward slash (/).</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+         * </blockquote>
          * 
-         * The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &, and the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
-         * 
-         * >  This parameter takes effect only if you set **HealthCheckProtocol** to **HTTP**, **HTTPS**, or **gRPC**.
+         * <strong>example:</strong>
+         * <p>/test/index.html</p>
          */
         public Builder healthCheckPath(String healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
@@ -287,13 +304,16 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The protocol that is used for health checks. Valid values:
-         * <p>
+         * <p>The protocol that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP</strong> (default): HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
+         * <li><strong>HTTPS</strong>: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS supports encryption and provides higher security than HTTP.</li>
+         * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to probe the availability of backend servers.</li>
+         * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to probe the availability of backend servers.</li>
+         * </ul>
          * 
-         * *   **HTTP** (default): HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.
-         * *   **HTTPS**: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS supports encryption and provides higher security than HTTP.
-         * *   **TCP**: TCP health checks send TCP SYN packets to a backend server to probe the availability of backend servers.
-         * *   **gRPC**: gRPC health checks send POST or GET requests to a backend server to probe the availability of backend servers.
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder healthCheckProtocol(String healthCheckProtocol) {
             this.healthCheckProtocol = healthCheckProtocol;
@@ -301,7 +321,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the health check template.
+         * <p>The ID of the health check template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hct-x4jazoyi6tvsq9****</p>
          */
         public Builder healthCheckTemplateId(String healthCheckTemplateId) {
             this.healthCheckTemplateId = healthCheckTemplateId;
@@ -309,10 +332,11 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the health check template.
-         * <p>
+         * <p>The name of the health check template.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>HealthCheckTemplate1</p>
          */
         public Builder healthCheckTemplateName(String healthCheckTemplateName) {
             this.healthCheckTemplateName = healthCheckTemplateName;
@@ -320,12 +344,11 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period of a health check. If a backend server does not respond within the specified timeout period, the backend server fails the health check. Unit: seconds.
-         * <p>
+         * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
          * 
-         * Valid values: **1** to **300**.
-         * 
-         * > If the value of the `HealthCheckTimeout` parameter is smaller than that of the `HealthCheckInterval` parameter, the timeout period specified by the `HealthCheckTimeout` parameter is ignored and the value of the `HealthCheckInterval` parameter is used as the timeout period.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;
@@ -333,10 +356,11 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
-         * <p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <strong>fail</strong> to <strong>success</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * 
-         * Valid values: **2** to **10**.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -344,7 +368,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB1AFC33-DAE8-528E-AA4D-4A6AABE71945</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -352,7 +379,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -360,10 +387,11 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
-         * <p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * 
-         * Valid values: **2** to **10**.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
@@ -376,6 +404,12 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHealthCheckTemplateAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHealthCheckTemplateAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -415,7 +449,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key. The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <p>The tag key. The tag key can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -423,7 +460,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value. The tag value can be up to 128 characters in length, and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
+             * <p>The tag value. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

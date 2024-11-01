@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLoadBalancerAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateLoadBalancerAttributeRequest</p>
@@ -110,12 +111,14 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -124,11 +127,14 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, a `2xx HTTP` status code is returned and the operation is performed. This is the default value.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -137,7 +143,11 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the ALB instance.
+         * <p>The ID of the ALB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-o9ulmq5hgn68jk****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -146,7 +156,10 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * The name of the ALB instance. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <p>The name of the ALB instance. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-instance-test</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -155,7 +168,7 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * The configuration read-only mode.
+         * <p>The configuration read-only mode.</p>
          */
         public Builder modificationProtectionConfig(ModificationProtectionConfig modificationProtectionConfig) {
             this.putQueryParameter("ModificationProtectionConfig", modificationProtectionConfig);
@@ -170,6 +183,12 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLoadBalancerAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLoadBalancerAttributeRequest</p>
+     */
     public static class ModificationProtectionConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
@@ -209,10 +228,11 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
             private String status; 
 
             /**
-             * It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
-             * <p>
+             * <p>It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+             * <p>This parameter takes effect only when <strong>ModificationProtectionStatus</strong> is set to <strong>ConsoleProtection</strong>.</p>
              * 
-             * This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -220,13 +240,17 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
             }
 
             /**
-             * The status of the configuration read-only mode. Valid values:
-             * <p>
+             * <p>The status of the configuration read-only mode. Valid values:</p>
+             * <ul>
+             * <li><strong>NonProtection</strong>: disables the configuration read-only mode. In this case, you cannot specify <strong>ModificationProtectionReason</strong>. If you specify <strong>ModificationProtectionReason</strong>, the value of the parameter is cleared.</li>
+             * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode. In this case, you can specify <strong>ModificationProtectionReason</strong>.</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+             * </blockquote>
              * 
-             * *   **NonProtection**: disables the configuration read-only mode. In this case, you cannot specify **ModificationProtectionReason**. If you specify **ModificationProtectionReason**, the value of the parameter is cleared.
-             * *   **ConsoleProtection**: enables the configuration read-only mode. In this case, you can specify **ModificationProtectionReason**.
-             * 
-             * > If you set this parameter to **ConsoleProtection**, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+             * <strong>example:</strong>
+             * <p>ConsoleProtection</p>
              */
             public Builder status(String status) {
                 this.status = status;

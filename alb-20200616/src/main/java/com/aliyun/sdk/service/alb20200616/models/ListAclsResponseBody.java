@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAclsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAclsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListAclsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * A list of ACLs.
+         * <p>A list of ACLs.</p>
          */
         public Builder acls(java.util.List < Acls> acls) {
             this.acls = acls;
@@ -93,7 +94,10 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of network ACLs returned. This parameter is optional. Valid values: **1** to **100**. If this parameter is not set, the default value **20** is returned.
+         * <p>The maximum number of network ACLs returned. This parameter is optional. Valid values: <strong>1</strong> to <strong>100</strong>. If this parameter is not set, the default value <strong>20</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,11 +105,14 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, it indicates that no next query is to be sent.
-         * *   If **NextToken** is returned, the value indicates the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70t****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,7 +120,10 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,10 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +147,12 @@ public class ListAclsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAclsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAclsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -173,7 +192,10 @@ public class ListAclsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +203,10 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+             * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -195,6 +220,12 @@ public class ListAclsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAclsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAclsResponseBody</p>
+     */
     public static class Acls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
@@ -306,7 +337,10 @@ public class ListAclsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ACL ID.
+             * <p>The ACL ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nacl-hp34s2h0xx1ht4nwo****</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -314,7 +348,10 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ACL.
+             * <p>The name of the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-acl</p>
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -322,12 +359,15 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ACL. Valid values:
-             * <p>
+             * <p>The status of the ACL. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong>: The network ACL is being created.</li>
+             * <li><strong>Available</strong>: The network ACL is available.</li>
+             * <li><strong>Configuring</strong></li>
+             * </ul>
              * 
-             * *   **Creating**: The network ACL is being created.
-             * *   **Available**: The network ACL is available.
-             * *   **Configuring**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -335,7 +375,10 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version of the ACL. Only **IPv4** may be returned.
+             * <p>The IP version of the ACL. Only <strong>IPv4</strong> may be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -343,11 +386,14 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether configuration management is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether configuration management is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder configManagedEnabled(Boolean configManagedEnabled) {
                 this.configManagedEnabled = configManagedEnabled;
@@ -355,7 +401,10 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ACL was created. The follows the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the ACL was created. The follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-15T07:37:33Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -363,7 +412,10 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtopty****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -371,7 +423,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

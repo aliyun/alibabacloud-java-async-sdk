@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServerGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListServerGroupsRequest</p>
@@ -152,7 +153,10 @@ public class ListServerGroupsRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -161,11 +165,14 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXG****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +181,10 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the server group belongs.
+         * <p>The ID of the resource group to which the server group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -183,7 +193,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The server group IDs.
+         * <p>The server group IDs.</p>
          */
         public Builder serverGroupIds(java.util.List < String > serverGroupIds) {
             this.putQueryParameter("ServerGroupIds", serverGroupIds);
@@ -192,7 +202,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The names of the server groups to be queried. You can specify at most 10 server group names.
+         * <p>The names of the server groups to be queried. You can specify at most 10 server group names.</p>
          */
         public Builder serverGroupNames(java.util.List < String > serverGroupNames) {
             this.putQueryParameter("ServerGroupNames", serverGroupNames);
@@ -201,7 +211,15 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * ServerGroupType.
+         * <p>The server group type. Valid values:</p>
+         * <ul>
+         * <li><strong>Instance</strong>: instances, including ECS instances, ENIs, and elastic container instances.</li>
+         * <li><strong>Ip</strong>: IP addresses.</li>
+         * <li><strong>Fc</strong>: Function Compute</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder serverGroupType(String serverGroupType) {
             this.putQueryParameter("ServerGroupType", serverGroupType);
@@ -210,7 +228,10 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The tags that are added to the server group. You can specify up to 10 tags in each call.
+         * <p>The tags that are added to the server group. You can specify up to 10 tags in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -219,7 +240,10 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -234,6 +258,12 @@ public class ListServerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>ListServerGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -273,10 +303,11 @@ public class ListServerGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify up to 10 tag keys.
-             * <p>
+             * <p>The tag key. You can specify up to 10 tag keys.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -284,10 +315,11 @@ public class ListServerGroupsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify up to 10 tag values.
-             * <p>
+             * <p>The tag value. You can specify up to 10 tag values.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachCommonBandwidthPackageToLoadBalancerResponseBody} extends {@link TeaModel}
  *
  * <p>AttachCommonBandwidthPackageToLoadBalancerResponseBody</p>
@@ -49,7 +50,10 @@ public class AttachCommonBandwidthPackageToLoadBalancerResponseBody extends TeaM
         private String requestId; 
 
         /**
-         * The asynchronous task ID.
+         * <p>The asynchronous task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class AttachCommonBandwidthPackageToLoadBalancerResponseBody extends TeaM
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2EF39708-974B-5E74-AFF5-3445263035A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

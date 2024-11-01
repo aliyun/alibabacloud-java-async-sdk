@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private java.util.List < Zones> zones; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The zones.
+         * <p>The zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPdzTKM4svjIT4VQig7tTMKqiHlxKt2p5Zuz45p+Lxdq</p>
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -70,6 +77,12 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -109,7 +122,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The name of the zone.
+             * <p>The name of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou Zone G</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -117,7 +133,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

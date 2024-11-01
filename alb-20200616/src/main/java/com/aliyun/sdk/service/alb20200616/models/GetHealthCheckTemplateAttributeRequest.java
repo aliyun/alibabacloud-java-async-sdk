@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHealthCheckTemplateAttributeRequest} extends {@link RequestModel}
  *
  * <p>GetHealthCheckTemplateAttributeRequest</p>
@@ -54,7 +55,11 @@ public class GetHealthCheckTemplateAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the health check template.
+         * <p>The ID of the health check template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hct-x4jazoyi6tvsq9****</p>
          */
         public Builder healthCheckTemplateId(String healthCheckTemplateId) {
             this.putQueryParameter("HealthCheckTemplateId", healthCheckTemplateId);

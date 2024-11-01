@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableLoadBalancerIpv6InternetResponseBody} extends {@link TeaModel}
  *
  * <p>DisableLoadBalancerIpv6InternetResponseBody</p>
@@ -49,7 +50,10 @@ public class DisableLoadBalancerIpv6InternetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The asynchronous task ID.
+         * <p>The asynchronous task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d12871a6-ebb2-41f3-8d74-d9f452bb****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class DisableLoadBalancerIpv6InternetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D866E37-1123-5160-AFF1-BDAF5EB86A8A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

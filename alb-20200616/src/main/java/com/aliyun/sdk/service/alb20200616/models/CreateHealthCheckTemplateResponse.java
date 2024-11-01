@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHealthCheckTemplateResponse} extends {@link TeaModel}
  *
  * <p>CreateHealthCheckTemplateResponse</p>

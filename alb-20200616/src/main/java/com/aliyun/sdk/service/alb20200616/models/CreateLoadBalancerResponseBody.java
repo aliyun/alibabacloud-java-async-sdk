@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoadBalancerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLoadBalancerResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ALB instance ID.
+         * <p>The ALB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-o9ulmq5hgn68jk****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -57,7 +61,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListListenerCertificatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListListenerCertificatesResponseBody</p>
@@ -85,7 +86,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The certificates.
+         * <p>The certificates.</p>
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.certificates = certificates;
@@ -93,7 +94,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,11 +105,14 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,7 +120,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +147,12 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListListenerCertificatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListListenerCertificatesResponseBody</p>
+     */
     public static class Certificates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
@@ -197,7 +216,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The certificate ID. Only server certificates are supported.
+             * <p>The certificate ID. Only server certificates are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12315790343_166f8204689_1714763408_70998****</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -205,7 +227,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate.
+             * <p>The type of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Server</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -213,11 +238,14 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate is the default certificate of the listener. Valid values:
-             * <p>
+             * <p>Indicates whether the certificate is the default certificate of the listener. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -225,12 +253,15 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate is associated with the listener. Valid values:
-             * <p>
+             * <p>Indicates whether the certificate is associated with the listener. Valid values:</p>
+             * <ul>
+             * <li><strong>Associating</strong></li>
+             * <li><strong>Associated</strong></li>
+             * <li><strong>Diassociating</strong></li>
+             * </ul>
              * 
-             * *   **Associating**
-             * *   **Associated**
-             * *   **Diassociating**
+             * <strong>example:</strong>
+             * <p>Associating</p>
              */
             public Builder status(String status) {
                 this.status = status;

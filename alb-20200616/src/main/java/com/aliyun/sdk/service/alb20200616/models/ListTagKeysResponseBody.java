@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagKeysResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +97,14 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The tag keys.
+         * <p>The tag keys.</p>
          */
         public Builder tagKeys(java.util.List < TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
@@ -121,7 +131,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +147,12 @@ public class ListTagKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagKeysResponseBody</p>
+     */
     public static class TagKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -173,12 +192,12 @@ public class ListTagKeysResponseBody extends TeaModel {
             private String tagKey; 
 
             /**
-             * The type of the tag.
-             * <p>
+             * <p>The type of the tag.</p>
+             * <p>Valid values: <strong>Custom</strong>, <strong>System</strong>, and <strong>All</strong>.</p>
+             * <p>Default value: <strong>All</strong>.</p>
              * 
-             * Valid values: **Custom**, **System**, and **All**.
-             * 
-             * Default value: **All**.
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -186,7 +205,10 @@ public class ListTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that matches all filter conditions.
+             * <p>The tag that matches all filter conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAclEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAclEntriesResponseBody</p>
@@ -85,7 +86,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ACL entries.
+         * <p>The ACL entries.</p>
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
@@ -93,7 +94,10 @@ public class ListAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,11 +105,14 @@ public class ListAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,7 +120,10 @@ public class ListAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,10 @@ public class ListAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +147,12 @@ public class ListAclEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAclEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAclEntriesResponseBody</p>
+     */
     public static class AclEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -185,7 +204,10 @@ public class ListAclEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+             * <p>The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-entry</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -193,7 +215,10 @@ public class ListAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block for the ACL entry.
+             * <p>The CIDR block for the ACL entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.1.1/24</p>
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -201,12 +226,15 @@ public class ListAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ACL entry. Valid values:
-             * <p>
+             * <p>The status of the ACL entry. Valid values:</p>
+             * <ul>
+             * <li><strong>Adding</strong>: The ACL entry is being added.</li>
+             * <li><strong>Available</strong>: The ACL entry is added and available.</li>
+             * <li><strong>Removing</strong>: The ACL entry is being removed.</li>
+             * </ul>
              * 
-             * *   **Adding**: The ACL entry is being added.
-             * *   **Available**: The ACL entry is added and available.
-             * *   **Removing**: The ACL entry is being removed.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

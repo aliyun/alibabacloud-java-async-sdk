@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLoadBalancersRequest} extends {@link RequestModel}
  *
  * <p>ListLoadBalancersRequest</p>
@@ -249,11 +250,14 @@ public class ListLoadBalancersRequest extends Request {
         } 
 
         /**
-         * The IP version. Valid values:
-         * <p>
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
          * 
-         * *   **IPv4**
-         * *   **DualStack**
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.putQueryParameter("AddressIpVersion", addressIpVersion);
@@ -262,11 +266,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The network type. Valid values:
-         * <p>
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
+         * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.</li>
+         * </ul>
          * 
-         * *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
-         * *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -275,7 +282,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-95qnr2itwu9orb****.cn-hangzhou.alb.aliyuncs.com</p>
          */
         public Builder DNSName(String DNSName) {
             this.putQueryParameter("DNSName", DNSName);
@@ -284,11 +294,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The type of IPv6 address that is used by the ALB instance. Valid values:
-         * <p>
+         * <p>The type of IPv6 address that is used by the ALB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
+         * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</li>
+         * </ul>
          * 
-         * *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
-         * *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         public Builder ipv6AddressType(String ipv6AddressType) {
             this.putQueryParameter("Ipv6AddressType", ipv6AddressType);
@@ -297,11 +310,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The service status of the ALB instance. Valid values:
-         * <p>
+         * <p>The service status of the ALB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Abnormal</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
          * 
-         * *   **Abnormal**
-         * *   **Normal**
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder loadBalancerBussinessStatus(String loadBalancerBussinessStatus) {
             this.putQueryParameter("LoadBalancerBussinessStatus", loadBalancerBussinessStatus);
@@ -310,7 +326,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The instance IDs. You can specify at most 20 ALB instance IDs.
+         * <p>The instance IDs. You can specify at most 20 ALB instance IDs.</p>
          */
         public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
@@ -319,7 +335,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The names of the instances. You can specify at most 10 names.
+         * <p>The instance names. You can specify at most 10 instance names.</p>
          */
         public Builder loadBalancerNames(java.util.List < String > loadBalancerNames) {
             this.putQueryParameter("LoadBalancerNames", loadBalancerNames);
@@ -328,14 +344,17 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The status of the ALB instance. Valid values:
-         * <p>
+         * <p>The status of the ALB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Inactive</strong>: The ALB instance is disabled. The listeners do not forward traffic.</li>
+         * <li><strong>Active</strong>: The ALB instance is running.</li>
+         * <li><strong>Provisioning</strong>: The ALB instance is being created.</li>
+         * <li><strong>Configuring</strong>: The ALB instance is being modified.</li>
+         * <li><strong>CreateFailed</strong>: The system failed to create the ALB instance. In this case, you are not charged for the ALB instance. You can only delete the ALB instance. By default, the system deletes the ALB instances that are in the CreateFailed state within the last day.</li>
+         * </ul>
          * 
-         * *   **Inactive**: The ALB instance is disabled. The listeners do not forward traffic.
-         * *   **Active**: The ALB instance is running.
-         * *   **Provisioning**: The ALB instance is being created.
-         * *   **Configuring**: The ALB instance is being modified.
-         * *   **CreateFailed**: The system failed to create the ALB instance. In this case, you are not charged for the ALB instance. You can only delete the ALB instance. By default, the system deletes the ALB instances that are in the CreateFailed state within the last day.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
@@ -344,7 +363,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -353,11 +375,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -366,10 +391,11 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The billing method of the ALB instance. Set the value to
-         * <p>
+         * <p>The billing method of the ALB instance. Set the value to</p>
+         * <p><strong>PostPay</strong>, which specifies the pay-as-you-go billing method. This is the default value.</p>
          * 
-         * **PostPay**, which specifies the pay-as-you-go billing method. This is the default value.
+         * <strong>example:</strong>
+         * <p>PostPay</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -378,7 +404,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -387,7 +416,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The tags added to the ALB instance.
+         * <p>The tags added to the ALB instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -396,7 +425,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the ALB instance belongs. You can specify at most 10 IDs.
+         * <p>The ID of the VPC to which the ALB instance belongs. You can specify at most 10 VPC IDs.</p>
          */
         public Builder vpcIds(java.util.List < String > vpcIds) {
             this.putQueryParameter("VpcIds", vpcIds);
@@ -405,10 +434,11 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the zone where the ALB instance is deployed.
-         * <p>
+         * <p>The ID of the zone where the ALB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query zones.</p>
          * 
-         * You can call the [DescribeZones](~~189196~~) operation to query zones.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -423,6 +453,12 @@ public class ListLoadBalancersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListLoadBalancersRequest} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -462,10 +498,11 @@ public class ListLoadBalancersRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -473,10 +510,11 @@ public class ListLoadBalancersRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>alueTest</p>
              */
             public Builder value(String value) {
                 this.value = value;

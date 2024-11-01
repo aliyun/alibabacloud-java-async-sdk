@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAScriptsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAScriptsResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateAScriptsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The asynchronous task ID.
+         * <p>The asynchronous task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e82b5f4-1ba9-4d20-89c8-1082ebaa****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class UpdateAScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACA19FE1-C09E-53C7-8FDA-560F49D71891</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

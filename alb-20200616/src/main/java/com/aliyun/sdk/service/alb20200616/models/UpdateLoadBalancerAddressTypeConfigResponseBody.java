@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLoadBalancerAddressTypeConfigResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateLoadBalancerAddressTypeConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateLoadBalancerAddressTypeConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the asynchronous job.
+         * <p>The ID of the asynchronous job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +61,10 @@ public class UpdateLoadBalancerAddressTypeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

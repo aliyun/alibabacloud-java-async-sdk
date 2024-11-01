@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListListenersRequest} extends {@link RequestModel}
  *
  * <p>ListListenersRequest</p>
@@ -123,7 +124,7 @@ public class ListListenersRequest extends Request {
         } 
 
         /**
-         * The listener IDs. You can specify at most 20 listener IDs.
+         * <p>The listener IDs. You can specify at most 20 listener IDs.</p>
          */
         public Builder listenerIds(java.util.List < String > listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
@@ -132,12 +133,15 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * The listener protocol. Valid values:
-         * <p>
+         * <p>The listener protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP</strong></li>
+         * <li><strong>HTTPS</strong></li>
+         * <li><strong>QUIC</strong></li>
+         * </ul>
          * 
-         * *   **HTTP**
-         * *   **HTTPS**
-         * *   **QUIC**
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -146,7 +150,7 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * The ID of the Application Load Balancer (ALB) instance. You can specify at most 20 IDs.
+         * <p>The ALB instance ID. You can specify at most 20 instance IDs.</p>
          */
         public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
@@ -155,7 +159,10 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. This parameter is optional. Valid values: **1 to 100**. If you do not specify this parameter, the default value **20** is used.
+         * <p>The maximum number of entries to return. This parameter is optional. Valid values: <strong>1 to 100</strong>. If you do not specify this parameter, the default value <strong>20</strong> is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -164,11 +171,14 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -177,7 +187,7 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -192,6 +202,12 @@ public class ListListenersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListListenersRequest} extends {@link TeaModel}
+     *
+     * <p>ListListenersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -231,7 +247,10 @@ public class ListListenersRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -239,7 +258,10 @@ public class ListListenersRequest extends Request {
             }
 
             /**
-             * The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

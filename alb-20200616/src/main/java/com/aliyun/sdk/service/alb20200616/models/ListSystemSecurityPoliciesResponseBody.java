@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemSecurityPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSystemSecurityPoliciesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         private java.util.List < SecurityPolicies> securityPolicies; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The security policies.
+         * <p>The security policies.</p>
          */
         public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
@@ -70,6 +74,12 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSystemSecurityPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemSecurityPoliciesResponseBody</p>
+     */
     public static class SecurityPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ciphers")
         private java.util.List < String > ciphers;
@@ -121,7 +131,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             private java.util.List < String > TLSVersions; 
 
             /**
-             * The supported cipher suite.
+             * <p>The supported cipher suite.</p>
              */
             public Builder ciphers(java.util.List < String > ciphers) {
                 this.ciphers = ciphers;
@@ -129,7 +139,10 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security policy.
+             * <p>The ID of the security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spy-n0kn923****</p>
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -137,7 +150,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The supported TLS protocol versions.
+             * <p>The supported TLS protocol versions.</p>
              */
             public Builder TLSVersions(java.util.List < String > TLSVersions) {
                 this.TLSVersions = TLSVersions;

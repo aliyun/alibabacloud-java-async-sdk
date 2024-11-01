@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelShiftLoadBalancerZonesResponseBody} extends {@link TeaModel}
  *
  * <p>CancelShiftLoadBalancerZonesResponseBody</p>
@@ -37,7 +38,10 @@ public class CancelShiftLoadBalancerZonesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

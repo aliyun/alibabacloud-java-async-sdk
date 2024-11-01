@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAScriptsRequest} extends {@link RequestModel}
  *
  * <p>UpdateAScriptsRequest</p>
@@ -81,7 +82,7 @@ public class UpdateAScriptsRequest extends Request {
         } 
 
         /**
-         * The information about the AScript rule.
+         * <p>The information about the AScript rule.</p>
          */
         public Builder aScripts(java.util.List < AScripts> aScripts) {
             this.putQueryParameter("AScripts", aScripts);
@@ -90,12 +91,14 @@ public class UpdateAScriptsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>b1f642ac-5558-4a36-b7d9-cf53f40ea5c8</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -104,11 +107,14 @@ public class UpdateAScriptsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -123,6 +129,12 @@ public class UpdateAScriptsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateAScriptsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAScriptsRequest</p>
+     */
     public static class ExtAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttributeKey")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -164,10 +176,12 @@ public class UpdateAScriptsRequest extends Request {
             private String attributeValue; 
 
             /**
-             * The attribute name.
-             * <p>
+             * <p>The attribute name.</p>
+             * <p>Set the value to <strong>EsDebug</strong>, which specifies that when requests carry the _es_dbg parameter whose value is the specified key, the debugging header is enabled to output the execution result.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Set the value to **EsDebug**, which specifies that when requests carry the \_es_dbg parameter whose value is the specified key, the debugging header is enabled to output the execution result.
+             * <strong>example:</strong>
+             * <p>EsDebug</p>
              */
             public Builder attributeKey(String attributeKey) {
                 this.attributeKey = attributeKey;
@@ -175,7 +189,11 @@ public class UpdateAScriptsRequest extends Request {
             }
 
             /**
-             * The attribute value, which must be 1 to 128 characters in length, and can contain letters and digits.
+             * <p>The attribute value, which must be 1 to 128 characters in length, and can contain letters and digits.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder attributeValue(String attributeValue) {
                 this.attributeValue = attributeValue;
@@ -189,6 +207,12 @@ public class UpdateAScriptsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateAScriptsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAScriptsRequest</p>
+     */
     public static class AScripts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AScriptId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -277,7 +301,11 @@ public class UpdateAScriptsRequest extends Request {
             private String scriptContent; 
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>as-mhqxcanmivn4g5****</p>
              */
             public Builder aScriptId(String aScriptId) {
                 this.aScriptId = aScriptId;
@@ -285,10 +313,11 @@ public class UpdateAScriptsRequest extends Request {
             }
 
             /**
-             * The name of the AScript rule.
-             * <p>
+             * <p>The name of the AScript rule.</p>
+             * <p>The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
              * 
-             * The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+             * <strong>example:</strong>
+             * <p>Group1</p>
              */
             public Builder aScriptName(String aScriptName) {
                 this.aScriptName = aScriptName;
@@ -296,11 +325,14 @@ public class UpdateAScriptsRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the AScript rule. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the AScript rule. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -308,11 +340,14 @@ public class UpdateAScriptsRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the extended attributes of the Ascript rule. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the extended attributes of the Ascript rule. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false (false)</li>
+             * </ul>
              * 
-             * *   true
-             * *   false (false)
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder extAttributeEnabled(Boolean extAttributeEnabled) {
                 this.extAttributeEnabled = extAttributeEnabled;
@@ -320,7 +355,7 @@ public class UpdateAScriptsRequest extends Request {
             }
 
             /**
-             * The extended attribute.
+             * <p>The extended attribute.</p>
              */
             public Builder extAttributes(java.util.List < ExtAttributes> extAttributes) {
                 this.extAttributes = extAttributes;
@@ -328,7 +363,10 @@ public class UpdateAScriptsRequest extends Request {
             }
 
             /**
-             * The content of the AScript rule.
+             * <p>The content of the AScript rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>if and(match_re($uri, &quot;^/1.txt$&quot;), $arg_type) { rewrite(concat(&quot;/1.&quot;, $arg_type), &quot;break&quot;) }</p>
              */
             public Builder scriptContent(String scriptContent) {
                 this.scriptContent = scriptContent;

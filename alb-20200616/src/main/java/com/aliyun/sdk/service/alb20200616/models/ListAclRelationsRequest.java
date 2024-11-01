@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAclRelationsRequest} extends {@link RequestModel}
  *
  * <p>ListAclRelationsRequest</p>
@@ -54,7 +55,8 @@ public class ListAclRelationsRequest extends Request {
         } 
 
         /**
-         * Array of ACL ID.
+         * <p>The access control list (ACL) IDs. You can query at most five ACLs in each call.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.putQueryParameter("AclIds", aclIds);

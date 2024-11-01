@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAScriptsRequest} extends {@link RequestModel}
  *
  * <p>ListAScriptsRequest</p>
@@ -109,7 +110,7 @@ public class ListAScriptsRequest extends Request {
         } 
 
         /**
-         * The AScript rule IDs.
+         * <p>The AScript rule IDs. You can specify at most 20 IDs in each call.</p>
          */
         public Builder aScriptIds(java.util.List < String > aScriptIds) {
             this.putQueryParameter("AScriptIds", aScriptIds);
@@ -118,7 +119,7 @@ public class ListAScriptsRequest extends Request {
         }
 
         /**
-         * The names of the AScript rules.
+         * <p>The AScript rule names. You can specify at most 10 names in each call.</p>
          */
         public Builder aScriptNames(java.util.List < String > aScriptNames) {
             this.putQueryParameter("AScriptNames", aScriptNames);
@@ -127,7 +128,7 @@ public class ListAScriptsRequest extends Request {
         }
 
         /**
-         * The listener IDs.
+         * <p>The listener IDs. You can specify at most 20 listener IDs in each call.</p>
          */
         public Builder listenerIds(java.util.List < String > listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
@@ -136,12 +137,12 @@ public class ListAScriptsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return.
-         * <p>
+         * <p>The maximum number of entries to return.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * <p>Default value: <strong>20</strong>. If you do not specify this parameter, the default value is used.</p>
          * 
-         * Valid values: **1** to **100**.
-         * 
-         * Default value: **20**. If you do not specify this parameter, the default value is used.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -150,11 +151,14 @@ public class ListAScriptsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.****</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.****
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

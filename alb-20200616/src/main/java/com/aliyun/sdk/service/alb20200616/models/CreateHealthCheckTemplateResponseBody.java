@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHealthCheckTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHealthCheckTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateHealthCheckTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the health check template.
+         * <p>The ID of the health check template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hct-1224334</p>
          */
         public Builder healthCheckTemplateId(String healthCheckTemplateId) {
             this.healthCheckTemplateId = healthCheckTemplateId;
@@ -57,7 +61,10 @@ public class CreateHealthCheckTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
