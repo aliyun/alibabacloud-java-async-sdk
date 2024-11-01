@@ -140,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateViewPointResponse> generateViewPoint(GenerateViewPointRequest request);
 
     /**
+     * @param request the request parameters of GetCustomHotTopicBroadcastJob  GetCustomHotTopicBroadcastJobRequest
+     * @return GetCustomHotTopicBroadcastJobResponse
+     */
+    CompletableFuture<GetCustomHotTopicBroadcastJobResponse> getCustomHotTopicBroadcastJob(GetCustomHotTopicBroadcastJobRequest request);
+
+    /**
      * @param request the request parameters of GetCustomText  GetCustomTextRequest
      * @return GetCustomTextResponse
      */
@@ -168,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetGeneratedContentResponse
      */
     CompletableFuture<GetGeneratedContentResponse> getGeneratedContent(GetGeneratedContentRequest request);
+
+    /**
+     * @param request the request parameters of GetHotTopicBroadcast  GetHotTopicBroadcastRequest
+     * @return GetHotTopicBroadcastResponse
+     */
+    CompletableFuture<GetHotTopicBroadcastResponse> getHotTopicBroadcast(GetHotTopicBroadcastRequest request);
 
     /**
      * @param request the request parameters of GetInterveneGlobalReply  GetInterveneGlobalReplyRequest
@@ -520,6 +532,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitAsyncTaskResponse
      */
     CompletableFuture<SubmitAsyncTaskResponse> submitAsyncTask(SubmitAsyncTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitCustomHotTopicBroadcastJob  SubmitCustomHotTopicBroadcastJobRequest
+     * @return SubmitCustomHotTopicBroadcastJobResponse
+     */
+    CompletableFuture<SubmitCustomHotTopicBroadcastJobResponse> submitCustomHotTopicBroadcastJob(SubmitCustomHotTopicBroadcastJobRequest request);
 
     /**
      * @param request the request parameters of SubmitCustomTopicSelectionPerspectiveAnalysisTask  SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest
