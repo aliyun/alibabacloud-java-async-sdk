@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationalUnitParentsRequest} extends {@link RequestModel}
  *
  * <p>ListOrganizationalUnitParentsRequest</p>
@@ -92,7 +93,11 @@ public class ListOrganizationalUnitParentsRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +106,11 @@ public class ListOrganizationalUnitParentsRequest extends Request {
         }
 
         /**
-         * 组织ID。
+         * <p>组织ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserDescriptionRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserDescriptionRequest</p>
@@ -107,7 +108,10 @@ public class UpdateUserDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the account. The value can be up to 256 characters in length.
+         * <p>The description of the account. The value can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -116,7 +120,11 @@ public class UpdateUserDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +133,11 @@ public class UpdateUserDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the account.
+         * <p>The ID of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

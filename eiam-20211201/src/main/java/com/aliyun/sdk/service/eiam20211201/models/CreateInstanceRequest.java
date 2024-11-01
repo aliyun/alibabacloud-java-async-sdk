@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
@@ -76,7 +77,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The description of the instance. The description can be up to 128 characters in length.
+         * <p>The description of the instance. The description can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_for_test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkAccessEndpointAvailableZonesResponseBody} extends {@link TeaModel}
  *
  * <p>ListNetworkAccessEndpointAvailableZonesResponseBody</p>
@@ -70,6 +71,12 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link ListNetworkAccessEndpointAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkAccessEndpointAvailableZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -109,7 +116,10 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
             private String zoneId; 
 
             /**
-             * 可用区名称。
+             * <p>可用区名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>华东1（杭州）可用区J</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -117,7 +127,10 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
             }
 
             /**
-             * 可用区ID。
+             * <p>可用区ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

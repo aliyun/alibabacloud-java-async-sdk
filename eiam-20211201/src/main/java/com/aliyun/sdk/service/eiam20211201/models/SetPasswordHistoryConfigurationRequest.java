@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordHistoryConfigurationRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordHistoryConfigurationRequest</p>
@@ -107,7 +108,11 @@ public class SetPasswordHistoryConfigurationRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +121,10 @@ public class SetPasswordHistoryConfigurationRequest extends Request {
         }
 
         /**
-         * The maximum number of recent passwords that can be retained. This parameter must be specified when PasswordHistoryStatus is set to enabled.
+         * <p>The maximum number of recent passwords that can be retained. This parameter must be specified when PasswordHistoryStatus is set to enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder passwordHistoryMaxRetention(Integer passwordHistoryMaxRetention) {
             this.putQueryParameter("PasswordHistoryMaxRetention", passwordHistoryMaxRetention);
@@ -125,11 +133,15 @@ public class SetPasswordHistoryConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the password history feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the password history feature. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   enabled
-         * *   disabled
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder passwordHistoryStatus(String passwordHistoryStatus) {
             this.putQueryParameter("PasswordHistoryStatus", passwordHistoryStatus);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPasswordExpirationConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetPasswordExpirationConfigurationResponseBody</p>
@@ -49,7 +50,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The password expiration configurations.
+         * <p>The password expiration configurations.</p>
          */
         public Builder passwordExpirationConfiguration(PasswordExpirationConfiguration passwordExpirationConfiguration) {
             this.passwordExpirationConfiguration = passwordExpirationConfiguration;
@@ -57,7 +58,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPasswordExpirationConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPasswordExpirationConfigurationResponseBody</p>
+     */
     public static class PasswordExpirationConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PasswordExpirationAction")
         private String passwordExpirationAction;
@@ -169,12 +179,15 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             private Integer passwordValidMaxDay; 
 
             /**
-             * The action to take when a password expires. Valid values:
-             * <p>
+             * <p>The action to take when a password expires. Valid values:</p>
+             * <ul>
+             * <li>forbid_login: Prohibit the user from using the password to log on to IDaaS.</li>
+             * <li>force_update_password: Force the user to change the password.</li>
+             * <li>remind_update_password: Remind the user to change the password.</li>
+             * </ul>
              * 
-             * *   forbid_login: Prohibit the user from using the password to log on to IDaaS.
-             * *   force_update_password: Force the user to change the password.
-             * *   remind_update_password: Remind the user to change the password.
+             * <strong>example:</strong>
+             * <p>forbid_login</p>
              */
             public Builder passwordExpirationAction(String passwordExpirationAction) {
                 this.passwordExpirationAction = passwordExpirationAction;
@@ -182,7 +195,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The methods for receiving password expiration notifications.
+             * <p>The methods for receiving password expiration notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login</p>
              */
             public Builder passwordExpirationNotificationChannels(java.util.List < String > passwordExpirationNotificationChannels) {
                 this.passwordExpirationNotificationChannels = passwordExpirationNotificationChannels;
@@ -190,7 +206,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days before the expiration date during which password expiration notifications are sent. Unit: day.
+             * <p>The number of days before the expiration date during which password expiration notifications are sent. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder passwordExpirationNotificationDuration(Integer passwordExpirationNotificationDuration) {
                 this.passwordExpirationNotificationDuration = passwordExpirationNotificationDuration;
@@ -198,11 +217,14 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password expiration notification feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the password expiration notification feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
              * 
-             * *   enabled
-             * *   disabled
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordExpirationNotificationStatus(String passwordExpirationNotificationStatus) {
                 this.passwordExpirationNotificationStatus = passwordExpirationNotificationStatus;
@@ -210,11 +232,14 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password expiration feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the password expiration feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
              * 
-             * *   enabled
-             * *   disabled
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordExpirationStatus(String passwordExpirationStatus) {
                 this.passwordExpirationStatus = passwordExpirationStatus;
@@ -222,7 +247,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days before which users must change the password to prevent password expiration. Unit: day.
+             * <p>The number of days before which users must change the password to prevent password expiration. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder passwordForcedUpdateDuration(Integer passwordForcedUpdateDuration) {
                 this.passwordForcedUpdateDuration = passwordForcedUpdateDuration;
@@ -230,7 +258,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of a password. Unit: day.
+             * <p>The validity period of a password. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder passwordValidMaxDay(Integer passwordValidMaxDay) {
                 this.passwordValidMaxDay = passwordValidMaxDay;

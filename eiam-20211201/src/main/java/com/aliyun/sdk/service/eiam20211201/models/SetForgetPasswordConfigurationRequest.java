@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetForgetPasswordConfigurationRequest} extends {@link RequestModel}
  *
  * <p>SetForgetPasswordConfigurationRequest</p>
@@ -107,7 +108,10 @@ public class SetForgetPasswordConfigurationRequest extends Request {
         }
 
         /**
-         * 身份认证渠道。枚举取值:email(邮件)、sms(短信)
+         * <p>The authentication channels. Valid values: email and sms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>email</p>
          */
         public Builder authenticationChannels(java.util.List < String > authenticationChannels) {
             this.putQueryParameter("AuthenticationChannels", authenticationChannels);
@@ -116,7 +120,11 @@ public class SetForgetPasswordConfigurationRequest extends Request {
         }
 
         /**
-         * 忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)
+         * <p>The status of the forgot password feature. Valid values: enabled and disabled.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder forgetPasswordStatus(String forgetPasswordStatus) {
             this.putQueryParameter("ForgetPasswordStatus", forgetPasswordStatus);
@@ -125,7 +133,11 @@ public class SetForgetPasswordConfigurationRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eiam-111ccc1111</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

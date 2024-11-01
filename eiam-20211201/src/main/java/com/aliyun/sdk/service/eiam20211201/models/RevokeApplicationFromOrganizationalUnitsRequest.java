@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeApplicationFromOrganizationalUnitsRequest} extends {@link RequestModel}
  *
  * <p>RevokeApplicationFromOrganizationalUnitsRequest</p>
@@ -107,7 +108,11 @@ public class RevokeApplicationFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -116,7 +121,11 @@ public class RevokeApplicationFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +134,11 @@ public class RevokeApplicationFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The IDs of the organizations. You can revoke the access permissions from a maximum of 100 organizations at a time.
+         * <p>The IDs of the organizations. You can revoke the access permissions from a maximum of 100 organizations at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);

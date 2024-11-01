@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserPasswordRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserPasswordRequest</p>
@@ -137,7 +138,11 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,7 +151,11 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * The new password of the account. For more information about the password format, see the "Password Policies" topic.
+         * <p>The new password of the account. For more information about the password format, see the &quot;Password Policies&quot; topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -155,11 +164,14 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable forcible password change upon first logon. Default value: disabled. Valid values:
-         * <p>
+         * <p>Specifies whether to enable forcible password change upon first logon. Default value: disabled. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
          * 
-         * *   enabled
-         * *   disabled
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
             this.putQueryParameter("PasswordForcedUpdateStatus", passwordForcedUpdateStatus);
@@ -168,7 +180,11 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * The account ID.
+         * <p>The account ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -177,7 +193,10 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * The methods for receiving password notifications.
+         * <p>The methods for receiving password notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms</p>
          */
         public Builder userNotificationChannels(java.util.List < String > userNotificationChannels) {
             this.putQueryParameter("UserNotificationChannels", userNotificationChannels);

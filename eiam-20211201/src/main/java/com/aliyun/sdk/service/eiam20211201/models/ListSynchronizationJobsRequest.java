@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSynchronizationJobsRequest} extends {@link RequestModel}
  *
  * <p>ListSynchronizationJobsRequest</p>
@@ -219,7 +220,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 同步方向[ingress,egress]
+         * <p>同步方向[ingress,egress]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingress</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -228,7 +232,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 同步结束时间
+         * <p>同步结束时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -237,7 +244,11 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -246,7 +257,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 分页查询时每页行数。默认值为20，最大值为100。
+         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -255,7 +269,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 查询凭证（Token），取值为上一次API调用返回的NextToken参数值。
+         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxxxxexample</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -264,7 +281,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1。
+         * <p>当前查询的列表页码，默认为1。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -273,7 +293,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20。
+         * <p>当前查询的列表页码，默认为20。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -282,7 +305,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 同步开始时间
+         * <p>同步开始时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -291,7 +317,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 同步状态[pending,running,suspending,failed,partial_success,success]
+         * <p>同步状态[pending,running,suspending,failed,partial_success,success]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -300,7 +329,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 同步目标ID
+         * <p>同步目标ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>target_001</p>
          */
         public Builder targetIds(java.util.List < String > targetIds) {
             this.putQueryParameter("TargetIds", targetIds);
@@ -309,7 +341,10 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * 同步目标类型[identity_provider,organizational_unit,application,user]
+         * <p>同步目标类型[identity_provider,organizational_unit,application,user]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identity_provider</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

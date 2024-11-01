@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersResponseBody</p>
@@ -61,7 +62,10 @@ public class ListUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries in the list.
+         * <p>The number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -77,7 +84,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The list of data objects of accounts.
+         * <p>The list of data objects of accounts.</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -90,6 +97,12 @@ public class ListUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountExpireTime")
         private Long accountExpireTime;
@@ -357,7 +370,10 @@ public class ListUsersResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder accountExpireTime(Long accountExpireTime) {
                 this.accountExpireTime = accountExpireTime;
@@ -365,7 +381,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -373,7 +392,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the account.
+             * <p>The description of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test account</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -381,7 +403,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the account.
+             * <p>The display name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>display_name001</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -389,7 +414,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user who owns the account.
+             * <p>The email address of the user who owns the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user@example.com">user@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -397,7 +425,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.
+             * <p>Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailVerified(Boolean emailVerified) {
                 this.emailVerified = emailVerified;
@@ -405,7 +436,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -413,7 +447,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder lockExpireTime(Long lockExpireTime) {
                 this.lockExpireTime = lockExpireTime;
@@ -421,7 +458,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Time When Password Expires
+             * <p>Time When Password Expires</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder passwordExpireTime(Long passwordExpireTime) {
                 this.passwordExpireTime = passwordExpireTime;
@@ -429,7 +469,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a password is set.
+             * <p>Indicates whether a password is set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder passwordSet(Boolean passwordSet) {
                 this.passwordSet = passwordSet;
@@ -437,7 +480,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the user who owns the account.
+             * <p>The mobile number of the user who owns the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>156xxxxxxx</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -445,7 +491,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.
+             * <p>Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
                 this.phoneNumberVerified = phoneNumberVerified;
@@ -453,7 +502,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The country code of the mobile number. For example, the country code of China is 86 without 00 or +.
+             * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder phoneRegion(String phoneRegion) {
                 this.phoneRegion = phoneRegion;
@@ -461,7 +513,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder registerTime(Long registerTime) {
                 this.registerTime = registerTime;
@@ -469,11 +524,14 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the account. Valid values:
-             * <p>
+             * <p>The status of the account. Valid values:</p>
+             * <ul>
+             * <li>enabled: The account is enabled.</li>
+             * <li>disabled: The account is disabled.</li>
+             * </ul>
              * 
-             * *   enabled: The account is enabled.
-             * *   disabled: The account is disabled.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -481,7 +539,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -489,10 +550,11 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.
-             * <p>
+             * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.</p>
+             * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
              * 
-             * For accounts with the same source type and source ID, each account has a unique external ID.
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder userExternalId(String userExternalId) {
                 this.userExternalId = userExternalId;
@@ -500,7 +562,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -508,10 +573,11 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The source ID of the account.
-             * <p>
+             * <p>The source ID of the account.</p>
+             * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
              * 
-             * If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder userSourceId(String userSourceId) {
                 this.userSourceId = userSourceId;
@@ -519,13 +585,16 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the account. Valid values:
-             * <p>
+             * <p>The source type of the account. Valid values:</p>
+             * <ul>
+             * <li>build_in: The account was created in IDaaS.</li>
+             * <li>ding_talk: The account was imported from DingTalk.</li>
+             * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
+             * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+             * </ul>
              * 
-             * *   build_in: The account was created in IDaaS.
-             * *   ding_talk: The account was imported from DingTalk.
-             * *   ad: The account was imported from Microsoft Active Directory (AD).
-             * *   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.
+             * <strong>example:</strong>
+             * <p>build_in</p>
              */
             public Builder userSourceType(String userSourceType) {
                 this.userSourceType = userSourceType;
@@ -533,7 +602,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name001</p>
              */
             public Builder username(String username) {
                 this.username = username;

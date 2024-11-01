@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceDescriptionRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceDescriptionRequest</p>
@@ -92,7 +93,10 @@ public class UpdateInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * The new description of the instance.
+         * <p>The new description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试实例</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -101,7 +105,11 @@ public class UpdateInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose description you want to modify.
+         * <p>The ID of the instance whose description you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

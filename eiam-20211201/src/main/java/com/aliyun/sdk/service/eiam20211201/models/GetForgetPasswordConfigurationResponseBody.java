@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetForgetPasswordConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetForgetPasswordConfigurationResponseBody</p>
@@ -49,7 +50,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The forgot password configurations.
+         * <p>The forgot password configurations.</p>
          */
         public Builder openForgetPasswordConfiguration(OpenForgetPasswordConfiguration openForgetPasswordConfiguration) {
             this.openForgetPasswordConfiguration = openForgetPasswordConfiguration;
@@ -57,7 +58,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetForgetPasswordConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetForgetPasswordConfigurationResponseBody</p>
+     */
     public static class OpenForgetPasswordConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthenticationChannels")
         private java.util.List < String > authenticationChannels;
@@ -145,7 +155,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             private String forgetPasswordStatus; 
 
             /**
-             * 表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)
+             * <p>表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)</p>
              */
             public Builder authenticationChannels(java.util.List < String > authenticationChannels) {
                 this.authenticationChannels = authenticationChannels;
@@ -153,7 +163,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the forgot password feature is enabled.
+             * <p>Indicates whether the forgot password feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -161,7 +174,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether email authentication is enabled for the forgot password feature.
+             * <p>Indicates whether email authentication is enabled for the forgot password feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableEmail(Boolean enableEmail) {
                 this.enableEmail = enableEmail;
@@ -169,7 +185,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Short Message Service (SMS) authentication is enabled for the forgot password feature.
+             * <p>Indicates whether Short Message Service (SMS) authentication is enabled for the forgot password feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSms(Boolean enableSms) {
                 this.enableSms = enableSms;
@@ -177,7 +196,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 表示忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)
+             * <p>表示忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)</p>
              */
             public Builder forgetPasswordStatus(String forgetPasswordStatus) {
                 this.forgetPasswordStatus = forgetPasswordStatus;

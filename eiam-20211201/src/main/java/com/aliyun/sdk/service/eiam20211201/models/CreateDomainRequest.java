@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDomainRequest} extends {@link RequestModel}
  *
  * <p>CreateDomainRequest</p>
@@ -106,7 +107,11 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * 域名。最大长度限制255，格式由数字、字母、横线（-）点（.）组成;
+         * <p>域名。最大长度限制255，格式由数字、字母、横线（-）点（.）组成;</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -115,7 +120,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * 备案信息参数。
+         * <p>备案信息参数。</p>
          */
         public Builder filing(Filing filing) {
             this.putQueryParameter("Filing", filing);
@@ -124,7 +129,11 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,6 +148,12 @@ public class CreateDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDomainRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDomainRequest</p>
+     */
     public static class Filing extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IcpNumber")
         private String icpNumber;
@@ -166,7 +181,10 @@ public class CreateDomainRequest extends Request {
             private String icpNumber; 
 
             /**
-             * 域名关联的备案号，长度最大限制64。
+             * <p>域名关联的备案号，长度最大限制64。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙xx-xxxxxx</p>
              */
             public Builder icpNumber(String icpNumber) {
                 this.icpNumber = icpNumber;

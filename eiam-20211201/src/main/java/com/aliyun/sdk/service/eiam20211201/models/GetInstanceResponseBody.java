@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
@@ -49,7 +50,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the instance.
+         * <p>The details of the instance.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -57,7 +58,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class DefaultEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
@@ -109,7 +119,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The endpoint of the instance.
+             * <p>The endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-xxx.aliyunidaas.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -117,11 +130,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the endpoint. Valid values:
-             * <p>
+             * <p>The status of the endpoint. Valid values:</p>
+             * <ul>
+             * <li>resolved</li>
+             * <li>unresolved</li>
+             * </ul>
              * 
-             * *   resolved
-             * *   unresolved
+             * <strong>example:</strong>
+             * <p>resolved</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -135,6 +151,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class DomainConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultDomain")
         private String defaultDomain;
@@ -186,7 +208,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String initDomainAutoRedirectStatus; 
 
             /**
-             * The default domain of the instance.
+             * <p>The default domain of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-xxx.example.com</p>
              */
             public Builder defaultDomain(String defaultDomain) {
                 this.defaultDomain = defaultDomain;
@@ -194,7 +219,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The init domain of the instance.
+             * <p>The init domain of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-xxx.aliyunidaas.com</p>
              */
             public Builder initDomain(String initDomain) {
                 this.initDomain = initDomain;
@@ -202,11 +230,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Valid values:
-             * <p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder initDomainAutoRedirectStatus(String initDomainAutoRedirectStatus) {
                 this.initDomainAutoRedirectStatus = initDomainAutoRedirectStatus;
@@ -220,6 +251,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -319,7 +356,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1550115455000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -327,7 +367,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The default endpoint of the instance.
+             * <p>The default endpoint of the instance.</p>
              */
             public Builder defaultEndpoint(DefaultEndpoint defaultEndpoint) {
                 this.defaultEndpoint = defaultEndpoint;
@@ -335,7 +375,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -343,7 +386,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The default domain of the instance.
+             * <p>The default domain of the instance.</p>
              */
             public Builder domainConfig(DomainConfig domainConfig) {
                 this.domainConfig = domainConfig;
@@ -351,7 +394,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound public CIDR blocks of the instance. For example, when you synchronize Active Directory (AD) accounts, the IDaaS EIAM instance accesses your AD service by using the outbound public CIDR blocks.
+             * <p>The outbound public CIDR blocks of the instance. For example, when you synchronize Active Directory (AD) accounts, the IDaaS EIAM instance accesses your AD service by using the outbound public CIDR blocks.</p>
              */
             public Builder egressAddresses(java.util.List < String > egressAddresses) {
                 this.egressAddresses = egressAddresses;
@@ -359,7 +402,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_abt3pfwojojcq323si6g5xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -367,11 +413,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>creating</li>
+             * <li>running</li>
+             * </ul>
              * 
-             * *   creating
-             * *   running
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;

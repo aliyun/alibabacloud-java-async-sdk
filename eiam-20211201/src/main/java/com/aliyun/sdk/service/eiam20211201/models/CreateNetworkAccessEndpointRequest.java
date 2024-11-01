@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkAccessEndpointRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkAccessEndpointRequest</p>
@@ -151,7 +152,10 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-example</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -160,7 +164,11 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -169,7 +177,11 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 专属网络端点名称。
+         * <p>专属网络端点名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx业务VPC访问端点</p>
          */
         public Builder networkAccessEndpointName(String networkAccessEndpointName) {
             this.putQueryParameter("NetworkAccessEndpointName", networkAccessEndpointName);
@@ -178,7 +190,10 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 专属网络端点连接的指定vSwitch。
+         * <p>专属网络端点连接的指定vSwitch。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-examplexxx</p>
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -187,7 +202,11 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 专属网络端点连接的VpcID。
+         * <p>专属网络端点连接的VpcID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-examplexxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -196,7 +215,11 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 专属网络端点连接的VpcID所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。
+         * <p>专属网络端点连接的VpcID所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder vpcRegionId(String vpcRegionId) {
             this.putQueryParameter("VpcRegionId", vpcRegionId);

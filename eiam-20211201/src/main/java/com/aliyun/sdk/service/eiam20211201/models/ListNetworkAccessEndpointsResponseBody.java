@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkAccessEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListNetworkAccessEndpointsResponseBody</p>
@@ -81,7 +82,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次调用返回的查询凭证（Token）值，用于下一次翻页查询。
+         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxxexample</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,6 +114,12 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNetworkAccessEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkAccessEndpointsResponseBody</p>
+     */
     public static class NetworkAccessEndpoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -257,7 +267,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             private String vpcRegionId; 
 
             /**
-             * 专属网络端点创建时间，Unix时间戳格式，单位为毫秒。
+             * <p>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -265,7 +278,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID。
+             * <p>实例ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -273,7 +289,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点ID。
+             * <p>专属网络端点ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nae_examplexxx</p>
              */
             public Builder networkAccessEndpointId(String networkAccessEndpointId) {
                 this.networkAccessEndpointId = networkAccessEndpointId;
@@ -281,7 +300,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点名称。
+             * <p>专属网络端点名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx业务VPC访问端点</p>
              */
             public Builder networkAccessEndpointName(String networkAccessEndpointName) {
                 this.networkAccessEndpointName = networkAccessEndpointName;
@@ -289,7 +311,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的类型。
+             * <p>专属网络端点连接的类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder networkAccessEndpointType(String networkAccessEndpointType) {
                 this.networkAccessEndpointType = networkAccessEndpointType;
@@ -297,7 +322,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点使用的安全组ID。
+             * <p>专属网络端点使用的安全组ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-examplexxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -305,7 +333,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点状态。
+             * <p>专属网络端点状态。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -313,7 +344,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。
+             * <p>专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -321,7 +355,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的指定vSwitch列表。
+             * <p>专属网络端点连接的指定vSwitch列表。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-examplexxx</p>
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -329,7 +366,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的VpcID。
+             * <p>专属网络端点连接的VpcID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-examplexxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -337,7 +377,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的Vpc所属地域。
+             * <p>专属网络端点连接的Vpc所属地域。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vpcRegionId(String vpcRegionId) {
                 this.vpcRegionId = vpcRegionId;

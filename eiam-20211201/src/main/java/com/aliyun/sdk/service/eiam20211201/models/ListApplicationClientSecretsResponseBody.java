@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationClientSecretsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationClientSecretsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The information about the client keys.
+         * <p>The information about the client keys.</p>
          */
         public Builder applicationClientSecrets(java.util.List < ApplicationClientSecrets> applicationClientSecrets) {
             this.applicationClientSecrets = applicationClientSecrets;
@@ -69,7 +70,10 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationClientSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationClientSecretsResponseBody</p>
+     */
     public static class ApplicationClientSecrets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -189,7 +202,10 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the application that you want to query.
+             * <p>The ID of the application that you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -197,7 +213,10 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The client ID of the application.
+             * <p>The client ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -205,7 +224,10 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The client key secret of the application. The value is not masked.
+             * <p>The client key secret of the application. The value is not masked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJh*****************************************************************************************************OQ</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -213,7 +235,10 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_wdziy4vnjt33ehhf7z2o2nxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -221,7 +246,10 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the client key was last used. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the client key was last used. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -229,7 +257,10 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The client key ID of the application.
+             * <p>The client key ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sci_k52x2ru63rlkflina5utgkxxxx</p>
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;
@@ -237,11 +268,14 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the client key. Valid values:
-             * <p>
+             * <p>The status of the client key. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The client key is enabled.</li>
+             * <li>Disabled: The client key is disabled.</li>
+             * </ul>
              * 
-             * *   Enabled: The client key is enabled.
-             * *   Disabled: The client key is disabled.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

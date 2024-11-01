@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEiamInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListEiamInstancesRequest</p>
@@ -91,7 +92,7 @@ public class ListEiamInstancesRequest extends Request {
         }
 
         /**
-         * 实例ID列表，支持0到100个
+         * <p>实例ID列表，支持0到100个</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -100,7 +101,10 @@ public class ListEiamInstancesRequest extends Request {
         }
 
         /**
-         * 实例所属Region
+         * <p>实例所属Region</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder instanceRegionId(String instanceRegionId) {
             this.putQueryParameter("InstanceRegionId", instanceRegionId);

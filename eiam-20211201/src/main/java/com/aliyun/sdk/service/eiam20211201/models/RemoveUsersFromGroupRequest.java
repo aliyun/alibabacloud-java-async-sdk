@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveUsersFromGroupRequest} extends {@link RequestModel}
  *
  * <p>RemoveUsersFromGroupRequest</p>
@@ -107,7 +108,11 @@ public class RemoveUsersFromGroupRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -116,7 +121,11 @@ public class RemoveUsersFromGroupRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +134,11 @@ public class RemoveUsersFromGroupRequest extends Request {
         }
 
         /**
-         * The account IDs. A maximum of 100 accounts can be removed from a group.
+         * <p>The account IDs. A maximum of 100 accounts can be removed from a group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ou_001]</p>
          */
         public Builder userIds(java.util.List < String > userIds) {
             this.putQueryParameter("UserIds", userIds);

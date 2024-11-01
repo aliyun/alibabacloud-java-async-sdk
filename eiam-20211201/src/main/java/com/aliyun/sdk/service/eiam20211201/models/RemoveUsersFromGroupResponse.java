@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveUsersFromGroupResponse} extends {@link TeaModel}
  *
  * <p>RemoveUsersFromGroupResponse</p>

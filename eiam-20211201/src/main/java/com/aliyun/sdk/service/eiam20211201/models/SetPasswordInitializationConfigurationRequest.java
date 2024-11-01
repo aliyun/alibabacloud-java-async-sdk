@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordInitializationConfigurationRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordInitializationConfigurationRequest</p>
@@ -137,7 +138,11 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,11 +151,14 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable forcible password change upon first logon. Valid values:
-         * <p>
+         * <p>Specifies whether to enable forcible password change upon first logon. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
          * 
-         * *   enabled
-         * *   disabled
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
             this.putQueryParameter("PasswordForcedUpdateStatus", passwordForcedUpdateStatus);
@@ -159,7 +167,10 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * The methods for receiving password initialization notifications.
+         * <p>The methods for receiving password initialization notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>email</p>
          */
         public Builder passwordInitializationNotificationChannels(java.util.List < String > passwordInitializationNotificationChannels) {
             this.putQueryParameter("PasswordInitializationNotificationChannels", passwordInitializationNotificationChannels);
@@ -168,11 +179,15 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable password initialization. Valid values:
-         * <p>
+         * <p>Specifies whether to enable password initialization. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   enabled
-         * *   disabled
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder passwordInitializationStatus(String passwordInitializationStatus) {
             this.putQueryParameter("PasswordInitializationStatus", passwordInitializationStatus);
@@ -181,10 +196,13 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Set the value to random.
-         * <p>
+         * <p>The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Set the value to random.</p>
+         * <ul>
+         * <li>random: A randomly generated password is used.</li>
+         * </ul>
          * 
-         * *   random: A randomly generated password is used.
+         * <strong>example:</strong>
+         * <p>random</p>
          */
         public Builder passwordInitializationType(String passwordInitializationType) {
             this.putQueryParameter("PasswordInitializationType", passwordInitializationType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDomainDnsChallengeRequest} extends {@link RequestModel}
  *
  * <p>GetDomainDnsChallengeRequest</p>
@@ -92,7 +93,11 @@ public class GetDomainDnsChallengeRequest extends Request {
         }
 
         /**
-         * 域名。
+         * <p>域名。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dm_examplexxxx</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -101,7 +106,11 @@ public class GetDomainDnsChallengeRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

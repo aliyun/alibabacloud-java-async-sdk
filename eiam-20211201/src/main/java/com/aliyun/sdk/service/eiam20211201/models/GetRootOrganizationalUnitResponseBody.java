@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRootOrganizationalUnitResponseBody} extends {@link TeaModel}
  *
  * <p>GetRootOrganizationalUnitResponseBody</p>
@@ -49,7 +50,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data object of the organizational unit.
+         * <p>The data object of the organizational unit.</p>
          */
         public Builder organizationalUnit(OrganizationalUnit organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
@@ -57,7 +58,10 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRootOrganizationalUnitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRootOrganizationalUnitResponseBody</p>
+     */
     public static class OrganizationalUnit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -157,7 +167,10 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -165,7 +178,10 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the organizational unit.
+             * <p>The description of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test organizational unit</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -173,7 +189,10 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -181,7 +200,10 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the organizational unit.
+             * <p>The ID of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -189,7 +211,10 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organization.
+             * <p>The name of the organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name001</p>
              */
             public Builder organizationalUnitName(String organizationalUnitName) {
                 this.organizationalUnitName = organizationalUnitName;
@@ -197,7 +222,10 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

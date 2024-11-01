@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEiamRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEiamRegionsResponseBody</p>
@@ -70,6 +71,12 @@ public class ListEiamRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEiamRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEiamRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -109,7 +116,10 @@ public class ListEiamRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * 地域名称
+             * <p>地域名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>华东1（杭州）</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -117,7 +127,10 @@ public class ListEiamRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * 地域ID
+             * <p>地域ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

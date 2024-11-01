@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationProvisioningConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationProvisioningConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration of the account synchronization feature for the application.
+         * <p>The configuration of the account synchronization feature for the application.</p>
          */
         public Builder applicationProvisioningConfig(ApplicationProvisioningConfig applicationProvisioningConfig) {
             this.applicationProvisioningConfig = applicationProvisioningConfig;
@@ -57,7 +58,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationProvisioningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationProvisioningConfigResponseBody</p>
+     */
     public static class CallbackProvisioningConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallbackUrl")
         private String callbackUrl;
@@ -133,7 +143,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private java.util.List < String > listenEventScopes; 
 
             /**
-             * The URL that the application uses to receive IDaaS event callbacks.
+             * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/event/callback">https://example.com/event/callback</a></p>
              */
             public Builder callbackUrl(String callbackUrl) {
                 this.callbackUrl = callbackUrl;
@@ -141,7 +154,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.
+             * <p>The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1adfdfdfd******111</p>
              */
             public Builder encryptKey(String encryptKey) {
                 this.encryptKey = encryptKey;
@@ -149,11 +165,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IDaaS event callback messages are encrypted. Valid values:
-             * <p>
+             * <p>Indicates whether IDaaS event callback messages are encrypted. Valid values:</p>
+             * <ul>
+             * <li>true: The messages are encrypted.</li>
+             * <li>false: The messages are transmitted in plaintext.</li>
+             * </ul>
              * 
-             * *   true: The messages are encrypted.
-             * *   false: The messages are transmitted in plaintext.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encryptRequired(Boolean encryptRequired) {
                 this.encryptRequired = encryptRequired;
@@ -161,7 +180,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The list of types of IDaaS event callback messages that are supported by the listener.
+             * <p>The list of types of IDaaS event callback messages that are supported by the listener.</p>
              */
             public Builder listenEventScopes(java.util.List < String > listenEventScopes) {
                 this.listenEventScopes = listenEventScopes;
@@ -175,6 +194,12 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationProvisioningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationProvisioningConfigResponseBody</p>
+     */
     public static class AuthnParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessToken")
         private String accessToken;
@@ -250,7 +275,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String tokenEndpoint; 
 
             /**
-             * The access token. This parameter is returned when the GrantType parameter is set to bearer_token.
+             * <p>The access token. This parameter is returned when the GrantType parameter is set to bearer_token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k52x2ru63rlkflina5utgkxxxx</p>
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;
@@ -258,11 +286,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication mode of the SCIM protocol. Valid values:
-             * <p>
+             * <p>The authentication mode of the SCIM protocol. Valid values:</p>
+             * <ul>
+             * <li>client_secret_basic: The client secret is passed in the request header.</li>
+             * <li>client_secret_post: The client secret is passed in the request body.</li>
+             * </ul>
              * 
-             * *   client_secret_basic: The client secret is passed in the request header.
-             * *   client_secret_post: The client secret is passed in the request body.
+             * <strong>example:</strong>
+             * <p>client_secret_basic</p>
              */
             public Builder authnMethod(String authnMethod) {
                 this.authnMethod = authnMethod;
@@ -270,7 +301,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The client ID of the application.
+             * <p>The client ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -278,7 +312,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The client secret of the application.
+             * <p>The client secret of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -286,7 +323,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The token endpoint.
+             * <p>The token endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/oauth/token">https://www.example.com/oauth/token</a></p>
              */
             public Builder tokenEndpoint(String tokenEndpoint) {
                 this.tokenEndpoint = tokenEndpoint;
@@ -300,6 +340,12 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationProvisioningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationProvisioningConfigResponseBody</p>
+     */
     public static class AuthnConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthnMode")
         private String authnMode;
@@ -351,10 +397,13 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String grantType; 
 
             /**
-             * The authentication mode of the SCIM protocol. Valid value:
-             * <p>
+             * <p>The authentication mode of the SCIM protocol. Valid value:</p>
+             * <ul>
+             * <li>oauth2: OAuth2.0 mode.</li>
+             * </ul>
              * 
-             * *   oauth2: OAuth2.0 mode.
+             * <strong>example:</strong>
+             * <p>oauth2</p>
              */
             public Builder authnMode(String authnMode) {
                 this.authnMode = authnMode;
@@ -362,11 +411,11 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration parameters related to authorization.
-             * <p>
-             * 
-             * *   If the GrantType parameter is set to client_credentials, the configuration parameters ClientId, ClientSecret, and AuthnMethod are returned.
-             * *   If the GrantType parameter is set to bearer_token, the configuration parameter AccessToken is returned.
+             * <p>The configuration parameters related to authorization.</p>
+             * <ul>
+             * <li>If the GrantType parameter is set to client_credentials, the configuration parameters ClientId, ClientSecret, and AuthnMethod are returned.</li>
+             * <li>If the GrantType parameter is set to bearer_token, the configuration parameter AccessToken is returned.</li>
+             * </ul>
              */
             public Builder authnParam(AuthnParam authnParam) {
                 this.authnParam = authnParam;
@@ -374,11 +423,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The grant type of the SCIM protocol. Valid values:
-             * <p>
+             * <p>The grant type of the SCIM protocol. Valid values:</p>
+             * <ul>
+             * <li>client_credentials: client mode.</li>
+             * <li>bearer_token: key mode.</li>
+             * </ul>
              * 
-             * *   client_credentials: client mode.
-             * *   bearer_token: key mode.
+             * <strong>example:</strong>
+             * <p>bearer_token</p>
              */
             public Builder grantType(String grantType) {
                 this.grantType = grantType;
@@ -392,6 +444,12 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationProvisioningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationProvisioningConfigResponseBody</p>
+     */
     public static class ScimProvisioningConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthnConfiguration")
         private AuthnConfiguration authnConfiguration;
@@ -455,7 +513,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String scimBaseUrl; 
 
             /**
-             * The configuration parameters related to SCIM-based synchronization.
+             * <p>The configuration parameters related to SCIM-based synchronization.</p>
              */
             public Builder authnConfiguration(AuthnConfiguration authnConfiguration) {
                 this.authnConfiguration = authnConfiguration;
@@ -463,10 +521,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The full synchronization scope of the SCIM protocol. Valid value:
-             * <p>
-             * 
-             * *   urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.
+             * <p>The full synchronization scope of the SCIM protocol. Valid value:</p>
+             * <ul>
+             * <li>urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</li>
+             * </ul>
              */
             public Builder fullPushScopes(java.util.List < String > fullPushScopes) {
                 this.fullPushScopes = fullPushScopes;
@@ -474,12 +532,12 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The resource operations of the SCIM protocol. Valid values:
-             * <p>
-             * 
-             * *   urn:alibaba:idaas:app:scim:User:CREATE: account creation.
-             * *   urn:alibaba:idaas:app:scim:User:UPDATE: account update.
-             * *   urn:alibaba:idaas:app:scim:User:DELETE: account deletion.
+             * <p>The resource operations of the SCIM protocol. Valid values:</p>
+             * <ul>
+             * <li>urn:alibaba:idaas:app:scim:User:CREATE: account creation.</li>
+             * <li>urn:alibaba:idaas:app:scim:User:UPDATE: account update.</li>
+             * <li>urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</li>
+             * </ul>
              */
             public Builder provisioningActions(java.util.List < String > provisioningActions) {
                 this.provisioningActions = provisioningActions;
@@ -487,7 +545,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.
+             * <p>The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/scim">https://example.com/scim</a></p>
              */
             public Builder scimBaseUrl(String scimBaseUrl) {
                 this.scimBaseUrl = scimBaseUrl;
@@ -501,6 +562,12 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationProvisioningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationProvisioningConfigResponseBody</p>
+     */
     public static class ApplicationProvisioningConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -624,7 +691,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -632,7 +702,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the custom event callback protocol of IDaaS.
+             * <p>The configuration of the custom event callback protocol of IDaaS.</p>
              */
             public Builder callbackProvisioningConfig(CallbackProvisioningConfig callbackProvisioningConfig) {
                 this.callbackProvisioningConfig = callbackProvisioningConfig;
@@ -640,11 +710,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The rendering mode of the account synchronization page. Valid values:
-             * <p>
+             * <p>The rendering mode of the account synchronization page. Valid values:</p>
+             * <ul>
+             * <li>standard: standard mode</li>
+             * <li>template: template mode</li>
+             * </ul>
              * 
-             * *   standard: standard mode
-             * *   template: template mode
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder configOperateMode(String configOperateMode) {
                 this.configOperateMode = configOperateMode;
@@ -652,7 +725,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -660,7 +736,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The public key endpoint for signature verification of the synchronization callback information.
+             * <p>The public key endpoint for signature verification of the synchronization callback information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk267xxxxx/app_mkv7rgt4d7i4u7zqtzev2mxxxx/provisioning/jwks">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk267xxxxx/app_mkv7rgt4d7i4u7zqtzev2mxxxx/provisioning/jwks</a></p>
              */
             public Builder provisionJwksEndpoint(String provisionJwksEndpoint) {
                 this.provisionJwksEndpoint = provisionJwksEndpoint;
@@ -668,11 +747,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password is synchronized in IDaaS user event callbacks. Valid values:
-             * <p>
+             * <p>Indicates whether the password is synchronized in IDaaS user event callbacks. Valid values:</p>
+             * <ul>
+             * <li>true: The password is synchronized.</li>
+             * <li>false: The password is not synchronized.</li>
+             * </ul>
              * 
-             * *   true: The password is synchronized.
-             * *   false: The password is not synchronized.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder provisionPassword(Boolean provisionPassword) {
                 this.provisionPassword = provisionPassword;
@@ -680,11 +762,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization protocol type of the application. Valid values:
-             * <p>
+             * <p>The synchronization protocol type of the application. Valid values:</p>
+             * <ul>
+             * <li>idaas_callback: custom event callback protocol of IDaaS.</li>
+             * <li>scim2: System for Cross-domain Identity Management (SCIM) protocol.</li>
+             * </ul>
              * 
-             * *   idaas_callback: custom event callback protocol of IDaaS.
-             * *   scim2: System for Cross-domain Identity Management (SCIM) protocol.
+             * <strong>example:</strong>
+             * <p>idaas_callback</p>
              */
             public Builder provisionProtocolType(String provisionProtocolType) {
                 this.provisionProtocolType = provisionProtocolType;
@@ -692,7 +777,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of SCIM-based IDaaS synchronization.
+             * <p>The configuration of SCIM-based IDaaS synchronization.</p>
              */
             public Builder scimProvisioningConfig(ScimProvisioningConfig scimProvisioningConfig) {
                 this.scimProvisioningConfig = scimProvisioningConfig;
@@ -700,11 +785,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IDaaS account synchronization feature. Valid values:
-             * <p>
+             * <p>The status of the IDaaS account synchronization feature. Valid values:</p>
+             * <ul>
+             * <li>enabled: The feature is enabled.</li>
+             * <li>disabled: The feature is disabled.</li>
+             * </ul>
              * 
-             * *   enabled: The feature is enabled.
-             * *   disabled: The feature is disabled.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

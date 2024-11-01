@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveUserFromOrganizationalUnitsRequest} extends {@link RequestModel}
  *
  * <p>RemoveUserFromOrganizationalUnitsRequest</p>
@@ -107,7 +108,11 @@ public class RemoveUserFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +121,8 @@ public class RemoveUserFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The organization IDs. You can remove an account from a maximum of 100 organizations.
+         * <p>The organization IDs. You can remove an account from a maximum of 100 organizations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
@@ -125,7 +131,11 @@ public class RemoveUserFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The account ID.
+         * <p>The account ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

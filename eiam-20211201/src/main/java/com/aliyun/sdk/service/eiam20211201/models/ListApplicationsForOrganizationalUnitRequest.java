@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsForOrganizationalUnitRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationsForOrganizationalUnitRequest</p>
@@ -134,7 +135,10 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The IDs of the applications that the EIAM organization can access. You can query a maximum of 100 application IDs at a time.
+         * <p>The IDs of the applications that the EIAM organization can access. You can query a maximum of 100 application IDs at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationIds(java.util.List < String > applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -143,7 +147,11 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -152,7 +160,11 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The ID of the EIAM organization.
+         * <p>The ID of the EIAM organization.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
@@ -161,7 +173,10 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +185,10 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

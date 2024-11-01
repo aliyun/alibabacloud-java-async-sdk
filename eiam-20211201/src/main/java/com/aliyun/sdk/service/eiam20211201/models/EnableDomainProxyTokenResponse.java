@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableDomainProxyTokenResponse} extends {@link TeaModel}
  *
  * <p>EnableDomainProxyTokenResponse</p>

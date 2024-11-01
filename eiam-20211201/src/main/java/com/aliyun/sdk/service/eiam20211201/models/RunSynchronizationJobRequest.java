@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunSynchronizationJobRequest} extends {@link RequestModel}
  *
  * <p>RunSynchronizationJobRequest</p>
@@ -107,7 +108,11 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +121,11 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * 同步目标ID
+         * <p>同步目标ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idp_my664lwkhpicbyzirog3ngxxxxx</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -125,7 +134,11 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * 同步目标类型
+         * <p>同步目标类型</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identity_provider</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

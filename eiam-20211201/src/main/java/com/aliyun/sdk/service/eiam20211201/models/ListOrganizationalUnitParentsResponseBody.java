@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationalUnitParentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOrganizationalUnitParentsResponseBody</p>
@@ -70,6 +71,12 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOrganizationalUnitParentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationalUnitParentsResponseBody</p>
+     */
     public static class Parents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
@@ -109,7 +116,10 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
             private String parentId; 
 
             /**
-             * 组织ID
+             * <p>组织ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_4lag76zc2km5ssg5vsmm2lznvu</p>
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -117,7 +127,10 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
             }
 
             /**
-             * 父组织ID
+             * <p>父组织ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_x3beoyepv2ls5iwuge3xhjkwbm</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;

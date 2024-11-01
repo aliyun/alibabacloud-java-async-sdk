@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserResponseBody</p>
@@ -49,7 +50,10 @@ public class GetUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * The data object of the account.
+         * <p>The data object of the account.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -70,6 +74,12 @@ public class GetUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class CustomFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
@@ -109,7 +119,10 @@ public class GetUserResponseBody extends TeaModel {
             private String fieldValue; 
 
             /**
-             * The identifier of the custom field.
+             * <p>The identifier of the custom field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -117,7 +130,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the custom field.
+             * <p>The value of the custom field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -131,6 +147,12 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -182,7 +204,10 @@ public class GetUserResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The description of the organizational unit.
+             * <p>The description of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a test.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -190,7 +215,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the organizational unit.
+             * <p>The ID of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -198,7 +226,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organizational unit.
+             * <p>The name of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_test_name</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -212,6 +243,12 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class OrganizationalUnits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
@@ -263,7 +300,10 @@ public class GetUserResponseBody extends TeaModel {
             private Boolean primary; 
 
             /**
-             * The ID of the organizational unit.
+             * <p>The ID of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -271,7 +311,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organizational unit.
+             * <p>The name of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_ou_name</p>
              */
             public Builder organizationalUnitName(String organizationalUnitName) {
                 this.organizationalUnitName = organizationalUnitName;
@@ -279,7 +322,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the organization is the primary organization.
+             * <p>Indicates whether the organization is the primary organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -293,6 +339,12 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class User extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountExpireTime")
         private Long accountExpireTime;
@@ -620,7 +672,10 @@ public class GetUserResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder accountExpireTime(Long accountExpireTime) {
                 this.accountExpireTime = accountExpireTime;
@@ -628,7 +683,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -636,7 +694,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The list of custom fields that describe the account.
+             * <p>The list of custom fields that describe the account.</p>
              */
             public Builder customFields(java.util.List < CustomFields> customFields) {
                 this.customFields = customFields;
@@ -644,7 +702,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the account.
+             * <p>The description of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test account</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -652,7 +713,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the account.
+             * <p>The display name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>display_name001</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -660,7 +724,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user who owns the account.
+             * <p>The email address of the user who owns the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user@example.com">user@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -668,7 +735,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.
+             * <p>Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailVerified(Boolean emailVerified) {
                 this.emailVerified = emailVerified;
@@ -676,7 +746,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The organizational units to which the account belongs.
+             * <p>The organizational units to which the account belongs.</p>
              */
             public Builder groups(java.util.List < Groups> groups) {
                 this.groups = groups;
@@ -684,7 +754,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -692,7 +765,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder lockExpireTime(Long lockExpireTime) {
                 this.lockExpireTime = lockExpireTime;
@@ -700,7 +776,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The organizational units to which the account belongs.
+             * <p>The organizational units to which the account belongs.</p>
              */
             public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
                 this.organizationalUnits = organizationalUnits;
@@ -708,12 +784,15 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the password of the account expires. This value is a UNIX timestamp. Unit: milliseconds.
-             * <p>
+             * <p>The time when the password of the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <ul>
+             * <li>If the value -1 is returned, the password does not expire.</li>
+             * <li>If no value is returned, the password does not expire.</li>
+             * <li>If a UNIX timestamp is returned, the password expires at the indicated point of time.</li>
+             * </ul>
              * 
-             * *   If the value -1 is returned, the password does not expire.
-             * *   If no value is returned, the password does not expire.
-             * *   If a UNIX timestamp is returned, the password expires at the indicated point of time.
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder passwordExpireTime(Long passwordExpireTime) {
                 this.passwordExpireTime = passwordExpireTime;
@@ -721,7 +800,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a password is set.
+             * <p>Indicates whether a password is set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder passwordSet(Boolean passwordSet) {
                 this.passwordSet = passwordSet;
@@ -729,7 +811,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the user who owns the account.
+             * <p>The mobile number of the user who owns the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>156xxxxxxx</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -737,7 +822,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.
+             * <p>Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
                 this.phoneNumberVerified = phoneNumberVerified;
@@ -745,7 +833,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The country code of the mobile number. For example, the country code of China is 86 without 00 or +.
+             * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder phoneRegion(String phoneRegion) {
                 this.phoneRegion = phoneRegion;
@@ -753,7 +844,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * PreferredLanguage.
+             * <p>Preferred language</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en-US</p>
              */
             public Builder preferredLanguage(String preferredLanguage) {
                 this.preferredLanguage = preferredLanguage;
@@ -761,7 +855,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary organizational unit to which the account belongs.
+             * <p>The ID of the primary organizational unit to which the account belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
              */
             public Builder primaryOrganizationalUnitId(String primaryOrganizationalUnitId) {
                 this.primaryOrganizationalUnitId = primaryOrganizationalUnitId;
@@ -769,7 +866,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder registerTime(Long registerTime) {
                 this.registerTime = registerTime;
@@ -777,11 +877,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the account. Valid values:
-             * <p>
+             * <p>The status of the account. Valid values:</p>
+             * <ul>
+             * <li>enabled: The account is enabled.</li>
+             * <li>disabled: The account is disabled.</li>
+             * </ul>
              * 
-             * *   enabled: The account is enabled.
-             * *   disabled: The account is disabled.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -789,7 +892,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -797,10 +903,11 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.
-             * <p>
+             * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.</p>
+             * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
              * 
-             * For accounts with the same source type and source ID, each account has a unique external ID.
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder userExternalId(String userExternalId) {
                 this.userExternalId = userExternalId;
@@ -808,7 +915,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -816,10 +926,11 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The source ID of the account.
-             * <p>
+             * <p>The source ID of the account.</p>
+             * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
              * 
-             * If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder userSourceId(String userSourceId) {
                 this.userSourceId = userSourceId;
@@ -827,13 +938,16 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the account. Valid values:
-             * <p>
+             * <p>The source type of the account. Valid values:</p>
+             * <ul>
+             * <li>build_in: The account was created in IDaaS.</li>
+             * <li>ding_talk: The account was imported from DingTalk.</li>
+             * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
+             * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+             * </ul>
              * 
-             * *   build_in: The account was created in IDaaS.
-             * *   ding_talk: The account was imported from DingTalk.
-             * *   ad: The account was imported from Microsoft Active Directory (AD).
-             * *   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.
+             * <strong>example:</strong>
+             * <p>build_in</p>
              */
             public Builder userSourceType(String userSourceType) {
                 this.userSourceType = userSourceType;
@@ -841,7 +955,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name001</p>
              */
             public Builder username(String username) {
                 this.username = username;

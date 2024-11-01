@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListGroupsRequest</p>
@@ -161,7 +162,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The external ID of the group.
+         * <p>The external ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_external_id</p>
          */
         public Builder groupExternalId(String groupExternalId) {
             this.putQueryParameter("GroupExternalId", groupExternalId);
@@ -170,7 +174,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The group IDs.
+         * <p>The group IDs.</p>
          */
         public Builder groupIds(java.util.List < String > groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -179,7 +183,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The name of the group. If you specify this parameter, the query is based on an exact match.
+         * <p>The name of the group. If you specify this parameter, the query is based on an exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name_test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -188,7 +195,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.
+         * <p>The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder groupNameStartsWith(String groupNameStartsWith) {
             this.putQueryParameter("GroupNameStartsWith", groupNameStartsWith);
@@ -197,7 +207,11 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -206,7 +220,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +232,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

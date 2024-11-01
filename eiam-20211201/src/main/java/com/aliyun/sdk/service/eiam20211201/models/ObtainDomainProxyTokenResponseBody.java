@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ObtainDomainProxyTokenResponseBody} extends {@link TeaModel}
  *
  * <p>ObtainDomainProxyTokenResponseBody</p>
@@ -70,6 +71,12 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ObtainDomainProxyTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>ObtainDomainProxyTokenResponseBody</p>
+     */
     public static class DomainProxyToken extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -181,7 +188,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 域名代理Token创建时间，Unix时间戳格式，单位为毫秒。
+             * <p>域名代理Token创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -189,7 +199,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 域名ID。
+             * <p>域名ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dm_examplexxxx</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -197,7 +210,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 域名代理Token。
+             * <p>域名代理Token。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PTxxxxxxxx</p>
              */
             public Builder domainProxyToken(String domainProxyToken) {
                 this.domainProxyToken = domainProxyToken;
@@ -205,7 +221,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 域名代理Token ID。
+             * <p>域名代理Token ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pt_examplexxxx</p>
              */
             public Builder domainProxyTokenId(String domainProxyTokenId) {
                 this.domainProxyTokenId = domainProxyTokenId;
@@ -213,7 +232,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID。
+             * <p>实例ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -221,7 +243,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 域名代理Token最近使用时间，Unix时间戳格式，单位为毫秒。
+             * <p>域名代理Token最近使用时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -229,7 +254,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * token状态，枚举类型：(enabled）启用,（disabled）禁用。
+             * <p>token状态，枚举类型：(enabled）启用,（disabled）禁用。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -237,7 +265,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 域名代理Token最近更新时间，Unix时间戳格式，单位为毫秒。
+             * <p>域名代理Token最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

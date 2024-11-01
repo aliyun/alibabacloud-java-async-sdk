@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersForGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersForGroupResponseBody</p>
@@ -61,7 +62,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned. The maximum number of entries that can be returned per page is specified by PageSize.
+         * <p>The total number of entries returned. The maximum number of entries that can be returned per page is specified by PageSize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -77,7 +84,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information about accounts.
+         * <p>The information about accounts.</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -90,6 +97,12 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersForGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersForGroupResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupMemberRelationSourceId")
         private String groupMemberRelationSourceId;
@@ -141,7 +154,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * GroupMemberRelationSourceId.
+             * <p>Account membership source id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder groupMemberRelationSourceId(String groupMemberRelationSourceId) {
                 this.groupMemberRelationSourceId = groupMemberRelationSourceId;
@@ -149,7 +165,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupMemberRelationSourceType.
+             * <p>Account membership source type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>build_in</p>
              */
             public Builder groupMemberRelationSourceType(String groupMemberRelationSourceType) {
                 this.groupMemberRelationSourceType = groupMemberRelationSourceType;
@@ -157,7 +176,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The account ID.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

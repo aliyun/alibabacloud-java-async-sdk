@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkAccessEndpointRequest} extends {@link RequestModel}
  *
  * <p>DeleteNetworkAccessEndpointRequest</p>
@@ -92,7 +93,11 @@ public class DeleteNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +106,11 @@ public class DeleteNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 专属网络端点ID。
+         * <p>专属网络端点ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae_examplexxxx</p>
          */
         public Builder networkAccessEndpointId(String networkAccessEndpointId) {
             this.putQueryParameter("NetworkAccessEndpointId", networkAccessEndpointId);

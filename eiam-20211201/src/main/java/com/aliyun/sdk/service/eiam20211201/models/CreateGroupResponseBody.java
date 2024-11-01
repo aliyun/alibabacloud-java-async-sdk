@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -57,7 +61,10 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

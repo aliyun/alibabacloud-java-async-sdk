@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNetworkAccessEndpointNameRequest} extends {@link RequestModel}
  *
  * <p>UpdateNetworkAccessEndpointNameRequest</p>
@@ -107,7 +108,11 @@ public class UpdateNetworkAccessEndpointNameRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +121,11 @@ public class UpdateNetworkAccessEndpointNameRequest extends Request {
         }
 
         /**
-         * 专属网络端点ID。
+         * <p>专属网络端点ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae_examplexxxx</p>
          */
         public Builder networkAccessEndpointId(String networkAccessEndpointId) {
             this.putQueryParameter("NetworkAccessEndpointId", networkAccessEndpointId);
@@ -125,7 +134,11 @@ public class UpdateNetworkAccessEndpointNameRequest extends Request {
         }
 
         /**
-         * 专属网络端点名称。
+         * <p>专属网络端点名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx业务VPC访问端点</p>
          */
         public Builder networkAccessEndpointName(String networkAccessEndpointName) {
             this.putQueryParameter("NetworkAccessEndpointName", networkAccessEndpointName);

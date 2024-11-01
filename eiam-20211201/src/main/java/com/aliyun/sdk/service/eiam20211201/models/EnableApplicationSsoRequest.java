@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableApplicationSsoRequest} extends {@link RequestModel}
  *
  * <p>EnableApplicationSsoRequest</p>
@@ -92,7 +93,11 @@ public class EnableApplicationSsoRequest extends Request {
         }
 
         /**
-         * IDaaS的应用主键id
+         * <p>IDaaS的应用主键id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -101,7 +106,11 @@ public class EnableApplicationSsoRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * <p>IDaaS EIAM的实例id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

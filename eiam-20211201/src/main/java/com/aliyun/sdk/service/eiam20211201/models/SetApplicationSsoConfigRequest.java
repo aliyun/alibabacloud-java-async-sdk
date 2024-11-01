@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetApplicationSsoConfigRequest} extends {@link RequestModel}
  *
  * <p>SetApplicationSsoConfigRequest</p>
@@ -148,7 +149,11 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -157,11 +162,14 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * The initial SSO method. Valid values:
-         * <p>
+         * <p>The initial SSO method. Valid values:</p>
+         * <ul>
+         * <li>only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.</li>
+         * <li>idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.</li>
+         * </ul>
          * 
-         * *   only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.
-         * *   idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.
+         * <strong>example:</strong>
+         * <p>only_app_init_sso</p>
          */
         public Builder initLoginType(String initLoginType) {
             this.putQueryParameter("InitLoginType", initLoginType);
@@ -170,7 +178,10 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * The initial webhook URL of SSO. This parameter is required when the SSO protocol of the application is an OIDC protocol and the InitLoginType parameters is set to idaas_or_app_init_sso or when the SSO protocol of the application is SAML and the InitLoginType parameter is set to only_app_init_sso.
+         * <p>The initial webhook URL of SSO. This parameter is required when the SSO protocol of the application is an OIDC protocol and the InitLoginType parameters is set to idaas_or_app_init_sso or when the SSO protocol of the application is SAML and the InitLoginType parameter is set to only_app_init_sso.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF">http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF</a></p>
          */
         public Builder initLoginUrl(String initLoginUrl) {
             this.putQueryParameter("InitLoginUrl", initLoginUrl);
@@ -179,7 +190,11 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -188,7 +203,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * The Open ID Connect (OIDC)-based SSO configuration attributes of the application.
+         * <p>The Open ID Connect (OIDC)-based SSO configuration attributes of the application.</p>
          */
         public Builder oidcSsoConfig(OidcSsoConfig oidcSsoConfig) {
             this.putQueryParameter("OidcSsoConfig", oidcSsoConfig);
@@ -197,7 +212,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application.
+         * <p>The Security Assertion Markup Language (SAML)-based single sign-on (SSO) configuration attributes of the application.</p>
          */
         public Builder samlSsoConfig(SamlSsoConfig samlSsoConfig) {
             this.putQueryParameter("SamlSsoConfig", samlSsoConfig);
@@ -212,6 +227,12 @@ public class SetApplicationSsoConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetApplicationSsoConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetApplicationSsoConfigRequest</p>
+     */
     public static class CustomClaims extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClaimName")
         private String claimName;
@@ -251,7 +272,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String claimValueExpression; 
 
             /**
-             * The claim name.
+             * <p>The claim name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;Role&quot;</p>
              */
             public Builder claimName(String claimName) {
                 this.claimName = claimName;
@@ -259,7 +283,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The expression that is used to generate the value of the claim.
+             * <p>The expression that is used to generate the value of the claim.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user.dict.applicationRole</p>
              */
             public Builder claimValueExpression(String claimValueExpression) {
                 this.claimValueExpression = claimValueExpression;
@@ -273,6 +300,12 @@ public class SetApplicationSsoConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetApplicationSsoConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetApplicationSsoConfigRequest</p>
+     */
     public static class OidcSsoConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessTokenEffectiveTime")
         private Long accessTokenEffectiveTime;
@@ -469,7 +502,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String subjectIdExpression; 
 
             /**
-             * The validity period of the issued access token. Unit: seconds. Default value: 1200.
+             * <p>The validity period of the issued access token. Unit: seconds. Default value: 1200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder accessTokenEffectiveTime(Long accessTokenEffectiveTime) {
                 this.accessTokenEffectiveTime = accessTokenEffectiveTime;
@@ -477,7 +513,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The validity period of the issued code. Unit: seconds. Default value: 60.
+             * <p>The validity period of the issued code. Unit: seconds. Default value: 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder codeEffectiveTime(Long codeEffectiveTime) {
                 this.codeEffectiveTime = codeEffectiveTime;
@@ -485,7 +524,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The custom claims that are returned for the ID token.
+             * <p>The custom claims that are returned for the ID token.</p>
              */
             public Builder customClaims(java.util.List < CustomClaims> customClaims) {
                 this.customClaims = customClaims;
@@ -493,7 +532,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The scopes of user attributes that can be returned for the UserInfo endpoint or ID token.
+             * <p>The scopes of user attributes that can be returned for the UserInfo endpoint or ID token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>profile，email</p>
              */
             public Builder grantScopes(java.util.List < String > grantScopes) {
                 this.grantScopes = grantScopes;
@@ -501,7 +543,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The list of grant types that are supported for OIDC protocols.
+             * <p>The list of grant types that are supported for OIDC protocols.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>authorization_code</p>
              */
             public Builder grantTypes(java.util.List < String > grantTypes) {
                 this.grantTypes = grantTypes;
@@ -509,7 +554,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The validity period of the issued ID token. Unit: seconds. Default value: 300.
+             * <p>The validity period of the issued ID token. Unit: seconds. Default value: 300.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder idTokenEffectiveTime(Long idTokenEffectiveTime) {
                 this.idTokenEffectiveTime = idTokenEffectiveTime;
@@ -517,7 +565,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The ID of the identity authentication source in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.
+             * <p>The ID of the identity authentication source in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ia_password</p>
              */
             public Builder passwordAuthenticationSourceId(String passwordAuthenticationSourceId) {
                 this.passwordAuthenticationSourceId = passwordAuthenticationSourceId;
@@ -525,7 +576,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.
+             * <p>Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder passwordTotpMfaRequired(Boolean passwordTotpMfaRequired) {
                 this.passwordTotpMfaRequired = passwordTotpMfaRequired;
@@ -533,7 +587,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The algorithms that are used to calculate the code challenge for PKCE.
+             * <p>The algorithms that are used to calculate the code challenge for PKCE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S256</p>
              */
             public Builder pkceChallengeMethods(java.util.List < String > pkceChallengeMethods) {
                 this.pkceChallengeMethods = pkceChallengeMethods;
@@ -541,7 +598,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether the SSO of the application requires Proof Key for Code Exchange (PKCE) (RFC 7636).
+             * <p>Specifies whether the SSO of the application requires Proof Key for Code Exchange (PKCE) (RFC 7636).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder pkceRequired(Boolean pkceRequired) {
                 this.pkceRequired = pkceRequired;
@@ -549,7 +609,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The list of logout redirect URIs that are supported by the application.
+             * <p>The list of logout redirect URIs that are supported by the application.</p>
              */
             public Builder postLogoutRedirectUris(java.util.List < String > postLogoutRedirectUris) {
                 this.postLogoutRedirectUris = postLogoutRedirectUris;
@@ -557,7 +617,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The list of redirect URIs that are supported by the application.
+             * <p>The list of redirect URIs that are supported by the application.</p>
              */
             public Builder redirectUris(java.util.List < String > redirectUris) {
                 this.redirectUris = redirectUris;
@@ -565,7 +625,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The validity period of the issued refresh token. Unit: seconds. Default value: 86400.
+             * <p>The validity period of the issued refresh token. Unit: seconds. Default value: 86400.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder refreshTokenEffective(Long refreshTokenEffective) {
                 this.refreshTokenEffective = refreshTokenEffective;
@@ -573,7 +636,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The response types that are supported by the application. Specify this parameter when the value of the GrantTypes parameter includes the implicit mode.
+             * <p>The response types that are supported by the application. Specify this parameter when the value of the GrantTypes parameter includes the implicit mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token id_token</p>
              */
             public Builder responseTypes(java.util.List < String > responseTypes) {
                 this.responseTypes = responseTypes;
@@ -581,7 +647,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The custom expression that is used to generate the subject ID returned for the ID token.
+             * <p>The custom expression that is used to generate the subject ID returned for the ID token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user.userid</p>
              */
             public Builder subjectIdExpression(String subjectIdExpression) {
                 this.subjectIdExpression = subjectIdExpression;
@@ -595,6 +664,12 @@ public class SetApplicationSsoConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetApplicationSsoConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetApplicationSsoConfigRequest</p>
+     */
     public static class AttributeStatements extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttributeName")
         private String attributeName;
@@ -634,7 +709,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String attributeValueExpression; 
 
             /**
-             * The attribute name.
+             * <p>The attribute name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName">https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName</a></p>
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -642,7 +720,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The expression that is used to generate the value of the attribute.
+             * <p>The expression that is used to generate the value of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user.username</p>
              */
             public Builder attributeValueExpression(String attributeValueExpression) {
                 this.attributeValueExpression = attributeValueExpression;
@@ -656,6 +737,12 @@ public class SetApplicationSsoConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetApplicationSsoConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetApplicationSsoConfigRequest</p>
+     */
     public static class SamlSsoConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssertionSigned")
         private Boolean assertionSigned;
@@ -665,6 +752,9 @@ public class SetApplicationSsoConfigRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("DefaultRelayState")
         private String defaultRelayState;
+
+        @com.aliyun.core.annotation.NameInMap("IdPEntityId")
+        private String idPEntityId;
 
         @com.aliyun.core.annotation.NameInMap("NameIdFormat")
         private String nameIdFormat;
@@ -688,6 +778,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             this.assertionSigned = builder.assertionSigned;
             this.attributeStatements = builder.attributeStatements;
             this.defaultRelayState = builder.defaultRelayState;
+            this.idPEntityId = builder.idPEntityId;
             this.nameIdFormat = builder.nameIdFormat;
             this.nameIdValueExpression = builder.nameIdValueExpression;
             this.responseSigned = builder.responseSigned;
@@ -723,6 +814,13 @@ public class SetApplicationSsoConfigRequest extends Request {
          */
         public String getDefaultRelayState() {
             return this.defaultRelayState;
+        }
+
+        /**
+         * @return idPEntityId
+         */
+        public String getIdPEntityId() {
+            return this.idPEntityId;
         }
 
         /**
@@ -771,6 +869,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             private Boolean assertionSigned; 
             private java.util.List < AttributeStatements> attributeStatements; 
             private String defaultRelayState; 
+            private String idPEntityId; 
             private String nameIdFormat; 
             private String nameIdValueExpression; 
             private Boolean responseSigned; 
@@ -779,7 +878,14 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String spSsoAcsUrl; 
 
             /**
-             * assertion是否签名
+             * <p>Specifies whether to calculate the signature for the assertion. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder assertionSigned(Boolean assertionSigned) {
                 this.assertionSigned = assertionSigned;
@@ -787,7 +893,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The additional user attributes in the SAML assertion.
+             * <p>The additional user attributes in the SAML assertion.</p>
              */
             public Builder attributeStatements(java.util.List < AttributeStatements> attributeStatements) {
                 this.attributeStatements = attributeStatements;
@@ -795,7 +901,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The default value of the RelayState attribute. If the SSO request is initiated in EIAM, the RelayState attribute in the SAML response is set to this default value.
+             * <p>The default value of the RelayState attribute. If the SSO request is initiated in EIAM, the RelayState attribute in the SAML response is set to this default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></p>
              */
             public Builder defaultRelayState(String defaultRelayState) {
                 this.defaultRelayState = defaultRelayState;
@@ -803,13 +912,24 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The Format attribute of the NameID element in the SAML assertion. Valid values:
-             * <p>
+             * IdPEntityId.
+             */
+            public Builder idPEntityId(String idPEntityId) {
+                this.idPEntityId = idPEntityId;
+                return this;
+            }
+
+            /**
+             * <p>The Format attribute of the NameID element in the SAML assertion. Valid values:</p>
+             * <ul>
+             * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</li>
+             * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</li>
+             * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</li>
+             * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</li>
+             * </ul>
              * 
-             * *   urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.
-             * *   urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.
-             * *   urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.
-             * *   urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.
+             * <strong>example:</strong>
+             * <p>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</p>
              */
             public Builder nameIdFormat(String nameIdFormat) {
                 this.nameIdFormat = nameIdFormat;
@@ -817,7 +937,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The expression that is used to generate the value of NameID in the SAML assertion.
+             * <p>The expression that is used to generate the value of NameID in the SAML assertion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user.email</p>
              */
             public Builder nameIdValueExpression(String nameIdValueExpression) {
                 this.nameIdValueExpression = nameIdValueExpression;
@@ -825,7 +948,14 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * response是否签名
+             * <p>Specifies whether to calculate the signature for the response. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder responseSigned(Boolean responseSigned) {
                 this.responseSigned = responseSigned;
@@ -833,7 +963,24 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The algorithm that is used to calculate the signature for the SAML assertion.
+             * <p>The algorithm that is used to calculate the signature for the SAML assertion.</p>
+             * <p>Enumeration value:</p>
+             * <ul>
+             * <li><p>RSA-SHA256</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>the Rivest-Shamir-Adleman (RSA)-Secure Hash Algorithm 256 (SHA-256) algorithm</p>
+             * <!-- -->
+             * 
+             * <p>.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA-SHA256</p>
              */
             public Builder signatureAlgorithm(String signatureAlgorithm) {
                 this.signatureAlgorithm = signatureAlgorithm;
@@ -841,7 +988,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The entity ID of the application in SAML. The application assumes the role of service provider.
+             * <p>The entity ID of the application in SAML.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urn:alibaba:cloudcomputing</p>
              */
             public Builder spEntityId(String spEntityId) {
                 this.spEntityId = spEntityId;
@@ -849,7 +999,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * The Assertion Consumer Service (ACS) URL of the application in SAML. The application assumes the role of service provider.
+             * <p>The Assertion Consumer Service (ACS) URL of the application in SAML.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://signin.aliyun.com/saml-role/sso">https://signin.aliyun.com/saml-role/sso</a></p>
              */
             public Builder spSsoAcsUrl(String spSsoAcsUrl) {
                 this.spSsoAcsUrl = spSsoAcsUrl;

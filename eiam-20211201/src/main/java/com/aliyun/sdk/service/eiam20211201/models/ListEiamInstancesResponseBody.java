@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEiamInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListEiamInstancesResponseBody</p>
@@ -70,6 +71,12 @@ public class ListEiamInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEiamInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEiamInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -205,7 +212,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * 实例描述信息
+             * <p>实例描述信息</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -213,7 +220,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例developer私网域名地址
+             * <p>实例developer私网域名地址</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eiam-developerapi-cn.vpc-proxy.aliyuncs.com</p>
              */
             public Builder developerAPIPrivateDomain(String developerAPIPrivateDomain) {
                 this.developerAPIPrivateDomain = developerAPIPrivateDomain;
@@ -221,7 +231,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例developer公网域名地址
+             * <p>实例developer公网域名地址</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eiam-developerapi.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder developerAPIPublicDomain(String developerAPIPublicDomain) {
                 this.developerAPIPublicDomain = developerAPIPublicDomain;
@@ -229,7 +242,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例id
+             * <p>实例id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_eypq6ljgyeuwmlw672sulxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -237,7 +253,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)
+             * <p>实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -245,7 +264,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例版本，EIAM2.0/ EIAM1.0
+             * <p>实例版本，EIAM2.0/ EIAM1.0</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EIAM 2.0</p>
              */
             public Builder instanceVersion(String instanceVersion) {
                 this.instanceVersion = instanceVersion;
@@ -253,7 +275,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例openApi私网域名地址
+             * <p>实例openApi私网域名地址</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eiam-cn.vpc-proxy.aliyuncs.com</p>
              */
             public Builder openAPIPrivateDomain(String openAPIPrivateDomain) {
                 this.openAPIPrivateDomain = openAPIPrivateDomain;
@@ -261,7 +286,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例openApi公网域名地址
+             * <p>实例openApi公网域名地址</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eiam.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder openAPIPublicDomain(String openAPIPublicDomain) {
                 this.openAPIPublicDomain = openAPIPublicDomain;
@@ -269,7 +297,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例域名地址
+             * <p>实例域名地址</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx.aliyunidaas.com</p>
              */
             public Builder SSODomain(String SSODomain) {
                 this.SSODomain = SSODomain;
@@ -277,7 +308,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例的创建时间
+             * <p>实例的创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677810869300</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

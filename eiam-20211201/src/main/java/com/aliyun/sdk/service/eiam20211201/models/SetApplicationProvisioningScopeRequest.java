@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetApplicationProvisioningScopeRequest} extends {@link RequestModel}
  *
  * <p>SetApplicationProvisioningScopeRequest</p>
@@ -120,7 +121,11 @@ public class SetApplicationProvisioningScopeRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -129,7 +134,7 @@ public class SetApplicationProvisioningScopeRequest extends Request {
         }
 
         /**
-         * 授权同步出的组列表
+         * <p>List of groups that are authorized to be synchronized from</p>
          */
         public Builder groupIds(java.util.List < String > groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -138,7 +143,11 @@ public class SetApplicationProvisioningScopeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +156,7 @@ public class SetApplicationProvisioningScopeRequest extends Request {
         }
 
         /**
-         * The list of organizational units that are authorized for account synchronization.
+         * <p>The list of organizational units that are authorized for account synchronization.</p>
          */
         public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);

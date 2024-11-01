@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsForOrganizationalUnitResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsForOrganizationalUnitResponseBody</p>
@@ -61,7 +62,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         private Long totalCount; 
 
         /**
-         * The applications that the EIAM organization can access.
+         * <p>The applications that the EIAM organization can access.</p>
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -69,7 +70,10 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of the returned entries.
+         * <p>The total number of the returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsForOrganizationalUnitResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForOrganizationalUnitResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -117,7 +130,10 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
             private String applicationId; 
 
             /**
-             * The ID of the application that the EIAM organization can access.
+             * <p>The ID of the application that the EIAM organization can access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;

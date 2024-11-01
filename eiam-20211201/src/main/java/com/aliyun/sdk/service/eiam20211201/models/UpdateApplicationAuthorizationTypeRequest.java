@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationAuthorizationTypeRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationAuthorizationTypeRequest</p>
@@ -107,7 +108,11 @@ public class UpdateApplicationAuthorizationTypeRequest extends Request {
         }
 
         /**
-         * The ID of the application that you want to modify.
+         * <p>The ID of the application that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -116,11 +121,15 @@ public class UpdateApplicationAuthorizationTypeRequest extends Request {
         }
 
         /**
-         * The authorization type of the application. Valid values:
-         * <p>
+         * <p>The authorization type of the application. Valid values:</p>
+         * <ul>
+         * <li>authorize_required: Only the user with explicit authorization can access the application.</li>
+         * <li>default_all: By default, all users can access the application.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   authorize_required: Only the user with explicit authorization can access the application.
-         * *   default_all: By default, all users can access the application.
+         * <strong>example:</strong>
+         * <p>authorize_required</p>
          */
         public Builder authorizationType(String authorizationType) {
             this.putQueryParameter("AuthorizationType", authorizationType);
@@ -129,7 +138,11 @@ public class UpdateApplicationAuthorizationTypeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsForApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupsForApplicationResponseBody</p>
@@ -61,7 +62,7 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The group IDs.
+         * <p>The group IDs.</p>
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -69,7 +70,10 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupsForApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsForApplicationResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
@@ -117,7 +130,10 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
             private String groupId; 
 
             /**
-             * The group ID.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_miu8e4t4d7i4u7uwezgr54xxxx</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;

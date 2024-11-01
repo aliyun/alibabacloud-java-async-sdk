@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersForApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersForApplicationResponseBody</p>
@@ -61,7 +62,10 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -77,7 +84,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the accounts.
+         * <p>The IDs of the accounts.</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -90,6 +97,12 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersForApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersForApplicationResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -117,7 +130,10 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationProvisioningScopeResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationProvisioningScopeResponseBody</p>
@@ -49,7 +50,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The scope of account synchronization.
+         * <p>The scope of account synchronization.</p>
          */
         public Builder applicationProvisioningScope(ApplicationProvisioningScope applicationProvisioningScope) {
             this.applicationProvisioningScope = applicationProvisioningScope;
@@ -57,7 +58,10 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationProvisioningScopeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationProvisioningScopeResponseBody</p>
+     */
     public static class ApplicationProvisioningScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupIds")
         private java.util.List < String > groupIds;
@@ -133,7 +143,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             private Integer usedQuota; 
 
             /**
-             * 同步授权的组列表
+             * <p>Synchronize the list of authorized groups</p>
              */
             public Builder groupIds(java.util.List < String > groupIds) {
                 this.groupIds = groupIds;
@@ -141,7 +151,10 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             }
 
             /**
-             * 租户最大授权主体quota数量
+             * <p>Instance Indicates the maximum quota number of authorized agents</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxQuota(Integer maxQuota) {
                 this.maxQuota = maxQuota;
@@ -149,7 +162,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             }
 
             /**
-             * The list of organizational units that are authorized for account synchronization.
+             * <p>The list of organizational units that are authorized for account synchronization.</p>
              */
             public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
                 this.organizationalUnitIds = organizationalUnitIds;
@@ -157,7 +170,10 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             }
 
             /**
-             * 已使用授权主体quota数量
+             * <p>Indicates the quota number of used authorized agents</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedQuota(Integer usedQuota) {
                 this.usedQuota = usedQuota;

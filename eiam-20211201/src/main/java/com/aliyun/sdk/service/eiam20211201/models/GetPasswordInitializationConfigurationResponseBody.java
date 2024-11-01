@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPasswordInitializationConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetPasswordInitializationConfigurationResponseBody</p>
@@ -49,7 +50,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The password initialization configurations.
+         * <p>The password initialization configurations.</p>
          */
         public Builder passwordInitializationConfiguration(PasswordInitializationConfiguration passwordInitializationConfiguration) {
             this.passwordInitializationConfiguration = passwordInitializationConfiguration;
@@ -57,7 +58,10 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link GetPasswordInitializationConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPasswordInitializationConfigurationResponseBody</p>
+     */
     public static class PasswordInitializationConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateStatus")
         private String passwordForcedUpdateStatus;
@@ -133,11 +143,14 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             private String passwordInitializationType; 
 
             /**
-             * Indicates whether forcible password change upon first logon is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether forcible password change upon first logon is enabled. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
              * 
-             * *   enabled
-             * *   disabled
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
                 this.passwordForcedUpdateStatus = passwordForcedUpdateStatus;
@@ -145,7 +158,10 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * The methods for receiving password initialization notifications.
+             * <p>The methods for receiving password initialization notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>email</p>
              */
             public Builder passwordInitializationNotificationChannels(java.util.List < String > passwordInitializationNotificationChannels) {
                 this.passwordInitializationNotificationChannels = passwordInitializationNotificationChannels;
@@ -153,11 +169,14 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * Indicates whether the password initialization feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the password initialization feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
              * 
-             * *   enabled
-             * *   disabled
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordInitializationStatus(String passwordInitializationStatus) {
                 this.passwordInitializationStatus = passwordInitializationStatus;
@@ -165,10 +184,13 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * The password initialization method. Set the value to random.
-             * <p>
+             * <p>The password initialization method. Set the value to random.</p>
+             * <ul>
+             * <li>random: A randomly generated password is used.</li>
+             * </ul>
              * 
-             * *   random: A randomly generated password is used.
+             * <strong>example:</strong>
+             * <p>random</p>
              */
             public Builder passwordInitializationType(String passwordInitializationType) {
                 this.passwordInitializationType = passwordInitializationType;

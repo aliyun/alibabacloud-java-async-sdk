@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkAccessEndpointAvailableZonesRequest} extends {@link RequestModel}
  *
  * <p>ListNetworkAccessEndpointAvailableZonesRequest</p>
@@ -77,7 +78,11 @@ public class ListNetworkAccessEndpointAvailableZonesRequest extends Request {
         }
 
         /**
-         * 专属网络端点支持的地域
+         * <p>专属网络端点支持的地域</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder naeRegionId(String naeRegionId) {
             this.putQueryParameter("NaeRegionId", naeRegionId);

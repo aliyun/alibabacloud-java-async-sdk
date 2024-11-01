@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordComplexityConfigurationRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordComplexityConfigurationRequest</p>
@@ -106,7 +107,11 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +120,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * The password complexity rules.
+         * <p>The password complexity rules.</p>
          */
         public Builder passwordComplexityRules(java.util.List < PasswordComplexityRules> passwordComplexityRules) {
             this.putQueryParameter("PasswordComplexityRules", passwordComplexityRules);
@@ -124,7 +129,11 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * The minimum number of characters in a password.
+         * <p>The minimum number of characters in a password.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder passwordMinLength(Integer passwordMinLength) {
             this.putQueryParameter("PasswordMinLength", passwordMinLength);
@@ -139,6 +148,12 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetPasswordComplexityConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>SetPasswordComplexityConfigurationRequest</p>
+     */
     public static class PasswordComplexityRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PasswordCheckType")
         @com.aliyun.core.annotation.Validation(maxLength = 64)
@@ -167,17 +182,20 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
             private String passwordCheckType; 
 
             /**
-             * The type of the password check. Valid values:
-             * <p>
+             * <p>The type of the password check. Valid values:</p>
+             * <ul>
+             * <li>inclusion_upper_case: The password must contain uppercase letters.</li>
+             * <li>inclusion_lower_case: The password must contain lowercase letters.</li>
+             * <li>inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / &quot; ! # $ ^ ? : , ( ) { } [ ] ~ - _ .</li>
+             * <li>inclusion_number: The password must contain digits.</li>
+             * <li>exclusion_username: The password cannot contain a username.</li>
+             * <li>exclusion_email: The password cannot contain an email prefix.</li>
+             * <li>exclusion_phone_number: The password cannot contain a mobile number.</li>
+             * <li>exclusion_display_name: The password cannot contain a display name.</li>
+             * </ul>
              * 
-             * *   inclusion_upper_case: The password must contain uppercase letters.
-             * *   inclusion_lower_case: The password must contain lowercase letters.
-             * *   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \" ! # $ ^ ? : , ( ) { } \[ ] ~ - \_ .
-             * *   inclusion_number: The password must contain digits.
-             * *   exclusion_username: The password cannot contain a username.
-             * *   exclusion_email: The password cannot contain an email prefix.
-             * *   exclusion_phone_number: The password cannot contain a mobile number.
-             * *   exclusion_display_name: The password cannot contain a display name.
+             * <strong>example:</strong>
+             * <p>inclusion_upper_case</p>
              */
             public Builder passwordCheckType(String passwordCheckType) {
                 this.passwordCheckType = passwordCheckType;

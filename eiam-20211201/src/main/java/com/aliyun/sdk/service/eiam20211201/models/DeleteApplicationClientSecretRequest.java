@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteApplicationClientSecretRequest} extends {@link RequestModel}
  *
  * <p>DeleteApplicationClientSecretRequest</p>
@@ -107,7 +108,11 @@ public class DeleteApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * The ID of the application for which you want to delete a client key.
+         * <p>The ID of the application for which you want to delete a client key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -116,7 +121,11 @@ public class DeleteApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +134,11 @@ public class DeleteApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * The ID of the client key that you want to delete for the application.
+         * <p>The ID of the client key that you want to delete for the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sci_k52x2ru63rlkflina5utgkxxxx</p>
          */
         public Builder secretId(String secretId) {
             this.putQueryParameter("SecretId", secretId);

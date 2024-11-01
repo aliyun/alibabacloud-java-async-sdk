@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrganizationalUnitResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrganizationalUnitResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateOrganizationalUnitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The organization ID.
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.organizationalUnitId = organizationalUnitId;
@@ -57,7 +61,10 @@ public class CreateOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

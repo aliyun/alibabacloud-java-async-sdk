@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationsRequest</p>
@@ -164,7 +165,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The IDs of the applications.
+         * <p>The IDs of the applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ram Account SSO</p>
          */
         public Builder applicationIds(java.util.List < String > applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -173,7 +177,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The name of the application. Only fuzzy match from the leftmost character is supported.
+         * <p>The name of the application. Only fuzzy match from the leftmost character is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ram Account SSO</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -182,11 +189,14 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The authorization of the application. Valid values:
-         * <p>
+         * <p>The authorization of the application. Valid values:</p>
+         * <ul>
+         * <li>authorize_required: Only the user with explicit authorization can access the application.</li>
+         * <li>default_all: By default, all users can access the application.</li>
+         * </ul>
          * 
-         * *   authorize_required: Only the user with explicit authorization can access the application.
-         * *   default_all: By default, all users can access the application.
+         * <strong>example:</strong>
+         * <p>authorize_required</p>
          */
         public Builder authorizationType(String authorizationType) {
             this.putQueryParameter("AuthorizationType", authorizationType);
@@ -195,7 +205,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -204,7 +218,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -213,7 +230,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -222,11 +242,14 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The status of the application. Valid values:
-         * <p>
+         * <p>The status of the application. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The application is enabled.</li>
+         * <li>Disabled: The application is disabled.</li>
+         * </ul>
          * 
-         * *   Enabled: The application is enabled.
-         * *   Disabled: The application is disabled.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

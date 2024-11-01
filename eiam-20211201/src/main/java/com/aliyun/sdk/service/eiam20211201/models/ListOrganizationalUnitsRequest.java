@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationalUnitsRequest} extends {@link RequestModel}
  *
  * <p>ListOrganizationalUnitsRequest</p>
@@ -164,7 +165,11 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -173,7 +178,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 组织ID列表。size限制最大100。
+         * <p>The IDs of organizational units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ou_wovwffm62xifdziem7an7xxxxx]</p>
          */
         public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
@@ -182,7 +190,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The name of the organizational unit.
+         * <p>The name of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name_001</p>
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putQueryParameter("OrganizationalUnitName", organizationalUnitName);
@@ -191,7 +202,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 组织名称，左匹配
+         * <p>Organization name, matching left</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder organizationalUnitNameStartsWith(String organizationalUnitNameStartsWith) {
             this.putQueryParameter("OrganizationalUnitNameStartsWith", organizationalUnitNameStartsWith);
@@ -200,7 +214,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -209,7 +226,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -218,7 +238,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The ID of the parent organizational unit.
+         * <p>The ID of the parent organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);

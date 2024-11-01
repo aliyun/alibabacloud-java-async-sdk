@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPasswordHistoryConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetPasswordHistoryConfigurationResponseBody</p>
@@ -49,7 +50,7 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The password history configurations.
+         * <p>The password history configurations.</p>
          */
         public Builder passwordHistoryConfiguration(PasswordHistoryConfiguration passwordHistoryConfiguration) {
             this.passwordHistoryConfiguration = passwordHistoryConfiguration;
@@ -57,7 +58,10 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPasswordHistoryConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPasswordHistoryConfigurationResponseBody</p>
+     */
     public static class PasswordHistoryConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PasswordHistoryMaxRetention")
         private Integer passwordHistoryMaxRetention;
@@ -109,7 +119,10 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
             private String passwordHistoryStatus; 
 
             /**
-             * The maximum number of recent passwords that are retained.
+             * <p>The maximum number of recent passwords that are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder passwordHistoryMaxRetention(Integer passwordHistoryMaxRetention) {
                 this.passwordHistoryMaxRetention = passwordHistoryMaxRetention;
@@ -117,11 +130,14 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password history feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the password history feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
              * 
-             * *   enabled
-             * *   disabled
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordHistoryStatus(String passwordHistoryStatus) {
                 this.passwordHistoryStatus = passwordHistoryStatus;

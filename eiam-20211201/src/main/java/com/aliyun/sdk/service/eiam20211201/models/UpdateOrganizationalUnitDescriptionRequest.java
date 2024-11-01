@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateOrganizationalUnitDescriptionRequest} extends {@link RequestModel}
  *
  * <p>UpdateOrganizationalUnitDescriptionRequest</p>
@@ -107,7 +108,10 @@ public class UpdateOrganizationalUnitDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the organization. The value can be up to 256 characters in length.
+         * <p>The description of the organization. The value can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>organizationalUnit_test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -116,7 +120,11 @@ public class UpdateOrganizationalUnitDescriptionRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +133,11 @@ public class UpdateOrganizationalUnitDescriptionRequest extends Request {
         }
 
         /**
-         * The organization ID.
+         * <p>The organization ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);

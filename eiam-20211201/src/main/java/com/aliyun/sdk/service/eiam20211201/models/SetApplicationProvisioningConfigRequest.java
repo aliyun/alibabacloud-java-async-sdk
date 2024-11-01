@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetApplicationProvisioningConfigRequest} extends {@link RequestModel}
  *
  * <p>SetApplicationProvisioningConfigRequest</p>
@@ -149,7 +150,11 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -158,7 +163,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * The configuration of event callback synchronization. This parameter is required when the ProvisionProtocolType parameter is set to idaas_callback.
+         * <p>The configuration of event callback synchronization. This parameter is required when the ProvisionProtocolType parameter is set to idaas_callback.</p>
          */
         public Builder callbackProvisioningConfig(CallbackProvisioningConfig callbackProvisioningConfig) {
             this.putQueryParameter("CallbackProvisioningConfig", callbackProvisioningConfig);
@@ -167,7 +172,11 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -176,11 +185,14 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to synchronize the password in IDaaS user event callbacks. Valid values:
-         * <p>
+         * <p>Specifies whether to synchronize the password in IDaaS user event callbacks. Valid values:</p>
+         * <ul>
+         * <li>true: synchronize the password.</li>
+         * <li>false: do not synchronize the password.</li>
+         * </ul>
          * 
-         * *   true: synchronize the password.
-         * *   false: do not synchronize the password.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder provisionPassword(Boolean provisionPassword) {
             this.putQueryParameter("ProvisionPassword", provisionPassword);
@@ -189,11 +201,15 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * The synchronization protocol type of the application. Valid values:
-         * <p>
+         * <p>The synchronization protocol type of the application. Valid values:</p>
+         * <ul>
+         * <li>idaas_callback: custom event callback protocol of IDaaS.</li>
+         * <li>scim2: System for Cross-domain Identity Management (SCIM) protocol.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   idaas_callback: custom event callback protocol of IDaaS.
-         * *   scim2: System for Cross-domain Identity Management (SCIM) protocol.
+         * <strong>example:</strong>
+         * <p>idaas_callback</p>
          */
         public Builder provisionProtocolType(String provisionProtocolType) {
             this.putQueryParameter("ProvisionProtocolType", provisionProtocolType);
@@ -202,7 +218,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * The configuration of SCIM-based IDaaS synchronization. This parameter is required when the ProvisionProtocolType parameter is set to scim2.
+         * <p>The configuration of SCIM-based IDaaS synchronization. This parameter is required when the ProvisionProtocolType parameter is set to scim2.</p>
          */
         public Builder scimProvisioningConfig(ScimProvisioningConfig scimProvisioningConfig) {
             this.putQueryParameter("ScimProvisioningConfig", scimProvisioningConfig);
@@ -217,6 +233,12 @@ public class SetApplicationProvisioningConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetApplicationProvisioningConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetApplicationProvisioningConfigRequest</p>
+     */
     public static class CallbackProvisioningConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallbackUrl")
         private String callbackUrl;
@@ -280,7 +302,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             private java.util.List < String > listenEventScopes; 
 
             /**
-             * The URL that the application uses to receive IDaaS event callbacks.
+             * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/event/callback">https://example.com/event/callback</a></p>
              */
             public Builder callbackUrl(String callbackUrl) {
                 this.callbackUrl = callbackUrl;
@@ -288,7 +313,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.
+             * <p>The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad3b248**************************b3561a73d7</p>
              */
             public Builder encryptKey(String encryptKey) {
                 this.encryptKey = encryptKey;
@@ -296,11 +324,14 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt IDaaS event callback messages. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt IDaaS event callback messages. Valid values:</p>
+             * <ul>
+             * <li>true: encrypt the messages.</li>
+             * <li>false: transmit the messages in plaintext.</li>
+             * </ul>
              * 
-             * *   true: encrypt the messages.
-             * *   false: transmit the messages in plaintext.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encryptRequired(Boolean encryptRequired) {
                 this.encryptRequired = encryptRequired;
@@ -308,7 +339,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The list of types of IDaaS event callback messages that are supported by the listener.
+             * <p>The list of types of IDaaS event callback messages that are supported by the listener.</p>
              */
             public Builder listenEventScopes(java.util.List < String > listenEventScopes) {
                 this.listenEventScopes = listenEventScopes;
@@ -322,6 +353,12 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetApplicationProvisioningConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetApplicationProvisioningConfigRequest</p>
+     */
     public static class AuthnParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessToken")
         private String accessToken;
@@ -397,7 +434,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             private String tokenEndpoint; 
 
             /**
-             * The access token. If the GrantType parameter is set to bearer_token, you can set this parameter.
+             * <p>The access token. If the GrantType parameter is set to bearer_token, you can set this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k52x2ru63rlkflina5utgkxxxx</p>
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;
@@ -405,11 +445,14 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The authentication mode of the SCIM protocol. Valid values:
-             * <p>
+             * <p>The authentication mode of the SCIM protocol. Valid values:</p>
+             * <ul>
+             * <li>client_secret_basic: The client secret is passed in the request header.</li>
+             * <li>client_secret_post: The client secret is passed in the request body.</li>
+             * </ul>
              * 
-             * *   client_secret_basic: The client secret is passed in the request header.
-             * *   client_secret_post: The client secret is passed in the request body.
+             * <strong>example:</strong>
+             * <p>client_secret_basic</p>
              */
             public Builder authnMethod(String authnMethod) {
                 this.authnMethod = authnMethod;
@@ -417,7 +460,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The client ID of the application.
+             * <p>The client ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -425,7 +471,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The client secret of the application.
+             * <p>The client secret of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -433,7 +482,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The token endpoint.
+             * <p>The token endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/oauth/token">https://www.example.com/oauth/token</a></p>
              */
             public Builder tokenEndpoint(String tokenEndpoint) {
                 this.tokenEndpoint = tokenEndpoint;
@@ -447,6 +499,12 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetApplicationProvisioningConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetApplicationProvisioningConfigRequest</p>
+     */
     public static class AuthnConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthnMode")
         private String authnMode;
@@ -498,10 +556,13 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             private String grantType; 
 
             /**
-             * The authentication mode of the SCIM protocol. Valid value:
-             * <p>
+             * <p>The authentication mode of the SCIM protocol. Valid value:</p>
+             * <ul>
+             * <li>oauth2: OAuth2.0 mode.</li>
+             * </ul>
              * 
-             * *   oauth2: OAuth2.0 mode.
+             * <strong>example:</strong>
+             * <p>oauth2</p>
              */
             public Builder authnMode(String authnMode) {
                 this.authnMode = authnMode;
@@ -509,11 +570,11 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The configuration parameters related to authorization.
-             * <p>
-             * 
-             * *   If the GrantType parameter is set to client_credentials, you can set the configuration parameters ClientId, ClientSecret, and AuthnMethod.
-             * *   If the GrantType parameter is set to bearer_token, you can set the configuration parameter AccessToken.
+             * <p>The configuration parameters related to authorization.</p>
+             * <ul>
+             * <li>If the GrantType parameter is set to client_credentials, you can set the configuration parameters ClientId, ClientSecret, and AuthnMethod.</li>
+             * <li>If the GrantType parameter is set to bearer_token, you can set the configuration parameter AccessToken.</li>
+             * </ul>
              */
             public Builder authnParam(AuthnParam authnParam) {
                 this.authnParam = authnParam;
@@ -521,11 +582,14 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The grant type of the SCIM protocol. Valid values:
-             * <p>
+             * <p>The grant type of the SCIM protocol. Valid values:</p>
+             * <ul>
+             * <li>client_credentials: client mode.</li>
+             * <li>bearer_token: key mode.</li>
+             * </ul>
              * 
-             * *   client_credentials: client mode.
-             * *   bearer_token: key mode.
+             * <strong>example:</strong>
+             * <p>bearer_token</p>
              */
             public Builder grantType(String grantType) {
                 this.grantType = grantType;
@@ -539,6 +603,12 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetApplicationProvisioningConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetApplicationProvisioningConfigRequest</p>
+     */
     public static class ScimProvisioningConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthnConfiguration")
         private AuthnConfiguration authnConfiguration;
@@ -602,7 +672,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             private String scimBaseUrl; 
 
             /**
-             * The configuration parameters related to SCIM-based synchronization.
+             * <p>The configuration parameters related to SCIM-based synchronization.</p>
              */
             public Builder authnConfiguration(AuthnConfiguration authnConfiguration) {
                 this.authnConfiguration = authnConfiguration;
@@ -610,10 +680,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The full synchronization scope of the SCIM protocol. Valid value:
-             * <p>
-             * 
-             * *   urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.
+             * <p>The full synchronization scope of the SCIM protocol. Valid value:</p>
+             * <ul>
+             * <li>urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</li>
+             * </ul>
              */
             public Builder fullPushScopes(java.util.List < String > fullPushScopes) {
                 this.fullPushScopes = fullPushScopes;
@@ -621,12 +691,12 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The resource operations of the SCIM protocol. Valid values:
-             * <p>
-             * 
-             * *   urn:alibaba:idaas:app:scim:User:CREATE: account creation.
-             * *   urn:alibaba:idaas:app:scim:User:UPDATE: account update.
-             * *   urn:alibaba:idaas:app:scim:User:DELETE: account deletion.
+             * <p>The resource operations of the SCIM protocol. Valid values:</p>
+             * <ul>
+             * <li>urn:alibaba:idaas:app:scim:User:CREATE: account creation.</li>
+             * <li>urn:alibaba:idaas:app:scim:User:UPDATE: account update.</li>
+             * <li>urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</li>
+             * </ul>
              */
             public Builder provisioningActions(java.util.List < String > provisioningActions) {
                 this.provisioningActions = provisioningActions;
@@ -634,7 +704,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.
+             * <p>The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/scim">https://example.com/scim</a></p>
              */
             public Builder scimBaseUrl(String scimBaseUrl) {
                 this.scimBaseUrl = scimBaseUrl;

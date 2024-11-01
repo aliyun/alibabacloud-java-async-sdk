@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationalUnitsForApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ListOrganizationalUnitsForApplicationResponseBody</p>
@@ -61,7 +62,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         private Long totalCount; 
 
         /**
-         * The IDs of the organizations that are allowed to access the application.
+         * <p>The IDs of the organizations that are allowed to access the application.</p>
          */
         public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -69,7 +70,10 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of the returned entries.
+         * <p>The total number of the returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link ListOrganizationalUnitsForApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationalUnitsForApplicationResponseBody</p>
+     */
     public static class OrganizationalUnits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
@@ -117,7 +130,10 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
             private String organizationalUnitId; 
 
             /**
-             * The ID of the organization that is allowed to access the application.
+             * <p>The ID of the organization that is allowed to access the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
