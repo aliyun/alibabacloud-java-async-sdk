@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybookReleasesRequest} extends {@link RequestModel}
  *
  * <p>DescribePlaybookReleasesRequest</p>
@@ -96,11 +97,14 @@ public class DescribePlaybookReleasesRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -109,7 +113,10 @@ public class DescribePlaybookReleasesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1. Pages start from page 1.
+         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -118,10 +125,13 @@ public class DescribePlaybookReleasesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.
-         * <p>
+         * <p>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,7 +140,11 @@ public class DescribePlaybookReleasesRequest extends Request {
         }
 
         /**
-         * The playbook UUID.
+         * <p>The playbook UUID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac343acc-1a61-4084-9a1c-xxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

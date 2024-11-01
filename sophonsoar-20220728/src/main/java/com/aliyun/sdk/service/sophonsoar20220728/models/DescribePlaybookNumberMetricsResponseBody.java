@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybookNumberMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlaybookNumberMetricsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics.
+         * <p>The statistics.</p>
          */
         public Builder metrics(Metrics metrics) {
             this.metrics = metrics;
@@ -57,7 +58,10 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4CC979E-3D5B-5A6A-BC87-C93C9E861C7B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlaybookNumberMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlaybookNumberMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartUpNum")
         private Integer startUpNum;
@@ -109,7 +119,10 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
             private Integer totalNum; 
 
             /**
-             * The number of enabled playbooks.
+             * <p>The number of enabled playbooks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder startUpNum(Integer startUpNum) {
                 this.startUpNum = startUpNum;
@@ -117,7 +130,10 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of playbooks.
+             * <p>The total number of playbooks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;

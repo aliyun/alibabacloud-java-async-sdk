@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyPythonFileResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyPythonFileResponseBody</p>
@@ -49,7 +50,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         private java.util.List < Syntax> syntax; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F72685FB-A6E6-5A9A-97F7-6DC1056E63CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         }
 
         /**
-         * The verification result. If the parameter is left empty, the syntax of the code snippet is correct.
+         * <p>The verification result. If the parameter is left empty, the syntax of the code snippet is correct.</p>
          */
         public Builder syntax(java.util.List < Syntax> syntax) {
             this.syntax = syntax;
@@ -70,6 +74,12 @@ public class VerifyPythonFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyPythonFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyPythonFileResponseBody</p>
+     */
     public static class Syntax extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndColumn")
         private Integer endColumn;
@@ -157,7 +167,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             private Integer startLineNumber; 
 
             /**
-             * The number that indicates the end column of the error code.
+             * <p>The number that indicates the end column of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder endColumn(Integer endColumn) {
                 this.endColumn = endColumn;
@@ -165,7 +178,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * The number that indicates the end line of the error code.
+             * <p>The number that indicates the end line of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder endLineNumber(Integer endLineNumber) {
                 this.endLineNumber = endLineNumber;
@@ -173,7 +189,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * The error message for the error code.
+             * <p>The error message for the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>undefined name &quot;ab&quot;</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -181,11 +200,14 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the error code. Valid values:
-             * <p>
+             * <p>The severity level of the error code. Valid values:</p>
+             * <ul>
+             * <li>4: moderate</li>
+             * <li>8: serious</li>
+             * </ul>
              * 
-             * *   4: moderate
-             * *   8: serious
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder severity(Integer severity) {
                 this.severity = severity;
@@ -193,7 +215,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * The number that indicates the start column of the error code.
+             * <p>The number that indicates the start column of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder startColumn(Integer startColumn) {
                 this.startColumn = startColumn;
@@ -201,7 +226,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * The number that indicates the start line of the error code.
+             * <p>The number that indicates the start line of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder startLineNumber(Integer startLineNumber) {
                 this.startLineNumber = startLineNumber;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerSophonPlaybookRequest} extends {@link RequestModel}
  *
  * <p>TriggerSophonPlaybookRequest</p>
@@ -110,10 +111,13 @@ public class TriggerSophonPlaybookRequest extends Request {
         } 
 
         /**
-         * The name of the command that you want to trigger.
-         * <p>
+         * <p>The name of the command that you want to trigger.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSophonCommands~~">DescribeSophonCommands</a> operation to query the command name.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeSophonCommands](~~DescribeSophonCommands~~) operation to query the command name.
+         * <strong>example:</strong>
+         * <p>waf_process_command</p>
          */
         public Builder commandName(String commandName) {
             this.putQueryParameter("CommandName", commandName);
@@ -122,7 +126,14 @@ public class TriggerSophonPlaybookRequest extends Request {
         }
 
         /**
-         * The input parameters of the command or playbook that you want to trigger.
+         * <p>The input parameters of the command or playbook that you want to trigger.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;param1&quot;: &quot;xx.xx.xx.xx&quot;,
+         *     &quot;param2&quot;: &quot;7d&quot;
+         * }</p>
          */
         public Builder inputParams(String inputParams) {
             this.putQueryParameter("InputParams", inputParams);
@@ -131,7 +142,10 @@ public class TriggerSophonPlaybookRequest extends Request {
         }
 
         /**
-         * The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.
+         * <p>The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f916b93e-e814-459f-9662-xxxxxxxxxx</p>
          */
         public Builder sophonTaskId(String sophonTaskId) {
             this.putQueryParameter("SophonTaskId", sophonTaskId);
@@ -140,11 +154,14 @@ public class TriggerSophonPlaybookRequest extends Request {
         }
 
         /**
-         * The task type. Valid values:
-         * <p>
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><strong>command</strong></li>
+         * <li><strong>playbook</strong></li>
+         * </ul>
          * 
-         * *   **command**
-         * *   **playbook**
+         * <strong>example:</strong>
+         * <p>playbook</p>
          */
         public Builder triggerType(String triggerType) {
             this.putQueryParameter("TriggerType", triggerType);
@@ -153,10 +170,13 @@ public class TriggerSophonPlaybookRequest extends Request {
         }
 
         /**
-         * The UUID of the playbook.
-         * <p>
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
+         * <strong>example:</strong>
+         * <p>f916b93e-e814-459f-9662-xxxxxxxxxx</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

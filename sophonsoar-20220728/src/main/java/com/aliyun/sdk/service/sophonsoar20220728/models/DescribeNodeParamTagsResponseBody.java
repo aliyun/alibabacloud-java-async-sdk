@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodeParamTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNodeParamTagsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration of the recommended path.
+         * <p>The configuration of the recommended path.</p>
          */
         public Builder paramReferredPaths(java.util.List < ParamReferredPaths> paramReferredPaths) {
             this.paramReferredPaths = paramReferredPaths;
@@ -57,7 +58,10 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BE94351-712A-505D-A40A-BC77CC8254A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNodeParamTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodeParamTagsResponseBody</p>
+     */
     public static class ParamReferredPaths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
@@ -109,7 +119,10 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
             private java.util.List < String > referredPath; 
 
             /**
-             * The name of the upstream node.
+             * <p>The name of the upstream node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataFormat_1</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -117,7 +130,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The paths.
+             * <p>The paths.</p>
              */
             public Builder referredPath(java.util.List < String > referredPath) {
                 this.referredPath = referredPath;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchModifyInstanceStatusRequest} extends {@link RequestModel}
  *
  * <p>BatchModifyInstanceStatusRequest</p>
@@ -83,11 +84,15 @@ public class BatchModifyInstanceStatusRequest extends Request {
         } 
 
         /**
-         * Specifies whether to start or stop the playbook.
-         * <p>
+         * <p>Specifies whether to start or stop the playbook.</p>
+         * <ul>
+         * <li><strong>0</strong>: stops the playbook.</li>
+         * <li><strong>1</strong>: starts the playbook.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: stops the playbook.
-         * *   **1**: starts the playbook.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder active(Integer active) {
             this.putBodyParameter("Active", active);
@@ -96,11 +101,14 @@ public class BatchModifyInstanceStatusRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -109,10 +117,14 @@ public class BatchModifyInstanceStatusRequest extends Request {
         }
 
         /**
-         * The playbook UUID. If you want to specify multiple playbooks, separate the playbook UUIDs with commas (,).
-         * <p>
+         * <p>The playbook UUID. If you want to specify multiple playbooks, separate the playbook UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
+         * <strong>example:</strong>
+         * <p>8baa6cff-319e-4ede-97bc-1xxxxxx,s8df2e-s8dfs-xxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

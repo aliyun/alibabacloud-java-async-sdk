@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescriberPython3ScriptLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescriberPython3ScriptLogsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescriberPython3ScriptLogsResponseBody extends TeaModel {
         private String runResult; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D22D8A0C-6E86-57B2-A142-929184122AB1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,16 @@ public class DescriberPython3ScriptLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The operational logs of the Python3 script.
+         * <p>The operational logs of the Python3 script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;logs&quot;: [
+         *         {
+         *             &quot;message&quot;: &quot;function input is {}&quot;
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder runResult(String runResult) {
             this.runResult = runResult;

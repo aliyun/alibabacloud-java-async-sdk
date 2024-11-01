@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePopApiRequest} extends {@link RequestModel}
  *
  * <p>DescribePopApiRequest</p>
@@ -99,7 +100,11 @@ public class DescribePopApiRequest extends Request {
         } 
 
         /**
-         * The operation name of the Alibaba Cloud service.
+         * <p>The operation name of the Alibaba Cloud service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DescribeInstanceInfo</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -108,10 +113,14 @@ public class DescribePopApiRequest extends Request {
         }
 
         /**
-         * The version number of the API.
-         * <p>
+         * <p>The version number of the API.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the version number.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the version number.
+         * <strong>example:</strong>
+         * <p>2021-10-01</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("ApiVersion", apiVersion);
@@ -120,7 +129,11 @@ public class DescribePopApiRequest extends Request {
         }
 
         /**
-         * The environment in which the API operation parameter is used. Set the value to online.
+         * <p>The environment in which the API operation parameter is used. Set the value to online.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -129,10 +142,14 @@ public class DescribePopApiRequest extends Request {
         }
 
         /**
-         * The POP code of the Alibaba Cloud service.
-         * <p>
+         * <p>The POP code of the Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.
+         * <strong>example:</strong>
+         * <p>Sas</p>
          */
         public Builder popCode(String popCode) {
             this.putQueryParameter("PopCode", popCode);

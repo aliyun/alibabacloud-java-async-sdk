@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeApiListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the service.
+         * <p>The information about the service.</p>
          */
         public Builder apiList(java.util.List < ApiList> apiList) {
             this.apiList = apiList;
@@ -57,7 +58,10 @@ public class DescribeApiListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A15D31E-B38B-5F7F-8DC0-1C74408875AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeApiListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiListResponseBody</p>
+     */
     public static class ApiList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocUrl")
         private String docUrl;
@@ -121,7 +131,10 @@ public class DescribeApiListResponseBody extends TeaModel {
             private String productName; 
 
             /**
-             * The link to the API references of the Alibaba Cloud service.
+             * <p>The link to the API references of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxx">https://xxxxx</a></p>
              */
             public Builder docUrl(String docUrl) {
                 this.docUrl = docUrl;
@@ -129,7 +142,10 @@ public class DescribeApiListResponseBody extends TeaModel {
             }
 
             /**
-             * The POP code of the Alibaba Cloud service.
+             * <p>The POP code of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sas</p>
              */
             public Builder popCode(String popCode) {
                 this.popCode = popCode;
@@ -137,7 +153,10 @@ public class DescribeApiListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud service.
+             * <p>The name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud Security Center</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;

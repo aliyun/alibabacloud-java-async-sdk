@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of BatchModifyInstanceStatus  BatchModifyInstanceStatusRequest
+     * @return BatchModifyInstanceStatusResponse
+     */
     @Override
     public CompletableFuture<BatchModifyInstanceStatusResponse> batchModifyInstanceStatus(BatchModifyInstanceStatusRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ComparePlaybooks  ComparePlaybooksRequest
+     * @return ComparePlaybooksResponse
+     */
     @Override
     public CompletableFuture<ComparePlaybooksResponse> comparePlaybooks(ComparePlaybooksRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePlaybook  CreatePlaybookRequest
+     * @return CreatePlaybookResponse
+     */
     @Override
     public CompletableFuture<CreatePlaybookResponse> createPlaybook(CreatePlaybookRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DebugPlaybook  DebugPlaybookRequest
+     * @return DebugPlaybookResponse
+     */
     @Override
     public CompletableFuture<DebugPlaybookResponse> debugPlaybook(DebugPlaybookRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteComponentAsset  DeleteComponentAssetRequest
+     * @return DeleteComponentAssetResponse
+     */
     @Override
     public CompletableFuture<DeleteComponentAssetResponse> deleteComponentAsset(DeleteComponentAssetRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePlaybook  DeletePlaybookRequest
+     * @return DeletePlaybookResponse
+     */
     @Override
     public CompletableFuture<DeletePlaybookResponse> deletePlaybook(DeletePlaybookRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApiList  DescribeApiListRequest
+     * @return DescribeApiListResponse
+     */
     @Override
     public CompletableFuture<DescribeApiListResponse> describeApiList(DescribeApiListRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeComponentAssetForm  DescribeComponentAssetFormRequest
+     * @return DescribeComponentAssetFormResponse
+     */
     @Override
     public CompletableFuture<DescribeComponentAssetFormResponse> describeComponentAssetForm(DescribeComponentAssetFormRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeComponentAssets  DescribeComponentAssetsRequest
+     * @return DescribeComponentAssetsResponse
+     */
     @Override
     public CompletableFuture<DescribeComponentAssetsResponse> describeComponentAssets(DescribeComponentAssetsRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeComponentList  DescribeComponentListRequest
+     * @return DescribeComponentListResponse
+     */
     @Override
     public CompletableFuture<DescribeComponentListResponse> describeComponentList(DescribeComponentListRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeComponentPlaybook  DescribeComponentPlaybookRequest
+     * @return DescribeComponentPlaybookResponse
+     */
     @Override
     public CompletableFuture<DescribeComponentPlaybookResponse> describeComponentPlaybook(DescribeComponentPlaybookRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeComponentsJs  DescribeComponentsJsRequest
+     * @return DescribeComponentsJsResponse
+     */
     @Override
     public CompletableFuture<DescribeComponentsJsResponse> describeComponentsJs(DescribeComponentsJsRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDistinctReleases  DescribeDistinctReleasesRequest
+     * @return DescribeDistinctReleasesResponse
+     */
     @Override
     public CompletableFuture<DescribeDistinctReleasesResponse> describeDistinctReleases(DescribeDistinctReleasesRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnumItems  DescribeEnumItemsRequest
+     * @return DescribeEnumItemsResponse
+     */
     @Override
     public CompletableFuture<DescribeEnumItemsResponse> describeEnumItems(DescribeEnumItemsRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExecutePlaybooks  DescribeExecutePlaybooksRequest
+     * @return DescribeExecutePlaybooksResponse
+     */
     @Override
     public CompletableFuture<DescribeExecutePlaybooksResponse> describeExecutePlaybooks(DescribeExecutePlaybooksRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeField  DescribeFieldRequest
+     * @return DescribeFieldResponse
+     */
     @Override
     public CompletableFuture<DescribeFieldResponse> describeField(DescribeFieldRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLatestRecordSchema  DescribeLatestRecordSchemaRequest
+     * @return DescribeLatestRecordSchemaResponse
+     */
     @Override
     public CompletableFuture<DescribeLatestRecordSchemaResponse> describeLatestRecordSchema(DescribeLatestRecordSchemaRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNodeParamTags  DescribeNodeParamTagsRequest
+     * @return DescribeNodeParamTagsResponse
+     */
     @Override
     public CompletableFuture<DescribeNodeParamTagsResponse> describeNodeParamTags(DescribeNodeParamTagsRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNodeUsedInfos  DescribeNodeUsedInfosRequest
+     * @return DescribeNodeUsedInfosResponse
+     */
     @Override
     public CompletableFuture<DescribeNodeUsedInfosResponse> describeNodeUsedInfos(DescribeNodeUsedInfosRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePlaybook  DescribePlaybookRequest
+     * @return DescribePlaybookResponse
+     */
     @Override
     public CompletableFuture<DescribePlaybookResponse> describePlaybook(DescribePlaybookRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePlaybookInputOutput  DescribePlaybookInputOutputRequest
+     * @return DescribePlaybookInputOutputResponse
+     */
     @Override
     public CompletableFuture<DescribePlaybookInputOutputResponse> describePlaybookInputOutput(DescribePlaybookInputOutputRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePlaybookMetrics  DescribePlaybookMetricsRequest
+     * @return DescribePlaybookMetricsResponse
+     */
     @Override
     public CompletableFuture<DescribePlaybookMetricsResponse> describePlaybookMetrics(DescribePlaybookMetricsRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePlaybookNodesOutput  DescribePlaybookNodesOutputRequest
+     * @return DescribePlaybookNodesOutputResponse
+     */
     @Override
     public CompletableFuture<DescribePlaybookNodesOutputResponse> describePlaybookNodesOutput(DescribePlaybookNodesOutputRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePlaybookNumberMetrics  DescribePlaybookNumberMetricsRequest
+     * @return DescribePlaybookNumberMetricsResponse
+     */
     @Override
     public CompletableFuture<DescribePlaybookNumberMetricsResponse> describePlaybookNumberMetrics(DescribePlaybookNumberMetricsRequest request) {
         try {
@@ -375,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePlaybookReleases  DescribePlaybookReleasesRequest
+     * @return DescribePlaybookReleasesResponse
+     */
     @Override
     public CompletableFuture<DescribePlaybookReleasesResponse> describePlaybookReleases(DescribePlaybookReleasesRequest request) {
         try {
@@ -389,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePlaybooks  DescribePlaybooksRequest
+     * @return DescribePlaybooksResponse
+     */
     @Override
     public CompletableFuture<DescribePlaybooksResponse> describePlaybooks(DescribePlaybooksRequest request) {
         try {
@@ -403,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePopApi  DescribePopApiRequest
+     * @return DescribePopApiResponse
+     */
     @Override
     public CompletableFuture<DescribePopApiResponse> describePopApi(DescribePopApiRequest request) {
         try {
@@ -417,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePopApiItemList  DescribePopApiItemListRequest
+     * @return DescribePopApiItemListResponse
+     */
     @Override
     public CompletableFuture<DescribePopApiItemListResponse> describePopApiItemList(DescribePopApiItemListRequest request) {
         try {
@@ -431,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePopApiVersionList  DescribePopApiVersionListRequest
+     * @return DescribePopApiVersionListResponse
+     */
     @Override
     public CompletableFuture<DescribePopApiVersionListResponse> describePopApiVersionList(DescribePopApiVersionListRequest request) {
         try {
@@ -445,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeProcessTasks  DescribeProcessTasksRequest
+     * @return DescribeProcessTasksResponse
+     */
     @Override
     public CompletableFuture<DescribeProcessTasksResponse> describeProcessTasks(DescribeProcessTasksRequest request) {
         try {
@@ -459,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSoarRecordActionOutputList  DescribeSoarRecordActionOutputListRequest
+     * @return DescribeSoarRecordActionOutputListResponse
+     */
     @Override
     public CompletableFuture<DescribeSoarRecordActionOutputListResponse> describeSoarRecordActionOutputList(DescribeSoarRecordActionOutputListRequest request) {
         try {
@@ -473,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSoarRecordInOutput  DescribeSoarRecordInOutputRequest
+     * @return DescribeSoarRecordInOutputResponse
+     */
     @Override
     public CompletableFuture<DescribeSoarRecordInOutputResponse> describeSoarRecordInOutput(DescribeSoarRecordInOutputRequest request) {
         try {
@@ -487,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSoarRecords  DescribeSoarRecordsRequest
+     * @return DescribeSoarRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeSoarRecordsResponse> describeSoarRecords(DescribeSoarRecordsRequest request) {
         try {
@@ -501,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSoarTaskAndActions  DescribeSoarTaskAndActionsRequest
+     * @return DescribeSoarTaskAndActionsResponse
+     */
     @Override
     public CompletableFuture<DescribeSoarTaskAndActionsResponse> describeSoarTaskAndActions(DescribeSoarTaskAndActionsRequest request) {
         try {
@@ -515,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSophonCommands  DescribeSophonCommandsRequest
+     * @return DescribeSophonCommandsResponse
+     */
     @Override
     public CompletableFuture<DescribeSophonCommandsResponse> describeSophonCommands(DescribeSophonCommandsRequest request) {
         try {
@@ -529,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescriberPython3ScriptLogs  DescriberPython3ScriptLogsRequest
+     * @return DescriberPython3ScriptLogsResponse
+     */
     @Override
     public CompletableFuture<DescriberPython3ScriptLogsResponse> describerPython3ScriptLogs(DescriberPython3ScriptLogsRequest request) {
         try {
@@ -543,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyComponentAsset  ModifyComponentAssetRequest
+     * @return ModifyComponentAssetResponse
+     */
     @Override
     public CompletableFuture<ModifyComponentAssetResponse> modifyComponentAsset(ModifyComponentAssetRequest request) {
         try {
@@ -557,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPlaybook  ModifyPlaybookRequest
+     * @return ModifyPlaybookResponse
+     */
     @Override
     public CompletableFuture<ModifyPlaybookResponse> modifyPlaybook(ModifyPlaybookRequest request) {
         try {
@@ -571,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPlaybookInputOutput  ModifyPlaybookInputOutputRequest
+     * @return ModifyPlaybookInputOutputResponse
+     */
     @Override
     public CompletableFuture<ModifyPlaybookInputOutputResponse> modifyPlaybookInputOutput(ModifyPlaybookInputOutputRequest request) {
         try {
@@ -585,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPlaybookInstanceStatus  ModifyPlaybookInstanceStatusRequest
+     * @return ModifyPlaybookInstanceStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyPlaybookInstanceStatusResponse> modifyPlaybookInstanceStatus(ModifyPlaybookInstanceStatusRequest request) {
         try {
@@ -599,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishPlaybook  PublishPlaybookRequest
+     * @return PublishPlaybookResponse
+     */
     @Override
     public CompletableFuture<PublishPlaybookResponse> publishPlaybook(PublishPlaybookRequest request) {
         try {
@@ -613,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTreeData  QueryTreeDataRequest
+     * @return QueryTreeDataResponse
+     */
     @Override
     public CompletableFuture<QueryTreeDataResponse> queryTreeData(QueryTreeDataRequest request) {
         try {
@@ -627,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenamePlaybookNode  RenamePlaybookNodeRequest
+     * @return RenamePlaybookNodeResponse
+     */
     @Override
     public CompletableFuture<RenamePlaybookNodeResponse> renamePlaybookNode(RenamePlaybookNodeRequest request) {
         try {
@@ -641,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevertPlaybookRelease  RevertPlaybookReleaseRequest
+     * @return RevertPlaybookReleaseResponse
+     */
     @Override
     public CompletableFuture<RevertPlaybookReleaseResponse> revertPlaybookRelease(RevertPlaybookReleaseRequest request) {
         try {
@@ -656,8 +832,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.4c41281fWhbdPa#/commodity/vm_intl">Pricing</a>.</p>
+     * 
+     * @param request the request parameters of RunPython3Script  RunPython3ScriptRequest
+     * @return RunPython3ScriptResponse
      */
     @Override
     public CompletableFuture<RunPython3ScriptResponse> runPython3Script(RunPython3ScriptRequest request) {
@@ -674,8 +853,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</p>
+     * 
+     * @param request the request parameters of TriggerPlaybook  TriggerPlaybookRequest
+     * @return TriggerPlaybookResponse
      */
     @Override
     public CompletableFuture<TriggerPlaybookResponse> triggerPlaybook(TriggerPlaybookRequest request) {
@@ -691,6 +873,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TriggerProcessTask  TriggerProcessTaskRequest
+     * @return TriggerProcessTaskResponse
+     */
     @Override
     public CompletableFuture<TriggerProcessTaskResponse> triggerProcessTask(TriggerProcessTaskRequest request) {
         try {
@@ -706,8 +892,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</p>
+     * 
+     * @param request the request parameters of TriggerSophonPlaybook  TriggerSophonPlaybookRequest
+     * @return TriggerSophonPlaybookResponse
      */
     @Override
     public CompletableFuture<TriggerSophonPlaybookResponse> triggerSophonPlaybook(TriggerSophonPlaybookRequest request) {
@@ -723,6 +912,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyPlaybook  VerifyPlaybookRequest
+     * @return VerifyPlaybookResponse
+     */
     @Override
     public CompletableFuture<VerifyPlaybookResponse> verifyPlaybook(VerifyPlaybookRequest request) {
         try {
@@ -737,6 +930,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyPythonFile  VerifyPythonFileRequest
+     * @return VerifyPythonFileResponse
+     */
     @Override
     public CompletableFuture<VerifyPythonFileResponse> verifyPythonFile(VerifyPythonFileRequest request) {
         try {

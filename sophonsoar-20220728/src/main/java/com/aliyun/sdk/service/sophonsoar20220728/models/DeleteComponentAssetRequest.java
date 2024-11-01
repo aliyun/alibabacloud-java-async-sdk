@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteComponentAssetRequest} extends {@link RequestModel}
  *
  * <p>DeleteComponentAssetRequest</p>
@@ -68,10 +69,14 @@ public class DeleteComponentAssetRequest extends Request {
         } 
 
         /**
-         * The ID of the asset.
-         * <p>
+         * <p>The ID of the asset.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeComponentAssets](~~DescribeComponentAssets~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>12x</p>
          */
         public Builder assetId(Long assetId) {
             this.putQueryParameter("AssetId", assetId);
@@ -80,11 +85,14 @@ public class DeleteComponentAssetRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

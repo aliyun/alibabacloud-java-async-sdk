@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePlaybookResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePlaybookResponseBody</p>
@@ -49,7 +50,7 @@ public class CreatePlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class CreatePlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B09B40B2-F11E-512C-B755-423F2056C17B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreatePlaybookResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePlaybookResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePlaybookResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
         private String playbookUuid;
@@ -97,7 +107,10 @@ public class CreatePlaybookResponseBody extends TeaModel {
             private String playbookUuid; 
 
             /**
-             * The UUID of the playbook.
+             * <p>The UUID of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9e38111e-9794-4784-9ca8-xxxxxxx</p>
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;

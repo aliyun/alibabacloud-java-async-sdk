@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodeParamTagsRequest} extends {@link RequestModel}
  *
  * <p>DescribeNodeParamTagsRequest</p>
@@ -83,11 +84,14 @@ public class DescribeNodeParamTagsRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +100,11 @@ public class DescribeNodeParamTagsRequest extends Request {
         }
 
         /**
-         * The name of the node.
+         * <p>The name of the node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3_2</p>
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -105,10 +113,14 @@ public class DescribeNodeParamTagsRequest extends Request {
         }
 
         /**
-         * The playbook UUID.
-         * <p>
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
+         * <strong>example:</strong>
+         * <p>ac343acc-1a61-4084-9a1c-xxxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

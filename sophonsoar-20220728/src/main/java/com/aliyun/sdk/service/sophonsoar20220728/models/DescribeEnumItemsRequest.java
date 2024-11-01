@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnumItemsRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnumItemsRequest</p>
@@ -68,10 +69,14 @@ public class DescribeEnumItemsRequest extends Request {
         } 
 
         /**
-         * The type of the enumeration item. Valid values:
-         * <p>
+         * <p>The type of the enumeration item. Valid values:</p>
+         * <ul>
+         * <li><strong>process</strong>: scenarios</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **process**: scenarios
+         * <strong>example:</strong>
+         * <p>process</p>
          */
         public Builder enumType(String enumType) {
             this.putQueryParameter("EnumType", enumType);
@@ -80,11 +85,14 @@ public class DescribeEnumItemsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh_cn**: Simplified Chinese (default)
-         * *   **en_us**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

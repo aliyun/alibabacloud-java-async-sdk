@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDistinctReleasesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDistinctReleasesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The version information.
+         * <p>The information about versions.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -57,7 +58,10 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145CACF6-D276-5197-8549-CB1AD76E2AC8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDistinctReleasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDistinctReleasesResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -121,7 +131,10 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
             private String taskflowType; 
 
             /**
-             * The version description.
+             * <p>The version description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo version</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -129,7 +142,10 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 value of the playbook XML configuration.
+             * <p>The MD5 value of the version XML configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17cf53049bc8efa941207xxxxx</p>
              */
             public Builder taskflowMd5(String taskflowMd5) {
                 this.taskflowMd5 = taskflowMd5;
@@ -137,7 +153,14 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskflowType.
+             * <p>The format of the playbook. Valid values:</p>
+             * <ul>
+             * <li><strong>xml</strong>: XML format.</li>
+             * <li><strong>x6</strong>: JSON format.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>x6</p>
              */
             public Builder taskflowType(String taskflowType) {
                 this.taskflowType = taskflowType;

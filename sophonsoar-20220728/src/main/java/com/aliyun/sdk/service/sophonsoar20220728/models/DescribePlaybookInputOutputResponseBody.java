@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybookInputOutputResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlaybookInputOutputResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configurations.
+         * <p>The configurations.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -57,7 +58,10 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>688B4CCD-5272-5DCF-9D76-FE5EFEF545F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlaybookInputOutputResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlaybookInputOutputResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExeConfig")
         private String exeConfig;
@@ -145,7 +155,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             private String playbookUuid; 
 
             /**
-             * The execution method of the playbook is in JSONObject format.
+             * <p>The execution method of the playbook is in JSONObject format.</p>
              */
             public Builder exeConfig(String exeConfig) {
                 this.exeConfig = exeConfig;
@@ -153,7 +163,20 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameter configuration of the playbook. The value is a JSON array.
+             * <p>The input parameter configuration of the playbook. The value is a JSON array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;typeName&quot;: &quot;String&quot;,
+             *         &quot;dataClass&quot;: &quot;normal&quot;,
+             *         &quot;dataType&quot;: &quot;String&quot;,
+             *         &quot;description&quot;: &quot;period&quot;,
+             *         &quot;example&quot;: &quot;&quot;,
+             *         &quot;name&quot;: &quot;period&quot;,
+             *         &quot;required&quot;: false
+             *     }
+             * ]</p>
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;
@@ -161,7 +184,10 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The output parameter configuration. This parameter is unavailable and is always left empty.
+             * <p>The output parameter configuration. This parameter is unavailable and is always left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder outputParams(String outputParams) {
                 this.outputParams = outputParams;
@@ -169,13 +195,16 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameter type of the playbook. Valid values:
-             * <p>
+             * <p>The input parameter type of the playbook. Valid values:</p>
+             * <ul>
+             * <li><strong>template-ip</strong></li>
+             * <li><strong>template-file</strong></li>
+             * <li><strong>template-process</strong></li>
+             * <li><strong>custom</strong></li>
+             * </ul>
              * 
-             * *   **template-ip**
-             * *   **template-file**
-             * *   **template-process**
-             * *   **custom**
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -183,7 +212,10 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the playbook.
+             * <p>The UUID of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9030076b-6733-4842-b05a-xxxxxx</p>
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;

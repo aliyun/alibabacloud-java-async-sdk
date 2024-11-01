@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenamePlaybookNodeRequest} extends {@link RequestModel}
  *
  * <p>RenamePlaybookNodeRequest</p>
@@ -98,11 +99,14 @@ public class RenamePlaybookNodeRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -111,7 +115,11 @@ public class RenamePlaybookNodeRequest extends Request {
         }
 
         /**
-         * The new name of the node.
+         * <p>The new name of the node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_process</p>
          */
         public Builder newNodeName(String newNodeName) {
             this.putQueryParameter("NewNodeName", newNodeName);
@@ -120,7 +128,11 @@ public class RenamePlaybookNodeRequest extends Request {
         }
 
         /**
-         * The original name of the node.
+         * <p>The original name of the node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>firewall_process</p>
          */
         public Builder oldNodeName(String oldNodeName) {
             this.putQueryParameter("OldNodeName", oldNodeName);
@@ -129,10 +141,14 @@ public class RenamePlaybookNodeRequest extends Request {
         }
 
         /**
-         * The UUID of the playbook.
-         * <p>
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
+         * <strong>example:</strong>
+         * <p>ac343acc-1a61-4084-9a1c-xxxxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

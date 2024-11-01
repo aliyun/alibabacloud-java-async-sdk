@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePlaybookRequest} extends {@link RequestModel}
  *
  * <p>CreatePlaybookRequest</p>
@@ -96,7 +97,10 @@ public class CreatePlaybookRequest extends Request {
         } 
 
         /**
-         * The description of the playbook.
+         * <p>The description of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a new version</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -105,7 +109,11 @@ public class CreatePlaybookRequest extends Request {
         }
 
         /**
-         * The name of the playbook.
+         * <p>The name of the playbook.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test09</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -114,11 +122,14 @@ public class CreatePlaybookRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);

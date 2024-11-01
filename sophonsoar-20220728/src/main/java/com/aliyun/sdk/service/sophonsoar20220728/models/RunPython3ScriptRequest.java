@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunPython3ScriptRequest} extends {@link RequestModel}
  *
  * <p>RunPython3ScriptRequest</p>
@@ -95,7 +96,10 @@ public class RunPython3ScriptRequest extends Request {
         } 
 
         /**
-         * The name of the node in the playbook.
+         * <p>The name of the node in the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3_3</p>
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -104,7 +108,13 @@ public class RunPython3ScriptRequest extends Request {
         }
 
         /**
-         * The input parameters of the Python3 script.
+         * <p>The input parameters of the Python3 script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;input1&quot;: &quot;xx.xx.xx.xx&quot;,
+         *     &quot;input2&quot;: &quot;7d&quot;
+         * }</p>
          */
         public Builder params(String params) {
             this.putBodyParameter("Params", params);
@@ -113,10 +123,13 @@ public class RunPython3ScriptRequest extends Request {
         }
 
         /**
-         * The UUID of the playbook.
-         * <p>
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the UUIDs of playbooks.
+         * <strong>example:</strong>
+         * <p>8baa6cff-319e-4ede-97bc-xxxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);
@@ -125,7 +138,17 @@ public class RunPython3ScriptRequest extends Request {
         }
 
         /**
-         * The Python3 script.
+         * <p>The Python3 script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>import logging
+         * def execute (params):
+         *   #ip = params[&quot;ip&quot;]
+         *   #logging.info(&quot;enter execute,ip is &quot;+ip)
+         *   success=True
+         *   message=&quot;OK&quot;
+         *   data=[]
+         *   return (success,message,data)</p>
          */
         public Builder pythonScript(String pythonScript) {
             this.putBodyParameter("PythonScript", pythonScript);

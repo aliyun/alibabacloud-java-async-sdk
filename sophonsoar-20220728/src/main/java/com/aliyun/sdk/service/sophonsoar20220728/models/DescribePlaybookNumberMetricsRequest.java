@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybookNumberMetricsRequest} extends {@link RequestModel}
  *
  * <p>DescribePlaybookNumberMetricsRequest</p>
@@ -53,11 +54,14 @@ public class DescribePlaybookNumberMetricsRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

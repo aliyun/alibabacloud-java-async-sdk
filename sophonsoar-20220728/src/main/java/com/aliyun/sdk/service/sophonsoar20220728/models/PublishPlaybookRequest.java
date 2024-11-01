@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishPlaybookRequest} extends {@link RequestModel}
  *
  * <p>PublishPlaybookRequest</p>
@@ -69,7 +70,10 @@ public class PublishPlaybookRequest extends Request {
         } 
 
         /**
-         * The description of the released version.
+         * <p>The description of the released version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a waf processing playbook</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -78,10 +82,14 @@ public class PublishPlaybookRequest extends Request {
         }
 
         /**
-         * The playbook UUID.
-         * <p>
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
+         * <strong>example:</strong>
+         * <p>ac343acc-1a61-4084-9a1c-xxxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

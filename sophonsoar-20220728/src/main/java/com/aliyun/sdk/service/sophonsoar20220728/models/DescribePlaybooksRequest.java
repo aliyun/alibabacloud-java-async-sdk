@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybooksRequest} extends {@link RequestModel}
  *
  * <p>DescribePlaybooksRequest</p>
@@ -44,6 +45,10 @@ public class DescribePlaybooksRequest extends Request {
     private String pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamTypes")
+    private String paramTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
     private String playbookUuid;
 
@@ -65,6 +70,7 @@ public class DescribePlaybooksRequest extends Request {
         this.ownType = builder.ownType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.paramTypes = builder.paramTypes;
         this.playbookUuid = builder.playbookUuid;
         this.sort = builder.sort;
         this.startMillis = builder.startMillis;
@@ -140,6 +146,13 @@ public class DescribePlaybooksRequest extends Request {
     }
 
     /**
+     * @return paramTypes
+     */
+    public String getParamTypes() {
+        return this.paramTypes;
+    }
+
+    /**
      * @return playbookUuid
      */
     public String getPlaybookUuid() {
@@ -169,6 +182,7 @@ public class DescribePlaybooksRequest extends Request {
         private String ownType; 
         private String pageNumber; 
         private String pageSize; 
+        private String paramTypes; 
         private String playbookUuid; 
         private String sort; 
         private Long startMillis; 
@@ -187,17 +201,21 @@ public class DescribePlaybooksRequest extends Request {
             this.ownType = request.ownType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.paramTypes = request.paramTypes;
             this.playbookUuid = request.playbookUuid;
             this.sort = request.sort;
             this.startMillis = request.startMillis;
         } 
 
         /**
-         * The status of the playbook. Valid values:
-         * <p>
+         * <p>The status of the playbook. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **1**: enabled
-         * *   **0**: disabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder active(Integer active) {
             this.putQueryParameter("Active", active);
@@ -206,7 +224,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a 13-digit timestamp.
+         * <p>The end of the time range to query. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683858064361</p>
          */
         public Builder endMillis(Long endMillis) {
             this.putQueryParameter("EndMillis", endMillis);
@@ -215,11 +236,14 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -228,7 +252,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * The name of the playbook.
+         * <p>The name of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_playbook</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -237,7 +264,14 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order. Default value: desc. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order</li>
+         * <li>asc: ascending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -246,11 +280,14 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * The type of the playbook. Valid values:
-         * <p>
+         * <p>The type of the playbook. Valid values:</p>
+         * <ul>
+         * <li><strong>preset</strong>: predefined playbook</li>
+         * <li><strong>user</strong>: custom playbook</li>
+         * </ul>
          * 
-         * *   **preset**: predefined playbook
-         * *   **user**: custom playbook
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder ownType(String ownType) {
             this.putQueryParameter("OwnType", ownType);
@@ -259,7 +296,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1. Pages start from page 1.
+         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -268,10 +308,13 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.
-         * <p>
+         * <p>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,12 +323,25 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * The playbook UUID.
-         * <p>
+         * ParamTypes.
+         */
+        public Builder paramTypes(String paramTypes) {
+            this.putQueryParameter("ParamTypes", paramTypes);
+            this.paramTypes = paramTypes;
+            return this;
+        }
+
+        /**
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can use the UUID to query the information about a specific playbook.</p>
+         * </blockquote>
+         * <ul>
+         * <li>You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</li>
+         * </ul>
          * 
-         * >  You can use the UUID to query the information about a specific playbook.
-         * 
-         * *   You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
+         * <strong>example:</strong>
+         * <p>8baa6cff-319e-4ede-97bc-1xxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
@@ -294,7 +350,14 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sorting basis. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>1: last modification time</li>
+         * <li>2: last execution time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -303,7 +366,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a 13-digit timestamp.
+         * <p>The beginning of the time range to query. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683526277415</p>
          */
         public Builder startMillis(Long startMillis) {
             this.putQueryParameter("StartMillis", startMillis);

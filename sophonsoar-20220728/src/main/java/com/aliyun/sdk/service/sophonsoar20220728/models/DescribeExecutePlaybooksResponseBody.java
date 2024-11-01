@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExecutePlaybooksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExecutePlaybooksResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The playbook.
+         * <p>The playbook.</p>
          */
         public Builder playbookMetrics(java.util.List < PlaybookMetrics> playbookMetrics) {
             this.playbookMetrics = playbookMetrics;
@@ -57,7 +58,10 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88A39217-2802-5B1E-BA2B-CF1BBC43C1F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExecutePlaybooksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExecutePlaybooksResponseBody</p>
+     */
     public static class PlaybookMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -145,7 +155,10 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The playbook description.
+             * <p>The playbook description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a demo playbook</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -153,7 +166,10 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The playbook name.
+             * <p>The playbook name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_playbook</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -161,10 +177,23 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the input parameter. The value is a JSON array.
-             * <p>
+             * <p>The configuration of the input parameter. The value is a JSON array.</p>
+             * <blockquote>
+             * <p> For more information, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</p>
+             * </blockquote>
              * 
-             * >  For more information, see [DescribePlaybookInputOutput](~~DescribePlaybookInputOutput~~).
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;typeName&quot;: &quot;String&quot;,
+             *         &quot;dataClass&quot;: &quot;normal&quot;,
+             *         &quot;dataType&quot;: &quot;String&quot;,
+             *         &quot;description&quot;: &quot;period&quot;,
+             *         &quot;example&quot;: &quot;&quot;,
+             *         &quot;name&quot;: &quot;period&quot;,
+             *         &quot;required&quot;: false
+             *     }
+             * ]</p>
              */
             public Builder paramConfig(String paramConfig) {
                 this.paramConfig = paramConfig;
@@ -172,13 +201,16 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameter type of the playbook.
-             * <p>
+             * <p>The input parameter type of the playbook.</p>
+             * <ul>
+             * <li><strong>template-ip</strong></li>
+             * <li><strong>template-file</strong></li>
+             * <li><strong>template-process</strong></li>
+             * <li><strong>custom</strong></li>
+             * </ul>
              * 
-             * *   **template-ip**
-             * *   **template-file**
-             * *   **template-process**
-             * *   **custom**
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -186,7 +218,10 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The playbook UUID.
+             * <p>The playbook UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c5c88b5e-97ca-435d-8c20-2xxxxx</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

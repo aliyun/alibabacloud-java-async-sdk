@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyPythonFileRequest} extends {@link RequestModel}
  *
  * <p>VerifyPythonFileRequest</p>
@@ -54,7 +55,16 @@ public class VerifyPythonFileRequest extends Request {
         } 
 
         /**
-         * The Python code snippet.
+         * <p>The Python code snippet.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>import logging
+         * def execute (params):
+         *   success=True
+         *   message=&quot;OK&quot;
+         *   data=[]
+         *   return (success,message,data)</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);

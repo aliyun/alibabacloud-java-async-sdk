@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyPlaybookResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyPlaybookResponseBody</p>
@@ -49,7 +50,7 @@ public class VerifyPlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of the verification.
+         * <p>The result of the verification.</p>
          */
         public Builder checkTaskInfos(java.util.List < CheckTaskInfos> checkTaskInfos) {
             this.checkTaskInfos = checkTaskInfos;
@@ -57,7 +58,10 @@ public class VerifyPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DFC9403-54EB-5672-B690-9AA93C9EBB54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class VerifyPlaybookResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyPlaybookResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyPlaybookResponseBody</p>
+     */
     public static class CheckTaskInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
@@ -121,7 +131,10 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The error message returned when the playbook does not pass the check.
+             * <p>The error message returned when the playbook does not pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node [python3_3] doesn&quot;t have the asset information</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -129,7 +142,10 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node in the playbook.
+             * <p>The name of the node in the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python3_3</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -137,12 +153,15 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the verification information. Valid values:
-             * <p>
+             * <p>The severity level of the verification information. Valid values:</p>
+             * <ul>
+             * <li>warn: An issue may occur during playbook running.</li>
+             * <li>error: The playbook cannot be compiled.</li>
+             * <li>remind: The publishing and running of the playbook are not affected. We recommend that you optimize the playbook format.</li>
+             * </ul>
              * 
-             * *   warn: An issue may occur during playbook running.
-             * *   error: The playbook cannot be compiled.
-             * *   remind: The publishing and running of the playbook are not affected. We recommend that you optimize the playbook format.
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

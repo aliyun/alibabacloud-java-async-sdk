@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybooksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlaybooksResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -69,7 +70,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         }
 
         /**
-         * The list of playbooks.
+         * <p>The playbooks.</p>
          */
         public Builder playbooks(java.util.List < Playbooks> playbooks) {
             this.playbooks = playbooks;
@@ -77,7 +78,10 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138B5AB7-7F2B-5814-87A3-E3ECFE1F207E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribePlaybooksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlaybooksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlaybooksResponseBody</p>
+     */
     public static class Page extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -141,7 +151,10 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -149,7 +162,10 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -157,7 +173,10 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -171,6 +190,12 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePlaybooksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlaybooksResponseBody</p>
+     */
     public static class Playbooks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Active")
         private Integer active;
@@ -190,6 +215,9 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnType")
         private String ownType;
 
+        @com.aliyun.core.annotation.NameInMap("ParamType")
+        private String paramType;
+
         @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
         private String playbookUuid;
 
@@ -200,6 +228,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.lastRuntime = builder.lastRuntime;
             this.ownType = builder.ownType;
+            this.paramType = builder.paramType;
             this.playbookUuid = builder.playbookUuid;
         }
 
@@ -254,6 +283,13 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         }
 
         /**
+         * @return paramType
+         */
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        /**
          * @return playbookUuid
          */
         public String getPlaybookUuid() {
@@ -267,14 +303,18 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             private String gmtModified; 
             private Long lastRuntime; 
             private String ownType; 
+            private String paramType; 
             private String playbookUuid; 
 
             /**
-             * The playbook status. Valid values:
-             * <p>
+             * <p>The playbook status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The playbook is started.</li>
+             * <li><strong>0</strong>: The playbook is stopped.</li>
+             * </ul>
              * 
-             * *   **1**: The playbook is started.
-             * *   **0**: The playbook is stopped.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder active(Integer active) {
                 this.active = active;
@@ -282,7 +322,10 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the playbook.
+             * <p>The display name of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_playbook</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -290,7 +333,10 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the playbook was created. The value is a 13-digit timestamp.
+             * <p>The time when the playbook was created. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683526277415</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -298,7 +344,10 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the playbook was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1681396398000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -306,7 +355,10 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the playbook was last run. The value is a 13-digit timestamp.
+             * <p>The time when the playbook was last run. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683526277415</p>
              */
             public Builder lastRuntime(Long lastRuntime) {
                 this.lastRuntime = lastRuntime;
@@ -314,11 +366,14 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the playbook. Valid values:
-             * <p>
+             * <p>The type of the playbook. Valid values:</p>
+             * <ul>
+             * <li><strong>preset</strong>: predefined playbook</li>
+             * <li><strong>user</strong>: custom playbook</li>
+             * </ul>
              * 
-             * *   **preset**: predefined playbook
-             * *   **user**: custom playbook
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder ownType(String ownType) {
                 this.ownType = ownType;
@@ -326,7 +381,18 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the playbook.
+             * ParamType.
+             */
+            public Builder paramType(String paramType) {
+                this.paramType = paramType;
+                return this;
+            }
+
+            /**
+             * <p>The UUID of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bb5a8640-a14f-44ef-8376-cxxxxx</p>
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;

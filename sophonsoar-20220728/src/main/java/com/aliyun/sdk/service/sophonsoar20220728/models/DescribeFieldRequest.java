@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFieldRequest} extends {@link RequestModel}
  *
  * <p>DescribeFieldRequest</p>
@@ -68,11 +69,14 @@ public class DescribeFieldRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,10 +85,14 @@ public class DescribeFieldRequest extends Request {
         }
 
         /**
-         * The key of the global configuration. Valid values:
-         * <p>
+         * <p>The key of the global configuration. Valid values:</p>
+         * <ul>
+         * <li><strong>soar_filed_tags</strong>: queries the input template of the playbook.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **soar_filed_tags**: queries the input template of the playbook.
+         * <strong>example:</strong>
+         * <p>soar_filed_tags</p>
          */
         public Builder queryKey(String queryKey) {
             this.putQueryParameter("QueryKey", queryKey);

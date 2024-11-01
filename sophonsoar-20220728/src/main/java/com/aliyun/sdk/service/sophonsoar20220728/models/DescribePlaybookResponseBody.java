@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybookResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlaybookResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration of the playbook.
+         * <p>The configuration of the playbook.</p>
          */
         public Builder playbook(Playbook playbook) {
             this.playbook = playbook;
@@ -57,7 +58,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2989BC59-E9F0-5C83-B453-B368857649C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePlaybookResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlaybookResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlaybookResponseBody</p>
+     */
     public static class Playbook extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
@@ -277,7 +287,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             private String taskflowType; 
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the playbook.
+             * <p>The ID of the Alibaba Cloud account that is used to create the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>124xxxxx3435</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -285,7 +298,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the playbook.
+             * <p>The description of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo playbook</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -293,7 +309,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the playbook.
+             * <p>The display name of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -301,7 +320,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the playbook failed to be run.
+             * <p>The number of times that the playbook failed to be run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failExeNum(Integer failExeNum) {
                 this.failExeNum = failExeNum;
@@ -309,7 +331,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time of the playbook. The value is a 13-digit timestamp.
+             * <p>The creation time of the playbook. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665288858000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -317,7 +342,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time of the playbook. The value is a 13-digit timestamp.
+             * <p>The modification time of the playbook. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677482519000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -325,10 +353,23 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameter configuration of the playbook. The value is a JSON array.
-             * <p>
+             * <p>The input parameter configuration of the playbook. The value is a JSON array.</p>
+             * <blockquote>
+             * <p> For more information, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</p>
+             * </blockquote>
              * 
-             * >  For more information, see [DescribePlaybookInputOutput](~~DescribePlaybookInputOutput~~).
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;typeName&quot;: &quot;String&quot;,
+             *         &quot;dataClass&quot;: &quot;normal&quot;,
+             *         &quot;dataType&quot;: &quot;String&quot;,
+             *         &quot;description&quot;: &quot;period&quot;,
+             *         &quot;example&quot;: &quot;&quot;,
+             *         &quot;name&quot;: &quot;period&quot;,
+             *         &quot;required&quot;: false
+             *     }
+             * ]</p>
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;
@@ -336,7 +377,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the playbook was last run. The value is a 13-digit timestamp.
+             * <p>The time when the playbook was last run. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665288858000</p>
              */
             public Builder lastExeTime(Long lastExeTime) {
                 this.lastExeTime = lastExeTime;
@@ -344,7 +388,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to modify the playbook.
+             * <p>The ID of the Alibaba Cloud account that is used to modify the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>124xxxxx3435</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -352,11 +399,14 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the playbook. Valid values:
-             * <p>
+             * <p>The status of the playbook. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder onlineActive(Boolean onlineActive) {
                 this.onlineActive = onlineActive;
@@ -364,7 +414,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value in the latest published version of the playbook.
+             * <p>The MD5 hash value in the latest published version of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdfsdfe232-e2b2-44fd-b2cc-xxxxx</p>
              */
             public Builder onlineReleaseTaskflowMd5(String onlineReleaseTaskflowMd5) {
                 this.onlineReleaseTaskflowMd5 = onlineReleaseTaskflowMd5;
@@ -372,11 +425,14 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the playbook. Valid values:
-             * <p>
+             * <p>The type of the playbook. Valid values:</p>
+             * <ul>
+             * <li><strong>preset</strong>: predefined playbook</li>
+             * <li><strong>user</strong>: custom playbook</li>
+             * </ul>
              * 
-             * *   **preset**: predefined playbook
-             * *   **user**: custom playbook
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder ownType(String ownType) {
                 this.ownType = ownType;
@@ -384,7 +440,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the playbook.
+             * <p>The UUID of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8db257d3-e2b2-44fd-b2cc-xxxxx</p>
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;
@@ -392,7 +451,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the playbook was successfully run.
+             * <p>The number of times that the playbook was successfully run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder successExeNum(Integer successExeNum) {
                 this.successExeNum = successExeNum;
@@ -400,7 +462,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The XML configuration of the playbook.
+             * <p>The XML configuration of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <?xml version="1.0" encoding="UTF-8"?><p>&lt;bpmn:definitions xmlns:xsi=&quot;<a href="http://www.w3.org/2001/XMLSchema-instance">http://www.w3.org/2001/XMLSchema-instance</a>&quot; xmlns:bpmn=&quot;<a href="http://www.omg.org/spec/BPMN/20100524/MODEL">http://www.omg.org/spec/BPMN/20100524/MODEL</a>&quot; xmlns:bpmndi=&quot;<a href="http://www.omg.org/spec/BPMN/20100524/DI">http://www.omg.org/spec/BPMN/20100524/DI</a>&quot; xmlns:dc=&quot;<a href="http://www.omg.org/spec/DD/20100524/DC">http://www.omg.org/spec/DD/20100524/DC</a>&quot; targetNamespace=&quot;<a href="http://bpmn.io/schema/bpmn">http://bpmn.io/schema/bpmn</a>&quot; id=&quot;Definitions_1&quot;&gt;&lt;bpmn:process id=&quot;Process_1&quot; isExecutable=&quot;false&quot;&gt;&lt;bpmn:startEvent id=&quot;StartEvent_1&quot;/&gt;</bpmn:process>&lt;bpmndi:BPMNDiagram id=&quot;BPMNDiagram_1&quot;&gt;&lt;bpmndi:BPMNPlane id=&quot;BPMNPlane_1&quot; bpmnElement=&quot;Process_1&quot;&gt;&lt;bpmndi:BPMNShape id=&quot;_BPMNShape_StartEvent_2&quot; bpmnElement=&quot;StartEvent_1&quot;&gt;&lt;dc:Bounds height=&quot;36.0&quot; width=&quot;36.0&quot; x=&quot;173.0&quot; y=&quot;102.0&quot;/&gt;</bpmndi:BPMNShape></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn:definitions></p>
              */
             public Builder taskflow(String taskflow) {
                 this.taskflow = taskflow;
@@ -408,10 +473,14 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The playbook configuration type.
-             * <p>
-             * *   **xml**: XML format.
-             * *   **x6**: JSON format.
+             * <p>The playbook configuration type.</p>
+             * <ul>
+             * <li><strong>xml</strong>: XML format.</li>
+             * <li><strong>x6</strong>: JSON format.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>xml</p>
              */
             public Builder taskflowType(String taskflowType) {
                 this.taskflowType = taskflowType;

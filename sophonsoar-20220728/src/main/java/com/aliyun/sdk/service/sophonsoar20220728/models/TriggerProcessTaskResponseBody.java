@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerProcessTaskResponseBody} extends {@link TeaModel}
  *
  * <p>TriggerProcessTaskResponseBody</p>
@@ -37,7 +38,10 @@ public class TriggerProcessTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58A518BC-E4A8-5BD7-AFEA-366046ED9073</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

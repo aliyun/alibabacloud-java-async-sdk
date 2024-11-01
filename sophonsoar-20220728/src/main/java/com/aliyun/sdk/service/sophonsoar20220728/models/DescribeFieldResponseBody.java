@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFieldResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFieldResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeFieldResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration content.
+         * <p>The configuration content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ip&quot;,&quot;name&quot;,&quot;hostinfo&quot;,&quot;md5&quot;]</p>
          */
         public Builder fields(String fields) {
             this.fields = fields;
@@ -69,7 +73,10 @@ public class DescribeFieldResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the global configuration.
+         * <p>The name of the global configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>soar_filed_tags</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -77,7 +84,10 @@ public class DescribeFieldResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCDE6498-83CC-50A1-8307-3D5A539C42F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

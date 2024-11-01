@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentListRequest} extends {@link RequestModel}
  *
  * <p>DescribeComponentListRequest</p>
@@ -68,11 +69,14 @@ public class DescribeComponentListRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,10 +85,14 @@ public class DescribeComponentListRequest extends Request {
         }
 
         /**
-         * The UUID of the playbook.
-         * <p>
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
+         * <strong>example:</strong>
+         * <p>b724d2b0-3c3b-4223-9bfd-xxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

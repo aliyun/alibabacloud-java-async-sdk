@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybookRequest} extends {@link RequestModel}
  *
  * <p>DescribePlaybookRequest</p>
@@ -96,11 +97,14 @@ public class DescribePlaybookRequest extends Request {
         } 
 
         /**
-         * The flag that indicates whether the playbook is of the debugging or published version. Valid values:
-         * <p>
+         * <p>The flag that indicates whether the playbook is of the debugging or published version. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: playbook of the debugging version</li>
+         * <li><strong>0</strong>: playbook of the published version</li>
+         * </ul>
          * 
-         * *   **1**: playbook of the debugging version
-         * *   **0**: playbook of the published version
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder debugFlag(Integer debugFlag) {
             this.putQueryParameter("DebugFlag", debugFlag);
@@ -109,11 +113,14 @@ public class DescribePlaybookRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -122,10 +129,14 @@ public class DescribePlaybookRequest extends Request {
         }
 
         /**
-         * The UUID of the playbook.
-         * <p>
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
+         * <strong>example:</strong>
+         * <p>9030076b-6733-4842-b05a-xxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
@@ -134,7 +145,10 @@ public class DescribePlaybookRequest extends Request {
         }
 
         /**
-         * The MD5 hash value of the playbook.
+         * <p>The MD5 hash value of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7a8f608dc64c242632aa578xxxxx</p>
          */
         public Builder taskflowMd5(String taskflowMd5) {
             this.putQueryParameter("TaskflowMd5", taskflowMd5);

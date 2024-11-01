@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentAssetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeComponentAssetsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the assets.
+         * <p>The information about the assets.</p>
          */
         public Builder componentAssets(java.util.List < ComponentAssets> componentAssets) {
             this.componentAssets = componentAssets;
@@ -57,7 +58,10 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFEFB76D-DD0E-5529-BD57-0DAC10B9B30F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeComponentAssetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeComponentAssetsResponseBody</p>
+     */
     public static class ComponentAssets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetUuid")
         private String assetUuid;
@@ -169,7 +179,10 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             private String params; 
 
             /**
-             * The UUID of the asset.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ff6fe161-93e2-464c-a326-fxxxxxx</p>
              */
             public Builder assetUuid(String assetUuid) {
                 this.assetUuid = assetUuid;
@@ -177,7 +190,10 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the component to which the asset belongs.
+             * <p>The name of the component to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pyhton3</p>
              */
             public Builder componentname(String componentname) {
                 this.componentname = componentname;
@@ -185,7 +201,10 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the asset was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.
+             * <p>The time when the asset was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-23T14:38Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -193,7 +212,10 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the asset was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.
+             * <p>The time when the asset was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-23T14:38Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -201,7 +223,10 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7xx</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -209,7 +234,10 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test asset</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -217,10 +245,30 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the asset in the JSON string format. DescribeComponentAssetForm
-             * <p>
+             * <p>The configurations of the asset in the JSON string format. DescribeComponentAssetForm</p>
+             * <blockquote>
+             * <p> For more information, see <a href="~~DescribeComponentAssetForm~~">DescribeComponentAssetForm</a>.</p>
+             * </blockquote>
              * 
-             * >  For more information, see [DescribeComponentAssetForm](~~DescribeComponentAssetForm~~).
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;name&quot;: &quot;authMethod&quot;,
+             *         &quot;value&quot;: &quot;ak&quot;
+             *     },
+             *     {
+             *         &quot;name&quot;: &quot;accessKeyId&quot;,
+             *         &quot;value&quot;: &quot;xxxxxxx&quot;
+             *     },
+             *     {
+             *         &quot;name&quot;: &quot;accessKeySecret&quot;,
+             *         &quot;value&quot;: &quot;xxxxx&quot;
+             *     },
+             *     {
+             *         &quot;name&quot;: &quot;roleArn&quot;,
+             *         &quot;value&quot;: &quot;&quot;
+             *     }
+             * ]</p>
              */
             public Builder params(String params) {
                 this.params = params;

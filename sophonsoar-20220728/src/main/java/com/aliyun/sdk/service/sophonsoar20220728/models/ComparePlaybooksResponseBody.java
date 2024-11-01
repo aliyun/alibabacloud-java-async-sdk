@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ComparePlaybooksResponseBody} extends {@link TeaModel}
  *
  * <p>ComparePlaybooksResponseBody</p>
@@ -49,7 +50,7 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The comparison result.
+         * <p>The comparison result.</p>
          */
         public Builder compareResult(CompareResult compareResult) {
             this.compareResult = compareResult;
@@ -57,7 +58,10 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2EC05B06-BF3C-5F3E-8FE8-3B1FAD76087A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ComparePlaybooksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ComparePlaybooksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ComparePlaybooksResponseBody</p>
+     */
     public static class CompareResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -121,7 +131,10 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             private Boolean same; 
 
             /**
-             * The description of the comparison result.
+             * <p>The description of the comparison result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The first version adds one node compared to the second version</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -129,11 +142,14 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the second version provides more information than the first version. Valid values:
-             * <p>
+             * <p>Indicates whether the second version provides more information than the first version. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder _new(Boolean _new) {
                 this._new = _new;
@@ -141,7 +157,10 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configurations of the two versions are the same. Valid values: **true** and **false**.
+             * <p>Indicates whether the configurations of the two versions are the same. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder same(Boolean same) {
                 this.same = same;

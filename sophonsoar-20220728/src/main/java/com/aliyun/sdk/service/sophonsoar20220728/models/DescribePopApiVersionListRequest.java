@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePopApiVersionListRequest} extends {@link RequestModel}
  *
  * <p>DescribePopApiVersionListRequest</p>
@@ -83,7 +84,11 @@ public class DescribePopApiVersionListRequest extends Request {
         } 
 
         /**
-         * The environment in which the API operation parameters are used. Set the value to **online**.
+         * <p>The environment in which the API operation parameters are used. Set the value to <strong>online</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -92,11 +97,14 @@ public class DescribePopApiVersionListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,10 +113,14 @@ public class DescribePopApiVersionListRequest extends Request {
         }
 
         /**
-         * The POP code of the Alibaba Cloud service.
-         * <p>
+         * <p>The POP code of the Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.
+         * <strong>example:</strong>
+         * <p>Sas</p>
          */
         public Builder popCode(String popCode) {
             this.putQueryParameter("PopCode", popCode);

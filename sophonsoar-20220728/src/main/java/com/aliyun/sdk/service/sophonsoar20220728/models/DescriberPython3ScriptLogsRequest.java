@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescriberPython3ScriptLogsRequest} extends {@link RequestModel}
  *
  * <p>DescriberPython3ScriptLogsRequest</p>
@@ -68,11 +69,14 @@ public class DescriberPython3ScriptLogsRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,10 +85,14 @@ public class DescriberPython3ScriptLogsRequest extends Request {
         }
 
         /**
-         * The UUID that is returned when the Python3 script is run.
-         * <p>
+         * <p>The UUID that is returned when the Python3 script is run.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~RunPython3Script~~">RunPython3Script</a> operation to query the UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [RunPython3Script](~~RunPython3Script~~) operation to query the UUID.
+         * <strong>example:</strong>
+         * <p>69edc2b4-c95c-424f-9114-xxxxxxx</p>
          */
         public Builder requestUuid(String requestUuid) {
             this.putQueryParameter("RequestUuid", requestUuid);

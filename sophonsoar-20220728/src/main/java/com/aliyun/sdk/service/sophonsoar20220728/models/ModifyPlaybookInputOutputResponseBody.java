@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPlaybookInputOutputResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyPlaybookInputOutputResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyPlaybookInputOutputResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8DDC07CE-D41B-5142-8D91-469462719C77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarTaskAndActionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSoarTaskAndActionsRequest</p>
@@ -67,11 +68,14 @@ public class DescribeSoarTaskAndActionsRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response.
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -80,7 +84,10 @@ public class DescribeSoarTaskAndActionsRequest extends Request {
         }
 
         /**
-         * The playbook UUID.
+         * <p>The playbook UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1077f2f9-25e8-42d9-bfdf-1528e1313f6d</p>
          */
         public Builder requestUuid(String requestUuid) {
             this.putQueryParameter("RequestUuid", requestUuid);

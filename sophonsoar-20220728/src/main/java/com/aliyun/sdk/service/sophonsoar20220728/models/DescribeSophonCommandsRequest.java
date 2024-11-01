@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSophonCommandsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSophonCommandsRequest</p>
@@ -53,7 +54,10 @@ public class DescribeSophonCommandsRequest extends Request {
         } 
 
         /**
-         * The name of the command. Fuzzy match is supported.
+         * <p>The name of the command. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_process</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

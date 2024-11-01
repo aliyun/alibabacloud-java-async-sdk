@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenamePlaybookNodeResponseBody} extends {@link TeaModel}
  *
  * <p>RenamePlaybookNodeResponseBody</p>
@@ -49,7 +50,10 @@ public class RenamePlaybookNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned new name of the node.
+         * <p>The returned new name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_process</p>
          */
         public Builder renameResult(String renameResult) {
             this.renameResult = renameResult;
@@ -57,7 +61,10 @@ public class RenamePlaybookNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E1EC464-3BD7-518F-9937-BCC12E6855FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

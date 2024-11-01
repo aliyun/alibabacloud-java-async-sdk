@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybookMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlaybookMetricsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the playbook.
+         * <p>The details of the playbook.</p>
          */
         public Builder metrics(Metrics metrics) {
             this.metrics = metrics;
@@ -57,7 +58,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>567D3D0B-2153-5860-BF9A-F9DEED55FB73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlaybookMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlaybookMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Active")
         private Integer active;
@@ -205,11 +215,14 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             private Integer succNum; 
 
             /**
-             * The status of the playbook. Valid values:
-             * <p>
+             * <p>The status of the playbook. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: enabled</li>
+             * <li><strong>0</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **1**: enabled
-             * *   **0**: disabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder active(Integer active) {
                 this.active = active;
@@ -217,7 +230,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the playbook.
+             * <p>The description of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a playbook for waf processing</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +241,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the playbook.
+             * <p>The name of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo name</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -233,7 +252,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the tasks that are created for the playbook and failed to run.
+             * <p>The number of the tasks that are created for the playbook and failed to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder failNum(Integer failNum) {
                 this.failNum = failNum;
@@ -241,7 +263,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the playbook was created. The value is a 13-digit timestamp.
+             * <p>The time when the playbook was created. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1655277397000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -249,7 +274,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of historical versions of the playbook.
+             * <p>The number of historical versions of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder historyMd5(Integer historyMd5) {
                 this.historyMd5 = historyMd5;
@@ -257,7 +285,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the playbook was last run. The value is a 13-digit timestamp.
+             * <p>The time when the playbook was last run. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683526277415</p>
              */
             public Builder lastRuntime(Long lastRuntime) {
                 this.lastRuntime = lastRuntime;
@@ -265,11 +296,14 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the playbook. Valid values:
-             * <p>
+             * <p>The type of the playbook. Valid values:</p>
+             * <ul>
+             * <li><strong>preset</strong>: predefined playbook</li>
+             * <li><strong>user</strong>: custom playbook</li>
+             * </ul>
              * 
-             * *   **preset**: predefined playbook
-             * *   **user**: custom playbook
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder ownType(String ownType) {
                 this.ownType = ownType;
@@ -277,7 +311,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the playbook.
+             * <p>The UUID of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0fbc9bdb-9ae3-4ef4-a709-xxxxx</p>
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;
@@ -285,7 +322,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the tasks that are created for the playbook and were successfully run.
+             * <p>The number of the tasks that are created for the playbook and were successfully run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder succNum(Integer succNum) {
                 this.succNum = succNum;

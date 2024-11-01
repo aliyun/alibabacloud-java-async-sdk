@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnumItemsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnumItemsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the enumeration item.
+         * <p>The information about the enumeration item.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7698CFB-4E1C-5840-8EC9-691B86729E94</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnumItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnumItemsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -109,7 +119,10 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the enumeration item.
+             * <p>The key of the enumeration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_xxxxx_process_book</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +130,10 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the enumeration item.
+             * <p>The value of the enumeration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_xxxxx_process_book</p>
              */
             public Builder value(String value) {
                 this.value = value;

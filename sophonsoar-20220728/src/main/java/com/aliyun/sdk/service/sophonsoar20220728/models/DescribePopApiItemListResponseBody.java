@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePopApiItemListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePopApiItemListResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * The names of API operations.
+         * <p>The names of API operations.</p>
          */
         public Builder names(java.util.List < String > names) {
             this.names = names;
@@ -93,7 +94,10 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The POP code of the Alibaba Cloud service.
+         * <p>The POP code of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sas</p>
          */
         public Builder popCode(String popCode) {
             this.popCode = popCode;
@@ -101,7 +105,10 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6336D603-7028-52DE-AD88-E34AA5248355</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -117,7 +127,10 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The version number of the API for the Alibaba Cloud service.
+         * <p>The version number of the API for the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-03</p>
          */
         public Builder version(String version) {
             this.version = version;

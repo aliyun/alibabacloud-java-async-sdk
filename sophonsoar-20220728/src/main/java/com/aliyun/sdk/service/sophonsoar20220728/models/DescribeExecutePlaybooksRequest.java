@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExecutePlaybooksRequest} extends {@link RequestModel}
  *
  * <p>DescribeExecutePlaybooksRequest</p>
@@ -109,12 +110,16 @@ public class DescribeExecutePlaybooksRequest extends Request {
         } 
 
         /**
-         * The entity type of the script input parameter. When you want to query multiple entity types, separate them with commas.
-         * <p>
-         * - **ip**: IP entity.
-         * - **file**: file entity.
-         * - **process**: process entity.
-         * - **incident**: incident entity.
+         * <p>The entity type of the script input parameter. When you want to query multiple entity types, separate them with commas.</p>
+         * <ul>
+         * <li><strong>ip</strong>: IP entity.</li>
+         * <li><strong>file</strong>: file entity.</li>
+         * <li><strong>process</strong>: process entity.</li>
+         * <li><strong>incident</strong>: incident entity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ip,file,process,host</p>
          */
         public Builder inputMode(String inputMode) {
             this.putQueryParameter("InputMode", inputMode);
@@ -123,11 +128,14 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,13 +144,16 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * The input parameter type of the playbook.
-         * <p>
+         * <p>The input parameter type of the playbook.</p>
+         * <ul>
+         * <li><strong>template-ip</strong></li>
+         * <li><strong>template-file</strong></li>
+         * <li><strong>template-process</strong></li>
+         * <li><strong>custom</strong></li>
+         * </ul>
          * 
-         * *   **template-ip**
-         * *   **template-file**
-         * *   **template-process**
-         * *   **custom**
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder paramType(String paramType) {
             this.putQueryParameter("ParamType", paramType);
@@ -151,7 +162,10 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * The playbook name. Fuzzy search is supported.
+         * <p>The playbook name. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_test</p>
          */
         public Builder playbookName(String playbookName) {
             this.putQueryParameter("PlaybookName", playbookName);
@@ -160,10 +174,13 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * The playbook UUID.
-         * <p>
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
+         * <strong>example:</strong>
+         * <p>f916b93e-e814-459f-9662-xxxxxx</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

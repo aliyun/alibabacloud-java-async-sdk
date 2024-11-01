@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentAssetsRequest} extends {@link RequestModel}
  *
  * <p>DescribeComponentAssetsRequest</p>
@@ -68,7 +69,11 @@ public class DescribeComponentAssetsRequest extends Request {
         } 
 
         /**
-         * The name of the component.
+         * <p>The name of the component.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3</p>
          */
         public Builder componentName(String componentName) {
             this.putQueryParameter("ComponentName", componentName);
@@ -77,11 +82,14 @@ public class DescribeComponentAssetsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

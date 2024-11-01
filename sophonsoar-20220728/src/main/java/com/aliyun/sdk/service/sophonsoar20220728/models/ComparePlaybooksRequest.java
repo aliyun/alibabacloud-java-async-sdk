@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ComparePlaybooksRequest} extends {@link RequestModel}
  *
  * <p>ComparePlaybooksRequest</p>
@@ -98,11 +99,14 @@ public class ComparePlaybooksRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -111,10 +115,14 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * The UUID of the second version.
-         * <p>
+         * <p>The UUID of the second version.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.
+         * <strong>example:</strong>
+         * <p>sfdf2395-e814-459f-9662-xxxxx</p>
          */
         public Builder newPlaybookReleaseId(Integer newPlaybookReleaseId) {
             this.putQueryParameter("NewPlaybookReleaseId", newPlaybookReleaseId);
@@ -123,10 +131,14 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * The UUID of the first version.
-         * <p>
+         * <p>The UUID of the first version.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.
+         * <strong>example:</strong>
+         * <p>sflk23423-e814-459f-9662-xxxxx</p>
          */
         public Builder oldPlaybookReleaseId(Integer oldPlaybookReleaseId) {
             this.putQueryParameter("OldPlaybookReleaseId", oldPlaybookReleaseId);
@@ -135,10 +147,14 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * The UUID of the playbook.
-         * <p>
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
+         * <strong>example:</strong>
+         * <p>f916b93e-e814-459f-9662-xxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

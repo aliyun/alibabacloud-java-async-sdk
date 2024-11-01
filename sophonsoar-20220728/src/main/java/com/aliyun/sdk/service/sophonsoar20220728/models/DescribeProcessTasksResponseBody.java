@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProcessTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProcessTasksResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -69,7 +70,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The handling tasks.
+         * <p>The handling tasks.</p>
          */
         public Builder processTasks(java.util.List < ProcessTasks> processTasks) {
             this.processTasks = processTasks;
@@ -77,7 +78,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7698CFB-4E1C-5840-8EC9-691B86729E94</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProcessTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessTasksResponseBody</p>
+     */
     public static class Page extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -141,7 +151,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -149,7 +162,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -157,7 +173,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -171,6 +190,12 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessTasksResponseBody</p>
+     */
     public static class ProcessTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
@@ -180,6 +205,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
+
+        @com.aliyun.core.annotation.NameInMap("EntityUuid")
+        private String entityUuid;
 
         @com.aliyun.core.annotation.NameInMap("ErrCode")
         private String errCode;
@@ -233,6 +261,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             this.creator = builder.creator;
             this.entityName = builder.entityName;
             this.entityType = builder.entityType;
+            this.entityUuid = builder.entityUuid;
             this.errCode = builder.errCode;
             this.errMsg = builder.errMsg;
             this.errTip = builder.errTip;
@@ -278,6 +307,13 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
          */
         public String getEntityType() {
             return this.entityType;
+        }
+
+        /**
+         * @return entityUuid
+         */
+        public String getEntityUuid() {
+            return this.entityUuid;
         }
 
         /**
@@ -396,6 +432,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             private String creator; 
             private String entityName; 
             private String entityType; 
+            private String entityUuid; 
             private String errCode; 
             private String errMsg; 
             private String errTip; 
@@ -414,7 +451,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             private String yunCode; 
 
             /**
-             * The ID of the Alibaba Cloud account that is used to submit the handling task.
+             * <p>The ID of the Alibaba Cloud account that is used to submit the handling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxx355</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -422,7 +462,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the handling entity.
+             * <p>The name of the handling entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.x</p>
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -430,7 +473,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the handling entity.
+             * <p>The type of the handling entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -438,7 +484,18 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the call failed.
+             * EntityUuid.
+             */
+            public Builder entityUuid(String entityUuid) {
+                this.entityUuid = entityUuid;
+                return this;
+            }
+
+            /**
+             * <p>The error code returned if the call failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sts_openapi.Info.DefenseSceneNotSupported</p>
              */
             public Builder errCode(String errCode) {
                 this.errCode = errCode;
@@ -446,7 +503,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the call failed.
+             * <p>The error message returned if the call failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ParamError : The parameters of your request are invalid</p>
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -454,7 +514,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error tip returned if the call failed.
+             * <p>The error tip returned if the call failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Verify that the input parameters of the components are correct</p>
              */
             public Builder errTip(String errTip) {
                 this.errTip = errTip;
@@ -462,7 +525,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time of the handling task. The value is a 13-digit timestamp.
+             * <p>The creation time of the handling task. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700031183572</p>
              */
             public Builder gmtCreateMillis(Long gmtCreateMillis) {
                 this.gmtCreateMillis = gmtCreateMillis;
@@ -470,7 +536,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time of the handling task. The value is a 13-digit timestamp.
+             * <p>The modification time of the handling task. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700031183572</p>
              */
             public Builder gmtModifiedMillis(Long gmtModifiedMillis) {
                 this.gmtModifiedMillis = gmtModifiedMillis;
@@ -478,7 +547,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameter of the handling task.
+             * <p>The input parameter of the handling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;groupuuid&quot;:&quot;c6a9b1df-f4ac-4078-bef4-99xxxxxx&quot;}</p>
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;
@@ -486,7 +558,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated policy.
+             * <p>The ID of the associated policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92af3c79-1754-4646-9366-9ddbd1e45536_xxxx</p>
              */
             public Builder processStrategyUuid(String processStrategyUuid) {
                 this.processStrategyUuid = processStrategyUuid;
@@ -494,7 +569,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The delivery time of the handling task. The value is a 13-digit timestamp.
+             * <p>The delivery time of the handling task. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700031183572</p>
              */
             public Builder processTime(Long processTime) {
                 this.processTime = processTime;
@@ -502,7 +580,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The unblocking time of the handling task. The value is a 13-digit timestamp.
+             * <p>The unblocking time of the handling task. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700031183572</p>
              */
             public Builder removeTime(Long removeTime) {
                 this.removeTime = removeTime;
@@ -510,7 +591,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario code of the handling task.
+             * <p>The scenario code of the handling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>event_xxx_whole_process</p>
              */
             public Builder sceneCode(String sceneCode) {
                 this.sceneCode = sceneCode;
@@ -518,7 +602,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario name of the handling task.
+             * <p>The scenario name of the handling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_whole_process</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -526,7 +613,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is specified in the handling task.
+             * <p>The ID of the Alibaba Cloud account that is specified in the handling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxx234</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -534,7 +624,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The submission source of the handling task.
+             * <p>The submission source of the handling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -542,7 +635,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the handling task.
+             * <p>The unique identifier of the handling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150xxxxxxxxx95066</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -550,7 +646,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the handling task.
+             * <p>The status of the handling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
@@ -558,7 +657,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service that is associated with the handling task.
+             * <p>The code of the cloud service that is associated with the handling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WAF</p>
              */
             public Builder yunCode(String yunCode) {
                 this.yunCode = yunCode;

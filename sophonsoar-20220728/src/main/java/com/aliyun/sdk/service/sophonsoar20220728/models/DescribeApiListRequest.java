@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiListRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiListRequest</p>
@@ -53,11 +54,14 @@ public class DescribeApiListRequest extends Request {
         } 
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

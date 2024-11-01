@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarRecordActionOutputListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSoarRecordActionOutputListResponseBody</p>
@@ -85,10 +86,19 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The data that is returned when the component action is performed. The value is a JSON array.
-         * <p>
+         * <p>The data that is returned when the component action is performed. The value is a JSON array.</p>
+         * <blockquote>
+         * <p> The format of the output data is determined by the component that is configured when the playbook is written.</p>
+         * </blockquote>
          * 
-         * >  The format of the output data is determined by the component that is configured when the playbook is written.
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;a&quot;: &quot;a&quot;,
+         *         &quot;taskname&quot;: &quot;92af3c79-1754-4646-9366-9ddbd1e45536_xxxx&quot;,
+         *         &quot;log_time&quot;: 1699868849000
+         *     }
+         * ]</p>
          */
         public Builder actionOutputs(String actionOutputs) {
             this.actionOutputs = actionOutputs;
@@ -96,7 +106,10 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -104,7 +117,10 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -112,7 +128,10 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A2BF9CF-3E32-5E45-A79B-8F67E0A4FE90</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +139,10 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

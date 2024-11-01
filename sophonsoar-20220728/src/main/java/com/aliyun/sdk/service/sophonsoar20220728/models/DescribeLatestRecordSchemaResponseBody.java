@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLatestRecordSchemaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLatestRecordSchemaResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The output structure information of the playbook.
+         * <p>The output structure information of the playbook.</p>
          */
         public Builder playbookNodeSchema(PlaybookNodeSchema playbookNodeSchema) {
             this.playbookNodeSchema = playbookNodeSchema;
@@ -57,7 +58,10 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10B92EE1-4597-593B-A131-7A17D25EF5C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLatestRecordSchemaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLatestRecordSchemaResponseBody</p>
+     */
     public static class NodeSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionName")
         private String actionName;
@@ -133,7 +143,10 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             private java.util.List < String > outputFields; 
 
             /**
-             * The action name of the component.
+             * <p>The action name of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>formatedata</p>
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -141,7 +154,10 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the component.
+             * <p>The name of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataFormat</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -149,7 +165,10 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataFormat_1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -157,7 +176,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * The output fields.
+             * <p>The output fields.</p>
              */
             public Builder outputFields(java.util.List < String > outputFields) {
                 this.outputFields = outputFields;
@@ -171,6 +190,12 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLatestRecordSchemaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLatestRecordSchemaResponseBody</p>
+     */
     public static class PlaybookNodeSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeSchema")
         private java.util.List < NodeSchema> nodeSchema;
@@ -198,7 +223,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             private java.util.List < NodeSchema> nodeSchema; 
 
             /**
-             * The structure information.
+             * <p>The structure information.</p>
              */
             public Builder nodeSchema(java.util.List < NodeSchema> nodeSchema) {
                 this.nodeSchema = nodeSchema;

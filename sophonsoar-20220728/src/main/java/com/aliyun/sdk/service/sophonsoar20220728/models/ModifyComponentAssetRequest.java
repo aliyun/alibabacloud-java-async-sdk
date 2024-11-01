@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyComponentAssetRequest} extends {@link RequestModel}
  *
  * <p>ModifyComponentAssetRequest</p>
@@ -68,7 +69,28 @@ public class ModifyComponentAssetRequest extends Request {
         } 
 
         /**
-         * The configuration of the asset. The value is a JSON object.
+         * <p>The configuration of the asset. The value is a JSON object.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;name&quot;: &quot;test asset&quot;,
+         *     &quot;componentName&quot;: &quot;SLS&quot;,
+         *     &quot;params&quot;: [
+         *         {
+         *             &quot;name&quot;: &quot;end_point&quot;,
+         *             &quot;value&quot;: &quot;xxx&quot;
+         *         },
+         *         {
+         *             &quot;name&quot;: &quot;sub_id&quot;,
+         *             &quot;value&quot;: &quot;xxxx&quot;
+         *         },
+         *         {
+         *             &quot;name&quot;: &quot;access_key&quot;,
+         *             &quot;value&quot;: &quot;xxxx&quot;
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder assetConfig(String assetConfig) {
             this.putQueryParameter("AssetConfig", assetConfig);
@@ -77,11 +99,14 @@ public class ModifyComponentAssetRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response.
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

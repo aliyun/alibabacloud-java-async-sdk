@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePopApiVersionListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePopApiVersionListResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
         private java.util.List < VersionList> versionList; 
 
         /**
-         * The POP code of the Alibaba Cloud service.
+         * <p>The POP code of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sas</p>
          */
         public Builder popCode(String popCode) {
             this.popCode = popCode;
@@ -81,7 +85,10 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBCDB0E1-4D0E-55A9-A44D-A62ADE7E2FDA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -97,7 +107,7 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the versions of API operations.
+         * <p>The information about the versions of API operations.</p>
          */
         public Builder versionList(java.util.List < VersionList> versionList) {
             this.versionList = versionList;
@@ -110,6 +120,12 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePopApiVersionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePopApiVersionListResponseBody</p>
+     */
     public static class VersionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
@@ -161,7 +177,10 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the API operation.
+             * <p>The name of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DescribePopApiVersionList</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -169,7 +188,10 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * The POP code of the Alibaba Cloud service.
+             * <p>The POP code of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sas</p>
              */
             public Builder popCode(String popCode) {
                 this.popCode = popCode;
@@ -177,7 +199,10 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the API for the Alibaba Cloud service.
+             * <p>The version number of the API for the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-03</p>
              */
             public Builder version(String version) {
                 this.version = version;

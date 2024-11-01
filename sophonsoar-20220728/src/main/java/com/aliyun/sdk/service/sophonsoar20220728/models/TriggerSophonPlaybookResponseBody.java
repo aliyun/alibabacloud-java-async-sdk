@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerSophonPlaybookResponseBody} extends {@link TeaModel}
  *
  * <p>TriggerSophonPlaybookResponseBody</p>
@@ -49,7 +50,7 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details that is returned after the command or playbook is triggered.
+         * <p>The details that is returned after the command or playbook is triggered.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DFC9403-54EB-5672-B690-9AA93C9EBB54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TriggerSophonPlaybookResponseBody} extends {@link TeaModel}
+     *
+     * <p>TriggerSophonPlaybookResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SophonTaskId")
         private String sophonTaskId;
@@ -97,7 +107,10 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
             private String sophonTaskId; 
 
             /**
-             * The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.
+             * <p>The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a7c6d055-a72f-4676-bc89-3cd9edc0284c</p>
              */
             public Builder sophonTaskId(String sophonTaskId) {
                 this.sophonTaskId = sophonTaskId;

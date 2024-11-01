@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevertPlaybookReleaseResponseBody} extends {@link TeaModel}
  *
  * <p>RevertPlaybookReleaseResponseBody</p>
@@ -37,7 +38,10 @@ public class RevertPlaybookReleaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B3FED5B9-190A-5952-93A4-24FBF0F0C573</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
