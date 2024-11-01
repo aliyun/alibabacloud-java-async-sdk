@@ -40,30 +40,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
-    @Override
-    public CompletableFuture<AISearchResponse> aISearch(AISearchRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AISearch").setMethod(HttpMethod.GET).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/linkedRetrieval/commands/aiSearch").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AISearchResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AISearchResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public ResponseIterable<AISearchResponseBody> aISearchWithResponseIterable(AISearchRequest request) {
-        this.handler.validateRequestModel(request);
-        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("AISearch").setMethod(HttpMethod.GET).setPathRegex("/linked-retrieval/linked-retrieval-entry/v1/linkedRetrieval/commands/aiSearch").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-        AISearchResponseBodyIterator iterator = AISearchResponseBodyIterator.create();
-        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
-        this.handler.execute(params);
-        return new ResponseIterable<>(iterator);
-    }
-
+    /**
+     * @param request the request parameters of AISearchV2  AISearchV2Request
+     * @return AISearchV2Response
+     */
     @Override
     public CompletableFuture<AISearchV2Response> aISearchV2(AISearchV2Request request) {
         try {
@@ -86,6 +66,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of GenericSearch  GenericSearchRequest
+     * @return GenericSearchResponse
+     */
+    @Override
+    public CompletableFuture<GenericSearchResponse> genericSearch(GenericSearchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenericSearch").setMethod(HttpMethod.GET).setPathRegex("/linked-retrieval/linked-retrieval-entry/v2/linkedRetrieval/commands/genericSearch").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenericSearchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenericSearchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
     }
 
 }

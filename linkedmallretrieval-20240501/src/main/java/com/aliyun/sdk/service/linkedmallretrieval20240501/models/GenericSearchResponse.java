@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AISearchResponse} extends {@link TeaModel}
+ * 
+ * {@link GenericSearchResponse} extends {@link TeaModel}
  *
- * <p>AISearchResponse</p>
+ * <p>GenericSearchResponse</p>
  */
-public class AISearchResponse extends Response {
+public class GenericSearchResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class AISearchResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private AISearchResponseBody body;
+    private GenericSearchResult body;
 
-    private AISearchResponse(BuilderImpl builder) {
+    private GenericSearchResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AISearchResponse create() {
+    public static GenericSearchResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class AISearchResponse extends Response {
     /**
      * @return body
      */
-    public AISearchResponseBody getBody() {
+    public GenericSearchResult getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AISearchResponse, Builder> {
+    public interface Builder extends Response.Builder<GenericSearchResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AISearchResponseBody body);
+        Builder body(GenericSearchResult body);
 
         @Override
-        AISearchResponse build();
+        GenericSearchResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AISearchResponse, Builder>
+            extends Response.BuilderImpl<GenericSearchResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private AISearchResponseBody body; 
+        private GenericSearchResult body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AISearchResponse response) {
+        private BuilderImpl(GenericSearchResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class AISearchResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AISearchResponseBody body) {
+        public Builder body(GenericSearchResult body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AISearchResponse build() {
-            return new AISearchResponse(this);
+        public GenericSearchResponse build() {
+            return new GenericSearchResponse(this);
         } 
 
     } 

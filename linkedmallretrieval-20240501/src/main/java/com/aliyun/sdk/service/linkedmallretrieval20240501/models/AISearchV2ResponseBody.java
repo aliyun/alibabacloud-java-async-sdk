@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AISearchV2ResponseBody} extends {@link TeaModel}
  *
  * <p>AISearchV2ResponseBody</p>
@@ -90,6 +91,12 @@ public class AISearchV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AISearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>AISearchV2ResponseBody</p>
+     */
     public static class AISearchV2ResponseBodyHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("event")
         private String event;
