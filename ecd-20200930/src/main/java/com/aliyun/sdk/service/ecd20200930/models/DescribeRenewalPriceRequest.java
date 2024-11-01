@@ -17,6 +17,10 @@ public class DescribeRenewalPriceRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List < String > instanceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
@@ -36,6 +40,7 @@ public class DescribeRenewalPriceRequest extends Request {
     private DescribeRenewalPriceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.instanceIds = builder.instanceIds;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
@@ -60,6 +65,13 @@ public class DescribeRenewalPriceRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -92,6 +104,7 @@ public class DescribeRenewalPriceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRenewalPriceRequest, Builder> {
         private String instanceId; 
+        private java.util.List < String > instanceIds; 
         private Integer period; 
         private String periodUnit; 
         private String regionId; 
@@ -104,6 +117,7 @@ public class DescribeRenewalPriceRequest extends Request {
         private Builder(DescribeRenewalPriceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.instanceIds = request.instanceIds;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
@@ -116,6 +130,15 @@ public class DescribeRenewalPriceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 
