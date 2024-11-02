@@ -6,11 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FindIdpListByLoginIdentifierRequest} extends {@link RequestModel}
  *
  * <p>FindIdpListByLoginIdentifierRequest</p>
  */
 public class FindIdpListByLoginIdentifierRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvailableFeatures")
+    private java.util.Map < String, String > availableFeatures;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientChannel")
     private String clientChannel;
@@ -46,6 +51,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
 
     private FindIdpListByLoginIdentifierRequest(Builder builder) {
         super(builder);
+        this.availableFeatures = builder.availableFeatures;
         this.clientChannel = builder.clientChannel;
         this.clientId = builder.clientId;
         this.clientIp = builder.clientIp;
@@ -67,6 +73,13 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return availableFeatures
+     */
+    public java.util.Map < String, String > getAvailableFeatures() {
+        return this.availableFeatures;
     }
 
     /**
@@ -126,6 +139,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<FindIdpListByLoginIdentifierRequest, Builder> {
+        private java.util.Map < String, String > availableFeatures; 
         private String clientChannel; 
         private String clientId; 
         private String clientIp; 
@@ -141,6 +155,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
 
         private Builder(FindIdpListByLoginIdentifierRequest request) {
             super(request);
+            this.availableFeatures = request.availableFeatures;
             this.clientChannel = request.clientChannel;
             this.clientId = request.clientId;
             this.clientIp = request.clientIp;
@@ -150,6 +165,16 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
             this.supportTypes = request.supportTypes;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * AvailableFeatures.
+         */
+        public Builder availableFeatures(java.util.Map < String, String > availableFeatures) {
+            String availableFeaturesShrink = shrink(availableFeatures, "AvailableFeatures", "json");
+            this.putQueryParameter("AvailableFeatures", availableFeaturesShrink);
+            this.availableFeatures = availableFeatures;
+            return this;
+        }
 
         /**
          * ClientChannel.
@@ -197,7 +222,10 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
         }
 
         /**
-         * LoginIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun123***</p>
          */
         public Builder loginIdentifier(String loginIdentifier) {
             this.putBodyParameter("LoginIdentifier", loginIdentifier);

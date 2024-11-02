@@ -19,10 +19,22 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of FindIdpListByLoginIdentifier  FindIdpListByLoginIdentifierRequest
+     * @return FindIdpListByLoginIdentifierResponse
+     */
     CompletableFuture<FindIdpListByLoginIdentifierResponse> findIdpListByLoginIdentifier(FindIdpListByLoginIdentifierRequest request);
 
+    /**
+     * @param request the request parameters of GetLoginToken  GetLoginTokenRequest
+     * @return GetLoginTokenResponse
+     */
     CompletableFuture<GetLoginTokenResponse> getLoginToken(GetLoginTokenRequest request);
 
+    /**
+     * @param request the request parameters of RefreshLoginToken  RefreshLoginTokenRequest
+     * @return RefreshLoginTokenResponse
+     */
     CompletableFuture<RefreshLoginTokenResponse> refreshLoginToken(RefreshLoginTokenRequest request);
 
 }

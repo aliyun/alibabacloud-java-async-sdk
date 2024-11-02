@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLoginTokenRequest} extends {@link RequestModel}
  *
  * <p>GetLoginTokenRequest</p>
@@ -14,6 +15,10 @@ public class GetLoginTokenRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthenticationCode")
     private String authenticationCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvailableFeatures")
+    private java.util.Map < String, String > availableFeatures;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientId")
@@ -85,6 +90,10 @@ public class GetLoginTokenRequest extends Request {
     private String loginName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MfaType")
+    private String mfaType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
@@ -144,6 +153,7 @@ public class GetLoginTokenRequest extends Request {
     private GetLoginTokenRequest(Builder builder) {
         super(builder);
         this.authenticationCode = builder.authenticationCode;
+        this.availableFeatures = builder.availableFeatures;
         this.clientId = builder.clientId;
         this.clientOS = builder.clientOS;
         this.clientType = builder.clientType;
@@ -161,6 +171,7 @@ public class GetLoginTokenRequest extends Request {
         this.keepAliveToken = builder.keepAliveToken;
         this.loginIdentifier = builder.loginIdentifier;
         this.loginName = builder.loginName;
+        this.mfaType = builder.mfaType;
         this.networkType = builder.networkType;
         this.newPassword = builder.newPassword;
         this.officeSiteId = builder.officeSiteId;
@@ -195,6 +206,13 @@ public class GetLoginTokenRequest extends Request {
      */
     public String getAuthenticationCode() {
         return this.authenticationCode;
+    }
+
+    /**
+     * @return availableFeatures
+     */
+    public java.util.Map < String, String > getAvailableFeatures() {
+        return this.availableFeatures;
     }
 
     /**
@@ -317,6 +335,13 @@ public class GetLoginTokenRequest extends Request {
     }
 
     /**
+     * @return mfaType
+     */
+    public String getMfaType() {
+        return this.mfaType;
+    }
+
+    /**
      * @return networkType
      */
     public String getNetworkType() {
@@ -416,6 +441,7 @@ public class GetLoginTokenRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetLoginTokenRequest, Builder> {
         private String authenticationCode; 
+        private java.util.Map < String, String > availableFeatures; 
         private String clientId; 
         private String clientOS; 
         private String clientType; 
@@ -433,6 +459,7 @@ public class GetLoginTokenRequest extends Request {
         private String keepAliveToken; 
         private String loginIdentifier; 
         private String loginName; 
+        private String mfaType; 
         private String networkType; 
         private String newPassword; 
         private String officeSiteId; 
@@ -455,6 +482,7 @@ public class GetLoginTokenRequest extends Request {
         private Builder(GetLoginTokenRequest request) {
             super(request);
             this.authenticationCode = request.authenticationCode;
+            this.availableFeatures = request.availableFeatures;
             this.clientId = request.clientId;
             this.clientOS = request.clientOS;
             this.clientType = request.clientType;
@@ -472,6 +500,7 @@ public class GetLoginTokenRequest extends Request {
             this.keepAliveToken = request.keepAliveToken;
             this.loginIdentifier = request.loginIdentifier;
             this.loginName = request.loginName;
+            this.mfaType = request.mfaType;
             this.networkType = request.networkType;
             this.newPassword = request.newPassword;
             this.officeSiteId = request.officeSiteId;
@@ -498,7 +527,20 @@ public class GetLoginTokenRequest extends Request {
         }
 
         /**
-         * ClientId.
+         * AvailableFeatures.
+         */
+        public Builder availableFeatures(java.util.Map < String, String > availableFeatures) {
+            String availableFeaturesShrink = shrink(availableFeatures, "AvailableFeatures", "json");
+            this.putQueryParameter("AvailableFeatures", availableFeaturesShrink);
+            this.availableFeatures = availableFeatures;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05967f80-6f51-46cb-a27c-****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -647,6 +689,15 @@ public class GetLoginTokenRequest extends Request {
         public Builder loginName(String loginName) {
             this.putQueryParameter("LoginName", loginName);
             this.loginName = loginName;
+            return this;
+        }
+
+        /**
+         * MfaType.
+         */
+        public Builder mfaType(String mfaType) {
+            this.putQueryParameter("MfaType", mfaType);
+            this.mfaType = mfaType;
             return this;
         }
 

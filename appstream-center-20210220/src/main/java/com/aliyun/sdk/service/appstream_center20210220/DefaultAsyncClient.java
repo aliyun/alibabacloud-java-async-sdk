@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of FindIdpListByLoginIdentifier  FindIdpListByLoginIdentifierRequest
+     * @return FindIdpListByLoginIdentifierResponse
+     */
     @Override
     public CompletableFuture<FindIdpListByLoginIdentifierResponse> findIdpListByLoginIdentifier(FindIdpListByLoginIdentifierRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLoginToken  GetLoginTokenRequest
+     * @return GetLoginTokenResponse
+     */
     @Override
     public CompletableFuture<GetLoginTokenResponse> getLoginToken(GetLoginTokenRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshLoginToken  RefreshLoginTokenRequest
+     * @return RefreshLoginTokenResponse
+     */
     @Override
     public CompletableFuture<RefreshLoginTokenResponse> refreshLoginToken(RefreshLoginTokenRequest request) {
         try {

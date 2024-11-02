@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLoginTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetLoginTokenResponseBody</p>
@@ -40,6 +41,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("LoginToken")
     private String loginToken;
+
+    @com.aliyun.core.annotation.NameInMap("MfaTypeList")
+    private java.util.List < MfaTypeList> mfaTypeList;
 
     @com.aliyun.core.annotation.NameInMap("NextStage")
     private String nextStage;
@@ -103,6 +107,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         this.keepAliveToken = builder.keepAliveToken;
         this.label = builder.label;
         this.loginToken = builder.loginToken;
+        this.mfaTypeList = builder.mfaTypeList;
         this.nextStage = builder.nextStage;
         this.officeSites = builder.officeSites;
         this.passwordStrategy = builder.passwordStrategy;
@@ -198,6 +203,13 @@ public class GetLoginTokenResponseBody extends TeaModel {
      */
     public String getLoginToken() {
         return this.loginToken;
+    }
+
+    /**
+     * @return mfaTypeList
+     */
+    public java.util.List < MfaTypeList> getMfaTypeList() {
+        return this.mfaTypeList;
     }
 
     /**
@@ -330,6 +342,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String keepAliveToken; 
         private String label; 
         private String loginToken; 
+        private java.util.List < MfaTypeList> mfaTypeList; 
         private String nextStage; 
         private java.util.List < String > officeSites; 
         private PasswordStrategy passwordStrategy; 
@@ -425,6 +438,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
          */
         public Builder loginToken(String loginToken) {
             this.loginToken = loginToken;
+            return this;
+        }
+
+        /**
+         * MfaTypeList.
+         */
+        public Builder mfaTypeList(java.util.List < MfaTypeList> mfaTypeList) {
+            this.mfaTypeList = mfaTypeList;
             return this;
         }
 
@@ -570,6 +591,79 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLoginTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLoginTokenResponseBody</p>
+     */
+    public static class MfaTypeList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Stage")
+        private String stage;
+
+        private MfaTypeList(Builder builder) {
+            this.name = builder.name;
+            this.stage = builder.stage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MfaTypeList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return stage
+         */
+        public String getStage() {
+            return this.stage;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String stage; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Stage.
+             */
+            public Builder stage(String stage) {
+                this.stage = stage;
+                return this;
+            }
+
+            public MfaTypeList build() {
+                return new MfaTypeList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetLoginTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLoginTokenResponseBody</p>
+     */
     public static class PasswordStrategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantAlternativeChars")
         private java.util.List < String > tenantAlternativeChars;
@@ -631,6 +725,12 @@ public class GetLoginTokenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLoginTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLoginTokenResponseBody</p>
+     */
     public static class RiskVerifyInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
@@ -732,6 +832,12 @@ public class GetLoginTokenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLoginTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLoginTokenResponseBody</p>
+     */
     public static class TenantInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;

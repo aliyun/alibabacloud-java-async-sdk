@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FindIdpListByLoginIdentifierResponseBody} extends {@link TeaModel}
  *
  * <p>FindIdpListByLoginIdentifierResponseBody</p>
@@ -150,6 +151,12 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FindIdpListByLoginIdentifierResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindIdpListByLoginIdentifierResponseBody</p>
+     */
     public static class IdpInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
@@ -162,6 +169,9 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("IdpName")
         private String idpName;
+
+        @com.aliyun.core.annotation.NameInMap("IdpNameEN")
+        private String idpNameEN;
 
         @com.aliyun.core.annotation.NameInMap("IdpProvider")
         private String idpProvider;
@@ -180,6 +190,7 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
             this.cookies = builder.cookies;
             this.idpId = builder.idpId;
             this.idpName = builder.idpName;
+            this.idpNameEN = builder.idpNameEN;
             this.idpProvider = builder.idpProvider;
             this.jumpSwitch = builder.jumpSwitch;
             this.ssoProtocol = builder.ssoProtocol;
@@ -223,6 +234,13 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         }
 
         /**
+         * @return idpNameEN
+         */
+        public String getIdpNameEN() {
+            return this.idpNameEN;
+        }
+
+        /**
          * @return idpProvider
          */
         public String getIdpProvider() {
@@ -255,6 +273,7 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
             private String cookies; 
             private String idpId; 
             private String idpName; 
+            private String idpNameEN; 
             private String idpProvider; 
             private String jumpSwitch; 
             private String ssoProtocol; 
@@ -289,6 +308,14 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
              */
             public Builder idpName(String idpName) {
                 this.idpName = idpName;
+                return this;
+            }
+
+            /**
+             * IdpNameEN.
+             */
+            public Builder idpNameEN(String idpNameEN) {
+                this.idpNameEN = idpNameEN;
                 return this;
             }
 
@@ -331,6 +358,12 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindIdpListByLoginIdentifierResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindIdpListByLoginIdentifierResponseBody</p>
+     */
     public static class OfficeSiteInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;
@@ -452,6 +485,12 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindIdpListByLoginIdentifierResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindIdpListByLoginIdentifierResponseBody</p>
+     */
     public static class TenantAliasInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;

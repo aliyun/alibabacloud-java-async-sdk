@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshLoginTokenRequest} extends {@link RequestModel}
  *
  * <p>RefreshLoginTokenRequest</p>
@@ -168,7 +169,10 @@ public class RefreshLoginTokenRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f4a0dc8e-1702-4728-9a60-95b27a35****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -204,7 +208,10 @@ public class RefreshLoginTokenRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1046341d8d4e2f05c4aa168196009613594aaf451499bfc75e54699efa7230bc968e1debb1fa4063b01e5d327b467****</p>
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -231,7 +238,10 @@ public class RefreshLoginTokenRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6442b2fd-ed3e-423a-8e6e-352d26a4****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
