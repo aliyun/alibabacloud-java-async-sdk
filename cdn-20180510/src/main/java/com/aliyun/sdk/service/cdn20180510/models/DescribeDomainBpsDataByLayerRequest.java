@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainBpsDataByLayerRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainBpsDataByLayerRequest</p>
@@ -137,10 +138,13 @@ public class DescribeDomainBpsDataByLayerRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
-         * <p>
+         * <p>The accelerated domain name. You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the bandwidth data about all accelerated domain names that belong to your Alibaba Cloud account is queried.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, the bandwidth data about all accelerated domain names that belong to your Alibaba Cloud account is queried.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -149,12 +153,14 @@ public class DescribeDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2020-05-06T07:20:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -163,10 +169,11 @@ public class DescribeDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The time granularity of the data entries. Unit: seconds.
-         * <p>
+         * <p>The time granularity of the data entries. Unit: seconds.</p>
+         * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see <strong>Usage notes</strong>.</p>
          * 
-         * The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -175,7 +182,10 @@ public class DescribeDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~DescribeCdnRegionAndIsp~~) operation to query ISPs. If you do not specify an ISP, data of all ISPs is queried.
+         * <p>The name of the Internet service provider (ISP). You can call the <a href="~~DescribeCdnRegionAndIsp~~">DescribeCdnRegionAndIsp</a> operation to query ISPs. If you do not specify an ISP, data of all ISPs is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -184,14 +194,16 @@ public class DescribeDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The layer at which you want to query the bandwidth data. Valid values:
-         * <p>
+         * <p>The layer at which you want to query the bandwidth data. Valid values:</p>
+         * <ul>
+         * <li>Network layer: <strong>IPv4</strong> and <strong>IPv6</strong>.</li>
+         * <li>Application layer: <strong>http</strong>, <strong>https</strong>, and <strong>quic</strong>.</li>
+         * <li><strong>all</strong>: specifies that both the network and application layers are included.</li>
+         * </ul>
+         * <p>Default value: <strong>all</strong>.</p>
          * 
-         * *   Network layer: **IPv4** and **IPv6**.
-         * *   Application layer: **http**, **https**, and **quic**.
-         * *   **all**: specifies that both the network and application layers are included.
-         * 
-         * Default value: **all**.
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder layer(String layer) {
             this.putQueryParameter("Layer", layer);
@@ -200,7 +212,10 @@ public class DescribeDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The name of the region. You can call the [DescribeCdnRegionAndIsp](~~DescribeCdnRegionAndIsp~~) operation to query regions. If you do not specify a region, data in all regions is queried.
+         * <p>The name of the region. You can call the <a href="~~DescribeCdnRegionAndIsp~~">DescribeCdnRegionAndIsp</a> operation to query regions. If you do not specify a region, data in all regions is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beijing</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -209,10 +224,11 @@ public class DescribeDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2020-05-06T07:10:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

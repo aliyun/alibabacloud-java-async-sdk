@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetReqHeaderConfigRequest} extends {@link RequestModel}
  *
  * <p>SetReqHeaderConfigRequest</p>
@@ -126,7 +127,10 @@ public class SetReqHeaderConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration.
+         * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -135,7 +139,11 @@ public class SetReqHeaderConfigRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. Separate multiple domain names with commas (,).
+         * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -144,7 +152,11 @@ public class SetReqHeaderConfigRequest extends Request {
         }
 
         /**
-         * The name of the custom header.
+         * <p>The name of the custom header.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -171,7 +183,11 @@ public class SetReqHeaderConfigRequest extends Request {
         }
 
         /**
-         * The value of the custom header.
+         * <p>The value of the custom header.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

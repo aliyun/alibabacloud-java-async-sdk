@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainTrafficDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainTrafficDataResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         private TrafficDataPerInterval trafficDataPerInterval; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -105,7 +109,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -113,7 +120,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -121,7 +131,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -137,7 +153,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The amount of network traffic at each time interval. Unit: bytes.
+         * <p>The amount of network traffic at each time interval. Unit: bytes.</p>
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -150,6 +166,12 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainTrafficDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomesticValue")
         private String domesticValue;
@@ -249,7 +271,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The amount of network traffic in the Chinese mainland.
+             * <p>The amount of network traffic in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -257,7 +282,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of HTTPS traffic on points of presence (POPs) in the Chinese mainland.
+             * <p>The amount of HTTPS traffic on points of presence (POPs) in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder httpsDomesticValue(String httpsDomesticValue) {
                 this.httpsDomesticValue = httpsDomesticValue;
@@ -265,7 +293,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of HTTPS traffic on POPs outside the Chinese mainland.
+             * <p>The amount of HTTPS traffic on POPs outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder httpsOverseasValue(String httpsOverseasValue) {
                 this.httpsOverseasValue = httpsOverseasValue;
@@ -273,7 +304,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of HTTPS traffic on POPs.
+             * <p>The total amount of HTTPS traffic on POPs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423304182</p>
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -281,7 +315,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of network traffic outside the Chinese mainland.
+             * <p>The amount of network traffic outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -289,7 +326,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -297,7 +337,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total volume of traffic.
+             * <p>The total volume of traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423304182</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -311,6 +354,12 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainTrafficDataResponseBody</p>
+     */
     public static class TrafficDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

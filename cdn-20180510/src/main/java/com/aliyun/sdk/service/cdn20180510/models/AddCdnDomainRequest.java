@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCdnDomainRequest} extends {@link RequestModel}
  *
  * <p>AddCdnDomainRequest</p>
@@ -196,12 +197,16 @@ public class AddCdnDomainRequest extends Request {
         } 
 
         /**
-         * The workload type of the accelerated domain name. Valid values:
-         * <p>
+         * <p>The workload type of the accelerated domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>web</strong>: images and small files</li>
+         * <li><strong>download</strong>: large files</li>
+         * <li><strong>video</strong>: on-demand video and audio streaming</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **web**: images and small files
-         * *   **download**: large files
-         * *   **video**: on-demand video and audio streaming
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         public Builder cdnType(String cdnType) {
             this.putQueryParameter("CdnType", cdnType);
@@ -210,7 +215,10 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * The URL that is used to check the accessibility of the origin server.
+         * <p>The URL that is used to check the accessibility of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/test.html">www.example.com/test.html</a></p>
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -219,10 +227,12 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * The domain name that you want to add to Alibaba Cloud CDN.
-         * <p>
+         * <p>The domain name that you want to add to Alibaba Cloud CDN.</p>
+         * <p>A wildcard domain that starts with a period (.) is supported, such as .example.com.</p>
+         * <p>This parameter is required.</p>
          * 
-         * A wildcard domain that starts with a period (.) is supported, such as .example.com.
+         * <strong>example:</strong>
+         * <p>.example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -249,10 +259,11 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
-         * <p>
+         * <p>The ID of the resource group.</p>
+         * <p>If you do not set this parameter, the system uses the ID of the default resource group.</p>
          * 
-         * If you do not set this parameter, the system uses the ID of the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfmyuji4b6r4**</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -261,12 +272,15 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * The acceleration region. Default value: domestic. Valid values:
-         * <p>
+         * <p>The acceleration region. Default value: domestic. Valid values:</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>overseas</strong>: global (excluding the Chinese mainland)</li>
+         * <li><strong>global</strong>: global</li>
+         * </ul>
          * 
-         * *   **domestic**: Chinese mainland
-         * *   **overseas**: global (excluding the Chinese mainland)
-         * *   **global**: global
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -284,7 +298,19 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * The information about the addresses of origin servers.
+         * <p>The information about the addresses of origin servers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;content&quot;: &quot;192.0.2.0&quot;,
+         *             &quot;type&quot;: &quot;ipaddr&quot;,
+         *             &quot;priority&quot;: &quot;20&quot;,
+         *             &quot;port&quot;: 80,
+         *             &quot;weight&quot;: &quot;15&quot;
+         *       }
+         * ]</p>
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -293,7 +319,7 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * Details about the tags. You can specify up to 20 tags.
+         * <p>Details about the tags. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -302,7 +328,10 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * The top-level domain.
+         * <p>The top-level domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);
@@ -317,6 +346,12 @@ public class AddCdnDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddCdnDomainRequest} extends {@link TeaModel}
+     *
+     * <p>AddCdnDomainRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -356,7 +391,10 @@ public class AddCdnDomainRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. Valid values of N: **1 to 20**.
+             * <p>The key of the tag. Valid values of N: <strong>1 to 20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -364,7 +402,10 @@ public class AddCdnDomainRequest extends Request {
             }
 
             /**
-             * The value of the tag. Valid values of N: **1 to 20**.
+             * <p>The value of the tag. Valid values of N: <strong>1 to 20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

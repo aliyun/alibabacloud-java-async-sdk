@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnFullDomainsBlockIPHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnFullDomainsBlockIPHistoryResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnFullDomainsBlockIPHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnFullDomainsBlockIPHistoryResponseBody</p>
+     */
     public static class IPBlockInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockIP")
         private String blockIP;

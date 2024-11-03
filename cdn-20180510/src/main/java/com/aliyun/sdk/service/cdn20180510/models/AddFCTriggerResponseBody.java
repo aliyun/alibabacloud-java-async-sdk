@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFCTriggerResponseBody} extends {@link TeaModel}
  *
  * <p>AddFCTriggerResponseBody</p>
@@ -37,7 +38,10 @@ public class AddFCTriggerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC046C5D-8CB4-4B6B-B7F8-B335E51EF90</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

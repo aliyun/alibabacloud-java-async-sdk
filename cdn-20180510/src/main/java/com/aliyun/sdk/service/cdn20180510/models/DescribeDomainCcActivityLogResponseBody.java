@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainCcActivityLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainCcActivityLogResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The list of rate limiting logs.
+         * <p>The list of rate limiting logs.</p>
          */
         public Builder activityLog(java.util.List < ActivityLog> activityLog) {
             this.activityLog = activityLog;
@@ -93,7 +94,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Long pageIndex) {
             this.pageIndex = pageIndex;
@@ -101,7 +105,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -130,6 +143,12 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainCcActivityLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainCcActivityLogResponseBody</p>
+     */
     public static class ActivityLog extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -229,7 +248,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The action that was triggered.
+             * <p>The action that was triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -237,7 +259,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -245,7 +270,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule based on which rate limiting was triggered.
+             * <p>The name of the rule based on which rate limiting was triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -253,7 +281,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -261,7 +292,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger of rate limiting.
+             * <p>The trigger of rate limiting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ip</p>
              */
             public Builder triggerObject(String triggerObject) {
                 this.triggerObject = triggerObject;
@@ -269,7 +303,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time during which rate limiting remains effective.
+             * <p>The period of time during which rate limiting remains effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder ttl(Long ttl) {
                 this.ttl = ttl;
@@ -277,7 +314,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the trigger for rate limiting.
+             * <p>The value of the trigger for rate limiting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.3.4</p>
              */
             public Builder value(String value) {
                 this.value = value;

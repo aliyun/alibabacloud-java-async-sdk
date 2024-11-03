@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -97,13 +98,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**: yes.
-         * *   **false**: no.
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -112,7 +115,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs. You can specify up to 50 resource IDs in the list.
+         * <p>The list of resource IDs. You can specify up to 50 resource IDs in the list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -121,7 +128,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resources from which you want to remove tags. Set this parameter to **DOMAIN**.
+         * <p>The type of the resources from which you want to remove tags. Set this parameter to <strong>DOMAIN</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -130,7 +141,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of tag keys. You can specify up to 20 tag keys in the list.
+         * <p>The list of tag keys. You can specify up to 20 tag keys in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

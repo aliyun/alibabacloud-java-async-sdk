@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnUserQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnUserQuotaResponseBody</p>
@@ -169,7 +170,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The maximum number of URLs and directories that can be blocked.
+         * <p>The maximum number of URLs and directories that can be blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder blockQuota(Integer blockQuota) {
             this.blockQuota = blockQuota;
@@ -177,7 +181,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of URLs and directories that can be blocked.
+         * <p>The remaining number of URLs and directories that can be blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder blockRemain(Integer blockRemain) {
             this.blockRemain = blockRemain;
@@ -185,7 +192,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of accelerated domain names.
+         * <p>The maximum number of accelerated domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder domainQuota(Integer domainQuota) {
             this.domainQuota = domainQuota;
@@ -193,7 +203,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of ignore params that can be refreshed.
+         * <p>The maximum number of ignore params that can be refreshed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder ignoreParamsQuota(Integer ignoreParamsQuota) {
             this.ignoreParamsQuota = ignoreParamsQuota;
@@ -201,7 +214,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of ignore params that can be refreshed.
+         * <p>The remaining number of ignore params that can be refreshed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder ignoreParamsRemain(Integer ignoreParamsRemain) {
             this.ignoreParamsRemain = ignoreParamsRemain;
@@ -209,7 +225,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of URLs that can be prefetched.
+         * <p>The maximum number of URLs that can be prefetched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder preloadQuota(Integer preloadQuota) {
             this.preloadQuota = preloadQuota;
@@ -217,7 +236,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of URLs that can be prefetched.
+         * <p>The remaining number of URLs that can be prefetched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder preloadRemain(Integer preloadRemain) {
             this.preloadRemain = preloadRemain;
@@ -225,7 +247,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of directories that can be refreshed.
+         * <p>The maximum number of directories that can be refreshed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder refreshDirQuota(Integer refreshDirQuota) {
             this.refreshDirQuota = refreshDirQuota;
@@ -233,7 +258,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of directories that can be refreshed.
+         * <p>The remaining number of directories that can be refreshed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder refreshDirRemain(Integer refreshDirRemain) {
             this.refreshDirRemain = refreshDirRemain;
@@ -241,7 +269,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of URLs that can be refreshed.
+         * <p>The maximum number of URLs that can be refreshed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder refreshUrlQuota(Integer refreshUrlQuota) {
             this.refreshUrlQuota = refreshUrlQuota;
@@ -249,7 +280,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of URLs that can be refreshed.
+         * <p>The remaining number of URLs that can be refreshed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder refreshUrlRemain(Integer refreshUrlRemain) {
             this.refreshUrlRemain = refreshUrlRemain;
@@ -257,7 +291,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF4F084A-2F49-4E1C-9CA0-DC85BCE7F391</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

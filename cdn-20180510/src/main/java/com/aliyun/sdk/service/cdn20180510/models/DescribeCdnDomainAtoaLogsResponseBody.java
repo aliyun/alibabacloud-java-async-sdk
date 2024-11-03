@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDomainAtoaLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnDomainAtoaLogsResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnDomainAtoaLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainAtoaLogsResponseBody</p>
+     */
     public static class LogInfoDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -191,6 +198,12 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainAtoaLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainAtoaLogsResponseBody</p>
+     */
     public static class LogInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogInfoDetail")
         private java.util.List < LogInfoDetail> logInfoDetail;
@@ -232,6 +245,12 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainAtoaLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainAtoaLogsResponseBody</p>
+     */
     public static class PageInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Long pageIndex;
@@ -313,6 +332,12 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainAtoaLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainAtoaLogsResponseBody</p>
+     */
     public static class DomainLogDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -414,6 +439,12 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainAtoaLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainAtoaLogsResponseBody</p>
+     */
     public static class DomainLogDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainLogDetail")
         private java.util.List < DomainLogDetail> domainLogDetail;

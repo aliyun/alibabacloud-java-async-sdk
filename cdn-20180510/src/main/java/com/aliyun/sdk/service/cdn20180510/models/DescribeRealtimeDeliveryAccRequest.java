@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRealtimeDeliveryAccRequest} extends {@link RequestModel}
  *
  * <p>DescribeRealtimeDeliveryAccRequest</p>
@@ -109,10 +110,11 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time must be later than the start time.</p>
          * 
-         * The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2016-10-20T05:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -121,12 +123,15 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * The time granularity of the data entries. Unit: seconds. The value varies based on the values of the **StartTime** and **EndTime** parameters. Valid values:
-         * <p>
+         * <p>The time granularity of the data entries. Unit: seconds. The value varies based on the values of the <strong>StartTime</strong> and <strong>EndTime</strong> parameters. Valid values:</p>
+         * <ul>
+         * <li>If the time span between StartTime and EndTime is less than 3 days, valid values are <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. Default value: <strong>300</strong>.</li>
+         * <li>If the time span between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, valid values are <strong>3600</strong> and <strong>86400</strong>. Default value: <strong>3600</strong>.</li>
+         * <li>If the time span between StartTime and EndTime is 31 days or longer, the valid value is <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
+         * </ul>
          * 
-         * *   If the time span between StartTime and EndTime is less than 3 days, valid values are **300**, **3600**, and **86400**. Default value: **300**.
-         * *   If the time span between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, valid values are **3600** and **86400**. Default value: **3600**.
-         * *   If the time span between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -135,7 +140,10 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * The name of the Logstore that stores log data. If you do leave this parameter empty, real-time log deliveries of all Logstores are queried.
+         * <p>The name of the Logstore that stores log data. If you do leave this parameter empty, real-time log deliveries of all Logstores are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogStore</p>
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -144,7 +152,10 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project that is used for real-time log delivery. If you do leave this parameter empty, real-time log deliveries of all projects are queried.
+         * <p>The name of the Log Service project that is used for real-time log delivery. If you do leave this parameter empty, real-time log deliveries of all projects are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project</p>
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -153,7 +164,10 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-10-20T04:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

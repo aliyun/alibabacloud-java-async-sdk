@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainCertificateInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainCertificateInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the certificate.
+         * <p>The information about the certificate.</p>
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -57,7 +58,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C1E43DC-9E51-4771-82C0-7D5ECEB547A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainCertificateInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainCertificateInfoResponseBody</p>
+     */
     public static class CertInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertDomainName")
         private String certDomainName;
@@ -265,7 +275,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The domain name that matches the certificate.
+             * <p>The domain name that matches the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder certDomainName(String certDomainName) {
                 this.certDomainName = certDomainName;
@@ -273,7 +286,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the certificate expires.
+             * <p>The time at which the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-06-03T22:03:39Z</p>
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -281,7 +297,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9002448</p>
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -289,11 +308,14 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the validity period of the certificate. Valid values:
-             * <p>
+             * <p>The unit of the validity period of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>months</strong></li>
+             * <li><strong>years</strong></li>
+             * </ul>
              * 
-             * *   **months**
-             * *   **years**
+             * <strong>example:</strong>
+             * <p>months</p>
              */
             public Builder certLife(String certLife) {
                 this.certLife = certLife;
@@ -301,7 +323,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -309,7 +334,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate authority (CA) that issued the certificate.
+             * <p>The name of the certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Let&quot;s Encrypt</p>
              */
             public Builder certOrg(String certOrg) {
                 this.certOrg = certOrg;
@@ -317,7 +345,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the certificate is used.
+             * <p>The region where the certificate is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder certRegion(String certRegion) {
                 this.certRegion = certRegion;
@@ -325,7 +356,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate became effective.
+             * <p>The time when the certificate became effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-06-03T22:03:39Z</p>
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -333,12 +367,15 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate.
-             * <p>
+             * <p>The type of the certificate.</p>
+             * <ul>
+             * <li><strong>free</strong>: a free certificate</li>
+             * <li><strong>cas</strong>: a certificate that is purchased by using Certificate Management Service</li>
+             * <li><strong>upload</strong>: a custom certificate that you upload</li>
+             * </ul>
              * 
-             * *   **free**: a free certificate
-             * *   **cas**: a certificate that is purchased by using Certificate Management Service
-             * *   **upload**: a custom certificate that you upload
+             * <strong>example:</strong>
+             * <p>free</p>
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -346,7 +383,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the certificate was updated.
+             * <p>The time at which the certificate was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-06-03T22:03:39Z</p>
              */
             public Builder certUpdateTime(String certUpdateTime) {
                 this.certUpdateTime = certUpdateTime;
@@ -354,13 +394,16 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME status of the domain name.
-             * <p>
+             * <p>The CNAME status of the domain name.</p>
+             * <ul>
+             * <li><strong>ok</strong>: The domain name points to the CNAME assigned by Alibaba Cloud CDN.</li>
+             * <li><strong>cname_error</strong>: An error occurred and the domain name cannot point to the CNAME.</li>
+             * <li><strong>op_domain_cname_error</strong> : An error occurred to the CNAME of the top-level domain. The domain name cannot point to the CNAME.</li>
+             * <li><strong>unsupport_wildcard</strong>: The wildcard domain name is not supported.</li>
+             * </ul>
              * 
-             * *   **ok**: The domain name points to the CNAME assigned by Alibaba Cloud CDN.
-             * *   **cname_error**: An error occurred and the domain name cannot point to the CNAME.
-             * *   **op_domain_cname_error** : An error occurred to the CNAME of the top-level domain. The domain name cannot point to the CNAME.
-             * *   **unsupport_wildcard**: The wildcard domain name is not supported.
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder domainCnameStatus(String domainCnameStatus) {
                 this.domainCnameStatus = domainCnameStatus;
@@ -368,7 +411,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -376,7 +422,10 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The public key of the certificate.
+             * <p>The public key of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdadaxxxx</p>
              */
             public Builder serverCertificate(String serverCertificate) {
                 this.serverCertificate = serverCertificate;
@@ -384,11 +433,14 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of HTTPS.
-             * <p>
+             * <p>The status of HTTPS.</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**
-             * *   **off**
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder serverCertificateStatus(String serverCertificateStatus) {
                 this.serverCertificateStatus = serverCertificateStatus;
@@ -396,20 +448,23 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate. Valid values:
-             * <p>
+             * <p>The status of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong>: The certificate has taken effect.</li>
+             * <li><strong>checking</strong>: The system is checking whether the domain name is using Alibaba Cloud CDN.</li>
+             * <li><strong>cname_error</strong>: No valid CNAME record has been added for the domain name.</li>
+             * <li><strong>top_domain_cname_error</strong>: No valid CNAME record has been added for the top-level domain.</li>
+             * <li><strong>domain_invalid</strong>: The domain name contains invalid characters.</li>
+             * <li><strong>unsupport_wildcard</strong>: The domain name is a wildcard domain name. Wildcard domain names are not supported.</li>
+             * <li><strong>applying</strong>: The certificate application is in progress.</li>
+             * <li><strong>get_token_timeout</strong>: The certificate application request has timed out.</li>
+             * <li><strong>check_token_timeout</strong>: The verification has timed out.</li>
+             * <li><strong>get_cert_timeout</strong>: The request to obtain the certificate has timed out.</li>
+             * <li><strong>failed</strong>: The certificate application request failed.</li>
+             * </ul>
              * 
-             * *   **success**: The certificate has taken effect.
-             * *   **checking**: The system is checking whether the domain name is using Alibaba Cloud CDN.
-             * *   **cname_error**: No valid CNAME record has been added for the domain name.
-             * *   **top_domain_cname_error**: No valid CNAME record has been added for the top-level domain.
-             * *   **domain_invalid**: The domain name contains invalid characters.
-             * *   **unsupport_wildcard**: The domain name is a wildcard domain name. Wildcard domain names are not supported.
-             * *   **applying**: The certificate application is in progress.
-             * *   **get_token_timeout**: The certificate application request has timed out.
-             * *   **check_token_timeout**: The verification has timed out.
-             * *   **get_cert_timeout**: The request to obtain the certificate has timed out.
-             * *   **failed**: The certificate application request failed.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -423,6 +478,12 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainCertificateInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainCertificateInfoResponseBody</p>
+     */
     public static class CertInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertInfo")
         private java.util.List < CertInfo> certInfo;

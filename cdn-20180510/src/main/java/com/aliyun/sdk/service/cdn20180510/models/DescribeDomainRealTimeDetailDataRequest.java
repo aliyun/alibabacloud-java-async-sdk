@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRealTimeDetailDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainRealTimeDetailDataRequest</p>
@@ -155,7 +156,11 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name that you want to query.
+         * <p>The accelerated domain name that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -164,12 +169,15 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time. The difference between the end time and the start time cannot exceed 10 minutes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.
-         * 
-         * > The end time must be later than the start time. The difference between the end time and the start time cannot exceed 10 minutes.
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -178,12 +186,16 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The type of data that you want to query. You can specify multiple data types and separate them with commas (,). Valid values:
-         * <p>
+         * <p>The type of data that you want to query. You can specify multiple data types and separate them with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>qps</strong>: queries per second (QPS)</li>
+         * <li><strong>bps</strong>: bandwidth</li>
+         * <li><strong>http_code</strong>: HTTP status code</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **qps**: queries per second (QPS)
-         * *   **bps**: bandwidth
-         * *   **http_code**: HTTP status code
+         * <strong>example:</strong>
+         * <p>qps</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -192,7 +204,10 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not specify an ISP, data of all ISPs is queried.
+         * <p>The name of the Internet service provider (ISP). You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query ISPs. If you do not specify an ISP, data of all ISPs is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -201,7 +216,10 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The name of the region. If you do not specify a region, data in all regions is queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+         * <p>The name of the region. If you do not specify a region, data in all regions is queried. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Guangdong</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -210,13 +228,15 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Specifies whether to return a summary value based on ISPs and regions. Valid values:
-         * <p>
+         * <p>Specifies whether to return a summary value based on ISPs and regions. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder merge(String merge) {
             this.putQueryParameter("Merge", merge);
@@ -225,13 +245,15 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Specifies whether to return a summary value based on ISPs and regions. Valid values:
-         * <p>
+         * <p>Specifies whether to return a summary value based on ISPs and regions. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mergeLocIsp(String mergeLocIsp) {
             this.putQueryParameter("MergeLocIsp", mergeLocIsp);
@@ -240,10 +262,12 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:33:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

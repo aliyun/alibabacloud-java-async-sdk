@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainVerifyDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainVerifyDataRequest</p>
@@ -68,7 +69,11 @@ public class DescribeDomainVerifyDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.yourdomain.com">www.yourdomain.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -77,26 +82,26 @@ public class DescribeDomainVerifyDataRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the global resource plan.
-         * <p>
+         * <p>Specifies whether to enable the global resource plan.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>off</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   off
+         * <!-- -->
+         * </li>
+         * <li><p>on</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   on
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder globalResourcePlan(String globalResourcePlan) {
             this.putQueryParameter("GlobalResourcePlan", globalResourcePlan);

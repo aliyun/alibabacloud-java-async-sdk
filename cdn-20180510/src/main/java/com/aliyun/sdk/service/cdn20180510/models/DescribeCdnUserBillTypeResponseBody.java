@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnUserBillTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnUserBillTypeResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the metering methods returned.
+         * <p>Details about the metering methods returned.</p>
          */
         public Builder billTypeData(BillTypeData billTypeData) {
             this.billTypeData = billTypeData;
@@ -57,7 +58,10 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnUserBillTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnUserBillTypeResponseBody</p>
+     */
     public static class BillTypeDataItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillType")
         private String billType;
@@ -157,25 +167,28 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The metering method.
-             * <p>
+             * <p>The metering method.</p>
+             * <blockquote>
+             * <p>If the metering method is suffixed with **_overseas**, the billable region is outside the Chinese mainland. For example, &quot;BillType&quot;: &quot;month_avg_day_bandwidth_overseas&quot; indicates that the metering method is pay by average daily peak bandwidth per month in a billable region outside the Chinese mainland.</p>
+             * </blockquote>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>hour_flow: pay by hourly data transfer</li>
+             * <li>day_bandwidth: pay by daily bandwidth</li>
+             * <li>month_95: pay by monthly 95th percentile bandwidth</li>
+             * <li>month_avg_day_bandwidth: pay by average daily peak bandwidth per month</li>
+             * <li>month_4th_day_bandwidth: pay by monthly 4th peak bandwidth</li>
+             * <li>month_avg_day_95: pay by average daily 95th percentile bandwidth per month</li>
+             * <li>month_95_night_half: pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00</li>
+             * <li>hour_vas: pay by value-added services per hour</li>
+             * <li>quic_hour_count: pay by hourly QUIC requests</li>
+             * <li>day_count: pay by daily requests</li>
+             * <li>hour_count: pay by hourly requests</li>
+             * <li>day_95: pay by daily 95th percentile bandwidth</li>
+             * </ul>
              * 
-             * > If the metering method is suffixed with \*\*\_overseas\*\*, the billable region is outside the Chinese mainland. For example, "BillType": "month_avg_day_bandwidth_overseas" indicates that the metering method is pay by average daily peak bandwidth per month in a billable region outside the Chinese mainland.
-             * 
-             * Valid values:
-             * 
-             * *   hour_flow: pay by hourly data transfer
-             * *   day_bandwidth: pay by daily bandwidth
-             * *   month\_95: pay by monthly 95th percentile bandwidth
-             * *   month_avg_day_bandwidth: pay by average daily peak bandwidth per month
-             * *   month\_4th_day_bandwidth: pay by monthly 4th peak bandwidth
-             * *   month_avg_day\_95: pay by average daily 95th percentile bandwidth per month
-             * *   month\_95\_night_half: pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00
-             * *   hour_vas: pay by value-added services per hour
-             * *   quic_hour_count: pay by hourly QUIC requests
-             * *   day_count: pay by daily requests
-             * *   hour_count: pay by hourly requests
-             * *   day\_95: pay by daily 95th percentile bandwidth
+             * <strong>example:</strong>
+             * <p>month_avg_day_bandwidth_overseas</p>
              */
             public Builder billType(String billType) {
                 this.billType = billType;
@@ -183,7 +196,10 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The billing cycle.
+             * <p>The billing cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>month</p>
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -191,15 +207,18 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension. Valid values:
-             * <p>
+             * <p>The dimension. Valid values:</p>
+             * <ul>
+             * <li>flow: traffic and bandwidth</li>
+             * <li>vas: value-added services (HTTPS and requests for dynamic content)</li>
+             * <li>quic: the number of QUIC requests</li>
+             * <li>websocket: the WebSocket communications protocol</li>
+             * <li>rtlog2sls: log entries delivered to Log Service in real time</li>
+             * <li>stationflow: traffic over the internal network</li>
+             * </ul>
              * 
-             * *   flow: traffic and bandwidth
-             * *   vas: value-added services (HTTPS and requests for dynamic content)
-             * *   quic: the number of QUIC requests
-             * *   websocket: the WebSocket communications protocol
-             * *   rtlog2sls: log entries delivered to Log Service in real time
-             * *   stationflow: traffic over the internal network
+             * <strong>example:</strong>
+             * <p>flow</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -207,7 +226,10 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metering method ended.
+             * <p>The time when the metering method ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-31T16:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -215,7 +237,10 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the product.
+             * <p>The name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdn</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -223,7 +248,10 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metering method started.
+             * <p>The time when the metering method started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-30T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -237,6 +265,12 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnUserBillTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnUserBillTypeResponseBody</p>
+     */
     public static class BillTypeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillTypeDataItem")
         private java.util.List < BillTypeDataItem> billTypeDataItem;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDomainDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnDomainDetailResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the accelerated domain name.
+         * <p>The details about the accelerated domain name.</p>
          */
         public Builder getDomainDetailModel(GetDomainDetailModel getDomainDetailModel) {
             this.getDomainDetailModel = getDomainDetailModel;
@@ -57,7 +58,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18CF38AA-1275-451D-A12B-4EC0BF1C5E30</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainDetailResponseBody</p>
+     */
     public static class SourceModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -157,7 +167,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * The address of the origin server.
+             * <p>The address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -165,7 +178,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -173,7 +189,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port over which requests are redirected to the origin server. Ports 443 and 80 are supported.
+             * <p>The port over which requests are redirected to the origin server. Ports 443 and 80 are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -181,7 +200,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -189,13 +211,16 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the origin server. Valid values:
-             * <p>
+             * <p>The type of the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>ipaddr</strong>: an origin IP address</li>
+             * <li><strong>domain</strong>: an origin domain name</li>
+             * <li><strong>oss</strong>: the domain name of an Object Storage Service (OSS) bucket</li>
+             * <li><strong>fc_domain:</strong> a Function Compute domain name</li>
+             * </ul>
              * 
-             * *   **ipaddr**: an origin IP address
-             * *   **domain**: an origin domain name
-             * *   **oss**: the domain name of an Object Storage Service (OSS) bucket
-             * *   **fc_domain:** a Function Compute domain name
+             * <strong>example:</strong>
+             * <p>domain</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -203,7 +228,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the origin server if multiple origin servers have been specified.
+             * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -217,6 +245,12 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainDetailResponseBody</p>
+     */
     public static class SourceModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceModel")
         private java.util.List < SourceModel> sourceModel;
@@ -258,6 +292,12 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainDetailResponseBody</p>
+     */
     public static class GetDomainDetailModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CdnType")
         private String cdnType;
@@ -417,12 +457,15 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             private SourceModels sourceModels; 
 
             /**
-             * The workload type of the accelerated domain name. Valid values:
-             * <p>
+             * <p>The workload type of the accelerated domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>web</strong>: images and small files</li>
+             * <li><strong>download</strong>: large files</li>
+             * <li><strong>video</strong>: on-demand video and audio streaming</li>
+             * </ul>
              * 
-             * *   **web**: images and small files
-             * *   **download**: large files
-             * *   **video**: on-demand video and audio streaming
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder cdnType(String cdnType) {
                 this.cdnType = cdnType;
@@ -430,7 +473,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME that is assigned to the accelerated domain name. You must add the CNAME record in the system of your DNS service provider to map the accelerated domain name to the CNAME.
+             * <p>The CNAME that is assigned to the accelerated domain name. You must add the CNAME record in the system of your DNS service provider to map the accelerated domain name to the CNAME.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com.w.kunlunle.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -438,7 +484,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the domain name.
+             * <p>The description of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Streaming domain</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -446,7 +495,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -454,17 +506,20 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the accelerated domain name. Valid values:
-             * <p>
+             * <p>The status of the accelerated domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong></li>
+             * <li><strong>offline</strong></li>
+             * <li><strong>configuring</strong></li>
+             * <li><strong>configure_failed</strong></li>
+             * <li><strong>checking</strong></li>
+             * <li><strong>check_failed</strong></li>
+             * <li><strong>stopping</strong></li>
+             * <li><strong>deleting</strong></li>
+             * </ul>
              * 
-             * *   **online**
-             * *   **offline**
-             * *   **configuring**
-             * *   **configure_failed**
-             * *   **checking**
-             * *   **check_failed**
-             * *   **stopping**
-             * *   **deleting**
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -472,7 +527,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was created.
+             * <p>The time when the domain name was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-06-25T03:30:50Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -480,7 +538,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was last modified.
+             * <p>The time when the domain name was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-06-25T03:30:50Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -488,7 +549,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME for which HTTPS is enabled.
+             * <p>The CNAME for which HTTPS is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com.w.kunlunle.com</p>
              */
             public Builder httpsCname(String httpsCname) {
                 this.httpsCname = httpsCname;
@@ -496,7 +560,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd1234abcd1234</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -504,7 +571,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The acceleration region.
+             * <p>The acceleration region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domestic</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -512,11 +582,14 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SSL certificate is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the SSL certificate is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**
-             * *   **off**
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder serverCertificateStatus(String serverCertificateStatus) {
                 this.serverCertificateStatus = serverCertificateStatus;
@@ -524,7 +597,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the origin server.
+             * <p>The information about the origin server.</p>
              */
             public Builder sourceModels(SourceModels sourceModels) {
                 this.sourceModels = sourceModels;

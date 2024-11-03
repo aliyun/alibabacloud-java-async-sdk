@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetWaitingRoomConfigRequest} extends {@link RequestModel}
  *
  * <p>SetWaitingRoomConfigRequest</p>
@@ -129,7 +130,11 @@ public class SetWaitingRoomConfigRequest extends Request {
         } 
 
         /**
-         * The percentage of requests that are allowed to be redirected to the origin server. Valid values: **0** to **100**.
+         * <p>The percentage of requests that are allowed to be redirected to the origin server. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder allowPct(Integer allowPct) {
             this.putQueryParameter("AllowPct", allowPct);
@@ -138,7 +143,11 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify only one domain name.
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -147,7 +156,11 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * The length of waiting time to skip after an exit from the queue. Unit: seconds.
+         * <p>The length of waiting time to skip after an exit from the queue. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder gapTime(Integer gapTime) {
             this.putQueryParameter("GapTime", gapTime);
@@ -156,7 +169,11 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * The maximum length of waiting time in the queue. Unit: seconds.
+         * <p>The maximum length of waiting time in the queue. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxTimeWait(Integer maxTimeWait) {
             this.putQueryParameter("MaxTimeWait", maxTimeWait);
@@ -165,7 +182,8 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * The regular expression that is used to match URI strings for which the virtual waiting room feature is enabled.
+         * <p>The regular expression that is used to match URI strings for which the virtual waiting room feature is enabled.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder waitUri(String waitUri) {
             this.putQueryParameter("WaitUri", waitUri);
@@ -174,7 +192,11 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * The URL of the waiting page.
+         * <p>The URL of the waiting page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/waitingroom.html">https://example.com/waitingroom.html</a></p>
          */
         public Builder waitUrl(String waitUrl) {
             this.putQueryParameter("WaitUrl", waitUrl);

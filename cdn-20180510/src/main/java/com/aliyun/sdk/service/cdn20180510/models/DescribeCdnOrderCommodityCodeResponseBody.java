@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnOrderCommodityCodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnOrderCommodityCodeResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeCdnOrderCommodityCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The commodity code that includes the organization unit.
+         * <p>The commodity code that includes the organization unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder orderCommodityCode(String orderCommodityCode) {
             this.orderCommodityCode = orderCommodityCode;
@@ -57,7 +61,10 @@ public class DescribeCdnOrderCommodityCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

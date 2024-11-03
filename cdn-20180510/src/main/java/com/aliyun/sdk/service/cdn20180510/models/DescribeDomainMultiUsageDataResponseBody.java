@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainMultiUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainMultiUsageDataResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         private TrafficPerInterval trafficPerInterval; 
 
         /**
-         * The end of the time range that was queried.
+         * <p>The end of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -93,7 +97,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,7 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The information about requests collected every 5 minutes.
+         * <p>The information about requests collected every 5 minutes.</p>
          */
         public Builder requestPerInterval(RequestPerInterval requestPerInterval) {
             this.requestPerInterval = requestPerInterval;
@@ -109,7 +116,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range that was queried.
+         * <p>The start of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -117,7 +127,7 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics of network traffic collected every 5 minutes.
+         * <p>The statistics of network traffic collected every 5 minutes.</p>
          */
         public Builder trafficPerInterval(TrafficPerInterval trafficPerInterval) {
             this.trafficPerInterval = trafficPerInterval;
@@ -130,6 +140,12 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainMultiUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainMultiUsageDataResponseBody</p>
+     */
     public static class RequestDataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -193,7 +209,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -201,7 +220,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests.
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11288111</p>
              */
             public Builder request(Long request) {
                 this.request = request;
@@ -209,7 +231,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned number of requests.
+             * <p>The timestamp of the returned number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -217,10 +242,13 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
-             * <p>
+             * <p>The type.</p>
+             * <blockquote>
+             * <p> The value is Simple for Alibaba Cloud CDN.</p>
+             * </blockquote>
              * 
-             * >  The value is Simple for Alibaba Cloud CDN.
+             * <strong>example:</strong>
+             * <p>Simple</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -234,6 +262,12 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainMultiUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainMultiUsageDataResponseBody</p>
+     */
     public static class RequestPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestDataModule")
         private java.util.List < RequestDataModule> requestDataModule;
@@ -275,6 +309,12 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainMultiUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainMultiUsageDataResponseBody</p>
+     */
     public static class TrafficDataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -350,7 +390,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -358,7 +401,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth. Unit: bit/s.
+             * <p>The bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11288111.1</p>
              */
             public Builder bps(Float bps) {
                 this.bps = bps;
@@ -366,7 +412,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -374,7 +423,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The startstamp of the returned usage data.
+             * <p>The startstamp of the returned usage data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -382,14 +434,17 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The type of requests. Valid values:
-             * <p>
+             * <p>The type of requests. Valid values:</p>
+             * <ul>
+             * <li><strong>StaticHttps</strong>: static HTTPS requests</li>
+             * <li><strong>DynamicHttps</strong>: dynamic HTTPS requests</li>
+             * <li><strong>DynamicHttp</strong>: dynamic HTTP requests</li>
+             * <li><strong>StaticQuic</strong>: static QUIC requests</li>
+             * <li><strong>DynamicQuic</strong>: dynamic QUIC requests</li>
+             * </ul>
              * 
-             * *   **StaticHttps**: static HTTPS requests
-             * *   **DynamicHttps**: dynamic HTTPS requests
-             * *   **DynamicHttp**: dynamic HTTP requests
-             * *   **StaticQuic**: static QUIC requests
-             * *   **DynamicQuic**: dynamic QUIC requests
+             * <strong>example:</strong>
+             * <p>DynamicHttp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -403,6 +458,12 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainMultiUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainMultiUsageDataResponseBody</p>
+     */
     public static class TrafficPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficDataModule")
         private java.util.List < TrafficDataModule> trafficDataModule;

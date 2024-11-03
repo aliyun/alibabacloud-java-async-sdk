@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBlockedRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBlockedRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information returned.
+         * <p>The information returned.</p>
          */
         public Builder infoList(InfoList infoList) {
             this.infoList = infoList;
@@ -57,7 +58,10 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBlockedRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBlockedRegionsResponseBody</p>
+     */
     public static class InfoItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Continent")
         private String continent;
@@ -121,7 +131,10 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
             private String countriesAndRegionsName; 
 
             /**
-             * The district to which the country or region belongs.
+             * <p>The district to which the country or region belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia</p>
              */
             public Builder continent(String continent) {
                 this.continent = continent;
@@ -129,7 +142,10 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the name of the country or region.
+             * <p>The abbreviation of the name of the country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AF</p>
              */
             public Builder countriesAndRegions(String countriesAndRegions) {
                 this.countriesAndRegions = countriesAndRegions;
@@ -137,7 +153,10 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the country or region.
+             * <p>The name of the country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Afghanistan</p>
              */
             public Builder countriesAndRegionsName(String countriesAndRegionsName) {
                 this.countriesAndRegionsName = countriesAndRegionsName;
@@ -151,6 +170,12 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBlockedRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBlockedRegionsResponseBody</p>
+     */
     public static class InfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InfoItem")
         private java.util.List < InfoItem> infoItem;

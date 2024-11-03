@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserUsageDataExportTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateUserUsageDataExportTaskRequest</p>
@@ -97,10 +98,12 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The end time must be later than the start time.
-         * <p>
+         * <p>The end of the time range to query. The end time must be later than the start time.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2015-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -109,11 +112,14 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
         }
 
         /**
-         * The language in which you want to export the file. Default value: zh-cn. Valid values:
-         * <p>
+         * <p>The language in which you want to export the file. Default value: zh-cn. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-cn</strong>: Chinese</li>
+         * <li><strong>en-us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh-cn**: Chinese
-         * *   **en-us**: English
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -122,10 +128,12 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
         }
 
         /**
-         * The start of the time range to query. The data is collected every 5 minutes.
-         * <p>
+         * <p>The start of the time range to query. The data is collected every 5 minutes.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -134,7 +142,10 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
         }
 
         /**
-         * The name of the task.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refresh</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

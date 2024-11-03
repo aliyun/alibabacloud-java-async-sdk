@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDomainLogsExTtlRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnDomainLogsExTtlRequest</p>
@@ -111,7 +112,10 @@ public class DescribeCdnDomainLogsExTtlRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

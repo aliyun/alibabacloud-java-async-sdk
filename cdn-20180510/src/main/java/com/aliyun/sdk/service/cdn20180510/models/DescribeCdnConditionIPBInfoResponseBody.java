@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnConditionIPBInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnConditionIPBInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data that is returned.
+         * <p>The data that is returned.</p>
          */
         public Builder datas(java.util.List < Datas> datas) {
             this.datas = datas;
@@ -57,7 +58,10 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C4AA72D-8C00-1113-BD68-8BC4E3CF4FF6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnConditionIPBInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnConditionIPBInfoResponseBody</p>
+     */
     public static class Datas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
@@ -97,7 +107,10 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The configuration value.
+             * <p>The configuration value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;[{&quot;text&quot;:&quot;阿鲁巴&quot;,&quot;value&quot;:&quot;AW&quot;}]&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

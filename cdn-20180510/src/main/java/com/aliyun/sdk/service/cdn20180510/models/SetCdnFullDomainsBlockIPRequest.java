@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetCdnFullDomainsBlockIPRequest} extends {@link RequestModel}
  *
  * <p>SetCdnFullDomainsBlockIPRequest</p>
@@ -106,7 +107,10 @@ public class SetCdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * IPList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.XXX.XXX.1,2.XXX.XXX.2</p>
          */
         public Builder IPList(String IPList) {
             this.putBodyParameter("IPList", IPList);
@@ -115,7 +119,10 @@ public class SetCdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>block</p>
          */
         public Builder operationType(String operationType) {
             this.putBodyParameter("OperationType", operationType);

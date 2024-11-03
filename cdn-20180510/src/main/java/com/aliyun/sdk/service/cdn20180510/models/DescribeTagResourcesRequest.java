@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeTagResourcesRequest</p>
@@ -83,7 +84,11 @@ public class DescribeTagResourcesRequest extends Request {
         } 
 
         /**
-         * The IDs of the resources. You can specify up to 50 IDs in each request.
+         * <p>The IDs of the resources. You can specify up to 50 IDs in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -92,7 +97,11 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to **DOMAIN**.
+         * <p>The resource type. Set the value to <strong>DOMAIN</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -101,7 +110,7 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags. You can specify up to 20 tags in each request.
+         * <p>The tags. You can specify up to 20 tags in each request.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -116,6 +125,12 @@ public class DescribeTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -155,7 +170,10 @@ public class DescribeTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. Valid values of N: **1** to **20**.
+             * <p>The key of the tag. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -163,7 +181,10 @@ public class DescribeTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag. Valid values of N: **1** to **20**.
+             * <p>The value of the tag. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

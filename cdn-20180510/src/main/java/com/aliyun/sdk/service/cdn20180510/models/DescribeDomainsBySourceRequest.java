@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainsBySourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainsBySourceRequest</p>
@@ -100,7 +101,11 @@ public class DescribeDomainsBySourceRequest extends Request {
         }
 
         /**
-         * The origin servers. Separate multiple origin servers with commas (,). Fuzzy match is not supported.
+         * <p>The origin servers. Separate multiple origin servers with commas (,). Fuzzy match is not supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);

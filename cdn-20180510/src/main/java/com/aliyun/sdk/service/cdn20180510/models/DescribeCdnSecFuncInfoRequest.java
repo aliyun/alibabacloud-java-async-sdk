@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnSecFuncInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnSecFuncInfoRequest</p>
@@ -69,11 +70,15 @@ public class DescribeCdnSecFuncInfoRequest extends Request {
         } 
 
         /**
-         * The language.
-         * <p>
+         * <p>The language.</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh: Chinese</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   en: English
-         * *   zh: Chinese
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,11 +87,15 @@ public class DescribeCdnSecFuncInfoRequest extends Request {
         }
 
         /**
-         * The type of the security feature. Valid values:
-         * <p>
+         * <p>The type of the security feature. Valid values:</p>
+         * <ul>
+         * <li>CipherSuiteGroupCustomize: custom cipher suite.</li>
+         * <li>CipherSuiteGroupStrict: dustom cipher suite.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CipherSuiteGroupCustomize: custom cipher suite.
-         * *   CipherSuiteGroupStrict: dustom cipher suite.
+         * <strong>example:</strong>
+         * <p>CipherSuiteGroupCustomize</p>
          */
         public Builder secFuncType(String secFuncType) {
             this.putQueryParameter("SecFuncType", secFuncType);

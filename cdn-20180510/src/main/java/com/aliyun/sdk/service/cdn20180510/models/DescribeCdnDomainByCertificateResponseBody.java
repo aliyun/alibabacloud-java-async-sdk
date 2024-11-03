@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDomainByCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnDomainByCertificateResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the certificate.
+         * <p>The information about the certificate.</p>
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -57,7 +58,10 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASAF2FDS-12SADSA-DDSAE3D-DSADCD4C-CDADS2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnDomainByCertificateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainByCertificateResponseBody</p>
+     */
     public static class CertInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertCaIsLegacy")
         private String certCaIsLegacy;
@@ -193,11 +203,14 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             private String issuer; 
 
             /**
-             * Indicates whether the SSL certificate is obsolete. Valid values:
-             * <p>
+             * <p>Indicates whether the SSL certificate is obsolete. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong>: The SSL certificate is obsolete.</li>
+             * <li><strong>no</strong>: The SSL certificate is working as expected.</li>
+             * </ul>
              * 
-             * *   **yes**: The SSL certificate is obsolete.
-             * *   **no**: The SSL certificate is working as expected.
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder certCaIsLegacy(String certCaIsLegacy) {
                 this.certCaIsLegacy = certCaIsLegacy;
@@ -205,7 +218,10 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the certificate.
+             * <p>The expiration time of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nov 29 00:00:00 2016 GMT</p>
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -213,11 +229,14 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SSL certificate is expired. Valid values:
-             * <p>
+             * <p>Indicates whether the SSL certificate is expired. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong>: The SSL certificate is expired.</li>
+             * <li><strong>no</strong>: The SSL certificate is not expired.</li>
+             * </ul>
              * 
-             * *   **yes**: The SSL certificate is expired.
-             * *   **no**: The SSL certificate is not expired.
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder certExpired(String certExpired) {
                 this.certExpired = certExpired;
@@ -225,7 +244,10 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate became effective.
+             * <p>The time when the certificate became effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nov 29 23:59:59 2017 GMT</p>
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -233,7 +255,10 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SSL certificate owner.
+             * <p>The name of the SSL certificate owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder certSubjectCommonName(String certSubjectCommonName) {
                 this.certSubjectCommonName = certSubjectCommonName;
@@ -241,7 +266,10 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate. Valid values: **RSA**, **DSA**, and **ECDSA**.
+             * <p>The type of the certificate. Valid values: <strong>RSA</strong>, <strong>DSA</strong>, and <strong>ECDSA</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -249,7 +277,10 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).
+             * <p>If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com,aliyundoc.com</p>
              */
             public Builder domainList(String domainList) {
                 this.domainList = domainList;
@@ -257,7 +288,10 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names (DNS fields) that match the SSL certificate. Multiple domain names are separated by commas (,).
+             * <p>The domain names (DNS fields) that match the SSL certificate. Multiple domain names are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.example.com,aliyundoc.com</p>
              */
             public Builder domainNames(String domainNames) {
                 this.domainNames = domainNames;
@@ -265,7 +299,10 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate authority (CA) that issued the certificate.
+             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C=US, O=Symantec Corporation, OU=Symantec Trust Network, OU=Domain Validated SSL, CN=Symantec Basic DV SSL CA - G1</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -279,6 +316,12 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainByCertificateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainByCertificateResponseBody</p>
+     */
     public static class CertInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertInfo")
         private java.util.List < CertInfo> certInfo;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
@@ -121,7 +122,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         private Url500List url500List; 
 
         /**
-         * A list of frequently requested URLs.
+         * <p>A list of frequently requested URLs.</p>
          */
         public Builder allUrlList(AllUrlList allUrlList) {
             this.allUrlList = allUrlList;
@@ -129,7 +130,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -137,7 +141,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64D28B53-5902-409B-94F6-FD46680144FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +152,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range that was queried.
+         * <p>The beginning of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-03T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -153,7 +163,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * A list of URLs for which 2xx status codes were returned.
+         * <p>A list of URLs for which 2xx status codes were returned.</p>
          */
         public Builder url200List(Url200List url200List) {
             this.url200List = url200List;
@@ -161,7 +171,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * A list of URLs for which 3xx status codes were returned.
+         * <p>A list of URLs for which 3xx status codes were returned.</p>
          */
         public Builder url300List(Url300List url300List) {
             this.url300List = url300List;
@@ -169,7 +179,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * A list of URLs for which 4xx status codes were returned.
+         * <p>A list of URLs for which 4xx status codes were returned.</p>
          */
         public Builder url400List(Url400List url400List) {
             this.url400List = url400List;
@@ -177,7 +187,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * A list of URLs for which 5xx status codes were returned.
+         * <p>A list of URLs for which 5xx status codes were returned.</p>
          */
         public Builder url500List(Url500List url500List) {
             this.url500List = url500List;
@@ -190,6 +200,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class UrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -265,7 +281,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * The amount of network traffic. Unit: bytes.
+             * <p>The amount of network traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>460486880</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -273,7 +292,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic consumed to access the URL.
+             * <p>The proportion of network traffic consumed to access the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -281,7 +303,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The complete URL.
+             * <p>The complete URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/nn_live/nn_x64/a0.m3u8">http://example.com/nn_live/nn_x64/a0.m3u8</a></p>
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -289,7 +314,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The number of visits to the URL.
+             * <p>The number of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161673</p>
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -297,7 +325,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of visits to the URL.
+             * <p>The proportion of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -311,6 +342,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class AllUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < UrlList> urlList;
@@ -352,6 +389,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class Url200ListUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -427,7 +470,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * The amount of network traffic. Unit: bytes.
+             * <p>The amount of network traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>460486880</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -435,7 +481,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic consumed to access the URL.
+             * <p>The proportion of network traffic consumed to access the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -443,7 +492,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The complete URL.
+             * <p>The complete URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/nn_live/nn_x64/a0.m3u8">http://example.com/nn_live/nn_x64/a0.m3u8</a></p>
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -451,7 +503,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The number of visits to the URL.
+             * <p>The number of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161673</p>
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -459,7 +514,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of visits to the URL.
+             * <p>The proportion of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -473,6 +531,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class Url200List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < Url200ListUrlList> urlList;
@@ -514,6 +578,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class Url300ListUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -589,7 +659,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * The amount of network traffic. Unit: bytes.
+             * <p>The amount of network traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>460486880</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -597,7 +670,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic consumed to access the URL.
+             * <p>The proportion of network traffic consumed to access the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -605,7 +681,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The complete URL.
+             * <p>The complete URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/nn_live/nn_x64/a0.m3u8">http://example.com/nn_live/nn_x64/a0.m3u8</a></p>
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -613,7 +692,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The number of visits to the URL.
+             * <p>The number of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161673</p>
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -621,7 +703,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of visits to the URL.
+             * <p>The proportion of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -635,6 +720,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class Url300List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < Url300ListUrlList> urlList;
@@ -676,6 +767,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class Url400ListUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -751,7 +848,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * The amount of network traffic. Unit: bytes.
+             * <p>The amount of network traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>460486880</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -759,7 +859,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic consumed to access the URL.
+             * <p>The proportion of network traffic consumed to access the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -767,7 +870,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The complete URL.
+             * <p>The complete URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/nn_live/nn_x64/a0.m3u8">http://example.com/nn_live/nn_x64/a0.m3u8</a></p>
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -775,7 +881,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The number of visits to the URL.
+             * <p>The number of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161673</p>
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -783,7 +892,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of visits to the URL.
+             * <p>The proportion of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -797,6 +909,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class Url400List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < Url400ListUrlList> urlList;
@@ -838,6 +956,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class Url500ListUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -913,7 +1037,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * The amount of network traffic. Unit: bytes.
+             * <p>The amount of network traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>460486880</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -921,7 +1048,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic consumed to access the URL.
+             * <p>The proportion of network traffic consumed to access the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -929,7 +1059,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The complete URL.
+             * <p>The complete URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/nn_live/nn_x64/a0.m3u8">http://example.com/nn_live/nn_x64/a0.m3u8</a></p>
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -937,7 +1070,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The number of visits to the URL.
+             * <p>The number of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161673</p>
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -945,7 +1081,10 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of visits to the URL.
+             * <p>The proportion of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -959,6 +1098,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcTopUrlVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcTopUrlVisitResponseBody</p>
+     */
     public static class Url500List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < Url500ListUrlList> urlList;

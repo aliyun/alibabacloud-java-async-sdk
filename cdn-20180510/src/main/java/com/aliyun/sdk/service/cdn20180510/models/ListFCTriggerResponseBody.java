@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFCTriggerResponseBody} extends {@link TeaModel}
  *
  * <p>ListFCTriggerResponseBody</p>
@@ -49,7 +50,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Function Compute triggers that are set for Alibaba Cloud CDN events.
+         * <p>The Function Compute triggers that are set for Alibaba Cloud CDN events.</p>
          */
         public Builder FCTriggers(java.util.List < FCTriggers> FCTriggers) {
             this.FCTriggers = FCTriggers;
@@ -57,7 +58,10 @@ public class ListFCTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC046C5D-8CB4-4B6B-B7F8-B335E51EF90E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListFCTriggerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFCTriggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFCTriggerResponseBody</p>
+     */
     public static class FCTriggers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventMetaName")
         private String eventMetaName;
@@ -157,7 +167,10 @@ public class ListFCTriggerResponseBody extends TeaModel {
             private String triggerARN; 
 
             /**
-             * The name of the event.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LogFileCreated</p>
              */
             public Builder eventMetaName(String eventMetaName) {
                 this.eventMetaName = eventMetaName;
@@ -165,7 +178,10 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the event.
+             * <p>The version of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder eventMetaVersion(String eventMetaVersion) {
                 this.eventMetaVersion = eventMetaVersion;
@@ -173,7 +189,10 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder notes(String notes) {
                 this.notes = notes;
@@ -181,7 +200,10 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The Resource Access Management (RAM) role.
+             * <p>The Resource Access Management (RAM) role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram:: 1234567890:role/aliyuncdneventnotificationrole</p>
              */
             public Builder roleARN(String roleARN) {
                 this.roleARN = roleARN;
@@ -189,7 +211,10 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The resources and filters for event listening.
+             * <p>The resources and filters for event listening.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:cdn:*:1234567890:domain/example.com</p>
              */
             public Builder sourceArn(String sourceArn) {
                 this.sourceArn = sourceArn;
@@ -197,7 +222,10 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger that corresponds to the Function Compute service.
+             * <p>The trigger that corresponds to the Function Compute service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:fc:cn-beijing: 1234567890:services/FCTestService/functions/printEvent/triggers/testtrigger</p>
              */
             public Builder triggerARN(String triggerARN) {
                 this.triggerARN = triggerARN;

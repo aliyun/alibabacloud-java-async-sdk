@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBlockedRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBlockedRegionsRequest</p>
@@ -54,12 +55,16 @@ public class DescribeBlockedRegionsRequest extends Request {
         } 
 
         /**
-         * The language. Valid values:
-         * <p>
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: simplified Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * <li><strong>jp</strong>: Japanese</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **zh**: simplified Chinese
-         * *   **en**: English
-         * *   **jp**: Japanese
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

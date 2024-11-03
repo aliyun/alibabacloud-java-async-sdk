@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnWafDomainRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnWafDomainRequest</p>
@@ -82,14 +83,16 @@ public class DescribeCdnWafDomainRequest extends Request {
         } 
 
         /**
-         * The domain name that you want to query.
-         * <p>
+         * <p>The domain name that you want to query.</p>
+         * <p>You can specify only one domain name in each request. You have three options to configure this parameter:</p>
+         * <ul>
+         * <li>Specify an exact domain name. For example, if you set this parameter to example.com, configuration information of example.com is queried.</li>
+         * <li>Specify a keyword. For example, if you set this parameter to example, configuration information about all domain names that contain example is queried.</li>
+         * <li>Leave this parameter empty. If this parameter is left empty, all accelerated domain names for which WAF is configured are queried.</li>
+         * </ul>
          * 
-         * You can specify only one domain name in each request. You have three options to configure this parameter:
-         * 
-         * *   Specify an exact domain name. For example, if you set this parameter to example.com, configuration information of example.com is queried.
-         * *   Specify a keyword. For example, if you set this parameter to example, configuration information about all domain names that contain example is queried.
-         * *   Leave this parameter empty. If this parameter is left empty, all accelerated domain names for which WAF is configured are queried.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -98,13 +101,18 @@ public class DescribeCdnWafDomainRequest extends Request {
         }
 
         /**
-         * The region where WAF is enabled. Valid values:
-         * <p>
+         * <p>The region where WAF is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: inside the Chinese mainland</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+         * </ul>
+         * <blockquote>
+         * <p>ap-southeast-1 includes Hong Kong (China), Macao (China), Taiwan (China), and other countries and regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn-hangzhou**: inside the Chinese mainland
-         * *   **ap-southeast-1**: outside the Chinese mainland
-         * 
-         * > ap-southeast-1 includes Hong Kong (China), Macao (China), Taiwan (China), and other countries and regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -113,7 +121,10 @@ public class DescribeCdnWafDomainRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

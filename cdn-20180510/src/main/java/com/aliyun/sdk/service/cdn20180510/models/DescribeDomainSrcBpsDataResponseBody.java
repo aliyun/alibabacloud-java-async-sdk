@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSrcBpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainSrcBpsDataResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -105,7 +109,10 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -113,7 +120,10 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-10T20:30:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -121,7 +131,10 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,7 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The origin bandwidth data at each time interval. Unit: bit/s.
+         * <p>The origin bandwidth data at each time interval. Unit: bit/s.</p>
          */
         public Builder srcBpsDataPerInterval(SrcBpsDataPerInterval srcBpsDataPerInterval) {
             this.srcBpsDataPerInterval = srcBpsDataPerInterval;
@@ -137,7 +150,10 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,6 +166,12 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainSrcBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcBpsDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpsValue")
         private String httpsValue;
@@ -201,7 +223,10 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The bandwidth values of origin HTTPS requests.
+             * <p>The bandwidth values of origin HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -209,7 +234,10 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -217,7 +245,10 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic value at each time interval.
+             * <p>The traffic value at each time interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -231,6 +262,12 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcBpsDataResponseBody</p>
+     */
     public static class SrcBpsDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

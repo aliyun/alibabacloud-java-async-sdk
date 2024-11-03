@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeCdnDomainToDcdnRequest} extends {@link RequestModel}
  *
  * <p>ChangeCdnDomainToDcdnRequest</p>
@@ -110,7 +111,11 @@ public class ChangeCdnDomainToDcdnRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -119,10 +124,10 @@ public class ChangeCdnDomainToDcdnRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the check items. Valid values:
-         * <p>
+         * <p>The operation to perform. Set the value to preCheck. Precheck is performed, and the result is returned. If the precheck passes, set the value to enforce to perform the transfer.</p>
          * 
-         * **preCheck**: return the verification result.
+         * <strong>example:</strong>
+         * <p>preCheck</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);

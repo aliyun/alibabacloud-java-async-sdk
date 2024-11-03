@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnDomainConfigsRequest</p>
@@ -110,7 +111,10 @@ public class DescribeCdnDomainConfigsRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration. For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).
+         * <p>The ID of the configuration. For more information about ConfigId, see <a href="https://help.aliyun.com/document_detail/388994.html">Usage notes on ConfigId</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6295</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -119,7 +123,11 @@ public class DescribeCdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -128,7 +136,10 @@ public class DescribeCdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * The names of the features. Separate multiple feature names with commas (,). For more information, see [Parameters for configuring features for domain names](~~388460~~).
+         * <p>The names of the features. Separate multiple feature names with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/388460.html">Parameters for configuring features for domain names</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliauth</p>
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

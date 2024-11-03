@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpInfoRequest</p>
@@ -54,7 +55,11 @@ public class DescribeIpInfoRequest extends Request {
         } 
 
         /**
-         * The IP address. You can specify only one IP address.
+         * <p>The IP address. You can specify only one IP address.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("IP", ip);

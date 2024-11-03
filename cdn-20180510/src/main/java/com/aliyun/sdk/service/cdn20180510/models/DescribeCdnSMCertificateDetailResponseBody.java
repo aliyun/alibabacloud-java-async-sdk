@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnSMCertificateDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnSMCertificateDetailResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         private String signCertificate; 
 
         /**
-         * The expiration time of the certificate. The time is displayed in UTC.
+         * <p>The expiration time of the certificate. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-31T09:42:28Z</p>
          */
         public Builder certExpireTime(String certExpireTime) {
             this.certExpireTime = certExpireTime;
@@ -141,7 +145,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>648****-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -149,7 +156,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the certificate.
+         * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertName</p>
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -157,7 +167,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The certificate authority (CA) that issued the certificate.
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DigiCert Inc</p>
          */
         public Builder certOrg(String certOrg) {
             this.certOrg = certOrg;
@@ -165,7 +178,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The common name.
+         * <p>The common name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -173,7 +189,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the encryption certificate.
+         * <p>The content of the encryption certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-BEGIN CERTIFICATE-----***-----END CERTIFICATE--</p>
          */
         public Builder encryptCertificate(String encryptCertificate) {
             this.encryptCertificate = encryptCertificate;
@@ -181,7 +200,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7C69682-7F88-40DD-A198-10D0309E439D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +211,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The subdomain name.
+         * <p>The subdomain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***.example.com</p>
          */
         public Builder sans(String sans) {
             this.sans = sans;
@@ -197,7 +222,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the signature certificate.
+         * <p>The content of the signature certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--BEGIN CERTIFICATE-----***-----END CERTIFICATE--</p>
          */
         public Builder signCertificate(String signCertificate) {
             this.signCertificate = signCertificate;

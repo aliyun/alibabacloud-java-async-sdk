@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserTagsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeUserTagsResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeUserTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -70,6 +74,12 @@ public class DescribeUserTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserTagsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -109,7 +119,10 @@ public class DescribeUserTagsResponseBody extends TeaModel {
             private java.util.List < String > value; 
 
             /**
-             * The key of a tag.
+             * <p>The key of a tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +130,7 @@ public class DescribeUserTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag values returned.
+             * <p>The tag values returned.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

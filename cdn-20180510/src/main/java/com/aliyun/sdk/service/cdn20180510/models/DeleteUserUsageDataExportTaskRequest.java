@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserUsageDataExportTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserUsageDataExportTaskRequest</p>
@@ -54,7 +55,11 @@ public class DeleteUserUsageDataExportTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task to delete.
+         * <p>The ID of the task to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

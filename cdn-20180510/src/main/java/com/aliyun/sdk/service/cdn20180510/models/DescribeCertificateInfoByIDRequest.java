@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCertificateInfoByIDRequest} extends {@link RequestModel}
  *
  * <p>DescribeCertificateInfoByIDRequest</p>
@@ -54,7 +55,11 @@ public class DescribeCertificateInfoByIDRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate. You can query only one certificate in each call.
+         * <p>The ID of the certificate. You can query only one certificate in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644xx</p>
          */
         public Builder certId(String certId) {
             this.putQueryParameter("CertId", certId);

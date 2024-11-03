@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnUserResourcePackageRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnUserResourcePackageRequest</p>
@@ -99,11 +100,14 @@ public class DescribeCdnUserResourcePackageRequest extends Request {
         }
 
         /**
-         * The status of the resource plan that you want to query. Valid values:
-         * <p>
+         * <p>The status of the resource plan that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>valid</strong>: valid</li>
+         * <li><strong>closed</strong>: expired</li>
+         * </ul>
          * 
-         * *   **valid**: valid
-         * *   **closed**: expired
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

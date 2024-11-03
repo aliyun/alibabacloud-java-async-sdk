@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainBpsDataByTimeStampRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainBpsDataByTimeStampRequest</p>
@@ -99,7 +100,11 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -108,10 +113,12 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
         }
 
         /**
-         * The names of the Internet service providers (ISPs). Separate multiple ISPs with commas (,).
-         * <p>
+         * <p>The names of the Internet service providers (ISPs). Separate multiple ISPs with commas (,).</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query regions.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+         * <strong>example:</strong>
+         * <p>uni***,tele***</p>
          */
         public Builder ispNames(String ispNames) {
             this.putQueryParameter("IspNames", ispNames);
@@ -120,10 +127,12 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
         }
 
         /**
-         * The regions. Separate multiple regions with commas (,).
-         * <p>
+         * <p>The regions. Separate multiple regions with commas (,).</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query regions.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+         * <strong>example:</strong>
+         * <p>liaoning,guangxi</p>
          */
         public Builder locationNames(String locationNames) {
             this.putQueryParameter("LocationNames", locationNames);
@@ -132,10 +141,14 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
         }
 
         /**
-         * The point in time to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The point in time to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The data is collected every 5 minutes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The data is collected every 5 minutes.
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder timePoint(String timePoint) {
             this.putQueryParameter("TimePoint", timePoint);

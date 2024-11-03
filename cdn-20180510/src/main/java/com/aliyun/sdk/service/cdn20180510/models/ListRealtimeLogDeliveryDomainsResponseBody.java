@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRealtimeLogDeliveryDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRealtimeLogDeliveryDomainsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the accelerated domain names.
+         * <p>The information about the accelerated domain names.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -57,7 +58,10 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95D5B69F-8AEC-419B-8F3A-612B35032B0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRealtimeLogDeliveryDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeLogDeliveryDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -109,7 +119,10 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -117,11 +130,14 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status. Valid values:
-             * <p>
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: enabled</li>
+             * <li><strong>offline</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **online**: enabled
-             * *   **offline**: disabled
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -135,6 +151,12 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealtimeLogDeliveryDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeLogDeliveryDomainsResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < Domains> domains;

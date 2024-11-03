@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainPvDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainPvDataRequest</p>
@@ -82,7 +83,11 @@ public class DescribeDomainPvDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name.
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -91,10 +96,11 @@ public class DescribeDomainPvDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time must be later than the start time.</p>
          * 
-         * The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2015-11-29T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -103,7 +109,10 @@ public class DescribeDomainPvDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-11-28T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

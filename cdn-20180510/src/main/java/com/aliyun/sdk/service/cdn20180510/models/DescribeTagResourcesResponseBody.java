@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagResourcesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The tags that are attached to the specified resource.
+         * <p>The tags that are attached to the specified resource.</p>
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -70,6 +74,12 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagResourcesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -109,7 +119,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +130,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +147,12 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -170,7 +192,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             private java.util.List < Tag> tag; 
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -178,7 +203,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key-value pair of the tag.
+             * <p>The key-value pair of the tag.</p>
              */
             public Builder tag(java.util.List < Tag> tag) {
                 this.tag = tag;

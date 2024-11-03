@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeL2VipsByDomainResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeL2VipsByDomainResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeL2VipsByDomainResponseBody extends TeaModel {
         private Vips vips; 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -69,7 +73,10 @@ public class DescribeL2VipsByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class DescribeL2VipsByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The list of VIPs.
+         * <p>The list of VIPs.</p>
          */
         public Builder vips(Vips vips) {
             this.vips = vips;
@@ -90,6 +97,12 @@ public class DescribeL2VipsByDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeL2VipsByDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeL2VipsByDomainResponseBody</p>
+     */
     public static class Vips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vip")
         private java.util.List < String > vip;

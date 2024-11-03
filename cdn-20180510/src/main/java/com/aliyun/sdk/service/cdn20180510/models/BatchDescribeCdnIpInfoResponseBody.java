@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDescribeCdnIpInfoResponseBody} extends {@link TeaModel}
  *
  * <p>BatchDescribeCdnIpInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The results about IP addresses returned.
+         * <p>The results about IP addresses returned.</p>
          */
         public Builder ipInfoList(java.util.List < IpInfoList> ipInfoList) {
             this.ipInfoList = ipInfoList;
@@ -57,7 +58,10 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55ADD936-763F-5E1A-BF54-2EA3F6E94A52</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchDescribeCdnIpInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchDescribeCdnIpInfoResponseBody</p>
+     */
     public static class IpInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CdnIp")
         private String cdnIp;
@@ -157,11 +167,14 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
             private String province; 
 
             /**
-             * Indicates whether the IP address belongs to an Alibaba Cloud CDN point of presence (POP).
-             * <p>
+             * <p>Indicates whether the IP address belongs to an Alibaba Cloud CDN point of presence (POP).</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cdnIp(String cdnIp) {
                 this.cdnIp = cdnIp;
@@ -169,7 +182,10 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The city to which the IP address belongs.
+             * <p>The city to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -177,7 +193,10 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The country to which the IP address belongs.
+             * <p>The country to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -185,7 +204,10 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111.XXX.XXX.230</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -193,7 +215,10 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ISP to which the IP address belongs.
+             * <p>The ISP to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Move</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -201,7 +226,10 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The province to which the IP address belongs.
+             * <p>The province to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder province(String province) {
                 this.province = province;

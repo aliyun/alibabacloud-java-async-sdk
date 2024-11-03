@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRefreshTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeRefreshTasksRequest</p>
@@ -209,7 +210,10 @@ public class DescribeRefreshTasksRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one accelerated domain name in each call. By default, this operation queries the status of tasks for all accelerated domain names.
+         * <p>The accelerated domain name. You can specify only one accelerated domain name in each call. By default, this operation queries the status of tasks for all accelerated domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -218,10 +222,13 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2017-12-22T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -230,7 +237,10 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * The path of the object. The path is used as a condition for exact matching.
+         * <p>The path of the object. The path is used as a condition for exact matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/1.txt">http://example.com/1.txt</a></p>
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -239,15 +249,19 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>file</strong>: refreshes one or more files.</li>
+         * <li><strong>directory</strong>: refreshes files in specific directories.</li>
+         * <li><strong>regex</strong>: refreshes content based on a regular expression.</li>
+         * <li><strong>preload</strong>: prefetches one or more files.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set the <strong>DomainName</strong> or <strong>Status</strong> parameter, you must also set the <strong>ObjectType</strong> parameter.</p>
+         * </blockquote>
          * 
-         * *   **file**: refreshes one or more files.
-         * *   **directory**: refreshes files in specific directories.
-         * *   **regex**: refreshes content based on a regular expression.
-         * *   **preload**: prefetches one or more files.
-         * 
-         * > If you set the **DomainName** or **Status** parameter, you must also set the **ObjectType** parameter.
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -265,7 +279,10 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**.
+         * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -274,7 +291,10 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **100**. Valid values: **1** to **100**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Maximum value: <strong>100</strong>. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -283,7 +303,10 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyuji4b6r4**</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -301,7 +324,10 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-21T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -310,12 +336,15 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>Complete</strong>: The task is complete.</li>
+         * <li><strong>Refreshing</strong>: The task is in progress.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * </ul>
          * 
-         * *   **Complete**: The task is complete.
-         * *   **Refreshing**: The task is in progress.
-         * *   **Failed**: The task failed.
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -324,7 +353,10 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * The ID of the task that you want to query.
+         * <p>The ID of the task that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234321</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

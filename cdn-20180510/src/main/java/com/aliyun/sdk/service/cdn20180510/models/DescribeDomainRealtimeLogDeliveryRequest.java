@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRealtimeLogDeliveryRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainRealtimeLogDeliveryRequest</p>
@@ -54,7 +55,11 @@ public class DescribeDomainRealtimeLogDeliveryRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name for which real-time log delivery is enabled. You can specify only one domain name.
+         * <p>The accelerated domain name for which real-time log delivery is enabled. You can specify only one domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

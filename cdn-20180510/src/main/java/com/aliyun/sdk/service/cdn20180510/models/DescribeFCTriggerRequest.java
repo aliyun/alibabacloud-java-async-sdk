@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFCTriggerRequest} extends {@link RequestModel}
  *
  * <p>DescribeFCTriggerRequest</p>
@@ -54,7 +55,11 @@ public class DescribeFCTriggerRequest extends Request {
         } 
 
         /**
-         * The trigger that corresponds to the Function Compute service.
+         * <p>The trigger that corresponds to the Function Compute service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:cdn:{RegionID}:{AccountID}:{Filter}</p>
          */
         public Builder triggerARN(String triggerARN) {
             this.putQueryParameter("TriggerARN", triggerARN);

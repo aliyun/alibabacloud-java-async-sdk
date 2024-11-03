@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RollbackStagingConfigRequest} extends {@link RequestModel}
  *
  * <p>RollbackStagingConfigRequest</p>
@@ -54,7 +55,11 @@ public class RollbackStagingConfigRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

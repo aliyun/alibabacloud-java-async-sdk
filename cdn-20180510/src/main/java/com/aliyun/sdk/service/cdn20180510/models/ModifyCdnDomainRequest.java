@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCdnDomainRequest} extends {@link RequestModel}
  *
  * <p>ModifyCdnDomainRequest</p>
@@ -124,7 +125,11 @@ public class ModifyCdnDomainRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -142,7 +147,10 @@ public class ModifyCdnDomainRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyuji4b6r4**</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -160,10 +168,13 @@ public class ModifyCdnDomainRequest extends Request {
         }
 
         /**
-         * The information about the addresses of origin servers.
-         * <p>
+         * <p>The information about the addresses of origin servers.</p>
+         * <blockquote>
+         * <p>Do not set <strong>Sources</strong> and <strong>TopLevelDomain</strong> at the same time. If you set <strong>Sources</strong> and <strong>TopLevelDomain</strong> at the same time, <strong>TopLevelDomain</strong> does not take effect.</p>
+         * </blockquote>
          * 
-         * > Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;1.1.1.1&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80,&quot;weight&quot;:&quot;15&quot;}]</p>
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -172,10 +183,13 @@ public class ModifyCdnDomainRequest extends Request {
         }
 
         /**
-         * The root domain. To add a root domain name, you must be added to the whitelist specified by the CDN_TOP_LEVEL_DOMAIN_GREY_USER_LIST parameter.
-         * <p>
+         * <p>The root domain. To add a root domain name, you must be added to the whitelist specified by the CDN_TOP_LEVEL_DOMAIN_GREY_USER_LIST parameter.</p>
+         * <blockquote>
+         * <p>Do not set <strong>Sources</strong> and <strong>TopLevelDomain</strong> at the same time. If you set <strong>Sources</strong> and <strong>TopLevelDomain</strong> at the same time, <strong>TopLevelDomain</strong> does not take effect.</p>
+         * </blockquote>
          * 
-         * > Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.
+         * <strong>example:</strong>
+         * <p>aliyundoc.com</p>
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRefreshTaskByIdRequest} extends {@link RequestModel}
  *
  * <p>DescribeRefreshTaskByIdRequest</p>
@@ -54,12 +55,13 @@ public class DescribeRefreshTaskByIdRequest extends Request {
         } 
 
         /**
-         * The ID of the task that you want to query.
-         * <p>
+         * <p>The ID of the task that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91164.html">RefreshObjectCaches</a> operation to query task IDs. Then, you can use the task IDs to query task status.</p>
+         * <p>You can specify up to 10 task IDs. Separate task IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [RefreshObjectCaches](~~91164~~) operation to query task IDs. Then, you can use the task IDs to query task status.
-         * 
-         * You can specify up to 10 task IDs. Separate task IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnFullDomainsBlockIPHistoryRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnFullDomainsBlockIPHistoryRequest</p>
@@ -84,7 +85,10 @@ public class DescribeCdnFullDomainsBlockIPHistoryRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-24T19:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -93,7 +97,10 @@ public class DescribeCdnFullDomainsBlockIPHistoryRequest extends Request {
         }
 
         /**
-         * IPList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.XXX.XXX.1,2.XXX.XXX.2</p>
          */
         public Builder IPList(String IPList) {
             this.putBodyParameter("IPList", IPList);
@@ -102,7 +109,10 @@ public class DescribeCdnFullDomainsBlockIPHistoryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-24T17:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

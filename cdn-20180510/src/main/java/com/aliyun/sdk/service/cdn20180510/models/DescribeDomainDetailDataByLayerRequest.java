@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainDetailDataByLayerRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainDetailDataByLayerRequest</p>
@@ -141,10 +142,12 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         } 
 
         /**
-         * The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.
-         * <p>
+         * <p>The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query ISP names.</p>
+         * <p>If you do not specify an ISP, data of all ISPs is queried.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If you do not specify an ISP, data of all ISPs is queried.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -153,10 +156,12 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * The protocol by which you want to query data. Valid values: **http**, **https**, **quic**, and **all**.
-         * <p>
+         * <p>The protocol by which you want to query data. Valid values: <strong>http</strong>, <strong>https</strong>, <strong>quic</strong>, and <strong>all</strong>.</p>
+         * <p>The default value is <strong>all</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The default value is **all**.
+         * <strong>example:</strong>
+         * <p>2020-07-05T22:05:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -165,10 +170,14 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>bps,ipv6_traf,traf,http_code,qps</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -177,7 +186,10 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -186,7 +198,10 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * The amount of network traffic. Unit: bytes.
+         * <p>The amount of network traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder layer(String layer) {
             this.putQueryParameter("Layer", layer);
@@ -195,7 +210,10 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * The detailed data of the accelerated domain names.
+         * <p>The detailed data of the accelerated domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -204,10 +222,12 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
-         * <p>
+         * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query regions.</p>
+         * <p>If you do not specify a region, data in all regions is queried.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If you do not specify a region, data in all regions is queried.
+         * <strong>example:</strong>
+         * <p>2020-07-05T22:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

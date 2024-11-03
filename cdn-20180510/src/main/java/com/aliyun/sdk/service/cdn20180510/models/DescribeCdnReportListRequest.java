@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnReportListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnReportListRequest</p>
@@ -53,7 +54,10 @@ public class DescribeCdnReportListRequest extends Request {
         } 
 
         /**
-         * The ID of the operations report that you want to query. If you do not specify an ID, all operations reports are queried.
+         * <p>The ID of the operations report that you want to query. If you do not specify an ID, all operations reports are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);

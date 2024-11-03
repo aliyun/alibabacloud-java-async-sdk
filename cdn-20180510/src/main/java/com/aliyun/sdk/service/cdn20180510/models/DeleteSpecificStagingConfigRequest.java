@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSpecificStagingConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteSpecificStagingConfigRequest</p>
@@ -97,7 +98,11 @@ public class DeleteSpecificStagingConfigRequest extends Request {
         } 
 
         /**
-         * The configuration IDs. Separate configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).
+         * <p>The configuration IDs. Separate configuration IDs with commas (,). For more information about ConfigId, see <a href="https://help.aliyun.com/document_detail/388994.html">Usage notes on ConfigId</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2317</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -106,7 +111,11 @@ public class DeleteSpecificStagingConfigRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+         * <p>The accelerated domain name. You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

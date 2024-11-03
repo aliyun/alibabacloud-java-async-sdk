@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainBpsDataByLayerResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainBpsDataByLayerResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned at each time interval.
+         * <p>The data returned at each time interval.</p>
          */
         public Builder bpsDataInterval(BpsDataInterval bpsDataInterval) {
             this.bpsDataInterval = bpsDataInterval;
@@ -69,7 +70,10 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The time interval between the data entries. Unit: seconds.
+         * <p>The time interval between the data entries. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -77,7 +81,10 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C565B910-BC3B-467B-9046-2A48566EA967</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainBpsDataByLayerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainBpsDataByLayerResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
@@ -141,7 +154,10 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-06T07:10:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -149,7 +165,10 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of network traffic. Unit: bytes.
+             * <p>The total amount of network traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2838</p>
              */
             public Builder trafficValue(String trafficValue) {
                 this.trafficValue = trafficValue;
@@ -157,7 +176,10 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The peak bandwidth value. Unit: bit/s.
+             * <p>The peak bandwidth value. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75.68</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -171,6 +193,12 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainBpsDataByLayerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainBpsDataByLayerResponseBody</p>
+     */
     public static class BpsDataInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

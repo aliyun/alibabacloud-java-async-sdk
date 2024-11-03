@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableRealtimeLogDeliveryRequest} extends {@link RequestModel}
  *
  * <p>DisableRealtimeLogDeliveryRequest</p>
@@ -54,7 +55,11 @@ public class DisableRealtimeLogDeliveryRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name for which you want to disable real-time log delivery. You can specify multiple domain names and separate them with commas (,).
+         * <p>The accelerated domain name for which you want to disable real-time log delivery. You can specify multiple domain names and separate them with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

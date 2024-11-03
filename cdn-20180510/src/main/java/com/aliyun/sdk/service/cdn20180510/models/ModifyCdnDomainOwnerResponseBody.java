@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCdnDomainOwnerResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCdnDomainOwnerResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyCdnDomainOwnerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The description of the domain name transfer.
+         * <p>The description of the domain name transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The domain does not allow to transfer to a different account.</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -57,7 +61,10 @@ public class ModifyCdnDomainOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C98E518B-024E-538E-8276-66310CB8667D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

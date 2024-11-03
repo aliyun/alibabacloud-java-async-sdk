@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnSecFuncInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnSecFuncInfoResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         private String retCode; 
 
         /**
-         * Queried data.
+         * <p>Queried data.</p>
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -93,7 +94,10 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -101,7 +105,10 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatus(String httpStatus) {
             this.httpStatus = httpStatus;
@@ -109,7 +116,10 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCD7D917-76F1-442F-BB75-C810DE34C761</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP request response code.
-         * <p>
+         * <p>The HTTP request response code.</p>
+         * <ul>
+         * <li>0: OK.</li>
+         * <li>Values other than 0: an error.</li>
+         * </ul>
          * 
-         * *   0: OK.
-         * *   Values other than 0: an error.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retCode(String retCode) {
             this.retCode = retCode;
@@ -134,6 +147,12 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnSecFuncInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnSecFuncInfoResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -173,7 +192,10 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -181,7 +203,10 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
              */
             public Builder value(String value) {
                 this.value = value;

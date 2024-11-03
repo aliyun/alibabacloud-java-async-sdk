@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainTopClientIpVisitResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainTopClientIpVisitResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * A list of client IP addresses.
+         * <p>A list of client IP addresses.</p>
          */
         public Builder clientIpList(java.util.List < ClientIpList> clientIpList) {
             this.clientIpList = clientIpList;
@@ -57,7 +58,10 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64D28B53-5902-409B-94F6-FD46680144FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainTopClientIpVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainTopClientIpVisitResponseBody</p>
+     */
     public static class ClientIpList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Acc")
         private Long acc;
@@ -133,7 +143,10 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             private Long traffic; 
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder acc(Long acc) {
                 this.acc = acc;
@@ -141,7 +154,10 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The client IP address returned. Only IPv4 addressed are supported.
+             * <p>The client IP address returned. Only IPv4 addressed are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.xxx</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -149,7 +165,10 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The ranking of the client IP address returned.
+             * <p>The ranking of the client IP address returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder rank(Integer rank) {
                 this.rank = rank;
@@ -157,7 +176,10 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of network traffic consumed. Unit: bytes.
+             * <p>The total amount of network traffic consumed. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder traffic(Long traffic) {
                 this.traffic = traffic;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomLogConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomLogConfigRequest</p>
@@ -54,7 +55,11 @@ public class DescribeCustomLogConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the custom configuration.
+         * <p>The ID of the custom configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);

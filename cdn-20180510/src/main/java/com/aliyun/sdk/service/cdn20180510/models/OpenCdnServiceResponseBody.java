@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenCdnServiceResponseBody} extends {@link TeaModel}
  *
  * <p>OpenCdnServiceResponseBody</p>
@@ -37,7 +38,10 @@ public class OpenCdnServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97C68796-EB7F-4D41-9D5B-12B909D76508</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserUsageDetailDataExportTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserUsageDetailDataExportTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
         private UsageDataPerPage usageDataPerPage; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A91BE91F-0B34-4CBF-8E0F-A2977E15AA52</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
         }
 
         /**
-         * The usage details returned per page.
+         * <p>The usage details returned per page.</p>
          */
         public Builder usageDataPerPage(UsageDataPerPage usageDataPerPage) {
             this.usageDataPerPage = usageDataPerPage;
@@ -70,6 +74,12 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserUsageDetailDataExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserUsageDetailDataExportTaskResponseBody</p>
+     */
     public static class TaskConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -109,7 +119,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             private String startTime; 
 
             /**
-             * The end of the time range during which data was queried.
+             * <p>The end of the time range during which data was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-31T15:59:59Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -117,7 +130,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The start of the time range during which data was queried.
+             * <p>The start of the time range during which data was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-31T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -131,6 +147,12 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserUsageDetailDataExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserUsageDetailDataExportTaskResponseBody</p>
+     */
     public static class DataItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -230,7 +252,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             private String updateTime; 
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-09T06:33:38Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -238,7 +263,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The download URL.
+             * <p>The download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.oss-cn-beijing.aliyuncs.com/billing_data/xxx">https://test.oss-cn-beijing.aliyuncs.com/billing_data/xxx</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -246,7 +274,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The status of the task.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -254,7 +285,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The configurations of the task.
+             * <p>The configurations of the task.</p>
              */
             public Builder taskConfig(TaskConfig taskConfig) {
                 this.taskConfig = taskConfig;
@@ -262,7 +293,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -270,7 +304,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refresh</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -278,7 +315,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The time when the task was last modified.
+             * <p>The time when the task was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-09T06:35:46Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -292,6 +332,12 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserUsageDetailDataExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserUsageDetailDataExportTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataItem")
         private java.util.List < DataItem> dataItem;
@@ -333,6 +379,12 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserUsageDetailDataExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserUsageDetailDataExportTaskResponseBody</p>
+     */
     public static class UsageDataPerPage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
@@ -396,7 +448,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             private Integer totalCount; 
 
             /**
-             * The information about the task.
+             * <p>The information about the task.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -404,7 +456,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -412,7 +467,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -420,7 +478,10 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

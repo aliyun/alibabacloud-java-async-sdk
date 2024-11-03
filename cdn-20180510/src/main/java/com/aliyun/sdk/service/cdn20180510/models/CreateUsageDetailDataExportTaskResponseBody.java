@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUsageDetailDataExportTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUsageDetailDataExportTaskResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The end of the time range for which the data was queried.
+         * <p>The end of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -81,7 +85,10 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED61C6C3-8241-4187-AAA7-5157AE175CEC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range for which the data was queried.
+         * <p>The beginning of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -97,7 +107,10 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

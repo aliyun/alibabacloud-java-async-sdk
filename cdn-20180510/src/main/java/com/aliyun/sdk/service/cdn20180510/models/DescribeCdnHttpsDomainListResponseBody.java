@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnHttpsDomainListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnHttpsDomainListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the certificate.
+         * <p>The information about the certificate.</p>
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -69,7 +70,10 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5E8DF64-7175-4186-9B06-F002C0BBD0C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnHttpsDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnHttpsDomainListResponseBody</p>
+     */
     public static class CertInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertCommonName")
         private String certCommonName;
@@ -201,7 +214,10 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * The returned primary domain name of the certificate.
+             * <p>The returned primary domain name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.org</p>
              */
             public Builder certCommonName(String certCommonName) {
                 this.certCommonName = certCommonName;
@@ -209,7 +225,10 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the certificate expires.
+             * <p>The time at which the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-26 14:45:09</p>
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -217,7 +236,10 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -225,7 +247,10 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the certificate became effective.
+             * <p>The time at which the certificate became effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-26 14:45:09</p>
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -233,13 +258,16 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate.
-             * <p>
+             * <p>The status of the certificate.</p>
+             * <ul>
+             * <li><strong>ok</strong>: The certificate is working as expected.</li>
+             * <li><strong>mismatch</strong>: The certificate does not match the specified domain name.</li>
+             * <li><strong>expired</strong>: The certificate has expired.</li>
+             * <li><strong>expire_soon</strong>: The certificate will expire soon.</li>
+             * </ul>
              * 
-             * *   **ok**: The certificate is working as expected.
-             * *   **mismatch**: The certificate does not match the specified domain name.
-             * *   **expired**: The certificate has expired.
-             * *   **expire_soon**: The certificate will expire soon.
+             * <strong>example:</strong>
+             * <p>mismatch</p>
              */
             public Builder certStatus(String certStatus) {
                 this.certStatus = certStatus;
@@ -247,12 +275,15 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate.
-             * <p>
+             * <p>The type of the certificate.</p>
+             * <ul>
+             * <li><strong>free</strong>: a free certificate.</li>
+             * <li><strong>cas</strong>: a certificate that is purchased from Alibaba Cloud SSL Certificates Service.</li>
+             * <li><strong>upload</strong>: a certificate that is uploaded by the user.</li>
+             * </ul>
              * 
-             * *   **free**: a free certificate.
-             * *   **cas**: a certificate that is purchased from Alibaba Cloud SSL Certificates Service.
-             * *   **upload**: a certificate that is uploaded by the user.
+             * <strong>example:</strong>
+             * <p>free</p>
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -260,7 +291,10 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the certificate was updated.
+             * <p>The time at which the certificate was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-08 18:33:16</p>
              */
             public Builder certUpdateTime(String certUpdateTime) {
                 this.certUpdateTime = certUpdateTime;
@@ -268,7 +302,10 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -282,6 +319,12 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnHttpsDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnHttpsDomainListResponseBody</p>
+     */
     public static class CertInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertInfo")
         private java.util.List < CertInfo> certInfo;

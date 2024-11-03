@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDescribeCdnIpInfoRequest} extends {@link RequestModel}
  *
  * <p>BatchDescribeCdnIpInfoRequest</p>
@@ -68,11 +69,17 @@ public class BatchDescribeCdnIpInfoRequest extends Request {
         } 
 
         /**
-         * The list of IP addresses to query. Separate IP addresses with commas (,). You can specify up to 20 IP addresses at a time.
-         * <p>
+         * <p>The list of IP addresses to query. Separate IP addresses with commas (,). You can specify up to 20 IP addresses at a time.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Example of an IPv4 address: 192.0.2.1</li>
+         * <li>Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:****:ffff.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > *   Example of an IPv4 address: 192.0.2.1
-         * >*   Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:\*\*\*\*:ffff.
+         * <strong>example:</strong>
+         * <p>111.XXX.XXX.230,47.XXX.XXX.243</p>
          */
         public Builder ipAddrList(String ipAddrList) {
             this.putQueryParameter("IpAddrList", ipAddrList);
@@ -81,11 +88,14 @@ public class BatchDescribeCdnIpInfoRequest extends Request {
         }
 
         /**
-         * The language of the query results. Valid values:
-         * <p>
+         * <p>The language of the query results. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh** (default): Simplified Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

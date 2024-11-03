@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyDomainOwnerResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyDomainOwnerResponseBody</p>
@@ -49,10 +50,13 @@ public class VerifyDomainOwnerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The verification result.
-         * <p>
+         * <p>The verification result.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the operation fails.</p>
+         * </blockquote>
          * 
-         * > This parameter is returned only if the operation fails.
+         * <strong>example:</strong>
+         * <p>verify_dffeb6610035dcb77b413a59c32c****</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -60,7 +64,10 @@ public class VerifyDomainOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

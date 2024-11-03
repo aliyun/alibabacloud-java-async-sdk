@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCdnCertificateSigningRequestRequest} extends {@link RequestModel}
  *
  * <p>CreateCdnCertificateSigningRequestRequest</p>
@@ -152,7 +153,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         } 
 
         /**
-         * The city. Default value: Hangzhou.
+         * <p>The city. Default value: Hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -161,7 +165,11 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The Common Name of the certificate.
+         * <p>The Common Name of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonName</p>
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -170,7 +178,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The country or region in which the organization is located. Default value: CN.
+         * <p>The country or region in which the organization is located. Default value: CN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -179,7 +190,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The email address.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -188,7 +202,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The name of the organization. Default value: Alibaba Inc.
+         * <p>The name of the organization. Default value: Alibaba Inc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Inc</p>
          */
         public Builder organization(String organization) {
             this.putQueryParameter("Organization", organization);
@@ -197,7 +214,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The name of the department. Default value: Aliyun CDN.
+         * <p>The name of the department. Default value: Aliyun CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun CDN</p>
          */
         public Builder organizationUnit(String organizationUnit) {
             this.putQueryParameter("OrganizationUnit", organizationUnit);
@@ -206,7 +226,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).
+         * <p>The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder SANs(String SANs) {
             this.putQueryParameter("SANs", SANs);
@@ -215,7 +238,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The provincial district. Default value: Zhejiang.
+         * <p>The provincial district. Default value: Zhejiang.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

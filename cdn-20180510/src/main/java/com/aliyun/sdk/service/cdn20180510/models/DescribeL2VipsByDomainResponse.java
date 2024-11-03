@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeL2VipsByDomainResponse} extends {@link TeaModel}
  *
  * <p>DescribeL2VipsByDomainResponse</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnUserDomainsByFuncRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnUserDomainsByFuncRequest</p>
@@ -97,10 +98,12 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
         } 
 
         /**
-         * The ID of the feature.
-         * <p>
+         * <p>The ID of the feature.</p>
+         * <p>For example, the ID of the origin host feature (set_req_host_header) is 18.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For example, the ID of the origin host feature (set_req_host_header) is 18.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder funcId(Integer funcId) {
             this.putQueryParameter("FuncId", funcId);
@@ -109,10 +112,11 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
-         * <p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
          * 
-         * Valid values: **1** to **100000**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -121,10 +125,11 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * The number of domain names to return on each page. Default value: **20**.
-         * <p>
+         * <p>The number of domain names to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * 
-         * Valid values: **1** to **50**.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -133,7 +138,10 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCdnDeliverTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteCdnDeliverTaskRequest</p>
@@ -54,7 +55,11 @@ public class DeleteCdnDeliverTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the tracking task that you want to delete. You can call the [DescribeCdnDeliverList](~~270877~~) operation to query task IDs.
+         * <p>The ID of the tracking task that you want to delete. You can call the <a href="https://help.aliyun.com/document_detail/270877.html">DescribeCdnDeliverList</a> operation to query task IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder deliverId(Long deliverId) {
             this.putQueryParameter("DeliverId", deliverId);

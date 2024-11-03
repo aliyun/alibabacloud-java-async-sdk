@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpInfoResponseBody</p>
@@ -97,10 +98,14 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the IP address belongs to an Alibaba Cloud CDN POP.
-         * <p>
-         * *   **True**:Yes.
-         * *   **False**:No.
+         * <p>Indicates whether the IP address belongs to an Alibaba Cloud CDN POP.</p>
+         * <ul>
+         * <li><strong>True</strong>:Yes.</li>
+         * <li><strong>False</strong>:No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder cdnIp(String cdnIp) {
             this.cdnIp = cdnIp;
@@ -108,7 +113,10 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the ISP in Chinese.
+         * <p>The name of the ISP in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>电信</p>
          */
         public Builder ISP(String ISP) {
             this.ISP = ISP;
@@ -116,7 +124,10 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the ISP.
+         * <p>The name of the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder ispEname(String ispEname) {
             this.ispEname = ispEname;
@@ -124,7 +135,10 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the region in Chinese.
+         * <p>The name of the region in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国-贵州省-贵阳市</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -132,7 +146,10 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the region.
+         * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China-Guizhou-guiyang</p>
          */
         public Builder regionEname(String regionEname) {
             this.regionEname = regionEname;
@@ -140,7 +157,10 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123847FA-9A00-4426-83B8-B4B45D475930</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

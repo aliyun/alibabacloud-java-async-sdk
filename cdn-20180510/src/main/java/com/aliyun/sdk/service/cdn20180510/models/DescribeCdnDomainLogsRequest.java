@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDomainLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnDomainLogsRequest</p>
@@ -111,7 +112,11 @@ public class DescribeCdnDomainLogsRequest extends Request {
         } 
 
         /**
-         * The domain name. You can specify only one domain name.
+         * <p>The domain name. You can specify only one domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -120,12 +125,14 @@ public class DescribeCdnDomainLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2017-12-22T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -134,7 +141,10 @@ public class DescribeCdnDomainLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,7 +153,10 @@ public class DescribeCdnDomainLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **300**. Maximum value: **1000**. Valid values: **1** to **1000**.
+         * <p>The number of entries to return on each page. Default value: <strong>300</strong>. Maximum value: <strong>1000</strong>. Valid values: <strong>1</strong> to <strong>1000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,10 +165,11 @@ public class DescribeCdnDomainLogsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2017-12-21T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

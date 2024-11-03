@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetCdnDomainSMCertificateRequest} extends {@link RequestModel}
  *
  * <p>SetCdnDomainSMCertificateRequest</p>
@@ -112,7 +113,11 @@ public class SetCdnDomainSMCertificateRequest extends Request {
         } 
 
         /**
-         * The ID of the SM certificate that you want to configure. The identifier of the certificate. The value is Certificate ID-cn-hangzhou. For example, if the certificate ID is 123, set the value of this parameter to 123-cn-hangzhou.
+         * <p>The ID of the SM certificate that you want to configure. The identifier of the certificate. The value is Certificate ID-cn-hangzhou. For example, if the certificate ID is 123, set the value of this parameter to 123-cn-hangzhou.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -121,10 +126,14 @@ public class SetCdnDomainSMCertificateRequest extends Request {
         }
 
         /**
-         * The accelerated domain name for which you want to configure the SM certificate.
-         * <p>
+         * <p>The accelerated domain name for which you want to configure the SM certificate.</p>
+         * <blockquote>
+         * <p>The domain name must use HTTPS acceleration.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The domain name must use HTTPS acceleration.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -142,11 +151,15 @@ public class SetCdnDomainSMCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SSL certificate. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);

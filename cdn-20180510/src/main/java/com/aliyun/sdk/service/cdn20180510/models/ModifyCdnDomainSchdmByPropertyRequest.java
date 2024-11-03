@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCdnDomainSchdmByPropertyRequest} extends {@link RequestModel}
  *
  * <p>ModifyCdnDomainSchdmByPropertyRequest</p>
@@ -69,7 +70,11 @@ public class ModifyCdnDomainSchdmByPropertyRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name for which you want to change the acceleration region. You can specify only one domain name.
+         * <p>The accelerated domain name for which you want to change the acceleration region. You can specify only one domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -78,14 +83,17 @@ public class ModifyCdnDomainSchdmByPropertyRequest extends Request {
         }
 
         /**
-         * The information about the acceleration region. {"coverage":"overseas"}
-         * <p>
+         * <p>The information about the acceleration region. {&quot;coverage&quot;:&quot;overseas&quot;}</p>
+         * <p>Valid values for coverage:</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>overseas</strong>: global (excluding the Chinese mainland)</li>
+         * <li><strong>global</strong>: global</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values for coverage:
-         * 
-         * *   **domestic**: Chinese mainland
-         * *   **overseas**: global (excluding the Chinese mainland)
-         * *   **global**: global
+         * <strong>example:</strong>
+         * <p>{&quot;coverage&quot;:&quot;overseas&quot;}</p>
          */
         public Builder property(String property) {
             this.putQueryParameter("Property", property);

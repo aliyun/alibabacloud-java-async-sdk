@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainsBySourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainsBySourceResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         private String sources; 
 
         /**
-         * The domain names corresponding to each origin server.
+         * <p>The domain names corresponding to each origin server.</p>
          */
         public Builder domainsList(DomainsList domainsList) {
             this.domainsList = domainsList;
@@ -69,7 +70,10 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B0F074E5-A1AC-4B32-8EA2-6F450410D1E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         }
 
         /**
-         * The origin servers.
+         * <p>The origin servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,aliyundoc.com</p>
          */
         public Builder sources(String sources) {
             this.sources = sources;
@@ -90,6 +97,12 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainsBySourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsBySourceResponseBody</p>
+     */
     public static class DomainInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CdnType")
         private String cdnType;
@@ -177,12 +190,15 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The workload type of the accelerated domain name. Valid values:
-             * <p>
+             * <p>The workload type of the accelerated domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>web</strong>: images and small files</li>
+             * <li><strong>download</strong>: large files</li>
+             * <li><strong>video</strong>: on-demand video and audio streaming</li>
+             * </ul>
              * 
-             * *   **web**: images and small files
-             * *   **download**: large files
-             * *   **video**: on-demand video and audio streaming
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder cdnType(String cdnType) {
                 this.cdnType = cdnType;
@@ -190,7 +206,10 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-12T11:53:19+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -198,7 +217,10 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME record assigned to the domain name.
+             * <p>The CNAME record assigned to the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>***.alikunlun.com</p>
              */
             public Builder domainCname(String domainCname) {
                 this.domainCname = domainCname;
@@ -206,7 +228,10 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.org</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -214,15 +239,18 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name. Valid values:
-             * <p>
+             * <p>The status of the domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>applying</strong>: The domain name is under review.</li>
+             * <li><strong>configuring</strong>: The domain name is being configured.</li>
+             * <li><strong>online</strong>: The domain name is working as expected.</li>
+             * <li><strong>stopping</strong>: The domain name is being stopped.</li>
+             * <li><strong>offline</strong>: The domain name is disabled.</li>
+             * <li><strong>disabling</strong>: The domain name is being removed.</li>
+             * </ul>
              * 
-             * *   **applying**: The domain name is under review.
-             * *   **configuring**: The domain name is being configured.
-             * *   **online**: The domain name is working as expected.
-             * *   **stopping**: The domain name is being stopped.
-             * *   **offline**: The domain name is disabled.
-             * *   **disabling**: The domain name is being removed.
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -230,7 +258,10 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-03-31T04:49:00+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -244,6 +275,12 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsBySourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsBySourceResponseBody</p>
+     */
     public static class DomainInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainInfo")
         private java.util.List < DomainInfo> domainInfo;
@@ -285,6 +322,12 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsBySourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsBySourceResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainNames")
         private java.util.List < String > domainNames;
@@ -326,6 +369,12 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsBySourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsBySourceResponseBody</p>
+     */
     public static class DomainsData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainInfos")
         private DomainInfos domainInfos;
@@ -377,7 +426,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * Information about the domain name.
+             * <p>Information about the domain name.</p>
              */
             public Builder domainInfos(DomainInfos domainInfos) {
                 this.domainInfos = domainInfos;
@@ -385,7 +434,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names that correspond to each origin server.
+             * <p>The domain names that correspond to each origin server.</p>
              */
             public Builder domains(Domains domains) {
                 this.domains = domains;
@@ -393,7 +442,10 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The origin server.
+             * <p>The origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -407,6 +459,12 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsBySourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsBySourceResponseBody</p>
+     */
     public static class DomainsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainsData")
         private java.util.List < DomainsData> domainsData;

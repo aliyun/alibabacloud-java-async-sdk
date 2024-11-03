@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushObjectCacheRequest} extends {@link RequestModel}
  *
  * <p>PushObjectCacheRequest</p>
@@ -29,6 +30,10 @@ public class PushObjectCacheRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryHashkey")
+    private Boolean queryHashkey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -42,6 +47,7 @@ public class PushObjectCacheRequest extends Request {
         this.l2Preload = builder.l2Preload;
         this.objectPath = builder.objectPath;
         this.ownerId = builder.ownerId;
+        this.queryHashkey = builder.queryHashkey;
         this.securityToken = builder.securityToken;
         this.withHeader = builder.withHeader;
     }
@@ -88,6 +94,13 @@ public class PushObjectCacheRequest extends Request {
     }
 
     /**
+     * @return queryHashkey
+     */
+    public Boolean getQueryHashkey() {
+        return this.queryHashkey;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -106,6 +119,7 @@ public class PushObjectCacheRequest extends Request {
         private Boolean l2Preload; 
         private String objectPath; 
         private Long ownerId; 
+        private Boolean queryHashkey; 
         private String securityToken; 
         private String withHeader; 
 
@@ -119,22 +133,26 @@ public class PushObjectCacheRequest extends Request {
             this.l2Preload = request.l2Preload;
             this.objectPath = request.objectPath;
             this.ownerId = request.ownerId;
+            this.queryHashkey = request.queryHashkey;
             this.securityToken = request.securityToken;
             this.withHeader = request.withHeader;
         } 
 
         /**
-         * The accelerated region where content is to be prefetched. Valid values:
-         * <p>
+         * <p>The accelerated region where content is to be prefetched. Valid values:</p>
+         * <ul>
+         * <li><strong>domestic</strong><strong>: Chinese mainland</strong></li>
+         * <li><strong>overseas</strong><strong>: regions outside the Chinese mainland</strong></li>
+         * </ul>
+         * <p>If you do not set this parameter, content in the accelerated region of the domain name is prefetched.</p>
+         * <ul>
+         * <li>If the accelerated region is set to <strong>Mainland China Only</strong>, content in regions in the Chinese mainland is prefetched.</li>
+         * <li>If the accelerated region is set to <strong>Global</strong>, content in all regions is prefetched.</li>
+         * <li>If the accelerated region is set to <strong>Global (Excluding Mainland China)</strong>, content in regions outside the Chinese mainland is prefetched.</li>
+         * </ul>
          * 
-         * *   **domestic****: Chinese mainland**
-         * *   **overseas****: regions outside the Chinese mainland**
-         * 
-         * If you do not set this parameter, content in the accelerated region of the domain name is prefetched.
-         * 
-         * *   If the accelerated region is set to **Mainland China Only**, content in regions in the Chinese mainland is prefetched.
-         * *   If the accelerated region is set to **Global**, content in all regions is prefetched.
-         * *   If the accelerated region is set to **Global (Excluding Mainland China)**, content in regions outside the Chinese mainland is prefetched.
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
@@ -143,11 +161,14 @@ public class PushObjectCacheRequest extends Request {
         }
 
         /**
-         * Specifies whether to prefetch content to POPs. Valid values:
-         * <p>
+         * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prefetches content to POPs.</li>
+         * <li><strong>false</strong>: prefetches content to regular POPs. Regular POPs can be L2 POPs or L3 POPs. Default value: <strong>false</strong>.</li>
+         * </ul>
          * 
-         * *   **true**: prefetches content to POPs.
-         * *   **false**: prefetches content to regular POPs. Regular POPs can be L2 POPs or L3 POPs. Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder l2Preload(Boolean l2Preload) {
             this.putQueryParameter("L2Preload", l2Preload);
@@ -156,10 +177,14 @@ public class PushObjectCacheRequest extends Request {
         }
 
         /**
-         * The URLs based on which content is prefetched. Format: **accelerated domain name/files to be prefetched**.
-         * <p>
+         * <p>The URLs based on which content is prefetched. Format: <strong>accelerated domain name/files to be prefetched</strong>.</p>
+         * <blockquote>
+         * <p>Separate URLs with line feeds (\n or \r\n). Each object path can be up to 1,024 characters in length.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Separate URLs with line feeds (\n or \r\n). Each object path can be up to 1,024 characters in length.
+         * <strong>example:</strong>
+         * <p>example.com/image/1.png\nexample.org/image/2.png</p>
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -177,6 +202,15 @@ public class PushObjectCacheRequest extends Request {
         }
 
         /**
+         * QueryHashkey.
+         */
+        public Builder queryHashkey(Boolean queryHashkey) {
+            this.putQueryParameter("QueryHashkey", queryHashkey);
+            this.queryHashkey = queryHashkey;
+            return this;
+        }
+
+        /**
          * SecurityToken.
          */
         public Builder securityToken(String securityToken) {
@@ -186,7 +220,14 @@ public class PushObjectCacheRequest extends Request {
         }
 
         /**
-         * The custom header for prefetch in the JSON format.
+         * <p>The custom header for prefetch in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;Accept-Encoding&quot;: [
+         *             &quot;gzip&quot;
+         *       ]
+         * }</p>
          */
         public Builder withHeader(String withHeader) {
             this.putQueryParameter("WithHeader", withHeader);

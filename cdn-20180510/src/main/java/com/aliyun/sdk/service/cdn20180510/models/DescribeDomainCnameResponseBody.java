@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainCnameResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainCnameResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the CNAME detection results.
+         * <p>Details about the CNAME detection results.</p>
          */
         public Builder cnameDatas(CnameDatas cnameDatas) {
             this.cnameDatas = cnameDatas;
@@ -57,7 +58,10 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06D29681-B7CD-4034-A8CC-28AFFA213539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainCnameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainCnameResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
@@ -121,7 +131,10 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The CNAME assigned to the domain name by Alibaba Cloud CDN.
+             * <p>The CNAME assigned to the domain name by Alibaba Cloud CDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.com.w.alikunlun.net</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -129,7 +142,10 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -137,11 +153,14 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME detection result. Valid values:
-             * <p>
+             * <p>The CNAME detection result. Valid values:</p>
+             * <ul>
+             * <li>0: The DNS can detect the CNAME assigned to the domain name.</li>
+             * <li>Value other than 0: The DNS cannot detect the CNAME assigned to the domain name.</li>
+             * </ul>
              * 
-             * *   0: The DNS can detect the CNAME assigned to the domain name.
-             * *   Value other than 0: The DNS cannot detect the CNAME assigned to the domain name.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -155,6 +174,12 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainCnameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainCnameResponseBody</p>
+     */
     public static class CnameDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;

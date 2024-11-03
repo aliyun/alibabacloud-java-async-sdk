@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CdnMigrateRegisterResponseBody} extends {@link TeaModel}
  *
  * <p>CdnMigrateRegisterResponseBody</p>
@@ -61,7 +62,10 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The accelerated domain name. You can specify only one domain name.
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -69,7 +73,10 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64D28B53-5902-409B-94F6-FD46680144FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,12 +84,15 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * The registration status. Valid values:
-         * <p>
+         * <p>The registration status. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>succeed</strong></li>
+         * <li><strong>failed</strong></li>
+         * </ul>
          * 
-         * *   **running**
-         * *   **succeed**
-         * *   **failed**
+         * <strong>example:</strong>
+         * <p>succeed</p>
          */
         public Builder status(String status) {
             this.status = status;

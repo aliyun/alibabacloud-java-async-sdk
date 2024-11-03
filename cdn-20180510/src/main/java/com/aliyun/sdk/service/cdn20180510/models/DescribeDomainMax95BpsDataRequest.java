@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainMax95BpsDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainMax95BpsDataRequest</p>
@@ -109,11 +110,14 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         } 
 
         /**
-         * The cycle to query the 95th percentile bandwidth data. Default value: **day**. Valid values:
-         * <p>
+         * <p>The cycle to query the 95th percentile bandwidth data. Default value: <strong>day</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>day</strong>: queries the 95th percentile bandwidth data by day.</li>
+         * <li><strong>month</strong>: queries the 95th percentile bandwidth data by month.</li>
+         * </ul>
          * 
-         * *   **day**: queries the 95th percentile bandwidth data by day.
-         * *   **month**: queries the 95th percentile bandwidth data by month.
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder cycle(String cycle) {
             this.putQueryParameter("Cycle", cycle);
@@ -122,10 +126,13 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. If you do not specify a domain name, data of all domain names is queried.
-         * <p>
+         * <p>The accelerated domain name. If you do not specify a domain name, data of all domain names is queried.</p>
+         * <blockquote>
+         * <p>You cannot specify multiple domain names in a DescribeDomainMax95BpsData request.</p>
+         * </blockquote>
          * 
-         * > You cannot specify multiple domain names in a DescribeDomainMax95BpsData request.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -134,12 +141,14 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2017-12-22T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -148,10 +157,11 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2017-12-21T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -160,10 +170,11 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2017-12-21T10:00:00Z</p>
          */
         public Builder timePoint(String timePoint) {
             this.putQueryParameter("TimePoint", timePoint);

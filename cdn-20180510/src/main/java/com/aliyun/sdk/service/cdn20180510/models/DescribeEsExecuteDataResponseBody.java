@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEsExecuteDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEsExecuteDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the script.
+         * <p>The content of the script.</p>
          */
         public Builder contents(java.util.List < Contents> contents) {
             this.contents = contents;
@@ -57,7 +58,10 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99D61AB3-6164-4CF2-A0DE-129C9B07618B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEsExecuteDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEsExecuteDataResponseBody</p>
+     */
     public static class Contents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < String > columns;
@@ -121,7 +131,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
             private java.util.List < String > points; 
 
             /**
-             * The time and column names in the table that shows the status of the script.
+             * <p>The time and column names in the table that shows the status of the script.</p>
              */
             public Builder columns(java.util.List < String > columns) {
                 this.columns = columns;
@@ -129,7 +139,10 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that shows the status of the script.
+             * <p>The name of the table that shows the status of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exception</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -137,7 +150,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
             }
 
             /**
-             * The list of timestamps and values in the corresponding columns of the table that shows the status of the script.
+             * <p>The list of timestamps and values in the corresponding columns of the table that shows the status of the script.</p>
              */
             public Builder points(java.util.List < String > points) {
                 this.points = points;

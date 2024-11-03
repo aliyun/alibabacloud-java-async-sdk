@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnOrderCommodityCodeRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnOrderCommodityCodeRequest</p>
@@ -82,7 +83,11 @@ public class DescribeCdnOrderCommodityCodeRequest extends Request {
         } 
 
         /**
-         * The original commodity code.
+         * <p>The original commodity code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);

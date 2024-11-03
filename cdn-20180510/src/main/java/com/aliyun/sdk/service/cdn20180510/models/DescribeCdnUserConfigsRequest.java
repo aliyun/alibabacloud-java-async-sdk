@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnUserConfigsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnUserConfigsRequest</p>
@@ -54,11 +55,15 @@ public class DescribeCdnUserConfigsRequest extends Request {
         } 
 
         /**
-         * The configuration that you want to query. Valid values:
-         * <p>
+         * <p>The configuration that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>domain_business_control</strong>: user configurations</li>
+         * <li><strong>waf</strong>: Web Application Firewall (WAF) configurations</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **domain_business_control**: user configurations
-         * *   **waf**: Web Application Firewall (WAF) configurations
+         * <strong>example:</strong>
+         * <p>domain_business_control</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);

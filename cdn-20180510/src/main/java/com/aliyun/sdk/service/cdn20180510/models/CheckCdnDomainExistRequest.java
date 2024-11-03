@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCdnDomainExistRequest} extends {@link RequestModel}
  *
  * <p>CheckCdnDomainExistRequest</p>
@@ -96,7 +97,11 @@ public class CheckCdnDomainExistRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

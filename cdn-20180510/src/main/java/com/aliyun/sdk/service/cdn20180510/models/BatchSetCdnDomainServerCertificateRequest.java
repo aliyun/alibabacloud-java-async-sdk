@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetCdnDomainServerCertificateRequest} extends {@link RequestModel}
  *
  * <p>BatchSetCdnDomainServerCertificateRequest</p>
@@ -181,7 +182,10 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         } 
 
         /**
-         * The name of the certificate.
+         * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertName</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -190,11 +194,14 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * The type of the SSL certificate. Valid values:
-         * <p>
+         * <p>The type of the SSL certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>upload</strong>: a user-uploaded SSL certificate.</li>
+         * <li><strong>cas</strong>: a certificate that is issued by SSL Certificates Service.</li>
+         * </ul>
          * 
-         * *   **upload**: a user-uploaded SSL certificate.
-         * *   **cas**: a certificate that is issued by SSL Certificates Service.
+         * <strong>example:</strong>
+         * <p>cas</p>
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -203,10 +210,14 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).
-         * <p>
+         * <p>The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).</p>
+         * <blockquote>
+         * <p> You can manage the SSL certificates of up to 50 accelerated domain names in each call.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can manage the SSL certificates of up to 50 accelerated domain names in each call.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -215,7 +226,10 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.
+         * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder forceSet(String forceSet) {
             this.putQueryParameter("ForceSet", forceSet);
@@ -233,7 +247,10 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * The region.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>your region</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -242,7 +259,10 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * The private key. Specify the private key only if you enable the SSL certificate.
+         * <p>The private key. Specify the private key only if you enable the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourSSLPri</p>
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -251,11 +271,15 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SSL certificate. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enables the SSL certificate.</li>
+         * <li><strong>off</strong>: disables the SSL certificate. This is the default value.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: enables the SSL certificate.
-         * *   **off**: disables the SSL certificate. This is the default value.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -264,7 +288,10 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * The content of the SSL certificate. Specify the content of the certificate only if you want to enable the SSL certificate.
+         * <p>The content of the SSL certificate. Specify the content of the certificate only if you want to enable the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourSSLPub</p>
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

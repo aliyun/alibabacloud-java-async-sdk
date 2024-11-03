@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenCdnServiceRequest} extends {@link RequestModel}
  *
  * <p>OpenCdnServiceRequest</p>
@@ -82,7 +83,11 @@ public class OpenCdnServiceRequest extends Request {
         } 
 
         /**
-         * The metering method of Alibaba Cloud CDN. A value of **PayByTraffic** indicates that the metering method is pay-by-data-transfer.
+         * <p>The metering method of Alibaba Cloud CDN. A value of <strong>PayByTraffic</strong> indicates that the metering method is pay-by-data-transfer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDomainsByLogConfigIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListDomainsByLogConfigIdResponseBody</p>
@@ -49,7 +50,7 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The domain names.
+         * <p>The domain names.</p>
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -57,7 +58,10 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDomainsByLogConfigIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDomainsByLogConfigIdResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private java.util.List < String > domain;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpStatusRequest</p>
@@ -54,7 +55,11 @@ public class DescribeIpStatusRequest extends Request {
         } 
 
         /**
-         * The IP addresses that you want to query. Separate IP addresses with underscores (\_), such as Ips=ip1\_ip2.
+         * <p>The IP addresses that you want to query. Separate IP addresses with underscores (_), such as Ips=ip1_ip2.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip1_ip2</p>
          */
         public Builder ips(String ips) {
             this.putQueryParameter("Ips", ips);

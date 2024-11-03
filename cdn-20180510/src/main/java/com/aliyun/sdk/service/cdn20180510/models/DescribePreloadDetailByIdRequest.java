@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePreloadDetailByIdRequest} extends {@link RequestModel}
  *
  * <p>DescribePreloadDetailByIdRequest</p>
@@ -54,7 +55,11 @@ public class DescribePreloadDetailByIdRequest extends Request {
         } 
 
         /**
-         * Queries the details of a preload task by task ID. You can query one task ID at a time.
+         * <p>Queries the details of a preload task by task ID. You can query one task ID at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15423123921</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

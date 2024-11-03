@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRealTimeReqHitRateDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainRealTimeReqHitRateDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70A26B11-3673-479C-AEA8-E03FC5D3496D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainRealTimeReqHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRealTimeReqHitRateDataResponseBody</p>
+     */
     public static class ReqHitRateDataModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReqHitRate")
         private Float reqHitRate;
@@ -109,7 +119,10 @@ public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The request hit ratio.
+             * <p>The request hit ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8956940476262277</p>
              */
             public Builder reqHitRate(Float reqHitRate) {
                 this.reqHitRate = reqHitRate;
@@ -117,7 +130,10 @@ public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-02T11:26:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -131,6 +147,12 @@ public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainRealTimeReqHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRealTimeReqHitRateDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReqHitRateDataModel")
         private java.util.List < ReqHitRateDataModel> reqHitRateDataModel;

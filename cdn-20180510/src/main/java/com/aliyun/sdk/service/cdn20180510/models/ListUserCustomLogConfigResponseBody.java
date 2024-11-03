@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserCustomLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserCustomLogConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of log configuration IDs.
+         * <p>The list of log configuration IDs.</p>
          */
         public Builder configIds(ConfigIds configIds) {
             this.configIds = configIds;
@@ -57,7 +58,10 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95D5B69F-8AEC-419B-8F3A-612B35032B0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserCustomLogConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserCustomLogConfigResponseBody</p>
+     */
     public static class ConfigIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigId")
         private java.util.List < String > configId;

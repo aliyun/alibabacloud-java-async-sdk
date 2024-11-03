@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnCertificateDetailByIdRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnCertificateDetailByIdRequest</p>
@@ -96,7 +97,11 @@ public class DescribeCdnCertificateDetailByIdRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder certId(String certId) {
             this.putQueryParameter("CertId", certId);
@@ -105,13 +110,15 @@ public class DescribeCdnCertificateDetailByIdRequest extends Request {
         }
 
         /**
-         * The region of the certificate. Valid values:
-         * <p>
+         * <p>The region of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+         * </ul>
+         * <p>Default value: <strong>cn-hangzhou</strong></p>
          * 
-         * *   **ap-southeast-1**: Singapore
-         * *   **cn-hangzhou**: China (Hangzhou)
-         * 
-         * Default value: **cn-hangzhou**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder certRegion(String certRegion) {
             this.putQueryParameter("CertRegion", certRegion);

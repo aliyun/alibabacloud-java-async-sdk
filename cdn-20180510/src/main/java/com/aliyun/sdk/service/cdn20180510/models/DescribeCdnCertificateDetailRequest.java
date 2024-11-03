@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnCertificateDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnCertificateDetailRequest</p>
@@ -82,7 +83,11 @@ public class DescribeCdnCertificateDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the SSL certificate. You can query only one certificate at a time.
+         * <p>The ID of the SSL certificate. You can query only one certificate at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-15480655xxxx</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);

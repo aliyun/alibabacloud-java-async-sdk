@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCdnDomainICPResponseBody} extends {@link TeaModel}
  *
  * <p>CheckCdnDomainICPResponseBody</p>
@@ -49,7 +50,10 @@ public class CheckCdnDomainICPResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class CheckCdnDomainICPResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the resource plan. Valid value:
-         * <p>
+         * <p>The status of the resource plan. Valid value:</p>
+         * <ul>
+         * <li><strong>DomainIsRegistration</strong>: An ICP filing is obtained for the domain name.</li>
+         * <li><strong>DomainNotRegistration</strong>: No ICP filing is obtained for the domain name.</li>
+         * </ul>
          * 
-         * *   **DomainIsRegistration**: An ICP filing is obtained for the domain name.
-         * *   **DomainNotRegistration**: No ICP filing is obtained for the domain name.
+         * <strong>example:</strong>
+         * <p>DomainIsRegistration</p>
          */
         public Builder status(String status) {
             this.status = status;

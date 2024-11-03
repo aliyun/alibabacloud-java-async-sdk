@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshObjectCachesRequest} extends {@link RequestModel}
  *
  * <p>RefreshObjectCachesRequest</p>
@@ -110,11 +111,17 @@ public class RefreshObjectCachesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to refresh resources in a directory if the resources are different from the resources in the same directory in the origin server. Default value: false.
-         * <p>
+         * <p>When the comparison between the source content and the source site resources is consistent, should the resources within the corresponding range be forcibly refreshed. The default is false.</p>
+         * <ul>
+         * <li><strong>true</strong>: purges all resources in the range that corresponds to the type of the purge task. If you set this parameter to true, when the requested resource matches the resource in the range that corresponds to the type of the purge task, the POP retrieves the resource from the origin server, returns the resource to the client, and caches the resource.</li>
+         * <li><strong>false</strong>: purges the changed resources in the range that corresponds to the type of the purge task. If you set this parameter to false, when the requested resource matches the resource in the range that corresponds to the type of the purge task, the POP obtains the Last-Modified parameter of the resource from the origin server. If the obtained value of the Last-Modified parameter is the same as that of the cached resource, the cached resource is returned. Otherwise, the POP retrieves the resource from the origin server, returns the resource to the client, and caches the resource.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when the ObjectType parameter is not set to File.</p>
+         * </blockquote>
          * 
-         * *   **true**: refresh all resources in the directory.
-         * *   **false**: refresh the changed resources in the directory.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -123,7 +130,14 @@ public class RefreshObjectCachesRequest extends Request {
         }
 
         /**
-         * ObjectPath.
+         * <ul>
+         * <li>If you submit multiple URLs or directories at a time, separate them with line breaks (\n) or (\r\n).</li>
+         * <li>The total number of domain names contained all URLs in a submitted task cannot exceed 10.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/image/1.png%5Cnhttp://aliyundoc.com/image/2.png">http://example.com/image/1.png\nhttp://aliyundoc.com/image/2.png</a></p>
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -132,17 +146,18 @@ public class RefreshObjectCachesRequest extends Request {
         }
 
         /**
-         * The type of the object that you want to refresh. Valid values:
-         * <p>
+         * <p>The type of the object that you want to refresh. Valid values:</p>
+         * <ul>
+         * <li><strong>File</strong> (default): refreshes one or more files.</li>
+         * <li><strong>Directory</strong>: refreshes the files in one or more directories.</li>
+         * <li><strong>Regex</strong>: refreshes content based on regular expressions.</li>
+         * <li><strong>ExQuery</strong>: omits parameters after the question mark in the URL and refreshes content.</li>
+         * </ul>
+         * <p>If you set the ObjectType parameter to File or Directory, you can view <a href="https://help.aliyun.com/document_detail/27140.html">Refresh and prefetch resources</a> to obtain more information. If you set the ObjectType parameter to Regex, you can view <a href="https://help.aliyun.com/document_detail/146195.html">Configure URL refresh rules that contain regular expressions</a> to obtain more information.</p>
+         * <p>If you set the ObjectType parameter to Directory, the resources in the directory that you want to refresh are marked as expired. You cannot delete the directory. If clients request resources on POPs that are marked as expired, Alibaba Cloud CDN checks whether the resources on your origin server are updated. If resources are updated, Alibaba Cloud CDN retrieves the latest version of the resources and returns the resources to the clients. Otherwise, the origin server returns the 304 status code.</p>
          * 
-         * *   **File** (default): refreshes one or more files.
-         * *   **Directory**: refreshes the files in one or more directories.
-         * *   **Regex**: refreshes content based on regular expressions.
-         * *   **ExQuery**: omits parameters after the question mark in the URL and refreshes content.
-         * 
-         * If you set the ObjectType parameter to File or Directory, you can view [Refresh and prefetch resources](~~27140~~) to obtain more information. If you set the ObjectType parameter to Regex, you can view [Configure URL refresh rules that contain regular expressions](~~146195~~) to obtain more information.
-         * 
-         * If you set the ObjectType parameter to Directory, the resources in the directory that you want to refresh are marked as expired. You cannot delete the directory. If clients request resources on POPs that are marked as expired, Alibaba Cloud CDN checks whether the resources on your origin server are updated. If resources are updated, Alibaba Cloud CDN retrieves the latest version of the resources and returns the resources to the clients. Otherwise, the origin server returns the 304 status code.
+         * <strong>example:</strong>
+         * <p>File</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);

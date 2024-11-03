@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTopDomainsByFlowResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTopDomainsByFlowResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
         private TopDomains topDomains; 
 
         /**
-         * The total number of accelerated domain names that belong to the current Alibaba Cloud account.
+         * <p>The total number of accelerated domain names that belong to the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         public Builder domainCount(Long domainCount) {
             this.domainCount = domainCount;
@@ -105,7 +109,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of accelerated domain names that are in the **Enabled** state within the current Alibaba Cloud account.
+         * <p>The total number of accelerated domain names that are in the <strong>Enabled</strong> state within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         public Builder domainOnlineCount(Long domainOnlineCount) {
             this.domainOnlineCount = domainOnlineCount;
@@ -113,7 +120,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-23T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -121,7 +131,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E09C5D7-E1CF-4CAA-A45E-8727F4C8FD70</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-22T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -137,7 +153,7 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The top N domain names ranked by network traffic.
+         * <p>The top N domain names ranked by network traffic.</p>
          */
         public Builder topDomains(TopDomains topDomains) {
             this.topDomains = topDomains;
@@ -150,6 +166,12 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -249,7 +271,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
             private String trafficPercent; 
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -257,7 +282,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The peak bandwidth value.
+             * <p>The peak bandwidth value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22139626</p>
              */
             public Builder maxBps(Float maxBps) {
                 this.maxBps = maxBps;
@@ -265,7 +293,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bandwidth reached the peak value.
+             * <p>The time when the bandwidth reached the peak value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1457111400</p>
              */
             public Builder maxBpsTime(String maxBpsTime) {
                 this.maxBpsTime = maxBpsTime;
@@ -273,7 +304,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ranking of the accelerated domain name.
+             * <p>The ranking of the accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rank(Long rank) {
                 this.rank = rank;
@@ -281,7 +315,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The number of visits to the domain name.
+             * <p>The number of visits to the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107784230</p>
              */
             public Builder totalAccess(Long totalAccess) {
                 this.totalAccess = totalAccess;
@@ -289,7 +326,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The total volume of traffic.
+             * <p>The total volume of traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2043859876683.9001</p>
              */
             public Builder totalTraffic(String totalTraffic) {
                 this.totalTraffic = totalTraffic;
@@ -297,7 +337,10 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic consumed to access the domain name.
+             * <p>The proportion of network traffic consumed to access the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.64191989360235</p>
              */
             public Builder trafficPercent(String trafficPercent) {
                 this.trafficPercent = trafficPercent;
@@ -311,6 +354,12 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopDomain")
         private java.util.List < TopDomain> topDomain;

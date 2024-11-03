@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetCdnDomainConfigResponse} extends {@link TeaModel}
  *
  * <p>BatchSetCdnDomainConfigResponse</p>

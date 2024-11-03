@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEsExceptionDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEsExceptionDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the script for which an error was reported.
+         * <p>The content of the script for which an error was reported.</p>
          */
         public Builder contents(java.util.List < Contents> contents) {
             this.contents = contents;
@@ -57,7 +58,10 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99D61AB3-6164-4CF2-A0DE-129C9B07618B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEsExceptionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEsExceptionDataResponseBody</p>
+     */
     public static class Contents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < String > columns;
@@ -121,7 +131,7 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
             private java.util.List < String > points; 
 
             /**
-             * Information about the time column and the error column name.
+             * <p>Information about the time column and the error column name.</p>
              */
             public Builder columns(java.util.List < String > columns) {
                 this.columns = columns;
@@ -129,7 +139,10 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that shows the errors of the script.
+             * <p>The name of the table that shows the errors of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>401</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -137,7 +150,7 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The time columns and error column names.
+             * <p>The time columns and error column names.</p>
              */
             public Builder points(java.util.List < String > points) {
                 this.points = points;
