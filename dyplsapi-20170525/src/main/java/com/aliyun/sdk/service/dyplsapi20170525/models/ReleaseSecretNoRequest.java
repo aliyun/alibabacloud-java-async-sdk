@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseSecretNoRequest} extends {@link RequestModel}
  *
  * <p>ReleaseSecretNoRequest</p>
@@ -120,7 +121,11 @@ public class ReleaseSecretNoRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC123456</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -147,10 +152,14 @@ public class ReleaseSecretNoRequest extends Request {
         }
 
         /**
-         * The prefix of phone numbers. When you call the ReleaseSecretNo operation with **SecretNo** specified, the system performs fuzzy matching against phone numbers based on the prefix.
-         * <p>
+         * <p>The prefix of phone numbers. When you call the ReleaseSecretNo operation with <strong>SecretNo</strong> specified, the system performs fuzzy matching against phone numbers based on the prefix.</p>
+         * <blockquote>
+         * <p> Up to 18 digits of a phone number prefix can be specified.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Up to 18 digits of a phone number prefix can be specified.
+         * <strong>example:</strong>
+         * <p>130</p>
          */
         public Builder secretNo(String secretNo) {
             this.putQueryParameter("SecretNo", secretNo);

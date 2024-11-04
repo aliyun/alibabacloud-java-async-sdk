@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySecretNoDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySecretNoDetailResponseBody</p>
@@ -73,11 +74,14 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
         private SecretNoInfoDTO secretNoInfoDTO; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other status codes indicate that the request failed. For more information, see [Error codes](~~109196~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,10 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +100,10 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>066E6E47-04CB-4774-A976-4F73CB76D4A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +111,7 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The attributes of the phone number.
+         * <p>The attributes of the phone number.</p>
          */
         public Builder secretNoInfoDTO(SecretNoInfoDTO secretNoInfoDTO) {
             this.secretNoInfoDTO = secretNoInfoDTO;
@@ -114,6 +124,12 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySecretNoDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySecretNoDetailResponseBody</p>
+     */
     public static class SecretNoInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertifyStatus")
         private Integer certifyStatus;
@@ -201,11 +217,14 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             private Long vendor; 
 
             /**
-             * The verification status of the phone number. Valid values:
-             * <p>
+             * <p>The verification status of the phone number. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The phone number is not verified.</li>
+             * <li><strong>1</strong>: The phone number is verified.</li>
+             * </ul>
              * 
-             * *   **0**: The phone number is not verified.
-             * *   **1**: The phone number is verified.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder certifyStatus(Integer certifyStatus) {
                 this.certifyStatus = certifyStatus;
@@ -213,7 +232,10 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The city.
+             * <p>The city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chengdu</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -221,7 +243,10 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The province.
+             * <p>The province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sichuan</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -229,7 +254,10 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the phone number was purchased.
+             * <p>The time when the phone number was purchased.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-03 15:19:27</p>
              */
             public Builder purchaseTime(String purchaseTime) {
                 this.purchaseTime = purchaseTime;
@@ -237,13 +265,16 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the phone number. Valid values:
-             * <p>
+             * <p>The status of the phone number. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The phone number is not bound to other phone numbers.</li>
+             * <li><strong>1</strong>: The phone number is bound to other phone numbers.</li>
+             * <li><strong>2</strong>: The phone number is locked.</li>
+             * <li><strong>3</strong>: The phone number is frozen.</li>
+             * </ul>
              * 
-             * *   **0**: The phone number is not bound to other phone numbers.
-             * *   **1**: The phone number is bound to other phone numbers.
-             * *   **2**: The phone number is locked.
-             * *   **3**: The phone number is frozen.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder secretStatus(Long secretStatus) {
                 this.secretStatus = secretStatus;
@@ -251,12 +282,15 @@ public class QuerySecretNoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The carrier to which the phone number belongs. Valid values:
-             * <p>
+             * <p>The carrier to which the phone number belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: China Mobile</li>
+             * <li><strong>2</strong>: China Unicom</li>
+             * <li><strong>3</strong>: China Telecom</li>
+             * </ul>
              * 
-             * *   **1**: China Mobile
-             * *   **2**: China Unicom
-             * *   **3**: China Telecom
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vendor(Long vendor) {
                 this.vendor = vendor;

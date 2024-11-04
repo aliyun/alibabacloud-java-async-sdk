@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelPickUpWaybillResponseBody} extends {@link TeaModel}
  *
  * <p>CancelPickUpWaybillResponseBody</p>
@@ -73,11 +74,14 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other status codes indicate that the request failed. For more information, see [Error codes](~~109196~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FC30594-3841-43AD-9008-03393BCB5CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,6 +124,12 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CancelPickUpWaybillResponseBody} extends {@link TeaModel}
+     *
+     * <p>CancelPickUpWaybillResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -177,7 +193,10 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -185,7 +204,10 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -193,7 +215,10 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * The cancellation result.
+             * <p>The cancellation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -201,7 +226,10 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cancellation was successful.
+             * <p>Indicates whether the cancellation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

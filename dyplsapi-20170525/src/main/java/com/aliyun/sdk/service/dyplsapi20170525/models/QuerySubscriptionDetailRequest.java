@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySubscriptionDetailRequest} extends {@link RequestModel}
  *
  * <p>QuerySubscriptionDetailRequest</p>
@@ -148,7 +149,11 @@ public class QuerySubscriptionDetailRequest extends Request {
         }
 
         /**
-         * The private number in the binding, that is, phone number X.
+         * <p>The private number in the binding, that is, phone number X.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900001234</p>
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -157,10 +162,13 @@ public class QuerySubscriptionDetailRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
-         * <p>
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <blockquote>
+         * <p> This parameter is required when <strong>ProductType</strong> is left empty.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when **ProductType** is left empty.
+         * <strong>example:</strong>
+         * <p>FC123456</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -169,19 +177,24 @@ public class QuerySubscriptionDetailRequest extends Request {
         }
 
         /**
-         * The product type. Valid values:
-         * <p>
+         * <p>The product type. Valid values:</p>
+         * <ul>
+         * <li><strong>AXB_170</strong></li>
+         * <li><strong>AXN_170</strong></li>
+         * <li><strong>AXN_95</strong></li>
+         * <li><strong>AXN_EXTENSION_REUSE</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.</p>
+         * </li>
+         * <li><p>This parameter is required when <strong>PoolKey</strong> is left empty.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **AXB\_170**
-         * *   **AXN\_170**
-         * *   **AXN\_95**
-         * *   **AXN_EXTENSION_REUSE**
-         * 
-         * > 
-         * 
-         * *   This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.
-         * 
-         * *   This parameter is required when **PoolKey** is left empty.
+         * <strong>example:</strong>
+         * <p>AXB_170</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -208,10 +221,12 @@ public class QuerySubscriptionDetailRequest extends Request {
         }
 
         /**
-         * The binding ID.
-         * <p>
+         * <p>The binding ID.</p>
+         * <p>Log on to the Phone Number Protection console, choose <strong>Number and Number Pool</strong> &gt; <strong>Number Management</strong>. On the Number Management page, select the desired record and click Details to view the binding ID. Alternatively, you can view the value of the <strong>SubsId</strong> parameter returned by an API operation for a phone number binding such as <a href="https://help.aliyun.com/document_detail/110248.html">BindAxb</a>. The value of this parameter indicates a binding ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Log on to the Phone Number Protection console, choose **Number and Number Pool** > **Number Management**. On the Number Management page, select the desired record and click Details to view the binding ID. Alternatively, you can view the value of the **SubsId** parameter returned by an API operation for a phone number binding such as [BindAxb](~~110248~~). The value of this parameter indicates a binding ID.
+         * <strong>example:</strong>
+         * <p>100000076879****</p>
          */
         public Builder subsId(String subsId) {
             this.putQueryParameter("SubsId", subsId);

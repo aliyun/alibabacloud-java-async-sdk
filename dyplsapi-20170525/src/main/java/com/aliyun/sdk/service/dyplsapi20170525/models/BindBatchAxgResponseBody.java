@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindBatchAxgResponseBody} extends {@link TeaModel}
  *
  * <p>BindBatchAxgResponseBody</p>
@@ -110,6 +111,12 @@ public class BindBatchAxgResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BindBatchAxgResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindBatchAxgResponseBody</p>
+     */
     public static class SecretBind extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -271,6 +278,12 @@ public class BindBatchAxgResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BindBatchAxgResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindBatchAxgResponseBody</p>
+     */
     public static class SecretBindList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecretBind")
         private java.util.List < SecretBind> secretBind;

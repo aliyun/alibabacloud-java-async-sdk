@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySubscriptionDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySubscriptionDetailResponseBody</p>
@@ -73,11 +74,14 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         private SecretBindDetailDTO secretBindDetailDTO; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other status codes indicate that the request failed. For more information, see [Error codes](~~109196~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +100,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>066E6E47-04CB-4774-A976-4F73CB76D4A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +111,7 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned after the QuerySubscriptionDetail operation was called.
+         * <p>The information returned after the QuerySubscriptionDetail operation was called.</p>
          */
         public Builder secretBindDetailDTO(SecretBindDetailDTO secretBindDetailDTO) {
             this.secretBindDetailDTO = secretBindDetailDTO;
@@ -114,6 +124,12 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySubscriptionDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySubscriptionDetailResponseBody</p>
+     */
     public static class SecretBindDetailDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ASRModelId")
         private String ASRModelId;
@@ -285,7 +301,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             private String subsId; 
 
             /**
-             * The ID of the ASR model.
+             * <p>The ID of the ASR model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder ASRModelId(String ASRModelId) {
                 this.ASRModelId = ASRModelId;
@@ -293,11 +312,14 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic speech recognition (ASR) is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether automatic speech recognition (ASR) is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong>: ASR is disabled.</li>
+             * <li><strong>true</strong>: ASR is enabled.</li>
+             * </ul>
              * 
-             * *   **false**: ASR is disabled.
-             * *   **true**: ASR is enabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ASRStatus(Boolean ASRStatus) {
                 this.ASRStatus = ASRStatus;
@@ -305,11 +327,14 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of one-way call restrictions. No value is returned for this parameter if one-way call restrictions are not set. Valid values:
-             * <p>
+             * <p>The status of one-way call restrictions. No value is returned for this parameter if one-way call restrictions are not set. Valid values:</p>
+             * <ul>
+             * <li><strong>CONTROL_AX_DISABLE</strong>: Phone number A cannot be used to call phone number X.</li>
+             * <li><strong>CONTROL_BX_DISABLE</strong>: Phone number B cannot be used to call phone number X.</li>
+             * </ul>
              * 
-             * *   **CONTROL_AX_DISABLE**: Phone number A cannot be used to call phone number X.
-             * *   **CONTROL_BX_DISABLE**: Phone number B cannot be used to call phone number X.
+             * <strong>example:</strong>
+             * <p>CONTROL_BX_DISABLE</p>
              */
             public Builder callRestrict(String callRestrict) {
                 this.callRestrict = callRestrict;
@@ -317,7 +342,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the binding.
+             * <p>The expiration time of the binding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-05 12:00:00</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -325,7 +353,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The extension in the AXG extension binding.
+             * <p>The extension in the AXG extension binding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -333,7 +364,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time of the binding.
+             * <p>The creation time of the binding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-05 12:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -341,7 +375,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of number group G in the binding.
+             * <p>The ID of number group G in the binding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000000130001</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -349,11 +386,14 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether all calls made by the bound phone numbers are recorded. Valid values:
-             * <p>
+             * <p>Indicates whether all calls made by the bound phone numbers are recorded. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needRecord(Boolean needRecord) {
                 this.needRecord = needRecord;
@@ -361,7 +401,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Phone number A in the binding.
+             * <p>Phone number A in the binding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13900001111</p>
              */
             public Builder phoneNoA(String phoneNoA) {
                 this.phoneNoA = phoneNoA;
@@ -369,7 +412,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Phone number B in the binding.
+             * <p>Phone number B in the binding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13900002222</p>
              */
             public Builder phoneNoB(String phoneNoB) {
                 this.phoneNoB = phoneNoB;
@@ -377,7 +423,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private number in the binding, that is, phone number X.
+             * <p>The private number in the binding, that is, phone number X.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13900001234</p>
              */
             public Builder phoneNoX(String phoneNoX) {
                 this.phoneNoX = phoneNoX;
@@ -385,11 +434,14 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The binding status. Valid values:
-             * <p>
+             * <p>The binding status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The binding expired.</li>
+             * <li><strong>1</strong>: The binding is in effect.</li>
+             * </ul>
              * 
-             * *   **0**: The binding expired.
-             * *   **1**: The binding is in effect.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -397,7 +449,10 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The binding ID.
+             * <p>The binding ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000076879****</p>
              */
             public Builder subsId(String subsId) {
                 this.subsId = subsId;

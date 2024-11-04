@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateBlackNoRequest} extends {@link RequestModel}
  *
  * <p>OperateBlackNoRequest</p>
@@ -140,7 +141,11 @@ public class OperateBlackNoRequest extends Request {
         } 
 
         /**
-         * The phone number to be added to or deleted from the blacklist.
+         * <p>The phone number to be added to or deleted from the blacklist.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150****0000</p>
          */
         public Builder blackNo(String blackNo) {
             this.putQueryParameter("BlackNo", blackNo);
@@ -149,11 +154,15 @@ public class OperateBlackNoRequest extends Request {
         }
 
         /**
-         * The type of the operation on the phone number. Valid values:
-         * <p>
+         * <p>The type of the operation on the phone number. Valid values:</p>
+         * <ul>
+         * <li><strong>AddBlack</strong>: adds the phone number to the blacklist.</li>
+         * <li><strong>DeleteBlack</strong>: deletes the phone number from the blacklist.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **AddBlack**: adds the phone number to the blacklist.
-         * *   **DeleteBlack**: deletes the phone number from the blacklist.
+         * <strong>example:</strong>
+         * <p>AddBlack</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -171,7 +180,11 @@ public class OperateBlackNoRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC123456****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -198,7 +211,10 @@ public class OperateBlackNoRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdef</p>
          */
         public Builder tips(String tips) {
             this.putQueryParameter("Tips", tips);

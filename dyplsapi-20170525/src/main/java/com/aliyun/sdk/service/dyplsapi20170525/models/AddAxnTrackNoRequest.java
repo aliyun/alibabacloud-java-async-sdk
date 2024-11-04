@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAxnTrackNoRequest} extends {@link RequestModel}
  *
  * <p>AddAxnTrackNoRequest</p>
@@ -150,10 +151,12 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * The private number in the AXN binding, that is, phone number X.
-         * <p>
+         * <p>The private number in the AXN binding, that is, phone number X.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/110258.html">BindAxn</a> operation to obtain the value of PhoneNoX.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [BindAxn](~~110258~~) operation to obtain the value of PhoneNoX.
+         * <strong>example:</strong>
+         * <p>1700000****</p>
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -162,7 +165,11 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC2235****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -189,10 +196,12 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * The binding ID.
-         * <p>
+         * <p>The binding ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/110258.html">BindAxn</a> operation to obtain the value of SubsId.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [BindAxn](~~110258~~) operation to obtain the value of SubsId.
+         * <strong>example:</strong>
+         * <p>15678890****</p>
          */
         public Builder subsId(String subsId) {
             this.putQueryParameter("SubsId", subsId);
@@ -201,7 +210,11 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * The tracking number.
+         * <p>The tracking number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde*****</p>
          */
         public Builder trackNo(String trackNo) {
             this.putQueryParameter("trackNo", trackNo);

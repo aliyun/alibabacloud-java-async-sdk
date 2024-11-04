@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySecretNoRemainResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySecretNoRemainResponseBody</p>
@@ -73,11 +74,14 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
         private SecretRemainDTO secretRemainDTO; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other status codes indicate that the request failed. For more information, see [Error codes](~~109196~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,10 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +100,10 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FC30594-3841-43AD-9008-03393BCB5CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +111,7 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned after the operation was called.
+         * <p>The information returned after the operation was called.</p>
          */
         public Builder secretRemainDTO(SecretRemainDTO secretRemainDTO) {
             this.secretRemainDTO = secretRemainDTO;
@@ -114,6 +124,12 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySecretNoRemainResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySecretNoRemainResponseBody</p>
+     */
     public static class RemainDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Long amount;
@@ -153,7 +169,10 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             private String city; 
 
             /**
-             * The quantity of remaining phone numbers available for online purchase for the city.
+             * <p>The quantity of remaining phone numbers available for online purchase for the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder amount(Long amount) {
                 this.amount = amount;
@@ -161,7 +180,10 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             }
 
             /**
-             * The home location of the phone numbers.
+             * <p>The home location of the phone numbers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Wuhan</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -175,6 +197,12 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySecretNoRemainResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySecretNoRemainResponseBody</p>
+     */
     public static class RemainDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("remainDTO")
         private java.util.List < RemainDTO> remainDTO;
@@ -216,6 +244,12 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySecretNoRemainResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySecretNoRemainResponseBody</p>
+     */
     public static class SecretRemainDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Long amount;
@@ -267,7 +301,10 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             private RemainDTOList remainDTOList; 
 
             /**
-             * The quantity of remaining phone numbers available for online purchase.
+             * <p>The quantity of remaining phone numbers available for online purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder amount(Long amount) {
                 this.amount = amount;
@@ -275,7 +312,10 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             }
 
             /**
-             * The home location of the phone numbers.
+             * <p>The home location of the phone numbers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -283,7 +323,7 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
             }
 
             /**
-             * The information about remaining phone numbers available for online purchase.
+             * <p>The information about remaining phone numbers available for online purchase.</p>
              */
             public Builder remainDTOList(RemainDTOList remainDTOList) {
                 this.remainDTOList = remainDTOList;

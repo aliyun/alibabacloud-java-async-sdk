@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAxgGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateAxgGroupRequest</p>
@@ -138,10 +139,13 @@ public class CreateAxgGroupRequest extends Request {
         } 
 
         /**
-         * The name of number group G. If the name of number group G is not specified, the ID of number group G is used as the name of number group G.
-         * <p>
+         * <p>The name of number group G. If the name of number group G is not specified, the ID of number group G is used as the name of number group G.</p>
+         * <blockquote>
+         * <p> The value must be 1 to 128 characters in length.</p>
+         * </blockquote>
          * 
-         * >  The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -150,7 +154,10 @@ public class CreateAxgGroupRequest extends Request {
         }
 
         /**
-         * The phone numbers that you add to number group G. Separate multiple phone numbers with commas (,). A maximum of 200 phone numbers can be added to number group G.
+         * <p>The phone numbers that you add to number group G. Separate multiple phone numbers with commas (,). A maximum of 200 phone numbers can be added to number group G.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****,1380000****</p>
          */
         public Builder numbers(String numbers) {
             this.putQueryParameter("Numbers", numbers);
@@ -168,7 +175,11 @@ public class CreateAxgGroupRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC123456</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -177,7 +188,10 @@ public class CreateAxgGroupRequest extends Request {
         }
 
         /**
-         * The remarks of number group G. The value must be 0 to 256 characters in length.
+         * <p>The remarks of number group G. The value must be 0 to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePickUpWaybillResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePickUpWaybillResponseBody</p>
@@ -73,7 +74,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +82,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +93,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FC30594-3841-43AD-9008-03393BCB5CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePickUpWaybillResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpCode")
         private String cpCode;
@@ -197,7 +213,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The code of the courier company.
+             * <p>The code of the courier company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YTO</p>
              */
             public Builder cpCode(String cpCode) {
                 this.cpCode = cpCode;
@@ -205,7 +224,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -213,7 +235,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -221,7 +246,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * The pickup code.
+             * <p>The pickup code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3524</p>
              */
             public Builder gotCode(String gotCode) {
                 this.gotCode = gotCode;
@@ -229,7 +257,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * The order ID.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77312345629****</p>
              */
             public Builder mailNo(String mailNo) {
                 this.mailNo = mailNo;
@@ -237,7 +268,10 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful.
+             * <p>Indicates whether the request was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(String success) {
                 this.success = success;

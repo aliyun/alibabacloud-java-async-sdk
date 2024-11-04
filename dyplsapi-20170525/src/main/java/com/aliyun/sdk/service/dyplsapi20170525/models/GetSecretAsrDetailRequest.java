@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecretAsrDetailRequest} extends {@link RequestModel}
  *
  * <p>GetSecretAsrDetailRequest</p>
@@ -84,10 +85,12 @@ public class GetSecretAsrDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the call record.
-         * <p>
+         * <p>The ID of the call record.</p>
+         * <p>You can log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view <strong>Call Record ID</strong> on the <strong>Call Record Query</strong> page.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view **Call Record ID** on the **Call Record Query** page.
+         * <strong>example:</strong>
+         * <p>225625****</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -96,10 +99,12 @@ public class GetSecretAsrDetailRequest extends Request {
         }
 
         /**
-         * The call initiation time in the call record.
-         * <p>
+         * <p>The call initiation time in the call record.</p>
+         * <p>You can log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a>. View <strong>Call Initiated At</strong> on the <strong>Call Record Query</strong> page, or view the call_time field in the Call Detail Record (CDR) receipt.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). View **Call Initiated At** on the **Call Record Query** page, or view the call_time field in the Call Detail Record (CDR) receipt.
+         * <strong>example:</strong>
+         * <p>2019-03-05 12:00:00</p>
          */
         public Builder callTime(String callTime) {
             this.putQueryParameter("CallTime", callTime);
@@ -108,10 +113,12 @@ public class GetSecretAsrDetailRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool.
-         * <p>
+         * <p>The key of the phone number pool.</p>
+         * <p>You can log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <strong>example:</strong>
+         * <p>FC2267****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);

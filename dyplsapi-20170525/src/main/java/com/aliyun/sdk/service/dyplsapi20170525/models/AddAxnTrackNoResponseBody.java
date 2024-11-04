@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAxnTrackNoResponseBody} extends {@link TeaModel}
  *
  * <p>AddAxnTrackNoResponseBody</p>
@@ -61,11 +62,14 @@ public class AddAxnTrackNoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~109196~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -73,7 +77,10 @@ public class AddAxnTrackNoResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -81,7 +88,10 @@ public class AddAxnTrackNoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A4CADEF-8516-5890-9177-A1A4D97F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

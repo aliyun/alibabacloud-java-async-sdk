@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelPickUpWaybillRequest} extends {@link RequestModel}
  *
  * <p>CancelPickUpWaybillRequest</p>
@@ -125,7 +126,11 @@ public class CancelPickUpWaybillRequest extends Request {
         } 
 
         /**
-         * The cancellation reason.
+         * <p>The cancellation reason.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;action&quot;:&quot;UPDATE_DESC&quot;,&quot;value&quot;:&quot;The courier is unable to pick up the package.&quot;}</p>
          */
         public Builder cancelDesc(String cancelDesc) {
             this.putQueryParameter("CancelDesc", cancelDesc);
@@ -134,7 +139,10 @@ public class CancelPickUpWaybillRequest extends Request {
         }
 
         /**
-         * The content type of the HTTP request. This parameter is optional. If you specify this parameter, enter application/json;chatset=UTF-8.
+         * <p>The content type of the HTTP request. This parameter is optional. If you specify this parameter, enter application/json;chatset=UTF-8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/json;chatset=UTF-8</p>
          */
         public Builder contentType(String contentType) {
             this.putHeaderParameter("Content-Type", contentType);
@@ -143,7 +151,11 @@ public class CancelPickUpWaybillRequest extends Request {
         }
 
         /**
-         * The ID of the external order.
+         * <p>The ID of the external order.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1145678823****</p>
          */
         public Builder outerOrderCode(String outerOrderCode) {
             this.putQueryParameter("OuterOrderCode", outerOrderCode);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePickUpWaybillPreQueryRequest} extends {@link RequestModel}
  *
  * <p>CreatePickUpWaybillPreQueryRequest</p>
@@ -140,7 +141,8 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         } 
 
         /**
-         * The consignee information.
+         * <p>The consignee information.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder consigneeInfo(ConsigneeInfo consigneeInfo) {
             String consigneeInfoShrink = shrink(consigneeInfo, "ConsigneeInfo", "json");
@@ -150,7 +152,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * The content type of the HTTP request. This parameter is optional. If you specify this parameter, enter application/json;chatset=UTF-8.
+         * <p>The content type of the HTTP request. This parameter is optional. If you specify this parameter, enter application/json;chatset=UTF-8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/json;chatset=UTF-8</p>
          */
         public Builder contentType(String contentType) {
             this.putHeaderParameter("Content-Type", contentType);
@@ -159,7 +164,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * The code of the courier company. If no courier company is specified, the system allocates a courier company.
+         * <p>The code of the courier company. If no courier company is specified, the system allocates a courier company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YTO</p>
          */
         public Builder cpCode(String cpCode) {
             this.putQueryParameter("CpCode", cpCode);
@@ -168,7 +176,11 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * The identifier of the external channel source. It cannot contain underscores.
+         * <p>The identifier of the external channel source. It cannot contain underscores.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder orderChannels(String orderChannels) {
             this.putQueryParameter("OrderChannels", orderChannels);
@@ -177,7 +189,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * The order number of the access system.
+         * <p>The order number of the access system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>787DFHHDS989****</p>
          */
         public Builder outerOrderCode(String outerOrderCode) {
             this.putQueryParameter("OuterOrderCode", outerOrderCode);
@@ -186,10 +201,13 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * The estimated weight. Unit: gram.
-         * <p>
+         * <p>The estimated weight. Unit: gram.</p>
+         * <blockquote>
+         * <p> If you need to query the estimated price, this parameter is required.</p>
+         * </blockquote>
          * 
-         * >  If you need to query the estimated price, this parameter is required.
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder preWeight(String preWeight) {
             this.putQueryParameter("PreWeight", preWeight);
@@ -198,7 +216,8 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         }
 
         /**
-         * The sender information.
+         * <p>The sender information.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder senderInfo(SenderInfo senderInfo) {
             String senderInfoShrink = shrink(senderInfo, "SenderInfo", "json");
@@ -214,6 +233,12 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePickUpWaybillPreQueryRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillPreQueryRequest</p>
+     */
     public static class AddressInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressDetail")
         private String addressDetail;
@@ -289,7 +314,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             private String townName; 
 
             /**
-             * The detailed address of the consignee.
+             * <p>The detailed address of the consignee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX community</p>
              */
             public Builder addressDetail(String addressDetail) {
                 this.addressDetail = addressDetail;
@@ -297,7 +325,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The district where the consignee is located.
+             * <p>The district where the consignee is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chang,an</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -305,7 +336,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The city where the consignee is located.
+             * <p>The city where the consignee is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Xi,an</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -313,7 +347,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The province where the consignee is located.
+             * <p>The province where the consignee is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shanxi</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -321,7 +358,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The street where the consignee is located.
+             * <p>The street where the consignee is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX Street</p>
              */
             public Builder townName(String townName) {
                 this.townName = townName;
@@ -335,6 +375,12 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePickUpWaybillPreQueryRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillPreQueryRequest</p>
+     */
     public static class ConsigneeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressInfo")
         private AddressInfo addressInfo;
@@ -388,7 +434,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             private String name; 
 
             /**
-             * The address of the consignee.
+             * <p>The address of the consignee.</p>
              */
             public Builder addressInfo(AddressInfo addressInfo) {
                 this.addressInfo = addressInfo;
@@ -396,7 +442,11 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The mobile phone number of the consignee.
+             * <p>The mobile phone number of the consignee.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -404,7 +454,11 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The name of the consignee.
+             * <p>The name of the consignee.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Li</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -418,6 +472,12 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePickUpWaybillPreQueryRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillPreQueryRequest</p>
+     */
     public static class SenderInfoAddressInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressDetail")
         private String addressDetail;
@@ -493,7 +553,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             private String townName; 
 
             /**
-             * The detailed address of the sender.
+             * <p>The detailed address of the sender.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX community</p>
              */
             public Builder addressDetail(String addressDetail) {
                 this.addressDetail = addressDetail;
@@ -501,7 +564,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The district where the sender is located.
+             * <p>The district where the sender is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xihu</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -509,7 +575,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The city where the sender is located.
+             * <p>The city where the sender is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -517,7 +586,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The province where the sender is located.
+             * <p>The province where the sender is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhejiang</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -525,7 +597,10 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The street where the sender is located.
+             * <p>The street where the sender is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX Street</p>
              */
             public Builder townName(String townName) {
                 this.townName = townName;
@@ -539,6 +614,12 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePickUpWaybillPreQueryRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillPreQueryRequest</p>
+     */
     public static class SenderInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressInfo")
         private SenderInfoAddressInfo addressInfo;
@@ -592,7 +673,7 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             private String name; 
 
             /**
-             * The address of the sender.
+             * <p>The address of the sender.</p>
              */
             public Builder addressInfo(SenderInfoAddressInfo addressInfo) {
                 this.addressInfo = addressInfo;
@@ -600,7 +681,11 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The mobile phone number of the sender.
+             * <p>The mobile phone number of the sender.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -608,7 +693,11 @@ public class CreatePickUpWaybillPreQueryRequest extends Request {
             }
 
             /**
-             * The name of the sender.
+             * <p>The name of the sender.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Wang</p>
              */
             public Builder name(String name) {
                 this.name = name;

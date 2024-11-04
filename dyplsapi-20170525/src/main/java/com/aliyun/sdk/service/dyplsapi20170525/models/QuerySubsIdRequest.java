@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySubsIdRequest} extends {@link RequestModel}
  *
  * <p>QuerySubsIdRequest</p>
@@ -119,7 +120,11 @@ public class QuerySubsIdRequest extends Request {
         }
 
         /**
-         * The private number in the binding, that is, phone number X.
+         * <p>The private number in the binding, that is, phone number X.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -128,10 +133,11 @@ public class QuerySubsIdRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool.
-         * <p>
+         * <p>The key of the phone number pool.</p>
+         * <p>Log on to the <a href="https://dyplsnext.console.aliyun.com/overview">Phone Number Protection console</a> and view the key of the phone number pool on the Number Pool Management page.</p>
          * 
-         * Log on to the [Phone Number Protection console](https://dyplsnext.console.aliyun.com/overview) and view the key of the phone number pool on the Number Pool Management page.
+         * <strong>example:</strong>
+         * <p>FC123456</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);

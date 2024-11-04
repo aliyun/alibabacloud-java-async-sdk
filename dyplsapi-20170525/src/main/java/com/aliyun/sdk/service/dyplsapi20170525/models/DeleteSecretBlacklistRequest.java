@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecretBlacklistRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecretBlacklistRequest</p>
@@ -112,7 +113,11 @@ public class DeleteSecretBlacklistRequest extends Request {
         } 
 
         /**
-         * The phone numbers in the blacklist. A point-to-point blacklist has a pair of numbers separated by a colon (":"). A number pool blacklist or a platform blacklist has only one single number.
+         * <p>The phone numbers in the blacklist. A point-to-point blacklist has a pair of numbers separated by a colon (&quot;:&quot;). A number pool blacklist or a platform blacklist has only one single number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18252<em><strong>383:18252</strong></em>483</p>
          */
         public Builder blackNo(String blackNo) {
             this.putQueryParameter("BlackNo", blackNo);
@@ -121,11 +126,15 @@ public class DeleteSecretBlacklistRequest extends Request {
         }
 
         /**
-         * The blacklist type. Valid values:
-         * <p>
+         * <p>The blacklist type. Valid values:</p>
+         * <ul>
+         * <li><strong>POINT_TO_POINT_BLACK</strong>: point-to-point blacklist</li>
+         * <li><strong>PARTNER_GLOBAL_NUMBER_BLACK</strong>: number pool blacklist</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **POINT_TO_POINT_BLACK**: point-to-point blacklist
-         * *   **PARTNER_GLOBAL_NUMBER_BLACK**: number pool blacklist
+         * <strong>example:</strong>
+         * <p>POINT_TO_POINT_BLACK</p>
          */
         public Builder blackType(String blackType) {
             this.putQueryParameter("BlackType", blackType);
@@ -134,7 +143,11 @@ public class DeleteSecretBlacklistRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC1232****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -143,7 +156,10 @@ public class DeleteSecretBlacklistRequest extends Request {
         }
 
         /**
-         * The remarks for the blacklist.
+         * <p>The remarks for the blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fragile</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -152,18 +168,21 @@ public class DeleteSecretBlacklistRequest extends Request {
         }
 
         /**
-         * The control on the call direction.
-         * <p>
+         * <p>The control on the call direction.</p>
+         * <ul>
+         * <li><strong>PHONEA_REJECT</strong>: The first phone number in the blacklist can be used to call the second phone number, but the second phone number in the blacklist cannot be used to call the first phone number.</li>
+         * <li><strong>PHONEB_REJECT</strong>: The first phone number in the blacklist cannot be used to call the second phone number, but the second phone number in the blacklist can be used to call the first phone number.</li>
+         * <li>If this parameter is not specified, the two phone numbers in the blacklist cannot be used to call each other.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DUPLEX_REJECT</li>
+         * <li>PHONEA_REJECT</li>
+         * <li>PHONEB_REJECT</li>
+         * </ul>
          * 
-         * *   **PHONEA_REJECT**: The first phone number in the blacklist can be used to call the second phone number, but the second phone number in the blacklist cannot be used to call the first phone number.
-         * *   **PHONEB_REJECT**: The first phone number in the blacklist cannot be used to call the second phone number, but the second phone number in the blacklist can be used to call the first phone number.
-         * *   If this parameter is not specified, the two phone numbers in the blacklist cannot be used to call each other.
-         * 
-         * Valid values:
-         * 
-         * *   DUPLEX_REJECT
-         * *   PHONEA_REJECT
-         * *   PHONEB_REJECT
+         * <strong>example:</strong>
+         * <p>PHONEA_REJECT</p>
          */
         public Builder wayControl(String wayControl) {
             this.putQueryParameter("WayControl", wayControl);

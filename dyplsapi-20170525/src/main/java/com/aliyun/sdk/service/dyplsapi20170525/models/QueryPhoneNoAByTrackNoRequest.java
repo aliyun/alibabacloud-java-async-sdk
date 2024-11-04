@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPhoneNoAByTrackNoRequest} extends {@link RequestModel}
  *
  * <p>QueryPhoneNoAByTrackNoRequest</p>
@@ -124,7 +125,10 @@ public class QueryPhoneNoAByTrackNoRequest extends Request {
         } 
 
         /**
-         * The cabinet number.
+         * <p>The cabinet number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25689****</p>
          */
         public Builder cabinetNo(String cabinetNo) {
             this.putQueryParameter("CabinetNo", cabinetNo);
@@ -142,7 +146,10 @@ public class QueryPhoneNoAByTrackNoRequest extends Request {
         }
 
         /**
-         * Phone number X returned by the API operation for creating a binding.
+         * <p>Phone number X returned by the API operation for creating a binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710000****</p>
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -169,7 +176,11 @@ public class QueryPhoneNoAByTrackNoRequest extends Request {
         }
 
         /**
-         * The tracking number.
+         * <p>The tracking number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22573****</p>
          */
         public Builder trackNo(String trackNo) {
             this.putQueryParameter("trackNo", trackNo);

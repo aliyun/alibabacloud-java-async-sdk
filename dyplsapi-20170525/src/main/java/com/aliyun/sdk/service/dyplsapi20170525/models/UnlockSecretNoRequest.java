@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnlockSecretNoRequest} extends {@link RequestModel}
  *
  * <p>UnlockSecretNoRequest</p>
@@ -120,10 +121,12 @@ public class UnlockSecretNoRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool.
-         * <p>
+         * <p>The key of the phone number pool.</p>
+         * <p>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <strong>example:</strong>
+         * <p>FC2256****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -150,7 +153,11 @@ public class UnlockSecretNoRequest extends Request {
         }
 
         /**
-         * The private number that you want to unlock. You must enter a complete mobile phone number.
+         * <p>The private number that you want to unlock. You must enter a complete mobile phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1300000****</p>
          */
         public Builder secretNo(String secretNo) {
             this.putQueryParameter("SecretNo", secretNo);

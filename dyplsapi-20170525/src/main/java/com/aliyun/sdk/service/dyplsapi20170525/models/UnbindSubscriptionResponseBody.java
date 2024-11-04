@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindSubscriptionResponseBody} extends {@link TeaModel}
  *
  * <p>UnbindSubscriptionResponseBody</p>
@@ -73,7 +74,10 @@ public class UnbindSubscriptionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * A deprecated parameter.
+         * <p>A deprecated parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder chargeId(String chargeId) {
             this.chargeId = chargeId;
@@ -81,11 +85,14 @@ public class UnbindSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~109196~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +100,10 @@ public class UnbindSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +111,10 @@ public class UnbindSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>986BCB6D-C9BF-42F9-91CE-3A9901233D36</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAxgGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteAxgGroupRequest</p>
@@ -111,7 +112,10 @@ public class DeleteAxgGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -129,7 +133,10 @@ public class DeleteAxgGroupRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC2235****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);

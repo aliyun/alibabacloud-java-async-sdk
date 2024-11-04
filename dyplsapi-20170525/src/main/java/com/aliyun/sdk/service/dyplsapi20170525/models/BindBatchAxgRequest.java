@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindBatchAxgRequest} extends {@link RequestModel}
  *
  * <p>BindBatchAxgRequest</p>
@@ -110,7 +111,7 @@ public class BindBatchAxgRequest extends Request {
         } 
 
         /**
-         * AxgBindList.
+         * <p>This parameter is required.</p>
          */
         public Builder axgBindList(java.util.List < AxgBindList> axgBindList) {
             String axgBindListShrink = shrink(axgBindList, "AxgBindList", "json");
@@ -162,6 +163,12 @@ public class BindBatchAxgRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BindBatchAxgRequest} extends {@link TeaModel}
+     *
+     * <p>BindBatchAxgRequest</p>
+     */
     public static class AxgBindList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ASRModelId")
         private String ASRModelId;
@@ -395,7 +402,10 @@ public class BindBatchAxgRequest extends Request {
             }
 
             /**
-             * GroupId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -427,7 +437,10 @@ public class BindBatchAxgRequest extends Request {
             }
 
             /**
-             * PhoneNoA.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13333333333</p>
              */
             public Builder phoneNoA(String phoneNoA) {
                 this.phoneNoA = phoneNoA;

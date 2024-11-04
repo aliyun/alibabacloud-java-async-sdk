@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePickUpWaybillPreQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePickUpWaybillPreQueryResponseBody</p>
@@ -73,7 +74,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result set.
+         * <p>The result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +82,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +93,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FC30594-3841-43AD-9008-03393BCB5CD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePickUpWaybillPreQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillPreQueryResponseBody</p>
+     */
     public static class TimeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -173,7 +189,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The end of the time range.
+             * <p>The end of the time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -181,7 +200,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The tip displayed when the scheduled pickup is not available.
+             * <p>The tip displayed when the scheduled pickup is not available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Appointment Full</p>
              */
             public Builder selectDisableTip(String selectDisableTip) {
                 this.selectDisableTip = selectDisableTip;
@@ -189,7 +211,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the time range can be selected for the scheduled pickup.
+             * <p>Indicates whether the time range can be selected for the scheduled pickup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selectable(Boolean selectable) {
                 this.selectable = selectable;
@@ -197,7 +222,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range.
+             * <p>The beginning of the time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -211,6 +239,12 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePickUpWaybillPreQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillPreQueryResponseBody</p>
+     */
     public static class AppointTimes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -262,7 +296,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private java.util.List < TimeList> timeList; 
 
             /**
-             * The date in the YYYY-MM-DD format.
+             * <p>The date in the YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-28</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -270,7 +307,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the date is selectable.
+             * <p>Indicates whether the date is selectable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dateSelectable(Boolean dateSelectable) {
                 this.dateSelectable = dateSelectable;
@@ -278,7 +318,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The time range for the scheduled pickup for this date.
+             * <p>The time range for the scheduled pickup for this date.</p>
              */
             public Builder timeList(java.util.List < TimeList> timeList) {
                 this.timeList = timeList;
@@ -292,6 +332,12 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePickUpWaybillPreQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillPreQueryResponseBody</p>
+     */
     public static class RealTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -343,7 +389,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private Boolean selectable; 
 
             /**
-             * The name of the real-time order type.
+             * <p>The name of the real-time order type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -351,7 +400,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The tip displayed when the real-time order cannot be placed.
+             * <p>The tip displayed when the real-time order cannot be placed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exceeding the real-time ordering time range.</p>
              */
             public Builder selectDisableTip(String selectDisableTip) {
                 this.selectDisableTip = selectDisableTip;
@@ -359,7 +411,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the real-time order can be placed after the deadline for placing a real-time order is reached.
+             * <p>Indicates whether the real-time order can be placed after the deadline for placing a real-time order is reached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder selectable(Boolean selectable) {
                 this.selectable = selectable;
@@ -373,6 +428,12 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePickUpWaybillPreQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillPreQueryResponseBody</p>
+     */
     public static class CpTimeSelectList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppointTimes")
         private java.util.List < AppointTimes> appointTimes;
@@ -424,7 +485,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private RealTime realTime; 
 
             /**
-             * The available time for the scheduled pickup. If the current courier company cannot accept the scheduled pickup, this field is left empty.
+             * <p>The available time for the scheduled pickup. If the current courier company cannot accept the scheduled pickup, this field is left empty.</p>
              */
             public Builder appointTimes(java.util.List < AppointTimes> appointTimes) {
                 this.appointTimes = appointTimes;
@@ -432,7 +493,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated price. Unit: CNY. The value is accurate to two decimal places. The value of this parameter is displayed if an estimated weight is specified.
+             * <p>The estimated price. Unit: CNY. The value is accurate to two decimal places. The value of this parameter is displayed if an estimated weight is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.50</p>
              */
             public Builder prePrice(String prePrice) {
                 this.prePrice = prePrice;
@@ -440,7 +504,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The information about whether the real-time order can be selected.
+             * <p>The information about whether the real-time order can be selected.</p>
              */
             public Builder realTime(RealTime realTime) {
                 this.realTime = realTime;
@@ -454,6 +518,12 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePickUpWaybillPreQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillPreQueryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -541,7 +611,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The response code.
+             * <p>The response code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -549,7 +622,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The information about whether the courier company can accept the order.
+             * <p>The information about whether the courier company can accept the order.</p>
              */
             public Builder cpTimeSelectList(java.util.List < CpTimeSelectList> cpTimeSelectList) {
                 this.cpTimeSelectList = cpTimeSelectList;
@@ -557,7 +630,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -565,7 +641,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -573,7 +652,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The response content.
+             * <p>The response content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -581,7 +663,10 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful.
+             * <p>Indicates whether the request was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

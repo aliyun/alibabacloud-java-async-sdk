@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRecordFileDownloadUrlRequest} extends {@link RequestModel}
  *
  * <p>QueryRecordFileDownloadUrlRequest</p>
@@ -138,7 +139,11 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
         } 
 
         /**
-         * The ID of the call record. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view **Call Record ID** on the **Call Record Query** page.
+         * <p>The ID of the call record. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view <strong>Call Record ID</strong> on the <strong>Call Record Query</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcedf1234</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -147,7 +152,10 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
         }
 
         /**
-         * The call initiation time in the call record. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). View **Call Initiated At** on the **Call Record Query** page, or view the call_time field in the Call Detail Record (CDR) receipt.
+         * <p>The call initiation time in the call record. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a>. View <strong>Call Initiated At</strong> on the <strong>Call Record Query</strong> page, or view the call_time field in the Call Detail Record (CDR) receipt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-05 12:00:00</p>
          */
         public Builder callTime(String callTime) {
             this.putQueryParameter("CallTime", callTime);
@@ -165,10 +173,13 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
-         * <p>
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <blockquote>
+         * <p> This parameter is required when <strong>ProductType</strong> is left empty.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when **ProductType** is left empty.
+         * <strong>example:</strong>
+         * <p>FC123456</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -177,19 +188,24 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
         }
 
         /**
-         * The product type. Valid values:
-         * <p>
+         * <p>The product type. Valid values:</p>
+         * <ul>
+         * <li><strong>AXB_170</strong>.</li>
+         * <li><strong>AXN_170</strong>.</li>
+         * <li><strong>AXN_95</strong>.</li>
+         * <li><strong>AXN_EXTENSION_REUSE</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.</p>
+         * </li>
+         * <li><p>This parameter is required when <strong>PoolKey</strong> is left empty.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **AXB\_170**.
-         * *   **AXN\_170**.
-         * *   **AXN\_95**.
-         * *   **AXN_EXTENSION_REUSE**
-         * 
-         * > 
-         * 
-         * *   This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.
-         * 
-         * *   This parameter is required when **PoolKey** is left empty.
+         * <strong>example:</strong>
+         * <p>AXB_170</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

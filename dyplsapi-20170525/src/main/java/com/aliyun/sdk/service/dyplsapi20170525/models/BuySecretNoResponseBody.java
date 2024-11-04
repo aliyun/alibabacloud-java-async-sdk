@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BuySecretNoResponseBody} extends {@link TeaModel}
  *
  * <p>BuySecretNoResponseBody</p>
@@ -73,11 +74,14 @@ public class BuySecretNoResponseBody extends TeaModel {
         private SecretBuyInfoDTO secretBuyInfoDTO; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~109196~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,10 @@ public class BuySecretNoResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +100,10 @@ public class BuySecretNoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D1AEB96-96D0-454E-B0DC-AE2A8DF08020</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +111,7 @@ public class BuySecretNoResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned after the operation was called.
+         * <p>The information returned after the operation was called.</p>
          */
         public Builder secretBuyInfoDTO(SecretBuyInfoDTO secretBuyInfoDTO) {
             this.secretBuyInfoDTO = secretBuyInfoDTO;
@@ -114,6 +124,12 @@ public class BuySecretNoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BuySecretNoResponseBody} extends {@link TeaModel}
+     *
+     * <p>BuySecretNoResponseBody</p>
+     */
     public static class SecretBuyInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecretNo")
         private String secretNo;
@@ -141,7 +157,10 @@ public class BuySecretNoResponseBody extends TeaModel {
             private String secretNo; 
 
             /**
-             * The private number, that is, phone number X.
+             * <p>The private number, that is, phone number X.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder secretNo(String secretNo) {
                 this.secretNo = secretNo;

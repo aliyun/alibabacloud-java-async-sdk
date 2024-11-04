@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecretAsrDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetSecretAsrDetailResponseBody</p>
@@ -73,7 +74,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ASR details.
+         * <p>The ASR details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSecretAsrDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecretAsrDetailResponseBody</p>
+     */
     public static class Sentences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
@@ -209,7 +225,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * The start time offset of the sentence. Unit: milliseconds.
+             * <p>The start time offset of the sentence. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1020</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -217,7 +236,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the audio track to which the sentence belongs.
+             * <p>The ID of the audio track to which the sentence belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder channelId(Integer channelId) {
                 this.channelId = channelId;
@@ -225,7 +247,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The emotion value. Value range: 1 to 10. The higher the value, the stronger the emotion.
+             * <p>The emotion value. Value range: 1 to 10. The higher the value, the stronger the emotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder emotionValue(String emotionValue) {
                 this.emotionValue = emotionValue;
@@ -233,7 +258,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end time offset of the sentence. Unit: milliseconds.
+             * <p>The end time offset of the sentence. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1770</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -241,7 +269,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The silence duration between the current sentence and the previous sentence. Unit: seconds.
+             * <p>The silence duration between the current sentence and the previous sentence. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder silenceDuration(Long silenceDuration) {
                 this.silenceDuration = silenceDuration;
@@ -249,7 +280,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The average speech rate of the sentence. Unit: number of words per minute.
+             * <p>The average speech rate of the sentence. Unit: number of words per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -257,7 +291,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The recognition result of the sentence.
+             * <p>The recognition result of the sentence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -271,6 +308,12 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecretAsrDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecretAsrDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizDuration")
         private Long bizDuration;
@@ -382,7 +425,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The total duration of the audio file that was recognized. Unit: milliseconds.
+             * <p>The total duration of the audio file that was recognized. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10944</p>
              */
             public Builder bizDuration(Long bizDuration) {
                 this.bizDuration = bizDuration;
@@ -390,7 +436,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business process.
+             * <p>The ID of the business process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>435ee78c7a019650@!FC100000074672458@!2020061522****</p>
              */
             public Builder businessId(String businessId) {
                 this.businessId = businessId;
@@ -398,7 +447,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The business keyword.
+             * <p>The business keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JCGTncltuNao****</p>
              */
             public Builder businessKey(String businessKey) {
                 this.businessKey = businessKey;
@@ -406,7 +458,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status code. The status code 21050000 indicates that the request was successful.
+             * <p>The status code. The status code 21050000 indicates that the request was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21050000</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -414,7 +469,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -422,7 +480,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8d2329d407a83447a83be441681f4872ac74nE</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -430,7 +491,7 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ASR result.
+             * <p>The ASR result.</p>
              */
             public Builder sentences(java.util.List < Sentences> sentences) {
                 this.sentences = sentences;
@@ -438,7 +499,10 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asrResult</p>
              */
             public Builder type(String type) {
                 this.type = type;

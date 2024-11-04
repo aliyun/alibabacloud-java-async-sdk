@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BuySecretNoRequest} extends {@link RequestModel}
  *
  * <p>BuySecretNoRequest</p>
@@ -154,14 +155,19 @@ public class BuySecretNoRequest extends Request {
         } 
 
         /**
-         * Specifies the home location of the phone number.
-         * <p>
+         * <p>Specifies the home location of the phone number.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The home location can be set only to a location in the Chinese mainland.</p>
+         * </li>
+         * <li><p>A phone number that starts with 95 does not have a home location. If you purchase a phone number that starts with 95, set this parameter to <strong>Nationwide</strong>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The home location can be set only to a location in the Chinese mainland.
-         * 
-         * *   A phone number that starts with 95 does not have a home location. If you purchase a phone number that starts with 95, set this parameter to **Nationwide**.
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -170,10 +176,13 @@ public class BuySecretNoRequest extends Request {
         }
 
         /**
-         * Specifies whether to add the phone number to the pool of numbers that will be displayed during calls.
-         * <p>
+         * <p>Specifies whether to add the phone number to the pool of numbers that will be displayed during calls.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for customers who have enabled the number display feature.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only for customers who have enabled the number display feature.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder displayPool(Boolean displayPool) {
             this.putQueryParameter("DisplayPool", displayPool);
@@ -191,7 +200,11 @@ public class BuySecretNoRequest extends Request {
         }
 
         /**
-         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC123456</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -218,10 +231,13 @@ public class BuySecretNoRequest extends Request {
         }
 
         /**
-         * The prefix of the phone number. If you specify the value of **SecretNo** when you purchase a phone number, a phone number starting with the specified prefix is selected.
-         * <p>
+         * <p>The prefix of the phone number. If you specify the value of <strong>SecretNo</strong> when you purchase a phone number, a phone number starting with the specified prefix is selected.</p>
+         * <blockquote>
+         * <p> You can specify up to 18 digits of the phone number prefix.</p>
+         * </blockquote>
          * 
-         * >  You can specify up to 18 digits of the phone number prefix.
+         * <strong>example:</strong>
+         * <p>130</p>
          */
         public Builder secretNo(String secretNo) {
             this.putQueryParameter("SecretNo", secretNo);
@@ -230,12 +246,16 @@ public class BuySecretNoRequest extends Request {
         }
 
         /**
-         * The type of the phone number. Valid values:
-         * <p>
+         * <p>The type of the phone number. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: a phone number assigned by a virtual network operator, that is, a phone number that belongs to the 170 or 171 number segment.</li>
+         * <li><strong>2</strong>: a phone number provided by a carrier.</li>
+         * <li><strong>3</strong>: a phone number that starts with 95.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: a phone number assigned by a virtual network operator, that is, a phone number that belongs to the 170 or 171 number segment.
-         * *   **2**: a phone number provided by a carrier.
-         * *   **3**: a phone number that starts with 95.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder specId(Long specId) {
             this.putQueryParameter("SpecId", specId);

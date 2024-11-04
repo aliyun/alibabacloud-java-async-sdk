@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySubsIdResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySubsIdResponseBody</p>
@@ -73,7 +74,10 @@ public class QuerySubsIdResponseBody extends TeaModel {
         private String subsId; 
 
         /**
-         * The response code. The value OK indicates that the request was successful.
+         * <p>The response code. The value OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class QuerySubsIdResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class QuerySubsIdResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7F99446-8191-43C0-99B5-F58A6AEAD779</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class QuerySubsIdResponseBody extends TeaModel {
         }
 
         /**
-         * The binding ID.
+         * <p>The binding ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111****</p>
          */
         public Builder subsId(String subsId) {
             this.subsId = subsId;
