@@ -504,7 +504,12 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * ImageFamily.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -513,7 +518,7 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<code>ExecutionId</code>) in the format of <code>{ImageName}_{ExecutionId}</code>.</p>
          * 
          * <strong>example:</strong>
@@ -552,9 +557,9 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The name of the image template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <blockquote>
-         * <p>If you do not specify the <code>Name</code> parameter, the return value of <code>ImagePipelineId</code> is used.</p>
+         * <p> If you do not specify <code>Name</code>, the return value of <code>ImagePipelineId</code> is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -598,7 +603,12 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * RepairMode.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder repairMode(String repairMode) {
             this.putQueryParameter("RepairMode", repairMode);
@@ -659,7 +669,12 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * TestContent.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder testContent(String testContent) {
             this.putQueryParameter("TestContent", testContent);

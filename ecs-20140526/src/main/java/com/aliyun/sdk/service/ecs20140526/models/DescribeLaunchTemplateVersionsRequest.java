@@ -290,7 +290,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
 
         /**
          * <p>The ID of the launch template.</p>
-         * <p>You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
+         * <p>You must set <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>lt-bp168lnahrdwl39p****</p>
@@ -303,6 +303,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
 
         /**
          * <p>The name of the launch template.</p>
+         * <p>You must set <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>testLaunchTemplateName</p>
@@ -314,7 +315,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>Version N of the launch template.</p>
+         * <p>The versions of the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -326,7 +327,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum version number in the version range to query.</p>
+         * <p>The maximum version number in the version range to query. This parameter is used together with <code>MinVersion</code> to specify a version range to query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -338,7 +339,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * <p>The minimum version number in the version range to query.</p>
+         * <p>The minimum version number in the version range to query. This parameter is used together with <code>MaxVersion</code> to specify a version range to query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

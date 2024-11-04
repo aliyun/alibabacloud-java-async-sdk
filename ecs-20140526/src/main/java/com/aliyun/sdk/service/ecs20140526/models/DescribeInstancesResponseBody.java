@@ -749,10 +749,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
      * <p>DescribeInstancesResponseBody</p>
      */
     public static class ImageOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CurrentOSNVMeSupported")
+        private Boolean currentOSNVMeSupported;
+
         @com.aliyun.core.annotation.NameInMap("LoginAsNonRoot")
         private Boolean loginAsNonRoot;
 
         private ImageOptions(Builder builder) {
+            this.currentOSNVMeSupported = builder.currentOSNVMeSupported;
             this.loginAsNonRoot = builder.loginAsNonRoot;
         }
 
@@ -765,6 +769,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return currentOSNVMeSupported
+         */
+        public Boolean getCurrentOSNVMeSupported() {
+            return this.currentOSNVMeSupported;
+        }
+
+        /**
          * @return loginAsNonRoot
          */
         public Boolean getLoginAsNonRoot() {
@@ -772,7 +783,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean currentOSNVMeSupported; 
             private Boolean loginAsNonRoot; 
+
+            /**
+             * CurrentOSNVMeSupported.
+             */
+            public Builder currentOSNVMeSupported(Boolean currentOSNVMeSupported) {
+                this.currentOSNVMeSupported = currentOSNVMeSupported;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
@@ -3419,7 +3439,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the image options.</p>
+             * <p>The image options.</p>
              */
             public Builder imageOptions(ImageOptions imageOptions) {
                 this.imageOptions = imageOptions;

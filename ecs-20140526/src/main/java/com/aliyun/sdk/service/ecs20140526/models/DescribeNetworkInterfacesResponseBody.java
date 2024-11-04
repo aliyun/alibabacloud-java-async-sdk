@@ -98,7 +98,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Details about the ENIs.</p>
+         * <p>Details of the ENIs.</p>
          */
         public Builder networkInterfaceSets(NetworkInterfaceSets networkInterfaceSets) {
             this.networkInterfaceSets = networkInterfaceSets;
@@ -1695,7 +1695,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDestCheck.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sourceDestCheck(Boolean sourceDestCheck) {
                 this.sourceDestCheck = sourceDestCheck;

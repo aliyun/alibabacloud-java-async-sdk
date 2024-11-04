@@ -102,6 +102,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcePoolOptions")
+    private ResourcePoolOptions resourcePoolOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotAllocationStrategy")
     private String spotAllocationStrategy;
 
@@ -170,6 +174,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourcePoolOptions = builder.resourcePoolOptions;
         this.spotAllocationStrategy = builder.spotAllocationStrategy;
         this.spotInstanceInterruptionBehavior = builder.spotInstanceInterruptionBehavior;
         this.spotInstancePoolsToUseCount = builder.spotInstancePoolsToUseCount;
@@ -351,6 +356,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     }
 
     /**
+     * @return resourcePoolOptions
+     */
+    public ResourcePoolOptions getResourcePoolOptions() {
+        return this.resourcePoolOptions;
+    }
+
+    /**
      * @return spotAllocationStrategy
      */
     public String getSpotAllocationStrategy() {
@@ -450,6 +462,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private ResourcePoolOptions resourcePoolOptions; 
         private String spotAllocationStrategy; 
         private String spotInstanceInterruptionBehavior; 
         private Integer spotInstancePoolsToUseCount; 
@@ -490,6 +503,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resourcePoolOptions = request.resourcePoolOptions;
             this.spotAllocationStrategy = request.spotAllocationStrategy;
             this.spotInstanceInterruptionBehavior = request.spotInstanceInterruptionBehavior;
             this.spotInstancePoolsToUseCount = request.spotInstancePoolsToUseCount;
@@ -776,6 +790,20 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * <p>The resource pool options to use to create instances. When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter takes effect only when the auto provisioning group creates pay-as-you-go instances.</li>
+         * <li>This parameter takes effect only if you set <code>AutoProvisioningGroupType</code> to instant.</li>
+         * </ul>
+         */
+        public Builder resourcePoolOptions(ResourcePoolOptions resourcePoolOptions) {
+            String resourcePoolOptionsShrink = shrink(resourcePoolOptions, "ResourcePoolOptions", "json");
+            this.putQueryParameter("ResourcePoolOptions", resourcePoolOptionsShrink);
+            this.resourcePoolOptions = resourcePoolOptions;
             return this;
         }
 
@@ -2857,6 +2885,82 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
             public LaunchTemplateConfig build() {
                 return new LaunchTemplateConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class ResourcePoolOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolIds")
+        private java.util.List < String > privatePoolIds;
+
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        private String strategy;
+
+        private ResourcePoolOptions(Builder builder) {
+            this.privatePoolIds = builder.privatePoolIds;
+            this.strategy = builder.strategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcePoolOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privatePoolIds
+         */
+        public java.util.List < String > getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        /**
+         * @return strategy
+         */
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > privatePoolIds; 
+            private String strategy; 
+
+            /**
+             * <p>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool. You can specify the IDs of only targeted private pools for this parameter.</p>
+             */
+            public Builder privatePoolIds(java.util.List < String > privatePoolIds) {
+                this.privatePoolIds = privatePoolIds;
+                return this;
+            }
+
+            /**
+             * <p>Specifies which resource pools to use to create instances. Resource pools include the public pool and the private pools that are associated with elasticity assurance and capacity reservations in the Active state. Valid values:</p>
+             * <ul>
+             * <li>PrivatePoolFirst: uses private pools first. If you set this parameter to PrivatePoolFirst, you can specify ResourcePoolOptions.PrivatePoolIds or leave ResourcePoolOptions.PrivatePoolIds empty. If you specify ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or the private pools that you specify in ResourcePoolOptions.PrivatePoolIds have insufficient capacity, matching open private pools are used. If no matching open private pools exist, the public pool is used.</li>
+             * <li>PrivatePoolOnly: uses only private pools. If you set this parameter to PrivatePoolOnly, you must specify ResourcePoolOptions.PrivatePoolIds. If the private pools that you specify in ResourcePoolOptions.PrivatePoolIds have insufficient capacity, instances cannot be created.</li>
+             * <li>PublicPoolOnly: uses the public pool.</li>
+             * </ul>
+             * <p>Default value: PublicPoolOnly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivatePoolFirst</p>
+             */
+            public Builder strategy(String strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            public ResourcePoolOptions build() {
+                return new ResourcePoolOptions(this);
             } 
 
         } 

@@ -34,6 +34,10 @@ public class CreateCommandRequest extends Request {
     private Boolean enableParameter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Launcher")
+    private String launcher;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -87,6 +91,7 @@ public class CreateCommandRequest extends Request {
         this.contentEncoding = builder.contentEncoding;
         this.description = builder.description;
         this.enableParameter = builder.enableParameter;
+        this.launcher = builder.launcher;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -146,6 +151,13 @@ public class CreateCommandRequest extends Request {
      */
     public Boolean getEnableParameter() {
         return this.enableParameter;
+    }
+
+    /**
+     * @return launcher
+     */
+    public String getLauncher() {
+        return this.launcher;
     }
 
     /**
@@ -231,6 +243,7 @@ public class CreateCommandRequest extends Request {
         private String contentEncoding; 
         private String description; 
         private Boolean enableParameter; 
+        private String launcher; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -254,6 +267,7 @@ public class CreateCommandRequest extends Request {
             this.contentEncoding = request.contentEncoding;
             this.description = request.description;
             this.enableParameter = request.enableParameter;
+            this.launcher = request.launcher;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -375,6 +389,15 @@ public class CreateCommandRequest extends Request {
         public Builder enableParameter(Boolean enableParameter) {
             this.putQueryParameter("EnableParameter", enableParameter);
             this.enableParameter = enableParameter;
+            return this;
+        }
+
+        /**
+         * Launcher.
+         */
+        public Builder launcher(String launcher) {
+            this.putQueryParameter("Launcher", launcher);
+            this.launcher = launcher;
             return this;
         }
 

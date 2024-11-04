@@ -275,7 +275,12 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * ComponentType.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder componentType(String componentType) {
             this.putQueryParameter("ComponentType", componentType);
@@ -284,7 +289,12 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * ComponentVersion.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder componentVersion(String componentVersion) {
             this.putQueryParameter("ComponentVersion", componentVersion);
@@ -422,7 +432,12 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * SystemType.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder systemType(String systemType) {
             this.putQueryParameter("SystemType", systemType);

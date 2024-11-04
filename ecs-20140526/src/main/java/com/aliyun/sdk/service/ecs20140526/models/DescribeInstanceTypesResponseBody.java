@@ -103,6 +103,100 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      *
      * <p>DescribeInstanceTypesResponseBody</p>
      */
+    public static class SupportedTopologyTypes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SupportedTopologyType")
+        private java.util.List < String > supportedTopologyType;
+
+        private SupportedTopologyTypes(Builder builder) {
+            this.supportedTopologyType = builder.supportedTopologyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedTopologyTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedTopologyType
+         */
+        public java.util.List < String > getSupportedTopologyType() {
+            return this.supportedTopologyType;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > supportedTopologyType; 
+
+            /**
+             * SupportedTopologyType.
+             */
+            public Builder supportedTopologyType(java.util.List < String > supportedTopologyType) {
+                this.supportedTopologyType = supportedTopologyType;
+                return this;
+            }
+
+            public SupportedTopologyTypes build() {
+                return new SupportedTopologyTypes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
+    public static class CpuOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SupportedTopologyTypes")
+        private SupportedTopologyTypes supportedTopologyTypes;
+
+        private CpuOptions(Builder builder) {
+            this.supportedTopologyTypes = builder.supportedTopologyTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CpuOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedTopologyTypes
+         */
+        public SupportedTopologyTypes getSupportedTopologyTypes() {
+            return this.supportedTopologyTypes;
+        }
+
+        public static final class Builder {
+            private SupportedTopologyTypes supportedTopologyTypes; 
+
+            /**
+             * SupportedTopologyTypes.
+             */
+            public Builder supportedTopologyTypes(SupportedTopologyTypes supportedTopologyTypes) {
+                this.supportedTopologyTypes = supportedTopologyTypes;
+                return this;
+            }
+
+            public CpuOptions build() {
+                return new CpuOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class EnhancedNetwork extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SriovSupport")
         private Boolean sriovSupport;
@@ -334,6 +428,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
 
+        @com.aliyun.core.annotation.NameInMap("CpuOptions")
+        private CpuOptions cpuOptions;
+
         @com.aliyun.core.annotation.NameInMap("CpuSpeedFrequency")
         private Float cpuSpeedFrequency;
 
@@ -449,6 +546,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.baselineCredit = builder.baselineCredit;
             this.cpuArchitecture = builder.cpuArchitecture;
             this.cpuCoreCount = builder.cpuCoreCount;
+            this.cpuOptions = builder.cpuOptions;
             this.cpuSpeedFrequency = builder.cpuSpeedFrequency;
             this.cpuTurboFrequency = builder.cpuTurboFrequency;
             this.diskQuantity = builder.diskQuantity;
@@ -515,6 +613,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          */
         public Integer getCpuCoreCount() {
             return this.cpuCoreCount;
+        }
+
+        /**
+         * @return cpuOptions
+         */
+        public CpuOptions getCpuOptions() {
+            return this.cpuOptions;
         }
 
         /**
@@ -780,6 +885,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer baselineCredit; 
             private String cpuArchitecture; 
             private Integer cpuCoreCount; 
+            private CpuOptions cpuOptions; 
             private Float cpuSpeedFrequency; 
             private Float cpuTurboFrequency; 
             private Integer diskQuantity; 
@@ -852,6 +958,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
+                return this;
+            }
+
+            /**
+             * CpuOptions.
+             */
+            public Builder cpuOptions(CpuOptions cpuOptions) {
+                this.cpuOptions = cpuOptions;
                 return this;
             }
 

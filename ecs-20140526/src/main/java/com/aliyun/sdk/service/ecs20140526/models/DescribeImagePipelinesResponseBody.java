@@ -86,7 +86,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Details about the image templates.</p>
+         * <p>The information about the image templates.</p>
          */
         public Builder imagePipeline(ImagePipeline imagePipeline) {
             this.imagePipeline = imagePipeline;
@@ -700,7 +700,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageFamily.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder imageFamily(String imageFamily) {
                 this.imageFamily = imageFamily;
@@ -763,7 +768,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * RepairMode.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder repairMode(String repairMode) {
                 this.repairMode = repairMode;
@@ -801,7 +811,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * TestContent.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder testContent(String testContent) {
                 this.testContent = testContent;

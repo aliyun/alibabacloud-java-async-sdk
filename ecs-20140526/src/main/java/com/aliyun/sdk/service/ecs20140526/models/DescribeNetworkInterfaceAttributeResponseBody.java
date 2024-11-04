@@ -777,7 +777,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SourceDestCheck.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sourceDestCheck(Boolean sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
@@ -1508,6 +1511,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
             /**
              * <p>This parameter is not publicly available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableSriov(Boolean enableSriov) {
                 this.enableSriov = enableSriov;

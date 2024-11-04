@@ -148,9 +148,9 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to force delete the snapshot that has been used to create disks. Valid values:</p>
+         * <p>Specifies whether to force delete the snapshot that has been used to create cloud disks. Valid values:</p>
          * <ul>
-         * <li>true: force deletes the snapshot. After the snapshot is force deleted, the disks created from the snapshot cannot be re-initialized.</li>
+         * <li>true: force deletes the snapshot. After the snapshot is force deleted, the cloud disks created from the snapshot cannot be re-initialized.</li>
          * <li>false: does not force delete the snapshot.</li>
          * </ul>
          * <p>Default value: false.</p>

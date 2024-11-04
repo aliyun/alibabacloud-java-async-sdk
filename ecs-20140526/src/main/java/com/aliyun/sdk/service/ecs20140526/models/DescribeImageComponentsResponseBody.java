@@ -86,7 +86,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Details about the image components.</p>
+         * <p>The information about the image components.</p>
          */
         public Builder imageComponent(ImageComponent imageComponent) {
             this.imageComponent = imageComponent;
@@ -200,7 +200,12 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DefaultValue.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -208,7 +213,12 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -216,7 +226,12 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -573,7 +588,12 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentVersion.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder componentVersion(String componentVersion) {
                 this.componentVersion = componentVersion;
@@ -651,7 +671,9 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              */
             public Builder parameters(Parameters parameters) {
                 this.parameters = parameters;

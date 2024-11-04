@@ -2407,7 +2407,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator of the launch template version.</p>
+             * <p>The ID of the Alibaba Cloud account that created the launch template.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789****</p>

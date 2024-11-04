@@ -605,6 +605,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Latest")
         private Boolean latest;
 
+        @com.aliyun.core.annotation.NameInMap("Launcher")
+        private String launcher;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -644,6 +647,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             this.enableParameter = builder.enableParameter;
             this.invokeTimes = builder.invokeTimes;
             this.latest = builder.latest;
+            this.launcher = builder.launcher;
             this.name = builder.name;
             this.parameterDefinitions = builder.parameterDefinitions;
             this.parameterNames = builder.parameterNames;
@@ -718,6 +722,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
          */
         public Boolean getLatest() {
             return this.latest;
+        }
+
+        /**
+         * @return launcher
+         */
+        public String getLauncher() {
+            return this.launcher;
         }
 
         /**
@@ -799,6 +810,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private Boolean enableParameter; 
             private Integer invokeTimes; 
             private Boolean latest; 
+            private String launcher; 
             private String name; 
             private ParameterDefinitions parameterDefinitions; 
             private ParameterNames parameterNames; 
@@ -899,6 +911,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
              */
             public Builder latest(Boolean latest) {
                 this.latest = latest;
+                return this;
+            }
+
+            /**
+             * Launcher.
+             */
+            public Builder launcher(String launcher) {
+                this.launcher = launcher;
                 return this;
             }
 

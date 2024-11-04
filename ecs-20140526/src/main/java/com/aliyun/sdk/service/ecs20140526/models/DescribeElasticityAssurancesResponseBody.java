@@ -149,7 +149,147 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
      *
      * <p>DescribeElasticityAssurancesResponseBody</p>
      */
+    public static class ElasticityAssuranceUsage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
+        private String serviceName;
+
+        @com.aliyun.core.annotation.NameInMap("UsedAmount")
+        private Integer usedAmount;
+
+        private ElasticityAssuranceUsage(Builder builder) {
+            this.accountId = builder.accountId;
+            this.serviceName = builder.serviceName;
+            this.usedAmount = builder.usedAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElasticityAssuranceUsage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        /**
+         * @return usedAmount
+         */
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
+        public static final class Builder {
+            private String accountId; 
+            private String serviceName; 
+            private Integer usedAmount; 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * UsedAmount.
+             */
+            public Builder usedAmount(Integer usedAmount) {
+                this.usedAmount = usedAmount;
+                return this;
+            }
+
+            public ElasticityAssuranceUsage build() {
+                return new ElasticityAssuranceUsage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
+    public static class ElasticityAssuranceUsages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ElasticityAssuranceUsage")
+        private java.util.List < ElasticityAssuranceUsage> elasticityAssuranceUsage;
+
+        private ElasticityAssuranceUsages(Builder builder) {
+            this.elasticityAssuranceUsage = builder.elasticityAssuranceUsage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElasticityAssuranceUsages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return elasticityAssuranceUsage
+         */
+        public java.util.List < ElasticityAssuranceUsage> getElasticityAssuranceUsage() {
+            return this.elasticityAssuranceUsage;
+        }
+
+        public static final class Builder {
+            private java.util.List < ElasticityAssuranceUsage> elasticityAssuranceUsage; 
+
+            /**
+             * ElasticityAssuranceUsage.
+             */
+            public Builder elasticityAssuranceUsage(java.util.List < ElasticityAssuranceUsage> elasticityAssuranceUsage) {
+                this.elasticityAssuranceUsage = elasticityAssuranceUsage;
+                return this;
+            }
+
+            public ElasticityAssuranceUsages build() {
+                return new ElasticityAssuranceUsages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
     public static class AllocatedResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvailableAmount")
+        private Integer availableAmount;
+
+        @com.aliyun.core.annotation.NameInMap("ElasticityAssuranceUsages")
+        private ElasticityAssuranceUsages elasticityAssuranceUsages;
+
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
@@ -163,6 +303,8 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         private String zoneId;
 
         private AllocatedResource(Builder builder) {
+            this.availableAmount = builder.availableAmount;
+            this.elasticityAssuranceUsages = builder.elasticityAssuranceUsages;
             this.instanceType = builder.instanceType;
             this.totalAmount = builder.totalAmount;
             this.usedAmount = builder.usedAmount;
@@ -175,6 +317,20 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
         public static AllocatedResource create() {
             return builder().build();
+        }
+
+        /**
+         * @return availableAmount
+         */
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
+        }
+
+        /**
+         * @return elasticityAssuranceUsages
+         */
+        public ElasticityAssuranceUsages getElasticityAssuranceUsages() {
+            return this.elasticityAssuranceUsages;
         }
 
         /**
@@ -206,10 +362,28 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer availableAmount; 
+            private ElasticityAssuranceUsages elasticityAssuranceUsages; 
             private String instanceType; 
             private Integer totalAmount; 
             private Integer usedAmount; 
             private String zoneId; 
+
+            /**
+             * AvailableAmount.
+             */
+            public Builder availableAmount(Integer availableAmount) {
+                this.availableAmount = availableAmount;
+                return this;
+            }
+
+            /**
+             * ElasticityAssuranceUsages.
+             */
+            public Builder elasticityAssuranceUsages(ElasticityAssuranceUsages elasticityAssuranceUsages) {
+                this.elasticityAssuranceUsages = elasticityAssuranceUsages;
+                return this;
+            }
 
             /**
              * <p>The instance type.</p>
@@ -442,6 +616,9 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("ElasticityAssuranceOwnerId")
+        private String elasticityAssuranceOwnerId;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
@@ -487,6 +664,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         private ElasticityAssuranceItem(Builder builder) {
             this.allocatedResources = builder.allocatedResources;
             this.description = builder.description;
+            this.elasticityAssuranceOwnerId = builder.elasticityAssuranceOwnerId;
             this.endTime = builder.endTime;
             this.instanceChargeType = builder.instanceChargeType;
             this.latestStartTime = builder.latestStartTime;
@@ -523,6 +701,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return elasticityAssuranceOwnerId
+         */
+        public String getElasticityAssuranceOwnerId() {
+            return this.elasticityAssuranceOwnerId;
         }
 
         /**
@@ -626,6 +811,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public static final class Builder {
             private AllocatedResources allocatedResources; 
             private String description; 
+            private String elasticityAssuranceOwnerId; 
             private String endTime; 
             private String instanceChargeType; 
             private String latestStartTime; 
@@ -657,6 +843,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * ElasticityAssuranceOwnerId.
+             */
+            public Builder elasticityAssuranceOwnerId(String elasticityAssuranceOwnerId) {
+                this.elasticityAssuranceOwnerId = elasticityAssuranceOwnerId;
                 return this;
             }
 
