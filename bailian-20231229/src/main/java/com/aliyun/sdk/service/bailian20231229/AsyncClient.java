@@ -328,6 +328,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAndPublishAgentResponse> updateAndPublishAgent(UpdateAndPublishAgentRequest request);
 
     /**
+     * @param request the request parameters of UpdateFileTag  UpdateFileTagRequest
+     * @return UpdateFileTagResponse
+     */
+    CompletableFuture<UpdateFileTagResponse> updateFileTag(UpdateFileTagRequest request);
+
+    /**
      * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
      * @return UpdateMemoryResponse
      */

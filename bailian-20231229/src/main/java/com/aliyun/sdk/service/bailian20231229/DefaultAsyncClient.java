@@ -768,6 +768,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateFileTag  UpdateFileTagRequest
+     * @return UpdateFileTagResponse
+     */
+    @Override
+    public CompletableFuture<UpdateFileTagResponse> updateFileTag(UpdateFileTagRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateFileTag").setMethod(HttpMethod.PUT).setPathRegex("/{WorkspaceId}/datacenter/file/{FileId}").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFileTagResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateFileTagResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
      * @return UpdateMemoryResponse
      */
