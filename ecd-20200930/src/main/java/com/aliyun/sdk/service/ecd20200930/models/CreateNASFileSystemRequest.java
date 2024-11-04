@@ -126,7 +126,10 @@ public class CreateNASFileSystemRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>Description of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,7 +138,15 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * EncryptType.
+         * <p>Whether the file system is encrypted. Uses KMS service-managed keys to encrypt the file system&quot;s on-disk data. No decryption is required when reading and writing encrypted data. Possible values and their meanings:</p>
+         * <ul>
+         * <li>0: Not encrypted.</li>
+         * <li>1: Encrypted using NAS-managed keys.</li>
+         * </ul>
+         * <p>Default value: 0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder encryptType(String encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -144,7 +155,16 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Name of the NAS file system.
+         * The file name must follow these rules:</p>
+         * <ul>
+         * <li>Length: 2 to 128 English or Chinese characters.</li>
+         * <li>Must start with an uppercase or lowercase letter or a Chinese character, cannot start with http:// or https://.</li>
+         * <li>Can include numbers, underscores (_), or hyphens (-).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testNAS</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -153,6 +173,7 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +186,7 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
+         * <p>Region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +199,15 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>Storage specification type of the NAS file system. Allowed values:</p>
+         * <ul>
+         * <li>Capacity: Capacity type.</li>
+         * <li>Performance: Performance type.</li>
+         * </ul>
+         * <p>Default value: Capacity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Capacity</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

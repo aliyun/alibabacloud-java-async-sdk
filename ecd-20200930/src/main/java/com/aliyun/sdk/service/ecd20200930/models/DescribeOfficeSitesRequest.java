@@ -221,7 +221,15 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * SecurityProtection.
+         * <p>The security protection setting of the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SASE: SASE is configured.</li>
+         * <li>OFF: No security protection setting is configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SASE</p>
          */
         public Builder securityProtection(String securityProtection) {
             this.putQueryParameter("SecurityProtection", securityProtection);

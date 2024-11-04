@@ -568,7 +568,7 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Apsara File Storage NAS (NAS) file system for the user data roaming feature.</p>
+         * <p>The ID of the File Storage NAS (NAS) file system for the user data roaming feature.</p>
          * <blockquote>
          * <p> This parameter is unavailable.</p>
          * </blockquote>

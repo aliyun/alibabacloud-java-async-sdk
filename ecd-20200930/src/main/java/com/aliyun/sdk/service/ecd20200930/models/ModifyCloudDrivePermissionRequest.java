@@ -26,6 +26,10 @@ public class ModifyCloudDrivePermissionRequest extends Request {
     private java.util.List < String > downloadUploadEndUserIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NoDownloadNoUploadEndUserIds")
+    private java.util.List < String > noDownloadNoUploadEndUserIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -35,6 +39,7 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         this.cdsId = builder.cdsId;
         this.downloadEndUserIds = builder.downloadEndUserIds;
         this.downloadUploadEndUserIds = builder.downloadUploadEndUserIds;
+        this.noDownloadNoUploadEndUserIds = builder.noDownloadNoUploadEndUserIds;
         this.regionId = builder.regionId;
     }
 
@@ -73,6 +78,13 @@ public class ModifyCloudDrivePermissionRequest extends Request {
     }
 
     /**
+     * @return noDownloadNoUploadEndUserIds
+     */
+    public java.util.List < String > getNoDownloadNoUploadEndUserIds() {
+        return this.noDownloadNoUploadEndUserIds;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -83,6 +95,7 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         private String cdsId; 
         private java.util.List < String > downloadEndUserIds; 
         private java.util.List < String > downloadUploadEndUserIds; 
+        private java.util.List < String > noDownloadNoUploadEndUserIds; 
         private String regionId; 
 
         private Builder() {
@@ -94,6 +107,7 @@ public class ModifyCloudDrivePermissionRequest extends Request {
             this.cdsId = request.cdsId;
             this.downloadEndUserIds = request.downloadEndUserIds;
             this.downloadUploadEndUserIds = request.downloadUploadEndUserIds;
+            this.noDownloadNoUploadEndUserIds = request.noDownloadNoUploadEndUserIds;
             this.regionId = request.regionId;
         } 
 
@@ -125,6 +139,15 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         public Builder downloadUploadEndUserIds(java.util.List < String > downloadUploadEndUserIds) {
             this.putQueryParameter("DownloadUploadEndUserIds", downloadUploadEndUserIds);
             this.downloadUploadEndUserIds = downloadUploadEndUserIds;
+            return this;
+        }
+
+        /**
+         * NoDownloadNoUploadEndUserIds.
+         */
+        public Builder noDownloadNoUploadEndUserIds(java.util.List < String > noDownloadNoUploadEndUserIds) {
+            this.putQueryParameter("NoDownloadNoUploadEndUserIds", noDownloadNoUploadEndUserIds);
+            this.noDownloadNoUploadEndUserIds = noDownloadNoUploadEndUserIds;
             return this;
         }
 

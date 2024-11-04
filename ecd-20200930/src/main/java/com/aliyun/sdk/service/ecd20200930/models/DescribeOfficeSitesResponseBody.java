@@ -104,7 +104,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -1430,7 +1433,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array of Apsara File Storage NAS (NAS) file system IDs.</p>
+             * <p>An array of File Storage NAS (NAS) file system IDs.</p>
              */
             public Builder fileSystemIds(java.util.List < String > fileSystemIds) {
                 this.fileSystemIds = fileSystemIds;
@@ -1609,7 +1612,15 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityProtection.
+             * <p>The security protection setting of the office network.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SASE: SASE is configured.</li>
+             * <li>OFF: No security protection setting is configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SASE</p>
              */
             public Builder securityProtection(String securityProtection) {
                 this.securityProtection = securityProtection;
@@ -1685,7 +1696,15 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * SubnetMode.
+             * <p>The subnet mode of the office network.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>0: disabled.</li>
+             * <li>1: enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subnetMode(String subnetMode) {
                 this.subnetMode = subnetMode;

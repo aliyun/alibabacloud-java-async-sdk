@@ -86,7 +86,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileSystemId.
+         * <p>ID of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -94,7 +97,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * FileSystemName.
+         * <p>Name of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNAS</p>
          */
         public Builder fileSystemName(String fileSystemName) {
             this.fileSystemName = fileSystemName;
@@ -102,7 +108,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * MountTargetDomain.
+         * <p>Mount point domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****-at***.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.mountTargetDomain = mountTargetDomain;
@@ -110,7 +119,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>Workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
@@ -118,7 +130,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

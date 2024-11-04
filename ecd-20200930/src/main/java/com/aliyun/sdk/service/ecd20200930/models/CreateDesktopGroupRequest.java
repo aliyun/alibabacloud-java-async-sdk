@@ -829,7 +829,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The Apsara File Storage NAS (NAS) file system that is used after data roaming is enabled.</p>
+         * <p>The File Storage NAS (NAS) file system that is used after data roaming is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>04f314****</p>

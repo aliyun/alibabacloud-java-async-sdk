@@ -1071,7 +1071,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of Apsara File Storage NAS (NAS) file systems.</p>
+             * <p>The IDs of File Storage NAS (NAS) file systems.</p>
              */
             public Builder fileSystemIds(java.util.List < String > fileSystemIds) {
                 this.fileSystemIds = fileSystemIds;

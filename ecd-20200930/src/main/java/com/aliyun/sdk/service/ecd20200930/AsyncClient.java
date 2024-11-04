@@ -313,6 +313,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateImageResponse> createImage(CreateImageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</li>
+     * <li>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</li>
+     * <li>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase resource packages to offset the storage usage.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</li>
+     * <li>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</li>
+     * <li>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase storage packages to offset the storage usage.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateNASFileSystem  CreateNASFileSystemRequest
      * @return CreateNASFileSystemResponse
      */
@@ -448,7 +462,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
+     * <p>Before you delete a File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
      * <blockquote>
      * <p>Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
      * </blockquote>
