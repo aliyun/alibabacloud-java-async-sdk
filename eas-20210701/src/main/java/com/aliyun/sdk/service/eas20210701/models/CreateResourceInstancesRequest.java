@@ -173,6 +173,7 @@ public class CreateResourceInstancesRequest extends Request {
 
         /**
          * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -184,7 +185,8 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-asdasdasd</p>
@@ -217,6 +219,7 @@ public class CreateResourceInstancesRequest extends Request {
          * <li>PrePaid: subscription.</li>
          * <li>PostPaid: pay-as-you-go.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -229,6 +232,7 @@ public class CreateResourceInstancesRequest extends Request {
 
         /**
          * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -241,6 +245,7 @@ public class CreateResourceInstancesRequest extends Request {
 
         /**
          * <p>The type of the Elastic Compute Service (ECS) instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.s6-c1m2.xlarge</p>

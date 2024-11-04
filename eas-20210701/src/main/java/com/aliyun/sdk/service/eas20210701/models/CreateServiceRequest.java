@@ -146,7 +146,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>The request body. For more information about the key request parameters, see <strong>Table 1. Request body parameters</strong> and <strong>Table 2. Metadata parameters</strong>. For more information about all related parameters, see <a href="~~450525~~">Parameters of model services</a>.</p>
+         * <p>The request body. For more information about the key request parameters, see <strong>Table 1. Request body parameters</strong> and <strong>Table 2. Metadata parameters</strong>. For more information about all related parameters, see <a href="https://help.aliyun.com/document_detail/450525.html">Parameters of model services</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Service deployment by using an image:

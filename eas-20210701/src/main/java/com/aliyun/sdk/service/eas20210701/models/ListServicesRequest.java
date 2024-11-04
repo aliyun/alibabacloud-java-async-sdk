@@ -290,7 +290,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the private gateway.</p>
+         * <p>The private gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
@@ -302,7 +302,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The name of the service group. For more information about how to query the name of a service group, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The name of the service group. For more information about how to query the name of a service group, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -400,7 +400,22 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>The server role.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DataLoader</li>
+         * <li>FrontEnd</li>
+         * <li>DataSet</li>
+         * <li>SDProxy</li>
+         * <li>LLMSscheduler</li>
+         * <li>ScalableJob</li>
+         * <li>LLMGateway</li>
+         * <li>Job</li>
+         * <li>Queue</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LLMGateway</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);

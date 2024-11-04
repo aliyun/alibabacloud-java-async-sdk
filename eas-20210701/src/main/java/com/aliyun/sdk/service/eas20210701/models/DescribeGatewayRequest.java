@@ -71,6 +71,7 @@ public class DescribeGatewayRequest extends Request {
 
         /**
          * <p>The region ID of the private gateway.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -82,7 +83,8 @@ public class DescribeGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the private gateway. For more information about the private gateway ID, see the private_gateway_id parameter returned by <a href="~~412133~~">ListResources</a>.</p>
+         * <p>The ID of the private gateway. For more information about the private gateway ID, see the private_gateway_id parameter returned by <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>

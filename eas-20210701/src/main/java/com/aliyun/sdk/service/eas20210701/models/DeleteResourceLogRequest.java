@@ -71,6 +71,7 @@ public class DeleteResourceLogRequest extends Request {
 
         /**
          * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -82,7 +83,8 @@ public class DeleteResourceLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-asdasdasd</p>

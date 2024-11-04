@@ -71,6 +71,7 @@ public class DescribeServiceDiagnosisRequest extends Request {
 
         /**
          * <p>The ID of the region where the service is deployed.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -83,6 +84,7 @@ public class DescribeServiceDiagnosisRequest extends Request {
 
         /**
          * <p>The service name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>

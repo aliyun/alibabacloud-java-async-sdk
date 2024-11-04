@@ -100,6 +100,7 @@ public class UpdateServiceInstanceRequest extends Request {
 
         /**
          * <p>The region ID of the service.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -111,7 +112,8 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -123,7 +125,8 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance name. For more information about how to query the instance name, see <a href="~~412108~~">ListServiceInstances</a>.</p>
+         * <p>The instance name. For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo-69xxxx4f4-5w9r9</p>

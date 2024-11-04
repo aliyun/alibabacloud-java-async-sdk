@@ -28,12 +28,17 @@ public class ListGatewayRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
+    private String resourceName;
+
     private ListGatewayRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
         this.gatewayName = builder.gatewayName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceName = builder.resourceName;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class ListGatewayRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return resourceName
+     */
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
     public static final class Builder extends Request.Builder<ListGatewayRequest, Builder> {
         private String gatewayId; 
         private String gatewayName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceName; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class ListGatewayRequest extends Request {
             this.gatewayName = request.gatewayName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceName = request.resourceName;
         } 
 
         /**
@@ -140,6 +154,18 @@ public class ListGatewayRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group. To obtain a resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-4gt8twzwllfo******</p>
+         */
+        public Builder resourceName(String resourceName) {
+            this.putQueryParameter("ResourceName", resourceName);
+            this.resourceName = resourceName;
             return this;
         }
 

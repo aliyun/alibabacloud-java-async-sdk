@@ -99,6 +99,7 @@ public class UpdateServiceRequest extends Request {
 
         /**
          * <p>The region ID of the service.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -110,7 +111,8 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -138,7 +140,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The request body. The body includes the request parameters that you want to update. For more information about the request parameters, see <a href="~~412086~~">CreateService</a>.</p>
+         * <p>The request body. The body includes the request parameters that you want to update. For more information about the request parameters, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{   &quot;name&quot;: &quot;foo&quot;,   &quot;model_path&quot;: &quot;<a href="http://path/to/model.tar.gz">http://path/to/model.tar.gz</a>&quot;,   &quot;processor&quot;: &quot;tensorflow_cpu&quot;,   &quot;metadata&quot;: {     &quot;instance&quot;: 2,     &quot;memory&quot;: 7000,     &quot;cpu&quot;: 4   } }</p>

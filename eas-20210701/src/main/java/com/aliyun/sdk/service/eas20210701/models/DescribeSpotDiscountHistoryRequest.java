@@ -70,6 +70,7 @@ public class DescribeSpotDiscountHistoryRequest extends Request {
 
         /**
          * <p>The type of the Elastic Algorithm Service (EAS) instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.4xlarge</p>

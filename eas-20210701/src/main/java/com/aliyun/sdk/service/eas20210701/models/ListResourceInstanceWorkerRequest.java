@@ -114,6 +114,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
 
         /**
          * <p>The ID of the cluster to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -125,7 +126,8 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-adfabas</p>
@@ -137,7 +139,8 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance in a resource group. For more information about how to query the instance name, see <a href="~~412129~~">ListResourceInstances</a>.</p>
+         * <p>The name of the instance in a resource group. For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cne10</p>

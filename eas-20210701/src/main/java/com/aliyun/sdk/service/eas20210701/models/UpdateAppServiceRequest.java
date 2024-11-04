@@ -169,6 +169,7 @@ public class UpdateAppServiceRequest extends Request {
 
         /**
          * <p>The region ID of the service.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -181,6 +182,7 @@ public class UpdateAppServiceRequest extends Request {
 
         /**
          * <p>The service name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>

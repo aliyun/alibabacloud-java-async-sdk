@@ -99,6 +99,7 @@ public class DeleteAclPolicyRequest extends Request {
 
         /**
          * <p>The region ID of the private gateway.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu</p>
@@ -111,6 +112,7 @@ public class DeleteAclPolicyRequest extends Request {
 
         /**
          * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>

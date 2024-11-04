@@ -101,6 +101,7 @@ public class UpdateResourceInstanceRequest extends Request {
 
         /**
          * <p>The ID of the region to which the instance belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -112,7 +113,8 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-asdasdasd</p>
@@ -124,7 +126,8 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. For more information about how to query the instance ID, see <a href="~~412129~~">ListResourceInstances</a>.</p>
+         * <p>The instance ID. For more information about how to query the instance ID, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-i-asdasdasd</p>
@@ -142,6 +145,7 @@ public class UpdateResourceInstanceRequest extends Request {
          * <li>Cordon: prohibits scheduling the service to this instance.</li>
          * <li>Drain: evicts the service that has been scheduled to this instance.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Cordon</p>

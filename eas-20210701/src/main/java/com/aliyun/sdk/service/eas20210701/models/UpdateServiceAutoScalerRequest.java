@@ -130,6 +130,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
 
         /**
          * <p>The region ID of the service.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -141,7 +142,8 @@ public class UpdateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -163,6 +165,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
 
         /**
          * <p>The maximum number of instances. The value must be greater than that of the min parameter.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -175,6 +178,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
 
         /**
          * <p>The minimum number of instances. The value must be greater than 0.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -187,6 +191,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
 
         /**
          * <p>The auto scaling policies.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
             this.putBodyParameter("scaleStrategies", scaleStrategies);
@@ -525,6 +530,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
              * <li>qps: the queries per second (QPS) for an individual instance.</li>
              * <li>cpu: the CPU utilization.</li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>qps</p>
@@ -551,6 +557,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
              * <li>If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.</li>
              * <li>If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.</li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

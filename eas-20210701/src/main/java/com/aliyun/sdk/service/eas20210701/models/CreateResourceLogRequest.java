@@ -101,6 +101,7 @@ public class CreateResourceLogRequest extends Request {
 
         /**
          * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -112,7 +113,8 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-asdasdasd</p>
@@ -124,7 +126,8 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * <p>The Logstore of Log Service. For more information about how to query a Logstore, see <a href="~~426970~~">ListLogStores</a>.</p>
+         * <p>The Logstore of Log Service. For more information about how to query a Logstore, see <a href="https://help.aliyun.com/document_detail/426970.html">ListLogStores</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>access_log</p>
@@ -136,7 +139,8 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * <p>The Log Service project that is associated with the resource group. For more information about how to query the project, see <a href="~~74955~~">ListProject</a>.</p>
+         * <p>The Log Service project that is associated with the resource group. For more information about how to query the project, see <a href="https://help.aliyun.com/document_detail/74955.html">ListProject</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-asdasdasd-sls</p>

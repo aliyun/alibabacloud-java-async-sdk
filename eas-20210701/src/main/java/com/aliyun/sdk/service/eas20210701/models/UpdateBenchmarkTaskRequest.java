@@ -85,6 +85,7 @@ public class UpdateBenchmarkTaskRequest extends Request {
 
         /**
          * <p>The ID of the region where the stress testing task is performed.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -97,6 +98,7 @@ public class UpdateBenchmarkTaskRequest extends Request {
 
         /**
          * <p>The name of the stress testing task.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>benchmark-larec-test-645c</p>

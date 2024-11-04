@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAclPolicyRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayId;
 
     @com.aliyun.core.annotation.Query
@@ -82,7 +84,8 @@ public class ListAclPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the private gateway.</p>
+         * <p>The region where the private gateway resides.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu</p>
@@ -95,6 +98,7 @@ public class ListAclPolicyRequest extends Request {
 
         /**
          * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>

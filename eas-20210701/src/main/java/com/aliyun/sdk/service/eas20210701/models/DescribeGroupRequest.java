@@ -71,6 +71,7 @@ public class DescribeGroupRequest extends Request {
 
         /**
          * <p>The ID of the region to which the service group belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -82,7 +83,8 @@ public class DescribeGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the service group. For more information about how to query the group name, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The name of the service group. For more information about how to query the group name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>

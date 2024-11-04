@@ -130,6 +130,7 @@ public class CreateServiceAutoScalerRequest extends Request {
 
         /**
          * <p>The ID of the region where the service is deployed.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -141,7 +142,8 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -163,6 +165,7 @@ public class CreateServiceAutoScalerRequest extends Request {
 
         /**
          * <p>The maximum number of instances in the service. The value of max must be greater than the value of min.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -175,6 +178,7 @@ public class CreateServiceAutoScalerRequest extends Request {
 
         /**
          * <p>The minimum number of instances in the service.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -187,6 +191,7 @@ public class CreateServiceAutoScalerRequest extends Request {
 
         /**
          * <p>The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
             this.putBodyParameter("scaleStrategies", scaleStrategies);
@@ -526,6 +531,7 @@ public class CreateServiceAutoScalerRequest extends Request {
              * <li>cpu: the cpu utilization.</li>
              * <li>gpu[util]: gpu utilization.</li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>qps</p>
@@ -553,6 +559,7 @@ public class CreateServiceAutoScalerRequest extends Request {
              * <li>If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</li>
              * <li>If you set metricName to gpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

@@ -86,6 +86,7 @@ public class DescribeServiceInstanceDiagnosisRequest extends Request {
 
         /**
          * <p>The ID of the region where the service is deployed.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -98,6 +99,7 @@ public class DescribeServiceInstanceDiagnosisRequest extends Request {
 
         /**
          * <p>The service name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -110,6 +112,7 @@ public class DescribeServiceInstanceDiagnosisRequest extends Request {
 
         /**
          * <p>The name of the instance that runs the service.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo-69xxxx4f4-5w9r9</p>

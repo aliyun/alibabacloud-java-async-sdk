@@ -132,7 +132,7 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the EAS service that corresponds to the stress testing task. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The name of the EAS service that corresponds to the stress testing task. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>test_bench_srv</p>

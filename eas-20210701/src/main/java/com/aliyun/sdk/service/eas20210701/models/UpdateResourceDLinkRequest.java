@@ -129,6 +129,7 @@ public class UpdateResourceDLinkRequest extends Request {
 
         /**
          * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -140,7 +141,8 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>iot</p>
@@ -165,6 +167,7 @@ public class UpdateResourceDLinkRequest extends Request {
 
         /**
          * <p>The ID of the security group to which the Elastic Compute Service (ECS) instance belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp149cedsfx2rfspd2d</p>
@@ -177,6 +180,7 @@ public class UpdateResourceDLinkRequest extends Request {
 
         /**
          * <p>The ID of the peer primary vSwitch. After this parameter is specified, an elastic network interface (ENI) is created in the VSwitch.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf66uio7md****</p>

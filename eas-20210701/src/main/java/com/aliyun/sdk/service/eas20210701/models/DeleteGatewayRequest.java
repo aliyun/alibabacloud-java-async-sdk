@@ -71,6 +71,7 @@ public class DeleteGatewayRequest extends Request {
 
         /**
          * <p>The region ID of the private gateway.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -83,6 +84,7 @@ public class DeleteGatewayRequest extends Request {
 
         /**
          * <p>The private gateway ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>

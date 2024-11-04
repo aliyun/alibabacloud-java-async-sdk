@@ -253,6 +253,7 @@ public class ListServiceInstancesRequest extends Request {
 
         /**
          * <p>The ID of the region where the service is deployed.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -264,7 +265,8 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>

@@ -100,6 +100,7 @@ public class UpdateServiceCronScalerRequest extends Request {
 
         /**
          * <p>The region ID of the service.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -111,7 +112,8 @@ public class UpdateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -133,6 +135,7 @@ public class UpdateServiceCronScalerRequest extends Request {
 
         /**
          * <p>The description of the CronHPA job.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder scaleJobs(java.util.List < ScaleJobs> scaleJobs) {
             this.putBodyParameter("ScaleJobs", scaleJobs);
@@ -218,6 +221,7 @@ public class UpdateServiceCronScalerRequest extends Request {
 
             /**
              * <p>The cron expression that is used to configure the execution time of the CronHPA job. For more information about how to configure cron expressions, see <strong>Description of special characters</strong> in this topic.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>0 18 * * * *</p>
@@ -229,6 +233,7 @@ public class UpdateServiceCronScalerRequest extends Request {
 
             /**
              * <p>The number of instances that you want to configure for the CronHPA job.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

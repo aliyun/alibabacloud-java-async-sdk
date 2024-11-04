@@ -190,6 +190,7 @@ public class CreateAppServiceRequest extends Request {
          * 
          * <!-- --></li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>LLM</p>
@@ -223,6 +224,7 @@ public class CreateAppServiceRequest extends Request {
 
         /**
          * <p>The number of instances.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -235,6 +237,7 @@ public class CreateAppServiceRequest extends Request {
 
         /**
          * <p>The service name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>
@@ -259,6 +262,7 @@ public class CreateAppServiceRequest extends Request {
          * <li>baichuan_13b_fp16</li>
          * <li>baichuan_7b_fp16</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>llama_7b_fp16</p>

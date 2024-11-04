@@ -134,7 +134,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. You can call the <a href="~~412111~~">CreateResource</a> operation to query the ID of the resource group.</p>
+         * <p>The ID of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation to query the ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-h7lcw24dyqztwxxxxxx</p>
@@ -146,7 +146,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource group. You can call the <a href="~~412111~~">CreateResource</a> operation to query the name of the resource group.</p>
+         * <p>The name of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation to query the name of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>MyResource</p>

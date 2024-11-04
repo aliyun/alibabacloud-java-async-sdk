@@ -71,6 +71,7 @@ public class ReinstallTenantAddonRequest extends Request {
 
         /**
          * <p>The region ID of the service.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -83,6 +84,7 @@ public class ReinstallTenantAddonRequest extends Request {
 
         /**
          * <p>The plug-in name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>prometheus_discovery</p>

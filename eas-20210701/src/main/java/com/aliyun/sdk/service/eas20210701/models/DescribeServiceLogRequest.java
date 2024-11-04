@@ -197,6 +197,7 @@ public class DescribeServiceLogRequest extends Request {
 
         /**
          * <p>The ID of the region where the service is deployed.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -208,7 +209,8 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>echo</p>
@@ -244,7 +246,7 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance that runs the service. For more information about how to query the instance name, see <a href="~~412108~~">ListServiceInstances</a>.</p>
+         * <p>The name of the instance that runs the service. For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>echo-da290ac8-7fckm</p>
@@ -256,7 +258,7 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the instance whose logs you want to query. For more information about how to query the IP address of an instance, see <a href="~~412108~~">ListServiceInstances</a>.</p>
+         * <p>The IP address of the instance whose logs you want to query. For more information about how to query the IP address of an instance, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.1</p>

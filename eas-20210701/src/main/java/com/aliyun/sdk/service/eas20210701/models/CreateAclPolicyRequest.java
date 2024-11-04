@@ -24,6 +24,7 @@ public class CreateAclPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclPolicyList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AclPolicyList> aclPolicyList;
 
     @com.aliyun.core.annotation.Query
@@ -99,6 +100,7 @@ public class CreateAclPolicyRequest extends Request {
 
         /**
          * <p>The region ID of the private gateway.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu</p>
@@ -111,6 +113,7 @@ public class CreateAclPolicyRequest extends Request {
 
         /**
          * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******</p>
@@ -123,6 +126,7 @@ public class CreateAclPolicyRequest extends Request {
 
         /**
          * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder aclPolicyList(java.util.List < AclPolicyList> aclPolicyList) {
             String aclPolicyListShrink = shrink(aclPolicyList, "AclPolicyList", "json");
@@ -161,6 +165,7 @@ public class CreateAclPolicyRequest extends Request {
         private String comment;
 
         @com.aliyun.core.annotation.NameInMap("Entry")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entry;
 
         private AclPolicyList(Builder builder) {
@@ -207,6 +212,7 @@ public class CreateAclPolicyRequest extends Request {
 
             /**
              * <p>The IP CIDR block in the VPC that can access the private gateway.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>10.23.XX.XX/32</p>

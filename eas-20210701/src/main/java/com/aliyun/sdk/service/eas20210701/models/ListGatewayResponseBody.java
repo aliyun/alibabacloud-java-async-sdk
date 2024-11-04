@@ -150,6 +150,9 @@ public class ListGatewayResponseBody extends TeaModel {
      * <p>ListGatewayResponseBody</p>
      */
     public static class Gateways extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -184,6 +187,7 @@ public class ListGatewayResponseBody extends TeaModel {
         private String updateTime;
 
         private Gateways(Builder builder) {
+            this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
             this.gatewayId = builder.gatewayId;
             this.gatewayName = builder.gatewayName;
@@ -203,6 +207,13 @@ public class ListGatewayResponseBody extends TeaModel {
 
         public static Gateways create() {
             return builder().build();
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         /**
@@ -283,6 +294,7 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String chargeType; 
             private String createTime; 
             private String gatewayId; 
             private String gatewayName; 
@@ -294,6 +306,21 @@ public class ListGatewayResponseBody extends TeaModel {
             private Integer replicas; 
             private String status; 
             private String updateTime; 
+
+            /**
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PrePaid: subscription.</li>
+             * <li>PostPaid: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
 
             /**
              * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
