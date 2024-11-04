@@ -281,7 +281,7 @@ public class GetRemindResponseBody extends TeaModel {
             private String bizProcessName; 
 
             /**
-             * <p>The workflow ID.</p>
+             * <p>The ID of the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>9527</p>
@@ -908,7 +908,7 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * AlertMethods.
+             * <p>The alert notification method.</p>
              */
             public Builder alertMethods(java.util.List < String > alertMethods) {
                 this.alertMethods = alertMethods;
@@ -916,7 +916,7 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTargets.
+             * <p>The description of the alert recipient.</p>
              */
             public Builder alertTargets(java.util.List < String > alertTargets) {
                 this.alertTargets = alertTargets;
@@ -1104,7 +1104,7 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * Webhooks.
+             * <p>The information about the webhook URL.</p>
              */
             public Builder webhooks(java.util.List < String > webhooks) {
                 this.webhooks = webhooks;

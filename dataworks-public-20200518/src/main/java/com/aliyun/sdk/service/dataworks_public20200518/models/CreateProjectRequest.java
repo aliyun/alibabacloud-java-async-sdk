@@ -30,7 +30,6 @@ public class CreateProjectRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectDescription")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String projectDescription;
 
     @com.aliyun.core.annotation.Query
@@ -237,7 +236,6 @@ public class CreateProjectRequest extends Request {
 
         /**
          * <p>The description of the workspace.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test_describe</p>
