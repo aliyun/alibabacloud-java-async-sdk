@@ -1057,11 +1057,17 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntranetAddressHcStatus")
         private String intranetAddressHcStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Ipv4LocalAddresses")
+        private java.util.List < String > ipv4LocalAddresses;
+
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
         @com.aliyun.core.annotation.NameInMap("Ipv6AddressHcStatus")
         private String ipv6AddressHcStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6LocalAddresses")
+        private java.util.List < String > ipv6LocalAddresses;
 
         private LoadBalancerAddresses(Builder builder) {
             this.address = builder.address;
@@ -1069,8 +1075,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             this.eipType = builder.eipType;
             this.intranetAddress = builder.intranetAddress;
             this.intranetAddressHcStatus = builder.intranetAddressHcStatus;
+            this.ipv4LocalAddresses = builder.ipv4LocalAddresses;
             this.ipv6Address = builder.ipv6Address;
             this.ipv6AddressHcStatus = builder.ipv6AddressHcStatus;
+            this.ipv6LocalAddresses = builder.ipv6LocalAddresses;
         }
 
         public static Builder builder() {
@@ -1117,6 +1125,13 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipv4LocalAddresses
+         */
+        public java.util.List < String > getIpv4LocalAddresses() {
+            return this.ipv4LocalAddresses;
+        }
+
+        /**
          * @return ipv6Address
          */
         public String getIpv6Address() {
@@ -1130,14 +1145,23 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             return this.ipv6AddressHcStatus;
         }
 
+        /**
+         * @return ipv6LocalAddresses
+         */
+        public java.util.List < String > getIpv6LocalAddresses() {
+            return this.ipv6LocalAddresses;
+        }
+
         public static final class Builder {
             private String address; 
             private String allocationId; 
             private String eipType; 
             private String intranetAddress; 
             private String intranetAddressHcStatus; 
+            private java.util.List < String > ipv4LocalAddresses; 
             private String ipv6Address; 
             private String ipv6AddressHcStatus; 
+            private java.util.List < String > ipv6LocalAddresses; 
 
             /**
              * <p>An IPv4 address.</p>
@@ -1200,6 +1224,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * Ipv4LocalAddresses.
+             */
+            public Builder ipv4LocalAddresses(java.util.List < String > ipv4LocalAddresses) {
+                this.ipv4LocalAddresses = ipv4LocalAddresses;
+                return this;
+            }
+
+            /**
              * <p>An IPv6 address.</p>
              * <p>This parameter takes effect only when <strong>AddressIPVersion</strong> is set to <strong>DualStack</strong>. The network type is determined by the value of <strong>Ipv6AddressType</strong>.</p>
              * 
@@ -1216,6 +1248,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
              */
             public Builder ipv6AddressHcStatus(String ipv6AddressHcStatus) {
                 this.ipv6AddressHcStatus = ipv6AddressHcStatus;
+                return this;
+            }
+
+            /**
+             * Ipv6LocalAddresses.
+             */
+            public Builder ipv6LocalAddresses(java.util.List < String > ipv6LocalAddresses) {
+                this.ipv6LocalAddresses = ipv6LocalAddresses;
                 return this;
             }
 
