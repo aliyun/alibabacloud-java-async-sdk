@@ -194,6 +194,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePopApiVersionListResponse> describePopApiVersionList(DescribePopApiVersionListRequest request);
 
     /**
+     * @param request the request parameters of DescribeProcessTaskCount  DescribeProcessTaskCountRequest
+     * @return DescribeProcessTaskCountResponse
+     */
+    CompletableFuture<DescribeProcessTaskCountResponse> describeProcessTaskCount(DescribeProcessTaskCountRequest request);
+
+    /**
      * @param request the request parameters of DescribeProcessTasks  DescribeProcessTasksRequest
      * @return DescribeProcessTasksResponse
      */
