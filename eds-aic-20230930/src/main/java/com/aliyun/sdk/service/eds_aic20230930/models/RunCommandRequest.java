@@ -17,6 +17,10 @@ public class RunCommandRequest extends Request {
     private String commandContent;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentEncoding")
+    private String contentEncoding;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
@@ -27,6 +31,7 @@ public class RunCommandRequest extends Request {
     private RunCommandRequest(Builder builder) {
         super(builder);
         this.commandContent = builder.commandContent;
+        this.contentEncoding = builder.contentEncoding;
         this.instanceIds = builder.instanceIds;
         this.timeout = builder.timeout;
     }
@@ -52,6 +57,13 @@ public class RunCommandRequest extends Request {
     }
 
     /**
+     * @return contentEncoding
+     */
+    public String getContentEncoding() {
+        return this.contentEncoding;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List < String > getInstanceIds() {
@@ -67,6 +79,7 @@ public class RunCommandRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunCommandRequest, Builder> {
         private String commandContent; 
+        private String contentEncoding; 
         private java.util.List < String > instanceIds; 
         private Long timeout; 
 
@@ -77,6 +90,7 @@ public class RunCommandRequest extends Request {
         private Builder(RunCommandRequest request) {
             super(request);
             this.commandContent = request.commandContent;
+            this.contentEncoding = request.contentEncoding;
             this.instanceIds = request.instanceIds;
             this.timeout = request.timeout;
         } 
@@ -87,6 +101,15 @@ public class RunCommandRequest extends Request {
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
             this.commandContent = commandContent;
+            return this;
+        }
+
+        /**
+         * ContentEncoding.
+         */
+        public Builder contentEncoding(String contentEncoding) {
+            this.putQueryParameter("ContentEncoding", contentEncoding);
+            this.contentEncoding = contentEncoding;
             return this;
         }
 
