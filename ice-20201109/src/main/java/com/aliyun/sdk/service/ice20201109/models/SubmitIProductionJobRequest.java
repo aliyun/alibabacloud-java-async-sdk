@@ -27,6 +27,10 @@ public class SubmitIProductionJobRequest extends Request {
     private String jobParams;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    private String modelId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -52,6 +56,7 @@ public class SubmitIProductionJobRequest extends Request {
         this.functionName = builder.functionName;
         this.input = builder.input;
         this.jobParams = builder.jobParams;
+        this.modelId = builder.modelId;
         this.name = builder.name;
         this.output = builder.output;
         this.scheduleConfig = builder.scheduleConfig;
@@ -94,6 +99,13 @@ public class SubmitIProductionJobRequest extends Request {
     }
 
     /**
+     * @return modelId
+     */
+    public String getModelId() {
+        return this.modelId;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -132,6 +144,7 @@ public class SubmitIProductionJobRequest extends Request {
         private String functionName; 
         private Input input; 
         private String jobParams; 
+        private String modelId; 
         private String name; 
         private Output output; 
         private ScheduleConfig scheduleConfig; 
@@ -147,6 +160,7 @@ public class SubmitIProductionJobRequest extends Request {
             this.functionName = request.functionName;
             this.input = request.input;
             this.jobParams = request.jobParams;
+            this.modelId = request.modelId;
             this.name = request.name;
             this.output = request.output;
             this.scheduleConfig = request.scheduleConfig;
@@ -182,6 +196,15 @@ public class SubmitIProductionJobRequest extends Request {
         public Builder jobParams(String jobParams) {
             this.putQueryParameter("JobParams", jobParams);
             this.jobParams = jobParams;
+            return this;
+        }
+
+        /**
+         * ModelId.
+         */
+        public Builder modelId(String modelId) {
+            this.putQueryParameter("ModelId", modelId);
+            this.modelId = modelId;
             return this;
         }
 
