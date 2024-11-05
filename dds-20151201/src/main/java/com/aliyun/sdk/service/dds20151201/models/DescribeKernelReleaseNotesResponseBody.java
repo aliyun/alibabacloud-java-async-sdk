@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKernelReleaseNotesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKernelReleaseNotesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of the version release notes.
+         * <p>The list of the version release notes.</p>
          */
         public Builder releaseNotes(ReleaseNotes releaseNotes) {
             this.releaseNotes = releaseNotes;
@@ -57,7 +58,10 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F01D4DDA-CB72-4083-B399-AF4642294FE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKernelReleaseNotesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKernelReleaseNotesResponseBody</p>
+     */
     public static class ReleaseNote extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KernelVersion")
         private String kernelVersion;
@@ -109,7 +119,10 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             private String releaseNote; 
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongodb_20180619_0.4.9</p>
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -117,7 +130,10 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             }
 
             /**
-             * The release notes.
+             * <p>The release notes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test release note.</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -131,6 +147,12 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeKernelReleaseNotesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKernelReleaseNotesResponseBody</p>
+     */
     public static class ReleaseNotes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private java.util.List < ReleaseNote> releaseNote;
@@ -158,7 +180,10 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             private java.util.List < ReleaseNote> releaseNote; 
 
             /**
-             * The release notes.
+             * <p>The release notes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test release note.</p>
              */
             public Builder releaseNote(java.util.List < ReleaseNote> releaseNote) {
                 this.releaseNote = releaseNote;

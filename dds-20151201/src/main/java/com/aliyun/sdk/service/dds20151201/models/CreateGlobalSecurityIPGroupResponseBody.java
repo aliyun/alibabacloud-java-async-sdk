@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalSecurityIPGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGlobalSecurityIPGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IP whitelist templates.
+         * <p>The IP whitelist templates.</p>
          */
         public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -57,7 +58,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGlobalSecurityIPGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGlobalSecurityIPGroupResponseBody</p>
+     */
     public static class GlobalSecurityIPGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GIpList")
         private String gIpList;
@@ -133,10 +143,13 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The IP addresses in the whitelist template.
-             * <p>
+             * <p>The IP addresses in the whitelist template.</p>
+             * <blockquote>
+             * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+             * </blockquote>
              * 
-             * > Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.
+             * <strong>example:</strong>
+             * <p>111.207.194.217,61.149.7.154</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -144,12 +157,15 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist template. The name must meet the following requirements:
-             * <p>
+             * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+             * <ul>
+             * <li>It can contain lowercase letters, digits, and underscores (_).</li>
+             * <li>It must start with a letter and end with a letter or digit.</li>
+             * <li>It must be 2 to 120 characters in length.</li>
+             * </ul>
              * 
-             * *   It can contain lowercase letters, digits, and underscores (\_).
-             * *   It must start with a letter and end with a letter or digit.
-             * *   It must be 2 to 120 characters in length.
+             * <strong>example:</strong>
+             * <p>developer</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -157,7 +173,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP whitelist template.
+             * <p>The ID of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-2ifynl1jfkdlhhxgva3q</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -165,7 +184,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

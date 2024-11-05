@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseNodePrivateNetworkAddressRequest} extends {@link RequestModel}
  *
  * <p>ReleaseNodePrivateNetworkAddressRequest</p>
@@ -176,13 +177,17 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The public endpoint type. Valid values:
-         * <p>
+         * <p>The public endpoint type. Valid values:</p>
+         * <ul>
+         * <li><strong>SRV</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only when you want to release an SRV endpoint.</p>
+         * </blockquote>
          * 
-         * *   **SRV**
-         * *   **Normal**
-         * 
-         * >  This parameter is valid only when you want to release an SRV endpoint.
+         * <strong>example:</strong>
+         * <p>SRV</p>
          */
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);
@@ -191,7 +196,11 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the sharded cluster instance.
+         * <p>The ID of the sharded cluster instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1a7009eb24****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -200,13 +209,17 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The network type of the internal endpoint. Valid values:
-         * <p>
+         * <p>The network type of the internal endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+         * <li><strong>Classic</strong>: classic network.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62135.html">DescribeShardingNetworkAddress</a> operation to query the network type of the internal endpoint.</p>
+         * </blockquote>
          * 
-         * *   **VPC**: virtual private cloud (VPC).
-         * *   **Classic**: classic network.
-         * 
-         * >  You can call the [DescribeShardingNetworkAddress](~~62135~~) operation to query the network type of the internal endpoint.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -215,10 +228,14 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the shard or Configserver node.
-         * <p>
+         * <p>The ID of the shard or Configserver node.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the shard or Configserver node.
+         * <strong>example:</strong>
+         * <p>d-bp128a003436****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

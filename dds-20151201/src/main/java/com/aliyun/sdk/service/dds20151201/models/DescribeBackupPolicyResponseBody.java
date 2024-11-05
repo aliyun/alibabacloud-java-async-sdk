@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPolicyResponseBody</p>
@@ -253,19 +254,22 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String srcRegion; 
 
         /**
-         * The frequency at which high-frequency backup is created. Valid values:
-         * <p>
+         * <p>The frequency at which high-frequency backup is created. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: High-frequency backup is disabled.</li>
+         * <li><strong>15</strong>: every 15 minutes.</li>
+         * <li><strong>30</strong>: every 30 minutes.</li>
+         * <li><strong>60</strong>: every hour.</li>
+         * <li><strong>120</strong>: every 2 hours.</li>
+         * <li><strong>180</strong>: every 3 hours.</li>
+         * <li><strong>240</strong>: every 4 hours.</li>
+         * <li><strong>360</strong>: every 6 hours.</li>
+         * <li><strong>480</strong>: every 8 hours.</li>
+         * <li><strong>720</strong>: every 12 hours.</li>
+         * </ul>
          * 
-         * *   **-1**: High-frequency backup is disabled.
-         * *   **15**: every 15 minutes.
-         * *   **30**: every 30 minutes.
-         * *   **60**: every hour.
-         * *   **120**: every 2 hours.
-         * *   **180**: every 3 hours.
-         * *   **240**: every 4 hours.
-         * *   **360**: every 6 hours.
-         * *   **480**: every 8 hours.
-         * *   **720**: every 12 hours.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder backupInterval(Integer backupInterval) {
             this.backupInterval = backupInterval;
@@ -273,7 +277,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of the backup data. Unit: day.
+         * <p>The retention period of the backup data. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -281,7 +288,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * BackupRetentionPolicyOnClusterDeletion.
+         * <p>The backup retention policy configured for the instance. Valid values:</p>
+         * <ol>
+         * <li>0: All backup sets are immediately deleted when the instance is released.</li>
+         * <li>1: Automatic backup is performed and the backup set is retained for a long period of time when the instance is released.</li>
+         * <li>2: Automatic backup is performed and all backup sets are retained for a long period of time when the instance is released.</li>
+         * </ol>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Retain the backup files of an ApsaraDB for MongoDB instance for a long period of time</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder backupRetentionPolicyOnClusterDeletion(Integer backupRetentionPolicyOnClusterDeletion) {
             this.backupRetentionPolicyOnClusterDeletion = backupRetentionPolicyOnClusterDeletion;
@@ -289,7 +305,20 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * CrossBackupPeriod.
+         * <p>The retention period of Cross-regional backup.
+         * Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday</p>
          */
         public Builder crossBackupPeriod(String crossBackupPeriod) {
             this.crossBackupPeriod = crossBackupPeriod;
@@ -297,7 +326,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * CrossLogRetentionType.
+         * <p>The retention type of Cross-regional  log backup.</p>
+         * <ul>
+         * <li>delay : retain the backup for a period of time.</li>
+         * <li>never : retain the backup permanently.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>delay</p>
          */
         public Builder crossLogRetentionType(String crossLogRetentionType) {
             this.crossLogRetentionType = crossLogRetentionType;
@@ -305,7 +341,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * CrossLogRetentionValue.
+         * <p>The retention time of Cross-regional log backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder crossLogRetentionValue(Integer crossLogRetentionValue) {
             this.crossLogRetentionValue = crossLogRetentionValue;
@@ -313,7 +352,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * CrossRetentionType.
+         * <p>The retention type of Cross-regional backup.</p>
+         * <ul>
+         * <li>delay : retain the backup for a period of time.</li>
+         * <li>never : retain the backup permanently.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>delay</p>
          */
         public Builder crossRetentionType(String crossRetentionType) {
             this.crossRetentionType = crossRetentionType;
@@ -321,7 +367,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * CrossRetentionValue.
+         * <p>The retention time of Cross-regional backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder crossRetentionValue(Integer crossRetentionValue) {
             this.crossRetentionValue = crossRetentionValue;
@@ -329,7 +378,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * DestRegion.
+         * <p>The region ID of the cross-regional backup..</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder destRegion(String destRegion) {
             this.destRegion = destRegion;
@@ -337,11 +389,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log backup feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): The log backup feature is disabled.</li>
+         * <li><strong>1</strong>: The log backup feature is enabled.</li>
+         * </ul>
          * 
-         * *   **0** (default): The log backup feature is disabled.
-         * *   **1**: The log backup feature is enabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -349,7 +404,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnableCrossLogBackup.
+         * <p>Whether to turn on cross-regional log backup.</p>
+         * <ul>
+         * <li>1: turn on . Used for sharded cluster.</li>
+         * <li>0: turn off. Used for replicate set.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableCrossLogBackup(Integer enableCrossLogBackup) {
             this.enableCrossLogBackup = enableCrossLogBackup;
@@ -357,7 +419,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of high-frequency backups. Unit: day.
+         * <p>The retention period of high-frequency backups. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder highFrequencyBackupRetention(String highFrequencyBackupRetention) {
             this.highFrequencyBackupRetention = highFrequencyBackupRetention;
@@ -365,7 +430,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which log backups are retained. Valid values: 7 to 730.
+         * <p>The number of days for which log backups are retained. Valid values: 7 to 730.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -373,16 +441,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The day of a week on which to back up data. Valid values:
-         * <p>
+         * <p>The day of a week on which to back up data. Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
+         * <strong>example:</strong>
+         * <p>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -390,7 +461,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The time range during which the backup was created. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
+         * <p>The time range during which the backup was created. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:00Z-10:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -398,7 +472,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredNextBackupTime.
+         * <p>The time of next standard backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-19T19:11Z</p>
          */
         public Builder preferredNextBackupTime(String preferredNextBackupTime) {
             this.preferredNextBackupTime = preferredNextBackupTime;
@@ -406,7 +483,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A9464CA-F7DC-5434-90B1-DF7F197C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -414,11 +494,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The snapshot backup type. Valid values:
-         * <p>
+         * <p>The snapshot backup type. Valid values:</p>
+         * <ul>
+         * <li><strong>Flash</strong>: single-digit second backup</li>
+         * <li><strong>Standard</strong> (default): standard backup</li>
+         * </ul>
          * 
-         * *   **Flash**: single-digit second backup
-         * *   **Standard** (default): standard backup
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder snapshotBackupType(String snapshotBackupType) {
             this.snapshotBackupType = snapshotBackupType;
@@ -426,7 +509,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SrcRegion.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder srcRegion(String srcRegion) {
             this.srcRegion = srcRegion;

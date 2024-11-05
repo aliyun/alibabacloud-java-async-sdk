@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTaskInfoRequest} extends {@link RequestModel}
  *
  * <p>ModifyTaskInfoRequest</p>
@@ -141,7 +142,10 @@ public class ModifyTaskInfoRequest extends Request {
         } 
 
         /**
-         * A action-related parameter. This parameter can be extended based on your business requirements. This parameter value varies with the value of the TaskAction parameter.
+         * <p>A action-related parameter. This parameter can be extended based on your business requirements. This parameter value varies with the value of the TaskAction parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;recoverMode&quot;:&quot;immediate&quot;}</p>
          */
         public Builder actionParams(String actionParams) {
             this.putQueryParameter("ActionParams", actionParams);
@@ -150,7 +154,11 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,7 +185,11 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * The name of the step visible to the user.
+         * <p>The name of the step visible to the user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec_task</p>
          */
         public Builder stepName(String stepName) {
             this.putQueryParameter("StepName", stepName);
@@ -186,7 +198,11 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * The action name that corresponds to the state described in the actionInfo parameter of the [DescribeHistoryTasks](~~2639186~~) operation.
+         * <p>The action name that corresponds to the state described in the actionInfo parameter of the <a href="https://help.aliyun.com/document_detail/2639186.html">DescribeHistoryTasks</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modifySwitchTime</p>
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);
@@ -195,7 +211,11 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * The task ID. Separate multiple IDs with commas (,). You can specify up to 10 task IDs.
+         * <p>The task ID. Separate multiple IDs with commas (,). You can specify up to 10 task IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-83br18hlpdrw3uxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

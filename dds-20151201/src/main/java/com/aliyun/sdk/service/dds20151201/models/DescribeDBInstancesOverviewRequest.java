@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesOverviewRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesOverviewRequest</p>
@@ -264,11 +265,14 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         } 
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -277,7 +281,10 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values: **5.0**, **4.4**, **4.2**, **4.0**, and **3.4**.
+         * <p>The database engine version of the instance. Valid values: <strong>5.0</strong>, <strong>4.4</strong>, <strong>4.2</strong>, <strong>4.0</strong>, and <strong>3.4</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -286,12 +293,15 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:
-         * <p>
+         * <p>The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></li>
+         * </ul>
          * 
-         * *   [Standalone instance types](~~311407~~)
-         * *   [Replica set instance types](~~311410~~)
-         * *   [Sharded cluster instance types](~~311414~~)
+         * <strong>example:</strong>
+         * <p>dds.mongo.2xlarge</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -300,14 +310,18 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which you want to query the overview information.
-         * <p>
+         * <p>The ID of the instance for which you want to query the overview information.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you do not specify this parameter, the overview information of all instances within this account is queried.</p>
+         * </li>
+         * <li><p>Separate the instance IDs with commas (,).</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If you do not specify this parameter, the overview information of all instances within this account is queried.
-         * 
-         * *   Separate the instance IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>dds-bp12c5b040dc****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -316,7 +330,10 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The state of the instance. For more information about valid values, see [Instance states](~~63870~~).
+         * <p>The state of the instance. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -325,17 +342,22 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The architecture of the instance. Valid values:
-         * <p>
+         * <p>The architecture of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>sharding</strong>: sharded cluster instance</li>
+         * <li><strong>replicate</strong>: replica set or standalone instance</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>To query the overview information of a sharded cluster instance, you must set the parameter to <strong>sharding</strong>.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the overview information of all instances within this account is queried.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **sharding**: sharded cluster instance
-         * *   **replicate**: replica set or standalone instance
-         * 
-         * > 
-         * 
-         * *   To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.
-         * 
-         * *   If you do not specify this parameter, the overview information of all instances within this account is queried.
+         * <strong>example:</strong>
+         * <p>replicate</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -344,11 +366,14 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Classic</strong>: classic network</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
+         * </ul>
          * 
-         * *   **Classic**: classic network
-         * *   **VPC**: Virtual Private Cloud (VPC)
+         * <strong>example:</strong>
+         * <p>Classic</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -375,7 +400,11 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -384,7 +413,10 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. For more information, see [View the basic information of a resource group](~~151181~~).
+         * <p>The ID of the resource group to which the instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -411,7 +443,10 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the instance is connected.
+         * <p>The ID of the vSwitch to which the instance is connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -420,7 +455,10 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the VPC in which the instance is deployed.
+         * <p>The ID of the VPC in which the instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -429,7 +467,10 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

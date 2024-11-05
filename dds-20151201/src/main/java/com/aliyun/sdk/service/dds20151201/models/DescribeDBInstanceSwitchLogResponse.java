@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSwitchLogResponse} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceSwitchLogResponse</p>

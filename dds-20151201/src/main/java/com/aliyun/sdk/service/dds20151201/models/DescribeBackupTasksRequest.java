@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupTasksRequest</p>
@@ -161,10 +162,13 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The ID of the backup task.
-         * <p>
+         * <p>The ID of the backup task.</p>
+         * <blockquote>
+         * <p> If you call the <a href="https://help.aliyun.com/document_detail/61075.html">CreateBackup</a> operation to perform a manual backup task, you can set this parameter to the returned backup ID to query the backup progress of the task.</p>
+         * </blockquote>
          * 
-         * >  If you call the [CreateBackup](~~61075~~) operation to perform a manual backup task, you can set this parameter to the returned backup ID to query the backup progress of the task.
+         * <strong>example:</strong>
+         * <p>170034</p>
          */
         public Builder backupJobId(String backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -173,7 +177,11 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-2zeb2d64cb46xxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

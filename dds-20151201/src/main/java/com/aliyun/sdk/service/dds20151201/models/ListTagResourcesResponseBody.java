@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -61,10 +62,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The token used to start the next query.
-         * <p>
+         * <p>The token used to start the next query.</p>
+         * <blockquote>
+         * <p> If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter in the next query.</p>
+         * </blockquote>
          * 
-         * >  If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter in the next query.
+         * <strong>example:</strong>
+         * <p>212db86****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -72,7 +76,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96017AF2-9AB1-4BC9-88D2-7966B3CD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,7 +87,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the tags of the instance.
+         * <p>Details about the tags of the instance.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -93,6 +100,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -156,7 +169,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the resource. It is the ID of the ApsaraDB for MongoDB instance.
+             * <p>The ID of the resource. It is the ID of the ApsaraDB for MongoDB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dds-bp17e7a04960****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -164,7 +180,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type. The return value is fixed to **ALIYUN: KVSTORE: INSTANCE**, indicating an ApsaraDB for MongoDB instance.
+             * <p>The resource type. The return value is fixed to <strong>ALIYUN: KVSTORE: INSTANCE</strong>, indicating an ApsaraDB for MongoDB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::DDS::INSTANCE</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -172,7 +191,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Environment</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -180,7 +202,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -194,6 +219,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagResource")
         private java.util.List < TagResource> tagResource;

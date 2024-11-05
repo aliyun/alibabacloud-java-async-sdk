@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceKernelVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBInstanceKernelVersionRequest</p>
@@ -36,6 +37,11 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchMode")
+    @com.aliyun.core.annotation.Validation(maxLength = 1)
+    private String switchMode;
+
     private UpgradeDBInstanceKernelVersionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -44,6 +50,7 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.switchMode = builder.switchMode;
     }
 
     public static Builder builder() {
@@ -101,6 +108,13 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return switchMode
+     */
+    public String getSwitchMode() {
+        return this.switchMode;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeDBInstanceKernelVersionRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -108,6 +122,7 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String switchMode; 
 
         private Builder() {
             super();
@@ -121,6 +136,7 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.switchMode = request.switchMode;
         } 
 
         /**
@@ -133,7 +149,11 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp2235****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -174,6 +194,15 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SwitchMode.
+         */
+        public Builder switchMode(String switchMode) {
+            this.putQueryParameter("SwitchMode", switchMode);
+            this.switchMode = switchMode;
             return this;
         }
 

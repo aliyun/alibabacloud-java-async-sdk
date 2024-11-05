@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceRequest} extends {@link RequestModel}
  *
  * <p>DescribePriceRequest</p>
@@ -223,7 +224,10 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * The business information. This is an additional parameter.
+         * <p>The business information. This is an additional parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AccountPassword&quot;:&quot;Pw123456&quot;,&quot;DBInstanceDescription&quot;:&quot;test&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -232,18 +236,21 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The code of the instance. Valid values:
-         * <p>
+         * <p>The code of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>dds</strong>: a replica set instance that uses the pay-as-you-go billing method</li>
+         * <li><strong>badds</strong>: a replica set instance that uses the subscription billing method</li>
+         * <li><strong>dds_sharding</strong>: a sharded cluster instance that uses the pay-as-you-go billing method</li>
+         * <li><strong>badds_sharding</strong>: a sharded cluster instance that uses the subscription billing method</li>
+         * <li><strong>badds_sharding_intl</strong>: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</li>
+         * <li><strong>dds_sharding_intl</strong>: a sharded cluster instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</li>
+         * <li><strong>badds_sharding_jp</strong>: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)</li>
+         * <li><strong>badds_intl</strong>: a replica set instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</li>
+         * <li><strong>dds_intl</strong>: a replica set instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</li>
+         * </ul>
          * 
-         * *   **dds**: a replica set instance that uses the pay-as-you-go billing method
-         * *   **badds**: a replica set instance that uses the subscription billing method
-         * *   **dds_sharding**: a sharded cluster instance that uses the pay-as-you-go billing method
-         * *   **badds_sharding**: a sharded cluster instance that uses the subscription billing method
-         * *   **badds_sharding_intl**: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)
-         * *   **dds_sharding_intl**: a sharded cluster instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)
-         * *   **badds_sharding_jp**: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)
-         * *   **badds_intl**: a replica set instance that uses the subscription billing method and is available on the International site (alibabacloud.com)
-         * *   **dds_intl**: a replica set instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)
+         * <strong>example:</strong>
+         * <p>badds</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -252,11 +259,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Specifies whether to use coupons. Default value: null. Valid values:
-         * <p>
+         * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong> or <strong>null</strong>: uses coupons.</li>
+         * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</li>
+         * </ul>
          * 
-         * *   **default** or **null**: uses coupons.
-         * *   **youhuiquan_promotion_option_id_for_blank**: does not use coupons.
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -265,7 +275,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * A JSON string that contains the details of the instance. For more information about the parameter and sample JSON formats, see [DescribePrice](~~197291~~).
+         * <p>A JSON string that contains the details of the instance. For more information about the parameter and sample JSON formats, see <a href="https://help.aliyun.com/document_detail/197291.html">DescribePrice</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;DBInstanceId&quot;:&quot;dds-bp1b6e54e7cc****&quot;, &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, &quot;ZoneId&quot;:&quot;cn-hangzhou-h&quot;, &quot;Engine&quot;:&quot;MongoDB&quot;, &quot;EngineVersion&quot;:&quot; 5.0&quot;, &quot;DBInstanceClass&quot;:&quot;mdb.shard.2x.xlarge.d&quot;, &quot;DBInstanceStorage&quot;:30, &quot;ChargeType&quot;:&quot;PrePaid&quot;, &quot;Period&quot;:1, &quot;StorageType&quot;:&quot;cloud_essd1&quot; } ]</p>
          */
         public Builder DBInstances(String DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
@@ -274,11 +288,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the OrderParams parameter. Valid values:
-         * <p>
+         * <p>Specifies whether to return the OrderParams parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false** (default)
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder orderParamOut(String orderParamOut) {
             this.putQueryParameter("OrderParamOut", orderParamOut);
@@ -287,12 +304,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The order type. Valid values:
-         * <p>
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li><strong>BUY</strong></li>
+         * <li><strong>UPGRADE</strong></li>
+         * <li><strong>RENEW</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **BUY**
-         * *   **UPGRADE**
-         * *   **RENEW**
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -319,7 +340,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The code of the service. Default value: **dds**.
+         * <p>The code of the service. Default value: <strong>dds</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -328,7 +352,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -337,7 +364,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+         * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

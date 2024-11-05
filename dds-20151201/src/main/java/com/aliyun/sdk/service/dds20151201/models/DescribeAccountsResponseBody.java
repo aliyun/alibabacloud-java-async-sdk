@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the account.
+         * <p>The details of the account.</p>
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -57,7 +58,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B562A65B-39AB-4EE8-8635-5A222054FB35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class Account extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
@@ -145,7 +155,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String DBInstanceId; 
 
             /**
-             * The description of the account.
+             * <p>The description of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin</p>
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -153,7 +166,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -161,11 +177,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the account. Valid values:
-             * <p>
+             * <p>The status of the account. Valid values:</p>
+             * <ul>
+             * <li><strong>Unavailable</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
              * 
-             * *   **Unavailable**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -173,14 +192,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the account. Valid values:
-             * <p>
+             * <p>The role of the account. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: shard node</li>
+             * <li><strong>cs</strong>: Configserver node</li>
+             * <li><strong>mongos</strong>: mongos node</li>
+             * <li><strong>logic</strong>: sharded cluster instance</li>
+             * <li><strong>normal</strong>: replica set instance</li>
+             * </ul>
              * 
-             * *   **db**: shard node
-             * *   **cs**: Configserver node
-             * *   **mongos**: mongos node
-             * *   **logic**: sharded cluster instance
-             * *   **normal**: replica set instance
+             * <strong>example:</strong>
+             * <p>mongos</p>
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;
@@ -188,7 +210,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the account belongs.
+             * <p>The ID of the instance to which the account belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dds-bp1fd530f271****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -202,6 +227,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
         private java.util.List < Account> account;

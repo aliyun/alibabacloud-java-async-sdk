@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyAuditPolicyRequest</p>
@@ -191,7 +192,10 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * The request source for the audit log feature. Set the value to **Console**.
+         * <p>The request source for the audit log feature. Set the value to <strong>Console</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Console</p>
          */
         public Builder auditLogSwitchSource(String auditLogSwitchSource) {
             this.putQueryParameter("AuditLogSwitchSource", auditLogSwitchSource);
@@ -200,11 +204,15 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the audit log feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the audit log feature. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **enable**
-         * *   **disabled**
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -213,7 +221,11 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1785659e3f****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -258,13 +270,17 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * The type of the audit log feature. Valid values:
-         * <p>
+         * <p>The type of the audit log feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Trail</strong>: free trial edition.</li>
+         * <li><strong>Standard</strong>: official edition.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>Trail</strong>. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to <strong>Standard</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Trail**: free trial edition.
-         * *   **Standard**: official edition.
-         * 
-         * > The default value is **Trail**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to **Standard**.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -273,7 +289,10 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * The log retention period. Valid values: 1 to 365 days. Default value: 30 days.
+         * <p>The log retention period. Valid values: 1 to 365 days. Default value: 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder storagePeriod(Integer storagePeriod) {
             this.putQueryParameter("StoragePeriod", storagePeriod);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRenewalPriceRequest} extends {@link RequestModel}
  *
  * <p>DescribeRenewalPriceRequest</p>
@@ -161,7 +162,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The business information. This is an additional parameter.
+         * <p>The business information. This is an additional parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -170,7 +174,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.
+         * <p>The coupon code. Default value: <strong>youhuiquan_promotion_option_id_for_blank</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -179,7 +186,11 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp12c5b040dc****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

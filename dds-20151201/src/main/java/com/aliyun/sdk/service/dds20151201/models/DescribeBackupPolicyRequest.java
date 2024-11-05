@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupPolicyRequest</p>
@@ -175,7 +176,11 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp16cb162771****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -184,7 +189,14 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The architecture of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>sharding</strong>: sharded cluster instance</li>
+         * <li><strong>replicate</strong>: replica set or standalone instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sharding</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -238,7 +250,10 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * SrcRegion.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder srcRegion(String srcRegion) {
             this.putQueryParameter("SrcRegion", srcRegion);

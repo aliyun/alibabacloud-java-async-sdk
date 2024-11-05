@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateAvailableZoneRequest} extends {@link RequestModel}
  *
  * <p>MigrateAvailableZoneRequest</p>
@@ -181,10 +182,14 @@ public class MigrateAvailableZoneRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>If the instance is deployed in a VPC, you must specify the <strong>Vswitch</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bp1ece71ff2f****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -193,13 +198,15 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * The time when the instance is migrated to the destination zone. Valid values:
-         * <p>
+         * <p>The time when the instance is migrated to the destination zone. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: The instance is immediately migrated to the destination zone.</li>
+         * <li><strong>MaintainTime</strong>: The instance is migrated to the destination zone during the maintenance window of the instance.</li>
+         * </ul>
+         * <p>Default value: <strong>Immediately</strong>.</p>
          * 
-         * *   **Immediately**: The instance is immediately migrated to the destination zone.
-         * *   **MaintainTime**: The instance is migrated to the destination zone during the maintenance window of the instance.
-         * 
-         * Default value: **Immediately**.
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -208,7 +215,10 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * HiddenZoneId.
+         * <p>The ID of the destination hidden zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-n</p>
          */
         public Builder hiddenZoneId(String hiddenZoneId) {
             this.putQueryParameter("HiddenZoneId", hiddenZoneId);
@@ -253,7 +263,10 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * SecondaryZoneId.
+         * <p>The ID of the destination secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder secondaryZoneId(String secondaryZoneId) {
             this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
@@ -262,10 +275,13 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch in the destination zone.
-         * <p>
+         * <p>The ID of the vSwitch in the destination zone.</p>
+         * <blockquote>
+         * <p>If the instance is deployed in a VPC, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * > If the instance is deployed in a VPC, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>vsw-bp1buy0h9myt5i9e7****</p>
          */
         public Builder vswitch(String vswitch) {
             this.putQueryParameter("Vswitch", vswitch);
@@ -274,14 +290,19 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * The ID of the destination zone.
-         * <p>
+         * <p>The ID of the destination zone.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The source zone and the destination zone belong to the same region.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The source zone and the destination zone belong to the same region.
-         * 
-         * *   You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

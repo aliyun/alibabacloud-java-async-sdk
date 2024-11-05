@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceNetExpireTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceNetExpireTimeRequest</p>
@@ -162,7 +163,11 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * The retention period of the classic network endpoint of the instance. Valid values: **14**, **30**, **60**, and **120**. Unit: day.
+         * <p>The retention period of the classic network endpoint of the instance. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: day.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder classicExpendExpiredDays(Integer classicExpendExpiredDays) {
             this.putQueryParameter("ClassicExpendExpiredDays", classicExpendExpiredDays);
@@ -171,7 +176,10 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * The endpoint of the instance.
+         * <p>The endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -180,7 +188,11 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

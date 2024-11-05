@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceAttributeRequest</p>
@@ -189,7 +190,11 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -198,7 +203,10 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Set the value to **MongoDB**.
+         * <p>The database engine. Set the value to <strong>MongoDB</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -207,11 +215,14 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to query instances that are deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: queries instances that are running.</li>
+         * <li><strong>true</strong>: queries instance that are deleted.</li>
+         * </ul>
          * 
-         * - **false**: queries the details of running instances.
-         * - **true**: queries the details of deleted instances.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDelete(Boolean isDelete) {
             this.putQueryParameter("IsDelete", isDelete);
@@ -238,10 +249,13 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information, see [View the basic information of a resource group](~~151181~~).
-         * <p>
+         * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+         * <blockquote>
+         * <p>This parameter is available only if you use the China site (aliyun.com).</p>
+         * </blockquote>
          * 
-         * > This parameter is available only if you use the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

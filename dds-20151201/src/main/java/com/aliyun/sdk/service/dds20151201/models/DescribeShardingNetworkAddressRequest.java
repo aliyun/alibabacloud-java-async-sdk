@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeShardingNetworkAddressRequest} extends {@link RequestModel}
  *
  * <p>DescribeShardingNetworkAddressRequest</p>
@@ -147,7 +148,11 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -156,10 +161,13 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the mongos, shard, or Configserver node in the sharded cluster instance.
-         * <p>
+         * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.
+         * <strong>example:</strong>
+         * <p>d-bpxxxxxxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

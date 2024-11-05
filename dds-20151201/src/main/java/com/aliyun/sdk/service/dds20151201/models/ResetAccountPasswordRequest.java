@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetAccountPasswordRequest} extends {@link RequestModel}
  *
  * <p>ResetAccountPasswordRequest</p>
@@ -177,7 +178,11 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The account whose password needs to be reset. Set the value to **root**.
+         * <p>The account whose password needs to be reset. Set the value to <strong>root</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -186,11 +191,15 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The new password.
-         * <p>
+         * <p>The new password.</p>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * <li>The password must be 8 to 32 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`
-         * *   The password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>Ali!123456</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -199,11 +208,14 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The role of the instance.
-         * <p>
+         * <p>The role of the instance.</p>
+         * <ul>
+         * <li>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</li>
+         * <li>If the instance is a replica set instance, you can leave this parameter empty or set the parameter to normal.</li>
+         * </ul>
          * 
-         * *   If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.
-         * *   If the instance is a replica set instance, you can leave this parameter empty or set the parameter to normal.
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -212,7 +224,11 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

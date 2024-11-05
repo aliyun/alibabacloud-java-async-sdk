@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNodeRequest} extends {@link RequestModel}
  *
  * <p>CreateNodeRequest</p>
@@ -290,19 +291,25 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The username of the account. The username must meet the following requirements:
-         * <p>
+         * <p>The username of the account. The username must meet the following requirements:</p>
+         * <ul>
+         * <li>The username starts with a lowercase letter.</li>
+         * <li>The username can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>The username must be 4 to 16 characters in length.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Keywords cannot be used as accounts.</p>
+         * </li>
+         * <li><p>This account is granted the read-only permissions.</p>
+         * </li>
+         * <li><p>The username and password need to be set if you apply for an endpoint for the shard node for the first time.</p>
+         * </li>
+         * </ul>
          * 
-         * *   The username starts with a lowercase letter.
-         * *   The username can contain lowercase letters, digits, and underscores (\_).
-         * *   The username must be 4 to 16 characters in length.
-         * 
-         * > 
-         * 
-         * *   Keywords cannot be used as accounts.
-         * 
-         * *   This account is granted the read-only permissions.
-         * *   The username and password need to be set if you apply for an endpoint for the shard node for the first time.
+         * <strong>example:</strong>
+         * <p>ceshi</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -311,14 +318,18 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The password of the account. The password must meet the following requirements:
-         * <p>
+         * <p>The password of the account. The password must meet the following requirements:</p>
+         * <ul>
+         * <li>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>These special characters include ! @ # $ % ^ &amp; * ( ) _ + - =</li>
+         * <li>The password is 8 to 32 characters in length.</li>
+         * </ul>
+         * <blockquote>
+         * <p> ApsaraDB for MongoDB does not allow you to reset the password of an account.</p>
+         * </blockquote>
          * 
-         * *   The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   These special characters include ! @ # $ % ^ & \* ( ) \_ + - =
-         * *   The password is 8 to 32 characters in length.
-         * 
-         * >  ApsaraDB for MongoDB does not allow you to reset the password of an account.
+         * <strong>example:</strong>
+         * <p>123+abc</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -327,13 +338,17 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): enables automatic payment. Make sure that you have sufficient balance within your account.</li>
+         * <li><strong>false</strong>: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; Orders. On the <strong>Orders</strong> page, find the order that you want to pay for and complete the payment.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required only when the billing method of the instance is subscription.</p>
+         * </blockquote>
          * 
-         * *   **true** (default): enables automatic payment. Make sure that you have sufficient balance within your account.
-         * *   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > Orders. On the **Orders** page, find the order that you want to pay for and complete the payment.
-         * 
-         * >  This parameter is required only when the billing method of the instance is subscription.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -342,7 +357,10 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The business information. This is an additional parameter.
+         * <p>The business information. This is an additional parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -351,7 +369,10 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -360,7 +381,10 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.
+         * <p>The coupon code. Default value: <strong>youhuiquan_promotion_option_id_for_blank</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -369,7 +393,11 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The ID of the sharded cluster instance.
+         * <p>The ID of the sharded cluster instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp11501cd7b5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -378,7 +406,11 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The instance type of the shard or mongos node. For more information, see [Instance types](~~57141~~).
+         * <p>The instance type of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.shard.mid</p>
          */
         public Builder nodeClass(String nodeClass) {
             this.putQueryParameter("NodeClass", nodeClass);
@@ -387,12 +419,14 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The disk capacity of the node. Unit: GB.
-         * <p>
+         * <p>The disk capacity of the node. Unit: GB.</p>
+         * <p>Valid values: <strong>10</strong> to <strong>2000</strong>. The value must be a multiple of 10.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the NodeType parameter is set to <strong>shard</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **10** to **2000**. The value must be a multiple of 10.
-         * 
-         * >  This parameter is required only when the NodeType parameter is set to **shard**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nodeStorage(Integer nodeStorage) {
             this.putQueryParameter("NodeStorage", nodeStorage);
@@ -401,11 +435,15 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The type of the node. Valid values:
-         * <p>
+         * <p>The type of the node. Valid values:</p>
+         * <ul>
+         * <li><strong>shard</strong>: shard node</li>
+         * <li><strong>mongos</strong>: mongos node</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **shard**: shard node
-         * *   **mongos**: mongos node
+         * <strong>example:</strong>
+         * <p>shard</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -432,12 +470,14 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * The number of read-only nodes in the shard node.
-         * <p>
+         * <p>The number of read-only nodes in the shard node.</p>
+         * <p>Valid values: <strong>0</strong>, 1, 2, 3, 4, and <strong>5</strong>. Default value: <strong>0</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is available only for ApsaraDB for MongoDB instances that are purchased on the China site (aliyun.com).</p>
+         * </blockquote>
          * 
-         * Valid values: **0**, 1, 2, 3, 4, and **5**. Default value: **0**.
-         * 
-         * >  This parameter is available only for ApsaraDB for MongoDB instances that are purchased on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder readonlyReplicas(Integer readonlyReplicas) {
             this.putQueryParameter("ReadonlyReplicas", readonlyReplicas);
@@ -464,11 +504,14 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * Specifies whether to apply for an endpoint for the shard node. Valid values:
-         * <p>
+         * <p>Specifies whether to apply for an endpoint for the shard node. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: applies for an endpoint for the shard node.</li>
+         * <li><strong>false</strong> (default): does not apply for an endpoint for the shard node.</li>
+         * </ul>
          * 
-         * *   **true**: applies for an endpoint for the shard node.
-         * *   **false** (default): does not apply for an endpoint for the shard node.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder shardDirect(Boolean shardDirect) {
             this.putQueryParameter("ShardDirect", shardDirect);

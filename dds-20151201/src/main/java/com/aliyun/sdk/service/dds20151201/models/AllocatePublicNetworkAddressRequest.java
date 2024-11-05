@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocatePublicNetworkAddressRequest} extends {@link RequestModel}
  *
  * <p>AllocatePublicNetworkAddressRequest</p>
@@ -147,10 +148,14 @@ public class AllocatePublicNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance
-         * <p>
+         * <p>The ID of the instance</p>
+         * <blockquote>
+         * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -159,10 +164,13 @@ public class AllocatePublicNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the mongos, shard, or Configserver node in the sharded cluster instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.
-         * <p>
+         * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you specify the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>s-bp18e6d84ae3****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

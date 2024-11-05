@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceSSLRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceSSLRequest</p>
@@ -148,7 +149,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp2235****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -193,12 +198,16 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The operation on the SSL feature. Valid values:
-         * <p>
+         * <p>The operation on the SSL feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Open</strong>: enables SSL encryption.</li>
+         * <li><strong>Close</strong>: disables SSL encryption.</li>
+         * <li><strong>Update</strong>: updates the SSL certificate.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Open**: enables SSL encryption.
-         * *   **Close**: disables SSL encryption.
-         * *   **Update**: updates the SSL certificate.
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         public Builder SSLAction(String SSLAction) {
             this.putQueryParameter("SSLAction", SSLAction);

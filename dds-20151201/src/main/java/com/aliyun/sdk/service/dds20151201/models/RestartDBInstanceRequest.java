@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>RestartDBInstanceRequest</p>
@@ -147,7 +148,11 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -156,10 +161,13 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the shard or mongos node in the sharded cluster instance.
-         * <p>
+         * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <p>The sharded cluster instance is restarted if you do not specify this parameter.</p>
+         * </blockquote>
          * 
-         * > The sharded cluster instance is restarted if you do not specify this parameter.
+         * <strong>example:</strong>
+         * <p>d-bpxxxxxxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

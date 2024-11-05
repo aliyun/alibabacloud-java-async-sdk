@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The regions.
+         * <p>The regions.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E46C22C-D3B7-4DB8-9C76-63851BE68E20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Zone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcEnabled")
         private Boolean vpcEnabled;
@@ -121,11 +131,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * Indicates whether a virtual private cloud (VPC) is supported. Valid values:
-             * <p>
+             * <p>Indicates whether a virtual private cloud (VPC) is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: VPC is supported.</li>
+             * <li><strong>false</strong>: VPC is not supported.</li>
+             * </ul>
              * 
-             * *   **true**: VPC is supported.
-             * *   **false**: VPC is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder vpcEnabled(Boolean vpcEnabled) {
                 this.vpcEnabled = vpcEnabled;
@@ -133,7 +146,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -141,13 +157,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the zone.
-             * <p>
+             * <p>The name of the zone.</p>
+             * <p>The value of the ZoneName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the ZoneId parameter in the response is <strong>cn-hangzhou-h</strong>, the following values are returned for the ZoneName parameter:</p>
+             * <ul>
+             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, the value <strong>H</strong> is returned for the ZoneName parameter.</li>
+             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, the value <strong>Hangzhou Zone H</strong> is returned for the ZoneName parameter.</li>
+             * </ul>
              * 
-             * The value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the ZoneId parameter in the response is **cn-hangzhou-h**, the following values are returned for the ZoneName parameter:
-             * 
-             * *   If the value of the **AcceptLanguage** parameter is **zh**, the value **H** is returned for the ZoneName parameter.
-             * *   If the value of the **AcceptLanguage** parameter is **en**, the value **Hangzhou Zone H** is returned for the ZoneName parameter.
+             * <strong>example:</strong>
+             * <p>Hangzhou Zone H</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -161,6 +179,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < Zone> zone;
@@ -202,6 +226,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class DdsRegion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndPoint")
         private String endPoint;
@@ -265,12 +295,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Zones zones; 
 
             /**
-             * The public endpoint of the region.
-             * <p>
+             * <p>The public endpoint of the region.</p>
+             * <p>For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following value is returned for the EndPoint parameter:</p>
+             * <ul>
+             * <li>mongodb.aliyuncs.com</li>
+             * </ul>
              * 
-             * For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following value is returned for the EndPoint parameter:
-             * 
-             * *   mongodb.aliyuncs.com
+             * <strong>example:</strong>
+             * <p>mongodb.aliyuncs.com</p>
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -278,7 +310,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -286,13 +321,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
-             * <p>
+             * <p>The name of the region.</p>
+             * <p>The value of the LocalName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the RegionId parameter in the response is <strong>cn-hangzhou</strong>, the following values are returned for the LocalName parameter:</p>
+             * <ul>
+             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, the value <strong>华东1（杭州）</strong> is returned for the LocalName parameter.</li>
+             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, the value <strong>China (Hangzhou)</strong> is returned for the LocalName parameter.</li>
+             * </ul>
              * 
-             * The value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is **cn-hangzhou**, the following values are returned for the LocalName parameter:
-             * 
-             * *   If the value of the **AcceptLanguage** parameter is **zh**, the value **华东1（杭州）** is returned for the LocalName parameter.
-             * *   If the value of the **AcceptLanguage** parameter is **en**, the value **China (Hangzhou)** is returned for the LocalName parameter.
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -300,7 +337,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The zones.
+             * <p>The zones.</p>
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;
@@ -314,6 +351,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DdsRegion")
         private java.util.List < DdsRegion> ddsRegion;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityIpsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private String securityIps; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC724D23-2962-479E-ABB1-606C935AE7FD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information of IP whitelists.
+         * <p>An array that consists of the information of IP whitelists.</p>
          */
         public Builder securityIpGroups(SecurityIpGroups securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -77,7 +81,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The IP addresses in the default whitelist.
+         * <p>The IP addresses in the default whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.xxx.xxx.xx,100.xxx.xxx.0/24</p>
          */
         public Builder securityIps(String securityIps) {
             this.securityIps = securityIps;
@@ -90,6 +97,12 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIpsResponseBody</p>
+     */
     public static class SecurityIpGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityIpGroupAttribute")
         private String securityIpGroupAttribute;
@@ -141,7 +154,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * The attribute of the IP address whitelist.
+             * <p>The attribute of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
                 this.securityIpGroupAttribute = securityIpGroupAttribute;
@@ -149,7 +165,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist.
+             * <p>The name of the IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -157,7 +176,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist.
+             * <p>The name of the IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.xxx.xxx.xx,100.xxx.xxx.0/24</p>
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;
@@ -171,6 +193,12 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIpsResponseBody</p>
+     */
     public static class SecurityIpGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityIpGroup")
         private java.util.List < SecurityIpGroup> securityIpGroup;

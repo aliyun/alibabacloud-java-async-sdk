@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -187,7 +188,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +201,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -205,7 +213,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The details of the tags bound to the instance.
+         * <p>The details of the tags bound to the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -232,7 +244,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to **INSTANCE**.
+         * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -241,7 +257,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that are attached to the resources.
+         * <p>The tags that are attached to the resources.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -256,6 +273,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -297,13 +320,16 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag.
-             * <p>
+             * <p>The key of tag.</p>
+             * <p>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</p>
+             * <ul>
+             * <li><strong>Tag.1.Key</strong> specifies the key of the first tag.</li>
+             * <li><strong>Tag.2.Key</strong> specifies the key of the second tag.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:
-             * 
-             * - **Tag.1.Key** specifies the key of the first tag.
-             * - **Tag.2.Key** specifies the key of the second tag.
+             * <strong>example:</strong>
+             * <p>Development team</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -311,13 +337,16 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag.
-             * <p>
+             * <p>The value of tag.</p>
+             * <p>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</p>
+             * <ul>
+             * <li><strong>Tag.1.Value</strong> specifies the value of the first tag.</li>
+             * <li><strong>Tag.2.Value</strong> specifies the value of the second tag.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:
-             * 
-             * - **Tag.1.Value** specifies the value of the first tag.
-             * - **Tag.2.Value** specifies the value of the second tag.
+             * <strong>example:</strong>
+             * <p>MongoDB 4.0 environment</p>
              */
             public Builder value(String value) {
                 this.value = value;

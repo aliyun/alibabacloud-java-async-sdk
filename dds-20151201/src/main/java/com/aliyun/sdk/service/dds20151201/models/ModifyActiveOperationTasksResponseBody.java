@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyActiveOperationTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyActiveOperationTasksResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the O\&M tasks. Multiple task IDs are separated by commas (,).
+         * <p>The IDs of the O&amp;M tasks. Multiple task IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111,22222</p>
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -57,7 +61,10 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAAE9DDA-65FD-584C-A378-F1F24676****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

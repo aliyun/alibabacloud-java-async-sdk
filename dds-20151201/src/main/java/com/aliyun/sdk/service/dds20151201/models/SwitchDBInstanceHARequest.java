@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchDBInstanceHARequest} extends {@link RequestModel}
  *
  * <p>SwitchDBInstanceHARequest</p>
@@ -176,7 +177,11 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The ID of the instance
+         * <p>The ID of the instance</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -185,10 +190,13 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The ID of the shard node in the sharded cluster instance.
-         * <p>
+         * <p>The ID of the shard node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <p>You must specify this parameter if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * > You must specify this parameter if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>d-bpxxxxxxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -233,14 +241,18 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The IDs of the roles who switch the primary and secondary nodes for the instance. You can call the [DescribeRoleZoneInfo](~~123802~~) operation to view the IDs and information of roles of nodes.
-         * <p>
+         * <p>The IDs of the roles who switch the primary and secondary nodes for the instance. You can call the <a href="https://help.aliyun.com/document_detail/123802.html">DescribeRoleZoneInfo</a> operation to view the IDs and information of roles of nodes.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Separate role IDs with commas (,). If this parameter is not specified, the primary and secondary nodes are switched.</p>
+         * </li>
+         * <li><p>If you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance, the roles who switch the primary and secondary nodes for the instance must belong to one shard node.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   Separate role IDs with commas (,). If this parameter is not specified, the primary and secondary nodes are switched.
-         * 
-         * *   If you set the **DBInstanceId** parameter to the ID of a sharded cluster instance, the roles who switch the primary and secondary nodes for the instance must belong to one shard node.
+         * <strong>example:</strong>
+         * <p>972xxxx,972xxxx</p>
          */
         public Builder roleIds(String roleIds) {
             this.putQueryParameter("RoleIds", roleIds);
@@ -249,11 +261,14 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The time when the primary and secondary nodes are switched. Valid values:
-         * <p>
+         * <p>The time when the primary and secondary nodes are switched. Valid values:</p>
+         * <ul>
+         * <li>0: The primary and secondary nodes are immediately switched.</li>
+         * <li>1: The primary and secondary nodes are switched during the O&amp;M time period.</li>
+         * </ul>
          * 
-         * *   0: The primary and secondary nodes are immediately switched.
-         * *   1: The primary and secondary nodes are switched during the O\&M time period.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(Integer switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

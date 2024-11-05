@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRecoverTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceRecoverTimeResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
         private java.util.List < RestoreRanges> restoreRanges; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The time ranges to which data can be restored. The time ranges include those used for point-in-time data restoration.
+         * <p>The time ranges to which data can be restored. The time ranges include those used for point-in-time data restoration.</p>
          */
         public Builder restoreRanges(java.util.List < RestoreRanges> restoreRanges) {
             this.restoreRanges = restoreRanges;
@@ -70,6 +74,12 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceRecoverTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRecoverTimeResponseBody</p>
+     */
     public static class RestoreRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RestoreBeginTime")
         private String restoreBeginTime;
@@ -121,7 +131,10 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             private String restoreType; 
 
             /**
-             * The beginning of the time range to which data can be restored.
+             * <p>The beginning of the time range to which data can be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T19:33:20Z</p>
              */
             public Builder restoreBeginTime(String restoreBeginTime) {
                 this.restoreBeginTime = restoreBeginTime;
@@ -129,7 +142,10 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to which data can be restored.
+             * <p>The end of the time range to which data can be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T19:43:20Z</p>
              */
             public Builder restoreEndTime(String restoreEndTime) {
                 this.restoreEndTime = restoreEndTime;
@@ -137,10 +153,13 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The method used to restore data. Valid value:
-             * <p>
+             * <p>The method used to restore data. Valid value:</p>
+             * <ul>
+             * <li>PointInTime (default): Data is restored to a point in time.</li>
+             * </ul>
              * 
-             * *   PointInTime (default): Data is restored to a point in time.
+             * <strong>example:</strong>
+             * <p>PointInTime</p>
              */
             public Builder restoreType(String restoreType) {
                 this.restoreType = restoreType;

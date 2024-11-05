@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -167,10 +168,13 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token used to start the next query to retrieve more results.
-         * <p>
+         * <p>The token used to start the next query to retrieve more results.</p>
+         * <blockquote>
+         * <p> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <strong>NextToken</strong> value returned in the previous query to perform the query again.</p>
+         * </blockquote>
          * 
-         * >  This parameter is not required in the first query. If not all results are returned in one query, you can pass in the **NextToken** value returned in the previous query to perform the query again.
+         * <strong>example:</strong>
+         * <p>212db86****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -197,7 +201,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -206,7 +214,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You must specify this parameter or the Tag parameter.
+         * <p>The resource IDs. You must specify this parameter or the Tag parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -233,7 +244,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to **INSTANCE**.
+         * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -242,7 +257,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that are attached to the resources.
+         * <p>The tags that are attached to the resources.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -257,6 +272,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -296,7 +317,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag.
+             * <p>The key of tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,7 +328,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag.
+             * <p>The value of tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder value(String value) {
                 this.value = value;

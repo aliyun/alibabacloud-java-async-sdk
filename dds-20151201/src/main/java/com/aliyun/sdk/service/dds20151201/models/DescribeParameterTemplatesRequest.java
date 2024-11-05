@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeParameterTemplatesRequest</p>
@@ -153,7 +154,11 @@ public class DescribeParameterTemplatesRequest extends Request {
         } 
 
         /**
-         * The database engine of the instance. Set the value to **MongoDB**.
+         * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodb</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -162,14 +167,18 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values:
-         * <p>
+         * <p>The database engine version of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>5.0</strong></li>
+         * <li><strong>4.4</strong></li>
+         * <li><strong>4.2</strong></li>
+         * <li><strong>4.0</strong></li>
+         * <li><strong>3.4</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **5.0**
-         * *   **4.4**
-         * *   **4.2**
-         * *   **4.0**
-         * *   **3.4**
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -196,7 +205,10 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -223,20 +235,23 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The role of the instance. Valid values:
-         * <p>
+         * <p>The role of the instance. Valid values:</p>
+         * <ol>
+         * <li><p>db:  a shard node.</p>
+         * </li>
+         * <li><p>cs:  a Configserver node.</p>
+         * </li>
+         * <li><p>mongos:  a mongos node.</p>
+         * </li>
+         * <li><p>normal: a replica set node.</p>
+         * </li>
+         * <li><p>physical: a standalone node.</p>
+         * </li>
+         * </ol>
+         * <p>default: normal</p>
          * 
-         * 1. db:  a shard node.
-         * 
-         * 1. cs:  a Configserver node.
-         * 
-         * 1. mongos:  a mongos node.
-         * 
-         * 1. normal: a replica set node.
-         * 
-         * 1. physical: a standalone node.
-         * 
-         * default: normal
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);

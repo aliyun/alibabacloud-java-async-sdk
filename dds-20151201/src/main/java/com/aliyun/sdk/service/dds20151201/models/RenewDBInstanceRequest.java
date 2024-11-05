@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewDBInstanceRequest</p>
@@ -218,13 +219,15 @@ public class RenewDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</li>
+         * <li><strong>false</strong>: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click <strong>Expenses</strong> and select <strong>User Center</strong> from the drop-down list. The User Center page appears. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</li>
+         * </ul>
+         * <p>Default value: <strong>true</strong>.</p>
          * 
-         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-         * *   **false**: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click **Expenses** and select **User Center** from the drop-down list. The User Center page appears. In the left-side navigation pane, choose **Order Management** > Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.
-         * 
-         * Default value: **true**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -233,13 +236,15 @@ public class RenewDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -248,7 +253,10 @@ public class RenewDBInstanceRequest extends Request {
         }
 
         /**
-         * The business information.
+         * <p>The business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -257,7 +265,10 @@ public class RenewDBInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -266,11 +277,14 @@ public class RenewDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to use coupons. Default value: null. Valid values:
-         * <p>
+         * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong> or <strong>null</strong>: uses coupons.</li>
+         * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</li>
+         * </ul>
          * 
-         * *   **default** or **null**: uses coupons.
-         * *   **youhuiquan_promotion_option_id_for_blank**: does not use coupons.
+         * <strong>example:</strong>
+         * <p>1111111111111111</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -279,7 +293,11 @@ public class RenewDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -306,7 +324,11 @@ public class RenewDBInstanceRequest extends Request {
         }
 
         /**
-         * The subscription period of the instance. Unit: month. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, and 36**.
+         * <p>The subscription period of the instance. Unit: month. Valid values: <strong>1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, and 36</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);

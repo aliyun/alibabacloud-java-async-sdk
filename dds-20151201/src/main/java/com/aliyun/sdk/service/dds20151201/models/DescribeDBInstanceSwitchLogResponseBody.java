@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSwitchLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceSwitchLogResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-uf68f1b5a57exxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -105,7 +109,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * The primary/secondary switchover logs.
+         * <p>The primary/secondary switchover logs.</p>
          */
         public Builder logItems(java.util.List < LogItems> logItems) {
             this.logItems = logItems;
@@ -113,7 +117,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * The page number returned.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +128,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECBCA991-XXXX-XXXX-834C-B3E8007F33AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of primary/secondary switching entries.
+         * <p>The number of primary/secondary switching entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceSwitchLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceSwitchLogResponseBody</p>
+     */
     public static class LogItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
@@ -213,7 +235,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
             private String switchTime; 
 
             /**
-             * The ID of the replica set instance or the ID of the node on which a primary/secondary switchover is performed.
+             * <p>The ID of the replica set instance or the ID of the node on which a primary/secondary switchover is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dds-uf68f1b5a57exxxx</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -221,15 +246,18 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
             }
 
             /**
-             * The code that indicates the reason of a primary/secondary switchover. Valid values:
-             * <p>
+             * <p>The code that indicates the reason of a primary/secondary switchover. Valid values:</p>
+             * <ul>
+             * <li>USER_CONSOLE_OPERATION: The switchover is manually performed.</li>
+             * <li>OPERATION_AND_MAINTENANCE: Potential risks exist.</li>
+             * <li>MACHINE_DOWNTIME: The host is offline.</li>
+             * <li>PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.</li>
+             * <li>SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.</li>
+             * <li>MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.</li>
+             * </ul>
              * 
-             * *   USER_CONSOLE_OPERATION: The switchover is manually performed.
-             * *   OPERATION_AND_MAINTENANCE: Potential risks exist.
-             * *   MACHINE_DOWNTIME: The host is offline.
-             * *   PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.
-             * *   SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.
-             * *   MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.
+             * <strong>example:</strong>
+             * <p>USER_CONSOLE_OPERATION</p>
              */
             public Builder switchCode(String switchCode) {
                 this.switchCode = switchCode;
@@ -237,7 +265,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
             }
 
             /**
-             * The switchover status. Valid values: **1** and **0**. The value 1 indicates a successful primary/secondary switchover and the value 0 indicates a failed primary/secondary switchover.
+             * <p>The switchover status. Valid values: <strong>1</strong> and <strong>0</strong>. The value 1 indicates a successful primary/secondary switchover and the value 0 indicates a failed primary/secondary switchover.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder switchStatus(String switchStatus) {
                 this.switchStatus = switchStatus;
@@ -245,7 +276,10 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when a primary/secondary switchover was performed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The point in time when a primary/secondary switchover was performed. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-07T18:00:00Z</p>
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableResourceResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private SupportedDBTypes supportedDBTypes; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>344EE51D-8850-4935-B68B-58A8F4DCE3BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The supported database types.
+         * <p>The supported database types.</p>
          */
         public Builder supportedDBTypes(SupportedDBTypes supportedDBTypes) {
             this.supportedDBTypes = supportedDBTypes;
@@ -70,6 +74,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class DBInstanceStorageRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
@@ -121,7 +131,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private Integer step; 
 
             /**
-             * The maximum storage capacity. Unit: GB.
+             * <p>The maximum storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16000</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -129,7 +142,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum storage capacity. Unit: GB.
+             * <p>The minimum storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -137,7 +153,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The step size for adjusting the storage capacity. Unit: GB.
+             * <p>The step size for adjusting the storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -151,6 +170,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceStorageRange")
         private DBInstanceStorageRange DBInstanceStorageRange;
@@ -202,7 +227,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String instanceClassRemark; 
 
             /**
-             * The storage capacity range of the instance.
+             * <p>The storage capacity range of the instance.</p>
              */
             public Builder DBInstanceStorageRange(DBInstanceStorageRange DBInstanceStorageRange) {
                 this.DBInstanceStorageRange = DBInstanceStorageRange;
@@ -210,7 +235,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family.
+             * <p>The instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mdb.shard.2x.xlarge.d</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -218,7 +246,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4 cores, 8 GB (Dedicated) (Current instance type: mdb.shard.2x.xlarge.d (4 cores, 8 GB (Dedicated cloud-disk), maximum connections: 3000, maximum IOPS: min{1800 + 50 × Storage capacity, 21000}))</p>
              */
             public Builder instanceClassRemark(String instanceClassRemark) {
                 this.instanceClassRemark = instanceClassRemark;
@@ -232,6 +263,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResource")
         private java.util.List < AvailableResource> availableResource;
@@ -273,6 +310,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedNodeType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResources")
         private AvailableResources availableResources;
@@ -324,7 +367,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * The details of the available resources.
+             * <p>The details of the available resources.</p>
              */
             public Builder availableResources(AvailableResources availableResources) {
                 this.availableResources = availableResources;
@@ -332,7 +375,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance.
+             * <p>The network type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkTypes(String networkTypes) {
                 this.networkTypes = networkTypes;
@@ -340,7 +386,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes in the instance.
+             * <p>The number of nodes in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -354,6 +403,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedNodeTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedNodeType")
         private java.util.List < SupportedNodeType> supportedNodeType;
@@ -395,6 +450,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedEngine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
@@ -434,7 +495,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private SupportedNodeTypes supportedNodeTypes; 
 
             /**
-             * The storage engine of the instance.
+             * <p>The storage engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WiredTiger</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -442,7 +506,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The supported instance types.
+             * <p>The supported instance types.</p>
              */
             public Builder supportedNodeTypes(SupportedNodeTypes supportedNodeTypes) {
                 this.supportedNodeTypes = supportedNodeTypes;
@@ -456,6 +520,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedEngines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEngine")
         private java.util.List < SupportedEngine> supportedEngine;
@@ -497,6 +567,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedEngineVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEngines")
         private SupportedEngines supportedEngines;
@@ -536,7 +612,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The supported storage engines.
+             * <p>The supported storage engines.</p>
              */
             public Builder supportedEngines(SupportedEngines supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -544,7 +620,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * <p>The database engine version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -558,6 +637,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedEngineVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEngineVersion")
         private java.util.List < SupportedEngineVersion> supportedEngineVersion;
@@ -599,6 +684,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -650,7 +741,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -658,7 +752,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The supported storage engine versions.
+             * <p>The supported storage engine versions.</p>
              */
             public Builder supportedEngineVersions(SupportedEngineVersions supportedEngineVersions) {
                 this.supportedEngineVersions = supportedEngineVersions;
@@ -666,7 +760,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -680,6 +777,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableZone")
         private java.util.List < AvailableZone> availableZone;
@@ -721,6 +824,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedDBType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableZones")
         private AvailableZones availableZones;
@@ -760,7 +869,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String dbType; 
 
             /**
-             * The available zones.
+             * <p>The available zones.</p>
              */
             public Builder availableZones(AvailableZones availableZones) {
                 this.availableZones = availableZones;
@@ -768,11 +877,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The architecture of the instance. Valid values:
-             * <p>
+             * <p>The architecture of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: replica set instance</li>
+             * <li><strong>sharding</strong>: sharded cluster instance</li>
+             * </ul>
              * 
-             * *   **normal**: replica set instance
-             * *   **sharding**: sharded cluster instance
+             * <strong>example:</strong>
+             * <p>sharding</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -786,6 +898,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedDBTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedDBType")
         private java.util.List < SupportedDBType> supportedDBType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNodeSpecBatchResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyNodeSpecBatchResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyNodeSpecBatchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21012719476****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class ModifyNodeSpecBatchResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0637BC25-6895-5500-871F-1127CA34****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

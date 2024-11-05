@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIpsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityIpsRequest</p>
@@ -147,7 +148,11 @@ public class DescribeSecurityIpsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -192,7 +197,10 @@ public class DescribeSecurityIpsRequest extends Request {
         }
 
         /**
-         * Whether to display DAS whitelist information.
+         * <p>Whether to display DAS whitelist information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showHDMIps(Boolean showHDMIps) {
             this.putQueryParameter("ShowHDMIps", showHDMIps);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceVpcAuthModeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceVpcAuthModeRequest</p>
@@ -161,7 +162,11 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -170,10 +175,13 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * The ID of the mongos node in the sharded cluster instance.
-         * <p>
+         * <p>The ID of the mongos node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <p> This parameter can be used only when the instance type is sharded cluster.</p>
+         * </blockquote>
          * 
-         * >  This parameter can be used only when the instance type is sharded cluster.
+         * <strong>example:</strong>
+         * <p>s-bpxxxxxxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -218,7 +226,10 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * Specify whether to disable password-free access over VPC. Set the value to **Close**.
+         * <p>Specify whether to disable password-free access over VPC. Set the value to <strong>Close</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         public Builder vpcAuthMode(String vpcAuthMode) {
             this.putQueryParameter("VpcAuthMode", vpcAuthMode);

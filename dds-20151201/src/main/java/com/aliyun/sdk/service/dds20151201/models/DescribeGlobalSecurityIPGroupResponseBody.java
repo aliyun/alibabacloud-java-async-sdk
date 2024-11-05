@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalSecurityIPGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGlobalSecurityIPGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The global IP whitelist templates.
+         * <p>The global IP whitelist templates.</p>
          */
         public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -57,7 +58,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
+         * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72651AF9-7897-41A7-8B67-6C15C7F26A0A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGlobalSecurityIPGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalSecurityIPGroupResponseBody</p>
+     */
     public static class GlobalSecurityIPGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstances")
         private java.util.List < String > DBInstances;
@@ -145,7 +155,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The instances associated with the global whitelist template.
+             * <p>The instances associated with the global whitelist template.</p>
              */
             public Builder DBInstances(java.util.List < String > DBInstances) {
                 this.DBInstances = DBInstances;
@@ -153,10 +163,13 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the whitelist template.
-             * <p>
+             * <p>The IP addresses in the whitelist template.</p>
+             * <blockquote>
+             * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+             * </blockquote>
              * 
-             * > Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.
+             * <strong>example:</strong>
+             * <p>117.12.202.19</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -164,7 +177,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist template.
+             * <p>The name of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_baoxian_k8s_bj</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -172,7 +188,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP whitelist template.
+             * <p>The ID of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-sdgwqyp4f5j1x3qk7yvm</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -180,7 +199,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

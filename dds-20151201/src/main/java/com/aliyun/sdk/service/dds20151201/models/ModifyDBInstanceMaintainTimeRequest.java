@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceMaintainTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceMaintainTimeRequest</p>
@@ -163,7 +164,11 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpac2345****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,10 +177,14 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * The end time of the maintenance window. Specify the time in the ISO 8601 standard in the *HH:mm*Z format. The time must be in UTC.
-         * <p>
+         * <p>The end time of the maintenance window. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time of the maintenance window.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time of the maintenance window.
+         * <strong>example:</strong>
+         * <p>02:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -184,7 +193,11 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * The start time of the maintenance window. Specify the time in the ISO 8601 standard in the *HH:mm*Z format. The time must be in UTC.
+         * <p>The start time of the maintenance window. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);

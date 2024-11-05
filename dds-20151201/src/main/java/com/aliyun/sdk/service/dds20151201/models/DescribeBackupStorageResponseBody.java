@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupStorageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupStorageResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The free quota for the storage capacity used for backup. Unit: bytes.
+         * <p>The free quota for the storage capacity used for backup. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42949672960</p>
          */
         public Builder freeSize(Long freeSize) {
             this.freeSize = freeSize;
@@ -81,10 +85,13 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The storage capacity used for the full backup. Unit: bytes.
-         * <p>
+         * <p>The storage capacity used for the full backup. Unit: bytes.</p>
+         * <blockquote>
+         * <p> Instances that use cloud disks support snapshot backup. The size of the storage used for the current full backup is the size of the snapshot chain.</p>
+         * </blockquote>
          * 
-         * >  Instances that use cloud disks support snapshot backup. The size of the storage used for the current full backup is the size of the snapshot chain.
+         * <strong>example:</strong>
+         * <p>789221621</p>
          */
         public Builder fullStorageSize(Long fullStorageSize) {
             this.fullStorageSize = fullStorageSize;
@@ -92,7 +99,10 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The storage capacity used for the log backup. Unit: bytes.
+         * <p>The storage capacity used for the log backup. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7892216</p>
          */
         public Builder logStorageSize(Long logStorageSize) {
             this.logStorageSize = logStorageSize;
@@ -100,7 +110,10 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D648B367-15B6-1B42-BD4B-4XXXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

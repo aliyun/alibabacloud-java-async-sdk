@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceDescriptionRequest</p>
@@ -162,16 +163,21 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the instance.
-         * <p>
+         * <p>The name of the instance.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </li>
+         * <li><p>It must start with a letter.</p>
+         * </li>
+         * <li><p>It must be 2 to 256 characters in length, and can contain letters, underscores (_), hyphens (-), and digits.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The name cannot start with `http://` or `https://`.
-         * 
-         * *   It must start with a letter.
-         * 
-         * *   It must be 2 to 256 characters in length, and can contain letters, underscores (\_), hyphens (-), and digits.
+         * <strong>example:</strong>
+         * <p>testdata</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -180,10 +186,14 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bp2234****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -192,10 +202,13 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the shard or mongos node in the sharded cluster instance.
-         * <p>
+         * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <p> This parameter is valid only if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>d-bp89067****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

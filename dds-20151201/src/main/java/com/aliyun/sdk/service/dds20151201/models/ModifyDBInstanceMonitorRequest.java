@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceMonitorRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceMonitorRequest</p>
@@ -148,7 +149,11 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -157,7 +162,11 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         }
 
         /**
-         * The collection frequency of monitoring data. Valid values: **1** or **300**. Unit: seconds.
+         * <p>The collection frequency of monitoring data. Valid values: <strong>1</strong> or <strong>300</strong>. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);

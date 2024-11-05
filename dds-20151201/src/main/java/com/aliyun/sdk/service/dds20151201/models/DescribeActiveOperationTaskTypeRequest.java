@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTaskTypeRequest} extends {@link RequestModel}
  *
  * <p>DescribeActiveOperationTaskTypeRequest</p>
@@ -146,11 +147,14 @@ public class DescribeActiveOperationTaskTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to return historical O\&M tasks. Valid values:
-         * <p>
+         * <p>Specifies whether to return historical O&amp;M tasks. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): The system returns only pending O&amp;M tasks.</li>
+         * <li><strong>1</strong>: The system returns historical O&amp;M tasks.</li>
+         * </ul>
          * 
-         * *   **0** (default): The system returns only pending O\&M tasks.
-         * *   **1**: The system returns historical O\&M tasks.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -177,7 +181,10 @@ public class DescribeActiveOperationTaskTypeRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the [DescribeSecurityGroupConfiguration](~~146130~~) operation to query the resource group ID.
+         * <p>The resource group ID. You can call the <a href="https://help.aliyun.com/document_detail/146130.html">DescribeSecurityGroupConfiguration</a> operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

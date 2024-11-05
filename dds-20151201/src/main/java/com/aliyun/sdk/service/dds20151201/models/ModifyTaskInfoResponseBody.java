@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTaskInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTaskInfoResponseBody</p>
@@ -73,7 +74,10 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         private String successCount; 
 
         /**
-         * The error code for the failed task. It is the same as that of the ModifyTaskInfo operation.
+         * <p>The error code for the failed task. It is the same as that of the ModifyTaskInfo operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -81,7 +85,10 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the failed task. The operation returns results after a task fails.
+         * <p>The ID of the failed task. The operation returns results after a task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorTaskId(String errorTaskId) {
             this.errorTaskId = errorTaskId;
@@ -89,7 +96,10 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6163731A-XXXX-XXXX-B934-3388DE70C217</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of successful tasks.
+         * <p>The number of successful tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder successCount(String successCount) {
             this.successCount = successCount;

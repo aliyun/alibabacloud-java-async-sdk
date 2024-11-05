@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountDescriptionRequest</p>
@@ -163,11 +164,15 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the account.
-         * <p>
+         * <p>The description of the account.</p>
+         * <ul>
+         * <li>The description must start with a letter and cannot start with http:// or https://.</li>
+         * <li>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The description must start with a letter and cannot start with http:// or https://.
-         * *   The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>superadmin</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -176,7 +181,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the account whose description is to be modified.
+         * <p>The name of the account whose description is to be modified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -185,7 +194,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp2356****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

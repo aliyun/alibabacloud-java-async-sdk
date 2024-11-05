@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditLogFilterRequest} extends {@link RequestModel}
  *
  * <p>DescribeAuditLogFilterRequest</p>
@@ -147,7 +148,11 @@ public class DescribeAuditLogFilterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp12c5b040dc****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -192,12 +197,15 @@ public class DescribeAuditLogFilterRequest extends Request {
         }
 
         /**
-         * The role of the node in the instance. Valid values:
-         * <p>
+         * <p>The role of the node in the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>mongos</strong>: mongos node.</li>
+         * <li><strong>db</strong> : shard node.</li>
+         * <li><strong>logic</strong> : logical instance.</li>
+         * </ul>
          * 
-         * * **mongos**: mongos node.
-         * * **db** : shard node.
-         * * **logic** : logical instance.
+         * <strong>example:</strong>
+         * <p>logic</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

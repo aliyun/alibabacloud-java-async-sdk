@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRunningLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRunningLogRecordsResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The database engine.
+         * <p>The database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -105,7 +109,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the operational log entries.
+         * <p>Details about the operational log entries.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -113,7 +117,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +128,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -129,7 +139,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45D2B592-DEBA-4347-BBF3-47FF6C97DBBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -150,6 +166,12 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRunningLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRunningLogRecordsResponseBody</p>
+     */
     public static class LogRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -213,7 +235,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             private String createTime; 
 
             /**
-             * The category of the log entry.
+             * <p>The category of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -221,7 +246,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection information of the log entry.
+             * <p>The connection information of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>conn18xxxxxx</p>
              */
             public Builder connInfo(String connInfo) {
                 this.connInfo = connInfo;
@@ -229,7 +257,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the log entry.
+             * <p>The content of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>end connection 11.xxx.xxx.xx:3xxxx (0 connections now open)\n</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -237,7 +268,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the log entry was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-26T12:09:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -251,6 +285,12 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRunningLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRunningLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogRecords")
         private java.util.List < LogRecords> logRecords;

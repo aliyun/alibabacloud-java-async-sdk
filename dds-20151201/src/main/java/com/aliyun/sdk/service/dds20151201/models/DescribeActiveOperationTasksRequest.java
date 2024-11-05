@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeActiveOperationTasksRequest</p>
@@ -251,11 +252,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow the cancellation operation. Valid values:
-         * <p>
+         * <p>Specifies whether to allow the cancellation operation. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The cancellation operation is not allowed.</li>
+         * <li><strong>1</strong>: The cancellation operation is allowed.</li>
+         * </ul>
          * 
-         * *   **0**: The cancellation operation is not allowed.
-         * *   **1**: The cancellation operation is allowed.
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder allowCancel(Integer allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -264,11 +268,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the modification operation. Valid values:
-         * <p>
+         * <p>Specifies whether to allow the modification operation. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The modification operation is not allowed.</li>
+         * <li><strong>1</strong>: The modification operation is allowed.</li>
+         * </ul>
          * 
-         * *   **0**: The modification operation is not allowed.
-         * *   **1**: The modification operation is allowed.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowChange(Integer allowChange) {
             this.putQueryParameter("AllowChange", allowChange);
@@ -277,12 +284,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The type of task configuration change. Valid values:
-         * <p>
+         * <p>The type of task configuration change. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong> (default): The configurations of all O&amp;M tasks are changed.</li>
+         * <li><strong>S0</strong>: The configurations of tasks initiated to fix exceptions are changed.</li>
+         * <li><strong>S1</strong>: The configurations of system O&amp;M tasks are changed.</li>
+         * </ul>
          * 
-         * *   **all** (default): The configurations of all O\&M tasks are changed.
-         * *   **S0**: The configurations of tasks initiated to fix exceptions are changed.
-         * *   **S1**: The configurations of system O\&M tasks are changed.
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder changeLevel(String changeLevel) {
             this.putQueryParameter("ChangeLevel", changeLevel);
@@ -291,7 +301,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -300,7 +313,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp16aaccfe10e3e4</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -327,7 +343,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -336,7 +355,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30, 50, and 100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -345,7 +367,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("ProductId", productId);
@@ -354,10 +379,13 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p> If you set the Region parameter to <strong>all</strong>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <strong>taskType</strong> parameter to <strong>all</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you set the Region parameter to **all**, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the **taskType** parameter to **all**.
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -384,13 +412,16 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: waiting for execution</li>
+         * <li><strong>1</strong>: being executed</li>
+         * <li><strong>2</strong>: successful</li>
+         * <li><strong>3</strong>: failed</li>
+         * </ul>
          * 
-         * *   **0**: waiting for execution
-         * *   **1**: being executed
-         * *   **2**: successful
-         * *   **3**: failed
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -399,7 +430,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The task type.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

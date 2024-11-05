@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackupRequest} extends {@link RequestModel}
  *
  * <p>CreateBackupRequest</p>
@@ -147,13 +148,17 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * The backup method of the instance. Valid values:
-         * <p>
+         * <p>The backup method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Logical</strong></li>
+         * <li><strong>Physical</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.</p>
+         * </blockquote>
          * 
-         * *   **Logical**
-         * *   **Physical** (default)
-         * 
-         * > Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.
+         * <strong>example:</strong>
+         * <p>Logical</p>
          */
         public Builder backupMethod(String backupMethod) {
             this.putQueryParameter("BackupMethod", backupMethod);
@@ -162,7 +167,11 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp2235****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

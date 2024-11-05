@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSSLResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceSSLResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String SSLStatus; 
 
         /**
-         * The name of the SSL certificate.
+         * <p>The name of the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
          */
         public Builder certCommonName(String certCommonName) {
             this.certCommonName = certCommonName;
@@ -81,7 +85,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36BB1BC2-789C-4BBA-A519-C5B388E4B0D4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the SSL certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in Coordinated Universal Time (UTC).
+         * <p>The time when the SSL certificate expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in Coordinated Universal Time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-11T02:28:25Z</p>
          */
         public Builder SSLExpiredTime(String SSLExpiredTime) {
             this.SSLExpiredTime = SSLExpiredTime;
@@ -97,11 +107,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the SSL feature. Valid values:
-         * <p>
+         * <p>The status of the SSL feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Open</strong>: The SSL feature is enabled.</li>
+         * <li><strong>Closed</strong>: The SSL feature is disabled.</li>
+         * </ul>
          * 
-         * *   **Open**: The SSL feature is enabled.
-         * *   **Closed**: The SSL feature is disabled.
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         public Builder SSLStatus(String SSLStatus) {
             this.SSLStatus = SSLStatus;

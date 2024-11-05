@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalSecurityIPGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyGlobalSecurityIPGroupRequest</p>
@@ -155,10 +156,14 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * The IP addresses in the whitelist template.
-         * <p>
+         * <p>The IP addresses in the whitelist template.</p>
+         * <blockquote>
+         * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.
+         * <strong>example:</strong>
+         * <p>27.16.214.10,111.60.117.181</p>
          */
         public Builder gIpList(String gIpList) {
             this.putQueryParameter("GIpList", gIpList);
@@ -167,7 +172,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The name of the IP whitelist template.
+         * <p>The name of the IP whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dps</p>
          */
         public Builder globalIgName(String globalIgName) {
             this.putQueryParameter("GlobalIgName", globalIgName);
@@ -176,7 +185,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The ID of the IP whitelist template.
+         * <p>The ID of the IP whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-fwjk62egbsrp4sftxmmr</p>
          */
         public Builder globalSecurityGroupId(String globalSecurityGroupId) {
             this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
@@ -203,7 +216,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

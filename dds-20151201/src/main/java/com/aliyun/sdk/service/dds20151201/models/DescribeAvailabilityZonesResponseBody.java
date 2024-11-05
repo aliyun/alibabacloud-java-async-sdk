@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailabilityZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailabilityZonesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the zones in which you can create ApsaraDB for MongoDB instances.
+         * <p>The details of the zones in which you can create ApsaraDB for MongoDB instances.</p>
          */
         public Builder availableZones(java.util.List < AvailableZones> availableZones) {
             this.availableZones = availableZones;
@@ -57,7 +58,10 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19A13A33-0FAD-5120-8AE1-B1636F74DD80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailabilityZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailabilityZonesResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -121,7 +131,10 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.
+             * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest available regions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -129,7 +142,10 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-f</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -137,13 +153,15 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the zone.
-             * <p>
+             * <p>The name of the zone.</p>
+             * <p>The return value of the ZoneName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the ZoneId parameter in the response is <strong>cn-hangzhou-h</strong>, the following values are returned for the ZoneName parameter:</p>
+             * <ul>
+             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, <strong>H</strong> is returned for the ZoneName parameter.</li>
+             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, <strong>Hangzhou Zone H</strong> is returned for the ZoneName parameter.</li>
+             * </ul>
              * 
-             * The return value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the ZoneId parameter in the response is **cn-hangzhou-h**, the following values are returned for the ZoneName parameter:
-             * 
-             * *   If the value of the **AcceptLanguage** parameter is **zh**, **H** is returned for the ZoneName parameter.
-             * *   If the value of the **AcceptLanguage** parameter is **en**, **Hangzhou Zone H** is returned for the ZoneName parameter.
+             * <strong>example:</strong>
+             * <p>Hangzhou Zone H</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;

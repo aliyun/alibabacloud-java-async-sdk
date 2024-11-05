@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKernelReleaseNotesRequest} extends {@link RequestModel}
  *
  * <p>DescribeKernelReleaseNotesRequest</p>
@@ -132,10 +133,13 @@ public class DescribeKernelReleaseNotesRequest extends Request {
         }
 
         /**
-         * The minor version number of the instance. Example: **mongodb\_20180522\_0.4.8**.
-         * <p>
+         * <p>The minor version number of the instance. Example: <strong>mongodb_20180522_0.4.8</strong>.</p>
+         * <ul>
+         * <li>This parameter is required. After you specify a version number for this parameter in a request, the release notes of the versions later than this version are returned.</li>
+         * </ul>
          * 
-         * *   This parameter is required. After you specify a version number for this parameter in a request, the release notes of the versions later than this version are returned.
+         * <strong>example:</strong>
+         * <p>mongodb_20180522_0.4.8</p>
          */
         public Builder kernelVersion(String kernelVersion) {
             this.putQueryParameter("KernelVersion", kernelVersion);

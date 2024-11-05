@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditLogFilterRequest} extends {@link RequestModel}
  *
  * <p>ModifyAuditLogFilterRequest</p>
@@ -162,7 +163,11 @@ public class ModifyAuditLogFilterRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp12c5b040dc****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,16 +176,20 @@ public class ModifyAuditLogFilterRequest extends Request {
         }
 
         /**
-         * The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:
-         * <p>
+         * <p>The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>admin</strong>: O&amp;M and management operations</li>
+         * <li><strong>slow</strong>: slow query logs</li>
+         * <li><strong>query</strong>: query operations</li>
+         * <li><strong>insert</strong>: insert operations</li>
+         * <li><strong>update</strong>: update operations</li>
+         * <li><strong>delete</strong>: delete operations</li>
+         * <li><strong>command</strong>: protocol commands such as the aggregate method</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **admin**: O\&M and management operations
-         * *   **slow**: slow query logs
-         * *   **query**: query operations
-         * *   **insert**: insert operations
-         * *   **update**: update operations
-         * *   **delete**: delete operations
-         * *   **command**: protocol commands such as the aggregate method
+         * <strong>example:</strong>
+         * <p>insert,query,update,delete</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -225,11 +234,14 @@ public class ModifyAuditLogFilterRequest extends Request {
         }
 
         /**
-         * The role of the node in the instance. Valid values:
-         * <p>
+         * <p>The role of the node in the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>primary</strong></li>
+         * <li><strong>secondary</strong></li>
+         * </ul>
          * 
-         * *   **primary**
-         * *   **secondary**
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

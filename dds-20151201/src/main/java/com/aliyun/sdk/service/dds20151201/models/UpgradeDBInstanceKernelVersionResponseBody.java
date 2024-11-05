@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceKernelVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeDBInstanceKernelVersionResponseBody</p>
@@ -37,7 +38,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27B9A130-7C4B-40D9-84E8-2FC081097AAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

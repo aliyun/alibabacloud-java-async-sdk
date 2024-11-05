@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterModificationHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParameterModificationHistoryResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the parameter modification records.
+         * <p>Details about the parameter modification records.</p>
          */
         public Builder historicalParameters(HistoricalParameters historicalParameters) {
             this.historicalParameters = historicalParameters;
@@ -57,7 +58,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1BB6E0E-B4EF-4145-81FA-A07719860248</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParameterModificationHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterModificationHistoryResponseBody</p>
+     */
     public static class HistoricalParameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
@@ -133,7 +143,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             private String parameterName; 
 
             /**
-             * The time when the parameter was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the parameter was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-12T07:58:24Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -141,7 +154,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value after modification.
+             * <p>The parameter value after modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder newParameterValue(String newParameterValue) {
                 this.newParameterValue = newParameterValue;
@@ -149,7 +165,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value before modification.
+             * <p>The parameter value before modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder oldParameterValue(String oldParameterValue) {
                 this.oldParameterValue = oldParameterValue;
@@ -157,7 +176,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the modified parameter.
+             * <p>The name of the modified parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>operationProfiling.slowOpThresholdMs</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -171,6 +193,12 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterModificationHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterModificationHistoryResponseBody</p>
+     */
     public static class HistoricalParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HistoricalParameter")
         private java.util.List < HistoricalParameter> historicalParameter;

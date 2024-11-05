@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EvaluateResourceResponseBody} extends {@link TeaModel}
  *
  * <p>EvaluateResourceResponseBody</p>
@@ -73,11 +74,14 @@ public class EvaluateResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the resources are sufficient in the region. Valid values:
-         * <p>
+         * <p>Indicates whether the resources are sufficient in the region. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The resources are sufficient.</li>
+         * <li><strong>0</strong>: The resources are insufficient.</li>
+         * </ul>
          * 
-         * *   **1**: The resources are sufficient.
-         * *   **0**: The resources are insufficient.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder DBInstanceAvailable(String DBInstanceAvailable) {
             this.DBInstanceAvailable = DBInstanceAvailable;
@@ -85,7 +89,10 @@ public class EvaluateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine of the instance. Only MongoDB is returned.
+         * <p>The database engine of the instance. Only MongoDB is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -93,7 +100,10 @@ public class EvaluateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the database engine.
+         * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -101,7 +111,10 @@ public class EvaluateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE2DE465-E45F-481F-ABD8-37D64173****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

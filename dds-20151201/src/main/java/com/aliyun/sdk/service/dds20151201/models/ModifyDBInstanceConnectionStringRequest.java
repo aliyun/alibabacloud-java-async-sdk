@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConnectionStringRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceConnectionStringRequest</p>
@@ -191,7 +192,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The current endpoint that is to be modified.
+         * <p>The current endpoint that is to be modified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -200,10 +205,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -212,10 +221,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.
-         * <p>
+         * <p>The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.</p>
+         * <blockquote>
+         * <p>You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.
+         * <strong>example:</strong>
+         * <p>aliyuntest111</p>
          */
         public Builder newConnectionString(String newConnectionString) {
             this.putQueryParameter("NewConnectionString", newConnectionString);
@@ -224,10 +237,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The new port number of the instance. The port number must be within the range from 1000 to 65535.
-         * <p>
+         * <p>The new port number of the instance. The port number must be within the range from 1000 to 65535.</p>
+         * <blockquote>
+         * <p> This parameter is available only when you set the <strong>DBInstanceId</strong> parameter to the ID of an instance that uses cloud disks.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only when you set the **DBInstanceId** parameter to the ID of an instance that uses cloud disks.
+         * <strong>example:</strong>
+         * <p>3310</p>
          */
         public Builder newPort(Integer newPort) {
             this.putQueryParameter("NewPort", newPort);
@@ -236,10 +252,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.
-         * <p>
+         * <p>The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.</p>
+         * <blockquote>
+         * <p>This parameter is valid only when you specify the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>s-bpxxxxxxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

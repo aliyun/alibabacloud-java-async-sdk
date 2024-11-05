@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserEncryptionKeyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserEncryptionKeyListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of custom keys.
+         * <p>The list of custom keys.</p>
          */
         public Builder keyIds(KeyIds keyIds) {
             this.keyIds = keyIds;
@@ -57,7 +58,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CD51DA4-A499-43CE-B9B5-20CD4FDC648E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserEncryptionKeyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserEncryptionKeyListResponseBody</p>
+     */
     public static class KeyIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyId")
         private java.util.List < String > keyId;

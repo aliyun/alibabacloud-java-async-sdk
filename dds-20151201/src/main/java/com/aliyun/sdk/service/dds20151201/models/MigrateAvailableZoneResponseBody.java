@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateAvailableZoneResponseBody} extends {@link TeaModel}
  *
  * <p>MigrateAvailableZoneResponseBody</p>
@@ -37,7 +38,10 @@ public class MigrateAvailableZoneResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FDDC511-7252-4A4A-ADDA-5CB1BF63****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

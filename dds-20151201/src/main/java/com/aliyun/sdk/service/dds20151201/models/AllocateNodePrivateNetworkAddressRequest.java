@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateNodePrivateNetworkAddressRequest} extends {@link RequestModel}
  *
  * <p>AllocateNodePrivateNetworkAddressRequest</p>
@@ -190,16 +191,20 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The username of the account.
-         * <p>
+         * <p>The username of the account.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The username must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (_). The username must start with a lowercase letter.</p>
+         * </li>
+         * <li><p>You must configure the account and password only when you apply for the endpoint of a shard or Configserver node for the first time. The account and password are required for all shard and Configserver nodes.</p>
+         * </li>
+         * <li><p>The permissions of this account are fixed to read-only.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   The username must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (\_). The username must start with a lowercase letter.
-         * 
-         * *   You must configure the account and password only when you apply for the endpoint of a shard or Configserver node for the first time. The account and password are required for all shard and Configserver nodes.
-         * 
-         * *   The permissions of this account are fixed to read-only.
+         * <strong>example:</strong>
+         * <p>shardcsaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -208,11 +213,14 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The password for the account.
-         * <p>
+         * <p>The password for the account.</p>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * <li>The password must be 8 to 32 characters in length.</li>
+         * </ul>
          * 
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`
-         * *   The password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -221,7 +229,11 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the sharded cluster instance.
+         * <p>The ID of the sharded cluster instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1fa5efaa93****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -230,10 +242,14 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the shard or Configserver node.
-         * <p>
+         * <p>The ID of the shard or Configserver node.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the shard or Configserver node.
+         * <strong>example:</strong>
+         * <p>d-bp124beeb0ac****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -278,10 +294,13 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the instance belongs.
-         * <p>
+         * <p>The ID of the zone to which the instance belongs.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the zone ID of the instance.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the zone ID of the instance.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

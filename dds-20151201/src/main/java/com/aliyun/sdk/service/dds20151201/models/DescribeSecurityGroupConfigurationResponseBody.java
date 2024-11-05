@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityGroupConfigurationResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the ECS security groups.
+         * <p>Details about the ECS security groups.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C4A2494-85C4-45C5-93CF-548DB3375193</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class RdsEcsSecurityGroupRel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
@@ -121,11 +131,14 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The network type of the ECS security group. Valid values:
-             * <p>
+             * <p>The network type of the ECS security group. Valid values:</p>
+             * <ul>
+             * <li><strong>vpc</strong></li>
+             * <li><strong>classic</strong></li>
+             * </ul>
              * 
-             * *   **vpc**
-             * *   **classic**
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -133,7 +146,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the ECS security group.
+             * <p>The region ID of the ECS security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -141,7 +157,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS security group.
+             * <p>The ID of the ECS security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bpxxxxxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -155,6 +174,12 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RdsEcsSecurityGroupRel")
         private java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;

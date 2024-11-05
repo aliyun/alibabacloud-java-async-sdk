@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeHistoryTasksRequest</p>
@@ -239,7 +240,10 @@ public class DescribeHistoryTasksRequest extends Request {
         } 
 
         /**
-         * The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed for the query.
+         * <p>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder fromExecTime(Integer fromExecTime) {
             this.putQueryParameter("FromExecTime", fromExecTime);
@@ -248,7 +252,11 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The start time of the O\&M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.
+         * <p>The start time of the O&amp;M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-15T03:41:26Z</p>
          */
         public Builder fromStartTime(String fromStartTime) {
             this.putQueryParameter("FromStartTime", fromStartTime);
@@ -257,7 +265,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that tasks of all instances are queried.
+         * <p>The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that tasks of all instances are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-8vb38f0e7933xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -266,7 +277,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. Set the value to Instance.
+         * <p>The instance type of the instance. Set the value to Instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -275,7 +289,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be a positive integer. Default value: 1
+         * <p>The number of the page to return. The value must be a positive integer. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -284,7 +301,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 10
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -293,7 +313,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The region ID of the pending event. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -320,18 +343,20 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The task status. Valid values:
-         * <p>
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Scheduled: The task is waiting to be executed.</li>
+         * <li>Running: The task is running.</li>
+         * <li>Succeed: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * <li>Cancelling: The task is being terminated.</li>
+         * <li>Canceled: The task has been terminated.</li>
+         * <li>Waiting: The task is waiting for scheduled time.</li>
+         * </ul>
+         * <p>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</p>
          * 
-         * *   Scheduled: The task is waiting to be executed.
-         * *   Running: The task is running.
-         * *   Succeed: The task is successful.
-         * *   Failed: The task failed.
-         * *   Cancelling: The task is being terminated.
-         * *   Canceled: The task has been terminated.
-         * *   Waiting: The task is waiting for scheduled time.
-         * 
-         * Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.
+         * <strong>example:</strong>
+         * <p>Succeed,Running,Waiting</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -340,7 +365,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. This parameter is empty by default, which indicates that all tasks are queried.
+         * <p>The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. This parameter is empty by default, which indicates that all tasks are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-0mq1yyhm3ffl2bxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -349,32 +377,35 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The task type. This parameter is left empty by default, which indicates that all types of tasks are queried. Valid values:
-         * <p>
+         * <p>The task type. This parameter is left empty by default, which indicates that all types of tasks are queried. Valid values:</p>
+         * <ul>
+         * <li>CreateIns: Create an instance.</li>
+         * <li>DeleteIns: Delete an instance.</li>
+         * <li>ChangeVariable: Modify parameter settings for an instance.</li>
+         * <li>ModifyInsConfig: Change the configurations of an instance.</li>
+         * <li>RestartIns: Restart an instance.</li>
+         * <li>HaSwitch: Perform a primary/secondary switchover on an instance.</li>
+         * <li>CloneIns: Clone an instance.</li>
+         * <li>KernelVersionUpgrade: Update the minor version of an instance.</li>
+         * <li>ProxyVersionUpgrade: Upgrade the agent version of an instance.</li>
+         * <li>ModifyAccount: Change the account of an instance.</li>
+         * <li>ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.</li>
+         * <li>CreateReadIns: Create a read-only instance.</li>
+         * <li>StartIns: Start an instance.</li>
+         * <li>StopIns: Stop an instance.</li>
+         * <li>ModifyNetwork: Modify the network type for an instance.</li>
+         * <li>LockIns: Lock an instance.</li>
+         * <li>UnlockIns: Unlock an instance.</li>
+         * <li>DiskOnlineExpansion: Scale out the disks of an instance online.</li>
+         * <li>StorageOnlineExpansion: Expend the storage capacity of an instance online.</li>
+         * <li>AddInsNode: Add a node to an instance.</li>
+         * <li>DeleteInsNode: Delete a node from an instance.</li>
+         * <li>ManualBackupIns: Manually back up an instance.</li>
+         * <li>ModifyInsStorageType: Modify the storage type for an instance.</li>
+         * </ul>
          * 
-         * *   CreateIns: Create an instance.
-         * *   DeleteIns: Delete an instance.
-         * *   ChangeVariable: Modify parameter settings for an instance.
-         * *   ModifyInsConfig: Change the configurations of an instance.
-         * *   RestartIns: Restart an instance.
-         * *   HaSwitch: Perform a primary/secondary switchover on an instance.
-         * *   CloneIns: Clone an instance.
-         * *   KernelVersionUpgrade: Update the minor version of an instance.
-         * *   ProxyVersionUpgrade: Upgrade the agent version of an instance.
-         * *   ModifyAccount: Change the account of an instance.
-         * *   ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.
-         * *   CreateReadIns: Create a read-only instance.
-         * *   StartIns: Start an instance.
-         * *   StopIns: Stop an instance.
-         * *   ModifyNetwork: Modify the network type for an instance.
-         * *   LockIns: Lock an instance.
-         * *   UnlockIns: Unlock an instance.
-         * *   DiskOnlineExpansion: Scale out the disks of an instance online.
-         * *   StorageOnlineExpansion: Expend the storage capacity of an instance online.
-         * *   AddInsNode: Add a node to an instance.
-         * *   DeleteInsNode: Delete a node from an instance.
-         * *   ManualBackupIns: Manually back up an instance.
-         * *   ModifyInsStorageType: Modify the storage type for an instance.
+         * <strong>example:</strong>
+         * <p>DeleteInsNode</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -383,7 +414,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed for the query.
+         * <p>The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder toExecTime(Integer toExecTime) {
             this.putQueryParameter("ToExecTime", toExecTime);
@@ -392,7 +426,11 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The end time of the O\&M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.
+         * <p>The end time of the O&amp;M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-16T07:21:31Z</p>
          */
         public Builder toStartTime(String toStartTime) {
             this.putQueryParameter("ToStartTime", toStartTime);

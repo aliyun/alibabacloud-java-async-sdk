@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityGroupConfigurationRequest} extends {@link RequestModel}
  *
  * <p>ModifySecurityGroupConfigurationRequest</p>
@@ -148,7 +149,11 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -193,11 +198,17 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the ECS security group.
-         * <p>
+         * <p>The ID of the ECS security group.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroup</a> operation of ECS to query the security groups in the specified region.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > * You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.
-         * > * You can call the [DescribeSecurityGroup](~~25556~~) operation of ECS to query the security groups in the specified region.
+         * <strong>example:</strong>
+         * <p>sg-bpxxxxxxxx</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

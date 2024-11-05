@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableEngineVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableEngineVersionResponseBody</p>
@@ -49,10 +50,10 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.
-         * <p>
-         * 
-         * >  An empty string is returned if the latest version is being used.
+         * <p>The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
+         * <blockquote>
+         * <p> An empty string is returned if the latest version is being used.</p>
+         * </blockquote>
          */
         public Builder engineVersions(EngineVersions engineVersions) {
             this.engineVersions = engineVersions;
@@ -60,7 +61,10 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52507B6B-003B-47A3-A0A3-9FE992C7A243</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -73,6 +77,12 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableEngineVersionResponseBody</p>
+     */
     public static class EngineVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private java.util.List < String > engineVersion;

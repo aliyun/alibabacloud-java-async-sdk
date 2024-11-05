@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoleZoneInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRoleZoneInfoResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         private ZoneInfos zoneInfos; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728B9A96-E262-4AE5-915E-3A51CCE2FDA9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information of nodes in the zone.
+         * <p>The information of nodes in the zone.</p>
          */
         public Builder zoneInfos(ZoneInfos zoneInfos) {
             this.zoneInfos = zoneInfos;
@@ -70,6 +74,12 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRoleZoneInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRoleZoneInfoResponseBody</p>
+     */
     public static class ZoneInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InsName")
         private String insName;
@@ -145,7 +155,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dds-bpxxxxxxxx</p>
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -153,15 +166,19 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The type of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>configServer</strong></li>
+             * <li><strong>shard</strong></li>
+             * <li><strong>mongos</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>Valid value for replica set instances: <strong>normal</strong>. Valid values for sharded cluster instances: <strong>configServer</strong>, <strong>shard</strong>, and <strong>mongos</strong>.</p>
+             * </blockquote>
              * 
-             * *   **normal**
-             * *   **configServer**
-             * *   **shard**
-             * *   **mongos**
-             * 
-             * > Valid value for replica set instances: **normal**. Valid values for sharded cluster instances: **configServer**, **shard**, and **mongos**.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -169,7 +186,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The role ID.
+             * <p>The role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83xxxxx</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -177,12 +197,15 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the node. Valid values:
-             * <p>
+             * <p>The role of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>Primary</strong></li>
+             * <li><strong>Secondary</strong></li>
+             * <li><strong>Hidden</strong></li>
+             * </ul>
              * 
-             * *   **Primary**
-             * *   **Secondary**
-             * *   **Hidden**
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -190,7 +213,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the node.
+             * <p>The zone ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -204,6 +230,12 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRoleZoneInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRoleZoneInfoResponseBody</p>
+     */
     public static class ZoneInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneInfo")
         private java.util.List < ZoneInfo> zoneInfo;

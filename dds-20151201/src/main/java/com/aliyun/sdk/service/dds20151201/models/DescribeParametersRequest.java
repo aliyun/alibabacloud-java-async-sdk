@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersRequest} extends {@link RequestModel}
  *
  * <p>DescribeParametersRequest</p>
@@ -175,12 +176,15 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The role of the instance. Valid values:
-         * <p>
+         * <p>The role of the instance. Valid values:</p>
+         * <ul>
+         * <li>db: a shard node.</li>
+         * <li>cs: a Configserver node.</li>
+         * <li>mongos: a mongos node.</li>
+         * </ul>
          * 
-         * *   db: a shard node.
-         * *   cs: a Configserver node.
-         * *   mongos: a mongos node.
+         * <strong>example:</strong>
+         * <p>mongos</p>
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -189,10 +193,14 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -201,7 +209,10 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The parameter that is available in the future.
+         * <p>The parameter that is available in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terrform</p>
          */
         public Builder extraParam(String extraParam) {
             this.putQueryParameter("ExtraParam", extraParam);
@@ -210,10 +221,13 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The ID of the mongos or shard node in the specified sharded cluster instance.
-         * <p>
+         * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
+         * <blockquote>
+         * <p> This parameter is valid when the <strong>DBInstanceId</strong> parameter is set to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is valid when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>d-bpxxxxxxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformToPrePaidResponseBody} extends {@link TeaModel}
  *
  * <p>TransformToPrePaidResponseBody</p>
@@ -49,7 +50,10 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21022019252****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F42BB4E-461F-5B55-A37C-53B1141C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

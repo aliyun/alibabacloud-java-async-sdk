@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformToPrePaidRequest} extends {@link RequestModel}
  *
  * <p>TransformToPrePaidRequest</p>
@@ -204,13 +205,17 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables automatic payment.</li>
+         * <li><strong>false</strong>: disables automatic payment. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Renew an ApsaraDB for MongoDB subscription instance</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Default value: <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: enables automatic payment.
-         * *   **false**: disables automatic payment. For more information, see [Renew an ApsaraDB for MongoDB subscription instance](~~85052~~).
-         * 
-         * >  Default value: **true**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -219,13 +224,17 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> Default value: <strong>false</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -234,7 +243,10 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * The business information. This is an additional parameter.
+         * <p>The business information. This is an additional parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -243,7 +255,10 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -252,7 +267,11 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1366caac83****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -279,7 +298,11 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. Unit: months. Valid values: **1**, **2**, **3**, **4**, **5**, **6**, **7**, **8**, **9**, **12**, **24**, and **36**.
+         * <p>The subscription duration of the instance. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>7</strong>, <strong>8</strong>, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

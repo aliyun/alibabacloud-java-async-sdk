@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DestroyInstanceRequest} extends {@link RequestModel}
  *
  * <p>DestroyInstanceRequest</p>
@@ -174,7 +175,10 @@ public class DestroyInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -183,10 +187,13 @@ public class DestroyInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p><strong>InstanceId</strong> and <strong>DBInstanceId</strong> serve the same function. You need only to specify one of them.</p>
+         * </blockquote>
          * 
-         * > **InstanceId** and **DBInstanceId** serve the same function. You need only to specify one of them.
+         * <strong>example:</strong>
+         * <p>dds-bp147acd4783****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -195,10 +202,13 @@ public class DestroyInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p><strong>InstanceId</strong> and <strong>DBInstanceId</strong> serve the same function. You need only to specify one of them.</p>
+         * </blockquote>
          * 
-         * > **InstanceId** and **DBInstanceId** serve the same function. You need only to specify one of them.
+         * <strong>example:</strong>
+         * <p>dds-bp147acd4783****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -225,7 +235,10 @@ public class DestroyInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

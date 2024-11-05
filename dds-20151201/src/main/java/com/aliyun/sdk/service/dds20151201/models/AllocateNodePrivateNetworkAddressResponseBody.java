@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateNodePrivateNetworkAddressResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateNodePrivateNetworkAddressResponseBody</p>
@@ -37,7 +38,10 @@ public class AllocateNodePrivateNetworkAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60EEBD77-227C-5B39-86EA-D89163C5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTagsRequest</p>
@@ -152,10 +153,13 @@ public class DescribeTagsRequest extends Request {
         } 
 
         /**
-         * The token used to start the next query to retrieve more results.
-         * <p>
+         * <p>The token used to start the next query to retrieve more results.</p>
+         * <blockquote>
+         * <p> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the NextToken value returned in the previous query to perform the query again.</p>
+         * </blockquote>
          * 
-         * >  This parameter is not required in the first query. If not all results are returned in one query, you can pass in the NextToken value returned in the previous query to perform the query again.
+         * <strong>example:</strong>
+         * <p>212db86****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -182,7 +186,11 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -191,7 +199,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp17e7a04960****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -218,7 +229,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to **INSTANCE**.
+         * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailabilityZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAvailabilityZonesRequest</p>
@@ -292,11 +293,14 @@ public class DescribeAvailabilityZonesRequest extends Request {
         } 
 
         /**
-         * The language of the values of the returned **RegionName** and **ZoneName** parameters. Valid values:
-         * <p>
+         * <p>The language of the values of the returned <strong>RegionName</strong> and <strong>ZoneName</strong> parameters. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -305,7 +309,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The instance type of the instance.
+         * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.mongo.standard</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -314,11 +321,14 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The architecture of the instance. Valid values:
-         * <p>
+         * <p>The architecture of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>normal</strong>: replica set instance</li>
+         * <li><strong>sharding</strong>: sharded cluster instance</li>
+         * </ul>
          * 
-         * *   **normal**: replica set instance
-         * *   **sharding**: sharded cluster instance
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -327,7 +337,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance.
+         * <p>The database engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -336,7 +349,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The secondary zone ID that is excluded from the query results. You can configure the ExcludeZoneId and ExcludeSecondaryZoneId parameters to specify the IDs of multiple zones that are excluded from the query results.
+         * <p>The secondary zone ID that is excluded from the query results. You can configure the ExcludeZoneId and ExcludeSecondaryZoneId parameters to specify the IDs of multiple zones that are excluded from the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-b</p>
          */
         public Builder excludeSecondaryZoneId(String excludeSecondaryZoneId) {
             this.putQueryParameter("ExcludeSecondaryZoneId", excludeSecondaryZoneId);
@@ -345,7 +361,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The zone ID that is excluded from the query results.
+         * <p>The zone ID that is excluded from the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-g</p>
          */
         public Builder excludeZoneId(String excludeZoneId) {
             this.putQueryParameter("ExcludeZoneId", excludeZoneId);
@@ -354,11 +373,14 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong> (default): subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid** (default): subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -367,7 +389,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The edition of the instance. High-Available Edition and Preview Edition (dbfs) are supported.
+         * <p>The edition of the instance. High-Available Edition and Preview Edition (dbfs) are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbfs</p>
          */
         public Builder mongoType(String mongoType) {
             this.putQueryParameter("MongoType", mongoType);
@@ -394,7 +419,11 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest available regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -403,7 +432,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The number of nodes. This parameter is available only for replica set instances.
+         * <p>The number of nodes. This parameter is available only for replica set instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder replicationFactor(String replicationFactor) {
             this.putQueryParameter("ReplicationFactor", replicationFactor);
@@ -412,7 +444,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+         * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmx2m4rqu7pry</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -439,11 +474,15 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The storage type of the instance. 
-         * <p>
-         * - **cloud**: The system displays only zones in which cloud disk-based instances can be deployed. 
-         * - **local**: The system displays only zones in which local disk-based instances can be deployed. 
-         * - **default** or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.
+         * <p>The storage type of the instance. </p>
+         * <ul>
+         * <li><strong>cloud</strong>: The system displays only zones in which cloud disk-based instances can be deployed. </li>
+         * <li><strong>local</strong>: The system displays only zones in which local disk-based instances can be deployed. </li>
+         * <li><strong>default</strong> or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
          */
         public Builder storageSupport(String storageSupport) {
             this.putQueryParameter("StorageSupport", storageSupport);
@@ -452,16 +491,22 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The storage type of the instance. Valid values:
-         * <p>
+         * <p>The storage type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_essd1</strong>: PL1 enhanced SSD (ESSD)</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * <li><strong>local_ssd</strong>: Local SSD</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Instances that run MongoDB 4.4 or later support only cloud disks. <strong>cloud_essd1</strong> is selected if you leave this parameter empty.</li>
+         * <li>Instances that run MongoDB 4.2 and earlier support only local disks. <strong>local_ssd</strong> is selected if you leave this parameter empty.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **cloud_essd1**: PL1 enhanced SSD (ESSD)
-         * *   **cloud_essd2**: PL2 ESSD
-         * *   **cloud_essd3**: PL3 ESSD
-         * *   **local_ssd**: Local SSD
-         * 
-         * > *   Instances that run MongoDB 4.4 or later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
-         * > *   Instances that run MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -470,7 +515,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query available zones.
+         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

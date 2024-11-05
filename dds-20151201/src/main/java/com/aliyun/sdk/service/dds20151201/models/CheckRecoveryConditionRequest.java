@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckRecoveryConditionRequest} extends {@link RequestModel}
  *
  * <p>CheckRecoveryConditionRequest</p>
@@ -22,6 +23,10 @@ public class CheckRecoveryConditionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestRegion")
     private String destRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    private String engineVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
@@ -68,6 +73,7 @@ public class CheckRecoveryConditionRequest extends Request {
         this.backupId = builder.backupId;
         this.databaseNames = builder.databaseNames;
         this.destRegion = builder.destRegion;
+        this.engineVersion = builder.engineVersion;
         this.instanceType = builder.instanceType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -112,6 +118,13 @@ public class CheckRecoveryConditionRequest extends Request {
      */
     public String getDestRegion() {
         return this.destRegion;
+    }
+
+    /**
+     * @return engineVersion
+     */
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     /**
@@ -188,6 +201,7 @@ public class CheckRecoveryConditionRequest extends Request {
         private String backupId; 
         private String databaseNames; 
         private String destRegion; 
+        private String engineVersion; 
         private String instanceType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -208,6 +222,7 @@ public class CheckRecoveryConditionRequest extends Request {
             this.backupId = request.backupId;
             this.databaseNames = request.databaseNames;
             this.destRegion = request.destRegion;
+            this.engineVersion = request.engineVersion;
             this.instanceType = request.instanceType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -221,12 +236,17 @@ public class CheckRecoveryConditionRequest extends Request {
         } 
 
         /**
-         * The backup ID.
-         * <p>
+         * <p>The backup ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/62172.html">DescribeBackups</a> operation to query the backup ID.</li>
+         * <li>You must specify one of the <strong>RestoreTime</strong> and BackupId parameters.</li>
+         * <li>This parameter is not applicable to sharded cluster instances.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
-         * > *   You must specify one of the **RestoreTime** and BackupId parameters.
-         * > *   This parameter is not applicable to sharded cluster instances.
+         * <strong>example:</strong>
+         * <p>5664****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -235,10 +255,13 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * The name of the source database. The value is a JSON array.
-         * <p>
+         * <p>The name of the source database. The value is a JSON array.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, all databases are restored by default.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, all databases are restored by default.
+         * <strong>example:</strong>
+         * <p>[&quot;db1&quot;,&quot;db2&quot;]</p>
          */
         public Builder databaseNames(String databaseNames) {
             this.putQueryParameter("DatabaseNames", databaseNames);
@@ -247,10 +270,13 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * The region of the backup set used for the cross-region backup and restoration.
-         * <p>
+         * <p>The region of the backup set used for the cross-region backup and restoration.</p>
+         * <blockquote>
+         * <p> This parameter is required when you set the RestoreType parameter to 3.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when you set the RestoreType parameter to 3.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder destRegion(String destRegion) {
             this.putQueryParameter("DestRegion", destRegion);
@@ -259,14 +285,29 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * The instance architecture. Valid values:
-         * <p>
+         * EngineVersion.
+         */
+        public Builder engineVersion(String engineVersion) {
+            this.putQueryParameter("EngineVersion", engineVersion);
+            this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * <p>The instance architecture. Valid values:</p>
+         * <ul>
+         * <li>replicate</li>
+         * <li>sharding</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required when you set the RestoreType parameter to 2.</li>
+         * <li>This parameter is required when you set the RestoreType parameter to 3.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   replicate
-         * *   sharding
-         * 
-         * > * This parameter is required when you set the RestoreType parameter to 2.
-         * > * This parameter is required when you set the RestoreType parameter to 3.
+         * <strong>example:</strong>
+         * <p>replicate</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -293,7 +334,10 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp179****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -320,11 +364,16 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * The point in time to which the instance is restored. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The point in time to which the instance is restored. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The time can be a point in time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.</li>
+         * <li>You must specify one of the RestoreTime and <strong>BackupId</strong> parameters.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   The time can be a point in time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.
-         * > *   You must specify one of the RestoreTime and **BackupId** parameters.
+         * <strong>example:</strong>
+         * <p>2022-08-22T08:00:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -333,13 +382,18 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * The restoration type.
-         * <p>
+         * <p>The restoration type.</p>
+         * <blockquote>
+         * <ul>
+         * <li>0: The data of the source instance is restored to a new instance in the same region.</li>
+         * <li>1: The data of the source instance is restored to an earlier point in time.</li>
+         * <li>2: The data of a deleted instance is restored to a new instance from the backup set.</li>
+         * <li>3: The data of a deleted instance is restored to a new instance in another region from the backup set.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > * 0: The data of the source instance is restored to a new instance in the same region.
-         * > * 1: The data of the source instance is restored to an earlier point in time.
-         * > * 2: The data of a deleted instance is restored to a new instance from the backup set.
-         * > * 3: The data of a deleted instance is restored to a new instance in another region from the backup set.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
@@ -348,7 +402,10 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * The ID of the source instance.
+         * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1378****</p>
          */
         public Builder sourceDBInstance(String sourceDBInstance) {
             this.putQueryParameter("SourceDBInstance", sourceDBInstance);
@@ -357,11 +414,16 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
-         * The region where the source instance resides.
-         * <p>
+         * <p>The region where the source instance resides.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required when you set the RestoreType parameter to 2.</li>
+         * <li>This parameter is required when you set the RestoreType parameter to 3.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > * This parameter is required when you set the RestoreType parameter to 2.
-         * > * This parameter is required when you set the RestoreType parameter to 3.
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder srcRegion(String srcRegion) {
             this.putQueryParameter("SrcRegion", srcRegion);

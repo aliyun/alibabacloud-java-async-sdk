@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceEncryptionKeyRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceEncryptionKeyRequest</p>
@@ -170,7 +171,11 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp2235****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -179,7 +184,10 @@ public class DescribeDBInstanceEncryptionKeyRequest extends Request {
         }
 
         /**
-         * The custom key for the instance. You can call the [DescribeUserEncryptionKeyList](~~151729~~) operation to query the list of custom keys for an ApsaraDB for MongoDB instance.
+         * <p>The custom key for the instance. You can call the <a href="https://help.aliyun.com/document_detail/151729.html">DescribeUserEncryptionKeyList</a> operation to query the list of custom keys for an ApsaraDB for MongoDB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);

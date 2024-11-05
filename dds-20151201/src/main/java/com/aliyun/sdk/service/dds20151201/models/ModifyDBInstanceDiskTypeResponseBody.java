@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceDiskTypeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceDiskTypeResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyDBInstanceDiskTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21012719476****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class ModifyDBInstanceDiskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8F1D721-6439-4257-A89C-F1E8E9C9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

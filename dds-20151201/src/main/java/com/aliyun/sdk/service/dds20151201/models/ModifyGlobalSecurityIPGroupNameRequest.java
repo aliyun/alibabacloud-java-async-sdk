@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalSecurityIPGroupNameRequest} extends {@link RequestModel}
  *
  * <p>ModifyGlobalSecurityIPGroupNameRequest</p>
@@ -140,12 +141,16 @@ public class ModifyGlobalSecurityIPGroupNameRequest extends Request {
         } 
 
         /**
-         * The name of the IP whitelist template. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>It can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>It must start with a letter and end with a letter or digit.</li>
+         * <li>It must be 2 to 120 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   It can contain lowercase letters, digits, and underscores (\_).
-         * *   It must start with a letter and end with a letter or digit.
-         * *   It must be 2 to 120 characters in length.
+         * <strong>example:</strong>
+         * <p>prod_baoxian_k8s</p>
          */
         public Builder globalIgName(String globalIgName) {
             this.putQueryParameter("GlobalIgName", globalIgName);
@@ -154,7 +159,11 @@ public class ModifyGlobalSecurityIPGroupNameRequest extends Request {
         }
 
         /**
-         * The ID of the IP whitelist template.
+         * <p>The ID of the IP whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-xmtncwkrzqqoe59dzljb</p>
          */
         public Builder globalSecurityGroupId(String globalSecurityGroupId) {
             this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
@@ -181,7 +190,11 @@ public class ModifyGlobalSecurityIPGroupNameRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

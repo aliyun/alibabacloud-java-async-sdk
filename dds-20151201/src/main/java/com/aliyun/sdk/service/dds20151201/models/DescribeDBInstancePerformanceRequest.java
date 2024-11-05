@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancePerformanceRequest</p>
@@ -234,10 +235,14 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bp2635****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -246,7 +251,11 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-13T11:58Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -255,7 +264,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400.
+         * <p>The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -264,10 +276,14 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The performance metric. For more information about valid values, see [Monitoring items and metrics](~~216973~~).
-         * <p>
+         * <p>The performance metric. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/216973.html">Monitoring items and metrics</a>.</p>
+         * <blockquote>
+         * <p> If you need to specify multiple metrics, separate the metrics with commas (,).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you need to specify multiple metrics, separate the metrics with commas (,).
+         * <strong>example:</strong>
+         * <p>CpuUsage</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -276,10 +292,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the mongos or shard node in a sharded cluster instance. You can specify this parameter to view the performance data of a single node.
-         * <p>
+         * <p>The ID of the mongos or shard node in a sharded cluster instance. You can specify this parameter to view the performance data of a single node.</p>
+         * <blockquote>
+         * <p> This parameter is valid when you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is valid when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>d-bp2287****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -306,14 +325,20 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The role of the node in the standalone or replica set instance. Valid values:
-         * <p>
+         * <p>The role of the node in the standalone or replica set instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Primary</strong></li>
+         * <li><strong>Secondary</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is valid only when you specify the <strong>DBInstanceId</strong> parameter to the ID of a standalone instance or a replica set instance.</li>
+         * <li>This parameter can be set only to <strong>Primary</strong> when you specify the <strong>DBInstanceId</strong> parameter to the ID of a standalone instance.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **Primary**
-         * *   **Secondary**
-         * 
-         * >  *  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
-         * > *  This parameter can be set only to **Primary** when you specify the **DBInstanceId** parameter to the ID of a standalone instance.
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         public Builder replicaSetRole(String replicaSetRole) {
             this.putQueryParameter("ReplicaSetRole", replicaSetRole);
@@ -340,10 +365,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The role ID of the node in a standalone or replica set instance. You can call the [DescribeReplicaSetRole](~~62134~~) operation to query the role ID of the node.
-         * <p>
+         * <p>The role ID of the node in a standalone or replica set instance. You can call the <a href="https://help.aliyun.com/document_detail/62134.html">DescribeReplicaSetRole</a> operation to query the role ID of the node.</p>
+         * <blockquote>
+         * <p> This parameter is available when you set the <strong>DBInstanceId</strong> parameter to the ID of a standalone instance or a replica set instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available when you set the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
+         * <strong>example:</strong>
+         * <p>6025****</p>
          */
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);
@@ -352,7 +380,11 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-13T10:58Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupDBsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupDBsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the databases.
+         * <p>The details of the databases.</p>
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -93,7 +94,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the page returned.
+         * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AF0AD89-ED4F-44AD-B65F-BFC1D5CD9455</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned databases.
+         * <p>The number of returned databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupDBsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupDBsResponseBody</p>
+     */
     public static class Database extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
@@ -157,7 +176,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
             private String DBName; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongodbtest</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -171,6 +193,12 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupDBsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupDBsResponseBody</p>
+     */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private java.util.List < Database> database;

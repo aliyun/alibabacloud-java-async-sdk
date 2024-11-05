@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalSecurityIPGroupNameResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyGlobalSecurityIPGroupNameResponseBody</p>
@@ -49,7 +50,7 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The global IP whitelist templates.
+         * <p>The global IP whitelist templates.</p>
          */
         public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -57,7 +58,10 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyGlobalSecurityIPGroupNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyGlobalSecurityIPGroupNameResponseBody</p>
+     */
     public static class GlobalSecurityIPGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GIpList")
         private String gIpList;
@@ -133,10 +143,13 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The IP addresses in the whitelist template.
-             * <p>
+             * <p>The IP addresses in the whitelist template.</p>
+             * <blockquote>
+             * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+             * </blockquote>
              * 
-             * > Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.
+             * <strong>example:</strong>
+             * <p>222.70.197.187</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -144,7 +157,10 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist template.
+             * <p>The name of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>def</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -152,7 +168,10 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP whitelist template.
+             * <p>The ID of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-qiawi8ec1urcx9swoy37</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -160,7 +179,10 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+             * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

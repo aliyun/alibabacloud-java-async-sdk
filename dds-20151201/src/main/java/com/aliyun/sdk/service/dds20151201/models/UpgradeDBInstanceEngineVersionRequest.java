@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceEngineVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBInstanceEngineVersionRequest</p>
@@ -41,6 +42,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchMode")
+    @com.aliyun.core.annotation.Validation(maximum = 1)
+    private Integer switchMode;
+
     private UpgradeDBInstanceEngineVersionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -50,6 +56,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.switchMode = builder.switchMode;
     }
 
     public static Builder builder() {
@@ -114,6 +121,13 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return switchMode
+     */
+    public Integer getSwitchMode() {
+        return this.switchMode;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeDBInstanceEngineVersionRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -122,6 +136,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Integer switchMode; 
 
         private Builder() {
             super();
@@ -136,6 +151,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.switchMode = request.switchMode;
         } 
 
         /**
@@ -148,7 +164,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -157,10 +177,14 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * The database version to which you want to upgrade. Valid values: **3.4**, **4.0**, and **4.2**.
-         * <p>
+         * <p>The database version to which you want to upgrade. Valid values: <strong>3.4</strong>, <strong>4.0</strong>, and <strong>4.2</strong>.</p>
+         * <blockquote>
+         * <p> This database version must be later than the current database version of the instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This database version must be later than the current database version of the instance.
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -201,6 +225,15 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SwitchMode.
+         */
+        public Builder switchMode(Integer switchMode) {
+            this.putQueryParameter("SwitchMode", switchMode);
+            this.switchMode = switchMode;
             return this;
         }
 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSlowLogRecordsRequest</p>
@@ -277,10 +278,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <code>NodeId</code> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the `NodeId` parameter.
+         * <strong>example:</strong>
+         * <p>dds-bp1fc7e65108****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -289,7 +294,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodbtest</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -298,14 +306,19 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The end time must be later than the start time.</p>
+         * </li>
+         * <li><p>The end time must be within 24 hours from the start time. Otherwise, the query fails.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The end time must be later than the start time.
-         * 
-         * *   The end time must be within 24 hours from the start time. Otherwise, the query fails.
+         * <strong>example:</strong>
+         * <p>2021-08-16T14:13Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -314,11 +327,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The logical relationship among multiple keywords.
-         * <p>
+         * <p>The logical relationship among multiple keywords.</p>
+         * <ul>
+         * <li><strong>or</strong></li>
+         * <li><strong>and</strong> (default value)</li>
+         * </ul>
          * 
-         * *   **or**
-         * *   **and** (default value)
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder logicalOperator(String logicalOperator) {
             this.putQueryParameter("LogicalOperator", logicalOperator);
@@ -327,10 +343,13 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the shard node.
-         * <p>
+         * <p>The ID of the shard node.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you specify the <code>DBInstanceId</code> parameter to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only when you specify the `DBInstanceId` parameter to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>d-bp18b06ebc21****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -339,11 +358,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The order of time in which the log entries to return are sorted. Valid values:
-         * <p>
+         * <p>The order of time in which the log entries to return are sorted. Valid values:</p>
+         * <ul>
+         * <li>asc: The log entries are sorted by time in ascending order.</li>
+         * <li>desc: The log entries are sorted by time in descending order.</li>
+         * </ul>
          * 
-         * *   asc: The log entries are sorted by time in ascending order.
-         * *   desc: The log entries are sorted by time in descending order.
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -370,7 +392,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
+         * <p>The page number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -379,7 +404,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30** to **100**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -388,7 +416,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.
+         * <p>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test test1</p>
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -397,7 +428,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instances you want to query belong.
+         * <p>The ID of the resource group to which the instances you want to query belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -424,7 +458,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-15T14:13Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

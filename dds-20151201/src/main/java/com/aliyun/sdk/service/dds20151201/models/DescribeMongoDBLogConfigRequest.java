@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMongoDBLogConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeMongoDBLogConfigRequest</p>
@@ -133,7 +134,11 @@ public class DescribeMongoDBLogConfigRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~61939~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/61939.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp12c5b040dc****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

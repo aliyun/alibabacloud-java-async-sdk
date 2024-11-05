@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
@@ -61,10 +62,13 @@ public class DescribeTagsResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * The token used to start the next query.
-         * <p>
+         * <p>The token used to start the next query.</p>
+         * <blockquote>
+         * <p> If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.</p>
+         * </blockquote>
          * 
-         * >  If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.
+         * <strong>example:</strong>
+         * <p>212db86****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -72,7 +76,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEDBE38F-5CF5-4316-AAC2-35817BA60D68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,7 +87,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the tags.
+         * <p>Details about the tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -93,6 +100,12 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -132,7 +145,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             private java.util.List < String > tagValues; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>newKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -140,7 +156,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the tags.
+             * <p>The values of the tags.</p>
              */
             public Builder tagValues(java.util.List < String > tagValues) {
                 this.tagValues = tagValues;

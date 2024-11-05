@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParametersRequest} extends {@link RequestModel}
  *
  * <p>ModifyParametersRequest</p>
@@ -167,12 +168,15 @@ public class ModifyParametersRequest extends Request {
         } 
 
         /**
-         * The role of the instance. Valid values:
-         * <p>
+         * <p>The role of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>db</strong>: a shard node.</li>
+         * <li><strong>cs</strong>: a Configserver node.</li>
+         * <li><strong>mongos</strong>: a mongos node.</li>
+         * </ul>
          * 
-         * *   **db**: a shard node.
-         * *   **cs**: a Configserver node.
-         * *   **mongos**: a mongos node.
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -181,10 +185,14 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.
+         * <strong>example:</strong>
+         * <p>dds-bp19f409d75****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -193,10 +201,13 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The ID of the mongos or shard node in the specified sharded cluster instance.
-         * <p>
+         * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
+         * <blockquote>
+         * <p> This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>d-bp1b7bb3bbe****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -223,10 +234,14 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {"ParameterName1":"ParameterValue1","ParameterName2":"ParameterValue2"}.
-         * <p>
+         * <p>The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {&quot;ParameterName1&quot;:&quot;ParameterValue1&quot;,&quot;ParameterName2&quot;:&quot;ParameterValue2&quot;}.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query a list of default parameter templates.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeParameterTemplates](~~67618~~) operation to query a list of default parameter templates.
+         * <strong>example:</strong>
+         * <p>{&quot;operationProfiling.mode&quot;:&quot;all&quot;,&quot;operationProfiling.slowOpThresholdMs&quot;:&quot;200&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -235,7 +250,10 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

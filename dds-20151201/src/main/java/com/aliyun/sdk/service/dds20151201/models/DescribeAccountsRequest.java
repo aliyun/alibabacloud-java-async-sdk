@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccountsRequest</p>
@@ -147,7 +148,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The name of the account. Set the value to **root**.
+         * <p>The name of the account. Set the value to <strong>root</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -156,7 +160,11 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1fd530f271****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

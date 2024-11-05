@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -182,17 +183,22 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the instances. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the instances. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: removes all tags from the instances.</li>
+         * <li><strong>false</strong>: does not remove all tags from the instances.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Default value: <strong>false</strong>.</p>
+         * </li>
+         * <li><p>If you specify the <strong>TagKey</strong> parameter together with this parameter, this parameter does not take effect.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **true**: removes all tags from the instances.
-         * *   **false**: does not remove all tags from the instances.
-         * 
-         * > 
-         * 
-         * *   Default value: **false**.
-         * 
-         * *   If you specify the **TagKey** parameter together with this parameter, this parameter does not take effect.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -219,7 +225,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -228,7 +238,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bpxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -237,7 +250,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * <p>The resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -264,7 +281,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to **INSTANCE**.
+         * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -273,7 +294,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys of the resource.
+         * <p>The tag keys of the resource.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

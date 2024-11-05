@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAuditRecordsRequest</p>
@@ -289,10 +290,14 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bp12c5b040dc****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -301,7 +306,10 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database to be queried. By default, all databases are queried.
+         * <p>The name of the database to be queried. By default, all databases are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database****</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -310,10 +318,14 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be within 24 hours from the start time. Otherwise, the query fails.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The end time must be within 24 hours from the start time. Otherwise, the query fails.
+         * <strong>example:</strong>
+         * <p>2019-03-13T13:11:14Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -322,11 +334,14 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The form of the audit log that the operation returns. Valid values:
-         * <p>
+         * <p>The form of the audit log that the operation returns. Valid values:</p>
+         * <ul>
+         * <li><strong>File</strong>: triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.</li>
+         * <li><strong>Stream</strong> (default): returns data streams.</li>
+         * </ul>
          * 
-         * *   **File**: triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
-         * *   **Stream** (default): returns data streams.
+         * <strong>example:</strong>
+         * <p>Stream</p>
          */
         public Builder form(String form) {
             this.putQueryParameter("Form", form);
@@ -335,11 +350,14 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The logical relationship between multiple keywords. Valid values:
-         * <p>
+         * <p>The logical relationship between multiple keywords. Valid values:</p>
+         * <ul>
+         * <li><strong>or</strong></li>
+         * <li><strong>and</strong> (default value)</li>
+         * </ul>
          * 
-         * *   **or**
-         * *   **and** (default value)
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder logicalOperator(String logicalOperator) {
             this.putQueryParameter("LogicalOperator", logicalOperator);
@@ -348,10 +366,13 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the mongos node or shard node in the instance.
-         * <p>
+         * <p>The ID of the mongos node or shard node in the instance.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * > This parameter takes effect only when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>d-bp128a003436****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -360,11 +381,14 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The order of time in which the log entries to return are sorted. Valid values:
-         * <p>
+         * <p>The order of time in which the log entries to return are sorted. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong>: The log entries are sorted by time in ascending order.</li>
+         * <li><strong>desc</strong>: The log entries are sorted by time in descending order.</li>
+         * </ul>
          * 
-         * *   **asc**: The log entries are sorted by time in ascending order.
-         * *   **desc**: The log entries are sorted by time in descending order.
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -391,7 +415,10 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. The valid value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: 1.
+         * <p>The page number of the page to return. The valid value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -400,7 +427,10 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Default value: 30. Valid values: **30**, **50**, and **100**.
+         * <p>The number of entries to return per page. Default value: 30. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -409,7 +439,10 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.
+         * <p>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slow</p>
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -436,7 +469,11 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-13T12:11:14Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -445,7 +482,10 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The user of the database. If you do not specify this parameter, this operation returns records of all users.
+         * <p>The user of the database. If you do not specify this parameter, this operation returns records of all users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

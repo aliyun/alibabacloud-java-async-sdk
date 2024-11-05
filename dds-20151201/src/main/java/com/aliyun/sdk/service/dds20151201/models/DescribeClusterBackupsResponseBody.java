@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterBackupsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The cluster backup sets. A cluster backup file contains the backup sets of each node.
+         * <p>The cluster backup sets. A cluster backup file contains the backup sets of each node.</p>
          */
         public Builder clusterBackups(java.util.List < ClusterBackups> clusterBackups) {
             this.clusterBackups = clusterBackups;
@@ -93,7 +94,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the page returned.
+         * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -109,7 +116,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -117,7 +127,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F42BB4E-461F-5B55-A37C-53B1141C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +143,12 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterBackupsResponseBody</p>
+     */
     public static class ExtraInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
@@ -193,7 +212,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private String storageSize; 
 
             /**
-             * The instance type of the node.
+             * <p>The instance type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mdb.shard.4x.large.d</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -201,7 +223,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-2ze75ab1fa5d****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -209,7 +234,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The node type.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -217,7 +245,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the node. Unit: MB.
+             * <p>The storage capacity of the node. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20480</p>
              */
             public Builder storageSize(String storageSize) {
                 this.storageSize = storageSize;
@@ -231,6 +262,12 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterBackupsResponseBody</p>
+     */
     public static class Backups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupDownloadURL")
         private String backupDownloadURL;
@@ -378,7 +415,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private String isAvail; 
 
             /**
-             * The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.
+             * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss.com/xxx">http://oss.com/xxx</a></p>
              */
             public Builder backupDownloadURL(String backupDownloadURL) {
                 this.backupDownloadURL = backupDownloadURL;
@@ -386,7 +426,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The end time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T19:33:20Z</p>
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -394,7 +437,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup set.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>738025367</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -402,7 +448,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the backup set over an internal network. If the backup set cannot be downloaded, null is returned.
+             * <p>The URL that is used to download the backup set over an internal network. If the backup set cannot be downloaded, null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss.com/xxx">http://oss.com/xxx</a></p>
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
@@ -410,7 +459,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup name.
+             * <p>The backup name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678.tar.gz</p>
              */
             public Builder backupName(String backupName) {
                 this.backupName = backupName;
@@ -418,7 +470,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the backup file. Unit: bytes.
+             * <p>The size of the backup file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77544597650</p>
              */
             public Builder backupSize(String backupSize) {
                 this.backupSize = backupSize;
@@ -426,7 +481,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T19:33:20Z</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -434,11 +492,14 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the backup task. Valid values:
-             * <p>
+             * <p>The status of the backup task. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong>: The backup task is successful.</li>
+             * <li><strong>Failed</strong>: The backup task failed.</li>
+             * </ul>
              * 
-             * *   **Success**: The backup task is successful.
-             * *   **Failed**: The backup task failed.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -446,7 +507,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the node associated with the backup.
+             * <p>The information of the node associated with the backup.</p>
              */
             public Builder extraInfo(ExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -454,7 +515,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The shard name.
+             * <p>The shard name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp16cb162771****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -462,11 +526,14 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the backup set is available. Valid values:
-             * <p>
+             * <p>Indicates whether the backup set is available. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unavailable</li>
+             * <li><strong>1</strong>: available</li>
+             * </ul>
              * 
-             * *   **0**: unavailable
-             * *   **1**: available
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isAvail(String isAvail) {
                 this.isAvail = isAvail;
@@ -480,6 +547,12 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterBackupsResponseBody</p>
+     */
     public static class ClusterBackupsExtraInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegistryFromHistory")
         private String registryFromHistory;
@@ -507,7 +580,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private String registryFromHistory; 
 
             /**
-             * Indicates whether the cluster backups are migrated from the historical backup sets. If the value of this parameter is **1**, the cluster backups are migrated from the historical backup sets.
+             * <p>Indicates whether the cluster backups are migrated from the historical backup sets. If the value of this parameter is <strong>1</strong>, the cluster backups are migrated from the historical backup sets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder registryFromHistory(String registryFromHistory) {
                 this.registryFromHistory = registryFromHistory;
@@ -521,6 +597,12 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterBackupsResponseBody</p>
+     */
     public static class ClusterBackups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachLogStatus")
         private String attachLogStatus;
@@ -546,6 +628,9 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterBackupStatus")
         private String clusterBackupStatus;
 
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
+        private String engineVersion;
+
         @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private ClusterBackupsExtraInfo extraInfo;
 
@@ -564,6 +649,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             this.clusterBackupSize = builder.clusterBackupSize;
             this.clusterBackupStartTime = builder.clusterBackupStartTime;
             this.clusterBackupStatus = builder.clusterBackupStatus;
+            this.engineVersion = builder.engineVersion;
             this.extraInfo = builder.extraInfo;
             this.isAvail = builder.isAvail;
             this.progress = builder.progress;
@@ -634,6 +720,13 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return engineVersion
+         */
+        public String getEngineVersion() {
+            return this.engineVersion;
+        }
+
+        /**
          * @return extraInfo
          */
         public ClusterBackupsExtraInfo getExtraInfo() {
@@ -663,21 +756,26 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private String clusterBackupSize; 
             private String clusterBackupStartTime; 
             private String clusterBackupStatus; 
+            private String engineVersion; 
             private ClusterBackupsExtraInfo extraInfo; 
             private Integer isAvail; 
             private String progress; 
 
             /**
-             * The backup status. Valid values:
-             * <p>
+             * <p>The backup status. Valid values:</p>
+             * <ul>
+             * <li><strong>init</strong>: The backup is being initialized.</li>
+             * <li><strong>No_Need</strong>: Log backup is not performed.</li>
+             * <li><strong>Running</strong>: Log backup is being performed.</li>
+             * <li><strong>Ready</strong>: Log backup is complete.</li>
+             * <li><strong>Failed</strong>: Log backup failed.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the <strong>ClusterBackupStatus</strong> parameter is set to OK, full backup is successful. If you want to perform point-in-time-restoration on an instance for which log backup is enabled or to implement consistency restoration, make sure that log backup is complete.</p>
+             * </blockquote>
              * 
-             * *   **init**: The backup is being initialized.
-             * *   **No_Need**: Log backup is not performed.
-             * *   **Running**: Log backup is being performed.
-             * *   **Ready**: Log backup is complete.
-             * *   **Failed**: Log backup failed.
-             * 
-             * >  If the **ClusterBackupStatus** parameter is set to OK, full backup is successful. If you want to perform point-in-time-restoration on an instance for which log backup is enabled or to implement consistency restoration, make sure that log backup is complete.
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder attachLogStatus(String attachLogStatus) {
                 this.attachLogStatus = attachLogStatus;
@@ -685,7 +783,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The collection of the backup sets of each child node in a cluster backup set.
+             * <p>The collection of the backup sets of each child node in a cluster backup set.</p>
              */
             public Builder backups(java.util.List < Backups> backups) {
                 this.backups = backups;
@@ -693,7 +791,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range within which the cluster backup is performed.
+             * <p>The end of the time range within which the cluster backup is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T19:33:20Z</p>
              */
             public Builder clusterBackupEndTime(String clusterBackupEndTime) {
                 this.clusterBackupEndTime = clusterBackupEndTime;
@@ -701,7 +802,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup set ID.
+             * <p>The backup set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cb-o8c2ugnxo26kx***</p>
              */
             public Builder clusterBackupId(String clusterBackupId) {
                 this.clusterBackupId = clusterBackupId;
@@ -709,7 +813,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster backup mode.
+             * <p>The cluster backup mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Automated</p>
              */
             public Builder clusterBackupMode(String clusterBackupMode) {
                 this.clusterBackupMode = clusterBackupMode;
@@ -717,7 +824,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cluster backup set. Unit: bytes.
+             * <p>The size of the cluster backup set. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107374182400</p>
              */
             public Builder clusterBackupSize(String clusterBackupSize) {
                 this.clusterBackupSize = clusterBackupSize;
@@ -725,7 +835,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range within which the cluster backup is performed.
+             * <p>The beginning of the time range within which the cluster backup is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T19:33:20Z</p>
              */
             public Builder clusterBackupStartTime(String clusterBackupStartTime) {
                 this.clusterBackupStartTime = clusterBackupStartTime;
@@ -733,7 +846,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster backup set.
+             * <p>The status of the cluster backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder clusterBackupStatus(String clusterBackupStatus) {
                 this.clusterBackupStatus = clusterBackupStatus;
@@ -741,7 +857,15 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information in the JSON format.
+             * EngineVersion.
+             */
+            public Builder engineVersion(String engineVersion) {
+                this.engineVersion = engineVersion;
+                return this;
+            }
+
+            /**
+             * <p>The additional information in the JSON format.</p>
              */
             public Builder extraInfo(ClusterBackupsExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -749,11 +873,14 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster backup sets take effect. Valid values:
-             * <p>
+             * <p>Indicates whether the cluster backup sets take effect. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The cluster backup sets take effect.</li>
+             * <li><strong>0</strong>: The backup sets of child nodes are incomplete or fail.</li>
+             * </ul>
              * 
-             * *   **1**: The cluster backup sets take effect.
-             * *   **0**: The backup sets of child nodes are incomplete or fail.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isAvail(Integer isAvail) {
                 this.isAvail = isAvail;
@@ -761,7 +888,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the backup task. Unit: %. The progress is returned only for running backup tasks.
+             * <p>The progress of the backup task. Unit: %. The progress is returned only for running backup tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;

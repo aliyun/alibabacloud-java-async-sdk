@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceDiskTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceDiskTypeRequest</p>
@@ -204,13 +205,15 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</li>
+         * <li><strong>false</strong>: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click <strong>Expenses</strong> and select <strong>User Center</strong> from the drop-down list. The User Center page appears. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</li>
+         * </ul>
+         * <p>Default value: <strong>true</strong>.</p>
          * 
-         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-         * *   **false**: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click **Expenses** and select **User Center** from the drop-down list. The User Center page appears. In the left-side navigation pane, choose **Order Management** > Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.
-         * 
-         * Default value: **true**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -219,13 +222,15 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -234,7 +239,10 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * The business information. This is an additional parameter.
+         * <p>The business information. This is an additional parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -243,7 +251,10 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -252,7 +263,11 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1fa5efaa93****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -261,13 +276,16 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * The new disk type. Valid values:
-         * <p>
+         * <p>The new disk type. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_auto</strong>: ESSD AutoPL disk</li>
+         * <li><strong>cloud_essd1</strong>: PL1 ESSD</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * </ul>
          * 
-         * *   **cloud_auto**: ESSD AutoPL disk
-         * *   **cloud_essd1**: PL1 ESSD
-         * *   **cloud_essd2**: PL2 ESSD
-         * *   **cloud_essd3**: PL3 ESSD
+         * <strong>example:</strong>
+         * <p>cloud_auto</p>
          */
         public Builder dbInstanceStorageType(String dbInstanceStorageType) {
             this.putQueryParameter("DbInstanceStorageType", dbInstanceStorageType);
@@ -276,7 +294,10 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * An additional parameter.
+         * <p>An additional parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>async</p>
          */
         public Builder extraParam(String extraParam) {
             this.putQueryParameter("ExtraParam", extraParam);
@@ -285,13 +306,17 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * The type of configuration changes. Valid values:
-         * <p>
+         * <p>The type of configuration changes. Valid values:</p>
+         * <ul>
+         * <li><strong>UPGRADE</strong></li>
+         * <li><strong>DOWNGRADE</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only when the billing method of the instance is subscription.</p>
+         * </blockquote>
          * 
-         * *   **UPGRADE**
-         * *   **DOWNGRADE**
-         * 
-         * >  This parameter is valid only when the billing method of the instance is subscription.
+         * <strong>example:</strong>
+         * <p>UPGRADE</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -300,7 +325,10 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * The provisioned IOPS. Valid values: 0 to 50000.
+         * <p>The provisioned IOPS. Valid values: 0 to 50000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1960</p>
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSwitchLogRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceSwitchLogRequest</p>
@@ -146,7 +147,10 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-uf68f1b5a57exxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -155,7 +159,10 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-28T02:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -164,7 +171,10 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0 and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than 0 and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -173,7 +183,10 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30, 50, and 100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -191,7 +204,10 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-27T02:46Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceNetworkTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceNetworkTypeRequest</p>
@@ -219,10 +220,13 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The retention period of the original classic network address when you change the network type to VPC. Valid values: **14**, **30**, **60**, and **120**. Unit: days.
-         * <p>
+         * <p>The retention period of the original classic network address when you change the network type to VPC. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: days.</p>
+         * <blockquote>
+         * <p>This parameter is required when the <strong>NetworkType</strong> parameter is set to <strong>VPC</strong> and the <strong>RetainClassic</strong> parameter is set to <strong>True</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder classicExpiredDays(Integer classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -231,7 +235,11 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -240,10 +248,14 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The network type to switch to. Valid value:
-         * <p>
+         * <p>The network type to switch to. Valid value:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -288,17 +300,22 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:
-         * <p>
+         * <p>Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: retains the original classic network address.</li>
+         * <li><strong>False</strong>: does not retain the original classic network address.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is required when the <strong>NetworkType</strong> parameter is set to <strong>VPC</strong>.</p>
+         * </li>
+         * <li><p>If you set this parameter to <strong>True</strong>, you must also specify the <strong>ClassicExpiredDays</strong> parameter.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **True**: retains the original classic network address.
-         * *   **False**: does not retain the original classic network address.
-         * 
-         * > 
-         * 
-         * *   This parameter is required when the **NetworkType** parameter is set to **VPC**.
-         * 
-         * *   If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder retainClassic(String retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -307,10 +324,13 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch in the VPC.
-         * <p>
+         * <p>The ID of the vSwitch in the VPC.</p>
+         * <blockquote>
+         * <p>This parameter is required when the <strong>NetworkType</strong> parameter is set to <strong>VPC</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required when the **NetworkType** parameter is set to **VPC**.
+         * <strong>example:</strong>
+         * <p>vsw-bp1vj604nj5a9zz74****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -319,10 +339,13 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
-         * <p>
+         * <p>The ID of the VPC.</p>
+         * <blockquote>
+         * <p>This parameter is required when the <strong>NetworkType</strong> parameter is set to <strong>VPC</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required when the **NetworkType** parameter is set to **VPC**.
+         * <strong>example:</strong>
+         * <p>vpc-bp1n3i15v90el48nx****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -331,7 +354,11 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * 可用区ID，您可以通过调用[DescribeRegions](~~61933~~)接口查询可用区ID。
+         * <p>可用区ID，您可以通过调用<a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a>接口查询可用区ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

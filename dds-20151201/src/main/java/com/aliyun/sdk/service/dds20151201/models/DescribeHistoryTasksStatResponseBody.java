@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHistoryTasksStatResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The task objects.
+         * <p>The task objects.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC724D23-XXXX-XXXX-ABB1-606C935AE7FD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryTasksStatResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -109,16 +119,19 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The task status. Valid values:
-             * <p>
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Scheduled: The task is waiting to be executed.</li>
+             * <li>Running: The task is running.</li>
+             * <li>Succeed: The task is successful.</li>
+             * <li>Failed: The task failed.</li>
+             * <li>Cancelling: The task is being terminated.</li>
+             * <li>Canceled: The task has been terminated.</li>
+             * <li>Waiting: The task is waiting for scheduled time.</li>
+             * </ul>
              * 
-             * *   Scheduled: The task is waiting to be executed.
-             * *   Running: The task is running.
-             * *   Succeed: The task is successful.
-             * *   Failed: The task failed.
-             * *   Cancelling: The task is being terminated.
-             * *   Canceled: The task has been terminated.
-             * *   Waiting: The task is waiting for scheduled time.
+             * <strong>example:</strong>
+             * <p>Succeed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -126,7 +139,10 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks in a specified state.
+             * <p>The number of tasks in a specified state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

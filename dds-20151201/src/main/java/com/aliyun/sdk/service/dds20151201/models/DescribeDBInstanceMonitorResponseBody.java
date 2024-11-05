@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceMonitorResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The collection frequency of monitoring data for the instance. Valid value: **5**. Unit: seconds.
+         * <p>The collection frequency of monitoring data for the instance. Valid value: <strong>5</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder granularity(String granularity) {
             this.granularity = granularity;
@@ -57,7 +61,10 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFD65226-08CC-4C4D-B6A4-CB3C382F67B0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

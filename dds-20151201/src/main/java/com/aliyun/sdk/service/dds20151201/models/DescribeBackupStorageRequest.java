@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupStorageRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupStorageRequest</p>
@@ -138,7 +139,11 @@ public class DescribeBackupStorageRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-2zeb2d64cb46xxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -147,10 +152,13 @@ public class DescribeBackupStorageRequest extends Request {
         }
 
         /**
-         * The ID of the shard node in the sharded cluster instance.
-         * <p>
+         * <p>The ID of the shard node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the <strong>DBInstanceId</strong> parameter is set to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>d-2zee48956b4axxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -177,7 +185,10 @@ public class DescribeBackupStorageRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-bejing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

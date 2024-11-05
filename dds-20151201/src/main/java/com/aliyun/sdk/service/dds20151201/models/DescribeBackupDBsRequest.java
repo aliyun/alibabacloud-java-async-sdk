@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupDBsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupDBsRequest</p>
@@ -179,14 +180,18 @@ public class DescribeBackupDBsRequest extends Request {
         } 
 
         /**
-         * The backup ID.
-         * <p>
+         * <p>The backup ID.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/62172.html">DescribeBackups</a> operation to query the backup ID.</p>
+         * </li>
+         * <li><p>You must specify one of the <strong>RestoreTime</strong> and BackupId parameters.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
-         * 
-         * *   You must specify one of the **RestoreTime** and BackupId parameters.
+         * <strong>example:</strong>
+         * <p>5664****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -213,7 +218,10 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * <p>The page number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -222,7 +230,10 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Default value: 30. Valid values: **30**, **50**, and **100**.
+         * <p>The number of entries to return per page. Default value: 30. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +242,10 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ax68****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -258,14 +272,18 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * The point in time to which the instance is restored. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The point in time to which the instance is restored. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The time can be a point in time within the previous seven days. The time must be earlier than the current time, but later than the time when the instance was created.</p>
+         * </li>
+         * <li><p>You must specify one of the RestoreTime and <strong>BackupId</strong> parameters.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   The time can be a point in time within the previous seven days. The time must be earlier than the current time, but later than the time when the instance was created.
-         * 
-         * *   You must specify one of the RestoreTime and **BackupId** parameters.
+         * <strong>example:</strong>
+         * <p>2019-08-22T12:00:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -274,7 +292,10 @@ public class DescribeBackupDBsRequest extends Request {
         }
 
         /**
-         * The ID of the source instance.
+         * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp2286****</p>
          */
         public Builder sourceDBInstance(String sourceDBInstance) {
             this.putQueryParameter("SourceDBInstance", sourceDBInstance);

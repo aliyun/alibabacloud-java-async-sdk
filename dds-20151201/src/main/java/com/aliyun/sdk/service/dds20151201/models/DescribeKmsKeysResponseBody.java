@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKmsKeysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKmsKeysResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The KMS keys.
+         * <p>The KMS keys.</p>
          */
         public Builder kmsKeys(java.util.List < KmsKeys> kmsKeys) {
             this.kmsKeys = kmsKeys;
@@ -57,7 +58,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60EEBD77-227C-5B39-86EA-D89163C5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKmsKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKmsKeysResponseBody</p>
+     */
     public static class KmsKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyAlias")
         private String keyAlias;
@@ -109,7 +119,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             private String keyId; 
 
             /**
-             * The alias of the key.
+             * <p>The alias of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-shh656820f4mh9qxxxxx     alias/test1</p>
              */
             public Builder keyAlias(String keyAlias) {
                 this.keyAlias = keyAlias;
@@ -117,7 +130,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The key ID.
+             * <p>The key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37291352-xxxx-xxxx-adbf-fd0630a95583</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
