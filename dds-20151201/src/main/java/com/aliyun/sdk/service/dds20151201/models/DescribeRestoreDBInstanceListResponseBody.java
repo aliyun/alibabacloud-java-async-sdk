@@ -86,7 +86,7 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DBInstances.
+         * <p>DB instances list.</p>
          */
         public Builder DBInstances(DBInstances DBInstances) {
             this.DBInstances = DBInstances;
@@ -94,7 +94,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AF0AD89-ED4F-44AD-B65F-BFC1D5Cxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of instances in the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -296,7 +308,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CreationTime.
+             * <p>The time of instance creation, formatted as <i>yyyy-MM-dd</i>T<i>HH:00:00</i>Z (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-02T07:43:59Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -304,7 +319,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceDescription.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-database</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -312,7 +330,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dds-bp12c5b040dc****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -320,7 +341,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -328,7 +352,14 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceType.
+             * <p>The architecture of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>sharding</strong>: sharded cluster instance</li>
+             * <li><strong>replicate</strong>: replica set or standalone instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>replicate</p>
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -336,7 +367,19 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The database engine version of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>7.0</strong></li>
+             * <li><strong>6.0</strong></li>
+             * <li><strong>5.0</strong></li>
+             * <li><strong>4.4</strong></li>
+             * <li><strong>4.2</strong></li>
+             * <li><strong>4.0</strong></li>
+             * <li><strong>3.4</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4.2</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -344,7 +387,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * HiddenZoneId.
+             * <p>The secondary availability zone 2 for the instance when implementing multi-AZ deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder hiddenZoneId(String hiddenZoneId) {
                 this.hiddenZoneId = hiddenZoneId;
@@ -352,7 +398,14 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * IsDeleted.
+             * <p>Specifies whether the instance is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: not deleted</li>
+             * <li><strong>1</strong>: deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isDeleted(Integer isDeleted) {
                 this.isDeleted = isDeleted;
@@ -360,7 +413,17 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * <p>The locked state of the instance, value description:</p>
+             * <ul>
+             * <li>Unlock: Normal.</li>
+             * <li>ManualLock: Manually triggered lock.</li>
+             * <li>LockByExpiration: Automatically locked due to expiration.</li>
+             * <li>LockByRestoration: Automatically locked before restoration.</li>
+             * <li>LockByDiskQuota: Automatically locked due to disk quota exceeded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -368,7 +431,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -376,7 +442,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * SecondaryZoneId.
+             * <p>The secondary availability zone 1 for the instance when implementing multi-AZ deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
                 this.secondaryZoneId = secondaryZoneId;
@@ -384,7 +453,10 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

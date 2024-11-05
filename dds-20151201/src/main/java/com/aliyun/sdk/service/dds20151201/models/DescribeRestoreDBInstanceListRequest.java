@@ -154,6 +154,13 @@ public class DescribeRestoreDBInstanceListRequest extends Request {
         } 
 
         /**
+         * <p>Find instances created after the specified time, formatted as <i>yyyy-MM-dd</i>T<i>HH:00:00</i>Z (UTC time).</p>
+         * <blockquote>
+         * <ul>
+         * <li>The time must be on the hour.</li>
+         * <li>The time cannot be earlier than 7 days before the current time.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +173,7 @@ public class DescribeRestoreDBInstanceListRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +204,10 @@ public class DescribeRestoreDBInstanceListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -205,7 +216,10 @@ public class DescribeRestoreDBInstanceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
