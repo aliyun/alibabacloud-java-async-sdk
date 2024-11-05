@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IssueCouponForCustomerResponseBody} extends {@link TeaModel}
  *
  * <p>IssueCouponForCustomerResponseBody</p>
@@ -101,7 +102,10 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IssueCouponForCustomerResponseBody} extends {@link TeaModel}
+     *
+     * <p>IssueCouponForCustomerResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CouponTemplateId")
         private Long couponTemplateId;

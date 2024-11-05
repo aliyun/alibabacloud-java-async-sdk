@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDailyBillRequest} extends {@link RequestModel}
  *
  * <p>GetDailyBillRequest</p>
@@ -84,10 +85,13 @@ public class GetDailyBillRequest extends Request {
         } 
 
         /**
-         * Bill Owner type. Value Range:</br>
-         * <p>
+         * <p>Bill Owner type. Value Range:</br>
          * 1: Master account</br>
-         * 2: Sub account</br>
+         * 2: Sub account</br></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder billOwner(String billOwner) {
             this.putQueryParameter("BillOwner", billOwner);
@@ -96,13 +100,17 @@ public class GetDailyBillRequest extends Request {
         }
 
         /**
-         * BillType. Value Range:</br>
-         * <p>
+         * <p>BillType. Value Range:</br></p>
+         * <ul>
+         * <li>DailyOrder(Deprecated)</li>
+         * <li>DailyBill (Deprecated)</li>
+         * <li>DailyInstanceBill (Deprecated)</li>
+         * <li>DailyInstanceBillV2</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - DailyOrder(Deprecated)
-         * - DailyBill (Deprecated)
-         * - DailyInstanceBill (Deprecated)
-         * - DailyInstanceBillV2
+         * <strong>example:</strong>
+         * <p>DailyInstanceBillV2</p>
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);
@@ -111,7 +119,11 @@ public class GetDailyBillRequest extends Request {
         }
 
         /**
-         * Billing date. Format YYYY-MM-DD
+         * <p>Billing date. Format YYYY-MM-DD</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-24</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);

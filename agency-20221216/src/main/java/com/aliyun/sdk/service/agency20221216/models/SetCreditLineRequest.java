@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetCreditLineRequest} extends {@link RequestModel}
  *
  * <p>SetCreditLineRequest</p>
@@ -69,7 +70,11 @@ public class SetCreditLineRequest extends Request {
         } 
 
         /**
-         * New Credit Line
+         * <p>New Credit Line</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder creditLine(String creditLine) {
             this.putQueryParameter("CreditLine", creditLine);
@@ -78,7 +83,11 @@ public class SetCreditLineRequest extends Request {
         }
 
         /**
-         * The UID of Sub Account.
+         * <p>The UID of Sub Account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1263644979775567</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

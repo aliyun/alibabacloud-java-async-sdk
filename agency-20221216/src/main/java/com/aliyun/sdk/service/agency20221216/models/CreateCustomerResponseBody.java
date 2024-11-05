@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCustomerResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code indicating whether the call was successful.
+         * <p>Code indicating whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Data indicating whether a customer was successfully created. If it\"s "true", the Message contains CID.
+         * <p>Data indicating whether a customer was successfully created. If it&quot;s &quot;true&quot;, the Message contains CID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -101,7 +108,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Massage indicating whether the call was successful.
+         * <p>Massage indicating whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Request ID, Alibaba Cloud will track errors with this.
+         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9B725C7-3DBD-576B-AC91-F6F22AB99A77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Candidate Value: True/False, which indicates whether the current API call it self was successful. It does not guarantee the success of subsequent business operations.
+         * <p>Candidate Value: True/False, which indicates whether the current API call it self was successful. It does not guarantee the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

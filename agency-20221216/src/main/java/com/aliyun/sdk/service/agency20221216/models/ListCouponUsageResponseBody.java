@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCouponUsageResponseBody} extends {@link TeaModel}
  *
  * <p>ListCouponUsageResponseBody</p>
@@ -130,6 +131,12 @@ public class ListCouponUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCouponUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCouponUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
@@ -331,6 +338,12 @@ public class ListCouponUsageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCouponUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCouponUsageResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;

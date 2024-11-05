@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUnassociatedCustomerRequest} extends {@link RequestModel}
  *
  * <p>GetUnassociatedCustomerRequest</p>
@@ -69,7 +70,11 @@ public class GetUnassociatedCustomerRequest extends Request {
         } 
 
         /**
-         * Pagination, current page.
+         * <p>Pagination, current page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -78,7 +83,11 @@ public class GetUnassociatedCustomerRequest extends Request {
         }
 
         /**
-         * Pagination, record number on each page.
+         * <p>Pagination, record number on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

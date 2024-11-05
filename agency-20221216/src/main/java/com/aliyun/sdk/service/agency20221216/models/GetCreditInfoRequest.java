@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCreditInfoRequest} extends {@link RequestModel}
  *
  * <p>GetCreditInfoRequest</p>
@@ -54,7 +55,11 @@ public class GetCreditInfoRequest extends Request {
         } 
 
         /**
-         * Sub Account UID
+         * <p>Sub Account UID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792155717328010</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

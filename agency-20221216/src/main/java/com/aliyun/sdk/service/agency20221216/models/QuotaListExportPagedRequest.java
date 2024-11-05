@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuotaListExportPagedRequest} extends {@link RequestModel}
  *
  * <p>QuotaListExportPagedRequest</p>
@@ -83,7 +84,11 @@ public class QuotaListExportPagedRequest extends Request {
         } 
 
         /**
-         * Pagination, current page number, starting from 1.
+         * <p>Pagination, current page number, starting from 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -92,11 +97,13 @@ public class QuotaListExportPagedRequest extends Request {
         }
 
         /**
-         * Multilingual Parameters, the default language is English.</br>
-         * <p>
+         * <p>Multilingual Parameters, the default language is English.</br>
          * en: English</br>
          * zh: Chinese</br>
-         * ja: Japanese </br>
+         * ja: Japanese </br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -105,7 +112,11 @@ public class QuotaListExportPagedRequest extends Request {
         }
 
         /**
-         * Pagination, record number on each page, maximum 100.
+         * <p>Pagination, record number on each page, maximum 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

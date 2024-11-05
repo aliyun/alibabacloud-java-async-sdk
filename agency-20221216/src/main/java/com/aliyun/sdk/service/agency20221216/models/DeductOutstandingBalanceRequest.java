@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeductOutstandingBalanceRequest} extends {@link RequestModel}
  *
  * <p>DeductOutstandingBalanceRequest</p>
@@ -69,7 +70,11 @@ public class DeductOutstandingBalanceRequest extends Request {
         } 
 
         /**
-         * The Deducted Credit to be offset.
+         * <p>The Deducted Credit to be offset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder deductAmount(String deductAmount) {
             this.putQueryParameter("DeductAmount", deductAmount);
@@ -78,7 +83,11 @@ public class DeductOutstandingBalanceRequest extends Request {
         }
 
         /**
-         * Account UID of Distribution Customer.
+         * <p>Account UID of Distribution Customer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1133166938931507</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

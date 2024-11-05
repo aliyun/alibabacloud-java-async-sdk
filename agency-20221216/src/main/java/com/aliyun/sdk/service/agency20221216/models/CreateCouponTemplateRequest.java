@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCouponTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateCouponTemplateRequest</p>
@@ -28,7 +29,7 @@ public class CreateCouponTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CouponDescription")
-    @com.aliyun.core.annotation.Validation(maxLength = 100111)
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
     private String couponDescription;
 
     @com.aliyun.core.annotation.Query
@@ -50,12 +51,12 @@ public class CreateCouponTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReasonForApplication")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 10011)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100)
     private String reasonForApplication;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 3011)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 30)
     private String templateName;
 
     @com.aliyun.core.annotation.Query
@@ -244,7 +245,10 @@ public class CreateCouponTemplateRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -253,7 +257,10 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * ApplicableProducts.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All Products</p>
          */
         public Builder applicableProducts(String applicableProducts) {
             this.putQueryParameter("ApplicableProducts", applicableProducts);
@@ -262,7 +269,10 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * CostBearer.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Partner</p>
          */
         public Builder costBearer(String costBearer) {
             this.putQueryParameter("CostBearer", costBearer);
@@ -289,7 +299,10 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * LimitPerPerson.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlimited</p>
          */
         public Builder limitPerPerson(String limitPerPerson) {
             this.putQueryParameter("LimitPerPerson", limitPerPerson);
@@ -317,7 +330,7 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * ReasonForApplication.
+         * <p>This parameter is required.</p>
          */
         public Builder reasonForApplication(String reasonForApplication) {
             this.putQueryParameter("ReasonForApplication", reasonForApplication);
@@ -326,7 +339,7 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -353,7 +366,10 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * ValidUntil.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Validity Duration</p>
          */
         public Builder validUntil(String validUntil) {
             this.putQueryParameter("ValidUntil", validUntil);
@@ -362,7 +378,10 @@ public class CreateCouponTemplateRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

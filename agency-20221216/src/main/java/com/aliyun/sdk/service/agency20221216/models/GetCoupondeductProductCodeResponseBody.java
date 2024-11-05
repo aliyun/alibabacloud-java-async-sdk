@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCoupondeductProductCodeResponseBody} extends {@link TeaModel}
  *
  * <p>GetCoupondeductProductCodeResponseBody</p>
@@ -109,7 +110,10 @@ public class GetCoupondeductProductCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e876f16704666020714468dab35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class GetCoupondeductProductCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCoupondeductProductCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCoupondeductProductCodeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductType")
         private Object productType;

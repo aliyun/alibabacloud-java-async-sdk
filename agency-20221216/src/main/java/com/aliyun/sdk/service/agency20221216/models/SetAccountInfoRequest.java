@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetAccountInfoRequest} extends {@link RequestModel}
  *
  * <p>SetAccountInfoRequest</p>
@@ -96,12 +97,16 @@ public class SetAccountInfoRequest extends Request {
         } 
 
         /**
-         * Result Code:
-         * <p>
-         * *   200 OK
-         * *   1109 System error
-         * *   3030 Sub Account Nickname exceeds maximum length,  maximum length 150 bytes.
-         * *   3031 Remark exceeds maximum length,  maximum length 3000 bytes.
+         * <p>Result Code:</p>
+         * <ul>
+         * <li>200 OK</li>
+         * <li>1109 System error</li>
+         * <li>3030 Sub Account Nickname exceeds maximum length,  maximum length 150 bytes.</li>
+         * <li>3031 Remark exceeds maximum length,  maximum length 3000 bytes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Message information</p>
          */
         public Builder accountNickname(String accountNickname) {
             this.putQueryParameter("AccountNickname", accountNickname);
@@ -110,7 +115,10 @@ public class SetAccountInfoRequest extends Request {
         }
 
         /**
-         * Customer manager（limited 50 character）
+         * <p>Customer manager（limited 50 character）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder customerBd(String customerBd) {
             this.putQueryParameter("CustomerBd", customerBd);
@@ -119,7 +127,10 @@ public class SetAccountInfoRequest extends Request {
         }
 
         /**
-         * success
+         * <p>success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -128,7 +139,11 @@ public class SetAccountInfoRequest extends Request {
         }
 
         /**
-         * Request ID, Alibaba Cloud will track errors with this.
+         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1133166938931507</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

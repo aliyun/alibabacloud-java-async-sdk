@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMonthlyBillRequest} extends {@link RequestModel}
  *
  * <p>GetMonthlyBillRequest</p>
@@ -84,10 +85,13 @@ public class GetMonthlyBillRequest extends Request {
         } 
 
         /**
-         * Bill Owner type. Value Range:</br>
-         * <p>
+         * <p>Bill Owner type. Value Range:</br>
          * 1: Master account</br>
-         * 2: Sub account</br>
+         * 2: Sub account</br></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder billOwner(String billOwner) {
             this.putQueryParameter("BillOwner", billOwner);
@@ -96,18 +100,22 @@ public class GetMonthlyBillRequest extends Request {
         }
 
         /**
-         * Value Range:
-         * <p>
+         * <p>Value Range:</p>
+         * <ul>
+         * <li>MonthlyInvoice</li>
+         * <li>MonthRefundInvoice</li>
+         * <li>MonthlySummary</li>
+         * <li>MonthlyInstanceAddAdjustBill </li>
+         * <li>MonthlyInstanceRefundBill</li>
+         * <li>MonthlyAddAdjustInvoce</li>
+         * <li>MonthlyRefundAdjustInvoce </li>
+         * <li>MonthlyInstanceConsumeV2 </li>
+         * <li>MarginReportV2</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - MonthlyInvoice
-         * - MonthRefundInvoice
-         * - MonthlySummary
-         * - MonthlyInstanceAddAdjustBill 
-         * - MonthlyInstanceRefundBill
-         * - MonthlyAddAdjustInvoce
-         * - MonthlyRefundAdjustInvoce 
-         * - MonthlyInstanceConsumeV2 
-         * - MarginReportV2
+         * <strong>example:</strong>
+         * <p>MonthlyInvoice</p>
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);
@@ -116,7 +124,11 @@ public class GetMonthlyBillRequest extends Request {
         }
 
         /**
-         * Billing Month, Format is YYYY-MM
+         * <p>Billing Month, Format is YYYY-MM</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11</p>
          */
         public Builder month(String month) {
             this.putQueryParameter("Month", month);

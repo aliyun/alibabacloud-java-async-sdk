@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditZeroCreditShutdownRequest} extends {@link RequestModel}
  *
  * <p>EditZeroCreditShutdownRequest</p>
@@ -67,7 +68,18 @@ public class EditZeroCreditShutdownRequest extends Request {
         } 
 
         /**
-         * UID
+         * <p>UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shutdown Policy</br></p>
+         * <ul>
+         * <li><p>immediatelyStop, The instances of the specified End User&quot;s account will be shutdown immediately once EU triggered the Shutdown Policy.</br></p>
+         * </li>
+         * <li><p>delayStop, The instances of the specified End User&quot;s account will be shutdown later, even EU have triggered the Shutdown Policy.</br></p>
+         * </li>
+         * <li><p>noStop, The instances of the specified End User&quot;s account will not be shutdown, after EU have triggered the Shutdown Policy.</br></p>
+         * </li>
+         * </ul>
          */
         public Builder shutdownPolicy(String shutdownPolicy) {
             this.putQueryParameter("ShutdownPolicy", shutdownPolicy);
@@ -76,7 +88,10 @@ public class EditZeroCreditShutdownRequest extends Request {
         }
 
         /**
-         * No Change History
+         * <p>No Change History</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1263644979775567</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

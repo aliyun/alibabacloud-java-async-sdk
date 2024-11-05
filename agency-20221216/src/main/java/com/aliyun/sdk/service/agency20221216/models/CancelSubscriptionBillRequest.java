@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelSubscriptionBillRequest} extends {@link RequestModel}
  *
  * <p>CancelSubscriptionBillRequest</p>
@@ -54,7 +55,11 @@ public class CancelSubscriptionBillRequest extends Request {
         } 
 
         /**
-         * The type of the bill to which you want to cancel the subscription. Valid values: PartnerBillingItemDetailForBillingPeriod, PartnerBillingItemDetailMonthly, PartnerInstanceDetailForBillingPeriod, and PartnerInstanceDetailMonthly.
+         * <p>The type of the bill to which you want to cancel the subscription. Valid values: PartnerBillingItemDetailForBillingPeriod, PartnerBillingItemDetailMonthly, PartnerInstanceDetailForBillingPeriod, and PartnerInstanceDetailMonthly.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PartnerBillingItemDetailForBillingPeriod</p>
          */
         public Builder subscribeType(String subscribeType) {
             this.putQueryParameter("SubscribeType", subscribeType);

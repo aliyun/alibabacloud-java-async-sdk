@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IssueCouponForCustomerRequest} extends {@link RequestModel}
  *
  * <p>IssueCouponForCustomerRequest</p>
@@ -92,7 +93,10 @@ public class IssueCouponForCustomerRequest extends Request {
         }
 
         /**
-         * CouponTemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5075915</p>
          */
         public Builder couponTemplateId(Long couponTemplateId) {
             this.putQueryParameter("CouponTemplateId", couponTemplateId);
@@ -101,7 +105,10 @@ public class IssueCouponForCustomerRequest extends Request {
         }
 
         /**
-         * Uidlist.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111,2222</p>
          */
         public Builder uidlist(String uidlist) {
             this.putQueryParameter("Uidlist", uidlist);

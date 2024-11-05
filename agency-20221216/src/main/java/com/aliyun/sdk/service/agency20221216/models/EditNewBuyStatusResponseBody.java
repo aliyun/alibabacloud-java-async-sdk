@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditNewBuyStatusResponseBody} extends {@link TeaModel}
  *
  * <p>EditNewBuyStatusResponseBody</p>
@@ -85,7 +86,10 @@ public class EditNewBuyStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Status Code</br>
+         * <p>Status Code</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class EditNewBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success or not</br>
+         * <p>Success or not</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +108,10 @@ public class EditNewBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message</br>
+         * <p>Message</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class EditNewBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message</br>
+         * <p>Message</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -117,7 +130,10 @@ public class EditNewBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Request ID</br>
+         * <p>Request ID</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

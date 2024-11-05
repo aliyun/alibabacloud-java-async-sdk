@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportCustomerQuotaRecordResponseBody} extends {@link TeaModel}
  *
  * <p>ExportCustomerQuotaRecordResponseBody</p>
@@ -73,7 +74,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code
+         * <p>Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data
+         * <p>Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Description
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +104,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         }
 
         /**
-         * ID of the Request
+         * <p>ID of the Request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc4b416874189683843905d9f9a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExportCustomerQuotaRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExportCustomerQuotaRecordResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cost")
         private Integer cost;
@@ -149,7 +165,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
             private Long id; 
 
             /**
-             * Estimated duration, in minutes.
+             * <p>Estimated duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cost(Integer cost) {
                 this.cost = cost;
@@ -157,7 +176,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ID of Export task
+             * <p>ID of Export task</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231</p>
              */
             public Builder id(Long id) {
                 this.id = id;

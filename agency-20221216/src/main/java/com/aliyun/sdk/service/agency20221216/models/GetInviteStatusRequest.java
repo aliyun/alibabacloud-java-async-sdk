@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInviteStatusRequest} extends {@link RequestModel}
  *
  * <p>GetInviteStatusRequest</p>
@@ -54,9 +55,9 @@ public class GetInviteStatusRequest extends Request {
         } 
 
         /**
-         * inviteId list</br>
-         * <p>
-         * `Sub-levels <= 5`
+         * <p>inviteId list</br>
+         * <code>Sub-levels &lt;= 5</code></p>
+         * <p>This parameter is required.</p>
          */
         public Builder inviteStatusList(java.util.List < InviteStatusList> inviteStatusList) {
             this.putQueryParameter("InviteStatusList", inviteStatusList);
@@ -71,6 +72,12 @@ public class GetInviteStatusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetInviteStatusRequest} extends {@link TeaModel}
+     *
+     * <p>GetInviteStatusRequest</p>
+     */
     public static class InviteStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InviteId")
         private Long inviteId;
@@ -98,7 +105,10 @@ public class GetInviteStatusRequest extends Request {
             private Long inviteId; 
 
             /**
-             * Invitation ID, From interface InviteSubAccount
+             * <p>Invitation ID, From interface InviteSubAccount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder inviteId(Long inviteId) {
                 this.inviteId = inviteId;

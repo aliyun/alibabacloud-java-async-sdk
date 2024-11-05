@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditEndUserStatusRequest} extends {@link RequestModel}
  *
  * <p>EditEndUserStatusRequest</p>
@@ -67,12 +68,16 @@ public class EditEndUserStatusRequest extends Request {
         } 
 
         /**
-         * Shutdown Status</br>
-         * <p>
+         * <p>Shutdown Status</br></p>
+         * <ul>
+         * <li><p>postPayFreeze, the account have been blocked</br></p>
+         * </li>
+         * <li><p>postPayThaw, the account have been unlocked</br></p>
+         * </li>
+         * </ul>
          * 
-         * - postPayFreeze, the account have been blocked</br>
-         * 
-         * - postPayThaw, the account have been unlocked</br>
+         * <strong>example:</strong>
+         * <p>postPayFreeze</p>
          */
         public Builder creditStatus(String creditStatus) {
             this.putQueryParameter("CreditStatus", creditStatus);
@@ -81,7 +86,10 @@ public class EditEndUserStatusRequest extends Request {
         }
 
         /**
-         * UID
+         * <p>UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792155717328010</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

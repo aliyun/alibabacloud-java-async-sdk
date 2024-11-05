@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCountriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCountriesResponseBody</p>
@@ -85,10 +86,14 @@ public class ListCountriesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Error Code
-         * <p>
-         * * 200: OK
-         * * 1109: System error
+         * <p>Error Code</p>
+         * <ul>
+         * <li>200: OK</li>
+         * <li>1109: System error</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +101,7 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * List of Region Code
+         * <p>List of Region Code</p>
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -104,7 +109,10 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * Message information
+         * <p>Message information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +120,10 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * Request ID, Alibaba Cloud will track errors with this.
+         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A747A00F-E096-5244-88B3-3E474BAE3AE4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +131,10 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.
+         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

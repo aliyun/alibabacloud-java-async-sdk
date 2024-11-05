@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResendEmailRequest} extends {@link RequestModel}
  *
  * <p>ResendEmailRequest</p>
@@ -54,9 +55,12 @@ public class ResendEmailRequest extends Request {
         } 
 
         /**
-         * Invitation ID, from interface InviteSubAccount </br>
-         * <p>
-         * Note: This field type is Long, which may result in precision loss in serialization/deserialization process. Please ensure the value does not exceed 9007199254740991.
+         * <p>Invitation ID, from interface InviteSubAccount </br>
+         * Note: This field type is Long, which may result in precision loss in serialization/deserialization process. Please ensure the value does not exceed 9007199254740991.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176</p>
          */
         public Builder inviteId(Long inviteId) {
             this.putQueryParameter("InviteId", inviteId);

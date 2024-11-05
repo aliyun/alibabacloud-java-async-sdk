@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomerOrdersRequest} extends {@link RequestModel}
  *
  * <p>GetCustomerOrdersRequest</p>
@@ -253,7 +254,10 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-23 00:00:00</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -298,7 +302,10 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -307,7 +314,10 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -325,7 +335,10 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-13 00:00:00</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -334,7 +347,10 @@ public class GetCustomerOrdersRequest extends Request {
         }
 
         /**
-         * TimeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder timeType(Integer timeType) {
             this.putQueryParameter("TimeType", timeType);

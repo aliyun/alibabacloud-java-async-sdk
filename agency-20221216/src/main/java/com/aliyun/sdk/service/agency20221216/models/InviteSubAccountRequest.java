@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InviteSubAccountRequest} extends {@link RequestModel}
  *
  * <p>InviteSubAccountRequest</p>
@@ -54,9 +55,9 @@ public class InviteSubAccountRequest extends Request {
         } 
 
         /**
-         * List of invited account information,  less than 5 accounts at a time.</br>
-         * <p>
-         * `Sub-levels <= 5`
+         * <p>List of invited account information,  less than 5 accounts at a time.</br>
+         * <code>Sub-levels &lt;= 5</code></p>
+         * <p>This parameter is required.</p>
          */
         public Builder accountInfoList(java.util.List < AccountInfoList> accountInfoList) {
             this.putQueryParameter("AccountInfoList", accountInfoList);
@@ -71,6 +72,12 @@ public class InviteSubAccountRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InviteSubAccountRequest} extends {@link TeaModel}
+     *
+     * <p>InviteSubAccountRequest</p>
+     */
     public static class AccountInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountNickname")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -201,10 +208,15 @@ public class InviteSubAccountRequest extends Request {
             private String zeroCreditShutdownPolicy; 
 
             /**
-             * The name of Sub Account:</br>
-             * <p>
-             * 1. Use the official name of Company, if Sub Account is an enterprise.</br>
-             * 2. Use the official name of Partner, if Sub Account is a T2 reseller.</br>
+             * <p>The name of Sub Account:</br></p>
+             * <ol>
+             * <li>Use the official name of Company, if Sub Account is an enterprise.</br></li>
+             * <li>Use the official name of Partner, if Sub Account is a T2 reseller.</br></li>
+             * </ol>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX Technology LTD.</p>
              */
             public Builder accountNickname(String accountNickname) {
                 this.accountNickname = accountNickname;
@@ -212,7 +224,11 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * The total budget Credit of Sub Account that distributed by Partner.
+             * <p>The total budget Credit of Sub Account that distributed by Partner.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder creditLine(String creditLine) {
                 this.creditLine = creditLine;
@@ -228,7 +244,11 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * Customer ID, Returning ID from CreateCustomer API.
+             * <p>Customer ID, Returning ID from CreateCustomer API.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -236,7 +256,11 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * The email address of End User,  which will receive the invitation email.
+             * <p>The email address of End User,  which will receive the invitation email.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:12345@163.com">12345@163.com</a></p>
              */
             public Builder emailAddress(String emailAddress) {
                 this.emailAddress = emailAddress;
@@ -244,10 +268,15 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * Initial Order Status</br>
-             * <p>
-             * 1. ban：Ban the new purchase action--After End User finish registration and authorization, they can\"t issue Cloud Resource order immediately. Partner should manually update the "Order Control" settings as "Normal" to enable new order.</br>
-             * 2. normal：Normal--After End User finished registration and authorization, they can issue Cloud Resource order immediately.</br>
+             * <p>Initial Order Status</br></p>
+             * <ol>
+             * <li>ban：Ban the new purchase action--After End User finish registration and authorization, they can&quot;t issue Cloud Resource order immediately. Partner should manually update the &quot;Order Control&quot; settings as &quot;Normal&quot; to enable new order.</br></li>
+             * <li>normal：Normal--After End User finished registration and authorization, they can issue Cloud Resource order immediately.</br></li>
+             * </ol>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ban</p>
              */
             public Builder newBuyStatus(String newBuyStatus) {
                 this.newBuyStatus = newBuyStatus;
@@ -255,7 +284,10 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * Description of Sub Account.
+             * <p>Description of Sub Account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The invitation to develop XX as a Sub Account</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -263,12 +295,14 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * The type of Sub Account</br>
-             * <p>
+             * <p>The type of Sub Account</br></p>
+             * <p>1 Agency&quot;s End User</br>
+             * 2 Reseller&quot;s End user</br>
+             * 5 Reseller&quot;s T2 Partner</br></p>
+             * <p>This parameter is required.</p>
              * 
-             * 1 Agency\"s End User</br>
-             * 2 Reseller\"s End user</br>
-             * 5 Reseller\"s T2 Partner</br>
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subAccountType(String subAccountType) {
                 this.subAccountType = subAccountType;
@@ -276,11 +310,14 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * Partner\"s Shutdown Policy Management for Sub Account.</br>
-             * <p>
+             * <p>Partner&quot;s Shutdown Policy Management for Sub Account.</br>
              * 1: delayStop. The account have Shutdown-delay Privilege,  After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.</br>
-             * 2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource\"s life-circle of Sub Account.</br>
-             * 3: immediatelyStop. Once valid quota of Sub Account falls below 0 and be identified as defaulting account, it will trigger the instance shutdown immediately.</br>
+             * 2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource&quot;s life-circle of Sub Account.</br>
+             * 3: immediatelyStop. Once valid quota of Sub Account falls below 0 and be identified as defaulting account, it will trigger the instance shutdown immediately.</br></p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder zeroCreditShutdownPolicy(String zeroCreditShutdownPolicy) {
                 this.zeroCreditShutdownPolicy = zeroCreditShutdownPolicy;

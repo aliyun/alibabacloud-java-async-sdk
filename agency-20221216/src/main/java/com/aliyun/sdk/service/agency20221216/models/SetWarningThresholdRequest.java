@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetWarningThresholdRequest} extends {@link RequestModel}
  *
  * <p>SetWarningThresholdRequest</p>
@@ -69,7 +70,11 @@ public class SetWarningThresholdRequest extends Request {
         } 
 
         /**
-         * The UID of the partner‘s customer.
+         * <p>The UID of the partner‘s customer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792155717328010</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
@@ -78,7 +83,11 @@ public class SetWarningThresholdRequest extends Request {
         }
 
         /**
-         * Percentage, 1 to 100. When the available credit limit is lower than the credit limit percentage, an email is sent to the main account.
+         * <p>Percentage, 1 to 100. When the available credit limit is lower than the credit limit percentage, an email is sent to the main account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder warningValue(String warningValue) {
             this.putQueryParameter("WarningValue", warningValue);

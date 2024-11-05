@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CustomerQuotaRecordListRequest} extends {@link RequestModel}
  *
  * <p>CustomerQuotaRecordListRequest</p>
@@ -143,7 +144,11 @@ public class CustomerQuotaRecordListRequest extends Request {
         } 
 
         /**
-         * End Date Format: yyyy-MM-dd
+         * <p>End Date Format: yyyy-MM-dd</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-24</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -152,7 +157,11 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * Customer UID
+         * <p>Customer UID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5113766248601929</p>
          */
         public Builder endUserPk(Long endUserPk) {
             this.putQueryParameter("EndUserPk", endUserPk);
@@ -161,11 +170,13 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * Multilingual Parameters, the default language is English.</br>
-         * <p>
+         * <p>Multilingual Parameters, the default language is English.</br>
          * en: English</br>
          * zh: Chinese</br>
-         * ja: Japanese </br>
+         * ja: Japanese </br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -174,11 +185,14 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * Operation Type Enum</br>
-         * <p>
+         * <p>Operation Type Enum</br>
          * all All types</br>
          * quota_create Create quota</br>
-         * quota_amount_adjust Adjust the amount of quota</br>
+         * quota_amount_adjust Adjust the amount of quota</br></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -187,7 +201,11 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * Pagination, current page number, starting from 1.
+         * <p>Pagination, current page number, starting from 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -196,7 +214,11 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * Pagination, record number on each page. Maximum 100.
+         * <p>Pagination, record number on each page. Maximum 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,7 +227,11 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * Start Date Format: yyyy-MM-dd
+         * <p>Start Date Format: yyyy-MM-dd</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-02</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountInfoRequest} extends {@link RequestModel}
  *
  * <p>GetAccountInfoRequest</p>
@@ -97,7 +98,11 @@ public class GetAccountInfoRequest extends Request {
         } 
 
         /**
-         * Message
+         * <p>Message</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -106,7 +111,11 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * Success
+         * <p>Success</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -115,7 +124,10 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * 10 (Value <= 20)
+         * <p>10 (Value &lt;= 20)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1215848086704806</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
@@ -124,13 +136,17 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * Result Code - Error Code. Value Range:
-         * <p>
-         * - 200 OK
-         * - 1109 System Error
-         * - 3029: Invalid UID
-         * - 3062: UID and UserType are both empty.
-         * - 3063: UserType value out of range.
+         * <p>Result Code - Error Code. Value Range:</p>
+         * <ul>
+         * <li>200 OK</li>
+         * <li>1109 System Error</li>
+         * <li>3029: Invalid UID</li>
+         * <li>3062: UID and UserType are both empty.</li>
+         * <li>3063: UserType value out of range.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

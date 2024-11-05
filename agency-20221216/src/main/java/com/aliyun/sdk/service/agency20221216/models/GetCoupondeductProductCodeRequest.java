@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCoupondeductProductCodeRequest} extends {@link RequestModel}
  *
  * <p>GetCoupondeductProductCodeRequest</p>
@@ -54,7 +55,10 @@ public class GetCoupondeductProductCodeRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

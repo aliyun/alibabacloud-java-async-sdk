@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditNewBuyStatusRequest} extends {@link RequestModel}
  *
  * <p>EditNewBuyStatusRequest</p>
@@ -67,12 +68,16 @@ public class EditNewBuyStatusRequest extends Request {
         } 
 
         /**
-         * New Purchase Status</br>
-         * <p>
+         * <p>New Purchase Status</br></p>
+         * <ul>
+         * <li><p>cancelBan: Cancel the restriction for New Purchase request</br></p>
+         * </li>
+         * <li><p>ban: ban the New Purchase request</br></p>
+         * </li>
+         * </ul>
          * 
-         * - cancelBan: Cancel the restriction for New Purchase request</br>
-         * 
-         * - ban: ban the New Purchase request</br>
+         * <strong>example:</strong>
+         * <p>cancelBan</p>
          */
         public Builder newBuyStatus(String newBuyStatus) {
             this.putQueryParameter("NewBuyStatus", newBuyStatus);
@@ -81,7 +86,10 @@ public class EditNewBuyStatusRequest extends Request {
         }
 
         /**
-         * Customer UID
+         * <p>Customer UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1133166938931507</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

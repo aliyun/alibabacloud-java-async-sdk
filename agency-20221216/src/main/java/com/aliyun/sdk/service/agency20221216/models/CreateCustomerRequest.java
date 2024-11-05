@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomerRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomerRequest</p>
@@ -113,7 +114,11 @@ public class CreateCustomerRequest extends Request {
         } 
 
         /**
-         * Customer\"s name.
+         * <p>Customer&quot;s name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DoorBell Marketing</p>
          */
         public Builder customerName(String customerName) {
             this.putQueryParameter("CustomerName", customerName);
@@ -122,7 +127,11 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * The source/channel that allow client to connected with us. Please enumerate with Customer Source.
+         * <p>The source/channel that allow client to connected with us. Please enumerate with Customer Source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>website</p>
          */
         public Builder customerSource(String customerSource) {
             this.putQueryParameter("CustomerSource", customerSource);
@@ -131,7 +140,10 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * The sub-industry that Customer\"s business belongs to. Please enumerate with Customer Trade.
+         * <p>The sub-industry that Customer&quot;s business belongs to. Please enumerate with Customer Trade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0101</p>
          */
         public Builder customerSubTrade(String customerSubTrade) {
             this.putQueryParameter("CustomerSubTrade", customerSubTrade);
@@ -140,7 +152,11 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * The industry that Customer\"s business belongs to. Please enumerate with Customer Trade.
+         * <p>The industry that Customer&quot;s business belongs to. Please enumerate with Customer Trade.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder customerTrade(String customerTrade) {
             this.putQueryParameter("CustomerTrade", customerTrade);
@@ -149,7 +165,11 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * The region that Customer choose to launch the Cloud Service. Please use ListCountries to confirm the valid region list for current UID.
+         * <p>The region that Customer choose to launch the Cloud Service. Please use ListCountries to confirm the valid region list for current UID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AR</p>
          */
         public Builder nation(String nation) {
             this.putQueryParameter("Nation", nation);

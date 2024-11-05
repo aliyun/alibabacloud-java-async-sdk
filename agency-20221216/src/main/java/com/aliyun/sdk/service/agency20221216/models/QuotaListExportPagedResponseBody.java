@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuotaListExportPagedResponseBody} extends {@link TeaModel}
  *
  * <p>QuotaListExportPagedResponseBody</p>
@@ -109,7 +110,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Status code of returning result, 200 means success.
+         * <p>Status code of returning result, 200 means success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Listed data of returning result
+         * <p>Listed data of returning result</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -125,7 +129,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Description of returning result
+         * <p>Description of returning result</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -133,7 +140,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Current page number
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -141,7 +151,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Record number on each page
+         * <p>Record number on each page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -149,7 +162,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * ID of the Request
+         * <p>ID of the Request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e876f16704666020714468dab35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +173,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Total volume
+         * <p>Total volume</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -170,6 +189,12 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuotaListExportPagedResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuotaListExportPagedResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -257,7 +282,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Create Time
+             * <p>Create Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-21 21:31:57 UTC+8</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -265,7 +293,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * File Name
+             * <p>File Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -273,7 +304,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * Notification Message
+             * <p>Notification Message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -281,7 +315,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * Display of Task Status
+             * <p>Display of Task Status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -289,11 +326,13 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * Task Status Enum</br>
-             * <p>
+             * <p>Task Status Enum</br>
              * 2: Exporting</br>
              * 3: Export Success</br>
-             * -1: Export Fail</br>
+             * -1: Export Fail</br></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Export Success</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -301,7 +340,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * The link to download exported file.
+             * <p>The link to download exported file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>//aliyun-eco-market-servic-singapore.oss-ap-southeast-1.aliyuncs.com/5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
              */
             public Builder url(String url) {
                 this.url = url;
