@@ -461,6 +461,9 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("orientation")
         private String orientation;
 
+        @com.aliyun.core.annotation.NameInMap("polyline")
+        private String polyline;
+
         @com.aliyun.core.annotation.NameInMap("roadName")
         private String roadName;
 
@@ -471,6 +474,7 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
             this.cost = builder.cost;
             this.instruction = builder.instruction;
             this.orientation = builder.orientation;
+            this.polyline = builder.polyline;
             this.roadName = builder.roadName;
             this.stepDistanceMeter = builder.stepDistanceMeter;
         }
@@ -505,6 +509,13 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
         }
 
         /**
+         * @return polyline
+         */
+        public String getPolyline() {
+            return this.polyline;
+        }
+
+        /**
          * @return roadName
          */
         public String getRoadName() {
@@ -522,6 +533,7 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
             private StepsCost cost; 
             private String instruction; 
             private String orientation; 
+            private String polyline; 
             private String roadName; 
             private String stepDistanceMeter; 
 
@@ -546,6 +558,14 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
              */
             public Builder orientation(String orientation) {
                 this.orientation = orientation;
+                return this;
+            }
+
+            /**
+             * polyline.
+             */
+            public Builder polyline(String polyline) {
+                this.polyline = polyline;
                 return this;
             }
 
@@ -706,6 +726,9 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
      * <p>DrivingDirectionNovaResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("count")
+        private String count;
+
         @com.aliyun.core.annotation.NameInMap("destinationLatitude")
         private String destinationLatitude;
 
@@ -725,6 +748,7 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
         private String taxiCost;
 
         private Data(Builder builder) {
+            this.count = builder.count;
             this.destinationLatitude = builder.destinationLatitude;
             this.destinationLongitude = builder.destinationLongitude;
             this.originLatitude = builder.originLatitude;
@@ -739,6 +763,13 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return count
+         */
+        public String getCount() {
+            return this.count;
         }
 
         /**
@@ -784,12 +815,21 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String count; 
             private String destinationLatitude; 
             private String destinationLongitude; 
             private String originLatitude; 
             private String originLongitude; 
             private java.util.List < Paths> paths; 
             private String taxiCost; 
+
+            /**
+             * count.
+             */
+            public Builder count(String count) {
+                this.count = count;
+                return this;
+            }
 
             /**
              * destinationLatitude.

@@ -98,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RgeoCodeResponse> rgeoCode(RgeoCodeRequest request);
 
     /**
+     * @param request the request parameters of TransitIntegratedDirection  TransitIntegratedDirectionRequest
+     * @return TransitIntegratedDirectionResponse
+     */
+    CompletableFuture<TransitIntegratedDirectionResponse> transitIntegratedDirection(TransitIntegratedDirectionRequest request);
+
+    /**
      * @param request the request parameters of WalkingDirectionNova  WalkingDirectionNovaRequest
      * @return WalkingDirectionNovaResponse
      */

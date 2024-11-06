@@ -274,6 +274,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of TransitIntegratedDirection  TransitIntegratedDirectionRequest
+     * @return TransitIntegratedDirectionResponse
+     */
+    @Override
+    public CompletableFuture<TransitIntegratedDirectionResponse> transitIntegratedDirection(TransitIntegratedDirectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TransitIntegratedDirection").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v2/direction/transit/integrated").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransitIntegratedDirectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TransitIntegratedDirectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of WalkingDirectionNova  WalkingDirectionNovaRequest
      * @return WalkingDirectionNovaResponse
      */

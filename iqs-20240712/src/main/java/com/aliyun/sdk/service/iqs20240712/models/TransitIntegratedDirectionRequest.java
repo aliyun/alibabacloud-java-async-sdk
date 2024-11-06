@@ -7,14 +7,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DrivingDirectionNovaRequest} extends {@link RequestModel}
+ * {@link TransitIntegratedDirectionRequest} extends {@link RequestModel}
  *
- * <p>DrivingDirectionNovaRequest</p>
+ * <p>TransitIntegratedDirectionRequest</p>
  */
-public class DrivingDirectionNovaRequest extends Request {
+public class TransitIntegratedDirectionRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("carType")
-    private String carType;
+    @com.aliyun.core.annotation.NameInMap("destinationCity")
+    private String destinationCity;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("destinationLatitude")
@@ -25,6 +25,10 @@ public class DrivingDirectionNovaRequest extends Request {
     private String destinationLongitude;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("originCity")
+    private String originCity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("originLatitude")
     private String originLatitude;
 
@@ -32,25 +36,21 @@ public class DrivingDirectionNovaRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("originLongitude")
     private String originLongitude;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("plate")
-    private String plate;
-
-    private DrivingDirectionNovaRequest(Builder builder) {
+    private TransitIntegratedDirectionRequest(Builder builder) {
         super(builder);
-        this.carType = builder.carType;
+        this.destinationCity = builder.destinationCity;
         this.destinationLatitude = builder.destinationLatitude;
         this.destinationLongitude = builder.destinationLongitude;
+        this.originCity = builder.originCity;
         this.originLatitude = builder.originLatitude;
         this.originLongitude = builder.originLongitude;
-        this.plate = builder.plate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DrivingDirectionNovaRequest create() {
+    public static TransitIntegratedDirectionRequest create() {
         return builder().build();
     }
 
@@ -60,10 +60,10 @@ public class DrivingDirectionNovaRequest extends Request {
     }
 
     /**
-     * @return carType
+     * @return destinationCity
      */
-    public String getCarType() {
-        return this.carType;
+    public String getDestinationCity() {
+        return this.destinationCity;
     }
 
     /**
@@ -81,6 +81,13 @@ public class DrivingDirectionNovaRequest extends Request {
     }
 
     /**
+     * @return originCity
+     */
+    public String getOriginCity() {
+        return this.originCity;
+    }
+
+    /**
      * @return originLatitude
      */
     public String getOriginLatitude() {
@@ -94,41 +101,34 @@ public class DrivingDirectionNovaRequest extends Request {
         return this.originLongitude;
     }
 
-    /**
-     * @return plate
-     */
-    public String getPlate() {
-        return this.plate;
-    }
-
-    public static final class Builder extends Request.Builder<DrivingDirectionNovaRequest, Builder> {
-        private String carType; 
+    public static final class Builder extends Request.Builder<TransitIntegratedDirectionRequest, Builder> {
+        private String destinationCity; 
         private String destinationLatitude; 
         private String destinationLongitude; 
+        private String originCity; 
         private String originLatitude; 
         private String originLongitude; 
-        private String plate; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DrivingDirectionNovaRequest request) {
+        private Builder(TransitIntegratedDirectionRequest request) {
             super(request);
-            this.carType = request.carType;
+            this.destinationCity = request.destinationCity;
             this.destinationLatitude = request.destinationLatitude;
             this.destinationLongitude = request.destinationLongitude;
+            this.originCity = request.originCity;
             this.originLatitude = request.originLatitude;
             this.originLongitude = request.originLongitude;
-            this.plate = request.plate;
         } 
 
         /**
-         * carType.
+         * destinationCity.
          */
-        public Builder carType(String carType) {
-            this.putQueryParameter("carType", carType);
-            this.carType = carType;
+        public Builder destinationCity(String destinationCity) {
+            this.putQueryParameter("destinationCity", destinationCity);
+            this.destinationCity = destinationCity;
             return this;
         }
 
@@ -151,6 +151,15 @@ public class DrivingDirectionNovaRequest extends Request {
         }
 
         /**
+         * originCity.
+         */
+        public Builder originCity(String originCity) {
+            this.putQueryParameter("originCity", originCity);
+            this.originCity = originCity;
+            return this;
+        }
+
+        /**
          * originLatitude.
          */
         public Builder originLatitude(String originLatitude) {
@@ -168,18 +177,9 @@ public class DrivingDirectionNovaRequest extends Request {
             return this;
         }
 
-        /**
-         * plate.
-         */
-        public Builder plate(String plate) {
-            this.putQueryParameter("plate", plate);
-            this.plate = plate;
-            return this;
-        }
-
         @Override
-        public DrivingDirectionNovaRequest build() {
-            return new DrivingDirectionNovaRequest(this);
+        public TransitIntegratedDirectionRequest build() {
+            return new TransitIntegratedDirectionRequest(this);
         } 
 
     } 
