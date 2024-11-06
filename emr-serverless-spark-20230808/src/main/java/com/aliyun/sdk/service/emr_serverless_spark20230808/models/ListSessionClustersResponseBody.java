@@ -119,7 +119,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SQL computes.</p>
+         * <p>The list of sessions.</p>
          */
         public Builder sessionClusters(java.util.List < SessionClusters> sessionClusters) {
             this.sessionClusters = sessionClusters;
@@ -345,7 +345,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The idle timeout period. The SQL Compute is automatically terminated if the idle timeout period is exceeded.</p>
+             * <p>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</p>
              * 
              * <strong>example:</strong>
              * <p>45</p>
@@ -672,7 +672,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String workspaceId; 
 
             /**
-             * <p>The SQL Compute configurations, which are equivalent to the configurations of the Spark job.</p>
+             * <p>The session configurations, which are equivalent to the configurations of the Spark job.</p>
              */
             public Builder applicationConfigs(java.util.List < ApplicationConfigs> applicationConfigs) {
                 this.applicationConfigs = applicationConfigs;
@@ -688,7 +688,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic termination configurations.</p>
+             * <p>The configurations of automatic termination.</p>
              */
             public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
                 this.autoStopConfiguration = autoStopConfiguration;
@@ -696,7 +696,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * displayReleaseVersion.
+             * <p>The version of the Spark engine.</p>
              */
             public Builder displayReleaseVersion(String displayReleaseVersion) {
                 this.displayReleaseVersion = displayReleaseVersion;
@@ -712,7 +712,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * draftId.
+             * <p>The ID of the job that is associated with the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TSK-xxxxxxxxx</p>
              */
             public Builder draftId(String draftId) {
                 this.draftId = draftId;
@@ -720,7 +723,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * fusion.
+             * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fusion(Boolean fusion) {
                 this.fusion = fusion;
@@ -728,7 +734,16 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * kind.
+             * <p>The session type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NOTEBOOK</li>
+             * <li>THRIFT</li>
+             * <li>SQL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -736,7 +751,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SQL Compute.</p>
+             * <p>The name of the session.</p>
              * 
              * <strong>example:</strong>
              * <p>adhoc_query</p>
@@ -747,7 +762,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the queue on which the SQL Compute runs.</p>
+             * <p>The name of the queue that is used to run the session.</p>
              * 
              * <strong>example:</strong>
              * <p>dev_queue</p>
@@ -758,7 +773,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * releaseVersion.
+             * <p>The version of EMR Serverless Spark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-2.1</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -766,7 +784,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL Compute ID.</p>
+             * <p>The session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sc-123131</p>
@@ -777,7 +795,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SQL Compute.</p>
+             * <p>The status of the session.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -788,7 +806,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the last status change of the SQL Compute.</p>
+             * <p>The details of the most recent status change of the session.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -818,7 +836,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * webUI.
+             * <p>The Spark UI of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://spark-ui-xxxx">http://spark-ui-xxxx</a></p>
              */
             public Builder webUI(String webUI) {
                 this.webUI = webUI;

@@ -150,7 +150,16 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * kind.
+         * <p>The session type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NOTEBOOK</li>
+         * <li>THRIFT</li>
+         * <li>SQL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         public Builder kind(String kind) {
             this.putQueryParameter("kind", kind);

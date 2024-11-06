@@ -96,7 +96,10 @@ public class StopSessionClusterRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -105,7 +108,10 @@ public class StopSessionClusterRequest extends Request {
         }
 
         /**
-         * queueName.
+         * <p>The queue name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root_queue</p>
          */
         public Builder queueName(String queueName) {
             this.putBodyParameter("queueName", queueName);
@@ -114,7 +120,10 @@ public class StopSessionClusterRequest extends Request {
         }
 
         /**
-         * sessionClusterId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc-xxxxxxxxxxxx</p>
          */
         public Builder sessionClusterId(String sessionClusterId) {
             this.putBodyParameter("sessionClusterId", sessionClusterId);
@@ -123,7 +132,10 @@ public class StopSessionClusterRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
