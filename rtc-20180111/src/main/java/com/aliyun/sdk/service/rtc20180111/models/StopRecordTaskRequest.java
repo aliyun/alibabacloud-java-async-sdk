@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopRecordTaskRequest} extends {@link RequestModel}
  *
  * <p>StopRecordTaskRequest</p>
@@ -83,7 +84,10 @@ public class StopRecordTaskRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -101,7 +105,10 @@ public class StopRecordTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourTaskId</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

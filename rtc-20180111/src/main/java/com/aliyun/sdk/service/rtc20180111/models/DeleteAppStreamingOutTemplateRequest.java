@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAppStreamingOutTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteAppStreamingOutTemplateRequest</p>
@@ -69,7 +70,10 @@ public class DeleteAppStreamingOutTemplateRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wv7N****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +82,7 @@ public class DeleteAppStreamingOutTemplateRequest extends Request {
         }
 
         /**
-         * StreamingOutTemplate.
+         * <p>This parameter is required.</p>
          */
         public Builder streamingOutTemplate(StreamingOutTemplate streamingOutTemplate) {
             String streamingOutTemplateShrink = shrink(streamingOutTemplate, "StreamingOutTemplate", "json");
@@ -94,6 +98,12 @@ public class DeleteAppStreamingOutTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteAppStreamingOutTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteAppStreamingOutTemplateRequest</p>
+     */
     public static class StreamingOutTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -122,7 +132,10 @@ public class DeleteAppStreamingOutTemplateRequest extends Request {
             private String templateId; 
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xd4c****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaultDiagnosisUserListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFaultDiagnosisUserListResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserListResponseBody</p>
+     */
     public static class FaultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaultType")
         private String faultType;
@@ -171,6 +178,12 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserListResponseBody</p>
+     */
     public static class UserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelCreatedTs")
         private Long channelCreatedTs;

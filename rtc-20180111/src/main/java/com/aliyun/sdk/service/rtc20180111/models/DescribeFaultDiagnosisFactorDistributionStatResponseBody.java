@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaultDiagnosisFactorDistributionStatResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFaultDiagnosisFactorDistributionStatResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisFactorDistributionStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisFactorDistributionStatResponseBody</p>
+     */
     public static class StatList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FactorId")
         private String factorId;

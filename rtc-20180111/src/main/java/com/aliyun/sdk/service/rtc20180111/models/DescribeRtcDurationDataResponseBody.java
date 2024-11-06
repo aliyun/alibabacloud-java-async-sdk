@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRtcDurationDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRtcDurationDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRtcDurationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcDurationDataResponseBody</p>
+     */
     public static class DurationModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioDuration")
         private Long audioDuration;
@@ -231,6 +238,12 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRtcDurationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcDurationDataResponseBody</p>
+     */
     public static class DurationDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DurationModule")
         private java.util.List < DurationModule> durationModule;

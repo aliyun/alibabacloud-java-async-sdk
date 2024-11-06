@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePubUserListBySubUserResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePubUserListBySubUserResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePubUserListBySubUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePubUserListBySubUserResponseBody</p>
+     */
     public static class OnlinePeriods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
@@ -171,6 +178,12 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePubUserListBySubUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePubUserListBySubUserResponseBody</p>
+     */
     public static class PubUserDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallIdList")
         private java.util.List < String > callIdList;
@@ -532,6 +545,12 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePubUserListBySubUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePubUserListBySubUserResponseBody</p>
+     */
     public static class SubUserDetailOnlinePeriods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
@@ -593,6 +612,12 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePubUserListBySubUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePubUserListBySubUserResponseBody</p>
+     */
     public static class SubUserDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;

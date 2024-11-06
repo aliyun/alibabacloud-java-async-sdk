@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEventSubscribeRequest} extends {@link RequestModel}
  *
  * <p>DeleteEventSubscribeRequest</p>
@@ -83,7 +84,10 @@ public class DeleteEventSubscribeRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9qb1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -101,7 +105,10 @@ public class DeleteEventSubscribeRequest extends Request {
         }
 
         /**
-         * SubscribeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad53276431c****</p>
          */
         public Builder subscribeId(String subscribeId) {
             this.putQueryParameter("SubscribeId", subscribeId);

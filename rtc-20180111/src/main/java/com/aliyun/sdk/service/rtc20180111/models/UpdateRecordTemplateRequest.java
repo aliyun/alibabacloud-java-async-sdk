@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateRecordTemplateRequest</p>
@@ -330,7 +331,10 @@ public class UpdateRecordTemplateRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -384,7 +388,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * FileSplitInterval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder fileSplitInterval(Integer fileSplitInterval) {
             this.putQueryParameter("FileSplitInterval", fileSplitInterval);
@@ -393,7 +400,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * Formats.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp4</p>
          */
         public Builder formats(java.util.List < String > formats) {
             this.putQueryParameter("Formats", formats);
@@ -411,7 +421,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * LayoutIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder layoutIds(java.util.List < Long > layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
@@ -420,7 +433,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * MediaEncode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder mediaEncode(Integer mediaEncode) {
             this.putQueryParameter("MediaEncode", mediaEncode);
@@ -438,7 +454,7 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -447,7 +463,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtc-record-pre</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -465,7 +484,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * OssFilePrefix.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{AppId}/{ChannelId_TaskId}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
         public Builder ossFilePrefix(String ossFilePrefix) {
             this.putQueryParameter("OssFilePrefix", ossFilePrefix);
@@ -483,7 +505,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * TaskProfile.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4IN_1080P</p>
          */
         public Builder taskProfile(String taskProfile) {
             this.putQueryParameter("TaskProfile", taskProfile);
@@ -492,7 +517,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76dasgb****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -516,6 +544,12 @@ public class UpdateRecordTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecordTemplateRequest</p>
+     */
     public static class Backgrounds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
@@ -677,6 +711,12 @@ public class UpdateRecordTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecordTemplateRequest</p>
+     */
     public static class ClockWidgets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
@@ -818,6 +858,12 @@ public class UpdateRecordTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecordTemplateRequest</p>
+     */
     public static class Watermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEndPointEventListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEndPointEventListResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEndPointEventListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndPointEventListResponseBody</p>
+     */
     public static class EventList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
@@ -171,6 +178,12 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEndPointEventListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndPointEventListResponseBody</p>
+     */
     public static class EventDataItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventList")
         private java.util.List < EventList> eventList;
@@ -232,6 +245,12 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEndPointEventListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndPointEventListResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventDataItems")
         private java.util.List < EventDataItems> eventDataItems;

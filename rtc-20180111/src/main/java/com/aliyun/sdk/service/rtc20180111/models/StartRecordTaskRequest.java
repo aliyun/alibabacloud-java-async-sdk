@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartRecordTaskRequest} extends {@link RequestModel}
  *
  * <p>StartRecordTaskRequest</p>
@@ -323,7 +324,10 @@ public class StartRecordTaskRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -332,7 +336,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourChannelId</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -440,7 +447,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourTaskId</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -458,7 +468,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76dasgb****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -509,6 +522,12 @@ public class StartRecordTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartRecordTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartRecordTaskRequest</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
@@ -670,6 +689,12 @@ public class StartRecordTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartRecordTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartRecordTaskRequest</p>
+     */
     public static class Texts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
@@ -831,6 +856,12 @@ public class StartRecordTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartRecordTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartRecordTaskRequest</p>
+     */
     public static class UserPanes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Images")
         private java.util.List < Images> images;

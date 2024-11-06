@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRtcChannelMetricRequest} extends {@link RequestModel}
  *
  * <p>DescribeRtcChannelMetricRequest</p>
@@ -98,7 +99,10 @@ public class DescribeRtcChannelMetricRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aoe****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -107,7 +111,10 @@ public class DescribeRtcChannelMetricRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -125,7 +132,10 @@ public class DescribeRtcChannelMetricRequest extends Request {
         }
 
         /**
-         * TimePoint.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-29T00:00:00Z</p>
          */
         public Builder timePoint(String timePoint) {
             this.putQueryParameter("TimePoint", timePoint);

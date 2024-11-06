@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTerminalsResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveTerminalsResponseBody</p>
@@ -70,6 +71,12 @@ public class RemoveTerminalsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveTerminalsResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveTerminalsResponseBody</p>
+     */
     public static class Terminal extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -151,6 +158,12 @@ public class RemoveTerminalsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RemoveTerminalsResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveTerminalsResponseBody</p>
+     */
     public static class Terminals extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Terminal")
         private java.util.List < Terminal> terminal;

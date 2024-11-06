@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQualityOverallDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeQualityOverallDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeQualityOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeQualityOverallDataResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private String x;
@@ -131,6 +138,12 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeQualityOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeQualityOverallDataResponseBody</p>
+     */
     public static class QualityOverallData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Average")
         private String average;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppCallbackSecretKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppCallbackSecretKeyResponseBody</p>
@@ -57,7 +58,10 @@ public class DescribeAppCallbackSecretKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

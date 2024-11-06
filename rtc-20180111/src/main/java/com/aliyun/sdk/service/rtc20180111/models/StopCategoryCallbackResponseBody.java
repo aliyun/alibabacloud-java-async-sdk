@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopCategoryCallbackResponseBody} extends {@link TeaModel}
  *
  * <p>StopCategoryCallbackResponseBody</p>
@@ -37,7 +38,10 @@ public class StopCategoryCallbackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DCE8D7E-BE3B-54AB-8DAC-32F34BED0763</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

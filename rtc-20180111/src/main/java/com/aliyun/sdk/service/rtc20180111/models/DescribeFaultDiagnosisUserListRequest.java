@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaultDiagnosisUserListRequest} extends {@link RequestModel}
  *
  * <p>DescribeFaultDiagnosisUserListRequest</p>
@@ -156,7 +157,11 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         } 
 
         /**
-         * APP ID。
+         * <p>APP ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0rbd****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -174,7 +179,10 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
-         * EndTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615892596</p>
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -192,7 +200,10 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -201,7 +212,10 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -210,7 +224,10 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
-         * StartTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615806196</p>
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRtcUserCntDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRtcUserCntDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeRtcUserCntDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRtcUserCntDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcUserCntDataResponseBody</p>
+     */
     public static class UserCntModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveUserCnt")
         private Long activeUserCnt;
@@ -131,6 +138,12 @@ public class DescribeRtcUserCntDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRtcUserCntDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcUserCntDataResponseBody</p>
+     */
     public static class UserCntDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserCntModule")
         private java.util.List < UserCntModule> userCntModule;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserInfoInChannelRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserInfoInChannelRequest</p>
@@ -98,7 +99,10 @@ public class DescribeUserInfoInChannelRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4eah****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -107,7 +111,10 @@ public class DescribeUserInfoInChannelRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -125,7 +132,10 @@ public class DescribeUserInfoInChannelRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

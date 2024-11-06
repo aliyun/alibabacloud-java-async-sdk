@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
@@ -150,6 +151,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class CallInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -237,7 +244,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private Long duration; 
 
             /**
-             * App ID。
+             * <p>App ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0rbd****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -291,6 +301,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class EventList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
@@ -372,6 +388,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class EventDataItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventList")
         private java.util.List < EventList> eventList;
@@ -433,6 +455,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class RelatedEventDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventDataItems")
         private java.util.List < EventDataItems> eventDataItems;
@@ -514,6 +542,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
@@ -595,6 +629,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class RelatedMetricDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
@@ -696,6 +736,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class FactorList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FactorId")
         private String factorId;
@@ -797,6 +843,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class FaultMetricDataNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private String x;
@@ -858,6 +910,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class FaultMetricData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < FaultMetricDataNodes> nodes;
@@ -899,6 +957,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class OnlinePeriods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
@@ -960,6 +1024,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
+     */
     public static class UserDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;

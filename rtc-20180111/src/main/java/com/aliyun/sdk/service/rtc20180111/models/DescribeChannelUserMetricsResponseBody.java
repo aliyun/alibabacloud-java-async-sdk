@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelUserMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelUserMetricsResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChannelUserMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelUserMetricsResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
@@ -171,6 +178,12 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChannelUserMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelUserMetricsResponseBody</p>
+     */
     public static class MetricDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
@@ -232,6 +245,12 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChannelUserMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelUserMetricsResponseBody</p>
+     */
     public static class OverallData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalBadExpNum")
         private Long totalBadExpNum;

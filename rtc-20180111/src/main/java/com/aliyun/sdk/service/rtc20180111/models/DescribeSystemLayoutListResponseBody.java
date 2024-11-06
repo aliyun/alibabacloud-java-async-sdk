@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemLayoutListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSystemLayoutListResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSystemLayoutListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemLayoutListResponseBody</p>
+     */
     public static class Panes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
@@ -217,7 +224,10 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
             }
 
             /**
-             * MajorPane。
+             * <p>MajorPane。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder majorPane(Integer majorPane) {
                 this.majorPane = majorPane;
@@ -271,6 +281,12 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSystemLayoutListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemLayoutListResponseBody</p>
+     */
     public static class LayoutPanes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Panes")
         private java.util.List < Panes> panes;
@@ -312,6 +328,12 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSystemLayoutListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemLayoutListResponseBody</p>
+     */
     public static class Layout extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioMixCount")
         private Integer audioMixCount;
@@ -375,7 +397,10 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
             private LayoutPanes panes; 
 
             /**
-             * AudioMixCount。
+             * <p>AudioMixCount。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder audioMixCount(Integer audioMixCount) {
                 this.audioMixCount = audioMixCount;
@@ -413,6 +438,12 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSystemLayoutListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemLayoutListResponseBody</p>
+     */
     public static class Layouts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Layout")
         private java.util.List < Layout> layout;

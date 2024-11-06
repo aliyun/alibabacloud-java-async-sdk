@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserInfoInChannelResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserInfoInChannelResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserInfoInChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserInfoInChannelResponseBody</p>
+     */
     public static class Property extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Join")
         private Integer join;

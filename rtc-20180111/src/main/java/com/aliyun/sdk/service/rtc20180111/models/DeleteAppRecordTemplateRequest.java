@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAppRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteAppRecordTemplateRequest</p>
@@ -83,7 +84,10 @@ public class DeleteAppRecordTemplateRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac7N****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -101,7 +105,7 @@ public class DeleteAppRecordTemplateRequest extends Request {
         }
 
         /**
-         * Template.
+         * <p>This parameter is required.</p>
          */
         public Builder template(Template template) {
             String templateShrink = shrink(template, "Template", "json");
@@ -117,6 +121,12 @@ public class DeleteAppRecordTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteAppRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteAppRecordTemplateRequest</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +155,10 @@ public class DeleteAppRecordTemplateRequest extends Request {
             private String templateId; 
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2xh6****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

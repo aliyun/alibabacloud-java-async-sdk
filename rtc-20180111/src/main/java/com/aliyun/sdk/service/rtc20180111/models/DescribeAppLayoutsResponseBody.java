@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppLayoutsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppLayoutsResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppLayoutsResponseBody</p>
+     */
     public static class Panes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
@@ -251,6 +258,12 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppLayoutsResponseBody</p>
+     */
     public static class Layouts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LayoutId")
         private String layoutId;

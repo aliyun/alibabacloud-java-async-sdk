@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTerminalsRequest} extends {@link RequestModel}
  *
  * <p>RemoveTerminalsRequest</p>
@@ -98,7 +99,10 @@ public class RemoveTerminalsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -107,7 +111,10 @@ public class RemoveTerminalsRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourChannelId</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -125,7 +132,10 @@ public class RemoveTerminalsRequest extends Request {
         }
 
         /**
-         * TerminalIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1811xxxx</p>
          */
         public Builder terminalIds(java.util.List < String > terminalIds) {
             this.putQueryParameter("TerminalIds", terminalIds);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEndPointMetricDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEndPointMetricDataResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEndPointMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndPointMetricDataResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
@@ -171,6 +178,12 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEndPointMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndPointMetricDataResponseBody</p>
+     */
     public static class PubMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
@@ -252,6 +265,12 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEndPointMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndPointMetricDataResponseBody</p>
+     */
     public static class SubMetricsNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
@@ -333,6 +352,12 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEndPointMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndPointMetricDataResponseBody</p>
+     */
     public static class SubMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < SubMetricsNodes> nodes;

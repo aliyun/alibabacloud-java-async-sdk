@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMPULayoutRequest} extends {@link RequestModel}
  *
  * <p>DeleteMPULayoutRequest</p>
@@ -83,7 +84,10 @@ public class DeleteMPULayoutRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -92,7 +96,10 @@ public class DeleteMPULayoutRequest extends Request {
         }
 
         /**
-         * LayoutId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder layoutId(Long layoutId) {
             this.putQueryParameter("LayoutId", layoutId);

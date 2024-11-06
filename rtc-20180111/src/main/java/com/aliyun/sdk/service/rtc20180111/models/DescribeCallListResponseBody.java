@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCallListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCallListResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeCallListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCallListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCallListResponseBody</p>
+     */
     public static class CallList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -241,7 +248,10 @@ public class DescribeCallListResponseBody extends TeaModel {
             private Integer userCnt; 
 
             /**
-             * App ID。
+             * <p>App ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9qb1****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;

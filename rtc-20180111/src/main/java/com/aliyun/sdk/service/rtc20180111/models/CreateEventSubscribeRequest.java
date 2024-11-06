@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEventSubscribeRequest} extends {@link RequestModel}
  *
  * <p>CreateEventSubscribeRequest</p>
@@ -169,7 +170,10 @@ public class CreateEventSubscribeRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9qb1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -178,7 +182,10 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * CallbackUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://****.com/callback</p>
          */
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
@@ -196,7 +203,10 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -205,7 +215,10 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * Events.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChannelEvent</p>
          */
         public Builder events(java.util.List < String > events) {
             this.putQueryParameter("Events", events);

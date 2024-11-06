@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveUsersResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveUsersResponseBody</p>
@@ -70,6 +71,12 @@ public class RemoveUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;

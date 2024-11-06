@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMPULayoutInfoListResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMPULayoutInfoListResponseBody</p>
+     */
     public static class Panes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
@@ -271,6 +278,12 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMPULayoutInfoListResponseBody</p>
+     */
     public static class LayoutPanes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Panes")
         private java.util.List < Panes> panes;
@@ -312,6 +325,12 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMPULayoutInfoListResponseBody</p>
+     */
     public static class Layout extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioMixCount")
         private Integer audioMixCount;
@@ -413,6 +432,12 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMPULayoutInfoListResponseBody</p>
+     */
     public static class Layouts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Layout")
         private java.util.List < Layout> layout;

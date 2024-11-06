@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelDistributionStatDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelDistributionStatDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChannelDistributionStatDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelDistributionStatDataResponseBody</p>
+     */
     public static class StatList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallUserCount")
         private Integer callUserCount;

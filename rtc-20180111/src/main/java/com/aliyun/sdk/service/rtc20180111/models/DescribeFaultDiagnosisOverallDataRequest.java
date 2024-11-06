@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaultDiagnosisOverallDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeFaultDiagnosisOverallDataRequest</p>
@@ -99,7 +100,11 @@ public class DescribeFaultDiagnosisOverallDataRequest extends Request {
         } 
 
         /**
-         * APP ID
+         * <p>APP ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4eah****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -108,7 +113,10 @@ public class DescribeFaultDiagnosisOverallDataRequest extends Request {
         }
 
         /**
-         * EndTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615910399</p>
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -117,7 +125,10 @@ public class DescribeFaultDiagnosisOverallDataRequest extends Request {
         }
 
         /**
-         * StartTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615824000</p>
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);
@@ -126,7 +137,10 @@ public class DescribeFaultDiagnosisOverallDataRequest extends Request {
         }
 
         /**
-         * StatDim.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JOIN_SLOW_USER</p>
          */
         public Builder statDim(String statDim) {
             this.putQueryParameter("StatDim", statDim);

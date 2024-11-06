@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCallListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCallListRequest</p>
@@ -184,7 +185,11 @@ public class DescribeCallListRequest extends Request {
         } 
 
         /**
-         * APP ID。
+         * <p>APP ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testappid</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -211,7 +216,10 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
-         * EndTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615892596</p>
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -229,7 +237,10 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -238,7 +249,10 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -256,7 +270,10 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
-         * StartTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615806196</p>
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);

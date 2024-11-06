@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsageOverallDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUsageOverallDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUsageOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsageOverallDataResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private String x;
@@ -131,6 +138,12 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUsageOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsageOverallDataResponseBody</p>
+     */
     public static class UsageOverallData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;

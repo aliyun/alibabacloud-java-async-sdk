@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartCategoryCallbackResponseBody} extends {@link TeaModel}
  *
  * <p>StartCategoryCallbackResponseBody</p>
@@ -37,7 +38,10 @@ public class StartCategoryCallbackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

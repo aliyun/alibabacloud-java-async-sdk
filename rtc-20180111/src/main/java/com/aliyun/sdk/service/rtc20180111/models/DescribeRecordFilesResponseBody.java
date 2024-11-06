@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecordFilesResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecordFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordFilesResponseBody</p>
+     */
     public static class RecordFiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelParticipantsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelParticipantsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChannelParticipantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelParticipantsResponseBody</p>
+     */
     public static class UserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("User")
         private java.util.List < String > user;

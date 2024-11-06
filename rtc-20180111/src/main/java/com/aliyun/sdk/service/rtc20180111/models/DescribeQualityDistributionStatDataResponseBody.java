@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQualityDistributionStatDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeQualityDistributionStatDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeQualityDistributionStatDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeQualityDistributionStatDataResponseBody</p>
+     */
     public static class QualityStatDataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioDelay")
         private Long audioDelay;

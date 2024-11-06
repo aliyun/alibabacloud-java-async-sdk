@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppRecordTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppRecordTemplatesResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
         private Long totalPage; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A7497D0-BEAE-58E7-B13A-751BD8EAE4C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppRecordTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppRecordTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private byte[] createTime;

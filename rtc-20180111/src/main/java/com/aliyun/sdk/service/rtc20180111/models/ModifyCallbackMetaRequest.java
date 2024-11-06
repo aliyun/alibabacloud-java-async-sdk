@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCallbackMetaRequest} extends {@link RequestModel}
  *
  * <p>ModifyCallbackMetaRequest</p>
@@ -83,7 +84,10 @@ public class ModifyCallbackMetaRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223***JQb</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -92,7 +96,7 @@ public class ModifyCallbackMetaRequest extends Request {
         }
 
         /**
-         * Callback.
+         * <p>This parameter is required.</p>
          */
         public Builder callback(Callback callback) {
             String callbackShrink = shrink(callback, "Callback", "json");
@@ -117,6 +121,12 @@ public class ModifyCallbackMetaRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCallbackMetaRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCallbackMetaRequest</p>
+     */
     public static class Callback extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -170,7 +180,10 @@ public class ModifyCallbackMetaRequest extends Request {
             private java.util.List < Integer > subEvent; 
 
             /**
-             * Category.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RecordEvent</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -178,7 +191,10 @@ public class ModifyCallbackMetaRequest extends Request {
             }
 
             /**
-             * Conf.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
              */
             public Builder conf(String conf) {
                 this.conf = conf;

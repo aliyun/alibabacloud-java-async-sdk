@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecordTemplatesResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordTemplatesResponseBody</p>
+     */
     public static class Backgrounds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
@@ -271,6 +278,12 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordTemplatesResponseBody</p>
+     */
     public static class ClockWidgets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
@@ -412,6 +425,12 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordTemplatesResponseBody</p>
+     */
     public static class Watermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;
@@ -593,6 +612,12 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackgroundColor")
         private Integer backgroundColor;

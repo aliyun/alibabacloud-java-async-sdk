@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoLiveStreamRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoLiveStreamRuleResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoLiveStreamRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoLiveStreamRuleResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallBack")
         private String callBack;

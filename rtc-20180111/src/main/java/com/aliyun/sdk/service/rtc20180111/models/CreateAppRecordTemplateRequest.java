@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateAppRecordTemplateRequest</p>
@@ -83,7 +84,10 @@ public class CreateAppRecordTemplateRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac7N****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -101,7 +105,7 @@ public class CreateAppRecordTemplateRequest extends Request {
         }
 
         /**
-         * RecordTemplate.
+         * <p>This parameter is required.</p>
          */
         public Builder recordTemplate(RecordTemplate recordTemplate) {
             String recordTemplateShrink = shrink(recordTemplate, "RecordTemplate", "json");
@@ -117,6 +121,12 @@ public class CreateAppRecordTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppRecordTemplateRequest</p>
+     */
     public static class RecordTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DelayStopTime")
         @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 180)
@@ -230,7 +240,10 @@ public class CreateAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * FilePrefix.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{AppId}/{ChannelId}<em>{TaskId}/{EscapedStartTime}</em>{EscapedEndTime}</p>
              */
             public Builder filePrefix(String filePrefix) {
                 this.filePrefix = filePrefix;
@@ -238,7 +251,10 @@ public class CreateAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * FileSplitInterval.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder fileSplitInterval(Integer fileSplitInterval) {
                 this.fileSplitInterval = fileSplitInterval;
@@ -246,7 +262,7 @@ public class CreateAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * Formats.
+             * <p>This parameter is required.</p>
              */
             public Builder formats(java.util.List < String > formats) {
                 this.formats = formats;
@@ -262,7 +278,10 @@ public class CreateAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * MediaEncode.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mediaEncode(Integer mediaEncode) {
                 this.mediaEncode = mediaEncode;
@@ -270,7 +289,10 @@ public class CreateAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>模版</p>
              */
             public Builder name(String name) {
                 this.name = name;

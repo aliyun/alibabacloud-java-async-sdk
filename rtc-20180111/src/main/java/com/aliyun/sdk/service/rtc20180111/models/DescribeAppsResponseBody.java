@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppsResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsResponseBody</p>
+     */
     public static class ServiceAreas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceArea")
         private java.util.List < String > serviceArea;
@@ -151,6 +158,12 @@ public class DescribeAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsResponseBody</p>
+     */
     public static class App extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -332,6 +345,12 @@ public class DescribeAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsResponseBody</p>
+     */
     public static class AppList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("App")
         private java.util.List < App> app;

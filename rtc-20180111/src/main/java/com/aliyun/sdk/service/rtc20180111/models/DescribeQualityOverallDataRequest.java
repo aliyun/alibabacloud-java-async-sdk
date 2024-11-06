@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQualityOverallDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeQualityOverallDataRequest</p>
@@ -99,7 +100,11 @@ public class DescribeQualityOverallDataRequest extends Request {
         } 
 
         /**
-         * APP ID
+         * <p>APP ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0rbd****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -108,7 +113,10 @@ public class DescribeQualityOverallDataRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615910399</p>
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -117,7 +125,10 @@ public class DescribeQualityOverallDataRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615824000</p>
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -126,7 +137,10 @@ public class DescribeQualityOverallDataRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JOIN_CHANNEL_SUC_RATE</p>
          */
         public Builder types(String types) {
             this.putQueryParameter("Types", types);

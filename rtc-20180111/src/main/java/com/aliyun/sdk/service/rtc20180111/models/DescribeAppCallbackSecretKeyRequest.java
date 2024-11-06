@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppCallbackSecretKeyRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppCallbackSecretKeyRequest</p>
@@ -54,7 +55,10 @@ public class DescribeAppCallbackSecretKeyRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9qb1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

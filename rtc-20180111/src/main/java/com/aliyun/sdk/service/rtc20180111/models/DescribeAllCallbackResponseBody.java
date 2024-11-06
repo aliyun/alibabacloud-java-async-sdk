@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllCallbackResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAllCallbackResponseBody</p>
@@ -57,7 +58,10 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAllCallbackResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllCallbackResponseBody</p>
+     */
     public static class SubEvent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Event")
         private Integer event;
@@ -151,6 +161,12 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllCallbackResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllCallbackResponseBody</p>
+     */
     public static class Callbacks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;

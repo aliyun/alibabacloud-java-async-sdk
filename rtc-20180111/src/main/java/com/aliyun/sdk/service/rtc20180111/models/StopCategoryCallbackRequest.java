@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopCategoryCallbackRequest} extends {@link RequestModel}
  *
  * <p>StopCategoryCallbackRequest</p>
@@ -69,7 +70,10 @@ public class StopCategoryCallbackRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223***JQb</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +82,7 @@ public class StopCategoryCallbackRequest extends Request {
         }
 
         /**
-         * Callback.
+         * <p>This parameter is required.</p>
          */
         public Builder callback(Callback callback) {
             String callbackShrink = shrink(callback, "Callback", "json");
@@ -94,6 +98,12 @@ public class StopCategoryCallbackRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StopCategoryCallbackRequest} extends {@link TeaModel}
+     *
+     * <p>StopCategoryCallbackRequest</p>
+     */
     public static class Callback extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -122,7 +132,10 @@ public class StopCategoryCallbackRequest extends Request {
             private String category; 
 
             /**
-             * Category.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RecordEvent</p>
              */
             public Builder category(String category) {
                 this.category = category;

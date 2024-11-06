@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRtcChannelListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRtcChannelListResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRtcChannelListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcChannelListResponseBody</p>
+     */
     public static class CallArea extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallArea")
         private java.util.List < String > callArea;
@@ -171,6 +178,12 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRtcChannelListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcChannelListResponseBody</p>
+     */
     public static class ChannelListChannelList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallArea")
         private CallArea callArea;
@@ -292,6 +305,12 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRtcChannelListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcChannelListResponseBody</p>
+     */
     public static class ChannelList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelList")
         private java.util.List < ChannelListChannelList> channelList;

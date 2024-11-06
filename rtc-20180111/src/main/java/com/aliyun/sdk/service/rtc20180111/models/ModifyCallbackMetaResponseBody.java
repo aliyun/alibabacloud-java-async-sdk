@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCallbackMetaResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCallbackMetaResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyCallbackMetaResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code
+         * <p>code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class ModifyCallbackMetaResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode
+         * <p>httpStatusCode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,7 +108,10 @@ public class ModifyCallbackMetaResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * <p>message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class ModifyCallbackMetaResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class ModifyCallbackMetaResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * <p>success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartCloudRecordResponseBody} extends {@link TeaModel}
  *
  * <p>StartCloudRecordResponseBody</p>
@@ -49,7 +50,10 @@ public class StartCloudRecordResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class StartCloudRecordResponseBody extends TeaModel {
         }
 
         /**
-         * taskId
+         * <p>taskId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

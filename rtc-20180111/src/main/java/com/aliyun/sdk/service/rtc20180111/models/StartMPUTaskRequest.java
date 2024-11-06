@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartMPUTaskRequest} extends {@link RequestModel}
  *
  * <p>StartMPUTaskRequest</p>
@@ -463,7 +464,10 @@ public class StartMPUTaskRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -490,7 +494,10 @@ public class StartMPUTaskRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourChannelId</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -652,7 +659,10 @@ public class StartMPUTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourTaskId</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -739,6 +749,12 @@ public class StartMPUTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartMPUTaskRequest</p>
+     */
     public static class Backgrounds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
@@ -900,6 +916,12 @@ public class StartMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartMPUTaskRequest</p>
+     */
     public static class ClockWidgets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;
@@ -1161,6 +1183,12 @@ public class StartMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartMPUTaskRequest</p>
+     */
     public static class EnhancedParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnablePortraitSegmentation")
         private Boolean enablePortraitSegmentation;
@@ -1202,6 +1230,12 @@ public class StartMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartMPUTaskRequest</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
@@ -1363,6 +1397,12 @@ public class StartMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartMPUTaskRequest</p>
+     */
     public static class Texts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;
@@ -1644,6 +1684,12 @@ public class StartMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartMPUTaskRequest</p>
+     */
     public static class UserPanes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Images")
         private java.util.List < Images> images;
@@ -1785,6 +1831,12 @@ public class StartMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>StartMPUTaskRequest</p>
+     */
     public static class Watermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;

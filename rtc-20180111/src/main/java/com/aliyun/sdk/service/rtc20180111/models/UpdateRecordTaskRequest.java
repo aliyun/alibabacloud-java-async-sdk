@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRecordTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateRecordTaskRequest</p>
@@ -281,7 +282,10 @@ public class UpdateRecordTaskRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -290,7 +294,10 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourChannelId</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -371,7 +378,10 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourTaskId</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -389,7 +399,10 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76dasgb****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -440,6 +453,12 @@ public class UpdateRecordTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRecordTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecordTaskRequest</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
@@ -601,6 +620,12 @@ public class UpdateRecordTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRecordTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecordTaskRequest</p>
+     */
     public static class Texts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
@@ -762,6 +787,12 @@ public class UpdateRecordTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRecordTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecordTaskRequest</p>
+     */
     public static class UserPanes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Images")
         private java.util.List < Images> images;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsageAreaDistributionStatDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeUsageAreaDistributionStatDataRequest</p>
@@ -98,7 +99,11 @@ public class DescribeUsageAreaDistributionStatDataRequest extends Request {
         } 
 
         /**
-         * APP ID
+         * <p>APP ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0rbd****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -107,7 +112,10 @@ public class DescribeUsageAreaDistributionStatDataRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615910399</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -125,7 +133,10 @@ public class DescribeUsageAreaDistributionStatDataRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615824000</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

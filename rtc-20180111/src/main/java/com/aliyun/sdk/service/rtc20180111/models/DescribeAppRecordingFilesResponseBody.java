@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppRecordingFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppRecordingFilesResponseBody</p>
@@ -110,7 +111,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,6 +135,12 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppRecordingFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppRecordingFilesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppLiveStreamStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppLiveStreamStatusRequest</p>
@@ -68,7 +69,10 @@ public class ModifyAppLiveStreamStatusRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac7N****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

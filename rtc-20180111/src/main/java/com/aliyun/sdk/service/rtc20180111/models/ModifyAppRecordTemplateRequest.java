@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppRecordTemplateRequest</p>
@@ -83,7 +84,10 @@ public class ModifyAppRecordTemplateRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac7N****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -101,7 +105,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
         }
 
         /**
-         * RecordTemplate.
+         * <p>This parameter is required.</p>
          */
         public Builder recordTemplate(RecordTemplate recordTemplate) {
             String recordTemplateShrink = shrink(recordTemplate, "RecordTemplate", "json");
@@ -117,6 +121,12 @@ public class ModifyAppRecordTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAppRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppRecordTemplateRequest</p>
+     */
     public static class RecordTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DelayStopTime")
         @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 180)
@@ -244,7 +254,10 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * FilePrefix.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{AppId}/{ChannelId}<em>{TaskId}/{EscapedStartTime}</em>{EscapedEndTime}</p>
              */
             public Builder filePrefix(String filePrefix) {
                 this.filePrefix = filePrefix;
@@ -252,7 +265,10 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * FileSplitInterval.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder fileSplitInterval(Integer fileSplitInterval) {
                 this.fileSplitInterval = fileSplitInterval;
@@ -260,7 +276,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * Formats.
+             * <p>This parameter is required.</p>
              */
             public Builder formats(java.util.List < String > formats) {
                 this.formats = formats;
@@ -268,7 +284,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * LayoutIds.
+             * <p>This parameter is required.</p>
              */
             public Builder layoutIds(java.util.List < String > layoutIds) {
                 this.layoutIds = layoutIds;
@@ -276,7 +292,10 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * MediaEncode.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mediaEncode(Integer mediaEncode) {
                 this.mediaEncode = mediaEncode;
@@ -284,7 +303,10 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>模版</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +314,10 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2xh6****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

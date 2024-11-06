@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppLayoutsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppLayoutsRequest</p>
@@ -96,7 +97,10 @@ public class DescribeAppLayoutsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac7N****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -139,6 +143,12 @@ public class DescribeAppLayoutsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppLayoutsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAppLayoutsRequest</p>
+     */
     public static class Condition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LayoutId")
         private String layoutId;

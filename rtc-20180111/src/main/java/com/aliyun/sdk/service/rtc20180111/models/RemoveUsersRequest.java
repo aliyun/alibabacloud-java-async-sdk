@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveUsersRequest} extends {@link RequestModel}
  *
  * <p>RemoveUsersRequest</p>
@@ -84,7 +85,10 @@ public class RemoveUsersRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eo85****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +97,10 @@ public class RemoveUsersRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testid</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -102,7 +109,7 @@ public class RemoveUsersRequest extends Request {
         }
 
         /**
-         * Users.
+         * <p>This parameter is required.</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.putQueryParameter("Users", users);
@@ -117,6 +124,12 @@ public class RemoveUsersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveUsersRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveUsersRequest</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -145,7 +158,10 @@ public class RemoveUsersRequest extends Request {
             private String userId; 
 
             /**
-             * UserId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1811****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

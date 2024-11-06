@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQoeMetricDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeQoeMetricDataResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeQoeMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeQoeMetricDataResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private String x;
@@ -151,6 +158,12 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeQoeMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeQoeMetricDataResponseBody</p>
+     */
     public static class AudioData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
@@ -232,6 +245,12 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeQoeMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeQoeMetricDataResponseBody</p>
+     */
     public static class VideoDataNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private String x;
@@ -293,6 +312,12 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeQoeMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeQoeMetricDataResponseBody</p>
+     */
     public static class VideoData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < VideoDataNodes> nodes;

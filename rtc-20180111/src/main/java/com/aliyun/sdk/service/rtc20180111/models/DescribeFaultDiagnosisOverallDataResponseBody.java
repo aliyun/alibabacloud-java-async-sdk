@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaultDiagnosisOverallDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFaultDiagnosisOverallDataResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisOverallDataResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
@@ -171,6 +178,12 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisOverallDataResponseBody</p>
+     */
     public static class MetricData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
@@ -212,6 +225,12 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaultDiagnosisOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaultDiagnosisOverallDataResponseBody</p>
+     */
     public static class OverallData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaultUserCount")
         private Integer faultUserCount;

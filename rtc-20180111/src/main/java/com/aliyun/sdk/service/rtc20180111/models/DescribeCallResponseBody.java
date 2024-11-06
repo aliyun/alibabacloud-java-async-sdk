@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCallResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCallResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeCallResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCallResponseBody</p>
+     */
     public static class CallInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -177,7 +184,10 @@ public class DescribeCallResponseBody extends TeaModel {
             private Long duration; 
 
             /**
-             * App ID。
+             * <p>App ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -231,6 +241,12 @@ public class DescribeCallResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCallResponseBody</p>
+     */
     public static class DurMetricStatData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PubAudio")
         private Long pubAudio;
@@ -452,6 +468,12 @@ public class DescribeCallResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCallResponseBody</p>
+     */
     public static class OnlinePeriods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
@@ -513,6 +535,12 @@ public class DescribeCallResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCallResponseBody</p>
+     */
     public static class UserDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallExp")
         private String callExp;

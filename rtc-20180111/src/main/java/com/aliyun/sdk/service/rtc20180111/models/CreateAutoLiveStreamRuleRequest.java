@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAutoLiveStreamRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateAutoLiveStreamRuleRequest</p>
@@ -153,7 +154,10 @@ public class CreateAutoLiveStreamRuleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eo85****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -207,7 +211,10 @@ public class CreateAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
-         * PlayDomain.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://${domain}/${app}/${stream}</p>
          */
         public Builder playDomain(String playDomain) {
             this.putQueryParameter("PlayDomain", playDomain);

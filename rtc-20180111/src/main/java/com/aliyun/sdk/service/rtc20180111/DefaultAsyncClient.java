@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddRecordTemplate  AddRecordTemplateRequest
+     * @return AddRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<AddRecordTemplateResponse> addRecordTemplate(AddRecordTemplateRequest request) {
         try {
@@ -53,6 +57,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAppLayout  CreateAppLayoutRequest
+     * @return CreateAppLayoutResponse
+     */
+    @Override
+    public CompletableFuture<CreateAppLayoutResponse> createAppLayout(CreateAppLayoutRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAppLayout").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAppLayoutResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAppLayoutResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAppRecordTemplate  CreateAppRecordTemplateRequest
+     * @return CreateAppRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateAppRecordTemplateResponse> createAppRecordTemplate(CreateAppRecordTemplateRequest request) {
         try {
@@ -67,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAppStreamingOutTemplate  CreateAppStreamingOutTemplateRequest
+     * @return CreateAppStreamingOutTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateAppStreamingOutTemplateResponse> createAppStreamingOutTemplate(CreateAppStreamingOutTemplateRequest request) {
         try {
@@ -81,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAutoLiveStreamRule  CreateAutoLiveStreamRuleRequest
+     * @return CreateAutoLiveStreamRuleResponse
+     */
     @Override
     public CompletableFuture<CreateAutoLiveStreamRuleResponse> createAutoLiveStreamRule(CreateAutoLiveStreamRuleRequest request) {
         try {
@@ -95,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEventSubscribe  CreateEventSubscribeRequest
+     * @return CreateEventSubscribeResponse
+     */
     @Override
     public CompletableFuture<CreateEventSubscribeResponse> createEventSubscribe(CreateEventSubscribeRequest request) {
         try {
@@ -109,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMPULayout  CreateMPULayoutRequest
+     * @return CreateMPULayoutResponse
+     */
     @Override
     public CompletableFuture<CreateMPULayoutResponse> createMPULayout(CreateMPULayoutRequest request) {
         try {
@@ -123,6 +165,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAppLayout  DeleteAppLayoutRequest
+     * @return DeleteAppLayoutResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAppLayoutResponse> deleteAppLayout(DeleteAppLayoutRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAppLayout").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAppLayoutResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAppLayoutResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAppRecordTemplate  DeleteAppRecordTemplateRequest
+     * @return DeleteAppRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteAppRecordTemplateResponse> deleteAppRecordTemplate(DeleteAppRecordTemplateRequest request) {
         try {
@@ -137,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAppStreamingOutTemplate  DeleteAppStreamingOutTemplateRequest
+     * @return DeleteAppStreamingOutTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteAppStreamingOutTemplateResponse> deleteAppStreamingOutTemplate(DeleteAppStreamingOutTemplateRequest request) {
         try {
@@ -151,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAutoLiveStreamRule  DeleteAutoLiveStreamRuleRequest
+     * @return DeleteAutoLiveStreamRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteAutoLiveStreamRuleResponse> deleteAutoLiveStreamRule(DeleteAutoLiveStreamRuleRequest request) {
         try {
@@ -165,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteChannel  DeleteChannelRequest
+     * @return DeleteChannelResponse
+     */
     @Override
     public CompletableFuture<DeleteChannelResponse> deleteChannel(DeleteChannelRequest request) {
         try {
@@ -179,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEventSubscribe  DeleteEventSubscribeRequest
+     * @return DeleteEventSubscribeResponse
+     */
     @Override
     public CompletableFuture<DeleteEventSubscribeResponse> deleteEventSubscribe(DeleteEventSubscribeRequest request) {
         try {
@@ -193,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMPULayout  DeleteMPULayoutRequest
+     * @return DeleteMPULayoutResponse
+     */
     @Override
     public CompletableFuture<DeleteMPULayoutResponse> deleteMPULayout(DeleteMPULayoutRequest request) {
         try {
@@ -207,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRecordTemplate  DeleteRecordTemplateRequest
+     * @return DeleteRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteRecordTemplateResponse> deleteRecordTemplate(DeleteRecordTemplateRequest request) {
         try {
@@ -221,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllCallback  DescribeAllCallbackRequest
+     * @return DescribeAllCallbackResponse
+     */
     @Override
     public CompletableFuture<DescribeAllCallbackResponse> describeAllCallback(DescribeAllCallbackRequest request) {
         try {
@@ -235,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppCallStatus  DescribeAppCallStatusRequest
+     * @return DescribeAppCallStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeAppCallStatusResponse> describeAppCallStatus(DescribeAppCallStatusRequest request) {
         try {
@@ -249,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppCallbackSecretKey  DescribeAppCallbackSecretKeyRequest
+     * @return DescribeAppCallbackSecretKeyResponse
+     */
     @Override
     public CompletableFuture<DescribeAppCallbackSecretKeyResponse> describeAppCallbackSecretKey(DescribeAppCallbackSecretKeyRequest request) {
         try {
@@ -263,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppKey  DescribeAppKeyRequest
+     * @return DescribeAppKeyResponse
+     */
     @Override
     public CompletableFuture<DescribeAppKeyResponse> describeAppKey(DescribeAppKeyRequest request) {
         try {
@@ -277,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppLayouts  DescribeAppLayoutsRequest
+     * @return DescribeAppLayoutsResponse
+     */
     @Override
     public CompletableFuture<DescribeAppLayoutsResponse> describeAppLayouts(DescribeAppLayoutsRequest request) {
         try {
@@ -291,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppLiveStreamStatus  DescribeAppLiveStreamStatusRequest
+     * @return DescribeAppLiveStreamStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeAppLiveStreamStatusResponse> describeAppLiveStreamStatus(DescribeAppLiveStreamStatusRequest request) {
         try {
@@ -305,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppRecordStatus  DescribeAppRecordStatusRequest
+     * @return DescribeAppRecordStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeAppRecordStatusResponse> describeAppRecordStatus(DescribeAppRecordStatusRequest request) {
         try {
@@ -319,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppRecordTemplates  DescribeAppRecordTemplatesRequest
+     * @return DescribeAppRecordTemplatesResponse
+     */
     @Override
     public CompletableFuture<DescribeAppRecordTemplatesResponse> describeAppRecordTemplates(DescribeAppRecordTemplatesRequest request) {
         try {
@@ -333,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppRecordingFiles  DescribeAppRecordingFilesRequest
+     * @return DescribeAppRecordingFilesResponse
+     */
     @Override
     public CompletableFuture<DescribeAppRecordingFilesResponse> describeAppRecordingFiles(DescribeAppRecordingFilesRequest request) {
         try {
@@ -347,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppStreamingOutTemplates  DescribeAppStreamingOutTemplatesRequest
+     * @return DescribeAppStreamingOutTemplatesResponse
+     */
     @Override
     public CompletableFuture<DescribeAppStreamingOutTemplatesResponse> describeAppStreamingOutTemplates(DescribeAppStreamingOutTemplatesRequest request) {
         try {
@@ -361,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApps  DescribeAppsRequest
+     * @return DescribeAppsResponse
+     */
     @Override
     public CompletableFuture<DescribeAppsResponse> describeApps(DescribeAppsRequest request) {
         try {
@@ -375,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAutoLiveStreamRule  DescribeAutoLiveStreamRuleRequest
+     * @return DescribeAutoLiveStreamRuleResponse
+     */
     @Override
     public CompletableFuture<DescribeAutoLiveStreamRuleResponse> describeAutoLiveStreamRule(DescribeAutoLiveStreamRuleRequest request) {
         try {
@@ -389,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCall  DescribeCallRequest
+     * @return DescribeCallResponse
+     */
     @Override
     public CompletableFuture<DescribeCallResponse> describeCall(DescribeCallRequest request) {
         try {
@@ -403,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCallList  DescribeCallListRequest
+     * @return DescribeCallListResponse
+     */
     @Override
     public CompletableFuture<DescribeCallListResponse> describeCallList(DescribeCallListRequest request) {
         try {
@@ -417,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCallbacks  DescribeCallbacksRequest
+     * @return DescribeCallbacksResponse
+     */
     @Override
     public CompletableFuture<DescribeCallbacksResponse> describeCallbacks(DescribeCallbacksRequest request) {
         try {
@@ -431,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannel  DescribeChannelRequest
+     * @return DescribeChannelResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelResponse> describeChannel(DescribeChannelRequest request) {
         try {
@@ -445,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannelAllUsers  DescribeChannelAllUsersRequest
+     * @return DescribeChannelAllUsersResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelAllUsersResponse> describeChannelAllUsers(DescribeChannelAllUsersRequest request) {
         try {
@@ -459,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannelAreaDistributionStatData  DescribeChannelAreaDistributionStatDataRequest
+     * @return DescribeChannelAreaDistributionStatDataResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelAreaDistributionStatDataResponse> describeChannelAreaDistributionStatData(DescribeChannelAreaDistributionStatDataRequest request) {
         try {
@@ -473,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannelDistributionStatData  DescribeChannelDistributionStatDataRequest
+     * @return DescribeChannelDistributionStatDataResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelDistributionStatDataResponse> describeChannelDistributionStatData(DescribeChannelDistributionStatDataRequest request) {
         try {
@@ -487,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannelOverallData  DescribeChannelOverallDataRequest
+     * @return DescribeChannelOverallDataResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelOverallDataResponse> describeChannelOverallData(DescribeChannelOverallDataRequest request) {
         try {
@@ -501,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannelParticipants  DescribeChannelParticipantsRequest
+     * @return DescribeChannelParticipantsResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelParticipantsResponse> describeChannelParticipants(DescribeChannelParticipantsRequest request) {
         try {
@@ -515,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannelTopPubUserList  DescribeChannelTopPubUserListRequest
+     * @return DescribeChannelTopPubUserListResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelTopPubUserListResponse> describeChannelTopPubUserList(DescribeChannelTopPubUserListRequest request) {
         try {
@@ -529,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannelUser  DescribeChannelUserRequest
+     * @return DescribeChannelUserResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelUserResponse> describeChannelUser(DescribeChannelUserRequest request) {
         try {
@@ -543,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannelUserMetrics  DescribeChannelUserMetricsRequest
+     * @return DescribeChannelUserMetricsResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelUserMetricsResponse> describeChannelUserMetrics(DescribeChannelUserMetricsRequest request) {
         try {
@@ -557,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannelUsers  DescribeChannelUsersRequest
+     * @return DescribeChannelUsersResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelUsersResponse> describeChannelUsers(DescribeChannelUsersRequest request) {
         try {
@@ -571,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChannels  DescribeChannelsRequest
+     * @return DescribeChannelsResponse
+     */
     @Override
     public CompletableFuture<DescribeChannelsResponse> describeChannels(DescribeChannelsRequest request) {
         try {
@@ -585,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEndPointEventList  DescribeEndPointEventListRequest
+     * @return DescribeEndPointEventListResponse
+     */
     @Override
     public CompletableFuture<DescribeEndPointEventListResponse> describeEndPointEventList(DescribeEndPointEventListRequest request) {
         try {
@@ -599,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEndPointMetricData  DescribeEndPointMetricDataRequest
+     * @return DescribeEndPointMetricDataResponse
+     */
     @Override
     public CompletableFuture<DescribeEndPointMetricDataResponse> describeEndPointMetricData(DescribeEndPointMetricDataRequest request) {
         try {
@@ -613,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFaultDiagnosisFactorDistributionStat  DescribeFaultDiagnosisFactorDistributionStatRequest
+     * @return DescribeFaultDiagnosisFactorDistributionStatResponse
+     */
     @Override
     public CompletableFuture<DescribeFaultDiagnosisFactorDistributionStatResponse> describeFaultDiagnosisFactorDistributionStat(DescribeFaultDiagnosisFactorDistributionStatRequest request) {
         try {
@@ -627,6 +831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFaultDiagnosisOverallData  DescribeFaultDiagnosisOverallDataRequest
+     * @return DescribeFaultDiagnosisOverallDataResponse
+     */
     @Override
     public CompletableFuture<DescribeFaultDiagnosisOverallDataResponse> describeFaultDiagnosisOverallData(DescribeFaultDiagnosisOverallDataRequest request) {
         try {
@@ -641,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFaultDiagnosisUserDetail  DescribeFaultDiagnosisUserDetailRequest
+     * @return DescribeFaultDiagnosisUserDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeFaultDiagnosisUserDetailResponse> describeFaultDiagnosisUserDetail(DescribeFaultDiagnosisUserDetailRequest request) {
         try {
@@ -655,6 +867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFaultDiagnosisUserList  DescribeFaultDiagnosisUserListRequest
+     * @return DescribeFaultDiagnosisUserListResponse
+     */
     @Override
     public CompletableFuture<DescribeFaultDiagnosisUserListResponse> describeFaultDiagnosisUserList(DescribeFaultDiagnosisUserListRequest request) {
         try {
@@ -669,6 +885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMPULayoutInfoList  DescribeMPULayoutInfoListRequest
+     * @return DescribeMPULayoutInfoListResponse
+     */
     @Override
     public CompletableFuture<DescribeMPULayoutInfoListResponse> describeMPULayoutInfoList(DescribeMPULayoutInfoListRequest request) {
         try {
@@ -683,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePubUserListBySubUser  DescribePubUserListBySubUserRequest
+     * @return DescribePubUserListBySubUserResponse
+     */
     @Override
     public CompletableFuture<DescribePubUserListBySubUserResponse> describePubUserListBySubUser(DescribePubUserListBySubUserRequest request) {
         try {
@@ -697,6 +921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeQoeMetricData  DescribeQoeMetricDataRequest
+     * @return DescribeQoeMetricDataResponse
+     */
     @Override
     public CompletableFuture<DescribeQoeMetricDataResponse> describeQoeMetricData(DescribeQoeMetricDataRequest request) {
         try {
@@ -711,6 +939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeQualityAreaDistributionStatData  DescribeQualityAreaDistributionStatDataRequest
+     * @return DescribeQualityAreaDistributionStatDataResponse
+     */
     @Override
     public CompletableFuture<DescribeQualityAreaDistributionStatDataResponse> describeQualityAreaDistributionStatData(DescribeQualityAreaDistributionStatDataRequest request) {
         try {
@@ -725,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeQualityDistributionStatData  DescribeQualityDistributionStatDataRequest
+     * @return DescribeQualityDistributionStatDataResponse
+     */
     @Override
     public CompletableFuture<DescribeQualityDistributionStatDataResponse> describeQualityDistributionStatData(DescribeQualityDistributionStatDataRequest request) {
         try {
@@ -739,6 +975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeQualityOsSdkVersionDistributionStatData  DescribeQualityOsSdkVersionDistributionStatDataRequest
+     * @return DescribeQualityOsSdkVersionDistributionStatDataResponse
+     */
     @Override
     public CompletableFuture<DescribeQualityOsSdkVersionDistributionStatDataResponse> describeQualityOsSdkVersionDistributionStatData(DescribeQualityOsSdkVersionDistributionStatDataRequest request) {
         try {
@@ -753,6 +993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeQualityOverallData  DescribeQualityOverallDataRequest
+     * @return DescribeQualityOverallDataResponse
+     */
     @Override
     public CompletableFuture<DescribeQualityOverallDataResponse> describeQualityOverallData(DescribeQualityOverallDataRequest request) {
         try {
@@ -767,6 +1011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRecordFiles  DescribeRecordFilesRequest
+     * @return DescribeRecordFilesResponse
+     */
     @Override
     public CompletableFuture<DescribeRecordFilesResponse> describeRecordFiles(DescribeRecordFilesRequest request) {
         try {
@@ -781,6 +1029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRecordTemplates  DescribeRecordTemplatesRequest
+     * @return DescribeRecordTemplatesResponse
+     */
     @Override
     public CompletableFuture<DescribeRecordTemplatesResponse> describeRecordTemplates(DescribeRecordTemplatesRequest request) {
         try {
@@ -795,6 +1047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRtcChannelList  DescribeRtcChannelListRequest
+     * @return DescribeRtcChannelListResponse
+     */
     @Override
     public CompletableFuture<DescribeRtcChannelListResponse> describeRtcChannelList(DescribeRtcChannelListRequest request) {
         try {
@@ -809,6 +1065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRtcChannelMetric  DescribeRtcChannelMetricRequest
+     * @return DescribeRtcChannelMetricResponse
+     */
     @Override
     public CompletableFuture<DescribeRtcChannelMetricResponse> describeRtcChannelMetric(DescribeRtcChannelMetricRequest request) {
         try {
@@ -823,6 +1083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRtcDurationData  DescribeRtcDurationDataRequest
+     * @return DescribeRtcDurationDataResponse
+     */
     @Override
     public CompletableFuture<DescribeRtcDurationDataResponse> describeRtcDurationData(DescribeRtcDurationDataRequest request) {
         try {
@@ -837,6 +1101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRtcPeakChannelCntData  DescribeRtcPeakChannelCntDataRequest
+     * @return DescribeRtcPeakChannelCntDataResponse
+     */
     @Override
     public CompletableFuture<DescribeRtcPeakChannelCntDataResponse> describeRtcPeakChannelCntData(DescribeRtcPeakChannelCntDataRequest request) {
         try {
@@ -851,6 +1119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRtcUserCntData  DescribeRtcUserCntDataRequest
+     * @return DescribeRtcUserCntDataResponse
+     */
     @Override
     public CompletableFuture<DescribeRtcUserCntDataResponse> describeRtcUserCntData(DescribeRtcUserCntDataRequest request) {
         try {
@@ -865,6 +1137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStreamingOutStatus  DescribeStreamingOutStatusRequest
+     * @return DescribeStreamingOutStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeStreamingOutStatusResponse> describeStreamingOutStatus(DescribeStreamingOutStatusRequest request) {
         try {
@@ -879,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSystemLayoutList  DescribeSystemLayoutListRequest
+     * @return DescribeSystemLayoutListResponse
+     */
     @Override
     public CompletableFuture<DescribeSystemLayoutListResponse> describeSystemLayoutList(DescribeSystemLayoutListRequest request) {
         try {
@@ -893,6 +1173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUsageAreaDistributionStatData  DescribeUsageAreaDistributionStatDataRequest
+     * @return DescribeUsageAreaDistributionStatDataResponse
+     */
     @Override
     public CompletableFuture<DescribeUsageAreaDistributionStatDataResponse> describeUsageAreaDistributionStatData(DescribeUsageAreaDistributionStatDataRequest request) {
         try {
@@ -907,6 +1191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUsageDistributionStatData  DescribeUsageDistributionStatDataRequest
+     * @return DescribeUsageDistributionStatDataResponse
+     */
     @Override
     public CompletableFuture<DescribeUsageDistributionStatDataResponse> describeUsageDistributionStatData(DescribeUsageDistributionStatDataRequest request) {
         try {
@@ -921,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUsageOsSdkVersionDistributionStatData  DescribeUsageOsSdkVersionDistributionStatDataRequest
+     * @return DescribeUsageOsSdkVersionDistributionStatDataResponse
+     */
     @Override
     public CompletableFuture<DescribeUsageOsSdkVersionDistributionStatDataResponse> describeUsageOsSdkVersionDistributionStatData(DescribeUsageOsSdkVersionDistributionStatDataRequest request) {
         try {
@@ -935,6 +1227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUsageOverallData  DescribeUsageOverallDataRequest
+     * @return DescribeUsageOverallDataResponse
+     */
     @Override
     public CompletableFuture<DescribeUsageOverallDataResponse> describeUsageOverallData(DescribeUsageOverallDataRequest request) {
         try {
@@ -949,6 +1245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserInfoInChannel  DescribeUserInfoInChannelRequest
+     * @return DescribeUserInfoInChannelResponse
+     */
     @Override
     public CompletableFuture<DescribeUserInfoInChannelResponse> describeUserInfoInChannel(DescribeUserInfoInChannelRequest request) {
         try {
@@ -963,6 +1263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableAutoLiveStreamRule  DisableAutoLiveStreamRuleRequest
+     * @return DisableAutoLiveStreamRuleResponse
+     */
     @Override
     public CompletableFuture<DisableAutoLiveStreamRuleResponse> disableAutoLiveStreamRule(DisableAutoLiveStreamRuleRequest request) {
         try {
@@ -977,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableAutoLiveStreamRule  EnableAutoLiveStreamRuleRequest
+     * @return EnableAutoLiveStreamRuleResponse
+     */
     @Override
     public CompletableFuture<EnableAutoLiveStreamRuleResponse> enableAutoLiveStreamRule(EnableAutoLiveStreamRuleRequest request) {
         try {
@@ -991,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMPUTaskStatus  GetMPUTaskStatusRequest
+     * @return GetMPUTaskStatusResponse
+     */
     @Override
     public CompletableFuture<GetMPUTaskStatusResponse> getMPUTaskStatus(GetMPUTaskStatusRequest request) {
         try {
@@ -1005,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyApp  ModifyAppRequest
+     * @return ModifyAppResponse
+     */
     @Override
     public CompletableFuture<ModifyAppResponse> modifyApp(ModifyAppRequest request) {
         try {
@@ -1019,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAppCallbackStatus  ModifyAppCallbackStatusRequest
+     * @return ModifyAppCallbackStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyAppCallbackStatusResponse> modifyAppCallbackStatus(ModifyAppCallbackStatusRequest request) {
         try {
@@ -1033,6 +1353,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAppLayout  ModifyAppLayoutRequest
+     * @return ModifyAppLayoutResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAppLayoutResponse> modifyAppLayout(ModifyAppLayoutRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAppLayout").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAppLayoutResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAppLayoutResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyAppLiveStreamStatus  ModifyAppLiveStreamStatusRequest
+     * @return ModifyAppLiveStreamStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyAppLiveStreamStatusResponse> modifyAppLiveStreamStatus(ModifyAppLiveStreamStatusRequest request) {
         try {
@@ -1047,6 +1389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAppRecordStatus  ModifyAppRecordStatusRequest
+     * @return ModifyAppRecordStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyAppRecordStatusResponse> modifyAppRecordStatus(ModifyAppRecordStatusRequest request) {
         try {
@@ -1061,6 +1407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAppRecordTemplate  ModifyAppRecordTemplateRequest
+     * @return ModifyAppRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<ModifyAppRecordTemplateResponse> modifyAppRecordTemplate(ModifyAppRecordTemplateRequest request) {
         try {
@@ -1075,6 +1425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAppStreamingOutTemplate  ModifyAppStreamingOutTemplateRequest
+     * @return ModifyAppStreamingOutTemplateResponse
+     */
     @Override
     public CompletableFuture<ModifyAppStreamingOutTemplateResponse> modifyAppStreamingOutTemplate(ModifyAppStreamingOutTemplateRequest request) {
         try {
@@ -1089,6 +1443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCallbackMeta  ModifyCallbackMetaRequest
+     * @return ModifyCallbackMetaResponse
+     */
     @Override
     public CompletableFuture<ModifyCallbackMetaResponse> modifyCallbackMeta(ModifyCallbackMetaRequest request) {
         try {
@@ -1103,6 +1461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyMPULayout  ModifyMPULayoutRequest
+     * @return ModifyMPULayoutResponse
+     */
     @Override
     public CompletableFuture<ModifyMPULayoutResponse> modifyMPULayout(ModifyMPULayoutRequest request) {
         try {
@@ -1117,6 +1479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveTerminals  RemoveTerminalsRequest
+     * @return RemoveTerminalsResponse
+     */
     @Override
     public CompletableFuture<RemoveTerminalsResponse> removeTerminals(RemoveTerminalsRequest request) {
         try {
@@ -1131,6 +1497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUsers  RemoveUsersRequest
+     * @return RemoveUsersResponse
+     */
     @Override
     public CompletableFuture<RemoveUsersResponse> removeUsers(RemoveUsersRequest request) {
         try {
@@ -1145,6 +1515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartCategoryCallback  StartCategoryCallbackRequest
+     * @return StartCategoryCallbackResponse
+     */
     @Override
     public CompletableFuture<StartCategoryCallbackResponse> startCategoryCallback(StartCategoryCallbackRequest request) {
         try {
@@ -1159,6 +1533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartCloudRecord  StartCloudRecordRequest
+     * @return StartCloudRecordResponse
+     */
     @Override
     public CompletableFuture<StartCloudRecordResponse> startCloudRecord(StartCloudRecordRequest request) {
         try {
@@ -1173,6 +1551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartMPUTask  StartMPUTaskRequest
+     * @return StartMPUTaskResponse
+     */
     @Override
     public CompletableFuture<StartMPUTaskResponse> startMPUTask(StartMPUTaskRequest request) {
         try {
@@ -1187,6 +1569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartRecordTask  StartRecordTaskRequest
+     * @return StartRecordTaskResponse
+     */
     @Override
     public CompletableFuture<StartRecordTaskResponse> startRecordTask(StartRecordTaskRequest request) {
         try {
@@ -1201,6 +1587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartStreamingOut  StartStreamingOutRequest
+     * @return StartStreamingOutResponse
+     */
     @Override
     public CompletableFuture<StartStreamingOutResponse> startStreamingOut(StartStreamingOutRequest request) {
         try {
@@ -1215,6 +1605,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopCategoryCallback  StopCategoryCallbackRequest
+     * @return StopCategoryCallbackResponse
+     */
     @Override
     public CompletableFuture<StopCategoryCallbackResponse> stopCategoryCallback(StopCategoryCallbackRequest request) {
         try {
@@ -1229,6 +1623,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopChannel  StopChannelRequest
+     * @return StopChannelResponse
+     */
     @Override
     public CompletableFuture<StopChannelResponse> stopChannel(StopChannelRequest request) {
         try {
@@ -1243,6 +1641,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopCloudRecord  StopCloudRecordRequest
+     * @return StopCloudRecordResponse
+     */
     @Override
     public CompletableFuture<StopCloudRecordResponse> stopCloudRecord(StopCloudRecordRequest request) {
         try {
@@ -1257,6 +1659,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopMPUTask  StopMPUTaskRequest
+     * @return StopMPUTaskResponse
+     */
     @Override
     public CompletableFuture<StopMPUTaskResponse> stopMPUTask(StopMPUTaskRequest request) {
         try {
@@ -1271,6 +1677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopRecordTask  StopRecordTaskRequest
+     * @return StopRecordTaskResponse
+     */
     @Override
     public CompletableFuture<StopRecordTaskResponse> stopRecordTask(StopRecordTaskRequest request) {
         try {
@@ -1285,6 +1695,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopStreamingOut  StopStreamingOutRequest
+     * @return StopStreamingOutResponse
+     */
     @Override
     public CompletableFuture<StopStreamingOutResponse> stopStreamingOut(StopStreamingOutRequest request) {
         try {
@@ -1299,6 +1713,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAutoLiveStreamRule  UpdateAutoLiveStreamRuleRequest
+     * @return UpdateAutoLiveStreamRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateAutoLiveStreamRuleResponse> updateAutoLiveStreamRule(UpdateAutoLiveStreamRuleRequest request) {
         try {
@@ -1313,6 +1731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCloudRecord  UpdateCloudRecordRequest
+     * @return UpdateCloudRecordResponse
+     */
     @Override
     public CompletableFuture<UpdateCloudRecordResponse> updateCloudRecord(UpdateCloudRecordRequest request) {
         try {
@@ -1327,6 +1749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMPUTask  UpdateMPUTaskRequest
+     * @return UpdateMPUTaskResponse
+     */
     @Override
     public CompletableFuture<UpdateMPUTaskResponse> updateMPUTask(UpdateMPUTaskRequest request) {
         try {
@@ -1341,6 +1767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRecordTask  UpdateRecordTaskRequest
+     * @return UpdateRecordTaskResponse
+     */
     @Override
     public CompletableFuture<UpdateRecordTaskResponse> updateRecordTask(UpdateRecordTaskRequest request) {
         try {
@@ -1355,6 +1785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRecordTemplate  UpdateRecordTemplateRequest
+     * @return UpdateRecordTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateRecordTemplateResponse> updateRecordTemplate(UpdateRecordTemplateRequest request) {
         try {
@@ -1369,6 +1803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateStreamingOut  UpdateStreamingOutRequest
+     * @return UpdateStreamingOutResponse
+     */
     @Override
     public CompletableFuture<UpdateStreamingOutResponse> updateStreamingOut(UpdateStreamingOutRequest request) {
         try {

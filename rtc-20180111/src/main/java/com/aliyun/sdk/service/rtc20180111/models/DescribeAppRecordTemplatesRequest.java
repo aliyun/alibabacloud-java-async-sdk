@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppRecordTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppRecordTemplatesRequest</p>
@@ -110,7 +111,10 @@ public class DescribeAppRecordTemplatesRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac7N****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -162,6 +166,12 @@ public class DescribeAppRecordTemplatesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppRecordTemplatesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAppRecordTemplatesRequest</p>
+     */
     public static class Condition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;

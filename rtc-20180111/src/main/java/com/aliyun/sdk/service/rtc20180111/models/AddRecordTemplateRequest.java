@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>AddRecordTemplateRequest</p>
@@ -315,7 +316,10 @@ public class AddRecordTemplateRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -369,7 +373,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * FileSplitInterval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder fileSplitInterval(Integer fileSplitInterval) {
             this.putQueryParameter("FileSplitInterval", fileSplitInterval);
@@ -378,7 +385,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * Formats.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp4</p>
          */
         public Builder formats(java.util.List < String > formats) {
             this.putQueryParameter("Formats", formats);
@@ -396,7 +406,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * LayoutIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder layoutIds(java.util.List < Long > layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
@@ -405,7 +418,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * MediaEncode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder mediaEncode(Integer mediaEncode) {
             this.putQueryParameter("MediaEncode", mediaEncode);
@@ -423,7 +439,7 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -432,7 +448,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtc-record-oss</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -450,7 +469,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * OssFilePrefix.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{AppId}/{ChannelId_TaskId}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
         public Builder ossFilePrefix(String ossFilePrefix) {
             this.putQueryParameter("OssFilePrefix", ossFilePrefix);
@@ -468,7 +490,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * TaskProfile.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4IN_1080P</p>
          */
         public Builder taskProfile(String taskProfile) {
             this.putQueryParameter("TaskProfile", taskProfile);
@@ -492,6 +517,12 @@ public class AddRecordTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>AddRecordTemplateRequest</p>
+     */
     public static class Backgrounds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
@@ -653,6 +684,12 @@ public class AddRecordTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>AddRecordTemplateRequest</p>
+     */
     public static class ClockWidgets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
@@ -794,6 +831,12 @@ public class AddRecordTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>AddRecordTemplateRequest</p>
+     */
     public static class Watermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;

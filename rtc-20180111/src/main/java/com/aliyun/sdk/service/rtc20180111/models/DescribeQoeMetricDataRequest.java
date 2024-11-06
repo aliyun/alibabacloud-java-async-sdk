@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQoeMetricDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeQoeMetricDataRequest</p>
@@ -113,7 +114,11 @@ public class DescribeQoeMetricDataRequest extends Request {
         } 
 
         /**
-         * APP ID。
+         * <p>APP ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testappid</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -122,7 +127,10 @@ public class DescribeQoeMetricDataRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testid</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -131,7 +139,10 @@ public class DescribeQoeMetricDataRequest extends Request {
         }
 
         /**
-         * CreatedTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614936817</p>
          */
         public Builder createdTs(Long createdTs) {
             this.putQueryParameter("CreatedTs", createdTs);
@@ -149,7 +160,10 @@ public class DescribeQoeMetricDataRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuserid</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

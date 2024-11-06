@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppRequest</p>
@@ -83,7 +84,10 @@ public class ModifyAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ioeh****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -92,7 +96,10 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultName</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);

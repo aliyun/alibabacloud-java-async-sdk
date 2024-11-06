@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppStreamingOutTemplateRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppStreamingOutTemplateRequest</p>
@@ -69,7 +70,10 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wv7N****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +82,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
         }
 
         /**
-         * StreamingOutTemplate.
+         * <p>This parameter is required.</p>
          */
         public Builder streamingOutTemplate(StreamingOutTemplate streamingOutTemplate) {
             String streamingOutTemplateShrink = shrink(streamingOutTemplate, "StreamingOutTemplate", "json");
@@ -94,6 +98,12 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAppStreamingOutTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppStreamingOutTemplateRequest</p>
+     */
     public static class StreamingOutTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LayoutIds")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -161,7 +171,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
             private String templateId; 
 
             /**
-             * LayoutIds.
+             * <p>This parameter is required.</p>
              */
             public Builder layoutIds(java.util.List < String > layoutIds) {
                 this.layoutIds = layoutIds;
@@ -169,7 +179,10 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
             }
 
             /**
-             * MediaEncode.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mediaEncode(Integer mediaEncode) {
                 this.mediaEncode = mediaEncode;
@@ -177,7 +190,10 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>模版</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -185,7 +201,10 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac7N****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

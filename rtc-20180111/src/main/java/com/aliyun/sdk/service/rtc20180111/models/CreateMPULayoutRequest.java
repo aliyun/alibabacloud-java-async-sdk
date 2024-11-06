@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMPULayoutRequest} extends {@link RequestModel}
  *
  * <p>CreateMPULayoutRequest</p>
@@ -112,7 +113,10 @@ public class CreateMPULayoutRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -121,7 +125,10 @@ public class CreateMPULayoutRequest extends Request {
         }
 
         /**
-         * AudioMixCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder audioMixCount(Integer audioMixCount) {
             this.putQueryParameter("AudioMixCount", audioMixCount);
@@ -148,7 +155,7 @@ public class CreateMPULayoutRequest extends Request {
         }
 
         /**
-         * Panes.
+         * <p>This parameter is required.</p>
          */
         public Builder panes(java.util.List < Panes> panes) {
             this.putQueryParameter("Panes", panes);
@@ -163,6 +170,12 @@ public class CreateMPULayoutRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMPULayoutRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMPULayoutRequest</p>
+     */
     public static class Panes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;

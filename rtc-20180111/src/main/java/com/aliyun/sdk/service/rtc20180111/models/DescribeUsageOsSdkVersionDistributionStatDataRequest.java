@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsageOsSdkVersionDistributionStatDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeUsageOsSdkVersionDistributionStatDataRequest</p>
@@ -84,7 +85,11 @@ public class DescribeUsageOsSdkVersionDistributionStatDataRequest extends Reques
         } 
 
         /**
-         * APP ID
+         * <p>APP ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0rbd****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +98,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataRequest extends Reques
         }
 
         /**
-         * EndDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615910399</p>
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -102,7 +110,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataRequest extends Reques
         }
 
         /**
-         * StartDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615824000</p>
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);

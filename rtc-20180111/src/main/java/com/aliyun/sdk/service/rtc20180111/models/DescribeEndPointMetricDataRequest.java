@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEndPointMetricDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeEndPointMetricDataRequest</p>
@@ -155,7 +156,11 @@ public class DescribeEndPointMetricDataRequest extends Request {
         } 
 
         /**
-         * APP ID。
+         * <p>APP ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testappid</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -164,7 +169,10 @@ public class DescribeEndPointMetricDataRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testid</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -173,7 +181,10 @@ public class DescribeEndPointMetricDataRequest extends Request {
         }
 
         /**
-         * CreatedTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614936817</p>
          */
         public Builder createdTs(Long createdTs) {
             this.putQueryParameter("CreatedTs", createdTs);
@@ -191,7 +202,10 @@ public class DescribeEndPointMetricDataRequest extends Request {
         }
 
         /**
-         * Metrics.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO_STUCK_CAMERA</p>
          */
         public Builder metrics(String metrics) {
             this.putQueryParameter("Metrics", metrics);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopCategoryCallbackResponse} extends {@link TeaModel}
  *
  * <p>StopCategoryCallbackResponse</p>

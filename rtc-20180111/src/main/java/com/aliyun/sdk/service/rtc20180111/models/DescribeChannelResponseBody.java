@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * channel
+         * <p>channel</p>
          */
         public Builder channel(Channel channel) {
             this.channel = channel;
@@ -90,6 +91,12 @@ public class DescribeChannelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelResponseBody</p>
+     */
     public static class Channel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;

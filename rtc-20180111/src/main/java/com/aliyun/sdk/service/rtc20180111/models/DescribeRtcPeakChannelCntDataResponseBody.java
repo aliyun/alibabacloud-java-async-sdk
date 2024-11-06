@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRtcPeakChannelCntDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRtcPeakChannelCntDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRtcPeakChannelCntDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcPeakChannelCntDataResponseBody</p>
+     */
     public static class PeakChannelCntModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveChannelPeak")
         private Long activeChannelPeak;
@@ -151,6 +158,12 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRtcPeakChannelCntDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcPeakChannelCntDataResponseBody</p>
+     */
     public static class PeakChannelCntDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeakChannelCntModule")
         private java.util.List < PeakChannelCntModule> peakChannelCntModule;

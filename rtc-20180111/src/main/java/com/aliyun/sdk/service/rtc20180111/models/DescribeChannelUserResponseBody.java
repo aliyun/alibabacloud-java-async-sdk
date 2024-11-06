@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelUserResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelUserResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeChannelUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChannelUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelUserResponseBody</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Joined")
         private Long joined;

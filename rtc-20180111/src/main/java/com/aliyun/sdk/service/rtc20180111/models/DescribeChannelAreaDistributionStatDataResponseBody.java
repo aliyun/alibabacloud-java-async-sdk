@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelAreaDistributionStatDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelAreaDistributionStatDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChannelAreaDistributionStatDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelAreaDistributionStatDataResponseBody</p>
+     */
     public static class AreaStatList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AreaName")
         private String areaName;

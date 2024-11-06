@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelOverallDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelOverallDataResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChannelOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelOverallDataResponseBody</p>
+     */
     public static class CallInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -251,6 +258,12 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChannelOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelOverallDataResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
@@ -332,6 +345,12 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChannelOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelOverallDataResponseBody</p>
+     */
     public static class MetricDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
@@ -393,6 +412,12 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChannelOverallDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelOverallDataResponseBody</p>
+     */
     public static class OverallData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnAvgTime")
         private Float connAvgTime;

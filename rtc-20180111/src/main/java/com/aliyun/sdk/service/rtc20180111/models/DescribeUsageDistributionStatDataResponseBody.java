@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsageDistributionStatDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUsageDistributionStatDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUsageDistributionStatDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsageDistributionStatDataResponseBody</p>
+     */
     public static class UsageStatList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioCallDuration")
         private Long audioCallDuration;

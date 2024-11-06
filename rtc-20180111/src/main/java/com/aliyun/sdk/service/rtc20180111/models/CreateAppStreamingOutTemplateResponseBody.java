@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppStreamingOutTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAppStreamingOutTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateAppStreamingOutTemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30D41049-D02D-1C21-86AE-B3E5FD805C27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

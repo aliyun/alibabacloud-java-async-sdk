@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaultDiagnosisUserDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeFaultDiagnosisUserDetailRequest</p>
@@ -128,7 +129,11 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         } 
 
         /**
-         * APP ID。
+         * <p>APP ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0rbd****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -137,7 +142,10 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>311</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -146,7 +154,10 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         }
 
         /**
-         * CreatedTs.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615892596</p>
          */
         public Builder createdTs(Long createdTs) {
             this.putQueryParameter("CreatedTs", createdTs);
@@ -155,7 +166,10 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         }
 
         /**
-         * FaultType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JOIN_SLOW</p>
          */
         public Builder faultType(String faultType) {
             this.putQueryParameter("FaultType", faultType);
@@ -173,7 +187,10 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c906531af5f9****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

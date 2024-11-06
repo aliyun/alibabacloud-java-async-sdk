@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRtcChannelMetricResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRtcChannelMetricResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRtcChannelMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcChannelMetricResponseBody</p>
+     */
     public static class ChannelMetric extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
@@ -211,6 +218,12 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRtcChannelMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcChannelMetricResponseBody</p>
+     */
     public static class PubDuration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Audio")
         private Integer audio;
@@ -332,6 +345,12 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRtcChannelMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcChannelMetricResponseBody</p>
+     */
     public static class SubDuration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Audio")
         private Integer audio;
@@ -453,6 +472,12 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRtcChannelMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcChannelMetricResponseBody</p>
+     */
     public static class Duration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PubDuration")
         private PubDuration pubDuration;
@@ -514,6 +539,12 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRtcChannelMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRtcChannelMetricResponseBody</p>
+     */
     public static class ChannelMetricInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelMetric")
         private ChannelMetric channelMetric;

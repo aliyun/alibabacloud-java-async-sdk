@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelTopPubUserListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelTopPubUserListResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChannelTopPubUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelTopPubUserListResponseBody</p>
+     */
     public static class OnlinePeriods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
@@ -131,6 +138,12 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChannelTopPubUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelTopPubUserListResponseBody</p>
+     */
     public static class TopPubUserDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;

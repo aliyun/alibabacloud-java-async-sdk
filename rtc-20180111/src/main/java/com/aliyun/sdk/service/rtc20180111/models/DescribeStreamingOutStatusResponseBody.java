@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStreamingOutStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStreamingOutStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeStreamingOutStatusResponseBody extends TeaModel {
         private Integer status; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
