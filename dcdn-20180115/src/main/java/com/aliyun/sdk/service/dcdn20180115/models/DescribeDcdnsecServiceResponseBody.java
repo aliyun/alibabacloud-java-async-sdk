@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnsecServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnsecServiceResponseBody</p>
@@ -169,7 +170,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * The time when the renewed service takes effect. The time is displayed in UTC.
+         * <p>The time when the renewed service takes effect. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-30T16:00:00Z</p>
          */
         public Builder changingAffectTime(String changingAffectTime) {
             this.changingAffectTime = changingAffectTime;
@@ -177,16 +181,19 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The new metering method for the renewed DCDN. Valid values:
-         * <p>
+         * <p>The new metering method for the renewed DCDN. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay by data transfer</li>
+         * <li><strong>PayByBandwidth</strong>: pay by bandwidth</li>
+         * <li><strong>PayByBandwidth95</strong>: pay by 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_monthavg</strong>: pay by monthly average bandwidth</li>
+         * <li><strong>PayByBandwidth_month4th</strong>: pay by fourth peak bandwidth per month</li>
+         * <li><strong>PayByBandwidth_monthday95avg</strong>: pay by monthly average 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_nighthalf95</strong>: pay by 95th percentile bandwidth (50% off during nighttime)</li>
+         * </ul>
          * 
-         * *   **PayByTraffic**: pay by data transfer
-         * *   **PayByBandwidth**: pay by bandwidth
-         * *   **PayByBandwidth95**: pay by 95th percentile bandwidth
-         * *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
-         * *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
-         * *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
-         * *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
@@ -194,7 +201,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The number of accelerated domain names that use DCDN.
+         * <p>The number of accelerated domain names that use DCDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130</p>
          */
         public Builder domainNum(String domainNum) {
             this.domainNum = domainNum;
@@ -202,7 +212,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service expiration time.
+         * <p>The service expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-26T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -210,7 +223,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The metering method for traffic.
+         * <p>The metering method for traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayBySecTraffic</p>
          */
         public Builder flowType(String flowType) {
             this.flowType = flowType;
@@ -218,7 +234,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_dcdnsec_public_cn-123***</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -226,16 +245,19 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The current metering method. Valid values:
-         * <p>
+         * <p>The current metering method. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay by data transfer</li>
+         * <li><strong>PayByBandwidth</strong>: pay by bandwidth</li>
+         * <li><strong>PayByBandwidth95</strong>: pay by 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_monthavg</strong>: pay by monthly average bandwidth</li>
+         * <li><strong>PayByBandwidth_month4th</strong>: pay by fourth peak bandwidth per month</li>
+         * <li><strong>PayByBandwidth_monthday95avg</strong>: pay by monthly average 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_nighthalf95</strong>: pay by 95th percentile bandwidth (50% off during nighttime)</li>
+         * </ul>
          * 
-         * *   **PayByTraffic**: pay by data transfer
-         * *   **PayByBandwidth**: pay by bandwidth
-         * *   **PayByBandwidth95**: pay by 95th percentile bandwidth
-         * *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
-         * *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
-         * *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
-         * *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -243,7 +265,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The lock status of DCDN.
+         * <p>The lock status of DCDN.</p>
          */
         public Builder operationLocks(OperationLocks operationLocks) {
             this.operationLocks = operationLocks;
@@ -251,7 +273,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E20B46E1-9BCD-10E5-AAEF-6D7B737467A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -259,7 +284,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The metering method for requests.
+         * <p>The metering method for requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayBySecRequest</p>
          */
         public Builder requestType(String requestType) {
             this.requestType = requestType;
@@ -267,7 +295,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service activation time.
+         * <p>The service activation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-26T02:52:08Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -275,7 +306,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The version number.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -288,6 +322,12 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnsecServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnsecServiceResponseBody</p>
+     */
     public static class LockReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
@@ -315,7 +355,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The reason why the instance was locked.
+             * <p>The reason why the instance was locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>financial</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -329,6 +372,12 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnsecServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnsecServiceResponseBody</p>
+     */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private java.util.List < LockReason> lockReason;
@@ -356,7 +405,10 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * The reason why the instance was locked.
+             * <p>The reason why the instance was locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>financial</p>
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;

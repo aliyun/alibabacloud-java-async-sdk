@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafSpecInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafSpecInfoResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
         private java.util.List < SpecInfos> specInfos; 
 
         /**
-         * The version of WAF.
+         * <p>The version of WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdnwaf_afterpay</p>
          */
         public Builder edition(String edition) {
             this.edition = edition;
@@ -69,7 +73,10 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7281593a-f414-42c1-b7ba-2ce65e21cc00</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The supported types of protection policies and the configuration information of protection rules.
+         * <p>The supported types of protection policies and the configuration information of protection rules.</p>
          */
         public Builder specInfos(java.util.List < SpecInfos> specInfos) {
             this.specInfos = specInfos;
@@ -90,6 +97,12 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafSpecInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafSpecInfoResponseBody</p>
+     */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -141,7 +154,10 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The configuration code of the protection rule.
+             * <p>The configuration code of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -149,7 +165,10 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration expression of the protection rule.
+             * <p>The configuration expression of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>equal</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -157,7 +176,10 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the configuration expression of the protection rule.
+             * <p>The value of the configuration expression of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -171,6 +193,12 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafSpecInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafSpecInfoResponseBody</p>
+     */
     public static class SpecInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Configs")
         private java.util.List < Configs> configs;
@@ -210,7 +238,7 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
             private String defenseScene; 
 
             /**
-             * The configuration information of the protection rule.
+             * <p>The configuration information of the protection rule.</p>
              */
             public Builder configs(java.util.List < Configs> configs) {
                 this.configs = configs;
@@ -218,15 +246,18 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protection policy. Valid values:
-             * <p>
+             * <p>The type of the protection policy. Valid values:</p>
+             * <ul>
+             * <li>waf_group: basic web protection</li>
+             * <li>custom_acl: custom</li>
+             * <li>whitelist: whitelist</li>
+             * <li>ip_blacklist: IP address blacklist</li>
+             * <li>region_block: region blacklist</li>
+             * <li>bot: bot management</li>
+             * </ul>
              * 
-             * *   waf_group: basic web protection
-             * *   custom_acl: custom
-             * *   whitelist: whitelist
-             * *   ip_blacklist: IP address blacklist
-             * *   region_block: region blacklist
-             * *   bot: bot management
+             * <strong>example:</strong>
+             * <p>custom_acl</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;

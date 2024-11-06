@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDeliverListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnDeliverListRequest</p>
@@ -53,7 +54,10 @@ public class DescribeDcdnDeliverListRequest extends Request {
         } 
 
         /**
-         * The ID of the tracking task that you want to query. If you do not specify an ID, all tracking tasks are queried.
+         * <p>The ID of the tracking task that you want to query. If you do not specify an ID, all tracking tasks are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         public Builder deliverId(Long deliverId) {
             this.putQueryParameter("DeliverId", deliverId);

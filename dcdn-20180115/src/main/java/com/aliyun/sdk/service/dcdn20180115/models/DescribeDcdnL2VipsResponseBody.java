@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnL2VipsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnL2VipsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDcdnL2VipsResponseBody extends TeaModel {
         private java.util.List < String > vips; 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -69,7 +73,10 @@ public class DescribeDcdnL2VipsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>820E7900-5CA9-4AEF-B0DD-20ED5F64BE55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class DescribeDcdnL2VipsResponseBody extends TeaModel {
         }
 
         /**
-         * The virtual IP addresses (VIPs).
+         * <p>The virtual IP addresses (VIPs).</p>
          */
         public Builder vips(java.util.List < String > vips) {
             this.vips = vips;

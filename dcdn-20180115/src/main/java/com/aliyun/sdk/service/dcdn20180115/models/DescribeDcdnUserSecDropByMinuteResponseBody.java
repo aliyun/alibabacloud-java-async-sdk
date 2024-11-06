@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserSecDropByMinuteResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnUserSecDropByMinuteResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The description of HTTP responses.
+         * <p>The description of HTTP responses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -117,7 +121,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder len(Integer len) {
             this.len = len;
@@ -125,7 +132,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -133,7 +143,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +154,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8143fA8A-B2B2-4915-538D-546B538D25FA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +165,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * An array.
+         * <p>An array.</p>
          */
         public Builder rows(java.util.List < Rows> rows) {
             this.rows = rows;
@@ -157,7 +173,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5738</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,6 +189,12 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnUserSecDropByMinuteResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnUserSecDropByMinuteResponseBody</p>
+     */
     public static class Rows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -257,7 +282,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             private String tmStr; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -265,7 +293,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * The number of packets blocked within 5 minutes.
+             * <p>The number of packets blocked within 5 minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>264</p>
              */
             public Builder drops(Integer drops) {
                 this.drops = drops;
@@ -273,7 +304,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * The object that triggered rate limiting.
+             * <p>The object that triggered rate limiting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal Mode</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -281,7 +315,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * The rule that was triggered.
+             * <p>The rule that was triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal Mode</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -289,7 +326,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * The security feature that blocked the packets.
+             * <p>The security feature that blocked the packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>robot</p>
              */
             public Builder secFunc(String secFunc) {
                 this.secFunc = secFunc;
@@ -297,7 +337,10 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-31T15:04:04Z</p>
              */
             public Builder tmStr(String tmStr) {
                 this.tmStr = tmStr;

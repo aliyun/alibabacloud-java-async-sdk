@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoutineRelatedDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRoutineRelatedDomainsRequest</p>
@@ -54,7 +55,11 @@ public class DescribeRoutineRelatedDomainsRequest extends Request {
         } 
 
         /**
-         * The name of the routine. The name is unique in the same account.
+         * <p>The name of the routine. The name is unique in the same account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routine_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

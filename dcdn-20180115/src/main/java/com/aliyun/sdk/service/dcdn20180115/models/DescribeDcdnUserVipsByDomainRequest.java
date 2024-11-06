@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserVipsByDomainRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnUserVipsByDomainRequest</p>
@@ -68,11 +69,14 @@ public class DescribeDcdnUserVipsByDomainRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the virtual IP addresses of only healthy POPs. Valid value:
-         * <p>
+         * <p>Specifies whether to query the virtual IP addresses of only healthy POPs. Valid value:</p>
+         * <ul>
+         * <li><strong>on</strong>: queries healthy VIPs.</li>
+         * <li><strong>off</strong>: queries all VIPs.</li>
+         * </ul>
          * 
-         * *   **on**: queries healthy VIPs.
-         * *   **off**: queries all VIPs.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder available(String available) {
             this.putQueryParameter("Available", available);
@@ -81,10 +85,12 @@ public class DescribeDcdnUserVipsByDomainRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify only one domain name.
-         * <p>
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
+         * <p>Enumeration values: example.com</p>
+         * <p>This parameter is required.</p>
          * 
-         * Enumeration values: example.com
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

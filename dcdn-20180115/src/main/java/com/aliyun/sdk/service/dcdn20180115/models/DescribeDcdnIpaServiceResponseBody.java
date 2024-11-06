@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnIpaServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnIpaServiceResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The time when the change of the billing method starts to take effect. The time is in GMT. This time appears on the frontend only when it is later than the current time.
+         * <p>The time when the change of the billing method starts to take effect. The time is in GMT. This time appears on the frontend only when it is later than the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-31T16:00:00Z</p>
          */
         public Builder changingAffectTime(String changingAffectTime) {
             this.changingAffectTime = changingAffectTime;
@@ -117,16 +121,19 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The new billing method to take effect. Valid values:
-         * <p>
+         * <p>The new billing method to take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+         * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+         * <li><strong>PayByBandwidth95</strong>: pay-by-95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_monthavg</strong>: pay-by-monthly average bandwidth</li>
+         * <li><strong>PayByBandwidth_month4th</strong>: pay-by-fourth peak bandwidth per month</li>
+         * <li><strong>PayByBandwidth_monthday95avg</strong>: pay-by-monthly average 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_nighthalf95</strong>: pay-by-95th percentile bandwidth (50% off during nighttime)</li>
+         * </ul>
          * 
-         * *   **PayByTraffic**: pay-by-data-transfer
-         * *   **PayByBandwidth**: pay-by-bandwidth
-         * *   **PayByBandwidth95**: pay-by-95th percentile bandwidth
-         * *   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth
-         * *   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month
-         * *   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth
-         * *   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
@@ -134,7 +141,10 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1883927335936173</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -142,16 +152,19 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+         * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+         * <li><strong>PayByBandwidth95</strong>: pay-by-95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_monthavg</strong>: pay-by-monthly average bandwidth</li>
+         * <li><strong>PayByBandwidth_month4th</strong>: pay-by-fourth peak bandwidth per month</li>
+         * <li><strong>PayByBandwidth_monthday95avg</strong>: pay-by-monthly average 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_nighthalf95</strong>: pay-by-95th percentile bandwidth (50% off during nighttime)</li>
+         * </ul>
          * 
-         * *   **PayByTraffic**: pay-by-data-transfer
-         * *   **PayByBandwidth**: pay-by-bandwidth
-         * *   **PayByBandwidth95**: pay-by-95th percentile bandwidth
-         * *   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth
-         * *   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month
-         * *   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth
-         * *   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -159,7 +172,10 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the DCDN service was activated. The time follows the ISO 8601 standard.
+         * <p>The time when the DCDN service was activated. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-19T11:16:11Z</p>
          */
         public Builder openingTime(String openingTime) {
             this.openingTime = openingTime;
@@ -167,7 +183,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The lock status of secure DCDN.
+         * <p>The lock status of secure DCDN.</p>
          */
         public Builder operationLocks(OperationLocks operationLocks) {
             this.operationLocks = operationLocks;
@@ -175,7 +191,10 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF2AEBC2-EDBD-41CF-BF64-7E095D42D6EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,6 +207,12 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnIpaServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnIpaServiceResponseBody</p>
+     */
     public static class LockReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
@@ -215,7 +240,10 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The reason why the instance is locked. For example, a value of **financial** indicates that an overdue payment exists.
+             * <p>The reason why the instance is locked. For example, a value of <strong>financial</strong> indicates that an overdue payment exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>financial</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -229,6 +257,12 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnIpaServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnIpaServiceResponseBody</p>
+     */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private java.util.List < LockReason> lockReason;
@@ -256,7 +290,10 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * The reason why the instance is locked. For example, a value of **financial** indicates that an overdue payment exists.
+             * <p>The reason why the instance is locked. For example, a value of <strong>financial</strong> indicates that an overdue payment exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>financial</p>
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;

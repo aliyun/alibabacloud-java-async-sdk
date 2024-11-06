@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRoutineRequest} extends {@link RequestModel}
  *
  * <p>CreateRoutineRequest</p>
@@ -82,7 +83,10 @@ public class CreateRoutineRequest extends Request {
         } 
 
         /**
-         * The description of the routine.
+         * <p>The description of the routine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the description of this routine</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -91,7 +95,10 @@ public class CreateRoutineRequest extends Request {
         }
 
         /**
-         * The configurations of the specified environment.
+         * <p>The configurations of the specified environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;staging&quot;:{&quot;SpecName&quot;:&quot;50ms&quot;},&quot;production&quot;:{&quot;SpecName&quot;:&quot;50ms&quot;}}</p>
          */
         public Builder envConf(java.util.Map < String, ? > envConf) {
             String envConfShrink = shrink(envConf, "EnvConf", "json");
@@ -101,7 +108,11 @@ public class CreateRoutineRequest extends Request {
         }
 
         /**
-         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+         * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSSLCertificateListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnSSLCertificateListRequest</p>
@@ -123,7 +124,10 @@ public class DescribeDcdnSSLCertificateListRequest extends Request {
         } 
 
         /**
-         * The accelerated domain secured by the SSL certificate. HTTPS secure acceleration is enabled for the accelerated domain name.
+         * <p>The accelerated domain secured by the SSL certificate. HTTPS secure acceleration is enabled for the accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -141,7 +145,10 @@ public class DescribeDcdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * The number of the page. Default value: 1.
+         * <p>The number of the page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -150,7 +157,10 @@ public class DescribeDcdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: **1 to 1000**.
+         * <p>The maximum number of entries to return on each page. Valid values: <strong>1 to 1000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -159,7 +169,10 @@ public class DescribeDcdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * The keyword that is used to query the certificate.
+         * <p>The keyword that is used to query the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>taobao</p>
          */
         public Builder searchKeyword(String searchKeyword) {
             this.putQueryParameter("SearchKeyword", searchKeyword);

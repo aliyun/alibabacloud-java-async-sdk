@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSLSRealTimeLogTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnSLSRealTimeLogTypeResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -57,7 +58,10 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnSLSRealTimeLogTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnSLSRealTimeLogTypeResponseBody</p>
+     */
     public static class Business extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
@@ -109,12 +119,15 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
             private String desc; 
 
             /**
-             * The type of real-time logs. Valid values:
-             * <p>
+             * <p>The type of real-time logs. Valid values:</p>
+             * <ul>
+             * <li><strong>dcdn_log_access_l1</strong>: access logs.</li>
+             * <li><strong>dcdn_log_er</strong>: EdgeRoutine logs</li>
+             * <li><strong>dcdn_log_waf</strong>: WAF interception logs</li>
+             * </ul>
              * 
-             * *   **dcdn_log_access_l1**: access logs.
-             * *   **dcdn_log_er**: EdgeRoutine logs
-             * *   **dcdn_log_waf**: WAF interception logs
+             * <strong>example:</strong>
+             * <p>dcdn_log_access_l1</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -122,7 +135,10 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the real-time log type.
+             * <p>The description of the real-time log type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_U8JE</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -136,6 +152,12 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnSLSRealTimeLogTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnSLSRealTimeLogTypeResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Business")
         private java.util.List < Business> business;

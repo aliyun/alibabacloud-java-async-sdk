@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDcdnDomainStagingConfigRequest} extends {@link RequestModel}
  *
  * <p>SetDcdnDomainStagingConfigRequest</p>
@@ -69,7 +70,11 @@ public class SetDcdnDomainStagingConfigRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+         * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -78,10 +83,14 @@ public class SetDcdnDomainStagingConfigRequest extends Request {
         }
 
         /**
-         * The list of features. Format: `[{"functionArgs":[{"argName":"parameter key","argValue":"parameter value"},{"argName":"xx","argValue":"xx"}],"functionName": feature name"}]`
-         * <p>
+         * <p>The list of features. Format: <code>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;parameter key&quot;,&quot;argValue&quot;:&quot;parameter value&quot;},{&quot;argName&quot;:&quot;xx&quot;,&quot;argValue&quot;:&quot;xx&quot;}],&quot;functionName&quot;: feature name&quot;}]</code></p>
+         * <blockquote>
+         * <p>Separate multiple parameters with commas (,).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Separate multiple parameters with commas (,).
+         * <strong>example:</strong>
+         * <p>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;enable&quot;,&quot;argValue&quot;:&quot;on&quot;,&quot;argName&quot;:&quot;pri&quot;,&quot;argValue&quot;:&quot;1&quot;,&quot;argName&quot;:&quot;rule&quot;,&quot;argValue&quot;:&quot;xxx&quot;}],&quot;functionName&quot;:&quot;edge_function&quot;}]</p>
          */
         public Builder functions(String functions) {
             this.putQueryParameter("Functions", functions);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDcdnDomainCertificateRequest} extends {@link RequestModel}
  *
  * <p>SetDcdnDomainCertificateRequest</p>
@@ -181,7 +182,10 @@ public class SetDcdnDomainCertificateRequest extends Request {
         } 
 
         /**
-         * The certificate name.
+         * <p>The certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertName</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -190,13 +194,17 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The certificate type.
-         * <p>
+         * <p>The certificate type.</p>
+         * <ul>
+         * <li><strong>upload</strong>: a user-uploaded SSL certificate.</li>
+         * <li><strong>cas</strong>: a certificate that is acquired through Certificate Management Service.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If the value of the CertType parameter is <strong>cas</strong>, the <strong>SSLPri</strong> parameter is not required.</p>
+         * </blockquote>
          * 
-         * *   **upload**: a user-uploaded SSL certificate.
-         * *   **cas**: a certificate that is acquired through Certificate Management Service.
-         * 
-         * > If the value of the CertType parameter is **cas**, the **SSLPri** parameter is not required.
+         * <strong>example:</strong>
+         * <p>cas</p>
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -205,10 +213,12 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify only one domain name.
-         * <p>
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
+         * <p>HTTPS acceleration must be enabled for the accelerated domain name.</p>
+         * <p>This parameter is required.</p>
          * 
-         * HTTPS acceleration must be enabled for the accelerated domain name.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -217,7 +227,10 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.
+         * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder forceSet(String forceSet) {
             this.putQueryParameter("ForceSet", forceSet);
@@ -235,7 +248,10 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The region. Default value: ch-hangzhou.
+         * <p>The region. Default value: ch-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -244,7 +260,10 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The private key. This parameter is required only if you enable the SSL certificate.
+         * <p>The private key. This parameter is required only if you enable the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSLPri</p>
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -253,11 +272,15 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SSL certificate.
-         * <p>
+         * <p>Specifies whether to enable the SSL certificate.</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -266,7 +289,10 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The certificate content. This parameter is required only if you enable the SSL certificate.
+         * <p>The certificate content. This parameter is required only if you enable the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSLPub</p>
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

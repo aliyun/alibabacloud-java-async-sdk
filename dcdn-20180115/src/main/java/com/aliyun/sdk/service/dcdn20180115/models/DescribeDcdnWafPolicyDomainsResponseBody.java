@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafPolicyDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafPolicyDomainsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The accelerated domain names.
+         * <p>The accelerated domain names.</p>
          */
         public Builder domains(java.util.List < Domains> domains) {
             this.domains = domains;
@@ -93,7 +94,10 @@ public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page, which is the same as the PageNumber parameter in request parameters.
+         * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.
+         * <p>The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153ca2cd-3c01-44be-b480-64dbc6c88630</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of domain names returned.
+         * <p>The total number of domain names returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafPolicyDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafPolicyDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -157,7 +176,10 @@ public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * The accelerated domain name that is protected by the specified protection policy.
+             * <p>The accelerated domain name that is protected by the specified protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDcdnKvNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>PutDcdnKvNamespaceResponseBody</p>
@@ -86,7 +87,10 @@ public class PutDcdnKvNamespaceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The description of the namespace.
+         * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the first namespace</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -94,7 +98,10 @@ public class PutDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -102,7 +109,10 @@ public class PutDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12423131231****</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
@@ -110,7 +120,10 @@ public class PutDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,13 +131,16 @@ public class PutDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the namespace. Valid values:
-         * <p>
+         * <p>The status of the namespace. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: normal</li>
+         * <li><strong>delete</strong>: pending delete</li>
+         * <li><strong>deleting</strong>: being deleted</li>
+         * <li><strong>deleted</strong>: deleted</li>
+         * </ul>
          * 
-         * *   **online**: normal
-         * *   **delete**: pending delete
-         * *   **deleting**: being deleted
-         * *   **deleted**: deleted
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;

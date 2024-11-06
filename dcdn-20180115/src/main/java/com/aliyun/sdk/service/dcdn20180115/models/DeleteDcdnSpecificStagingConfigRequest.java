@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnSpecificStagingConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnSpecificStagingConfigRequest</p>
@@ -97,10 +98,12 @@ public class DeleteDcdnSpecificStagingConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).
-         * <p>
+         * <p>The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).</p>
+         * <p>You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.
+         * <strong>example:</strong>
+         * <p>2317</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -109,7 +112,11 @@ public class DeleteDcdnSpecificStagingConfigRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each call.
+         * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

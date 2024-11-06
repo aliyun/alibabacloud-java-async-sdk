@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnCertificateListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnCertificateListRequest</p>
@@ -81,10 +82,11 @@ public class DescribeDcdnCertificateListRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
-         * <p>
+         * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+         * <p>By default, this operation queries the certificates of all accelerated domain names.</p>
          * 
-         * By default, this operation queries the certificates of all accelerated domain names.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnDomainConfigsRequest</p>
@@ -110,7 +111,10 @@ public class DescribeDcdnDomainConfigsRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration.
+         * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5003576</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -119,7 +123,11 @@ public class DescribeDcdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -128,7 +136,10 @@ public class DescribeDcdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * The names of the features to query. Separate features with commas (,).
+         * <p>The names of the features to query. Separate features with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filetype_based_ttl_set,set_req_host_header</p>
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

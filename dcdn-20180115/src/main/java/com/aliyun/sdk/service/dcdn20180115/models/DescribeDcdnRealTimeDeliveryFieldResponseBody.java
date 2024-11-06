@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnRealTimeDeliveryFieldResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnRealTimeDeliveryFieldResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -57,7 +58,10 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3EACD23C-F49F-4BF7-B9AD-C2CD3BA888C4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnRealTimeDeliveryFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnRealTimeDeliveryFieldResponseBody</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -109,7 +119,10 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
             private String fieldName; 
 
             /**
-             * The description of the field.
+             * <p>The description of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Access time</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -117,7 +130,10 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](~~324199~~).
+             * <p>The name of the field. For more information about fields in real-time log entries, see <a href="https://help.aliyun.com/document_detail/324199.html">Fields in a real-time log</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unixtime</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -131,6 +147,12 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnRealTimeDeliveryFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnRealTimeDeliveryFieldResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fields")
         private java.util.List < Fields> fields;

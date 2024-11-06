@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserDcdnStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserDcdnStatusResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the DCDN service is activated.
+         * <p>Indicates whether the DCDN service is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -93,7 +97,10 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether your account has overdue payments.
+         * <p>Indicates whether your account has overdue payments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inDebt(Boolean inDebt) {
             this.inDebt = inDebt;
@@ -101,7 +108,10 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the grace period for your overdue payments expired.
+         * <p>Indicates whether the grace period for your overdue payments expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inDebtOverdue(Boolean inDebtOverdue) {
             this.inDebtOverdue = inDebtOverdue;
@@ -109,7 +119,10 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the service is available.
+         * <p>Indicates whether the service is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onService(Boolean onService) {
             this.onService = onService;
@@ -117,7 +130,10 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F51E9C3-728F-4E35-952D-0ED87A06A8A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

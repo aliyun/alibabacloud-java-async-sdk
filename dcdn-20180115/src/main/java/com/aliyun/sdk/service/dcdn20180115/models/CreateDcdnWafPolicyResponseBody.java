@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDcdnWafPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDcdnWafPolicyResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDcdnWafPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the protection policy that you created.
+         * <p>The ID of the protection policy that you created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder policyId(Long policyId) {
             this.policyId = policyId;
@@ -57,7 +61,10 @@ public class CreateDcdnWafPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

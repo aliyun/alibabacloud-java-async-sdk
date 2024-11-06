@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafDomainsRequest</p>
@@ -82,10 +83,11 @@ public class DescribeDcdnWafDomainsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**.
-         * <p>
+         * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -94,7 +96,10 @@ public class DescribeDcdnWafDomainsRequest extends Request {
         }
 
         /**
-         * The number of domain names to return on each page. Valid values: an integer from **1** to **500**. Default value: **20**.
+         * <p>The number of domain names to return on each page. Valid values: an integer from <strong>1</strong> to <strong>500</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -103,7 +108,10 @@ public class DescribeDcdnWafDomainsRequest extends Request {
         }
 
         /**
-         * The query conditions. You can filter domain names by name. Fuzzy match is supported `QueryArgs={"DomainName":"Accelerated domain name"}`
+         * <p>The query conditions. You can filter domain names by name. Fuzzy match is supported <code>QueryArgs={&quot;DomainName&quot;:&quot;Accelerated domain name&quot;}</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DomainName&quot;:&quot;example.com&quot;}</p>
          */
         public Builder queryArgs(String queryArgs) {
             this.putQueryParameter("QueryArgs", queryArgs);

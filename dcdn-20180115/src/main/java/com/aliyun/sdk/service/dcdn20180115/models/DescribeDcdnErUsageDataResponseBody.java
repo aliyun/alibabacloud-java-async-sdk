@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnErUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnErUsageDataResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-31T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -81,7 +85,7 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The list of the data returned.
+         * <p>The list of the data returned.</p>
          */
         public Builder erAccData(ErAccData erAccData) {
             this.erAccData = erAccData;
@@ -89,7 +93,10 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-30T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -110,6 +120,12 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnErUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnErUsageDataResponseBody</p>
+     */
     public static class ErAccItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErAcc")
         private Long erAcc;
@@ -173,7 +189,10 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The number of requests.
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125</p>
              */
             public Builder erAcc(Long erAcc) {
                 this.erAcc = erAcc;
@@ -181,7 +200,10 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the routine. This parameter is returned only when SplitBy is set to routine.
+             * <p>The ID of the routine. This parameter is returned only when SplitBy is set to routine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>routine1.test</p>
              */
             public Builder routine(String routine) {
                 this.routine = routine;
@@ -189,7 +211,10 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the routine. This parameter is returned only when SplitBy is set to spec.
+             * <p>The specification of the routine. This parameter is returned only when SplitBy is set to spec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50ms</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -197,7 +222,10 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-30T13:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -211,6 +239,12 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnErUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnErUsageDataResponseBody</p>
+     */
     public static class ErAccData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErAccItem")
         private java.util.List < ErAccItem> erAccItem;

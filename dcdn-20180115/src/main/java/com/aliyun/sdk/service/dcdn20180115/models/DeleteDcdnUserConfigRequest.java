@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnUserConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnUserConfigRequest</p>
@@ -53,7 +54,10 @@ public class DeleteDcdnUserConfigRequest extends Request {
         } 
 
         /**
-         * The name of the user feature that you want to delete. Currently, only DCDN Web Application Firewall (WAF) can be deleted. Default value: waf.
+         * <p>The name of the user feature that you want to delete. Currently, only DCDN Web Application Firewall (WAF) can be deleted. Default value: waf.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);

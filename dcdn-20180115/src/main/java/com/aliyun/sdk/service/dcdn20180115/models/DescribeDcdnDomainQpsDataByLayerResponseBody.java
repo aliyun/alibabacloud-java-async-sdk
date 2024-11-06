@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainQpsDataByLayerResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainQpsDataByLayerResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -117,7 +121,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -125,7 +132,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -133,7 +143,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The layer at which the data was collected.
+         * <p>The layer at which the data was collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder layer(String layer) {
             this.layer = layer;
@@ -141,7 +154,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The QPS returned at each time interval.
+         * <p>The QPS returned at each time interval.</p>
          */
         public Builder qpsDataInterval(QpsDataInterval qpsDataInterval) {
             this.qpsDataInterval = qpsDataInterval;
@@ -149,7 +162,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +173,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -170,6 +189,12 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainQpsDataByLayerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainQpsDataByLayerResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccDomesticValue")
         private String accDomesticValue;
@@ -269,7 +294,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The number of requests in the Chinese mainland.
+             * <p>The number of requests in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder accDomesticValue(String accDomesticValue) {
                 this.accDomesticValue = accDomesticValue;
@@ -277,7 +305,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests outside the Chinese mainland.
+             * <p>The number of requests outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder accOverseasValue(String accOverseasValue) {
                 this.accOverseasValue = accOverseasValue;
@@ -285,7 +316,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder accValue(String accValue) {
                 this.accValue = accValue;
@@ -293,7 +327,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries per second in the Chinese mainland.
+             * <p>The number of queries per second in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.12</p>
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -301,7 +338,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries per second outside the Chinese mainland.
+             * <p>The number of queries per second outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.44</p>
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -309,7 +349,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T21:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -317,7 +360,10 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of queries per second.
+             * <p>The total number of queries per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.56</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -331,6 +377,12 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainQpsDataByLayerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainQpsDataByLayerResponseBody</p>
+     */
     public static class QpsDataInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

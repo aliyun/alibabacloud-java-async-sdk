@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainRealTimeBpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainRealTimeBpsDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B49E6DDA-F413-422B-B58E-2FA23F286726</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainRealTimeBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainRealTimeBpsDataResponseBody</p>
+     */
     public static class BpsModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bps")
         private Float bps;
@@ -109,7 +119,10 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The bandwidth. Unit: bit/s.
+             * <p>The bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16710625.733333332</p>
              */
             public Builder bps(Float bps) {
                 this.bps = bps;
@@ -117,7 +130,10 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-02T11:05:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -131,6 +147,12 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainRealTimeBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainRealTimeBpsDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BpsModel")
         private java.util.List < BpsModel> bpsModel;

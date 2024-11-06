@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnHttpsDomainListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnHttpsDomainListRequest</p>
@@ -81,7 +82,10 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         } 
 
         /**
-         * The keyword that is used to search for certificates.
+         * <p>The keyword that is used to search for certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -90,7 +94,10 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * The number of returned pages. Valid values: **1 to 100000**.
+         * <p>The number of returned pages. Valid values: <strong>1 to 100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -99,7 +106,10 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

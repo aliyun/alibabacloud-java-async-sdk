@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenDcdnServiceRequest} extends {@link RequestModel}
  *
  * <p>OpenDcdnServiceRequest</p>
@@ -97,11 +98,15 @@ public class OpenDcdnServiceRequest extends Request {
         } 
 
         /**
-         * The metering method of DCDN. Valid values:
-         * <p>
+         * <p>The metering method of DCDN. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay-by-traffic</li>
+         * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PayByTraffic**: pay-by-traffic
-         * *   **PayByBandwidth**: pay-by-bandwidth
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);
@@ -128,11 +133,15 @@ public class OpenDcdnServiceRequest extends Request {
         }
 
         /**
-         * The metering method of WebSocket. Valid values:
-         * <p>
+         * <p>The metering method of WebSocket. Valid values:</p>
+         * <ul>
+         * <li><strong>websockettraffic</strong>: pay-by-data-transfer</li>
+         * <li><strong>websocketbps</strong>: pay-by-bandwidth</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **websockettraffic**: pay-by-data-transfer
-         * *   **websocketbps**: pay-by-bandwidth
+         * <strong>example:</strong>
+         * <p>websockettraffic</p>
          */
         public Builder websocketBillType(String websocketBillType) {
             this.putQueryParameter("WebsocketBillType", websocketBillType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagDcdnResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagDcdnResourcesRequest</p>
@@ -97,13 +98,15 @@ public class UntagDcdnResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete all tags. Valid values:
-         * <p>
+         * <p>Specifies whether to delete all tags. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>Default value: <strong>false</strong></p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * Default value: **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -112,7 +115,11 @@ public class UntagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource. Valid values of N: **1** to **50**.
+         * <p>The ID of the resource. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -121,7 +128,11 @@ public class UntagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **DOMAIN**.
+         * <p>The type of the resource. Set the value to <strong>DOMAIN</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -130,7 +141,10 @@ public class UntagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * The key of the tag. Valid values of N: **1** to **20**.
+         * <p>The key of the tag. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

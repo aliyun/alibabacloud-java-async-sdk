@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDcdnWafGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDcdnWafGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDcdnWafGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the created WAF rule group.
+         * <p>The ID of the created WAF rule group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000166</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -57,7 +61,10 @@ public class CreateDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>675F4820-400E-5929-8B03-2C031A5D5391</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

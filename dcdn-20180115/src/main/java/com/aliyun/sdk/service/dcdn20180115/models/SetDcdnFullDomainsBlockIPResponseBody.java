@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDcdnFullDomainsBlockIPResponseBody} extends {@link TeaModel}
  *
  * <p>SetDcdnFullDomainsBlockIPResponseBody</p>
@@ -61,10 +62,11 @@ public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <p>If the value of Code is not 0, specific required parameters are missing or the parameter format is invalid.</p>
          * 
-         * If the value of Code is not 0, specific required parameters are missing or the parameter format is invalid.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -72,7 +74,10 @@ public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
         }
 
         /**
-         * The response message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -80,7 +85,10 @@ public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-802B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

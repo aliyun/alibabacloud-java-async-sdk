@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainRegionDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnDomainRegionDataRequest</p>
@@ -81,10 +82,11 @@ public class DescribeDcdnDomainRegionDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name.
-         * <p>
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
+         * <p>If you do not specify an accelerated domain name, the data of all accelerated domain names that belong to your account is queried.</p>
          * 
-         * If you do not specify an accelerated domain name, the data of all accelerated domain names that belong to your account is queried.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,10 +95,11 @@ public class DescribeDcdnDomainRegionDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time.
-         * <p>
+         * <p>The end of the time range to query. The end time must be later than the start time.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2015-12-07T12:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -105,10 +108,11 @@ public class DescribeDcdnDomainRegionDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2015-12-05T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

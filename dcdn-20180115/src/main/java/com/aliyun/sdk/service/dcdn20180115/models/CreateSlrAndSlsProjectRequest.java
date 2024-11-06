@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlrAndSlsProjectRequest} extends {@link RequestModel}
  *
  * <p>CreateSlrAndSlsProjectRequest</p>
@@ -68,12 +69,15 @@ public class CreateSlrAndSlsProjectRequest extends Request {
         } 
 
         /**
-         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
-         * <p>
+         * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
+         * <ul>
+         * <li><strong>cdn_log_access_l1</strong>: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)</li>
+         * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+         * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+         * </ul>
          * 
-         * *   **cdn_log_access_l1**: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)
-         * *   **cdn_log_origin**: back-to-origin logs
-         * *   **cdn_log_er**: EdgeRoutine logs
+         * <strong>example:</strong>
+         * <p>cdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("BusinessType", businessType);
@@ -82,19 +86,23 @@ public class CreateSlrAndSlsProjectRequest extends Request {
         }
 
         /**
-         * The region where Log Service resides. Valid values:
-         * <p>
+         * <p>The region where Log Service resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong></li>
+         * <li><strong>cn-shanghai</strong></li>
+         * <li><strong>cn-qingdao</strong></li>
+         * <li><strong>cn-beijing</strong></li>
+         * <li><strong>cn-zhangjiakou</strong></li>
+         * <li><strong>cn-shenzhen</strong></li>
+         * <li><strong>eu-central-1</strong></li>
+         * <li><strong>us-west-1</strong></li>
+         * <li><strong>ap-south-1</strong></li>
+         * <li><strong>ap-southeast-1</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn-hangzhou**
-         * *   **cn-shanghai**
-         * *   **cn-qingdao**
-         * *   **cn-beijing**
-         * *   **cn-zhangjiakou**
-         * *   **cn-shenzhen**
-         * *   **eu-central-1**
-         * *   **us-west-1**
-         * *   **ap-south-1**
-         * *   **ap-southeast-1**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);

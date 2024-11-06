@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafGeoInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafGeoInfoRequest</p>
@@ -54,11 +55,15 @@ public class DescribeDcdnWafGeoInfoRequest extends Request {
         } 
 
         /**
-         * The language of the information to return. Valid values:
-         * <p>
+         * <p>The language of the information to return. Valid values:</p>
+         * <ul>
+         * <li>cn: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cn: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

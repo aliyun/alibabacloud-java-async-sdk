@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnAclFieldsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnAclFieldsRequest</p>
@@ -54,11 +55,15 @@ public class DescribeDcdnAclFieldsRequest extends Request {
         } 
 
         /**
-         * The access language. Default value: en. Valid values:
-         * <p>
+         * <p>The access language. Default value: en. Valid values:</p>
+         * <ul>
+         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **en**: English
-         * *   **zh**: Chinese
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

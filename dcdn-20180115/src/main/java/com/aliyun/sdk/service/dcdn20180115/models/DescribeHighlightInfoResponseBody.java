@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHighlightInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHighlightInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data model of the highlighted data.
+         * <p>The data model of the highlighted data.</p>
          */
         public Builder dataModule(java.util.List < DataModule> dataModule) {
             this.dataModule = dataModule;
@@ -57,7 +58,10 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHighlightInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHighlightInfoResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hit")
         private String hit;
@@ -121,7 +131,10 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
             private String raw; 
 
             /**
-             * The highlighted data.
+             * <p>The highlighted data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;data:image/php;base64&quot;]</p>
              */
             public Builder hit(String hit) {
                 this.hit = hit;
@@ -129,7 +142,10 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the highlighted data.
+             * <p>The type of the highlighted data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -137,7 +153,10 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The complete data.
+             * <p>The complete data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data:image/php;base64,PD9waHAXXXXXXanVzdHR0dHXXXXXB0ZXN0Ijs/Pg==</p>
              */
             public Builder raw(String raw) {
                 this.raw = raw;

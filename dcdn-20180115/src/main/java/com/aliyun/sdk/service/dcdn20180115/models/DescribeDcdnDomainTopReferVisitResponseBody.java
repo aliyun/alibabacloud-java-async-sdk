@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainTopReferVisitResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainTopReferVisitResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         private TopReferList topReferList; 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -81,7 +85,10 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95994621-8382-464B-8762-C708E73568D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-03T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -97,7 +107,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The list of frequently referenced URLs returned.
+         * <p>The list of frequently referenced URLs returned.</p>
          */
         public Builder topReferList(TopReferList topReferList) {
             this.topReferList = topReferList;
@@ -110,6 +120,12 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainTopReferVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainTopReferVisitResponseBody</p>
+     */
     public static class ReferList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -185,7 +201,10 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * The amount of network traffic. (Unit: bytes)
+             * <p>The amount of network traffic. (Unit: bytes)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>460486880</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -193,7 +212,10 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic consumed to access the URL.
+             * <p>The proportion of network traffic consumed to access the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -201,7 +223,10 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The complete referenced URL.
+             * <p>The complete referenced URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder referDetail(String referDetail) {
                 this.referDetail = referDetail;
@@ -209,7 +234,10 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The number of visits.
+             * <p>The number of visits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>229567</p>
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -217,7 +245,10 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of visits to the URL.
+             * <p>The proportion of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.35</p>
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -231,6 +262,12 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainTopReferVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainTopReferVisitResponseBody</p>
+     */
     public static class TopReferList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReferList")
         private java.util.List < ReferList> referList;

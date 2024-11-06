@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDcdnWafRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyDcdnWafRuleRequest</p>
@@ -96,10 +97,13 @@ public class ModifyDcdnWafRuleRequest extends Request {
         } 
 
         /**
-         * The new configurations of the protection rule.
-         * <p>
+         * <p>The new configurations of the protection rule.</p>
+         * <blockquote>
+         * <p>After you modify the configurations of the protection rule, the previous configurations are overwritten.</p>
+         * </blockquote>
          * 
-         * > After you modify the configurations of the protection rule, the previous configurations are overwritten.
+         * <strong>example:</strong>
+         * <p>{&quot;origin&quot;:&quot;custom&quot;,&quot;conditions&quot;:[{&quot;opValue&quot;:&quot;eq&quot;,&quot;key&quot;:&quot;URL&quot;,&quot;values&quot;:&quot;/example&quot;},{&quot;opValue&quot;:&quot;eq&quot;,&quot;key&quot;:&quot;Header&quot;,&quot;values&quot;:&quot;3333&quot;,&quot;subKey&quot;:&quot;trt&quot;}],&quot;actionExternal&quot;:{},&quot;action&quot;:&quot;monitor&quot;,&quot;ccStatus&quot;:1,&quot;ratelimit&quot;:{&quot;target&quot;:&quot;remote_addr&quot;,&quot;interval&quot;:&quot;5&quot;,&quot;threshold&quot;:&quot;2&quot;,&quot;effect&quot;:&quot;rule&quot;,&quot;status&quot;:{&quot;code&quot;:&quot;404&quot;,&quot;count&quot;:&quot;2&quot;},&quot;ttl&quot;:&quot;1800&quot;}}&quot;</p>
          */
         public Builder ruleConfig(String ruleConfig) {
             this.putBodyParameter("RuleConfig", ruleConfig);
@@ -108,7 +112,11 @@ public class ModifyDcdnWafRuleRequest extends Request {
         }
 
         /**
-         * The ID of the protection rule. You can specify only one ID in each request.
+         * <p>The ID of the protection rule. You can specify only one ID in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200001</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);
@@ -117,7 +125,10 @@ public class ModifyDcdnWafRuleRequest extends Request {
         }
 
         /**
-         * The new name of the protection rule.
+         * <p>The new name of the protection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -126,11 +137,14 @@ public class ModifyDcdnWafRuleRequest extends Request {
         }
 
         /**
-         * The new status of the protection rule. Valid values:
-         * <p>
+         * <p>The new status of the protection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder ruleStatus(String ruleStatus) {
             this.putBodyParameter("RuleStatus", ruleStatus);

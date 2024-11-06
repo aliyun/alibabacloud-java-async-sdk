@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainIpaTrafficDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnDomainIpaTrafficDataRequest</p>
@@ -151,10 +152,11 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name.
-         * <p>
+         * <p>The accelerated domain name.</p>
+         * <p>Separate multiple domain names with commas (,). If you do not specify a value for this parameter, data for all accelerated domain names is queried.</p>
          * 
-         * Separate multiple domain names with commas (,). If you do not specify a value for this parameter, data for all accelerated domain names is queried.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -163,12 +165,14 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -177,11 +181,14 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * Specify whether to implement padding with zeros. Valid values:
-         * <p>
+         * <p>Specify whether to implement padding with zeros. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fixTimeGap(String fixTimeGap) {
             this.putQueryParameter("FixTimeGap", fixTimeGap);
@@ -190,14 +197,16 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * The time granularity of data entries. Unit: seconds.
-         * <p>
+         * <p>The time granularity of data entries. Unit: seconds.</p>
+         * <p>The time granularity varies with the time range specified by <strong>StartTime</strong> and <strong>EndTime</strong>.</p>
+         * <ul>
+         * <li>If the time range between StartTime and EndTime is less than 3 days, the valid values are <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. If you do not specify a value for this parameter, <strong>300</strong> is used.</li>
+         * <li>If the time range between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, the valid values are <strong>3600</strong> and <strong>86400</strong>. Default value: <strong>3600</strong>.</li>
+         * <li>If the time range between StartTime and EndTime is 31 days or longer, the valid value is <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
+         * </ul>
          * 
-         * The time granularity varies with the time range specified by **StartTime** and **EndTime**.
-         * 
-         * *   If the time range between StartTime and EndTime is less than 3 days, the valid values are **300**, **3600**, and **86400**. If you do not specify a value for this parameter, **300** is used.
-         * *   If the time range between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, the valid values are **3600** and **86400**. Default value: **3600**.
-         * *   If the time range between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -206,10 +215,11 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * The name of the Internet service provider (ISP).
-         * <p>
+         * <p>The name of the Internet service provider (ISP).</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query ISPs.</p>
          * 
-         * You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -218,10 +228,11 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * The name of the region.
-         * <p>
+         * <p>The name of the region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query regions.</p>
          * 
-         * You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
+         * <strong>example:</strong>
+         * <p>beijing</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -230,10 +241,11 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -242,7 +254,10 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically calculate the value of the **interval**. If the **timeMerge** parameter is set to **1**, the value of **inteval** is calculated based on **StartTime** and **EndTime**. You can set either this parameter or the **interval** parameter.
+         * <p>Specifies whether to automatically calculate the value of the <strong>interval</strong>. If the <strong>timeMerge</strong> parameter is set to <strong>1</strong>, the value of <strong>inteval</strong> is calculated based on <strong>StartTime</strong> and <strong>EndTime</strong>. You can set either this parameter or the <strong>interval</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeMerge(String timeMerge) {
             this.putQueryParameter("TimeMerge", timeMerge);

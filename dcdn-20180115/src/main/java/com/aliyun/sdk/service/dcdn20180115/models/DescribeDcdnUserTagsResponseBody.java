@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnUserTagsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The tag.
+         * <p>The tag.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -70,6 +74,12 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnUserTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnUserTagsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -109,7 +119,10 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
             private java.util.List < String > value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +130,7 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag that you want to query.
+             * <p>The value of the tag that you want to query.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

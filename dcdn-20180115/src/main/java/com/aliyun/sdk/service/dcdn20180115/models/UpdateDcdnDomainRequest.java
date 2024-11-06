@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDcdnDomainRequest} extends {@link RequestModel}
  *
  * <p>UpdateDcdnDomainRequest</p>
@@ -124,7 +125,11 @@ public class UpdateDcdnDomainRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each call.
+         * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -142,7 +147,10 @@ public class UpdateDcdnDomainRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -160,7 +168,10 @@ public class UpdateDcdnDomainRequest extends Request {
         }
 
         /**
-         * The information about the addresses of origin servers.
+         * <p>The information about the addresses of origin servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</p>
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -169,7 +180,10 @@ public class UpdateDcdnDomainRequest extends Request {
         }
 
         /**
-         * The top-level domain.
+         * <p>The top-level domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourTopLevelDomain</p>
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnIpaUserDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnIpaUserDomainsRequest</p>
@@ -194,11 +195,14 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:
-         * <p>
+         * <p>Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder checkDomainShow(Boolean checkDomainShow) {
             this.putQueryParameter("CheckDomainShow", checkDomainShow);
@@ -207,7 +211,10 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * The domain name that is used as a keyword to filter domain names. Fuzzy match is supported.
+         * <p>The domain name that is used as a keyword to filter domain names. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -216,13 +223,16 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * The search method. Default value: full_match. Valid values:
-         * <p>
+         * <p>The search method. Default value: full_match. Valid values:</p>
+         * <ul>
+         * <li><strong>fuzzy_match</strong>: fuzzy match</li>
+         * <li><strong>pre_match</strong>: prefix match</li>
+         * <li><strong>suf_match</strong>: suffix match</li>
+         * <li><strong>full_match</strong>: exact match</li>
+         * </ul>
          * 
-         * *   **fuzzy_match**: fuzzy match
-         * *   **pre_match**: prefix match
-         * *   **suf_match**: suffix match
-         * *   **full_match**: exact match
+         * <strong>example:</strong>
+         * <p>fuzzy_match</p>
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -231,15 +241,18 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * The status of the domain name. Valid values:
-         * <p>
+         * <p>The status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: enabled</li>
+         * <li><strong>offline</strong>: disabled</li>
+         * <li><strong>configuring</strong>: configuring</li>
+         * <li><strong>configure_failed</strong>: configuration failed</li>
+         * <li><strong>checking</strong>: reviewing</li>
+         * <li><strong>check_failed:</strong> review failed</li>
+         * </ul>
          * 
-         * *   **online**: enabled
-         * *   **offline**: disabled
-         * *   **configuring**: configuring
-         * *   **configure_failed**: configuration failed
-         * *   **checking**: reviewing
-         * *   **check_failed:** review failed
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder domainStatus(String domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -248,11 +261,14 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * The status of the feature.
-         * <p>
+         * <p>The status of the feature.</p>
+         * <ul>
+         * <li>config: The feature is enabled.</li>
+         * <li>unconfig: The feature is not enabled.</li>
+         * </ul>
          * 
-         * *   config: The feature is enabled.
-         * *   unconfig: The feature is not enabled.
+         * <strong>example:</strong>
+         * <p>config</p>
          */
         public Builder funcFilter(String funcFilter) {
             this.putQueryParameter("FuncFilter", funcFilter);
@@ -261,7 +277,10 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the feature. For example, a value of 7 specifies the feature of configuring an expiration rule for a specific directory. For more information about feature IDs, see [Parameters for configuring features for domain names](~~410622~~).
+         * <p>The ID of the feature. For example, a value of 7 specifies the feature of configuring an expiration rule for a specific directory. For more information about feature IDs, see <a href="https://help.aliyun.com/document_detail/410622.html">Parameters for configuring features for domain names</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder funcId(String funcId) {
             this.putQueryParameter("FuncId", funcId);
@@ -279,7 +298,10 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: **1** to **100000**. Default value: **1**.
+         * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -288,7 +310,10 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of domain names per page. Default value: **20**.**** Valid values: **1** to **500**.
+         * <p>The number of domain names per page. Default value: <strong>20</strong>.**** Valid values: <strong>1</strong> to <strong>500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -297,7 +322,10 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd1234abcd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -306,7 +334,7 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * The tags of the command.
+         * <p>The tags of the command.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -321,6 +349,12 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnIpaUserDomainsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnIpaUserDomainsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -360,7 +394,10 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. Valid values of N: 1 to 20. You can call the TagDcdnResources operation to set a tag for a domain name.
+             * <p>The tag key. Valid values of N: 1 to 20. You can call the TagDcdnResources operation to set a tag for a domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -368,7 +405,10 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
             }
 
             /**
-             * The tag value. Valid values of N: 1 to 20.
+             * <p>The tag value. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainQpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainQpsDataResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -105,7 +109,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -113,7 +120,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -121,7 +131,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The QPS returned at each time interval.
+         * <p>The QPS returned at each time interval.</p>
          */
         public Builder qpsDataPerInterval(QpsDataPerInterval qpsDataPerInterval) {
             this.qpsDataPerInterval = qpsDataPerInterval;
@@ -129,7 +139,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,6 +166,12 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainQpsDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Acc")
         private Float acc;
@@ -297,7 +319,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder acc(Float acc) {
                 this.acc = acc;
@@ -305,7 +330,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests for dynamic content delivery over HTTP.
+             * <p>The number of requests for dynamic content delivery over HTTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dynamicHttpAcc(Float dynamicHttpAcc) {
                 this.dynamicHttpAcc = dynamicHttpAcc;
@@ -313,7 +341,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS for dynamic content delivery over HTTP.
+             * <p>The QPS for dynamic content delivery over HTTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dynamicHttpQps(Float dynamicHttpQps) {
                 this.dynamicHttpQps = dynamicHttpQps;
@@ -321,7 +352,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests for dynamic content delivery over HTTPS.
+             * <p>The number of requests for dynamic content delivery over HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dynamicHttpsAcc(Float dynamicHttpsAcc) {
                 this.dynamicHttpsAcc = dynamicHttpsAcc;
@@ -329,7 +363,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS for dynamic content delivery over HTTPS.
+             * <p>The QPS for dynamic content delivery over HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dynamicHttpsQps(Float dynamicHttpsQps) {
                 this.dynamicHttpsQps = dynamicHttpsQps;
@@ -337,7 +374,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total QPS.
+             * <p>The total QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.56</p>
              */
             public Builder qps(Float qps) {
                 this.qps = qps;
@@ -345,7 +385,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests for static content delivery over HTTP.
+             * <p>The number of requests for static content delivery over HTTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder staticHttpAcc(Float staticHttpAcc) {
                 this.staticHttpAcc = staticHttpAcc;
@@ -353,7 +396,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS for static content delivery over HTTP.
+             * <p>The QPS for static content delivery over HTTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder staticHttpQps(Float staticHttpQps) {
                 this.staticHttpQps = staticHttpQps;
@@ -361,7 +407,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests for static content delivery over HTTPS.
+             * <p>The number of requests for static content delivery over HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder staticHttpsAcc(Float staticHttpsAcc) {
                 this.staticHttpsAcc = staticHttpsAcc;
@@ -369,7 +418,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS for static content delivery over HTTPS.
+             * <p>The QPS for static content delivery over HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder staticHttpsQps(Float staticHttpsQps) {
                 this.staticHttpsQps = staticHttpsQps;
@@ -377,7 +429,10 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T21:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -391,6 +446,12 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainQpsDataResponseBody</p>
+     */
     public static class QpsDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

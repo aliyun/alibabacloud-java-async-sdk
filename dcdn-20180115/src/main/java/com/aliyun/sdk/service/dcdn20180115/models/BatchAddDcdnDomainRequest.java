@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchAddDcdnDomainRequest} extends {@link RequestModel}
  *
  * <p>BatchAddDcdnDomainRequest</p>
@@ -167,7 +168,10 @@ public class BatchAddDcdnDomainRequest extends Request {
         } 
 
         /**
-         * The URL that is used for health checks.
+         * <p>The URL that is used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/test.html">www.example.com/test.html</a></p>
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -176,7 +180,11 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * You can add up to 20 domain names to DCDN for each of your Alibaba Cloud account. If you specify multiple domain names, separate them with commas (,).
+         * <p>You can add up to 20 domain names to DCDN for each of your Alibaba Cloud account. If you specify multiple domain names, separate them with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,example.org</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -203,7 +211,10 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you do not specify a value for this parameter, the system uses the ID of the default resource group.
+         * <p>The ID of the resource group. If you do not specify a value for this parameter, the system uses the ID of the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testID</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -212,12 +223,15 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The acceleration region. Default value: domestic. Valid values:
-         * <p>
+         * <p>The acceleration region. Default value: domestic. Valid values:</p>
+         * <ul>
+         * <li>domestic: Chinese mainland</li>
+         * <li>overseas: global (excluding the Chinese mainland)</li>
+         * <li>global: global</li>
+         * </ul>
          * 
-         * *   domestic: Chinese mainland
-         * *   overseas: global (excluding the Chinese mainland)
-         * *   global: global
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -235,7 +249,11 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The information about the addresses of origin servers.
+         * <p>The information about the addresses of origin servers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80,&quot;weight&quot;:&quot;15&quot;}]</p>
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -244,7 +262,10 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The top-level domain.
+         * <p>The top-level domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

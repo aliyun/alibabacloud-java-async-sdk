@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDcdnRealTimeDeliveryProjectRequest} extends {@link RequestModel}
  *
  * <p>ListDcdnRealTimeDeliveryProjectRequest</p>
@@ -95,13 +96,16 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
         } 
 
         /**
-         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
-         * <p>
+         * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
+         * <ul>
+         * <li><strong>cdn_log_access_l1</strong>: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</li>
+         * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+         * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+         * <li>By default, this parameter is left empty, and all logs are returned.</li>
+         * </ul>
          * 
-         * *   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)
-         * *   **cdn_log_origin**: back-to-origin logs
-         * *   **cdn_log_er**: EdgeRoutine logs
-         * *   By default, this parameter is left empty, and all logs are returned.
+         * <strong>example:</strong>
+         * <p>cdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -110,7 +114,10 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
         }
 
         /**
-         * The domain name. You can specify only one domain name in each request. If this parameter is not specified, all domain names are queried.
+         * <p>The domain name. You can specify only one domain name in each request. If this parameter is not specified, all domain names are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -119,7 +126,10 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**. Default value: 1.
+         * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -128,7 +138,10 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. The default value is 20.
+         * <p>The number of entries to return on each page. The default value is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

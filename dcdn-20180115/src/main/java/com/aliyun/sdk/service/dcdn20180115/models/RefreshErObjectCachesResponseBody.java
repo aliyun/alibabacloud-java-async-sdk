@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshErObjectCachesResponseBody} extends {@link TeaModel}
  *
  * <p>RefreshErObjectCachesResponseBody</p>
@@ -49,7 +50,10 @@ public class RefreshErObjectCachesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the refresh task. Separate multiple IDs with commas (,).
+         * <p>The ID of the refresh task. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95248880</p>
          */
         public Builder refreshTaskId(String refreshTaskId) {
             this.refreshTaskId = refreshTaskId;
@@ -57,7 +61,10 @@ public class RefreshErObjectCachesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

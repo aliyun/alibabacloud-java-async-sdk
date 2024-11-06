@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDcdnWafPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyDcdnWafPolicyRequest</p>
@@ -82,7 +83,11 @@ public class ModifyDcdnWafPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the protection policy that you want to modify. You can specify only one ID in each request.
+         * <p>The ID of the protection policy that you want to modify. You can specify only one ID in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         public Builder policyId(Long policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -91,10 +96,13 @@ public class ModifyDcdnWafPolicyRequest extends Request {
         }
 
         /**
-         * The new name of the protection policy.
-         * <p>
+         * <p>The new name of the protection policy.</p>
+         * <blockquote>
+         * <p>You must specify PolicyName or PolicyStatus.</p>
+         * </blockquote>
          * 
-         * > You must specify PolicyName or PolicyStatus.
+         * <strong>example:</strong>
+         * <p>policy_test</p>
          */
         public Builder policyName(String policyName) {
             this.putBodyParameter("PolicyName", policyName);
@@ -103,13 +111,17 @@ public class ModifyDcdnWafPolicyRequest extends Request {
         }
 
         /**
-         * The new status of the protection policy. Valid values:
-         * <p>
+         * <p>The new status of the protection policy. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify PolicyName or PolicyStatus.</p>
+         * </blockquote>
          * 
-         * *   **on**
-         * *   **off**
-         * 
-         * > You must specify PolicyName or PolicyStatus.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder policyStatus(String policyStatus) {
             this.putBodyParameter("PolicyStatus", policyStatus);

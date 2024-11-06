@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHighlightInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeHighlightInfoRequest</p>
@@ -98,7 +99,10 @@ public class DescribeHighlightInfoRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-10T02:43:34Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -107,11 +111,15 @@ public class DescribeHighlightInfoRequest extends Request {
         }
 
         /**
-         * The access language. Valid values:
-         * <p>
+         * <p>The access language. Valid values:</p>
+         * <ul>
+         * <li><strong>en-US</strong> (default): English.</li>
+         * <li><strong>zh-CN</strong>: Chinese.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **en-US** (default): English.
-         * *   **zh-CN**: Chinese.
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -120,7 +128,11 @@ public class DescribeHighlightInfoRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-19T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -129,7 +141,11 @@ public class DescribeHighlightInfoRequest extends Request {
         }
 
         /**
-         * The ID of the trace.
+         * <p>The ID of the trace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800e749616838513398137319e</p>
          */
         public Builder traceId(String traceId) {
             this.putQueryParameter("TraceId", traceId);

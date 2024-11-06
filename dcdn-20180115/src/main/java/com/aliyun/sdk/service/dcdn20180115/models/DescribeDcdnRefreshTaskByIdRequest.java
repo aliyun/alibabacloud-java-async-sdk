@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnRefreshTaskByIdRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnRefreshTaskByIdRequest</p>
@@ -54,13 +55,18 @@ public class DescribeDcdnRefreshTaskByIdRequest extends Request {
         } 
 
         /**
-         * The ID of the task that you want to query. The following signature algorithms require different message digest algorithms:
-         * <p>
+         * <p>The ID of the task that you want to query. The following signature algorithms require different message digest algorithms:</p>
+         * <ul>
+         * <li>Perform the <a href="https://help.aliyun.com/document_detail/130620.html">RefreshDcdnObjectCaches</a> operation to query refresh task IDs.</li>
+         * <li>Perform the <a href="https://help.aliyun.com/document_detail/130636.html">PreloadDcdnObjectCaches</a> operation to query prefetch task IDs.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can specify at most 10 task IDs in each call. Separate IDs with commas (,).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   Perform the [RefreshDcdnObjectCaches](~~130620~~) operation to query refresh task IDs.
-         * *   Perform the [PreloadDcdnObjectCaches](~~130636~~) operation to query prefetch task IDs.
-         * 
-         * > You can specify at most 10 task IDs in each call. Separate IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>113681**</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

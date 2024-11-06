@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetDcdnWafDomainConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>BatchSetDcdnWafDomainConfigsResponseBody</p>
@@ -37,7 +38,10 @@ public class BatchSetDcdnWafDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-3C82-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

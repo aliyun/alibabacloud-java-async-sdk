@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainOriginTrafficDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainOriginTrafficDataResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -105,7 +109,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -113,7 +120,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -121,7 +131,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The amount of back-to-origin traffic returned at each time interval. Unit: bytes.
+         * <p>The amount of back-to-origin traffic returned at each time interval. Unit: bytes.</p>
          */
         public Builder originTrafficDataPerInterval(OriginTrafficDataPerInterval originTrafficDataPerInterval) {
             this.originTrafficDataPerInterval = originTrafficDataPerInterval;
@@ -129,7 +139,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A666D44F-19D6-490E-97CF-1A64AB962C57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range during which data was queried.
+         * <p>The beginning of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,6 +166,12 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainOriginTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainOriginTrafficDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DynamicHttpOriginTraffic")
         private Float dynamicHttpOriginTraffic;
@@ -237,7 +259,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTP.
+             * <p>The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder dynamicHttpOriginTraffic(Float dynamicHttpOriginTraffic) {
                 this.dynamicHttpOriginTraffic = dynamicHttpOriginTraffic;
@@ -245,7 +270,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTPS.
+             * <p>The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder dynamicHttpsOriginTraffic(Float dynamicHttpsOriginTraffic) {
                 this.dynamicHttpsOriginTraffic = dynamicHttpsOriginTraffic;
@@ -253,7 +281,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of back-to-origin traffic.
+             * <p>The amount of back-to-origin traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder originTraffic(Float originTraffic) {
                 this.originTraffic = originTraffic;
@@ -261,7 +292,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of back-to-origin traffic that was consumed to deliver static content over HTTP.
+             * <p>The amount of back-to-origin traffic that was consumed to deliver static content over HTTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder staticHttpOriginTraffic(Float staticHttpOriginTraffic) {
                 this.staticHttpOriginTraffic = staticHttpOriginTraffic;
@@ -269,7 +303,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of back-to-origin traffic that was consumed to deliver static content over HTTPS.
+             * <p>The amount of back-to-origin traffic that was consumed to deliver static content over HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder staticHttpsOriginTraffic(Float staticHttpsOriginTraffic) {
                 this.staticHttpsOriginTraffic = staticHttpsOriginTraffic;
@@ -277,7 +314,10 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T21:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -291,6 +331,12 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainOriginTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainOriginTrafficDataResponseBody</p>
+     */
     public static class OriginTrafficDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

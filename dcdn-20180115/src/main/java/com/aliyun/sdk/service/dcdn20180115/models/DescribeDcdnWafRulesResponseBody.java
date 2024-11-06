@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafRulesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
+         * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of protection rules returned per page. The value of this parameter is the same as that of the PageSize parameter in the request.
+         * <p>The number of protection rules returned per page. The value of this parameter is the same as that of the PageSize parameter in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the protection rule.
+         * <p>The information about the protection rule.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -117,7 +127,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of protection rules.
+         * <p>The total number of protection rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
@@ -229,7 +248,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
             private String ruleStatus; 
 
             /**
-             * The type of the protection policy. The value of this parameter is the same as that of the DefenseScene field in QueryArgst.
+             * <p>The type of the protection policy. The value of this parameter is the same as that of the DefenseScene field in QueryArgst.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom_acl</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -237,7 +259,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the protection policy was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the protection policy was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-29T17:08:45Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -245,7 +270,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection policy.
+             * <p>The ID of the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200001</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -253,7 +281,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information about the protection rule.
+             * <p>The configuration information about the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;action&quot;:&quot;monitor&quot;,&quot;actionExternal&quot;:&quot;{}&quot;,&quot;ccStatus&quot;:1,&quot;conditions&quot;:[{&quot;key&quot;:&quot;URL&quot;,&quot;opValue&quot;:&quot;eq&quot;,&quot;targetKey&quot;:&quot;request_uri&quot;,&quot;values&quot;:&quot;/example&quot;},{&quot;key&quot;:&quot;Header&quot;,&quot;opValue&quot;:&quot;eq&quot;,&quot;subKey&quot;:&quot;trt&quot;,&quot;targetKey&quot;:&quot;header.trt&quot;,&quot;values&quot;:&quot;3333&quot;}],&quot;effect&quot;:&quot;service&quot;,&quot;name&quot;:&quot;aaa333&quot;,&quot;origin&quot;:&quot;custom&quot;,&quot;ratelimit&quot;:{&quot;interval&quot;:5,&quot;status&quot;:{&quot;code&quot;:404,&quot;count&quot;:2,&quot;stat&quot;:{&quot;mode&quot;:&quot;count&quot;,&quot;value&quot;:2.0}},&quot;target&quot;:&quot;remote_addr&quot;,&quot;threshold&quot;:2,&quot;ttl&quot;:1800}}</p>
              */
             public Builder ruleConfig(String ruleConfig) {
                 this.ruleConfig = ruleConfig;
@@ -261,7 +292,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection rule.
+             * <p>The ID of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -269,7 +303,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protection rule.
+             * <p>The name of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -277,7 +314,10 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the protection rule. The value of this parameter is the same as that of the RuleStatus field in QueryArgst.
+             * <p>The status of the protection rule. The value of this parameter is the same as that of the RuleStatus field in QueryArgst.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;

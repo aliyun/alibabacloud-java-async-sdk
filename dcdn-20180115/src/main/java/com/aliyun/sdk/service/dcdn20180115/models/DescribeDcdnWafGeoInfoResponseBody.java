@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafGeoInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafGeoInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The type of information about the country or region.
+         * <p>The type of information about the country or region.</p>
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -57,7 +58,10 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafGeoInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafGeoInfoResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -109,7 +119,10 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the country or region.
+             * <p>The name of the country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -117,7 +130,10 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the country or region.
+             * <p>The code of the country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110000</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +147,12 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafGeoInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafGeoInfoResponseBody</p>
+     */
     public static class Continents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -170,7 +192,10 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
             private java.util.List < Regions> regions; 
 
             /**
-             * The district to which the country or region belongs.
+             * <p>The district to which the country or region belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +203,7 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region information.
+             * <p>The region information.</p>
              */
             public Builder regions(java.util.List < Regions> regions) {
                 this.regions = regions;
@@ -192,6 +217,12 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafGeoInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafGeoInfoResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Continents")
         private java.util.List < Continents> continents;
@@ -231,7 +262,7 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The information about the country or region.
+             * <p>The information about the country or region.</p>
              */
             public Builder continents(java.util.List < Continents> continents) {
                 this.continents = continents;
@@ -239,11 +270,14 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the region.
-             * <p>
+             * <p>The type of the region.</p>
+             * <ul>
+             * <li>CN: China</li>
+             * <li>Other: outside China</li>
+             * </ul>
              * 
-             * *   CN: China
-             * *   Other: outside China
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnOriginSiteHealthStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnOriginSiteHealthStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the origin server of the accelerated domain name.
+         * <p>The information about the origin server of the accelerated domain name.</p>
          */
         public Builder originSiteStatus(java.util.List < OriginSiteStatus> originSiteStatus) {
             this.originSiteStatus = originSiteStatus;
@@ -57,7 +58,10 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnOriginSiteHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnOriginSiteHealthStatusResponseBody</p>
+     */
     public static class OriginSiteStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
@@ -109,13 +119,16 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
             private String host; 
 
             /**
-             * The health status of the origin server. Each point of presence (POP) periodically initiates a probe request to the configured origin domain name. If the POP receives a response from the origin server in 5 seconds, the probe is considered successful. After the probe data for each POP is collected, the health status of the origin server is calculated based on the proportion of successful probes. Valid values:
-             * <p>
+             * <p>The health status of the origin server. Each point of presence (POP) periodically initiates a probe request to the configured origin domain name. If the POP receives a response from the origin server in 5 seconds, the probe is considered successful. After the probe data for each POP is collected, the health status of the origin server is calculated based on the proportion of successful probes. Valid values:</p>
+             * <ul>
+             * <li>unknown: The probe data of the origin server is not obtained because the configurations of the origin server have been changed recently. Try again later.</li>
+             * <li>healthy: The proportion of successful probes is higher than 80%.</li>
+             * <li>degraded: The proportion of successful probes is higher than 0% and lower than or equal to 80%.</li>
+             * <li>critical: All probing requests to the origin server failed.</li>
+             * </ul>
              * 
-             * *   unknown: The probe data of the origin server is not obtained because the configurations of the origin server have been changed recently. Try again later.
-             * *   healthy: The proportion of successful probes is higher than 80%.
-             * *   degraded: The proportion of successful probes is higher than 0% and lower than or equal to 80%.
-             * *   critical: All probing requests to the origin server failed.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -123,7 +136,10 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The origin domain name that you configured in the DCDN console, which can be an IPv4 address, IPv6 address, common domain name, or Object Storage Service (OSS) domain name.
+             * <p>The origin domain name that you configured in the DCDN console, which can be an IPv4 address, IPv6 address, common domain name, or Object Storage Service (OSS) domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host.com</p>
              */
             public Builder host(String host) {
                 this.host = host;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDdosSpecInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDdosSpecInfoResponseBody</p>
@@ -121,7 +122,10 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         private java.util.List < SpecInfos> specInfos; 
 
         /**
-         * The bandwidth limit of a single instance.
+         * <p>The bandwidth limit of a single instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40Gbps</p>
          */
         public Builder bandwidthLimit(String bandwidthLimit) {
             this.bandwidthLimit = bandwidthLimit;
@@ -129,14 +133,17 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The version. Valid values:
-         * <p>
+         * <p>The version. Valid values:</p>
+         * <ul>
+         * <li><strong>poc</strong>: POC Edition</li>
+         * <li><strong>basic</strong>: Basic Edition</li>
+         * <li><strong>insurance</strong>: Insurance Edition</li>
+         * <li><strong>unlimited</strong>: Unlimited Edition</li>
+         * <li><strong>port_enhancement</strong>: Special Port Enhanced Edition</li>
+         * </ul>
          * 
-         * * **poc**: POC Edition
-         * * **basic**: Basic Edition
-         * * **insurance**: Insurance Edition
-         * * **unlimited**: Unlimited Edition
-         * * **port_enhancement**: Special Port Enhanced Edition
+         * <strong>example:</strong>
+         * <p>insurance</p>
          */
         public Builder edition(String edition) {
             this.edition = edition;
@@ -144,11 +151,14 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to enable DDoS mitigation. Valid values:
-         * <p>
+         * <p>Specifies whether to enable DDoS mitigation. Valid values:</p>
+         * <ul>
+         * <li><strong>on:</strong></li>
+         * <li><strong>off</strong>.</li>
+         * </ul>
          * 
-         * *   **on:**
-         * *   **off**.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.enable = enable;
@@ -156,11 +166,14 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether custom ports are supported. Valid values:
-         * <p>
+         * <p>Specifies whether custom ports are supported. Valid values:</p>
+         * <ul>
+         * <li><strong>yes</strong></li>
+         * <li><strong>no</strong></li>
+         * </ul>
          * 
-         * *   **yes**
-         * *   **no**
+         * <strong>example:</strong>
+         * <p>no</p>
          */
         public Builder isSpecialPort(String isSpecialPort) {
             this.isSpecialPort = isSpecialPort;
@@ -168,12 +181,15 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Protected region. Valid values:
-         * <p>
+         * <p>Protected region. Valid values:</p>
+         * <ul>
+         * <li><strong>global</strong>: global</li>
+         * <li><strong>chinese_mainland</strong>: Chinese mainland</li>
+         * <li><strong>global_excluding_the_chinese_mainland</strong>: outside the Chinese mainland</li>
+         * </ul>
          * 
-         * * **global**: global
-         * * **chinese_mainland**: Chinese mainland
-         * * **global_excluding_the_chinese_mainland**: outside the Chinese mainland
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder protectedArea(String protectedArea) {
             this.protectedArea = protectedArea;
@@ -181,7 +197,10 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The QPS limit.
+         * <p>The QPS limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder qpsLimit(String qpsLimit) {
             this.qpsLimit = qpsLimit;
@@ -189,7 +208,10 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEA8E7BE-33C6-56F5-AC56-74D50547CF34</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +219,7 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The code and configurations of the security rules.
+         * <p>The code and configurations of the security rules.</p>
          */
         public Builder specInfos(java.util.List < SpecInfos> specInfos) {
             this.specInfos = specInfos;
@@ -210,6 +232,12 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDdosSpecInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDdosSpecInfoResponseBody</p>
+     */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -261,15 +289,18 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The configuration code of the version rule. Valid values:
-             * <p>
+             * <p>The configuration code of the version rule. Valid values:</p>
+             * <ul>
+             * <li><strong>total_defense_num</strong>: the total number of mitigation sessions of the version.</li>
+             * <li><strong>consume_defense_num</strong>: the number of used mitigation sessions of the version.</li>
+             * <li><strong>max_domain_num</strong>: the limit on the number of added domain names.</li>
+             * <li><strong>emain_domain_num</strong>: the number of added domain names.</li>
+             * <li><strong>defence_package_num</strong>: the total number of purchased additional mitigation sessions.</li>
+             * <li><strong>consume_defence_package_num</strong>: the number of used additional mitigation sessions.</li>
+             * </ul>
              * 
-             * *   **total_defense_num**: the total number of mitigation sessions of the version.
-             * *   **consume_defense_num**: the number of used mitigation sessions of the version.
-             * *   **max_domain_num**: the limit on the number of added domain names.
-             * *   **emain_domain_num**: the number of added domain names.
-             * *   **defence_package_num**: the total number of purchased additional mitigation sessions.
-             * *   **consume_defence_package_num**: the number of used additional mitigation sessions.
+             * <strong>example:</strong>
+             * <p>total_defense_num</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -277,7 +308,10 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration expression of the version rule.
+             * <p>The configuration expression of the version rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>equal</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -285,7 +319,10 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the configuration expression of the version rule.
+             * <p>The value of the configuration expression of the version rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -299,6 +336,12 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDdosSpecInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDdosSpecInfoResponseBody</p>
+     */
     public static class SpecInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Configs")
         private java.util.List < Configs> configs;
@@ -338,7 +381,7 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
             private String rule; 
 
             /**
-             * The configurations of the version rule.
+             * <p>The configurations of the version rule.</p>
              */
             public Builder configs(java.util.List < Configs> configs) {
                 this.configs = configs;
@@ -346,12 +389,15 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version rule. Valid values:
-             * <p>
+             * <p>The version rule. Valid values:</p>
+             * <ul>
+             * <li><strong>version_defense_num</strong>: the rule for the number of version mitigation sessions</li>
+             * <li><strong>domain_num</strong>: the rule for the limit on the number of domain names</li>
+             * <li><strong>defence_package_num</strong>: the rule for extra mitigation session plans</li>
+             * </ul>
              * 
-             * *   **version_defense_num**: the rule for the number of version mitigation sessions
-             * *   **domain_num**: the rule for the limit on the number of domain names
-             * *   **defence_package_num**: the rule for extra mitigation session plans
+             * <strong>example:</strong>
+             * <p>version_defense_num</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;

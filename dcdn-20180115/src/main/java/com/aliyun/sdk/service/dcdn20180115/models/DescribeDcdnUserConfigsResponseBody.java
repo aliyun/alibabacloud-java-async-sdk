@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnUserConfigsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The user configurations.
+         * <p>The user configurations.</p>
          */
         public Builder configs(java.util.List < Configs> configs) {
             this.configs = configs;
@@ -57,7 +58,10 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06D29681-B7CD-4034-A8CC-28AFFA213539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnUserConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnUserConfigsResponseBody</p>
+     */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArgName")
         private String argName;
@@ -121,10 +131,11 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
             private String functionName; 
 
             /**
-             * The name of the configuration.
-             * <p>
+             * <p>The name of the configuration.</p>
+             * <p>The configuration is specified by enterprise users and public service sectors.</p>
              * 
-             * The configuration is specified by enterprise users and public service sectors.
+             * <strong>example:</strong>
+             * <p>allow_function</p>
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -132,16 +143,19 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the configuration. Valid values:
-             * <p>
+             * <p>The value of the configuration. Valid values:</p>
+             * <ul>
+             * <li>cc_rule: HTTP flood protection</li>
+             * <li>ddos_dispatch: DDoS mitigation</li>
+             * <li>edge_safe: application security on points of presence (POPs)</li>
+             * <li>blocked_regions: region blacklist</li>
+             * <li>http_acl_policy: precise access control</li>
+             * <li>bot_manager: bot traffic management</li>
+             * <li>ip_reputation: IP reputation library</li>
+             * </ul>
              * 
-             * *   cc_rule: HTTP flood protection
-             * *   ddos_dispatch: DDoS mitigation
-             * *   edge_safe: application security on points of presence (POPs)
-             * *   blocked_regions: region blacklist
-             * *   http_acl_policy: precise access control
-             * *   bot_manager: bot traffic management
-             * *   ip_reputation: IP reputation library
+             * <strong>example:</strong>
+             * <p>{&quot;dcdn_allow&quot;:[&quot;cc_rule&quot;,&quot;ddos_dispatch&quot;]}</p>
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -149,7 +163,10 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain_business_control</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;

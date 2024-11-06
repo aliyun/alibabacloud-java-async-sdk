@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDcdnFullDomainsBlockIPRequest} extends {@link RequestModel}
  *
  * <p>SetDcdnFullDomainsBlockIPRequest</p>
@@ -97,7 +98,10 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         } 
 
         /**
-         * The duration for which IP addresses or CIDR blocks are blocked. Unit: seconds. The value **0** specifies that IP addresses or CIDR blocks are permanently blocked. This parameter is available only if you set **OperationType** to **block**.
+         * <p>The duration for which IP addresses or CIDR blocks are blocked. Unit: seconds. The value <strong>0</strong> specifies that IP addresses or CIDR blocks are permanently blocked. This parameter is available only if you set <strong>OperationType</strong> to <strong>block</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder blockInterval(Integer blockInterval) {
             this.putBodyParameter("BlockInterval", blockInterval);
@@ -106,7 +110,11 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * The IP addresses that you want to block or unblock. Separate multiple IP addresses with commas (,). You can specify up to 1,000 IP addresses.
+         * <p>The IP addresses that you want to block or unblock. Separate multiple IP addresses with commas (,). You can specify up to 1,000 IP addresses.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.XXX.XXX.1,2.XXX.XXX.2</p>
          */
         public Builder IPList(String IPList) {
             this.putBodyParameter("IPList", IPList);
@@ -115,11 +123,15 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * The action that you want to perform. Valid values:
-         * <p>
+         * <p>The action that you want to perform. Valid values:</p>
+         * <ul>
+         * <li><strong>block</strong></li>
+         * <li><strong>unblock</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **block**
-         * *   **unblock**
+         * <strong>example:</strong>
+         * <p>block</p>
          */
         public Builder operationType(String operationType) {
             this.putBodyParameter("OperationType", operationType);
@@ -128,12 +140,15 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * The type of the blocking duration. This parameter is available only if you set **OperationType** to **block**. Valid values:
-         * <p>
+         * <p>The type of the blocking duration. This parameter is available only if you set <strong>OperationType</strong> to <strong>block</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>cover</strong>: the blocking duration that is specified in the request takes effect.</li>
+         * <li><strong>uncover</strong>: the longer one of the blocking duration that is specified in the request and the remaining blocking duration takes effect.</li>
+         * <li>Default value: cover.</li>
+         * </ul>
          * 
-         * *   **cover**: the blocking duration that is specified in the request takes effect.
-         * *   **uncover**: the longer one of the blocking duration that is specified in the request and the remaining blocking duration takes effect.
-         * *   Default value: cover.
+         * <strong>example:</strong>
+         * <p>cover</p>
          */
         public Builder updateType(String updateType) {
             this.putBodyParameter("UpdateType", updateType);

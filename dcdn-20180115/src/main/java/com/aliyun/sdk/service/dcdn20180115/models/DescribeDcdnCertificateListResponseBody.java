@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnCertificateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnCertificateListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about certificates.
+         * <p>Details about certificates.</p>
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -57,7 +58,10 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC0E34AC-0239-44A7-AB0E-800DE522C8DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnCertificateListResponseBody</p>
+     */
     public static class Cert extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
@@ -157,7 +167,10 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             private Long lastTime; 
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -165,7 +178,10 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Certificate 2</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -173,7 +189,10 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.
+             * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder common(String common) {
                 this.common = common;
@@ -181,7 +200,10 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the certificate.
+             * <p>The fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0151xxxx</p>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -189,7 +211,10 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate authority (CA) that issued the certificate.
+             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DigiCert</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -197,7 +222,10 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1548065550</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -211,6 +239,12 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnCertificateListResponseBody</p>
+     */
     public static class CertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cert")
         private java.util.List < Cert> cert;
@@ -252,6 +286,12 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnCertificateListResponseBody</p>
+     */
     public static class CertificateListModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertList")
         private CertList certList;
@@ -291,7 +331,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * Details about each certificate.
+             * <p>Details about each certificate.</p>
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -299,7 +339,10 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of certificates.
+             * <p>The number of certificates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

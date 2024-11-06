@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDcdnKvStatusRequest} extends {@link RequestModel}
  *
  * <p>GetDcdnKvStatusRequest</p>
@@ -69,7 +70,11 @@ public class GetDcdnKvStatusRequest extends Request {
         } 
 
         /**
-         * The name of the key that you want to query.
+         * <p>The name of the key that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -78,7 +83,11 @@ public class GetDcdnKvStatusRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

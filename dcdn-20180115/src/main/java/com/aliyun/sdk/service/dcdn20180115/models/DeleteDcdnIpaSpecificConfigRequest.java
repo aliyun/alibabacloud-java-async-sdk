@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnIpaSpecificConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnIpaSpecificConfigRequest</p>
@@ -97,7 +98,11 @@ public class DeleteDcdnIpaSpecificConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration. You can call the [DescribeDcdnDomainConfigs](~~130625~~) operation to query configuration IDs.
+         * <p>The ID of the configuration. You can call the <a href="https://help.aliyun.com/document_detail/130625.html">DescribeDcdnDomainConfigs</a> operation to query configuration IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50035**</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -106,7 +111,11 @@ public class DeleteDcdnIpaSpecificConfigRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

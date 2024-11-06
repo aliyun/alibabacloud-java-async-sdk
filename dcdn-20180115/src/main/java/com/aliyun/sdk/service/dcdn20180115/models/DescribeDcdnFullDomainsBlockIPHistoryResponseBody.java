@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnFullDomainsBlockIPHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnFullDomainsBlockIPHistoryResponseBody</p>
@@ -73,14 +74,16 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <p>The value of Code is not 0 in the following scenarios:</p>
+         * <ul>
+         * <li>The format of the IP address is invalid.</li>
+         * <li>The format of the time is invalid.</li>
+         * <li>Other abnormal scenarios</li>
+         * </ul>
          * 
-         * The value of Code is not 0 in the following scenarios:
-         * 
-         * *   The format of the IP address is invalid.
-         * *   The format of the time is invalid.
-         * *   Other abnormal scenarios
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         }
 
         /**
-         * The description of the status returned.
+         * <p>The description of the status returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -96,7 +102,7 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         }
 
         /**
-         * The result of the operation.
+         * <p>The result of the operation.</p>
          */
         public Builder IPBlockInfo(java.util.List < IPBlockInfo> IPBlockInfo) {
             this.IPBlockInfo = IPBlockInfo;
@@ -104,7 +110,10 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13A2B792-9212-1CC9-8525-59EBEF3FFE01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,6 +126,12 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnFullDomainsBlockIPHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnFullDomainsBlockIPHistoryResponseBody</p>
+     */
     public static class IPBlockInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockIP")
         private String blockIP;
@@ -168,7 +183,10 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
             private String status; 
 
             /**
-             * The blocked IP address or CIDR block.
+             * <p>The blocked IP address or CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.XXX.XXX.0~1.XXX.XXX.255</p>
              */
             public Builder blockIP(String blockIP) {
                 this.blockIP = blockIP;
@@ -176,7 +194,10 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
             }
 
             /**
-             * The delivery time.
+             * <p>The delivery time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-24 18:49:37</p>
              */
             public Builder deliverTime(String deliverTime) {
                 this.deliverTime = deliverTime;
@@ -184,11 +205,14 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
             }
 
             /**
-             * The delivery status.
-             * <p>
+             * <p>The delivery status.</p>
+             * <ul>
+             * <li>Success</li>
+             * <li>Failed</li>
+             * </ul>
              * 
-             * *   Success
-             * *   Failed
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

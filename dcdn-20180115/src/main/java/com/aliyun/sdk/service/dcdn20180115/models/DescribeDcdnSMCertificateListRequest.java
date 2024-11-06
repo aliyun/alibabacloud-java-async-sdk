@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSMCertificateListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnSMCertificateListRequest</p>
@@ -82,7 +83,11 @@ public class DescribeDcdnSMCertificateListRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name whose SM certificates you want to query.
+         * <p>The accelerated domain name whose SM certificates you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

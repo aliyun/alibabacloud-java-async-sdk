@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreloadDcdnObjectCachesResponseBody} extends {@link TeaModel}
  *
  * <p>PreloadDcdnObjectCachesResponseBody</p>
@@ -49,7 +50,10 @@ public class PreloadDcdnObjectCachesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the prefetch task. Multiple IDs are separated by commas (,).
+         * <p>The ID of the prefetch task. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95248880</p>
          */
         public Builder preloadTaskId(String preloadTaskId) {
             this.preloadTaskId = preloadTaskId;
@@ -57,7 +61,10 @@ public class PreloadDcdnObjectCachesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5BD4B50-7A02-493A-AE0B-97B9024B4135</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainRealTimeDetailDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnDomainRealTimeDetailDataRequest</p>
@@ -155,7 +156,11 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+         * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -164,10 +169,14 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time, and the maximum time range to query is 10 minutes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The end time must be later than the start time, and the maximum time range to query is 10 minutes.
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -176,12 +185,16 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The type of information that you want to query. Separate multiple types with commas (,). Valid values:
-         * <p>
+         * <p>The type of information that you want to query. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>qps</strong>: queries per second (QPS)</li>
+         * <li><strong>bps</strong>: bandwidth</li>
+         * <li><strong>http_code</strong>: HTTP status code</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **qps**: queries per second (QPS)
-         * *   **bps**: bandwidth
-         * *   **http_code**: HTTP status code
+         * <strong>example:</strong>
+         * <p>bps</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -190,10 +203,11 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The name of the ISP. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the ISP name.
-         * <p>
+         * <p>The name of the ISP. You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query the ISP name.</p>
+         * <p>If you leave this parameter empty, all ISPs are queried.</p>
          * 
-         * If you leave this parameter empty, all ISPs are queried.
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -202,10 +216,11 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The name of the region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the region name.
-         * <p>
+         * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query the region name.</p>
+         * <p>If you leave this parameter empty, all regions are queried.</p>
          * 
-         * If you leave this parameter empty, all regions are queried.
+         * <strong>example:</strong>
+         * <p>beijing</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -214,13 +229,15 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Specifies whether to return a summary value. Valid values:
-         * <p>
+         * <p>Specifies whether to return a summary value. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder merge(String merge) {
             this.putQueryParameter("Merge", merge);
@@ -229,13 +246,15 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Specifies whether to return a summary value of **LocationNameEn** and **IspNameEn**. Valid values:
-         * <p>
+         * <p>Specifies whether to return a summary value of <strong>LocationNameEn</strong> and <strong>IspNameEn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder mergeLocIsp(String mergeLocIsp) {
             this.putQueryParameter("MergeLocIsp", mergeLocIsp);
@@ -244,7 +263,11 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:33:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

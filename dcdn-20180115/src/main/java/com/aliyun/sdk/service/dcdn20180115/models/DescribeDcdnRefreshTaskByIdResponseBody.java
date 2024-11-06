@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnRefreshTaskByIdResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnRefreshTaskByIdResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0C2EF95-B1EC-4C93-855E-2059A7DA2B7B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * A list of prefetch or refresh tasks.
+         * <p>A list of prefetch or refresh tasks.</p>
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -77,7 +81,10 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnRefreshTaskByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnRefreshTaskByIdResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -189,7 +202,10 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The time when the task was created. The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+             * <p>The time when the task was created. The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-10T08:54:23Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -197,12 +213,15 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The error returned when the refresh or prefetch task failed. Valid values:
-             * <p>
+             * <p>The error returned when the refresh or prefetch task failed. Valid values:</p>
+             * <ul>
+             * <li><strong>Internal Error</strong>: An internal error occurred.</li>
+             * <li><strong>Origin Timeout</strong>: The response from the origin server timed out.</li>
+             * <li><strong>Origin Return StatusCode 5XX</strong>: The origin server returned a 5XX error.</li>
+             * </ul>
              * 
-             * *   **Internal Error**: An internal error occurred.
-             * *   **Origin Timeout**: The response from the origin server timed out.
-             * *   **Origin Return StatusCode 5XX**: The origin server returned a 5XX error.
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,7 +229,10 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the refresh or prefetch object.
+             * <p>The path of the refresh or prefetch object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/image_01.png">http://example.com/image_01.png</a></p>
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -218,12 +240,15 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the refresh or prefetch task. Valid values:
-             * <p>
+             * <p>The type of the refresh or prefetch task. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: refreshes an individual file.</li>
+             * <li><strong>directory</strong>: refreshes files under the specified directory.</li>
+             * <li><strong>preload</strong>: prefetches an individual file.</li>
+             * </ul>
              * 
-             * *   **file**: refreshes an individual file.
-             * *   **directory**: refreshes files under the specified directory.
-             * *   **preload**: prefetches an individual file.
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -231,7 +256,10 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task, in percentage.
+             * <p>The progress of the task, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -239,13 +267,16 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The task status. Valid values:
-             * <p>
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>Complete</strong>: The task is complete.</li>
+             * <li><strong>Pending</strong>: The task is pending.</li>
+             * <li><strong>Refreshing</strong>: The task is running.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * </ul>
              * 
-             * *   **Complete**: The task is complete.
-             * *   **Pending**: The task is pending.
-             * *   **Refreshing**: The task is running.
-             * *   **Failed**: The task failed.
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -253,7 +284,10 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113681**</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

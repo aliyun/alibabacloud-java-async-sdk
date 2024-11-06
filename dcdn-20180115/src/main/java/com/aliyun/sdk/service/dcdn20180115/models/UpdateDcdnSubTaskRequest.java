@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDcdnSubTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateDcdnSubTaskRequest</p>
@@ -95,7 +96,10 @@ public class UpdateDcdnSubTaskRequest extends Request {
         } 
 
         /**
-         * The domain names that you want to include in the operations report. If you do not specify a domain name, all domain names that belong to your Alibaba Cloud account are included.
+         * <p>The domain names that you want to include in the operations report. If you do not specify a domain name, all domain names that belong to your Alibaba Cloud account are included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -104,7 +108,10 @@ public class UpdateDcdnSubTaskRequest extends Request {
         }
 
         /**
-         * The end time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-17T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -113,7 +120,10 @@ public class UpdateDcdnSubTaskRequest extends Request {
         }
 
         /**
-         * The IDs of the metrics that you want to update. Separate IDs with commas (,). You can call the [DescribeDcdnSubList](~~270075~~) operation to query the IDs.
+         * <p>The IDs of the metrics that you want to update. Separate IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/270075.html">DescribeDcdnSubList</a> operation to query the IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2,4,6</p>
          */
         public Builder reportIds(String reportIds) {
             this.putBodyParameter("ReportIds", reportIds);
@@ -122,7 +132,10 @@ public class UpdateDcdnSubTaskRequest extends Request {
         }
 
         /**
-         * The start time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The start time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-17T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

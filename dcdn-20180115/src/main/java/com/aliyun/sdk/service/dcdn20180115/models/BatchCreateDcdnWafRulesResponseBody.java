@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchCreateDcdnWafRulesResponseBody} extends {@link TeaModel}
  *
  * <p>BatchCreateDcdnWafRulesResponseBody</p>
@@ -49,7 +50,10 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
         private RuleIds ruleIds; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of created rules.
+         * <p>The IDs of created rules.</p>
          */
         public Builder ruleIds(RuleIds ruleIds) {
             this.ruleIds = ruleIds;
@@ -70,6 +74,12 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchCreateDcdnWafRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchCreateDcdnWafRulesResponseBody</p>
+     */
     public static class RuleIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private java.util.List < String > ruleId;

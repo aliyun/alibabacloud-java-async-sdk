@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshDcdnObjectCacheByCacheTagRequest} extends {@link RequestModel}
  *
  * <p>RefreshDcdnObjectCacheByCacheTagRequest</p>
@@ -83,7 +84,10 @@ public class RefreshDcdnObjectCacheByCacheTagRequest extends Request {
         } 
 
         /**
-         * CacheTag.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1,tag2</p>
          */
         public Builder cacheTag(String cacheTag) {
             this.putQueryParameter("CacheTag", cacheTag);
@@ -92,7 +96,10 @@ public class RefreshDcdnObjectCacheByCacheTagRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

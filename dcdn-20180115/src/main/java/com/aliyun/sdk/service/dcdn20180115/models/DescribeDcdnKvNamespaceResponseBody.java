@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnKvNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnKvNamespaceResponseBody</p>
@@ -153,7 +154,10 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The available capacity of all namespaces in your account.
+         * <p>The available capacity of all namespaces in your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 GB</p>
          */
         public Builder capacityString(String capacityString) {
             this.capacityString = capacityString;
@@ -169,7 +173,10 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The used capacity of all namespaces in your account.
+         * <p>The used capacity of all namespaces in your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100 MB</p>
          */
         public Builder capacityUsedString(String capacityUsedString) {
             this.capacityUsedString = capacityUsedString;
@@ -177,7 +184,10 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the namespace.
+         * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the first namespace</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -185,11 +195,14 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The system behavior when a key-value pair fails to be obtained at the edge. Valid values:
-         * <p>
+         * <p>The system behavior when a key-value pair fails to be obtained at the edge. Valid values:</p>
+         * <ul>
+         * <li>Normal (default): If a key-value pair fails to be obtained at the edge, DCDN attempts to query the key-value pair from the origin server to ensure global data consistency.</li>
+         * <li>Rapid: If a key-value pair fails to be obtained at the edge, an error message indicating that the key does not exist is returned. This feature enhances key-value query performance but may decrease the hit rate of queries. To enable this feature, submit a ticket.</li>
+         * </ul>
          * 
-         * *   Normal (default): If a key-value pair fails to be obtained at the edge, DCDN attempts to query the key-value pair from the origin server to ensure global data consistency.
-         * *   Rapid: If a key-value pair fails to be obtained at the edge, an error message indicating that the key does not exist is returned. This feature enhances key-value query performance but may decrease the hit rate of queries. To enable this feature, submit a ticket.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -197,7 +210,10 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -205,7 +221,10 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12423131231****</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
@@ -213,7 +232,10 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -221,13 +243,16 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the namespace. Valid values:
-         * <p>
+         * <p>The status of the namespace. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: normal</li>
+         * <li><strong>delete</strong>: pending delete</li>
+         * <li><strong>deleting</strong>: being deleted</li>
+         * <li><strong>deleted</strong>: deleted</li>
+         * </ul>
          * 
-         * *   **online**: normal
-         * *   **delete**: pending delete
-         * *   **deleting**: being deleted
-         * *   **deleted**: deleted
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;

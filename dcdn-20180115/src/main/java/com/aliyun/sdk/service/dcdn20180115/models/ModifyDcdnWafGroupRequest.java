@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDcdnWafGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyDcdnWafGroupRequest</p>
@@ -82,7 +83,11 @@ public class ModifyDcdnWafGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the custom WAF rule group.
+         * <p>The ID of the custom WAF rule group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000110</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -91,7 +96,10 @@ public class ModifyDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * The name of the custom WAF rule group.
+         * <p>The name of the custom WAF rule group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -100,7 +108,10 @@ public class ModifyDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * The incremental modifications of the rules in the custom WAF rule group. The value is a JSON string.
+         * <p>The incremental modifications of the rules in the custom WAF rule group. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;All&quot;:false,&quot;Op&quot;:&quot;del&quot;,&quot;List&quot;:&quot;900109&quot;}</p>
          */
         public Builder rules(String rules) {
             this.putBodyParameter("Rules", rules);

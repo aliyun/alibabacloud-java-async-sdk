@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainsBySourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainsBySourceResponseBody</p>
@@ -50,7 +51,8 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about each origin server and the corresponding domain names.
+         * <p>The information about each origin server and the corresponding domain names.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder domainInfo(java.util.List < DomainInfo> domainInfo) {
             this.domainInfo = domainInfo;
@@ -58,7 +60,10 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,6 +76,12 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainsBySourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainsBySourceResponseBody</p>
+     */
     public static class DomainList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -158,7 +169,10 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-21T03:05:20+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +180,10 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME record assigned to the domain name.
+             * <p>The CNAME record assigned to the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.org.alikunlun.com</p>
              */
             public Builder domainCname(String domainCname) {
                 this.domainCname = domainCname;
@@ -174,7 +191,10 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.org</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -182,11 +202,14 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The workload type of the accelerated domain name. Valid value:
-             * <p>
+             * <p>The workload type of the accelerated domain name. Valid value:</p>
+             * <ul>
+             * <li><strong>ipa</strong>: layer 4 acceleration</li>
+             * <li><strong>dynamic</strong>: layer 7 acceleration</li>
+             * </ul>
              * 
-             * *   **ipa**: layer 4 acceleration
-             * *   **dynamic**: layer 7 acceleration
+             * <strong>example:</strong>
+             * <p>dynamic</p>
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
@@ -194,15 +217,18 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name. Valid value:
-             * <p>
+             * <p>The status of the domain name. Valid value:</p>
+             * <ul>
+             * <li><strong>applying</strong>: The domain name is under review.</li>
+             * <li><strong>configuring</strong>: The domain name is being configured.</li>
+             * <li><strong>online</strong>: The domain name is working as expected.</li>
+             * <li><strong>stopping</strong>: The domain name is being stopped.</li>
+             * <li><strong>offline</strong>: The domain name is disabled.</li>
+             * <li><strong>disabling</strong>: The domain name is being removed.</li>
+             * </ul>
              * 
-             * *   **applying**: The domain name is under review.
-             * *   **configuring**: The domain name is being configured.
-             * *   **online**: The domain name is working as expected.
-             * *   **stopping**: The domain name is being stopped.
-             * *   **offline**: The domain name is disabled.
-             * *   **disabling**: The domain name is being removed.
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -210,7 +236,10 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was updated.
+             * <p>The time when the domain name was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-01T03:26:55+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -224,6 +253,12 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainsBySourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainsBySourceResponseBody</p>
+     */
     public static class DomainInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainList")
         private java.util.List < DomainList> domainList;
@@ -263,7 +298,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * The information about the domain names.
+             * <p>The information about the domain names.</p>
              */
             public Builder domainList(java.util.List < DomainList> domainList) {
                 this.domainList = domainList;
@@ -271,7 +306,10 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * The origin server.
+             * <p>The origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder source(String source) {
                 this.source = source;

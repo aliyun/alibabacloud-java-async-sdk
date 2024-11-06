@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoutineCanaryEnvsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRoutineCanaryEnvsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRoutineCanaryEnvsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The canary release environments that are supported.
+         * <p>The canary release environments that are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>presetCanaryShanghai</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -57,7 +61,10 @@ public class DescribeRoutineCanaryEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDCD94C0-F7FE-412F-B8F8-7E3C610C78E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

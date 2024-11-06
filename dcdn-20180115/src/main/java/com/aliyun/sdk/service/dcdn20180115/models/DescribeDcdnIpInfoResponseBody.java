@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnIpInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnIpInfoResponseBody</p>
@@ -97,11 +98,14 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the specified IP address is assigned to an Alibaba Cloud DCDN POP.
-         * <p>
+         * <p>Indicates whether the specified IP address is assigned to an Alibaba Cloud DCDN POP.</p>
+         * <ul>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
          * 
-         * *   True
-         * *   False
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder dcdnIp(String dcdnIp) {
             this.dcdnIp = dcdnIp;
@@ -109,7 +113,10 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ISP to which the specified IP address belongs.
+         * <p>The ISP to which the specified IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Telecom</p>
          */
         public Builder ISP(String ISP) {
             this.ISP = ISP;
@@ -117,7 +124,10 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Internet service provider (ISP).
+         * <p>The name of the Internet service provider (ISP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder ispEname(String ispEname) {
             this.ispEname = ispEname;
@@ -125,7 +135,12 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The Chinese name of the region.
+         * <p>The Chinese name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p> The maximum number of times that users can call this operation per second is 50.</p>
+         * </blockquote>
          */
         public Builder region(String region) {
             this.region = region;
@@ -133,7 +148,10 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The English name of the region.
+         * <p>The English name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China-Guizhou-guiyang</p>
          */
         public Builder regionEname(String regionEname) {
             this.regionEname = regionEname;
@@ -141,7 +159,10 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B1D0EE7-9559-489D-BC4E-279495EB8FB8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

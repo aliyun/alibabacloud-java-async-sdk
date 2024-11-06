@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDcdnSLSRealTimeLogDeliveryRequest} extends {@link RequestModel}
  *
  * <p>CreateDcdnSLSRealTimeLogDeliveryRequest</p>
@@ -157,12 +158,15 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         } 
 
         /**
-         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
-         * <p>
+         * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
+         * <ul>
+         * <li><strong>cdn_log_access_l1</strong>: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</li>
+         * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+         * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+         * </ul>
          * 
-         * *   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)
-         * *   **cdn_log_origin**: back-to-origin logs
-         * *   **cdn_log_er**: EdgeRoutine logs
+         * <strong>example:</strong>
+         * <p>cdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("BusinessType", businessType);
@@ -171,14 +175,17 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The data center. Valid values:
-         * <p>
+         * <p>The data center. Valid values:</p>
+         * <ul>
+         * <li>cn: China</li>
+         * <li>sg: Singapore</li>
+         * <li>eu: Europe</li>
+         * <li>us: United States</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cn: China
-         * *   sg: Singapore
-         * *   in: India
-         * *   eu: Europe
-         * *   us: United States
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder dataCenter(String dataCenter) {
             this.putBodyParameter("DataCenter", dataCenter);
@@ -187,7 +194,11 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).
+         * <p>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -196,7 +207,11 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of a real-time log delivery project.
+         * <p>The name of a real-time log delivery project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -205,7 +220,11 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the Log Service Logstore.
+         * <p>The name of the Log Service Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder SLSLogStore(String SLSLogStore) {
             this.putBodyParameter("SLSLogStore", SLSLogStore);
@@ -214,7 +233,11 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project.
+         * <p>The name of the Log Service project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyundoc</p>
          */
         public Builder SLSProject(String SLSProject) {
             this.putBodyParameter("SLSProject", SLSProject);
@@ -223,7 +246,11 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The region to which real-time logs are delivered.
+         * <p>The region to which real-time logs are delivered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder SLSRegion(String SLSRegion) {
             this.putBodyParameter("SLSRegion", SLSRegion);
@@ -232,7 +259,10 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The sampling rate.
+         * <p>The sampling rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder samplingRate(String samplingRate) {
             this.putBodyParameter("SamplingRate", samplingRate);

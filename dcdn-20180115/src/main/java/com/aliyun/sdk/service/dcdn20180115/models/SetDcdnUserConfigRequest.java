@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDcdnUserConfigRequest} extends {@link RequestModel}
  *
  * <p>SetDcdnUserConfigRequest</p>
@@ -111,7 +112,11 @@ public class SetDcdnUserConfigRequest extends Request {
         } 
 
         /**
-         * The configuration parameters of the feature.
+         * <p>The configuration parameters of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;argId&quot;:12,&quot;argValue&quot;:&quot;on&quot;</p>
          */
         public Builder configs(String configs) {
             this.putQueryParameter("Configs", configs);
@@ -120,7 +125,11 @@ public class SetDcdnUserConfigRequest extends Request {
         }
 
         /**
-         * The ID of the feature.
+         * <p>The ID of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder functionId(Integer functionId) {
             this.putQueryParameter("FunctionId", functionId);

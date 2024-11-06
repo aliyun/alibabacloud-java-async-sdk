@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnFullDomainsBlockIPConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnFullDomainsBlockIPConfigRequest</p>
@@ -53,7 +54,10 @@ public class DescribeDcdnFullDomainsBlockIPConfigRequest extends Request {
         } 
 
         /**
-         * The IP address or CIDR block to query. Separate multiple values with commas (,). You can specify up to 50 IP addresses or CIDR blocks.
+         * <p>The IP address or CIDR block to query. Separate multiple values with commas (,). You can specify up to 50 IP addresses or CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.XX.XX.10/24</p>
          */
         public Builder IPList(String IPList) {
             this.putQueryParameter("IPList", IPList);

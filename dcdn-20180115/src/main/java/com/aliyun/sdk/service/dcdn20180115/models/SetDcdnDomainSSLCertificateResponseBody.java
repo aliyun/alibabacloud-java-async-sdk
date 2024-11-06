@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDcdnDomainSSLCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>SetDcdnDomainSSLCertificateResponseBody</p>
@@ -37,7 +38,10 @@ public class SetDcdnDomainSSLCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7C69682-7F88-40DD-A198-10D0309E439D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

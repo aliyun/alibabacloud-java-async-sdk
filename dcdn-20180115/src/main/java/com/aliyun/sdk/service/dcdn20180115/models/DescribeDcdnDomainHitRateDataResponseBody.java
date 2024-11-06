@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainHitRateDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainHitRateDataResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -105,7 +109,10 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -113,7 +120,10 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-02T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -121,7 +131,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The byte hit ratio at each time interval. The byte hit ratio is measured in percentage.
+         * <p>The byte hit ratio at each time interval. The byte hit ratio is measured in percentage.</p>
          */
         public Builder hitRatePerInterval(HitRatePerInterval hitRatePerInterval) {
             this.hitRatePerInterval = hitRatePerInterval;
@@ -129,7 +139,10 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D07ABFE-4737-4834-B1B9-A661308C47B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range during which data was queried.
+         * <p>The beginning of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-02T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,6 +166,12 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainHitRateDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ByteHitRate")
         private Float byteHitRate;
@@ -201,7 +223,10 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The byte hit ratio.
+             * <p>The byte hit ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder byteHitRate(Float byteHitRate) {
                 this.byteHitRate = byteHitRate;
@@ -209,7 +234,10 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * The request hit ratio.
+             * <p>The request hit ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reqHitRate(Float reqHitRate) {
                 this.reqHitRate = reqHitRate;
@@ -217,7 +245,10 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-03-02T13:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -231,6 +262,12 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainHitRateDataResponseBody</p>
+     */
     public static class HitRatePerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

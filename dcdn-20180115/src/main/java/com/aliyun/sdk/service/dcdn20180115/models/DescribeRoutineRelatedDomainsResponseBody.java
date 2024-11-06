@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoutineRelatedDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRoutineRelatedDomainsResponseBody</p>
@@ -49,7 +50,14 @@ public class DescribeRoutineRelatedDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The domain names associated with a routine.
+         * <p>The domain names associated with a routine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Domains&quot;: [
+         *             &quot;xxx.com&quot;,
+         *             &quot;yyy.com&quot;,
+         *             ...
+         *         ]</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -57,7 +65,10 @@ public class DescribeRoutineRelatedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC0E34AC-0239-44A7-AB0E-800DE522C8DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

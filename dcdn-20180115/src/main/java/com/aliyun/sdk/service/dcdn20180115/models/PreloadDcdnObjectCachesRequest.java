@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreloadDcdnObjectCachesRequest} extends {@link RequestModel}
  *
  * <p>PreloadDcdnObjectCachesRequest</p>
@@ -29,6 +30,10 @@ public class PreloadDcdnObjectCachesRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryHashkey")
+    private Boolean queryHashkey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -42,6 +47,7 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         this.l2Preload = builder.l2Preload;
         this.objectPath = builder.objectPath;
         this.ownerId = builder.ownerId;
+        this.queryHashkey = builder.queryHashkey;
         this.securityToken = builder.securityToken;
         this.withHeader = builder.withHeader;
     }
@@ -88,6 +94,13 @@ public class PreloadDcdnObjectCachesRequest extends Request {
     }
 
     /**
+     * @return queryHashkey
+     */
+    public Boolean getQueryHashkey() {
+        return this.queryHashkey;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -106,6 +119,7 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         private Boolean l2Preload; 
         private String objectPath; 
         private Long ownerId; 
+        private Boolean queryHashkey; 
         private String securityToken; 
         private String withHeader; 
 
@@ -119,16 +133,20 @@ public class PreloadDcdnObjectCachesRequest extends Request {
             this.l2Preload = request.l2Preload;
             this.objectPath = request.objectPath;
             this.ownerId = request.ownerId;
+            this.queryHashkey = request.queryHashkey;
             this.securityToken = request.securityToken;
             this.withHeader = request.withHeader;
         } 
 
         /**
-         * The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.
-         * <p>
+         * <p>The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * </ul>
          * 
-         * *   **domestic**: Chinese mainland
-         * *   **overseas**: outside the Chinese mainland
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
@@ -137,11 +155,14 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         }
 
         /**
-         * Specifies whether to prefetch content to POPs. Valid values:
-         * <p>
+         * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prefetches content to nodes that include L2 DCDN nodes.</li>
+         * <li><strong>false</strong>: prefetches content to L2 POPs or L3 POPs.</li>
+         * </ul>
          * 
-         * *   **true**: prefetches content to nodes that include L2 DCDN nodes.
-         * *   **false**: prefetches content to L2 POPs or L3 POPs.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder l2Preload(Boolean l2Preload) {
             this.putQueryParameter("L2Preload", l2Preload);
@@ -150,7 +171,11 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         }
 
         /**
-         * The path of the content that you want to prefetch. Separate multiple URLs with line feed characters (\n) or a pair of carriage return and line feed characters (\r\n).
+         * <p>The path of the content that you want to prefetch. Separate multiple URLs with line feed characters (\n) or a pair of carriage return and line feed characters (\r\n).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com/examplefile.txt</p>
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -168,6 +193,15 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         }
 
         /**
+         * QueryHashkey.
+         */
+        public Builder queryHashkey(Boolean queryHashkey) {
+            this.putQueryParameter("QueryHashkey", queryHashkey);
+            this.queryHashkey = queryHashkey;
+            return this;
+        }
+
+        /**
          * SecurityToken.
          */
         public Builder securityToken(String securityToken) {
@@ -177,7 +211,14 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         }
 
         /**
-         * The custom header for prefetch in the JSON format.
+         * <p>The custom header for prefetch in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;Accept-Encoding&quot;: [
+         *             &quot;gzip&quot;
+         *       ]
+         * }</p>
          */
         public Builder withHeader(String withHeader) {
             this.putQueryParameter("WithHeader", withHeader);

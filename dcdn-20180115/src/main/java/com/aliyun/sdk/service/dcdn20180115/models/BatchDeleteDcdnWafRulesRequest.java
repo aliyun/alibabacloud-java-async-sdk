@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteDcdnWafRulesRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteDcdnWafRulesRequest</p>
@@ -54,7 +55,11 @@ public class BatchDeleteDcdnWafRulesRequest extends Request {
         } 
 
         /**
-         * The IDs of the protection rules that you want to delete. Separate multiple IDs with commas (,).
+         * <p>The IDs of the protection rules that you want to delete. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000001,20000002</p>
          */
         public Builder ruleIds(String ruleIds) {
             this.putBodyParameter("RuleIds", ruleIds);

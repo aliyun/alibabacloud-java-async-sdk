@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoutineResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRoutineResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeRoutineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The metadata of the routine. The following table describes the fields.
+         * <p>The metadata of the routine. The following table describes the fields.</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -57,7 +58,10 @@ public class DescribeRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DBA68F5-04A9-406B-B1E4-F2CB635E103F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

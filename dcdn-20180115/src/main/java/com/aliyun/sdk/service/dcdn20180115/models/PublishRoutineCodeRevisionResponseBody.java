@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishRoutineCodeRevisionResponseBody} extends {@link TeaModel}
  *
  * <p>PublishRoutineCodeRevisionResponseBody</p>
@@ -49,7 +50,10 @@ public class PublishRoutineCodeRevisionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The version of the routine code that is published to the specified environment.
+         * <p>The version of the routine code that is published to the specified environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;CodeRevision&quot;: &quot;1620876959997924701&quot;</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -57,7 +61,10 @@ public class PublishRoutineCodeRevisionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A513734D-D17B-411E-864D-XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

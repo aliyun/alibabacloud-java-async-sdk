@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnIpaDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnIpaDomainConfigsRequest</p>
@@ -97,7 +98,11 @@ public class DescribeDcdnIpaDomainConfigsRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. Separate multiple domain names with commas (,).
+         * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,7 +111,11 @@ public class DescribeDcdnIpaDomainConfigsRequest extends Request {
         }
 
         /**
-         * The name of the feature. Set the value to protogw, which indicates IP Application Accelerator (IPA).
+         * <p>The name of the feature. Set the value to protogw, which indicates IP Application Accelerator (IPA).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>protogw</p>
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

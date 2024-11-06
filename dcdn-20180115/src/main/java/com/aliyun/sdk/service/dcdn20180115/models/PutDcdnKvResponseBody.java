@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDcdnKvResponseBody} extends {@link TeaModel}
  *
  * <p>PutDcdnKvResponseBody</p>
@@ -61,7 +62,10 @@ public class PutDcdnKvResponseBody extends TeaModel {
         private String value; 
 
         /**
-         * The length of the key.
+         * <p>The length of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder length(Integer length) {
             this.length = length;
@@ -69,7 +73,10 @@ public class PutDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96ED3127-EC7A-57C5-AFA6-A689B24B2530</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class PutDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * The value of the key. If the value exceeds 256 characters in length, the first 100 characters and the last 100 characters are retained and other characters are not displayed.
+         * <p>The value of the key. If the value exceeds 256 characters in length, the first 100 characters and the last 100 characters are retained and other characters are not displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         public Builder value(String value) {
             this.value = value;

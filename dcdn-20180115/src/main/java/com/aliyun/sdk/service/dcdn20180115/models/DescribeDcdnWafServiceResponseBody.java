@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafServiceResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The edition of WAF.
+         * <p>The edition of WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdnwaf_afterpay</p>
          */
         public Builder edition(String edition) {
             this.edition = edition;
@@ -117,11 +121,14 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of WAF. Valid values:
-         * <p>
+         * <p>The status of WAF. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
          * 
-         * *   on
-         * *   off
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enabled(String enabled) {
             this.enabled = enabled;
@@ -129,7 +136,10 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when WAF was enabled.
+         * <p>The time when WAF was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-26T16:00:00Z</p>
          */
         public Builder openingTime(String openingTime) {
             this.openingTime = openingTime;
@@ -137,7 +147,10 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The metering method for requests.
+         * <p>The metering method for requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_waf_req</p>
          */
         public Builder requestBillingType(String requestBillingType) {
             this.requestBillingType = requestBillingType;
@@ -145,7 +158,10 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A95CA90-E0F2-1BF6-99E0-8C1510CAF649</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,7 +169,10 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The metering method for rules. You are charged for the number of SeCUs.
+         * <p>The metering method for rules. You are charged for the number of SeCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_waf_rule</p>
          */
         public Builder ruleBillingType(String ruleBillingType) {
             this.ruleBillingType = ruleBillingType;
@@ -161,13 +180,16 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of WAF. Valid values:
-         * <p>
+         * <p>The status of WAF. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>WaitForExpire</li>
+         * <li>Expired</li>
+         * <li>Released</li>
+         * </ul>
          * 
-         * *   Normal
-         * *   WaitForExpire
-         * *   Expired
-         * *   Released
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder status(String status) {
             this.status = status;

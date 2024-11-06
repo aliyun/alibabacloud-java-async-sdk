@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainIpaTrafficDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainIpaTrafficDataResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         private TrafficDataPerInterval trafficDataPerInterval; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -105,7 +109,10 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -113,7 +120,10 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -121,7 +131,10 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,10 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -137,7 +153,7 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The network traffic that was collected at each interval.
+         * <p>The network traffic that was collected at each interval.</p>
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -150,6 +166,12 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainIpaTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainIpaTrafficDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpaTraffic")
         private Float ipaTraffic;
@@ -189,7 +211,10 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The total amount of network traffic.
+             * <p>The total amount of network traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423304182</p>
              */
             public Builder ipaTraffic(Float ipaTraffic) {
                 this.ipaTraffic = ipaTraffic;
@@ -197,7 +222,10 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -211,6 +239,12 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainIpaTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainIpaTrafficDataResponseBody</p>
+     */
     public static class TrafficDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

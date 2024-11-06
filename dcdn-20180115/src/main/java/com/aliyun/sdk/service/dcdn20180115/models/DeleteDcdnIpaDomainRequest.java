@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnIpaDomainRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnIpaDomainRequest</p>
@@ -96,7 +97,11 @@ public class DeleteDcdnIpaDomainRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name that you want to delete. You can specify only one accelerated domain name in each request.
+         * <p>The accelerated domain name that you want to delete. You can specify only one accelerated domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

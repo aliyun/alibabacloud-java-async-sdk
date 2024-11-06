@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserErStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserErStatusResponseBody</p>
@@ -85,11 +86,14 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether ER is activated.
-         * <p>
+         * <p>Indicates whether ER is activated.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -97,11 +101,14 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether ER has an overdue payment.
-         * <p>
+         * <p>Indicates whether ER has an overdue payment.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inDebt(Boolean inDebt) {
             this.inDebt = inDebt;
@@ -109,11 +116,14 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether an overdue payment of ER has passed the grace period.
-         * <p>
+         * <p>Indicates whether an overdue payment of ER has passed the grace period.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inDebtOverdue(Boolean inDebtOverdue) {
             this.inDebtOverdue = inDebtOverdue;
@@ -121,11 +131,14 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether ER is available.
-         * <p>
+         * <p>Indicates whether ER is available.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onService(Boolean onService) {
             this.onService = onService;
@@ -133,7 +146,10 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F51E9C3-728F-4E35-952D-0ED87A06A8A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

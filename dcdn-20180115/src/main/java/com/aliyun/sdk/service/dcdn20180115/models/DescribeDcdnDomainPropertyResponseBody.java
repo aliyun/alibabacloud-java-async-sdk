@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainPropertyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainPropertyResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -69,11 +73,14 @@ public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * The protocol. Valid values:
-         * <p>
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>udp</strong></li>
+         * <li><strong>tcp</strong></li>
+         * </ul>
          * 
-         * *   **udp**
-         * *   **tcp**
+         * <strong>example:</strong>
+         * <p>udp</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -81,7 +88,10 @@ public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

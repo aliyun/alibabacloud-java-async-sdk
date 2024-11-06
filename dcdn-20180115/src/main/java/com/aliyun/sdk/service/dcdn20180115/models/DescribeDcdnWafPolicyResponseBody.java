@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafPolicyResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the protection policy.
+         * <p>The information about the protection policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -57,7 +58,10 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafPolicyResponseBody</p>
+     */
     public static class Policy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
@@ -193,12 +203,15 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             private Long ruleCount; 
 
             /**
-             * The type of the protection policy. Valid values:
-             * <p>
+             * <p>The type of the protection policy. Valid values:</p>
+             * <ul>
+             * <li>waf_group: basic web protection</li>
+             * <li>custom_acl: custom protection</li>
+             * <li>whitelist: whitelist</li>
+             * </ul>
              * 
-             * *   waf_group: basic web protection
-             * *   custom_acl: custom protection
-             * *   whitelist: whitelist
+             * <strong>example:</strong>
+             * <p>waf_group</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -206,7 +219,10 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of domain names that use the protection policy.
+             * <p>The number of domain names that use the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder domainCount(Integer domainCount) {
                 this.domainCount = domainCount;
@@ -214,7 +230,10 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the protection policy was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the protection policy was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-29T17:08:45Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -222,7 +241,10 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection policy.
+             * <p>The ID of the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -230,7 +252,10 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protection policy.
+             * <p>The name of the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy_test</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -238,11 +263,14 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the protection policy. Valid values:
-             * <p>
+             * <p>The status of the protection policy. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
              * 
-             * *   on
-             * *   off
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;
@@ -250,11 +278,14 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the current policy is the default policy. Valid values:
-             * <p>
+             * <p>Indicates whether the current policy is the default policy. Valid values:</p>
+             * <ul>
+             * <li>default</li>
+             * <li>custom</li>
+             * </ul>
              * 
-             * *   default
-             * *   custom
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -262,7 +293,10 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The protection rule configurations corresponding to the protection policy. The configurations only support Bot management. For more information, see [BatchCreateDcdnWafRules](~~BatchCreateDcdnWafRules~~).
+             * <p>The protection rule configurations corresponding to the protection policy. The configurations only support Bot management. For more information, see <a href="~~BatchCreateDcdnWafRules~~">BatchCreateDcdnWafRules</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{     &quot;type&quot;:&quot;target_type&quot;,     &quot;status&quot;:&quot;on&quot;,     &quot;config&quot;:{&quot;target&quot;:&quot;app&quot;},     &quot;action&quot;:&quot;&quot;   }</p>
              */
             public Builder ruleConfigs(String ruleConfigs) {
                 this.ruleConfigs = ruleConfigs;
@@ -270,7 +304,10 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of protection rules in the protection policy.
+             * <p>The number of protection rules in the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder ruleCount(Long ruleCount) {
                 this.ruleCount = ruleCount;

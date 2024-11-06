@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainCnameRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnDomainCnameRequest</p>
@@ -54,7 +55,11 @@ public class DescribeDcdnDomainCnameRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. Separate multiple domain names with commas (,).
+         * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,example.org</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

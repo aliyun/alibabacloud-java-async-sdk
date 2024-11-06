@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserRealTimeDeliveryFieldRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnUserRealTimeDeliveryFieldRequest</p>
@@ -53,12 +54,15 @@ public class DescribeDcdnUserRealTimeDeliveryFieldRequest extends Request {
         } 
 
         /**
-         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
-         * <p>
+         * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
+         * <ul>
+         * <li><strong>cdn_log_access_l1</strong>: access logs of L1 Dynamic Content Delivery Network (DCDN) points of presence (POPs)</li>
+         * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+         * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+         * </ul>
          * 
-         * *   **cdn_log_access_l1**: access logs of L1 Dynamic Content Delivery Network (DCDN) points of presence (POPs)
-         * *   **cdn_log_origin**: back-to-origin logs
-         * *   **cdn_log_er**: EdgeRoutine logs
+         * <strong>example:</strong>
+         * <p>cdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);

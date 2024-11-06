@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnCertificateDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnCertificateDetailRequest</p>
@@ -82,7 +83,11 @@ public class DescribeDcdnCertificateDetailRequest extends Request {
         } 
 
         /**
-         * The name of the certificate.
+         * <p>The name of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);

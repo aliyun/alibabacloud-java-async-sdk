@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafDomainRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafDomainRequest</p>
@@ -82,7 +83,10 @@ public class DescribeDcdnWafDomainRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. If you do not specify an accelerated domain name, all accelerated domain names are queried.
+         * <p>The accelerated domain name. If you do not specify an accelerated domain name, all accelerated domain names are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -91,7 +95,11 @@ public class DescribeDcdnWafDomainRequest extends Request {
         }
 
         /**
-         * The region where WAF is enabled.
+         * <p>The region where WAF is enabled.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +108,10 @@ public class DescribeDcdnWafDomainRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you leave this parameter empty, the default resource group is used.
+         * <p>The ID of the resource group. If you leave this parameter empty, the default resource group is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

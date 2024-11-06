@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDcdnDeliverTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDcdnDeliverTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDcdnDeliverTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the change tracking task.
+         * <p>The ID of the change tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         public Builder deliverId(String deliverId) {
             this.deliverId = deliverId;
@@ -57,7 +61,10 @@ public class CreateDcdnDeliverTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

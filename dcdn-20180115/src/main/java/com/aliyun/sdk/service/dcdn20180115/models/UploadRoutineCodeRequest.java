@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadRoutineCodeRequest} extends {@link RequestModel}
  *
  * <p>UploadRoutineCodeRequest</p>
@@ -69,7 +70,11 @@ public class UploadRoutineCodeRequest extends Request {
         } 
 
         /**
-         * The description of the code version.
+         * <p>The description of the code version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello World</p>
          */
         public Builder codeDescription(String codeDescription) {
             this.putBodyParameter("CodeDescription", codeDescription);
@@ -78,7 +83,11 @@ public class UploadRoutineCodeRequest extends Request {
         }
 
         /**
-         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+         * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDcdnCertificateSigningRequestResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDcdnCertificateSigningRequestResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateDcdnCertificateSigningRequestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Common Name of the certificate.
+         * <p>The Common Name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -81,7 +85,10 @@ public class CreateDcdnCertificateSigningRequestResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the CSR file.
+         * <p>The content of the CSR file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST-----\nMIIC/zCCAecCAQAwZTELMAkGA1UEBhMCQ04xCzAJBgNVBAgTAlpKMQswCQYDVQQH</p>
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -89,7 +96,10 @@ public class CreateDcdnCertificateSigningRequestResponseBody extends TeaModel {
         }
 
         /**
-         * The MD5 hash value of the certificate public key.
+         * <p>The MD5 hash value of the certificate public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>629bf4fd8104eda171135bcb0f77a10b</p>
          */
         public Builder pubMd5(String pubMd5) {
             this.pubMd5 = pubMd5;
@@ -97,7 +107,10 @@ public class CreateDcdnCertificateSigningRequestResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

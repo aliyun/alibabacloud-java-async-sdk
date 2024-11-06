@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteDcdnDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteDcdnDomainConfigsRequest</p>
@@ -111,7 +112,11 @@ public class BatchDeleteDcdnDomainConfigsRequest extends Request {
         } 
 
         /**
-         * The accelerated domain names whose configurations you want to delete. Separate multiple accelerated domain names with commas (,).
+         * <p>The accelerated domain names whose configurations you want to delete. Separate multiple accelerated domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -120,7 +125,11 @@ public class BatchDeleteDcdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see [Feature settings for a domain name](~~410622~~).
+         * <p>The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see <a href="https://help.aliyun.com/document_detail/410622.html">Feature settings for a domain name</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>referer_white_list_set,https_force</p>
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafScenesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafScenesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The types of the protection policies.
+         * <p>The types of the protection policies.</p>
          */
         public Builder defenseScenes(java.util.List < DefenseScenes> defenseScenes) {
             this.defenseScenes = defenseScenes;
@@ -57,7 +58,10 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7BB13C-DD84-5654-A835-B8E1385DE274</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafScenesResponseBody</p>
+     */
     public static class DefenseScenes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
@@ -121,7 +131,10 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
             private Integer ruleCount; 
 
             /**
-             * The type of the protection policy, which is the same as the DefenseScenes parameter in request parameters.
+             * <p>The type of the protection policy, which is the same as the DefenseScenes parameter in request parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_group</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -129,7 +142,10 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of policies of this type that were configured.
+             * <p>The total number of policies of this type that were configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder policyCount(Integer policyCount) {
                 this.policyCount = policyCount;
@@ -137,7 +153,10 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of protection rules that were configured in this type of the policy.
+             * <p>The total number of protection rules that were configured in this type of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;

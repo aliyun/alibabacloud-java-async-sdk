@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnIpaUserDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnIpaUserDomainsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.
+         * <p>The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.</p>
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -93,7 +94,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of domain names returned per page.
+         * <p>The number of domain names returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA75AADB-5E25-4970-B480-EAA1F5658483</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of domain names returned.
+         * <p>The total number of domain names returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnIpaUserDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnIpaUserDomainsResponseBody</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -205,7 +224,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * The address of the origin server.
+             * <p>The address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.aliyuncs.com</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -213,7 +235,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the origin server.
+             * <p>The port of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -221,7 +246,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -229,7 +257,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the origin server.
+             * <p>The type of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS Domain</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -237,7 +268,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the origin server if multiple origin servers have been specified.
+             * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -251,6 +285,12 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnIpaUserDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnIpaUserDomainsResponseBody</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private java.util.List < Source> source;
@@ -292,6 +332,12 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnIpaUserDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnIpaUserDomainsResponseBody</p>
+     */
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
@@ -427,7 +473,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             private Sources sources; 
 
             /**
-             * The CNAME assigned to the accelerated domain name.
+             * <p>The CNAME assigned to the accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com.*.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -435,7 +484,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the accelerated domain name failed the review.
+             * <p>The reason why the accelerated domain name failed the review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit failed</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -443,7 +495,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -451,15 +506,18 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the accelerated domain name. Valid values:
-             * <p>
+             * <p>The status of the accelerated domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: enabled</li>
+             * <li><strong>offline</strong>: disabled</li>
+             * <li><strong>configuring</strong>: configuring</li>
+             * <li><strong>configure_failed</strong>: configuration failed</li>
+             * <li><strong>checking</strong>: reviewing</li>
+             * <li><strong>check_failed:</strong> review failed</li>
+             * </ul>
              * 
-             * *   **online**: enabled
-             * *   **offline**: disabled
-             * *   **configuring**: configuring
-             * *   **configure_failed**: configuration failed
-             * *   **checking**: reviewing
-             * *   **check_failed:** review failed
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -467,7 +525,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the accelerated domain name was added to Alibaba Cloud CDN.
+             * <p>The time when the accelerated domain name was added to Alibaba Cloud CDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-10-28T09:32:51Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -475,7 +536,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the accelerated domain name was modified.
+             * <p>The time when the accelerated domain name was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-10-28T11:05:52Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -483,7 +547,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd1234abcd****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -491,11 +558,14 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of HTTPS.
-             * <p>
+             * <p>The status of HTTPS.</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**
-             * *   **off**
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder SSLProtocol(String SSLProtocol) {
                 this.SSLProtocol = SSLProtocol;
@@ -503,7 +573,10 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the accelerated domain name was in a sandbox.
+             * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -511,7 +584,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the origin server.
+             * <p>The information about the origin server.</p>
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -525,6 +598,12 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnIpaUserDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnIpaUserDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageData")
         private java.util.List < PageData> pageData;

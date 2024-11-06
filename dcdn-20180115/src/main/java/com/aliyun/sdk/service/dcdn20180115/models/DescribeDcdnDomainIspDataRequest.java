@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainIspDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnDomainIspDataRequest</p>
@@ -81,10 +82,11 @@ public class DescribeDcdnDomainIspDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
-         * <p>
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>If you do not specify an accelerated domain name, the data of all accelerated domain names that belong to your account is queried.</p>
          * 
-         * If you do not specify an accelerated domain name, the data of all accelerated domain names that belong to your account is queried.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,10 +95,13 @@ public class DescribeDcdnDomainIspDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2019-12-06T12:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -105,7 +110,10 @@ public class DescribeDcdnDomainIspDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-05T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

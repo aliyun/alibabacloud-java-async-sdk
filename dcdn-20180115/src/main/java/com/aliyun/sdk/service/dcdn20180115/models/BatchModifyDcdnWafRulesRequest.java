@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchModifyDcdnWafRulesRequest} extends {@link RequestModel}
  *
  * <p>BatchModifyDcdnWafRulesRequest</p>
@@ -69,7 +70,11 @@ public class BatchModifyDcdnWafRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the protection policy.
+         * <p>The ID of the protection policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder policyId(Long policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -78,7 +83,11 @@ public class BatchModifyDcdnWafRulesRequest extends Request {
         }
 
         /**
-         * The configurations of the protection rule.
+         * <p>The configurations of the protection rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;id&quot;:135,&quot;type&quot;:&quot;web_sdk&quot;,&quot;status&quot;:&quot;on&quot;,&quot;config&quot;:{&quot;mode&quot;:&quot;automatic&quot;,&quot;crossDomain&quot;:&quot;example.com&quot;},&quot;action&quot;:&quot;&quot;},{&quot;id&quot;:149,&quot;type&quot;:&quot;intelligence_fake_crawler&quot;,&quot;status&quot;:&quot;on&quot;,&quot;config&quot;:{},&quot;action&quot;:&quot;deny&quot;}]</p>
          */
         public Builder ruleConfigs(String ruleConfigs) {
             this.putBodyParameter("RuleConfigs", ruleConfigs);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafPolicyRequest</p>
@@ -54,7 +55,11 @@ public class DescribeDcdnWafPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the protection policy. You can specify only one ID in each request.
+         * <p>The ID of the protection policy. You can specify only one ID in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRDDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRDDomainsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The status information about the accelerated domain name.
+         * <p>The status information about the accelerated domain name.</p>
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -93,7 +94,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA75AADB-5E25-4970-B480-EAA1F5658483</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRDDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRDDomainsResponseBody</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -205,7 +224,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * The address of the origin server.
+             * <p>The address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -213,7 +235,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the origin server.
+             * <p>The port of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -221,7 +246,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -229,7 +257,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the origin server.
+             * <p>The type of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -237,7 +268,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The origin server weight if multiple origin servers have been specified.
+             * <p>The origin server weight if multiple origin servers have been specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -251,6 +285,12 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRDDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRDDomainsResponseBody</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private java.util.List < Source> source;
@@ -292,6 +332,12 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRDDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRDDomainsResponseBody</p>
+     */
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizName")
         private String bizName;
@@ -459,7 +505,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME assigned to the accelerated domain name.
+             * <p>The CNAME assigned to the accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image.developer.aliyundoc.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -467,7 +516,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the accelerated domain name failed the review.
+             * <p>The reason why the accelerated domain name failed the review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit failed</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -475,7 +527,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -483,15 +538,18 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the accelerated domain name. Valid values:
-             * <p>
+             * <p>The status of the accelerated domain name. Valid values:</p>
+             * <ul>
+             * <li>online: The domain name is enabled.</li>
+             * <li>offline: The domain name is disabled.</li>
+             * <li>configuring: The domain name is being configured.</li>
+             * <li>configure_failed: The domain name failed to be configured.</li>
+             * <li>checking: The domain name is being reviewed.</li>
+             * <li>check_failed: The domain name failed the review.</li>
+             * </ul>
              * 
-             * *   online: The domain name is enabled.
-             * *   offline: The domain name is disabled.
-             * *   configuring: The domain name is being configured.
-             * *   configure_failed: The domain name failed to be configured.
-             * *   checking: The domain name is being reviewed.
-             * *   check_failed: The domain name failed the review.
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -499,7 +557,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the accelerated domain name was added to DCDN.
+             * <p>The time when the accelerated domain name was added to DCDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-10-27T06:26:34Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -507,7 +568,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the accelerated domain name was modified.
+             * <p>The time when the accelerated domain name was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-10-23T09:30:00Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -515,7 +579,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd1234abcd1234</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -523,7 +590,10 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the accelerated domain name was in a sandbox.
+             * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -539,7 +609,7 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the origin server.
+             * <p>The information about the origin server.</p>
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -547,11 +617,14 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTPS is enabled.
-             * <p>
+             * <p>Indicates whether HTTPS is enabled.</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
              * 
-             * *   on
-             * *   off
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder sslProtocol(String sslProtocol) {
                 this.sslProtocol = sslProtocol;
@@ -565,6 +638,12 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRDDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRDDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageData")
         private java.util.List < PageData> pageData;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnWafGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnWafGroupRequest</p>
@@ -53,7 +54,10 @@ public class DeleteDcdnWafGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the custom WAF rule group.
+         * <p>The ID of the custom WAF rule group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000135</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

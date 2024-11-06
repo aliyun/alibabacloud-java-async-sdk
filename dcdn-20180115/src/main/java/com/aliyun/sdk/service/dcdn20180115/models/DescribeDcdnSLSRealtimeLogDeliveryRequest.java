@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSLSRealtimeLogDeliveryRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnSLSRealtimeLogDeliveryRequest</p>
@@ -54,7 +55,11 @@ public class DescribeDcdnSLSRealtimeLogDeliveryRequest extends Request {
         } 
 
         /**
-         * The name of a real-time log delivery project.
+         * <p>The name of a real-time log delivery project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

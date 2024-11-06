@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadRoutineCodeResponseBody} extends {@link TeaModel}
  *
  * <p>UploadRoutineCodeResponseBody</p>
@@ -49,7 +50,7 @@ public class UploadRoutineCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content returned, such as the code version number and information about the code upload.
+         * <p>The content returned, such as the code version number and information about the code upload.</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -57,7 +58,10 @@ public class UploadRoutineCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DFA2027F-86C0-4421-9593-581A7993696C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

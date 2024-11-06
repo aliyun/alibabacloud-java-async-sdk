@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafBotAppKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafBotAppKeyResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDcdnWafBotAppKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The SDK authentication key for the Alibaba Cloud account.
+         * <p>The SDK authentication key for the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>examp1eapp_key_xxxiuMWTX4Gw</p>
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -57,7 +61,10 @@ public class DescribeDcdnWafBotAppKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2542B96-B535-5BF9-8EEE-1CF11B20CCA8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

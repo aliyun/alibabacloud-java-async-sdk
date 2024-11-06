@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDcdnSLSRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDcdnSLSRealtimeLogDeliveryResponseBody</p>
@@ -49,7 +50,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration results of the domain name.
+         * <p>The configuration results of the domain name.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -57,7 +58,10 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDcdnSLSRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateDcdnSLSRealtimeLogDeliveryResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
@@ -133,7 +143,10 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The description of the returned result.
+             * <p>The description of the returned result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -141,7 +154,10 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -149,7 +165,10 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -157,11 +176,14 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the real-time log delivery project was successfully updated. Valid values:
-             * <p>
+             * <p>Indicates whether the real-time log delivery project was successfully updated. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>fail</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **fail**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -175,6 +197,12 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDcdnSLSRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateDcdnSLSRealtimeLogDeliveryResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < Domains> domains;

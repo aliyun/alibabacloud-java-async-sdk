@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDcdnKvNamespaceRequest} extends {@link RequestModel}
  *
  * <p>PutDcdnKvNamespaceRequest</p>
@@ -69,7 +70,11 @@ public class PutDcdnKvNamespaceRequest extends Request {
         } 
 
         /**
-         * The description of the namespace.
+         * <p>The description of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the first namespace</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -78,7 +83,11 @@ public class PutDcdnKvNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace. The name can contain letters, digits, hyphens (-), and underscores (\_).
+         * <p>The name of the namespace. The name can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);

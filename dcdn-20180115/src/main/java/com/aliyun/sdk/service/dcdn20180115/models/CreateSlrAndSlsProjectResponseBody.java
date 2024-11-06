@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlrAndSlsProjectResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSlrAndSlsProjectResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
         private SlsInfo slsInfo; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe33a379-5053-4f22-a73c-826e2b44355d</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The information about Log Service.
+         * <p>The information about Log Service.</p>
          */
         public Builder slsInfo(SlsInfo slsInfo) {
             this.slsInfo = slsInfo;
@@ -70,6 +74,12 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSlrAndSlsProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSlrAndSlsProjectResponseBody</p>
+     */
     public static class SlsInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndPoint")
         private String endPoint;
@@ -133,7 +143,10 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The endpoint of Log Service.
+             * <p>The endpoint of Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai.log.*.com</p>
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -141,7 +154,10 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The Logstore of Log Service.
+             * <p>The Logstore of Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dcdn-edge-trlog</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -149,7 +165,10 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The project of Log Service.
+             * <p>The project of Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dcdn-edge-rtlog-cn-cfc7****</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -157,7 +176,10 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The region where Log Service resides.
+             * <p>The region where Log Service resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;

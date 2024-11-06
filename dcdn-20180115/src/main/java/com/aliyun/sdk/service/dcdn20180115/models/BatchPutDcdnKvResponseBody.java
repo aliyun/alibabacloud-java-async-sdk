@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchPutDcdnKvResponseBody} extends {@link TeaModel}
  *
  * <p>BatchPutDcdnKvResponseBody</p>
@@ -61,7 +62,7 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
         private java.util.List < String > successKeys; 
 
         /**
-         * The keys that failed to be written.
+         * <p>The keys that failed to be written.</p>
          */
         public Builder failKeys(java.util.List < String > failKeys) {
             this.failKeys = failKeys;
@@ -69,7 +70,10 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * The keys that were written.
+         * <p>The keys that were written.</p>
          */
         public Builder successKeys(java.util.List < String > successKeys) {
             this.successKeys = successKeys;

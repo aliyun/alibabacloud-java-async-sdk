@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainIpaConnDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainIpaConnDataResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The number of user connections at each time interval.
+         * <p>The number of user connections at each time interval.</p>
          */
         public Builder connectionDataPerInterval(ConnectionDataPerInterval connectionDataPerInterval) {
             this.connectionDataPerInterval = connectionDataPerInterval;
@@ -81,7 +82,10 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-02-22T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -89,7 +93,10 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2A1EEF8-043E-43A1-807C-BEAC18EA1807</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range during which data was queried.
+         * <p>The beginning of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-02-21T15:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -110,6 +120,12 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainIpaConnDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainIpaConnDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Connections")
         private Long connections;
@@ -161,7 +177,10 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The number of IPA user connections.
+             * <p>The number of IPA user connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>189095</p>
              */
             public Builder connections(Long connections) {
                 this.connections = connections;
@@ -169,7 +188,10 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example1.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -177,7 +199,10 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-21T15:00:00+08:00</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -191,6 +216,12 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainIpaConnDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainIpaConnDataResponseBody</p>
+     */
     public static class ConnectionDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

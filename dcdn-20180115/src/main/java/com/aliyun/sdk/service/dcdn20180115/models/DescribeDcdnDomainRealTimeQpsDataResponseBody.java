@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainRealTimeQpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainRealTimeQpsDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the backup set.
+         * <p>The information about the backup set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32DC9806-E9F9-4490-BBDC-B3A9E32FCC1D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainRealTimeQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainRealTimeQpsDataResponseBody</p>
+     */
     public static class QpsModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Qps")
         private Float qps;
@@ -109,7 +119,10 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The number of queries per second (QPS).
+             * <p>The number of queries per second (QPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1851.25</p>
              */
             public Builder qps(Float qps) {
                 this.qps = qps;
@@ -117,7 +130,10 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-02T11:26:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -131,6 +147,12 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainRealTimeQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainRealTimeQpsDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QpsModel")
         private java.util.List < QpsModel> qpsModel;

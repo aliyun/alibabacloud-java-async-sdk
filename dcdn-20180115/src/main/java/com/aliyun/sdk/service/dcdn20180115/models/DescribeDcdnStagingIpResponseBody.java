@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnStagingIpResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnStagingIpResponseBody</p>
@@ -57,7 +58,10 @@ public class DescribeDcdnStagingIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B9E0E83-24AC-49F4-9EE0-BF5EB03E8381</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnStagingIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnStagingIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnStagingIpResponseBody</p>
+     */
     public static class IPV4s extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPV4")
         private java.util.List < String > IPV4;

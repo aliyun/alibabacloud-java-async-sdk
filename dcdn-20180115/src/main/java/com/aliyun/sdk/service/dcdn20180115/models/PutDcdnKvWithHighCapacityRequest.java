@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDcdnKvWithHighCapacityRequest} extends {@link RequestModel}
  *
  * <p>PutDcdnKvWithHighCapacityRequest</p>
@@ -84,7 +85,10 @@ public class PutDcdnKvWithHighCapacityRequest extends Request {
         } 
 
         /**
-         * Key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_key</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -93,7 +97,10 @@ public class PutDcdnKvWithHighCapacityRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_namesapce</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -102,7 +109,10 @@ public class PutDcdnKvWithHighCapacityRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchPutDcdnKvRequest} extends {@link RequestModel}
  *
  * <p>BatchPutDcdnKvRequest</p>
@@ -69,7 +70,7 @@ public class BatchPutDcdnKvRequest extends Request {
         } 
 
         /**
-         * KvList.
+         * <p>This parameter is required.</p>
          */
         public Builder kvList(java.util.List < KvList> kvList) {
             String kvListShrink = shrink(kvList, "KvList", "json");
@@ -79,7 +80,11 @@ public class BatchPutDcdnKvRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -94,6 +99,12 @@ public class BatchPutDcdnKvRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchPutDcdnKvRequest} extends {@link TeaModel}
+     *
+     * <p>BatchPutDcdnKvRequest</p>
+     */
     public static class KvList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expiration")
         private Long expiration;
@@ -175,7 +186,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -183,7 +194,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;

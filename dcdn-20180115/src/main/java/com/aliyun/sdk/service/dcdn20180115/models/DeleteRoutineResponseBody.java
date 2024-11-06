@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRoutineResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteRoutineResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteRoutineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The message returned, such as ""Status": "OK"".
+         * <p>The message returned, such as &quot;&quot;Status&quot;: &quot;OK&quot;&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Status&quot;: &quot;OK&quot;</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -57,7 +61,10 @@ public class DeleteRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

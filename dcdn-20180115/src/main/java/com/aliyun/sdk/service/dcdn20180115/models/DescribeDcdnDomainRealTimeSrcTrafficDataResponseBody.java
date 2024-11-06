@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody</p>
@@ -97,10 +98,11 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
-         * <p>
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * <p>The time granularity varies with the maximum time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see <strong>Usage notes</strong>.</p>
          * 
-         * The time granularity varies with the maximum time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see **Usage notes**.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -108,7 +110,10 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -116,7 +121,10 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:01:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -124,7 +132,7 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
         }
 
         /**
-         * The amount of origin traffic returned at each time interval. Unit: bytes.
+         * <p>The amount of origin traffic returned at each time interval. Unit: bytes.</p>
          */
         public Builder realTimeSrcTrafficDataPerInterval(RealTimeSrcTrafficDataPerInterval realTimeSrcTrafficDataPerInterval) {
             this.realTimeSrcTrafficDataPerInterval = realTimeSrcTrafficDataPerInterval;
@@ -132,7 +140,10 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A666D44F-19D6-490E-97CF-1A64AB962C57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +151,10 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -153,6 +167,12 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
@@ -192,7 +212,10 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
             private String value; 
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -200,7 +223,10 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
             }
 
             /**
-             * The traffic value at each time interval.
+             * <p>The traffic value at each time interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -214,6 +240,12 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody</p>
+     */
     public static class RealTimeSrcTrafficDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;

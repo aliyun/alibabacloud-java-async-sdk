@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnKvRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnKvRequest</p>
@@ -69,7 +70,11 @@ public class DeleteDcdnKvRequest extends Request {
         } 
 
         /**
-         * The name of the key that you want to delete.
+         * <p>The name of the key that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_key_1</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -78,7 +83,11 @@ public class DeleteDcdnKvRequest extends Request {
         }
 
         /**
-         * The namespace that you specify when you call the PutDcdnKvNamespace operation.
+         * <p>The namespace that you specify when you call the PutDcdnKvNamespace operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

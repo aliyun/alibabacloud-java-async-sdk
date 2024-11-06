@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRDDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRDDomainsRequest</p>
@@ -69,7 +70,10 @@ public class DescribeRDDomainsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Valid values: 1 to 100000.
+         * <p>The number of the page to return. Valid values: 1 to 100000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -78,7 +82,10 @@ public class DescribeRDDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. The default value is 20. Valid values: an integer between 1 and 500. Default value: 20.
+         * <p>The number of entries to return on each page. The default value is 20. Valid values: an integer between 1 and 500. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

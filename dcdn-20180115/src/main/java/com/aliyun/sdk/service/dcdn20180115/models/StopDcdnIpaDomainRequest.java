@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopDcdnIpaDomainRequest} extends {@link RequestModel}
  *
  * <p>StopDcdnIpaDomainRequest</p>
@@ -82,7 +83,11 @@ public class StopDcdnIpaDomainRequest extends Request {
         } 
 
         /**
-         * The name of the accelerated domain that you want to disable. You can specify only one domain name at a time.
+         * <p>The name of the accelerated domain that you want to disable. You can specify only one domain name at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

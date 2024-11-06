@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnBgpBpsDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnBgpBpsDataRequest</p>
@@ -123,7 +124,10 @@ public class DescribeDcdnBgpBpsDataRequest extends Request {
         } 
 
         /**
-         * The name of the device. If you specify this parameter, the data of the device is returned. Otherwise, the data of all devices is returned.
+         * <p>The name of the device. If you specify this parameter, the data of the device is returned. Otherwise, the data of all devices is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>devicename</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -132,7 +136,10 @@ public class DescribeDcdnBgpBpsDataRequest extends Request {
         }
 
         /**
-         * The port of the device. If you specify this parameter, the data of the port is returned. Otherwise, the data of all ports is returned. This parameter takes effect only when the **DeviceName** parameter is specified.
+         * <p>The port of the device. If you specify this parameter, the data of the port is returned. Otherwise, the data of all ports is returned. This parameter takes effect only when the <strong>DeviceName</strong> parameter is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder devicePort(String devicePort) {
             this.putQueryParameter("DevicePort", devicePort);
@@ -141,7 +148,10 @@ public class DescribeDcdnBgpBpsDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-11-30T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -150,7 +160,10 @@ public class DescribeDcdnBgpBpsDataRequest extends Request {
         }
 
         /**
-         * The data collection interval. Unit: seconds. Valid values: 300 and 3600. Default value: 300. The default value of 300 seconds is equal to 5 minutes. The value of this parameter varies based on the time range from the specified start time to the specified end time.
+         * <p>The data collection interval. Unit: seconds. Valid values: 300 and 3600. Default value: 300. The default value of 300 seconds is equal to 5 minutes. The value of this parameter varies based on the time range from the specified start time to the specified end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -159,14 +172,16 @@ public class DescribeDcdnBgpBpsDataRequest extends Request {
         }
 
         /**
-         * The ISPs. If you need to specify multiple ISPs, separate them with commas (,). If you specify multiple ISPs, the data for the ISPs is aggregated. If you do not specify this parameter, the operation returns the data for all the ISPs.
-         * <p>
+         * <p>The ISPs. If you need to specify multiple ISPs, separate them with commas (,). If you specify multiple ISPs, the data for the ISPs is aggregated. If you do not specify this parameter, the operation returns the data for all the ISPs.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cu: China Unicom</li>
+         * <li>cmi: China Mobile</li>
+         * <li>ct: China Telecom</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   cu: China Unicom
-         * *   cmi: China Mobile
-         * *   ct: China Telecom
+         * <strong>example:</strong>
+         * <p>cu</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -175,12 +190,12 @@ public class DescribeDcdnBgpBpsDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The minimum data collection interval is an hour.</p>
+         * <p>If you do not set this parameter, data collected in the last 24 hours is queried.</p>
          * 
-         * The minimum data collection interval is an hour.
-         * 
-         * If you do not set this parameter, data collected in the last 24 hours is queried.
+         * <strong>example:</strong>
+         * <p>2018-11-29T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

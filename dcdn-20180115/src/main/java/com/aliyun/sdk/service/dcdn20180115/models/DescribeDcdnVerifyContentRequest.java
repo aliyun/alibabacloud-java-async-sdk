@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnVerifyContentRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnVerifyContentRequest</p>
@@ -54,7 +55,11 @@ public class DescribeDcdnVerifyContentRequest extends Request {
         } 
 
         /**
-         * The domain name for which you want to query the ownership verification content. You can specify only one domain name in one request.
+         * <p>The domain name for which you want to query the ownership verification content. You can specify only one domain name in one request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>example</strong>.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

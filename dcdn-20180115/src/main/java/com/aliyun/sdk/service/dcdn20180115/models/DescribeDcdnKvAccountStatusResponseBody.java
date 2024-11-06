@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnKvAccountStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnKvAccountStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDcdnKvAccountStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C1E43DC-9E51-4771-82C0-7D5ECEB547A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class DescribeDcdnKvAccountStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the account.
-         * <p>
+         * <p>The status of the account.</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * </ul>
          * 
-         * *   **online**
-         * *   **offline**
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;

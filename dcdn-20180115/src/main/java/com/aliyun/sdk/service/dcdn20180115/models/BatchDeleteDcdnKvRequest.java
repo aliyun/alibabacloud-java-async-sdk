@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteDcdnKvRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteDcdnKvRequest</p>
@@ -69,7 +70,7 @@ public class BatchDeleteDcdnKvRequest extends Request {
         } 
 
         /**
-         * Keys.
+         * <p>This parameter is required.</p>
          */
         public Builder keys(java.util.List < String > keys) {
             String keysShrink = shrink(keys, "Keys", "json");
@@ -79,7 +80,10 @@ public class BatchDeleteDcdnKvRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

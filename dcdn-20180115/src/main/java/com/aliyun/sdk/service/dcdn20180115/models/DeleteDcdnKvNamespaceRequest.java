@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnKvNamespaceRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnKvNamespaceRequest</p>
@@ -54,7 +55,11 @@ public class DeleteDcdnKvNamespaceRequest extends Request {
         } 
 
         /**
-         * The name of the namespace. You can call the [PutDcdnKvNamespace](~~PutDcdnKvNamespace~~) operation to query the name of a namespace.
+         * <p>The name of the namespace. You can call the <a href="~~PutDcdnKvNamespace~~">PutDcdnKvNamespace</a> operation to query the name of a namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

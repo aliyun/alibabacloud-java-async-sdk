@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSubListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnSubListResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDcdnSubListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the custom report.
+         * <p>The information about the custom report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;data&quot;: [{&quot;subId&quot;: 336,&quot;reportId&quot;: [6,8],&quot;createTime&quot;: &quot;2021-07-05T06:18:46Z&quot;,&quot;domains&quot;: [&quot;example.com&quot;],&quot;effectiveFrom&quot;: &quot;2021-07-05T06:18:46Z&quot;,&quot;effectiveEnd&quot;: &quot;2021-10-05T06:18:46Z&quot;,&quot;status&quot;: &quot;enable&quot;}]</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -57,7 +61,10 @@ public class DescribeDcdnSubListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3250A51D-C11D-46BA-B6B3-95348EEDE652</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

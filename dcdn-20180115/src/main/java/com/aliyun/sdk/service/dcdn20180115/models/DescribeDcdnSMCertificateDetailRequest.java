@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSMCertificateDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnSMCertificateDetailRequest</p>
@@ -82,7 +83,11 @@ public class DescribeDcdnSMCertificateDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>648****-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitStagingRoutineCodeResponseBody} extends {@link TeaModel}
  *
  * <p>CommitStagingRoutineCodeResponseBody</p>
@@ -49,7 +50,10 @@ public class CommitStagingRoutineCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The version number of the code.
+         * <p>The version number of the code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620876959997924701</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -57,7 +61,10 @@ public class CommitStagingRoutineCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CC228B4-7A67-4016-9C9F-4A4133494A91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

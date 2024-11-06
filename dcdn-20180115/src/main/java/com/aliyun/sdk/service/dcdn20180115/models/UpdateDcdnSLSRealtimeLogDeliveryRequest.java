@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDcdnSLSRealtimeLogDeliveryRequest} extends {@link RequestModel}
  *
  * <p>UpdateDcdnSLSRealtimeLogDeliveryRequest</p>
@@ -143,14 +144,18 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         } 
 
         /**
-         * The region from which logs are collected.
-         * <p>
+         * <p>The region from which logs are collected.</p>
+         * <ul>
+         * <li><strong>cn</strong>: Chinese mainland</li>
+         * <li><strong>sg</strong>: Singapore</li>
+         * <li><strong>in</strong>: India</li>
+         * <li><strong>eu</strong>: Europe</li>
+         * <li><strong>us</strong>: United States</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn**: Chinese mainland
-         * *   **sg**: Singapore
-         * *   **in**: India
-         * *   **eu**: Europe
-         * *   **us**: United States
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder dataCenter(String dataCenter) {
             this.putBodyParameter("DataCenter", dataCenter);
@@ -159,7 +164,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).
+         * <p>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -168,7 +177,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -177,7 +190,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-cn</p>
          */
         public Builder SLSLogStore(String SLSLogStore) {
             this.putBodyParameter("SLSLogStore", SLSLogStore);
@@ -186,7 +203,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the log file.
+         * <p>The name of the log file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-cn</p>
          */
         public Builder SLSProject(String SLSProject) {
             this.putBodyParameter("SLSProject", SLSProject);
@@ -195,7 +216,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The region to which logs were delivered.
+         * <p>The region to which logs were delivered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder SLSRegion(String SLSRegion) {
             this.putBodyParameter("SLSRegion", SLSRegion);
@@ -204,7 +229,10 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The sampling rate.
+         * <p>The sampling rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder samplingRate(String samplingRate) {
             this.putBodyParameter("SamplingRate", samplingRate);

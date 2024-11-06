@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDcdnUserRealTimeDeliveryFieldRequest} extends {@link RequestModel}
  *
  * <p>UpdateDcdnUserRealTimeDeliveryFieldRequest</p>
@@ -68,12 +69,15 @@ public class UpdateDcdnUserRealTimeDeliveryFieldRequest extends Request {
         } 
 
         /**
-         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
-         * <p>
+         * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
+         * <ul>
+         * <li><strong>cdn_log_access_l1</strong>: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)</li>
+         * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+         * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+         * </ul>
          * 
-         * *   **cdn_log_access_l1**: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)
-         * *   **cdn_log_origin**: back-to-origin logs
-         * *   **cdn_log_er**: EdgeRoutine logs
+         * <strong>example:</strong>
+         * <p>cdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -82,7 +86,11 @@ public class UpdateDcdnUserRealTimeDeliveryFieldRequest extends Request {
         }
 
         /**
-         * The list of fields. Separate multiple fields with commas (,). For more information, see [Fields in a real-time log](~~324199~~).
+         * <p>The list of fields. Separate multiple fields with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/324199.html">Fields in a real-time log</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>body_bytes_sent,client_ip,content_type</p>
          */
         public Builder fields(String fields) {
             this.putQueryParameter("Fields", fields);

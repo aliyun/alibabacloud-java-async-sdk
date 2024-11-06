@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKvUsageDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeKvUsageDataRequest</p>
@@ -138,13 +139,16 @@ public class DescribeKvUsageDataRequest extends Request {
         } 
 
         /**
-         * The request method. If the parameter is empty, data about all methods is returned. Valid values:
-         * <p>
+         * <p>The request method. If the parameter is empty, data about all methods is returned. Valid values:</p>
+         * <ul>
+         * <li><strong>get</strong></li>
+         * <li><strong>put</strong></li>
+         * <li><strong>list</strong></li>
+         * <li><strong>delete</strong></li>
+         * </ul>
          * 
-         * *   **get**
-         * *   **put**
-         * *   **list**
-         * *   **delete**
+         * <strong>example:</strong>
+         * <p>get</p>
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -153,7 +157,10 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-10T23:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -162,7 +169,11 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * The type of the request data. Set the value to **acc**.
+         * <p>The type of the request data. Set the value to <strong>acc</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acc</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -171,10 +182,11 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * The namespace ID. If the parameter is empty, data about all namespaces is returned.
-         * <p>
+         * <p>The namespace ID. If the parameter is empty, data about all namespaces is returned.</p>
+         * <p>You can specify a maximum number of 30 namespace IDs and separate them with commas (,).</p>
          * 
-         * You can specify a maximum number of 30 namespace IDs and separate them with commas (,).
+         * <strong>example:</strong>
+         * <p>12423131231****</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -183,13 +195,15 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * The type of the response data. Valid values:
-         * <p>
+         * <p>The type of the response data. Valid values:</p>
+         * <ul>
+         * <li><strong>detail</strong>: detailed data</li>
+         * <li><strong>total</strong>: summary data</li>
+         * </ul>
+         * <p>Default value: <strong>detail</strong>.</p>
          * 
-         * *   **detail**: detailed data
-         * *   **total**: summary data
-         * 
-         * Default value: **detail**.
+         * <strong>example:</strong>
+         * <p>detail</p>
          */
         public Builder responseType(String responseType) {
             this.putQueryParameter("ResponseType", responseType);
@@ -198,14 +212,16 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * The key that is used to group data. Valid values: **type** and **namespace**.
-         * <p>
+         * <p>The key that is used to group data. Valid values: <strong>type</strong> and <strong>namespace</strong>.</p>
+         * <ul>
+         * <li><strong>type</strong>: Data is grouped by time. The data in the last 5 minutes is returned.</li>
+         * <li><strong>namespace</strong>: Data is grouped by namespace and is not padded with zeros.</li>
+         * <li>Default value: <strong>type</strong>.</li>
+         * </ul>
+         * <p>If <strong>ResponseType</strong> is set to <strong>total</strong>, data to return is not grouped by <strong>namespace</strong> but by <strong>type</strong>.</p>
          * 
-         * *   **type**: Data is grouped by time. The data in the last 5 minutes is returned.
-         * *   **namespace**: Data is grouped by namespace and is not padded with zeros.
-         * *   Default value: **type**.
-         * 
-         * If **ResponseType** is set to **total**, data to return is not grouped by **namespace** but by **type**.
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         public Builder splitBy(String splitBy) {
             this.putQueryParameter("SplitBy", splitBy);
@@ -214,10 +230,11 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The minimum data granularity is 1 hour. If you do not specify this parameter, the data in the last seven days is returned.</p>
          * 
-         * The minimum data granularity is 1 hour. If you do not specify this parameter, the data in the last seven days is returned.
+         * <strong>example:</strong>
+         * <p>2022-08-10T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

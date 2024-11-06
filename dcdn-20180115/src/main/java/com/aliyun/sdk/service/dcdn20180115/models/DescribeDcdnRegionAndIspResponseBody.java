@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnRegionAndIspResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnRegionAndIspResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of ISPs.
+         * <p>The list of ISPs.</p>
          */
         public Builder isps(Isps isps) {
             this.isps = isps;
@@ -69,7 +70,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         }
 
         /**
-         * The list of regions.
+         * <p>The list of regions.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -77,7 +78,10 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2387C335-932C-4E1E-862C-1C4363B6DE72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnRegionAndIspResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnRegionAndIspResponseBody</p>
+     */
     public static class Isp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameEn")
         private String nameEn;
@@ -129,7 +139,10 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             private String nameZh; 
 
             /**
-             * The English name of the region.
+             * <p>The English name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicom</p>
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -137,7 +150,10 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the ISP.
+             * <p>The Chinese name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>联通</p>
              */
             public Builder nameZh(String nameZh) {
                 this.nameZh = nameZh;
@@ -151,6 +167,12 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnRegionAndIspResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnRegionAndIspResponseBody</p>
+     */
     public static class Isps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Isp")
         private java.util.List < Isp> isp;
@@ -192,6 +214,12 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnRegionAndIspResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnRegionAndIspResponseBody</p>
+     */
     public static class Region extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameEn")
         private String nameEn;
@@ -231,7 +259,10 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             private String nameZh; 
 
             /**
-             * The English name of the region.
+             * <p>The English name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liaoning</p>
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -239,7 +270,10 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the region.
+             * <p>The Chinese name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>辽宁省</p>
              */
             public Builder nameZh(String nameZh) {
                 this.nameZh = nameZh;
@@ -253,6 +287,12 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnRegionAndIspResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnRegionAndIspResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < Region> region;

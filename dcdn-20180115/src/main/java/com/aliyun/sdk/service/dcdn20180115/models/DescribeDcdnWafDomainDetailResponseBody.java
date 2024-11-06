@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafDomainDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafDomainDetailResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the accelerated domain name.
+         * <p>The information about the accelerated domain name.</p>
          */
         public Builder domain(Domain domain) {
             this.domain = domain;
@@ -57,7 +58,10 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153ca2cd-3c01-44be-82C0-64dbc6c88630</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafDomainDetailResponseBody</p>
+     */
     public static class DefenseScenes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
@@ -121,12 +131,15 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
             private String policyIds; 
 
             /**
-             * The type of the protection policy. Valid values:
-             * <p>
+             * <p>The type of the protection policy. Valid values:</p>
+             * <ul>
+             * <li>waf_group: basic web protection</li>
+             * <li>custom_acl: custom protection</li>
+             * <li>whitelist: whitelist</li>
+             * </ul>
              * 
-             * *   waf_group: basic web protection
-             * *   custom_acl: custom protection
-             * *   whitelist: whitelist
+             * <strong>example:</strong>
+             * <p>waf_group</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -134,7 +147,10 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection policy.
+             * <p>The ID of the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000002</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -142,7 +158,10 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the protection policy.
+             * <p>The IDs of the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001,10000004</p>
              */
             public Builder policyIds(String policyIds) {
                 this.policyIds = policyIds;
@@ -156,6 +175,12 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafDomainDetailResponseBody</p>
+     */
     public static class Domain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseScenes")
         private java.util.List < DefenseScenes> defenseScenes;
@@ -195,7 +220,7 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * The types of the protection policies.
+             * <p>The types of the protection policies.</p>
              */
             public Builder defenseScenes(java.util.List < DefenseScenes> defenseScenes) {
                 this.defenseScenes = defenseScenes;
@@ -203,7 +228,10 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

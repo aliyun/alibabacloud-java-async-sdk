@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnDomainDetailRequest</p>
@@ -82,7 +83,11 @@ public class DescribeDcdnDomainDetailRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name.
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

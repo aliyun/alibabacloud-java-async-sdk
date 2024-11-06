@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafRuleResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
         private Rule rule; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the protection rule.
+         * <p>The information about the protection rule.</p>
          */
         public Builder rule(Rule rule) {
             this.rule = rule;
@@ -70,6 +74,12 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafRuleResponseBody</p>
+     */
     public static class Rule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
@@ -169,12 +179,15 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
             private String ruleStatus; 
 
             /**
-             * The type of the protection policy. Valid values:
-             * <p>
+             * <p>The type of the protection policy. Valid values:</p>
+             * <ul>
+             * <li>waf_group: basic web protection</li>
+             * <li>custom_acl: custom protection</li>
+             * <li>whitelist: IP address whitelist</li>
+             * </ul>
              * 
-             * *   waf_group: basic web protection
-             * *   custom_acl: custom protection
-             * *   whitelist: IP address whitelist
+             * <strong>example:</strong>
+             * <p>custom_acl</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -182,7 +195,10 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scaling group was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the scaling group was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-29T17:08:45Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -190,7 +206,10 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection policy.
+             * <p>The ID of the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200001</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -198,7 +217,10 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the protection rule.
+             * <p>The configurations of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;action&quot;:&quot;monitor&quot;,&quot;actionExternal&quot;:&quot;{}&quot;,&quot;ccStatus&quot;:1,&quot;conditions&quot;:[{&quot;key&quot;:&quot;URL&quot;,&quot;opValue&quot;:&quot;eq&quot;,&quot;targetKey&quot;:&quot;request_uri&quot;,&quot;values&quot;:&quot;/example&quot;},{&quot;key&quot;:&quot;Header&quot;,&quot;opValue&quot;:&quot;eq&quot;,&quot;subKey&quot;:&quot;trt&quot;,&quot;targetKey&quot;:&quot;header.trt&quot;,&quot;values&quot;:&quot;3333&quot;}],&quot;effect&quot;:&quot;service&quot;,&quot;name&quot;:&quot;aaa333&quot;,&quot;origin&quot;:&quot;custom&quot;,&quot;ratelimit&quot;:{&quot;interval&quot;:5,&quot;status&quot;:{&quot;code&quot;:404,&quot;count&quot;:2,&quot;stat&quot;:{&quot;mode&quot;:&quot;count&quot;,&quot;value&quot;:2.0}},&quot;target&quot;:&quot;remote_addr&quot;,&quot;threshold&quot;:2,&quot;ttl&quot;:1800}}</p>
              */
             public Builder ruleConfig(String ruleConfig) {
                 this.ruleConfig = ruleConfig;
@@ -206,7 +228,10 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection rule.
+             * <p>The ID of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -214,7 +239,10 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protection rule.
+             * <p>The name of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -222,11 +250,14 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the protection rule. Valid values:
-             * <p>
+             * <p>The status of the protection rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
              * 
-             * *   on
-             * *   off
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;

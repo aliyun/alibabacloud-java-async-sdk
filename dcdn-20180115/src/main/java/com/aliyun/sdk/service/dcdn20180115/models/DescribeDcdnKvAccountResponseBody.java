@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnKvAccountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnKvAccountResponseBody</p>
@@ -141,7 +142,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The available capacity of all namespaces.
+         * <p>The available capacity of all namespaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2GB</p>
          */
         public Builder capacityString(String capacityString) {
             this.capacityString = capacityString;
@@ -157,7 +161,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         }
 
         /**
-         * All namespaces have used capacity.
+         * <p>All namespaces have used capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200 MB</p>
          */
         public Builder capacityUsedString(String capacityUsedString) {
             this.capacityUsedString = capacityUsedString;
@@ -165,7 +172,7 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the namespaces.
+         * <p>Details about the namespaces.</p>
          */
         public Builder namespaceList(java.util.List < NamespaceList> namespaceList) {
             this.namespaceList = namespaceList;
@@ -173,7 +180,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of namespaces that you can apply for by using your account.
+         * <p>The maximum number of namespaces that you can apply for by using your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder namespaceQuota(Integer namespaceQuota) {
             this.namespaceQuota = namespaceQuota;
@@ -181,7 +191,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of namespaces that you applied for by using your account.
+         * <p>The number of namespaces that you applied for by using your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder namespaceUsed(Integer namespaceUsed) {
             this.namespaceUsed = namespaceUsed;
@@ -189,7 +202,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,11 +213,14 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the account.
-         * <p>
+         * <p>The status of the account.</p>
+         * <ul>
+         * <li><strong>online</strong>: enabled</li>
+         * <li><strong>offline</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **online**: enabled
-         * *   **offline**: disabled
+         * <strong>example:</strong>
+         * <p>online,offline</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -214,6 +233,12 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnKvAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnKvAccountResponseBody</p>
+     */
     public static class NamespaceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
@@ -333,7 +358,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The available capacity of the namespace.
+             * <p>The available capacity of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 GB</p>
              */
             public Builder capacityString(String capacityString) {
                 this.capacityString = capacityString;
@@ -349,7 +377,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace has used capacity.
+             * <p>The namespace has used capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100 MB</p>
              */
             public Builder capacityUsedString(String capacityUsedString) {
                 this.capacityUsedString = capacityUsedString;
@@ -357,7 +388,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the first namespace</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -365,7 +399,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns1</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -373,7 +410,10 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12423131231****</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -381,13 +421,16 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the namespace. Valid values:
-             * <p>
+             * <p>The status of the namespace. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: normal</li>
+             * <li><strong>delete</strong>: pending delete</li>
+             * <li><strong>deleting</strong>: being deleted</li>
+             * <li><strong>deleted</strong>: deleted</li>
+             * </ul>
              * 
-             * *   **online**: normal
-             * *   **delete**: pending delete
-             * *   **deleting**: being deleted
-             * *   **deleted**: deleted
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;

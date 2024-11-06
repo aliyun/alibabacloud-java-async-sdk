@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainHttpCodeDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainHttpCodeDataResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -105,7 +109,7 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The proportions of HTTP status codes at each time interval.
+         * <p>The proportions of HTTP status codes at each time interval.</p>
          */
         public Builder dataPerInterval(DataPerInterval dataPerInterval) {
             this.dataPerInterval = dataPerInterval;
@@ -113,7 +117,10 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -121,7 +128,10 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-01T13:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -129,7 +139,10 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91FC2D9D-B042-4634-8A5C-7B8E7482C22D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-01T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,6 +166,12 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainHttpCodeDataResponseBody</p>
+     */
     public static class HttpCodeDataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -201,7 +223,10 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
             private Float proportion; 
 
             /**
-             * The HTTP status code returned.
+             * <p>The HTTP status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -209,7 +234,10 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * The count of each HTTP status code.
+             * <p>The count of each HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Float count) {
                 this.count = count;
@@ -217,7 +245,10 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of the HTTP status code.
+             * <p>The proportion of the HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33.333333</p>
              */
             public Builder proportion(Float proportion) {
                 this.proportion = proportion;
@@ -231,6 +262,12 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainHttpCodeDataResponseBody</p>
+     */
     public static class HttpCodeDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpCodeDataModule")
         private java.util.List < HttpCodeDataModule> httpCodeDataModule;
@@ -272,6 +309,12 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainHttpCodeDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpCodeDataPerInterval")
         private HttpCodeDataPerInterval httpCodeDataPerInterval;
@@ -311,7 +354,7 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The proportions of the HTTP status codes.
+             * <p>The proportions of the HTTP status codes.</p>
              */
             public Builder httpCodeDataPerInterval(HttpCodeDataPerInterval httpCodeDataPerInterval) {
                 this.httpCodeDataPerInterval = httpCodeDataPerInterval;
@@ -319,7 +362,10 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-01T13:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -333,6 +379,12 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainHttpCodeDataResponseBody</p>
+     */
     public static class DataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
