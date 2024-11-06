@@ -613,6 +613,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCdnSubListResponse> describeCdnSubList(DescribeCdnSubListRequest request);
 
     /**
+     * @param request the request parameters of DescribeCdnTypes  DescribeCdnTypesRequest
+     * @return DescribeCdnTypesResponse
+     */
+    CompletableFuture<DescribeCdnTypesResponse> describeCdnTypes(DescribeCdnTypesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can query billing history up to the last one month.</p>
      * <ul>
@@ -2176,6 +2182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTopDomainsByFlowResponse> describeTopDomainsByFlow(DescribeTopDomainsByFlowRequest request);
 
     /**
+     * @param request the request parameters of DescribeUserCdnStatus  DescribeUserCdnStatusRequest
+     * @return DescribeUserCdnStatusResponse
+     */
+    CompletableFuture<DescribeUserCdnStatusResponse> describeUserCdnStatus(DescribeUserCdnStatusRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 100 times per second per account.</p>
@@ -2373,6 +2385,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyCdnDomainSchdmByPropertyResponse
      */
     CompletableFuture<ModifyCdnDomainSchdmByPropertyResponse> modifyCdnDomainSchdmByProperty(ModifyCdnDomainSchdmByPropertyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCdnService  ModifyCdnServiceRequest
+     * @return ModifyCdnServiceResponse
+     */
+    CompletableFuture<ModifyCdnServiceResponse> modifyCdnService(ModifyCdnServiceRequest request);
 
     /**
      * <b>description</b> :
