@@ -136,6 +136,9 @@ public class GetTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private String options;
+
         @com.aliyun.core.annotation.NameInMap("Variable")
         private String variable;
 
@@ -143,6 +146,7 @@ public class GetTemplateResponseBody extends TeaModel {
             this.attribute = builder.attribute;
             this.dataType = builder.dataType;
             this.defaultValue = builder.defaultValue;
+            this.options = builder.options;
             this.variable = builder.variable;
         }
 
@@ -176,6 +180,13 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return options
+         */
+        public String getOptions() {
+            return this.options;
+        }
+
+        /**
          * @return variable
          */
         public String getVariable() {
@@ -186,6 +197,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private String attribute; 
             private String dataType; 
             private String defaultValue; 
+            private String options; 
             private String variable; 
 
             /**
@@ -218,6 +230,14 @@ public class GetTemplateResponseBody extends TeaModel {
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * Options.
+             */
+            public Builder options(String options) {
+                this.options = options;
                 return this;
             }
 
