@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeUsersResponse} extends {@link TeaModel}
+ * {@link ChangeUserPasswordResponse} extends {@link TeaModel}
  *
- * <p>DescribeUsersResponse</p>
+ * <p>ChangeUserPasswordResponse</p>
  */
-public class DescribeUsersResponse extends Response {
+public class ChangeUserPasswordResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DescribeUsersResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeUsersResponseBody body;
+    private ChangeUserPasswordResponseBody body;
 
-    private DescribeUsersResponse(BuilderImpl builder) {
+    private ChangeUserPasswordResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeUsersResponse create() {
+    public static ChangeUserPasswordResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DescribeUsersResponse extends Response {
     /**
      * @return body
      */
-    public DescribeUsersResponseBody getBody() {
+    public ChangeUserPasswordResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeUsersResponse, Builder> {
+    public interface Builder extends Response.Builder<ChangeUserPasswordResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeUsersResponseBody body);
+        Builder body(ChangeUserPasswordResponseBody body);
 
         @Override
-        DescribeUsersResponse build();
+        ChangeUserPasswordResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeUsersResponse, Builder>
+            extends Response.BuilderImpl<ChangeUserPasswordResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeUsersResponseBody body; 
+        private ChangeUserPasswordResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeUsersResponse response) {
+        private BuilderImpl(ChangeUserPasswordResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DescribeUsersResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeUsersResponseBody body) {
+        public Builder body(ChangeUserPasswordResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeUsersResponse build() {
-            return new DescribeUsersResponse(this);
+        public ChangeUserPasswordResponse build() {
+            return new ChangeUserPasswordResponse(this);
         } 
 
     } 

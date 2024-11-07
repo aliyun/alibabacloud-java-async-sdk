@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckUsedPropertyValueResponseBody} extends {@link TeaModel}
  *
  * <p>CheckUsedPropertyValueResponseBody</p>
@@ -49,7 +50,10 @@ public class CheckUsedPropertyValueResponseBody extends TeaModel {
         private Long useCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CheckUsedPropertyValueResponseBody extends TeaModel {
         }
 
         /**
-         * The number of convenience users that are associated with the property value.
+         * <p>The number of convenience users that are associated with the property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder useCount(Long useCount) {
             this.useCount = useCount;

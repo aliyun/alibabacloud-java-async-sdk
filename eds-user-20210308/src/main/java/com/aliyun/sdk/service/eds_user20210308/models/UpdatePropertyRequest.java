@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePropertyRequest} extends {@link RequestModel}
  *
  * <p>UpdatePropertyRequest</p>
@@ -83,7 +84,11 @@ public class UpdatePropertyRequest extends Request {
         } 
 
         /**
-         * The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.
+         * <p>The ID of the property that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>390</p>
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
@@ -92,7 +97,11 @@ public class UpdatePropertyRequest extends Request {
         }
 
         /**
-         * The new property name.
+         * <p>The new property name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         public Builder propertyKey(String propertyKey) {
             this.putBodyParameter("PropertyKey", propertyKey);
@@ -101,7 +110,7 @@ public class UpdatePropertyRequest extends Request {
         }
 
         /**
-         * The values of property.
+         * <p>The values of property.</p>
          */
         public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
             this.putBodyParameter("PropertyValues", propertyValues);
@@ -116,6 +125,12 @@ public class UpdatePropertyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePropertyRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePropertyRequest</p>
+     */
     public static class PropertyValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
@@ -155,7 +170,10 @@ public class UpdatePropertyRequest extends Request {
             private Long propertyValueId; 
 
             /**
-             * The new property value.
+             * <p>The new property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -163,7 +181,10 @@ public class UpdatePropertyRequest extends Request {
             }
 
             /**
-             * The ID of property value that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property value ID.
+             * <p>The ID of property value that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property value ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>978</p>
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;

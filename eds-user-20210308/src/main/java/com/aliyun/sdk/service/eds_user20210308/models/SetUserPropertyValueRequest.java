@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetUserPropertyValueRequest} extends {@link RequestModel}
  *
  * <p>SetUserPropertyValueRequest</p>
@@ -99,7 +100,11 @@ public class SetUserPropertyValueRequest extends Request {
         } 
 
         /**
-         * The property ID. You can call the [ListProperty](~~ListProperty~~) operation to query the property ID.
+         * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>390</p>
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
@@ -108,7 +113,11 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * The ID of the property value. You can call the [ListProperty](~~ListProperty~~) operation to query the ID of the property value.
+         * <p>The ID of the property value. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the ID of the property value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>978</p>
          */
         public Builder propertyValueId(Long propertyValueId) {
             this.putBodyParameter("PropertyValueId", propertyValueId);
@@ -117,7 +126,11 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * The ID of the convenience user. You can call the [DescribeUsers](~~DescribeUsers~~) operation to query the user ID.
+         * <p>The ID of the convenience user. You can call the <a href="~~DescribeUsers~~">DescribeUsers</a> operation to query the user ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("UserId", userId);
@@ -126,7 +139,11 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * The username of the convenience user.
+         * <p>The username of the convenience user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

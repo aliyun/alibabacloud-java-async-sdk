@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetUserPasswordRequest} extends {@link RequestModel}
  *
  * <p>ResetUserPasswordRequest</p>
@@ -68,10 +69,13 @@ public class ResetUserPasswordRequest extends Request {
         } 
 
         /**
-         * The method to notify the user after the password is reset.
-         * <p>
+         * <p>The method to notify the user after the password is reset.</p>
+         * <blockquote>
+         * <p>Alibaba Cloud accounts of the international site do not support sending notification through text messages.</p>
+         * </blockquote>
          * 
-         * > Alibaba Cloud accounts of the international site do not support sending notification through text messages.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder notifyType(Integer notifyType) {
             this.putBodyParameter("NotifyType", notifyType);
@@ -80,7 +84,11 @@ public class ResetUserPasswordRequest extends Request {
         }
 
         /**
-         * The names of the convenience users whose passwords you want to reset.
+         * <p>The names of the convenience users whose passwords you want to reset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder users(java.util.List < String > users) {
             this.putBodyParameter("Users", users);

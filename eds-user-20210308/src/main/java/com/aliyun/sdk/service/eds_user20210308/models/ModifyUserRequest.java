@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUserRequest} extends {@link RequestModel}
  *
  * <p>ModifyUserRequest</p>
@@ -82,7 +83,10 @@ public class ModifyUserRequest extends Request {
         } 
 
         /**
-         * The email address of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.
+         * <p>The email address of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -91,7 +95,11 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * The name of the user.
+         * <p>The name of the user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -100,10 +108,13 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * The mobile number of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.
-         * <p>
+         * <p>The mobile number of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.</p>
+         * <blockquote>
+         * <p> Accounts created on the International site (alibabacloud.com) do not support mobile number-based authentication.</p>
+         * </blockquote>
          * 
-         * >  Accounts created on the International site (alibabacloud.com) do not support mobile number-based authentication.
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);

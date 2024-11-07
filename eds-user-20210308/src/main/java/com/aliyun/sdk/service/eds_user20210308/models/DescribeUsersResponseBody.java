@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUsersResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,10 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the convenience users.
+         * <p>The information about the convenience users.</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -90,6 +97,12 @@ public class DescribeUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersResponseBody</p>
+     */
     public static class Extras extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignedResourceCount")
         private java.util.Map < String, ? > assignedResourceCount;
@@ -131,6 +144,12 @@ public class DescribeUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
@@ -170,7 +189,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The ID of the user group.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ug-12341234****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -178,7 +200,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user group.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User Group 1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -192,6 +217,12 @@ public class DescribeUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersResponseBody</p>
+     */
     public static class Orgs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
@@ -231,7 +262,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String orgName; 
 
             /**
-             * The organization ID.
+             * <p>The organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org-4mdgc1cocc59z****</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -239,7 +273,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The organization name.
+             * <p>The organization name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Organization 1</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
@@ -253,6 +290,12 @@ public class DescribeUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -484,7 +527,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String wyId; 
 
             /**
-             * The work address of the convenience user.
+             * <p>The work address of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou ***</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -492,7 +538,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The profile picture of the convenience user.
+             * <p>The profile picture of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cdn">https://cdn</a>.*****</p>
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -500,7 +549,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the convenience user.
+             * <p>The email address of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -508,7 +560,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the convenience user.
+             * <p>The username of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -524,7 +579,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The user groups to which the convenience user belongs.
+             * <p>The user groups to which the convenience user belongs.</p>
              */
             public Builder groups(java.util.List < Groups> groups) {
                 this.groups = groups;
@@ -532,7 +587,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the convenience user.
+             * <p>The ID of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4205**</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -540,7 +598,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the convenience user is an administrator. If the convenience user is of the administrator-activated type, you must specify a user administrator. Notifications such as password reset on a client are sent to the email address or mobile number of the user administrator. For more information, see [Create a convenience user](~~214472~~).
+             * <p>Indicates whether the convenience user is an administrator. If the convenience user is of the administrator-activated type, you must specify a user administrator. Notifications such as password reset on a client are sent to the email address or mobile number of the user administrator. For more information, see <a href="https://help.aliyun.com/document_detail/214472.html">Create a convenience user</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTenantManager(Boolean isTenantManager) {
                 this.isTenantManager = isTenantManager;
@@ -548,7 +609,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The employee number of the convenience user.
+             * <p>The employee number of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A10000**</p>
              */
             public Builder jobNumber(String jobNumber) {
                 this.jobNumber = jobNumber;
@@ -556,7 +620,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the convenience user.
+             * <p>The nickname of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lee</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -564,10 +631,13 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the organization to which the convenience user belongs.
-             * <p>
+             * <p>The ID of the organization to which the convenience user belongs.</p>
+             * <blockquote>
+             * <p> This parameter will be deprecated in the future.</p>
+             * </blockquote>
              * 
-             * >  This parameter will be deprecated in the future.
+             * <strong>example:</strong>
+             * <p>org-4mdgc1cocc59z****</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -575,7 +645,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The organizations to which the convenience user belongs.
+             * <p>The organizations to which the convenience user belongs.</p>
              */
             public Builder orgs(java.util.List < Orgs> orgs) {
                 this.orgs = orgs;
@@ -583,37 +653,34 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the convenience account.
-             * <p>
+             * <p>The type of the convenience account.</p>
+             * <ul>
+             * <li>Administrator-activated type: The administrator specifies the username and password of the convenience account. User notifications such as password reset notifications are sent to the email address or mobile number of the administrator.</li>
+             * <li>User-activated type: The administrator specifies the username and the email address or mobile number of a convenience user. Notifications such as activation notifications that contain the default password are sent to the email address or mobile number of the convenience user.</li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>CreateFromManager</p>
+             * <!-- -->
              * 
-             * *   Administrator-activated type: The administrator specifies the username and password of the convenience account. User notifications such as password reset notifications are sent to the email address or mobile number of the administrator.
-             * *   User-activated type: The administrator specifies the username and the email address or mobile number of a convenience user. Notifications such as activation notifications that contain the default password are sent to the email address or mobile number of the convenience user.
+             * <p>:</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>administrator-activated</p>
+             * <!-- -->
+             * </li>
+             * <li><p>Normal</p>
+             * <!-- -->
              * 
-             * *   CreateFromManager
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>user-activated</p>
+             * <!-- --></li>
+             * </ul>
              * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     administrator-activated
-             * 
-             *     <!-- -->
-             * 
-             * *   Normal
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     user-activated
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
@@ -621,7 +688,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the convenience user. If you leave this parameter empty, the value of this parameter is not returned.
+             * <p>The mobile number of the convenience user. If you leave this parameter empty, the value of this parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -637,7 +707,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks on the convenience user.
+             * <p>The remarks on the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestUser</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -645,26 +718,26 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the convenience user.
-             * <p>
+             * <p>The status of the convenience user.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>0: The convenience user is normal.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   0: The convenience user is normal.
+             * <!-- -->
+             * </li>
+             * <li><p>9: The convenience user is locked.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   9: The convenience user is locked.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -672,7 +745,10 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The globally unique ID of the convenience user.
+             * <p>The globally unique ID of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41fd1254d8f7****</p>
              */
             public Builder wyId(String wyId) {
                 this.wyId = wyId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetUserPasswordResponseBody} extends {@link TeaModel}
  *
  * <p>ResetUserPasswordResponseBody</p>
@@ -49,7 +50,10 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         private ResetUsersResult resetUsersResult; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32D05B39-E6EE-4D7A-9FD0-762A26859D0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * The result of resetting the password of the convenience user.
+         * <p>The result of resetting the password of the convenience user.</p>
          */
         public Builder resetUsersResult(ResetUsersResult resetUsersResult) {
             this.resetUsersResult = resetUsersResult;
@@ -70,6 +74,12 @@ public class ResetUserPasswordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ResetUserPasswordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ResetUserPasswordResponseBody</p>
+     */
     public static class FailedUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
@@ -121,7 +131,10 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * The ID of the convenience user whose password failed to be reset.
+             * <p>The ID of the convenience user whose password failed to be reset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -129,7 +142,10 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidUsername</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -137,7 +153,10 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123 is an invalid username.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -151,6 +170,12 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ResetUserPasswordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ResetUserPasswordResponseBody</p>
+     */
     public static class ResetUsersResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedUsers")
         private java.util.List < FailedUsers> failedUsers;
@@ -190,7 +215,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             private java.util.List < String > resetUsers; 
 
             /**
-             * The information about the convenience users whose passwords failed to be reset.
+             * <p>The information about the convenience users whose passwords failed to be reset.</p>
              */
             public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
@@ -198,7 +223,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * The convenience users to which the system sent a password reset email.
+             * <p>The convenience users to which the system sent a password reset email.</p>
              */
             public Builder resetUsers(java.util.List < String > resetUsers) {
                 this.resetUsers = resetUsers;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetManagerInfoByAuthCodeResponseBody} extends {@link TeaModel}
  *
  * <p>GetManagerInfoByAuthCodeResponseBody</p>
@@ -97,7 +98,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         private Long waId; 
 
         /**
-         * The organization ID.
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678901234****</p>
          */
         public Builder orgId(String orgId) {
             this.orgId = orgId;
@@ -105,7 +109,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The mobile number.
+         * <p>The mobile number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1301234****</p>
          */
         public Builder phone(String phone) {
             this.phone = phone;
@@ -113,7 +120,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The team name.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>devteam</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -129,7 +142,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The tenant name.
+         * <p>The tenant name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -137,7 +153,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Elastic Desktop Service account.
+         * <p>The ID of the Elastic Desktop Service account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678901234****</p>
          */
         public Builder waId(Long waId) {
             this.waId = waId;

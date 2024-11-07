@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of BatchSetDesktopManager  BatchSetDesktopManagerRequest
+     * @return BatchSetDesktopManagerResponse
+     */
     @Override
     public CompletableFuture<BatchSetDesktopManagerResponse> batchSetDesktopManager(BatchSetDesktopManagerRequest request) {
         try {
@@ -53,6 +57,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeUserPassword  ChangeUserPasswordRequest
+     * @return ChangeUserPasswordResponse
+     */
+    @Override
+    public CompletableFuture<ChangeUserPasswordResponse> changeUserPassword(ChangeUserPasswordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChangeUserPassword").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeUserPasswordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeUserPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CheckUsedProperty  CheckUsedPropertyRequest
+     * @return CheckUsedPropertyResponse
+     */
     @Override
     public CompletableFuture<CheckUsedPropertyResponse> checkUsedProperty(CheckUsedPropertyRequest request) {
         try {
@@ -68,8 +94,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
-      *
+     * <b>description</b> :
+     * <p>Before you call the operation, you can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).</p>
+     * 
+     * @param request the request parameters of CheckUsedPropertyValue  CheckUsedPropertyValueRequest
+     * @return CheckUsedPropertyValueResponse
      */
     @Override
     public CompletableFuture<CheckUsedPropertyValueResponse> checkUsedPropertyValue(CheckUsedPropertyValueRequest request) {
@@ -85,6 +114,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateProperty  CreatePropertyRequest
+     * @return CreatePropertyResponse
+     */
     @Override
     public CompletableFuture<CreatePropertyResponse> createProperty(CreatePropertyRequest request) {
         try {
@@ -100,8 +133,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
-      *
+     * <b>description</b> :
+     * <p>Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.</p>
+     * 
+     * @param request the request parameters of CreateUsers  CreateUsersRequest
+     * @return CreateUsersResponse
      */
     @Override
     public CompletableFuture<CreateUsersResponse> createUsers(CreateUsersRequest request) {
@@ -118,8 +154,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.</p>
+     * 
+     * @param request the request parameters of DeleteUserPropertyValue  DeleteUserPropertyValueRequest
+     * @return DeleteUserPropertyValueResponse
      */
     @Override
     public CompletableFuture<DeleteUserPropertyValueResponse> deleteUserPropertyValue(DeleteUserPropertyValueRequest request) {
@@ -135,6 +174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMfaDevices  DescribeMfaDevicesRequest
+     * @return DescribeMfaDevicesResponse
+     */
     @Override
     public CompletableFuture<DescribeMfaDevicesResponse> describeMfaDevices(DescribeMfaDevicesRequest request) {
         try {
@@ -150,8 +193,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.
-      *
+     * <b>description</b> :
+     * <p>An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.</p>
+     * 
+     * @param request the request parameters of DescribeOrgs  DescribeOrgsRequest
+     * @return DescribeOrgsResponse
      */
     @Override
     public CompletableFuture<DescribeOrgsResponse> describeOrgs(DescribeOrgsRequest request) {
@@ -167,6 +213,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUsers  DescribeUsersRequest
+     * @return DescribeUsersResponse
+     */
     @Override
     public CompletableFuture<DescribeUsersResponse> describeUsers(DescribeUsersRequest request) {
         try {
@@ -181,6 +231,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FilterUsers  FilterUsersRequest
+     * @return FilterUsersResponse
+     */
     @Override
     public CompletableFuture<FilterUsersResponse> filterUsers(FilterUsersRequest request) {
         try {
@@ -195,6 +249,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetManagerInfoByAuthCode  GetManagerInfoByAuthCodeRequest
+     * @return GetManagerInfoByAuthCodeResponse
+     */
     @Override
     public CompletableFuture<GetManagerInfoByAuthCodeResponse> getManagerInfoByAuthCode(GetManagerInfoByAuthCodeRequest request) {
         try {
@@ -209,6 +267,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProperty  ListPropertyRequest
+     * @return ListPropertyResponse
+     */
     @Override
     public CompletableFuture<ListPropertyResponse> listProperty(ListPropertyRequest request) {
         try {
@@ -223,6 +285,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPropertyValue  ListPropertyValueRequest
+     * @return ListPropertyValueResponse
+     */
     @Override
     public CompletableFuture<ListPropertyValueResponse> listPropertyValue(ListPropertyValueRequest request) {
         try {
@@ -238,8 +304,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the [UnlockMfaDevice](~~286534~~) operation to unlock the virtual MFA device.
-      *
+     * <b>description</b> :
+     * <p>After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the <a href="https://help.aliyun.com/document_detail/286534.html">UnlockMfaDevice</a> operation to unlock the virtual MFA device.</p>
+     * 
+     * @param request the request parameters of LockMfaDevice  LockMfaDeviceRequest
+     * @return LockMfaDeviceResponse
      */
     @Override
     public CompletableFuture<LockMfaDeviceResponse> lockMfaDevice(LockMfaDeviceRequest request) {
@@ -255,6 +324,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LockUsers  LockUsersRequest
+     * @return LockUsersResponse
+     */
     @Override
     public CompletableFuture<LockUsersResponse> lockUsers(LockUsersRequest request) {
         try {
@@ -269,6 +342,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyUser  ModifyUserRequest
+     * @return ModifyUserResponse
+     */
     @Override
     public CompletableFuture<ModifyUserResponse> modifyUser(ModifyUserRequest request) {
         try {
@@ -283,6 +360,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySyncStatusByAliUid  QuerySyncStatusByAliUidRequest
+     * @return QuerySyncStatusByAliUidResponse
+     */
     @Override
     public CompletableFuture<QuerySyncStatusByAliUidResponse> querySyncStatusByAliUid(QuerySyncStatusByAliUidRequest request) {
         try {
@@ -298,8 +379,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.
-      *
+     * <b>description</b> :
+     * <p>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</p>
+     * 
+     * @param request the request parameters of RemoveMfaDevice  RemoveMfaDeviceRequest
+     * @return RemoveMfaDeviceResponse
      */
     @Override
     public CompletableFuture<RemoveMfaDeviceResponse> removeMfaDevice(RemoveMfaDeviceRequest request) {
@@ -315,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveProperty  RemovePropertyRequest
+     * @return RemovePropertyResponse
+     */
     @Override
     public CompletableFuture<RemovePropertyResponse> removeProperty(RemovePropertyRequest request) {
         try {
@@ -329,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUsers  RemoveUsersRequest
+     * @return RemoveUsersResponse
+     */
     @Override
     public CompletableFuture<RemoveUsersResponse> removeUsers(RemoveUsersRequest request) {
         try {
@@ -343,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetUserPassword  ResetUserPasswordRequest
+     * @return ResetUserPasswordResponse
+     */
     @Override
     public CompletableFuture<ResetUserPasswordResponse> resetUserPassword(ResetUserPasswordRequest request) {
         try {
@@ -357,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetUserPropertyValue  SetUserPropertyValueRequest
+     * @return SetUserPropertyValueResponse
+     */
     @Override
     public CompletableFuture<SetUserPropertyValueResponse> setUserPropertyValue(SetUserPropertyValueRequest request) {
         try {
@@ -371,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SyncAllEduInfo  SyncAllEduInfoRequest
+     * @return SyncAllEduInfoResponse
+     */
     @Override
     public CompletableFuture<SyncAllEduInfoResponse> syncAllEduInfo(SyncAllEduInfoRequest request) {
         try {
@@ -385,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnlockMfaDevice  UnlockMfaDeviceRequest
+     * @return UnlockMfaDeviceResponse
+     */
     @Override
     public CompletableFuture<UnlockMfaDeviceResponse> unlockMfaDevice(UnlockMfaDeviceRequest request) {
         try {
@@ -399,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnlockUsers  UnlockUsersRequest
+     * @return UnlockUsersResponse
+     */
     @Override
     public CompletableFuture<UnlockUsersResponse> unlockUsers(UnlockUsersRequest request) {
         try {
@@ -413,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateProperty  UpdatePropertyRequest
+     * @return UpdatePropertyResponse
+     */
     @Override
     public CompletableFuture<UpdatePropertyResponse> updateProperty(UpdatePropertyRequest request) {
         try {

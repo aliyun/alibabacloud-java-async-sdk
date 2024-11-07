@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LockUsersResponseBody} extends {@link TeaModel}
  *
  * <p>LockUsersResponseBody</p>
@@ -49,7 +50,7 @@ public class LockUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of the locking the convenience user.
+         * <p>The result of the locking the convenience user.</p>
          */
         public Builder lockUsersResult(LockUsersResult lockUsersResult) {
             this.lockUsersResult = lockUsersResult;
@@ -57,7 +58,10 @@ public class LockUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class LockUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link LockUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>LockUsersResponseBody</p>
+     */
     public static class FailedUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
@@ -121,7 +131,10 @@ public class LockUsersResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * The ID of the convenience user that failed to be locked.
+             * <p>The ID of the convenience user that failed to be locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -129,7 +142,10 @@ public class LockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidUsername</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -137,7 +153,10 @@ public class LockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123 is an invalid username.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -151,6 +170,12 @@ public class LockUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LockUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>LockUsersResponseBody</p>
+     */
     public static class LockUsersResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedUsers")
         private java.util.List < FailedUsers> failedUsers;
@@ -190,7 +215,7 @@ public class LockUsersResponseBody extends TeaModel {
             private java.util.List < String > lockedUsers; 
 
             /**
-             * The convenience users that failed to be locked.
+             * <p>The convenience users that failed to be locked.</p>
              */
             public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
@@ -198,7 +223,7 @@ public class LockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The convenience users that were locked.
+             * <p>The convenience users that were locked.</p>
              */
             public Builder lockedUsers(java.util.List < String > lockedUsers) {
                 this.lockedUsers = lockedUsers;

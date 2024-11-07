@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetManagerInfoByAuthCodeRequest} extends {@link RequestModel}
  *
  * <p>GetManagerInfoByAuthCodeRequest</p>
@@ -54,7 +55,11 @@ public class GetManagerInfoByAuthCodeRequest extends Request {
         } 
 
         /**
-         * The authorization code.
+         * <p>The authorization code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e49cd070452f0044813a467d4743****</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);

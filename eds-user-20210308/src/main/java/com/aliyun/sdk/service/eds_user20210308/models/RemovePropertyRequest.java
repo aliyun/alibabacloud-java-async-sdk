@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemovePropertyRequest} extends {@link RequestModel}
  *
  * <p>RemovePropertyRequest</p>
@@ -54,7 +55,11 @@ public class RemovePropertyRequest extends Request {
         } 
 
         /**
-         * The ID of the property. You can call the [ListProperty](~~410890~~) operation to query the property ID.
+         * <p>The ID of the property. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>390</p>
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);

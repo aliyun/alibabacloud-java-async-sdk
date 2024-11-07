@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUsersRequest} extends {@link RequestModel}
  *
  * <p>CreateUsersRequest</p>
@@ -111,7 +112,10 @@ public class CreateUsersRequest extends Request {
         } 
 
         /**
-         * The date on which the convenience users are automatically locked.
+         * <p>The date on which the convenience users are automatically locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-03</p>
          */
         public Builder autoLockTime(String autoLockTime) {
             this.putQueryParameter("AutoLockTime", autoLockTime);
@@ -129,7 +133,10 @@ public class CreateUsersRequest extends Request {
         }
 
         /**
-         * The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.
+         * <p>The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test123****</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -147,7 +154,11 @@ public class CreateUsersRequest extends Request {
         }
 
         /**
-         * The information about the convenience user.
+         * <p>The information about the convenience user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateUsers</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.putBodyParameter("Users", users);
@@ -162,6 +173,12 @@ public class CreateUsersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUsersRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUsersRequest</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
@@ -274,7 +291,10 @@ public class CreateUsersRequest extends Request {
             private String remark; 
 
             /**
-             * The email address of the convenience user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.
+             * <p>The email address of the convenience user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -282,7 +302,11 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The username of the convenience user. The name can contain lowercase letters, digits, and underscores (\_), and must be 3 to 24 characters in length.
+             * <p>The username of the convenience user. The name can contain lowercase letters, digits, and underscores (_), and must be 3 to 24 characters in length.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -290,7 +314,10 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The organization to which the convenience user belongs.
+             * <p>The organization to which the convenience user belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111****</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -298,13 +325,15 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The type of the account ownership.
-             * <p>
+             * <p>The type of the account ownership.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CreateFromManager: administrator-activated</li>
+             * <li>Normal: user-activated</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   CreateFromManager: administrator-activated
-             * *   Normal: user-activated
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
@@ -312,10 +341,13 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The user password.
-             * <p>
+             * <p>The user password.</p>
+             * <blockquote>
+             * <p> The password must be at least 10 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (excluding spaces).</p>
+             * </blockquote>
              * 
-             * >  The password must be at least 10 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (excluding spaces).
+             * <strong>example:</strong>
+             * <p>password1</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -323,7 +355,10 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * Mobile numbers are not supported on the international site (alibabacloud.com).
+             * <p>Mobile numbers are not supported on the international site (alibabacloud.com).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -331,7 +366,10 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The display name of the end user.
+             * <p>The display name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bean</p>
              */
             public Builder realNickName(String realNickName) {
                 this.realNickName = realNickName;
@@ -339,7 +377,10 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The remarks on the convenience user.
+             * <p>The remarks on the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark1</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

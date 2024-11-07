@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveMfaDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveMfaDeviceResponseBody</p>
@@ -37,7 +38,10 @@ public class RemoveMfaDeviceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FB550AAB-FB36-4A91-93F6-F4374AF65403</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

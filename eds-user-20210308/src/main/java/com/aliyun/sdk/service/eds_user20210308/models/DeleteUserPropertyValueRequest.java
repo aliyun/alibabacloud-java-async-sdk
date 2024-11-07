@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserPropertyValueRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserPropertyValueRequest</p>
@@ -84,7 +85,11 @@ public class DeleteUserPropertyValueRequest extends Request {
         } 
 
         /**
-         * The property ID.
+         * <p>The property ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>390</p>
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
@@ -93,7 +98,11 @@ public class DeleteUserPropertyValueRequest extends Request {
         }
 
         /**
-         * The ID of the property value.
+         * <p>The ID of the property value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>978</p>
          */
         public Builder propertyValueId(Long propertyValueId) {
             this.putBodyParameter("PropertyValueId", propertyValueId);
@@ -102,7 +111,11 @@ public class DeleteUserPropertyValueRequest extends Request {
         }
 
         /**
-         * The ID of the convenience user.
+         * <p>The ID of the convenience user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("UserId", userId);

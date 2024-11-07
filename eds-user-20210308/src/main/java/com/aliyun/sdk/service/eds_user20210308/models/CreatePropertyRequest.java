@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePropertyRequest} extends {@link RequestModel}
  *
  * <p>CreatePropertyRequest</p>
@@ -68,7 +69,11 @@ public class CreatePropertyRequest extends Request {
         } 
 
         /**
-         * The property name.
+         * <p>The property name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
          */
         public Builder propertyKey(String propertyKey) {
             this.putBodyParameter("PropertyKey", propertyKey);
@@ -77,7 +82,7 @@ public class CreatePropertyRequest extends Request {
         }
 
         /**
-         * The values of the property. You can specify up to 50 values for a property.
+         * <p>The values of the property. You can specify up to 50 values for a property.</p>
          */
         public Builder propertyValues(java.util.List < String > propertyValues) {
             this.putBodyParameter("PropertyValues", propertyValues);

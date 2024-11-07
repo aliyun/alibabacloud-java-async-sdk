@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPropertyResponseBody} extends {@link TeaModel}
  *
  * <p>ListPropertyResponseBody</p>
@@ -61,7 +62,10 @@ public class ListPropertyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The token that is used for the next query. If this parameter is empty, all results have been returned.
+         * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,7 @@ public class ListPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the properties.
+         * <p>The information about the properties.</p>
          */
         public Builder properties(java.util.List < Properties> properties) {
             this.properties = properties;
@@ -77,7 +81,10 @@ public class ListPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListPropertyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPropertyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPropertyResponseBody</p>
+     */
     public static class PropertyValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
@@ -129,7 +142,10 @@ public class ListPropertyResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * The value of the property.
+             * <p>The value of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -137,7 +153,10 @@ public class ListPropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the property value.
+             * <p>The ID of the property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -151,6 +170,12 @@ public class ListPropertyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPropertyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPropertyResponseBody</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
@@ -202,7 +227,10 @@ public class ListPropertyResponseBody extends TeaModel {
             private java.util.List < PropertyValues> propertyValues; 
 
             /**
-             * The ID of the property.
+             * <p>The ID of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -210,7 +238,10 @@ public class ListPropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the property.
+             * <p>The name of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -218,7 +249,7 @@ public class ListPropertyResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the property values.
+             * <p>Details about the property values.</p>
              */
             public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;

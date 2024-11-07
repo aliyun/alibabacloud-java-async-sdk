@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOrgsRequest} extends {@link RequestModel}
  *
  * <p>DescribeOrgsRequest</p>
@@ -96,9 +97,10 @@ public class DescribeOrgsRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries to return. Valid values: 1 to 100.\
-         * <p>
-         * Default value: 100.
+         * <p>The maximum number of entries to return. Valid values: 1 to 100.<br>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -107,7 +109,10 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.
+         * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -116,7 +121,10 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * The name of the organization.
+         * <p>The name of the organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org****</p>
          */
         public Builder orgName(String orgName) {
             this.putQueryParameter("OrgName", orgName);
@@ -125,7 +133,10 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * The parent organization ID.
+         * <p>The parent organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-****</p>
          */
         public Builder parentOrgId(String parentOrgId) {
             this.putQueryParameter("ParentOrgId", parentOrgId);

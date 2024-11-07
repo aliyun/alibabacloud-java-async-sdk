@@ -6,11 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LockUsersRequest} extends {@link RequestModel}
  *
  * <p>LockUsersRequest</p>
  */
 public class LockUsersRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogoutSession")
+    private Boolean logoutSession;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Users")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -18,6 +23,7 @@ public class LockUsersRequest extends Request {
 
     private LockUsersRequest(Builder builder) {
         super(builder);
+        this.logoutSession = builder.logoutSession;
         this.users = builder.users;
     }
 
@@ -35,6 +41,13 @@ public class LockUsersRequest extends Request {
     }
 
     /**
+     * @return logoutSession
+     */
+    public Boolean getLogoutSession() {
+        return this.logoutSession;
+    }
+
+    /**
      * @return users
      */
     public java.util.List < String > getUsers() {
@@ -42,6 +55,7 @@ public class LockUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<LockUsersRequest, Builder> {
+        private Boolean logoutSession; 
         private java.util.List < String > users; 
 
         private Builder() {
@@ -50,11 +64,25 @@ public class LockUsersRequest extends Request {
 
         private Builder(LockUsersRequest request) {
             super(request);
+            this.logoutSession = request.logoutSession;
             this.users = request.users;
         } 
 
         /**
-         * The usernames of the convenience users that you want to lock.
+         * LogoutSession.
+         */
+        public Builder logoutSession(Boolean logoutSession) {
+            this.putQueryParameter("LogoutSession", logoutSession);
+            this.logoutSession = logoutSession;
+            return this;
+        }
+
+        /**
+         * <p>The usernames of the convenience users that you want to lock.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder users(java.util.List < String > users) {
             this.putBodyParameter("Users", users);

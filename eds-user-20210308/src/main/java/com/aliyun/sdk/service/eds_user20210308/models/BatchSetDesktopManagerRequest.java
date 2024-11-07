@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetDesktopManagerRequest} extends {@link RequestModel}
  *
  * <p>BatchSetDesktopManagerRequest</p>
@@ -77,7 +78,7 @@ public class BatchSetDesktopManagerRequest extends Request {
         }
 
         /**
-         * Users.
+         * <p>This parameter is required.</p>
          */
         public Builder users(java.util.List < String > users) {
             this.putBodyParameter("Users", users);

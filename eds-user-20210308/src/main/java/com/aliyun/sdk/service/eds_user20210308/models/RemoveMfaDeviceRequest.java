@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveMfaDeviceRequest} extends {@link RequestModel}
  *
  * <p>RemoveMfaDeviceRequest</p>
@@ -68,7 +69,10 @@ public class RemoveMfaDeviceRequest extends Request {
         } 
 
         /**
-         * The domain of the Active Directory (AD) workspace.
+         * <p>The domain of the Active Directory (AD) workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alpha.lftltd.net</p>
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -77,7 +81,11 @@ public class RemoveMfaDeviceRequest extends Request {
         }
 
         /**
-         * The serial number of the virtual MFA device. The serial number is unique for each device.
+         * <p>The serial number of the virtual MFA device. The serial number is unique for each device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc856334-446b-4035-bfbc-18af261e****</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);

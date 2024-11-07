@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOrgsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOrgsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.
+         * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         }
 
         /**
-         * The organizations.
+         * <p>The organizations.</p>
          */
         public Builder orgs(java.util.List < Orgs> orgs) {
             this.orgs = orgs;
@@ -77,7 +81,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B4BB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeOrgsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOrgsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOrgsResponseBody</p>
+     */
     public static class Orgs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
@@ -141,7 +154,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
             private String parentOrgId; 
 
             /**
-             * The organization ID.
+             * <p>The organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org-****</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -149,7 +165,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organizational unit.
+             * <p>The name of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org****</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
@@ -157,7 +176,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * The parent organization ID.
+             * <p>The parent organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org-****</p>
              */
             public Builder parentOrgId(String parentOrgId) {
                 this.parentOrgId = parentOrgId;

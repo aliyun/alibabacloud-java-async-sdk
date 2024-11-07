@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMfaDevicesRequest} extends {@link RequestModel}
  *
  * <p>DescribeMfaDevicesRequest</p>
@@ -110,7 +111,10 @@ public class DescribeMfaDevicesRequest extends Request {
         } 
 
         /**
-         * The domain of the Active Directory (AD) workspace.
+         * <p>The domain of the Active Directory (AD) workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn.misumi.pri</p>
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -119,7 +123,10 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The usernames of the convenience users.
+         * <p>The usernames of the convenience users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -128,9 +135,10 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Valid values: 1 to 500.\
-         * <p>
-         * Default value: 100.
+         * <p>The maximum number of entries to return. Valid values: 1 to 500.<br>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -139,7 +147,10 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Set the value to the token that is obtained from the previous query.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Set the value to the token that is obtained from the previous query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -148,7 +159,10 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The serial numbers of the virtual MFA devices.
+         * <p>The serial numbers of the virtual MFA devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2d9ae94-a64b-4a0d-8024-9519ca50****</p>
          */
         public Builder serialNumbers(java.util.List < String > serialNumbers) {
             this.putQueryParameter("SerialNumbers", serialNumbers);

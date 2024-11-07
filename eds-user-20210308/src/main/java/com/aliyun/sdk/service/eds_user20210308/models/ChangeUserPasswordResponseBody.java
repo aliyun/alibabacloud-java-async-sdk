@@ -7,15 +7,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetUserPropertyValueResponseBody} extends {@link TeaModel}
+ * {@link ChangeUserPasswordResponseBody} extends {@link TeaModel}
  *
- * <p>SetUserPropertyValueResponseBody</p>
+ * <p>ChangeUserPasswordResponseBody</p>
  */
-public class SetUserPropertyValueResponseBody extends TeaModel {
+public class ChangeUserPasswordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private SetUserPropertyValueResponseBody(Builder builder) {
+    private ChangeUserPasswordResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class SetUserPropertyValueResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SetUserPropertyValueResponseBody create() {
+    public static ChangeUserPasswordResponseBody create() {
         return builder().build();
     }
 
@@ -38,18 +38,15 @@ public class SetUserPropertyValueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public SetUserPropertyValueResponseBody build() {
-            return new SetUserPropertyValueResponseBody(this);
+        public ChangeUserPasswordResponseBody build() {
+            return new ChangeUserPasswordResponseBody(this);
         } 
 
     } 

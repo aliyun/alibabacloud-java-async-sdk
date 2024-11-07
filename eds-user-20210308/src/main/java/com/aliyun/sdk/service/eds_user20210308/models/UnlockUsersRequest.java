@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnlockUsersRequest} extends {@link RequestModel}
  *
  * <p>UnlockUsersRequest</p>
@@ -68,7 +69,10 @@ public class UnlockUsersRequest extends Request {
         } 
 
         /**
-         * The date on which the convenience users are automatically locked.
+         * <p>The date on which the convenience users are automatically locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-03</p>
          */
         public Builder autoLockTime(String autoLockTime) {
             this.putQueryParameter("AutoLockTime", autoLockTime);
@@ -77,7 +81,11 @@ public class UnlockUsersRequest extends Request {
         }
 
         /**
-         * The usernames of the convenience users that you want to unlock.
+         * <p>The usernames of the convenience users that you want to unlock.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder users(java.util.List < String > users) {
             this.putBodyParameter("Users", users);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySyncStatusByAliUidResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySyncStatusByAliUidResponseBody</p>
@@ -150,6 +151,12 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySyncStatusByAliUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySyncStatusByAliUidResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;

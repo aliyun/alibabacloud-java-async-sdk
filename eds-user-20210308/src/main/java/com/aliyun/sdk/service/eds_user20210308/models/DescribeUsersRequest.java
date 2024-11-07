@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsersRequest} extends {@link RequestModel}
  *
  * <p>DescribeUsersRequest</p>
@@ -203,7 +204,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The list of usernames that must be exactly matched.
+         * <p>The list of usernames that must be exactly matched.</p>
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putBodyParameter("EndUserIds", endUserIds);
@@ -212,7 +213,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The list of usernames to be exactly excluded.
+         * <p>The list of usernames to be exactly excluded.</p>
          */
         public Builder excludeEndUserIds(java.util.List < String > excludeEndUserIds) {
             this.putBodyParameter("ExcludeEndUserIds", excludeEndUserIds);
@@ -221,7 +222,10 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (\*) are supported. For example, if you set this parameter to `a*m`, usernames or email addresses that start with `a` and end with `m` are returned.
+         * <p>The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (*) are supported. For example, if you set this parameter to <code>a*m</code>, usernames or email addresses that start with <code>a</code> and end with <code>m</code> are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a*m</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -240,7 +244,10 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The ID of the organization in which you want to query convenience users.
+         * <p>The ID of the organization in which you want to query convenience users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-12341234****</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -249,11 +256,14 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 500</li>
+         * <li>Default value: 500</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 500
-         * *   Default value: 500
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -262,9 +272,10 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.\
-         * <p>
-         * If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the return value of NextToken to perform the next query.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.<br>If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the return value of NextToken to perform the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -273,7 +284,10 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The ID of the organization in which you want to query users.
+         * <p>The ID of the organization in which you want to query users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-4mdgc1cocc59z****</p>
          */
         public Builder orgId(String orgId) {
             this.putBodyParameter("OrgId", orgId);

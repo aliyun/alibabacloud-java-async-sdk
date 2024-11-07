@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePropertyResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePropertyResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
         private UpdateResult updateResult; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the modification.
+         * <p>The result of the modification.</p>
          */
         public Builder updateResult(UpdateResult updateResult) {
             this.updateResult = updateResult;
@@ -70,6 +74,12 @@ public class UpdatePropertyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePropertyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePropertyResponseBody</p>
+     */
     public static class FailedPropertyValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -133,7 +143,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private String propertyValue; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExistedPropertyValue</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -141,7 +154,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The property value is used by another property.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -149,7 +165,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the property.
+             * <p>The ID of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>390</p>
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -157,7 +176,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the property.
+             * <p>The value of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -171,6 +193,12 @@ public class UpdatePropertyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePropertyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePropertyResponseBody</p>
+     */
     public static class SavePropertyValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
@@ -210,7 +238,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * The value of the property.
+             * <p>The value of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue2</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -218,7 +249,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the property value.
+             * <p>The ID of the property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>978</p>
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -232,6 +266,12 @@ public class UpdatePropertyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePropertyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePropertyResponseBody</p>
+     */
     public static class SavePropertyValueModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedPropertyValues")
         private java.util.List < FailedPropertyValues> failedPropertyValues;
@@ -271,7 +311,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private java.util.List < SavePropertyValues> savePropertyValues; 
 
             /**
-             * The property values that failed to be modified.
+             * <p>The property values that failed to be modified.</p>
              */
             public Builder failedPropertyValues(java.util.List < FailedPropertyValues> failedPropertyValues) {
                 this.failedPropertyValues = failedPropertyValues;
@@ -279,7 +319,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The property values that were modified.
+             * <p>The property values that were modified.</p>
              */
             public Builder savePropertyValues(java.util.List < SavePropertyValues> savePropertyValues) {
                 this.savePropertyValues = savePropertyValues;
@@ -293,6 +333,12 @@ public class UpdatePropertyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePropertyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePropertyResponseBody</p>
+     */
     public static class UpdateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
@@ -344,7 +390,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private SavePropertyValueModel savePropertyValueModel; 
 
             /**
-             * The ID of the property.
+             * <p>The ID of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>390</p>
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -352,7 +401,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the property.
+             * <p>The name of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey2</p>
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -360,7 +412,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the property value modification.
+             * <p>The result of the property value modification.</p>
              */
             public Builder savePropertyValueModel(SavePropertyValueModel savePropertyValueModel) {
                 this.savePropertyValueModel = savePropertyValueModel;

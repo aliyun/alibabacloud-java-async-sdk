@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveUsersRequest} extends {@link RequestModel}
  *
  * <p>RemoveUsersRequest</p>
@@ -54,7 +55,11 @@ public class RemoveUsersRequest extends Request {
         } 
 
         /**
-         * The usernames of the convenience users that you want to remove.
+         * <p>The usernames of the convenience users that you want to remove.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder users(java.util.List < String > users) {
             this.putBodyParameter("Users", users);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUsersResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUsersResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of user creation.
+         * <p>The result of user creation.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -57,7 +58,10 @@ public class CreateUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUsersResponseBody</p>
+     */
     public static class CreatedUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
@@ -145,7 +155,10 @@ public class CreateUsersResponseBody extends TeaModel {
             private String remark; 
 
             /**
-             * The email address of the end user.
+             * <p>The email address of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -153,7 +166,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * <p>The name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -161,7 +177,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the end user.
+             * <p>The mobile number of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -169,7 +188,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the end user.
+             * <p>The display name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bean</p>
              */
             public Builder realNickName(String realNickName) {
                 this.realNickName = realNickName;
@@ -177,7 +199,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the end user.
+             * <p>The remarks of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark1</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -191,6 +216,12 @@ public class CreateUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUsersResponseBody</p>
+     */
     public static class FailedUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
@@ -266,7 +297,10 @@ public class CreateUsersResponseBody extends TeaModel {
             private String phone; 
 
             /**
-             * The email address of the end user.
+             * <p>The email address of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username2@example.com">username2@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -274,7 +308,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * <p>The name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -282,7 +319,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the request failed.
+             * <p>The error code returned if the request failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExistedEndUserId</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -290,7 +330,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The username test is used by another user.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -298,7 +341,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the end user.
+             * <p>The mobile number of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -312,6 +358,12 @@ public class CreateUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUsersResponseBody</p>
+     */
     public static class CreateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedUsers")
         private java.util.List < CreatedUsers> createdUsers;
@@ -351,7 +403,7 @@ public class CreateUsersResponseBody extends TeaModel {
             private java.util.List < FailedUsers> failedUsers; 
 
             /**
-             * Details of the created convenience users.
+             * <p>Details of the created convenience users.</p>
              */
             public Builder createdUsers(java.util.List < CreatedUsers> createdUsers) {
                 this.createdUsers = createdUsers;
@@ -359,7 +411,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the convenience users that failed to be created.
+             * <p>Details of the convenience users that failed to be created.</p>
              */
             public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;

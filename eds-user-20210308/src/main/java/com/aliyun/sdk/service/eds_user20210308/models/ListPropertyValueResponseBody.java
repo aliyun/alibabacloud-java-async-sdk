@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPropertyValueResponseBody} extends {@link TeaModel}
  *
  * <p>ListPropertyValueResponseBody</p>
@@ -49,7 +50,7 @@ public class ListPropertyValueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about property values.
+         * <p>Details about property values.</p>
          */
         public Builder propertyValueInfos(java.util.List < PropertyValueInfos> propertyValueInfos) {
             this.propertyValueInfos = propertyValueInfos;
@@ -57,7 +58,10 @@ public class ListPropertyValueResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C52013A5-3422-5D1F-B22C-A57110972AD9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListPropertyValueResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPropertyValueResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPropertyValueResponseBody</p>
+     */
     public static class PropertyValueInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
@@ -109,7 +119,10 @@ public class ListPropertyValueResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * The value of the property.
+             * <p>The value of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HR</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -117,7 +130,10 @@ public class ListPropertyValueResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the property value.
+             * <p>The ID of the property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>978</p>
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
