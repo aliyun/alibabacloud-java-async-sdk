@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateArtifactRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
+    private ArtifactBuildProperty artifactBuildProperty;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ArtifactId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String artifactId;
@@ -37,6 +41,7 @@ public class UpdateArtifactRequest extends Request {
 
     private UpdateArtifactRequest(Builder builder) {
         super(builder);
+        this.artifactBuildProperty = builder.artifactBuildProperty;
         this.artifactId = builder.artifactId;
         this.artifactProperty = builder.artifactProperty;
         this.description = builder.description;
@@ -55,6 +60,13 @@ public class UpdateArtifactRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return artifactBuildProperty
+     */
+    public ArtifactBuildProperty getArtifactBuildProperty() {
+        return this.artifactBuildProperty;
     }
 
     /**
@@ -93,6 +105,7 @@ public class UpdateArtifactRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateArtifactRequest, Builder> {
+        private ArtifactBuildProperty artifactBuildProperty; 
         private String artifactId; 
         private ArtifactProperty artifactProperty; 
         private String description; 
@@ -105,12 +118,23 @@ public class UpdateArtifactRequest extends Request {
 
         private Builder(UpdateArtifactRequest request) {
             super(request);
+            this.artifactBuildProperty = request.artifactBuildProperty;
             this.artifactId = request.artifactId;
             this.artifactProperty = request.artifactProperty;
             this.description = request.description;
             this.supportRegionIds = request.supportRegionIds;
             this.versionName = request.versionName;
         } 
+
+        /**
+         * ArtifactBuildProperty.
+         */
+        public Builder artifactBuildProperty(ArtifactBuildProperty artifactBuildProperty) {
+            String artifactBuildPropertyShrink = shrink(artifactBuildProperty, "ArtifactBuildProperty", "json");
+            this.putQueryParameter("ArtifactBuildProperty", artifactBuildPropertyShrink);
+            this.artifactBuildProperty = artifactBuildProperty;
+            return this;
+        }
 
         /**
          * <p>The ID of the deployment package.</p>
@@ -183,6 +207,113 @@ public class UpdateArtifactRequest extends Request {
      *
      * <p>UpdateArtifactRequest</p>
      */
+    public static class ArtifactBuildProperty extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CommandContent")
+        private String commandContent;
+
+        @com.aliyun.core.annotation.NameInMap("CommandType")
+        private String commandType;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceImageId")
+        private String sourceImageId;
+
+        private ArtifactBuildProperty(Builder builder) {
+            this.commandContent = builder.commandContent;
+            this.commandType = builder.commandType;
+            this.regionId = builder.regionId;
+            this.sourceImageId = builder.sourceImageId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ArtifactBuildProperty create() {
+            return builder().build();
+        }
+
+        /**
+         * @return commandContent
+         */
+        public String getCommandContent() {
+            return this.commandContent;
+        }
+
+        /**
+         * @return commandType
+         */
+        public String getCommandType() {
+            return this.commandType;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return sourceImageId
+         */
+        public String getSourceImageId() {
+            return this.sourceImageId;
+        }
+
+        public static final class Builder {
+            private String commandContent; 
+            private String commandType; 
+            private String regionId; 
+            private String sourceImageId; 
+
+            /**
+             * CommandContent.
+             */
+            public Builder commandContent(String commandContent) {
+                this.commandContent = commandContent;
+                return this;
+            }
+
+            /**
+             * CommandType.
+             */
+            public Builder commandType(String commandType) {
+                this.commandType = commandType;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SourceImageId.
+             */
+            public Builder sourceImageId(String sourceImageId) {
+                this.sourceImageId = sourceImageId;
+                return this;
+            }
+
+            public ArtifactBuildProperty build() {
+                return new ArtifactBuildProperty(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateArtifactRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateArtifactRequest</p>
+     */
     public static class ArtifactProperty extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -199,8 +330,20 @@ public class UpdateArtifactRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("RepoId")
+        private String repoId;
+
+        @com.aliyun.core.annotation.NameInMap("RepoName")
+        private String repoName;
+
+        @com.aliyun.core.annotation.NameInMap("RepoType")
+        private String repoType;
+
         @com.aliyun.core.annotation.NameInMap("ScriptMetadata")
         private String scriptMetadata;
+
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private String tag;
 
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
@@ -211,7 +354,11 @@ public class UpdateArtifactRequest extends Request {
             this.fileScriptMetadata = builder.fileScriptMetadata;
             this.imageId = builder.imageId;
             this.regionId = builder.regionId;
+            this.repoId = builder.repoId;
+            this.repoName = builder.repoName;
+            this.repoType = builder.repoType;
             this.scriptMetadata = builder.scriptMetadata;
+            this.tag = builder.tag;
             this.url = builder.url;
         }
 
@@ -259,10 +406,38 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
+         * @return repoId
+         */
+        public String getRepoId() {
+            return this.repoId;
+        }
+
+        /**
+         * @return repoName
+         */
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+        /**
+         * @return repoType
+         */
+        public String getRepoType() {
+            return this.repoType;
+        }
+
+        /**
          * @return scriptMetadata
          */
         public String getScriptMetadata() {
             return this.scriptMetadata;
+        }
+
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
         }
 
         /**
@@ -278,7 +453,11 @@ public class UpdateArtifactRequest extends Request {
             private String fileScriptMetadata; 
             private String imageId; 
             private String regionId; 
+            private String repoId; 
+            private String repoName; 
+            private String repoType; 
             private String scriptMetadata; 
+            private String tag; 
             private String url; 
 
             /**
@@ -352,6 +531,30 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
+             * RepoId.
+             */
+            public Builder repoId(String repoId) {
+                this.repoId = repoId;
+                return this;
+            }
+
+            /**
+             * RepoName.
+             */
+            public Builder repoName(String repoName) {
+                this.repoName = repoName;
+                return this;
+            }
+
+            /**
+             * RepoType.
+             */
+            public Builder repoType(String repoType) {
+                this.repoType = repoType;
+                return this;
+            }
+
+            /**
              * <p>The script content of the deployment package.</p>
              * <blockquote>
              * <p> This parameter is available only if the deployment package is a script.</p>
@@ -362,6 +565,14 @@ public class UpdateArtifactRequest extends Request {
              */
             public Builder scriptMetadata(String scriptMetadata) {
                 this.scriptMetadata = scriptMetadata;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
                 return this;
             }
 

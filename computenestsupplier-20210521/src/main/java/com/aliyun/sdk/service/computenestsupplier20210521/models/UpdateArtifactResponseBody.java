@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateArtifactResponseBody</p>
  */
 public class UpdateArtifactResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
+    private String artifactBuildProperty;
+
     @com.aliyun.core.annotation.NameInMap("ArtifactId")
     private String artifactId;
 
@@ -43,6 +46,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
     private String versionName;
 
     private UpdateArtifactResponseBody(Builder builder) {
+        this.artifactBuildProperty = builder.artifactBuildProperty;
         this.artifactId = builder.artifactId;
         this.artifactProperty = builder.artifactProperty;
         this.artifactType = builder.artifactType;
@@ -61,6 +65,13 @@ public class UpdateArtifactResponseBody extends TeaModel {
 
     public static UpdateArtifactResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return artifactBuildProperty
+     */
+    public String getArtifactBuildProperty() {
+        return this.artifactBuildProperty;
     }
 
     /**
@@ -134,6 +145,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String artifactBuildProperty; 
         private String artifactId; 
         private String artifactProperty; 
         private String artifactType; 
@@ -144,6 +156,14 @@ public class UpdateArtifactResponseBody extends TeaModel {
         private String status; 
         private String supportRegionIds; 
         private String versionName; 
+
+        /**
+         * ArtifactBuildProperty.
+         */
+        public Builder artifactBuildProperty(String artifactBuildProperty) {
+            this.artifactBuildProperty = artifactBuildProperty;
+            return this;
+        }
 
         /**
          * <p>The ID of the deployment package.</p>

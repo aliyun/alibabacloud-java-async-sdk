@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateArtifactRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
+    private ArtifactBuildProperty artifactBuildProperty;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ArtifactId")
     private String artifactId;
 
@@ -53,6 +57,7 @@ public class CreateArtifactRequest extends Request {
 
     private CreateArtifactRequest(Builder builder) {
         super(builder);
+        this.artifactBuildProperty = builder.artifactBuildProperty;
         this.artifactId = builder.artifactId;
         this.artifactProperty = builder.artifactProperty;
         this.artifactType = builder.artifactType;
@@ -75,6 +80,13 @@ public class CreateArtifactRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return artifactBuildProperty
+     */
+    public ArtifactBuildProperty getArtifactBuildProperty() {
+        return this.artifactBuildProperty;
     }
 
     /**
@@ -141,6 +153,7 @@ public class CreateArtifactRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateArtifactRequest, Builder> {
+        private ArtifactBuildProperty artifactBuildProperty; 
         private String artifactId; 
         private ArtifactProperty artifactProperty; 
         private String artifactType; 
@@ -157,6 +170,7 @@ public class CreateArtifactRequest extends Request {
 
         private Builder(CreateArtifactRequest request) {
             super(request);
+            this.artifactBuildProperty = request.artifactBuildProperty;
             this.artifactId = request.artifactId;
             this.artifactProperty = request.artifactProperty;
             this.artifactType = request.artifactType;
@@ -167,6 +181,16 @@ public class CreateArtifactRequest extends Request {
             this.tag = request.tag;
             this.versionName = request.versionName;
         } 
+
+        /**
+         * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+         */
+        public Builder artifactBuildProperty(ArtifactBuildProperty artifactBuildProperty) {
+            String artifactBuildPropertyShrink = shrink(artifactBuildProperty, "ArtifactBuildProperty", "json");
+            this.putQueryParameter("ArtifactBuildProperty", artifactBuildPropertyShrink);
+            this.artifactBuildProperty = artifactBuildProperty;
+            return this;
+        }
 
         /**
          * <p>The ID of the deployment package.</p>
@@ -290,6 +314,150 @@ public class CreateArtifactRequest extends Request {
      *
      * <p>CreateArtifactRequest</p>
      */
+    public static class ArtifactBuildProperty extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CommandContent")
+        private String commandContent;
+
+        @com.aliyun.core.annotation.NameInMap("CommandType")
+        private String commandType;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceImageId")
+        private String sourceImageId;
+
+        private ArtifactBuildProperty(Builder builder) {
+            this.commandContent = builder.commandContent;
+            this.commandType = builder.commandType;
+            this.regionId = builder.regionId;
+            this.sourceImageId = builder.sourceImageId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ArtifactBuildProperty create() {
+            return builder().build();
+        }
+
+        /**
+         * @return commandContent
+         */
+        public String getCommandContent() {
+            return this.commandContent;
+        }
+
+        /**
+         * @return commandType
+         */
+        public String getCommandType() {
+            return this.commandType;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return sourceImageId
+         */
+        public String getSourceImageId() {
+            return this.sourceImageId;
+        }
+
+        public static final class Builder {
+            private String commandContent; 
+            private String commandType; 
+            private String regionId; 
+            private String sourceImageId; 
+
+            /**
+             * <p>The command content.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>echo &quot;start run command&quot;</p>
+             */
+            public Builder commandContent(String commandContent) {
+                this.commandContent = commandContent;
+                return this;
+            }
+
+            /**
+             * <p>The command type. Valid values:</p>
+             * <ul>
+             * <li>RunBatScript: batch command, applicable to Windows instances.</li>
+             * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances.</li>
+             * <li>RunShellScript: shell command, applicable to Linux instances.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>RunShellScript</p>
+             */
+            public Builder commandType(String commandType) {
+                this.commandType = commandType;
+                return this;
+            }
+
+            /**
+             * <p>The region ID where the source mirror image is located.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * <p>The source image id. Supported Types:</p>
+             * <ul>
+             * <li><p>Image ID: Pass the Image ID of the Ecs image directly.</p>
+             * </li>
+             * <li><p>OOS Common Parameter Name: Obtain the corresponding Image ID automatically by using the OOS common parameter name.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Image ID：m-t4nhenrdc38pe4*****
+             * ubuntu_22_04_x64_20G_alibase_20240926.vhd
+             * OOS Common Parameter Name：aliyun/services/computenest/images/aliyun_3_2104_python_3_11</p>
+             */
+            public Builder sourceImageId(String sourceImageId) {
+                this.sourceImageId = sourceImageId;
+                return this;
+            }
+
+            public ArtifactBuildProperty build() {
+                return new ArtifactBuildProperty(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateArtifactRequest} extends {@link TeaModel}
+     *
+     * <p>CreateArtifactRequest</p>
+     */
     public static class ArtifactProperty extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -312,6 +480,9 @@ public class CreateArtifactRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
+        @com.aliyun.core.annotation.NameInMap("RepoType")
+        private String repoType;
+
         @com.aliyun.core.annotation.NameInMap("ScriptMetadata")
         private String scriptMetadata;
 
@@ -329,6 +500,7 @@ public class CreateArtifactRequest extends Request {
             this.regionId = builder.regionId;
             this.repoId = builder.repoId;
             this.repoName = builder.repoName;
+            this.repoType = builder.repoType;
             this.scriptMetadata = builder.scriptMetadata;
             this.tag = builder.tag;
             this.url = builder.url;
@@ -392,6 +564,13 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
+         * @return repoType
+         */
+        public String getRepoType() {
+            return this.repoType;
+        }
+
+        /**
          * @return scriptMetadata
          */
         public String getScriptMetadata() {
@@ -420,6 +599,7 @@ public class CreateArtifactRequest extends Request {
             private String regionId; 
             private String repoId; 
             private String repoName; 
+            private String repoType; 
             private String scriptMetadata; 
             private String tag; 
             private String url; 
@@ -516,6 +696,14 @@ public class CreateArtifactRequest extends Request {
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
+                return this;
+            }
+
+            /**
+             * RepoType.
+             */
+            public Builder repoType(String repoType) {
+                this.repoType = repoType;
                 return this;
             }
 

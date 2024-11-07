@@ -162,11 +162,15 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
+        @com.aliyun.core.annotation.NameInMap("RepoType")
+        private String repoType;
+
         private Repositories(Builder builder) {
             this.createTime = builder.createTime;
             this.modifiedTime = builder.modifiedTime;
             this.repoId = builder.repoId;
             this.repoName = builder.repoName;
+            this.repoType = builder.repoType;
         }
 
         public static Builder builder() {
@@ -205,11 +209,19 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             return this.repoName;
         }
 
+        /**
+         * @return repoType
+         */
+        public String getRepoType() {
+            return this.repoType;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String modifiedTime; 
             private String repoId; 
             private String repoName; 
+            private String repoType; 
 
             /**
              * <p>The time when the image was created.</p>
@@ -252,6 +264,14 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
+                return this;
+            }
+
+            /**
+             * RepoType.
+             */
+            public Builder repoType(String repoType) {
+                this.repoType = repoType;
                 return this;
             }
 

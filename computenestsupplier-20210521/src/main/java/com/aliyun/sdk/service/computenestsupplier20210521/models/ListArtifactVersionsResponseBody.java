@@ -150,6 +150,9 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
      * <p>ListArtifactVersionsResponseBody</p>
      */
     public static class Artifacts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
+        private String artifactBuildProperty;
+
         @com.aliyun.core.annotation.NameInMap("ArtifactId")
         private String artifactId;
 
@@ -183,6 +186,9 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("StatusDetail")
+        private String statusDetail;
+
         @com.aliyun.core.annotation.NameInMap("SupportRegionIds")
         private String supportRegionIds;
 
@@ -190,6 +196,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         private String versionName;
 
         private Artifacts(Builder builder) {
+            this.artifactBuildProperty = builder.artifactBuildProperty;
             this.artifactId = builder.artifactId;
             this.artifactProperty = builder.artifactProperty;
             this.artifactType = builder.artifactType;
@@ -201,6 +208,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             this.resultFile = builder.resultFile;
             this.securityAuditResult = builder.securityAuditResult;
             this.status = builder.status;
+            this.statusDetail = builder.statusDetail;
             this.supportRegionIds = builder.supportRegionIds;
             this.versionName = builder.versionName;
         }
@@ -211,6 +219,13 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
 
         public static Artifacts create() {
             return builder().build();
+        }
+
+        /**
+         * @return artifactBuildProperty
+         */
+        public String getArtifactBuildProperty() {
+            return this.artifactBuildProperty;
         }
 
         /**
@@ -291,6 +306,13 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusDetail
+         */
+        public String getStatusDetail() {
+            return this.statusDetail;
+        }
+
+        /**
          * @return supportRegionIds
          */
         public String getSupportRegionIds() {
@@ -305,6 +327,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String artifactBuildProperty; 
             private String artifactId; 
             private String artifactProperty; 
             private String artifactType; 
@@ -316,8 +339,20 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             private String resultFile; 
             private String securityAuditResult; 
             private String status; 
+            private String statusDetail; 
             private String supportRegionIds; 
             private String versionName; 
+
+            /**
+             * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;RegionId&quot;:&quot;xxx&quot;, &quot;SourceImageId&quot;:&quot;xxx&quot;, &quot;&quot;:&quot;xxx&quot;, &quot;CommandType&quot;:&quot;xxx&quot;, &quot;CommandContent&quot;:&quot;xxx&quot;}&quot;</p>
+             */
+            public Builder artifactBuildProperty(String artifactBuildProperty) {
+                this.artifactBuildProperty = artifactBuildProperty;
+                return this;
+            }
 
             /**
              * <p>The ID of the deployment package.</p>
@@ -447,6 +482,17 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The description of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;/usr/local/share/aliyun-assist/work/script/t-hz04zm90y6og0sg.sh: line 1: pip: command not found&quot;</p>
+             */
+            public Builder statusDetail(String statusDetail) {
+                this.statusDetail = statusDetail;
                 return this;
             }
 

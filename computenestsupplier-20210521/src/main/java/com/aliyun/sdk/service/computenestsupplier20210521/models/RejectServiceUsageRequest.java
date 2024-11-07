@@ -112,7 +112,10 @@ public class RejectServiceUsageRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -121,7 +124,10 @@ public class RejectServiceUsageRequest extends Request {
         }
 
         /**
-         * Comments.
+         * <p>Reject comments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Thanks for your application, please add your industry information.</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -130,6 +136,7 @@ public class RejectServiceUsageRequest extends Request {
         }
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +149,14 @@ public class RejectServiceUsageRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The share type of the service. Default value: SharedAccount. Valid values:</p>
+         * <ul>
+         * <li>SharedAccount: The service is shared by multiple accounts.</li>
+         * <li>Reseller: The service is distributed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SharedAccount</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);
@@ -151,6 +165,7 @@ public class RejectServiceUsageRequest extends Request {
         }
 
         /**
+         * <p>User ali uid.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
