@@ -89,6 +89,10 @@ public class CreateIndexRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String structureType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("metaExtractColumns")
+    private java.util.List < MetaExtractColumns> metaExtractColumns;
+
     private CreateIndexRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -109,6 +113,7 @@ public class CreateIndexRequest extends Request {
         this.sinkType = builder.sinkType;
         this.sourceType = builder.sourceType;
         this.structureType = builder.structureType;
+        this.metaExtractColumns = builder.metaExtractColumns;
     }
 
     public static Builder builder() {
@@ -250,6 +255,13 @@ public class CreateIndexRequest extends Request {
         return this.structureType;
     }
 
+    /**
+     * @return metaExtractColumns
+     */
+    public java.util.List < MetaExtractColumns> getMetaExtractColumns() {
+        return this.metaExtractColumns;
+    }
+
     public static final class Builder extends Request.Builder<CreateIndexRequest, Builder> {
         private String workspaceId; 
         private java.util.List < String > categoryIds; 
@@ -269,6 +281,7 @@ public class CreateIndexRequest extends Request {
         private String sinkType; 
         private String sourceType; 
         private String structureType; 
+        private java.util.List < MetaExtractColumns> metaExtractColumns; 
 
         private Builder() {
             super();
@@ -294,6 +307,7 @@ public class CreateIndexRequest extends Request {
             this.sinkType = request.sinkType;
             this.sourceType = request.sourceType;
             this.structureType = request.structureType;
+            this.metaExtractColumns = request.metaExtractColumns;
         } 
 
         /**
@@ -320,7 +334,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The estimated length of chunks. The maximum number of characters for a chunk. Texts exceeding this limit are splited. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [1-2048].</p>
+         * <p>The estimated length of chunks. The maximum number of characters for a chunk. Texts exceeding this limit are splited. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [1-2048].</p>
          * <p>The default value is empty, which means using the intelligent splitting method.</p>
          * <blockquote>
          * <p> If you specify the <code>ChunkSize</code> parameter, you must also specify the <code>OverlapSize</code> and <code>Separator</code> parameters. If you do not specify these three parameters, the system uses the intelligent splitting method by default.</p>
@@ -377,7 +391,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The name of the embedding model. The embedding model converts the original input prompt and knowledge text into numerical vectors for similarity comparison. The default and only model available is DashScope text-embedding-v2. It supports multiple languages including Chinese and English and normalizes the vector results. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
+         * <p>The name of the embedding model. The embedding model converts the original input prompt and knowledge text into numerical vectors for similarity comparison. The default and only model available is DashScope text-embedding-v2. It supports multiple languages including Chinese and English and normalizes the vector results. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
          * <ul>
          * <li>text-embedding-v2</li>
          * </ul>
@@ -403,7 +417,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The overlap length. The number of overlapping characters between two consecutive chunks. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: 0 to 1024.</p>
+         * <p>The overlap length. The number of overlapping characters between two consecutive chunks. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: 0 to 1024.</p>
          * <p>The default value is empty, which means using the intelligent splitting method.</p>
          * 
          * <strong>example:</strong>
@@ -416,7 +430,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>Similarity Threshold. The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00].</p>
+         * <p>Similarity Threshold. The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00].</p>
          * <p>Default value: 0.20.</p>
          * 
          * <strong>example:</strong>
@@ -429,7 +443,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The name of the rank model. The rank model is a scoring system outside the knowledge base. It calculates the similarity score of each text chunk in the input question and knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <p>The name of the rank model. The rank model is a scoring system outside the knowledge base. It calculates the similarity score of each text chunk in the input question and knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
          * <ul>
          * <li>gte-rerank-hybrid</li>
          * <li>gte-rerank</li>
@@ -449,7 +463,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The clause identifier. The document is split into chunks based on this identifier. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. You can specify multiple identifiers and do not need to add any other characters to separate them. For example: !,\\n. Valid values:</p>
+         * <p>The clause identifier. The document is split into chunks based on this identifier. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. You can specify multiple identifiers and do not need to add any other characters to separate them. For example: !,\\n. Valid values:</p>
          * <ul>
          * <li>\n: line break</li>
          * <li>，: Chinese comma</li>
@@ -460,7 +474,7 @@ public class CreateIndexRequest extends Request {
          * <li>! : English exclamation point</li>
          * <li>；: Chinese semicolon</li>
          * <li>;: English semicolon</li>
-         * <li>？ : Chinese question mark</li>
+         * <li>？: Chinese question mark</li>
          * <li>?: English question mark</li>
          * </ul>
          * <p>The default value is empty, which means using the intelligent splitting method.</p>
@@ -487,7 +501,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The region of the vector storage instance. This parameter is available only when SinkType is set to ADB. You can call the <a href="https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region of the vector storage instance. This parameter is available only when SinkType is set to ADB. You can call the <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -499,7 +513,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The vector storage type of the knowledge base. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <p>The vector storage type of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
          * <ul>
          * <li>DEFAULT: The built-in vector database.</li>
          * <li>ADB: AnalyticDB for PostgreSQL database. If you need advanced features, such as managing, auditing, and monitoring, we recommend that you specify ADB.</li>
@@ -519,7 +533,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
          * <ul>
          * <li>DATA_CENTER_CATEGORY: The category type. Import all documents from one or more categories in Data Center.</li>
          * <li>DATA_CENTER_FILE: The document type. Import one or more documents from Data Center.</li>
@@ -542,7 +556,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The data type of the knowledge base. For more information, see <a href="https://help.aliyun.com/zh/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
+         * <p>The data type of the knowledge base. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid value:</p>
          * <ul>
          * <li>unstructured</li>
          * </ul>
@@ -557,6 +571,16 @@ public class CreateIndexRequest extends Request {
         public Builder structureType(String structureType) {
             this.putQueryParameter("StructureType", structureType);
             this.structureType = structureType;
+            return this;
+        }
+
+        /**
+         * metaExtractColumns.
+         */
+        public Builder metaExtractColumns(java.util.List < MetaExtractColumns> metaExtractColumns) {
+            String metaExtractColumnsShrink = shrink(metaExtractColumns, "metaExtractColumns", "json");
+            this.putQueryParameter("metaExtractColumns", metaExtractColumnsShrink);
+            this.metaExtractColumns = metaExtractColumns;
             return this;
         }
 
@@ -937,6 +961,155 @@ public class CreateIndexRequest extends Request {
 
             public DataSource build() {
                 return new DataSource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateIndexRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIndexRequest</p>
+     */
+    public static class MetaExtractColumns extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Desc")
+        private String desc;
+
+        @com.aliyun.core.annotation.NameInMap("EnableLlm")
+        private Boolean enableLlm;
+
+        @com.aliyun.core.annotation.NameInMap("EnableSearch")
+        private Boolean enableSearch;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private MetaExtractColumns(Builder builder) {
+            this.desc = builder.desc;
+            this.enableLlm = builder.enableLlm;
+            this.enableSearch = builder.enableSearch;
+            this.key = builder.key;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MetaExtractColumns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desc
+         */
+        public String getDesc() {
+            return this.desc;
+        }
+
+        /**
+         * @return enableLlm
+         */
+        public Boolean getEnableLlm() {
+            return this.enableLlm;
+        }
+
+        /**
+         * @return enableSearch
+         */
+        public Boolean getEnableSearch() {
+            return this.enableSearch;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String desc; 
+            private Boolean enableLlm; 
+            private Boolean enableSearch; 
+            private String key; 
+            private String type; 
+            private String value; 
+
+            /**
+             * Desc.
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
+             * EnableLlm.
+             */
+            public Builder enableLlm(Boolean enableLlm) {
+                this.enableLlm = enableLlm;
+                return this;
+            }
+
+            /**
+             * EnableSearch.
+             */
+            public Builder enableSearch(Boolean enableSearch) {
+                this.enableSearch = enableSearch;
+                return this;
+            }
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <blockquote>
+             * <p> This parameter is not available. Do not specify this parameter.</p>
+             * </blockquote>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public MetaExtractColumns build() {
+                return new MetaExtractColumns(this);
             } 
 
         } 

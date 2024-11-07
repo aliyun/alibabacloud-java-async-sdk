@@ -129,7 +129,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
         } 
 
         /**
-         * <p>The primary key ID of the category to which the uploaded document belongs, which is the <code>CategoryId</code> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> interface. You can also click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
+         * <p>The primary key ID of the category to which the uploaded document belongs. You can click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

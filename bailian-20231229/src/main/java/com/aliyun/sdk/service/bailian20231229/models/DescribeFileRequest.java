@@ -97,7 +97,7 @@ public class DescribeFileRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the document, which is the <code>FileId</code> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addfile">AddFile</a> operation. You can also click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page to view the ID.</p>
+         * <p>The primary key ID of the document. You can click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page to view the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
