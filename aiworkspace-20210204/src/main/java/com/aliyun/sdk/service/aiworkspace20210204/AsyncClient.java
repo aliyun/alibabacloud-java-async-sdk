@@ -446,6 +446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetExperimentLabelsResponse> setExperimentLabels(SetExperimentLabelsRequest request);
 
     /**
+     * @param request the request parameters of UpdateCodeSource  UpdateCodeSourceRequest
+     * @return UpdateCodeSourceResponse
+     */
+    CompletableFuture<UpdateCodeSourceResponse> updateCodeSource(UpdateCodeSourceRequest request);
+
+    /**
      * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
      * @return UpdateDatasetResponse
      */

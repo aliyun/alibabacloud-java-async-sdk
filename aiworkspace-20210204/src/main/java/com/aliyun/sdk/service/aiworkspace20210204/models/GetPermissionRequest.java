@@ -31,6 +31,10 @@ public class GetPermissionRequest extends Request {
     private String creator;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.Map < String, ? > labels;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Option")
     private String option;
 
@@ -44,6 +48,7 @@ public class GetPermissionRequest extends Request {
         this.permissionCode = builder.permissionCode;
         this.accessibility = builder.accessibility;
         this.creator = builder.creator;
+        this.labels = builder.labels;
         this.option = builder.option;
         this.resource = builder.resource;
     }
@@ -90,6 +95,13 @@ public class GetPermissionRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.Map < String, ? > getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return option
      */
     public String getOption() {
@@ -108,6 +120,7 @@ public class GetPermissionRequest extends Request {
         private String permissionCode; 
         private String accessibility; 
         private String creator; 
+        private java.util.Map < String, ? > labels; 
         private String option; 
         private String resource; 
 
@@ -121,6 +134,7 @@ public class GetPermissionRequest extends Request {
             this.permissionCode = request.permissionCode;
             this.accessibility = request.accessibility;
             this.creator = request.creator;
+            this.labels = request.labels;
             this.option = request.option;
             this.resource = request.resource;
         } 
@@ -164,6 +178,16 @@ public class GetPermissionRequest extends Request {
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
             this.creator = creator;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.Map < String, ? > labels) {
+            String labelsShrink = shrink(labels, "Labels", "json");
+            this.putQueryParameter("Labels", labelsShrink);
+            this.labels = labels;
             return this;
         }
 
