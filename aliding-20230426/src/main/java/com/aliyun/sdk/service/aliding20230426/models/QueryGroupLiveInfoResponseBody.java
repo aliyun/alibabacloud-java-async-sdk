@@ -36,6 +36,9 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("playbackDuration")
     private Long playbackDuration;
 
+    @com.aliyun.core.annotation.NameInMap("replayUrl")
+    private String replayUrl;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -69,6 +72,7 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
         this.livePlayUrl = builder.livePlayUrl;
         this.liveStatus = builder.liveStatus;
         this.playbackDuration = builder.playbackDuration;
+        this.replayUrl = builder.replayUrl;
         this.requestId = builder.requestId;
         this.staffId = builder.staffId;
         this.startTime = builder.startTime;
@@ -144,6 +148,13 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return replayUrl
+     */
+    public String getReplayUrl() {
+        return this.replayUrl;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -208,6 +219,7 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
         private String livePlayUrl; 
         private Integer liveStatus; 
         private Long playbackDuration; 
+        private String replayUrl; 
         private String requestId; 
         private String staffId; 
         private Long startTime; 
@@ -278,6 +290,14 @@ public class QueryGroupLiveInfoResponseBody extends TeaModel {
          */
         public Builder playbackDuration(Long playbackDuration) {
             this.playbackDuration = playbackDuration;
+            return this;
+        }
+
+        /**
+         * replayUrl.
+         */
+        public Builder replayUrl(String replayUrl) {
+            this.replayUrl = replayUrl;
             return this;
         }
 
