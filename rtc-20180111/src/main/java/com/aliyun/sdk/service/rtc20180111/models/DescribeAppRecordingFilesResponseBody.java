@@ -164,7 +164,7 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         private Integer region;
 
         @com.aliyun.core.annotation.NameInMap("StartTs")
-        private Integer startTs;
+        private Long startTs;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -245,7 +245,7 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         /**
          * @return startTs
          */
-        public Integer getStartTs() {
+        public Long getStartTs() {
             return this.startTs;
         }
 
@@ -271,7 +271,7 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             private String filePath; 
             private Integer fileSize; 
             private Integer region; 
-            private Integer startTs; 
+            private Long startTs; 
             private String taskId; 
             private Integer vendor; 
 
@@ -334,7 +334,7 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             /**
              * StartTs.
              */
-            public Builder startTs(Integer startTs) {
+            public Builder startTs(Long startTs) {
                 this.startTs = startTs;
                 return this;
             }
