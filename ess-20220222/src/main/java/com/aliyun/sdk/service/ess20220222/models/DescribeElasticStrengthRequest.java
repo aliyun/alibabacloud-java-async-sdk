@@ -125,7 +125,7 @@ public class DescribeElasticStrengthRequest extends Request {
         } 
 
         /**
-         * InstanceTypes.
+         * <p>The instance types. The instance types specified by this parameter overwrite the instance types specified in the scaling configuration.</p>
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -134,7 +134,16 @@ public class DescribeElasticStrengthRequest extends Request {
         }
 
         /**
-         * PriorityStrategy.
+         * <p>The preemption policy that you want to apply to pay-as-you-go instances. The preemption policy specified by this parameter overwrites the preemption policy specified in the scaling configuration. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instances are created as regular pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder priorityStrategy(String priorityStrategy) {
             this.putQueryParameter("PriorityStrategy", priorityStrategy);
@@ -143,6 +152,7 @@ public class DescribeElasticStrengthRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the scaling group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +165,10 @@ public class DescribeElasticStrengthRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -164,7 +177,7 @@ public class DescribeElasticStrengthRequest extends Request {
         }
 
         /**
-         * ScalingGroupIds.
+         * <p>The IDs of the scaling groups that you want to query.</p>
          */
         public Builder scalingGroupIds(java.util.List < String > scalingGroupIds) {
             this.putQueryParameter("ScalingGroupIds", scalingGroupIds);
@@ -173,7 +186,13 @@ public class DescribeElasticStrengthRequest extends Request {
         }
 
         /**
-         * SystemDiskCategories.
+         * <p>The categories of the system disks. The categories of the system disks specified by this parameter overwrite the categories of the system disks specified in the scaling configuration. Valid values:</p>
+         * <ul>
+         * <li>cloud: basic disk.</li>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>cloud_essd: Enterprise SSD (ESSD).</li>
+         * </ul>
          */
         public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
             this.putQueryParameter("SystemDiskCategories", systemDiskCategories);

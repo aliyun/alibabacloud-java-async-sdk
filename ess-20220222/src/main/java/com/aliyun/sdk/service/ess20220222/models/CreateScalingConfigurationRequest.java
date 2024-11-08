@@ -73,6 +73,14 @@ public class CreateScalingConfigurationRequest extends Request {
     private String hpcClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpEndpoint")
+    private String httpEndpoint;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpTokens")
+    private String httpTokens;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageFamily")
     private String imageFamily;
 
@@ -262,6 +270,8 @@ public class CreateScalingConfigurationRequest extends Request {
         this.deploymentSetId = builder.deploymentSetId;
         this.hostName = builder.hostName;
         this.hpcClusterId = builder.hpcClusterId;
+        this.httpEndpoint = builder.httpEndpoint;
+        this.httpTokens = builder.httpTokens;
         this.imageFamily = builder.imageFamily;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
@@ -423,6 +433,20 @@ public class CreateScalingConfigurationRequest extends Request {
      */
     public String getHpcClusterId() {
         return this.hpcClusterId;
+    }
+
+    /**
+     * @return httpEndpoint
+     */
+    public String getHttpEndpoint() {
+        return this.httpEndpoint;
+    }
+
+    /**
+     * @return httpTokens
+     */
+    public String getHttpTokens() {
+        return this.httpTokens;
     }
 
     /**
@@ -742,6 +766,8 @@ public class CreateScalingConfigurationRequest extends Request {
         private String deploymentSetId; 
         private String hostName; 
         private String hpcClusterId; 
+        private String httpEndpoint; 
+        private String httpTokens; 
         private String imageFamily; 
         private String imageId; 
         private String imageName; 
@@ -807,6 +833,8 @@ public class CreateScalingConfigurationRequest extends Request {
             this.deploymentSetId = request.deploymentSetId;
             this.hostName = request.hostName;
             this.hpcClusterId = request.hpcClusterId;
+            this.httpEndpoint = request.httpEndpoint;
+            this.httpTokens = request.httpTokens;
             this.imageFamily = request.imageFamily;
             this.imageId = request.imageId;
             this.imageName = request.imageName;
@@ -1040,6 +1068,24 @@ public class CreateScalingConfigurationRequest extends Request {
         public Builder hpcClusterId(String hpcClusterId) {
             this.putQueryParameter("HpcClusterId", hpcClusterId);
             this.hpcClusterId = hpcClusterId;
+            return this;
+        }
+
+        /**
+         * HttpEndpoint.
+         */
+        public Builder httpEndpoint(String httpEndpoint) {
+            this.putQueryParameter("HttpEndpoint", httpEndpoint);
+            this.httpEndpoint = httpEndpoint;
+            return this;
+        }
+
+        /**
+         * HttpTokens.
+         */
+        public Builder httpTokens(String httpTokens) {
+            this.putQueryParameter("HttpTokens", httpTokens);
+            this.httpTokens = httpTokens;
             return this;
         }
 

@@ -74,7 +74,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         private Double totalStrength; 
 
         /**
-         * ElasticStrengthModels.
+         * <p>The scaling strength models.</p>
          */
         public Builder elasticStrengthModels(java.util.List < ElasticStrengthModels> elasticStrengthModels) {
             this.elasticStrengthModels = elasticStrengthModels;
@@ -82,7 +82,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +93,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
 
         /**
-         * ResourcePools.
+         * <p>The resource pools.</p>
          */
         public Builder resourcePools(java.util.List < ResourcePools> resourcePools) {
             this.resourcePools = resourcePools;
@@ -98,7 +101,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
 
         /**
-         * TotalStrength.
+         * <p>The scaling strength of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.5</p>
          */
         public Builder totalStrength(Double totalStrength) {
             this.totalStrength = totalStrength;
@@ -204,7 +210,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Code.
+             * <p>The error code returned when the scaling strength is the weakest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceTypesOrDiskTypesNotSupported</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -212,7 +221,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type of the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.r7.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -220,7 +232,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The error message returned when the scaling strength is the weakest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The instanceTypes or diskTypes are not supported.</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -228,7 +243,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * Strength.
+             * <p>The scaling strength of the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder strength(Double strength) {
                 this.strength = strength;
@@ -236,7 +254,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The IDs of the vSwitches in the zones of the resource pool.</p>
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -244,7 +262,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -315,7 +336,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             private Double totalStrength; 
 
             /**
-             * ResourcePools.
+             * <p>The resource pools.</p>
              */
             public Builder resourcePools(java.util.List < ElasticStrengthModelsResourcePools> resourcePools) {
                 this.resourcePools = resourcePools;
@@ -323,7 +344,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingGroupId.
+             * <p>The ID of the scaling group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-wz98mnj7nblv9gc****</p>
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -331,7 +355,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * TotalStrength.
+             * <p>The scaling strength of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5</p>
              */
             public Builder totalStrength(Double totalStrength) {
                 this.totalStrength = totalStrength;
@@ -438,7 +465,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Code.
+             * <p>The error code returned when the scaling strength is the weakest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMG_NOT_SUPPORTED</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -446,7 +476,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type of the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c7t.xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -454,7 +487,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The error message returned when the scaling strength is the weakest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The instanceType does not support the image in the configuration.</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -462,7 +498,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * Strength.
+             * <p>The scaling strength of the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder strength(Double strength) {
                 this.strength = strength;
@@ -470,7 +509,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The IDs of the vSwitches in the zones of the resource pool.</p>
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -478,7 +517,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

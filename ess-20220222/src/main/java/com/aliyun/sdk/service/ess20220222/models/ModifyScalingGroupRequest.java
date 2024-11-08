@@ -940,7 +940,18 @@ public class ModifyScalingGroupRequest extends Request {
         }
 
         /**
-         * StopInstanceTimeout.
+         * <p>The period of time that is required by the Elastic Compute Service (ECS) instance to enter the Stopped state during the scale-in process. Unit: seconds. Valid values: 30 to 240.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter takes effect only if you set ScalingPolicy to release.<br>If you specify this parameter, the system proceeds with the scale-in process only after the period of time specified by StopInstanceTimeout ends. In this case, the scale-in operation continues regardless of whether the ECS instance enters the Stopped state or not.<br>If you do not specify this parameter, the system proceeds with the scale-in process only after the ECS instance enters the Stopped state. If the ECS instance fails to enter the Stopped state, the scale-in process rolls back, and the scale-in operation is considered as failed.</p>
+         * </li>
+         * <li><p>When you call the ModifyScalingGroup operation, you can set the value to 0. In this case, the system ignores this parameter.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder stopInstanceTimeout(Integer stopInstanceTimeout) {
             this.putQueryParameter("StopInstanceTimeout", stopInstanceTimeout);

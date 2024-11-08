@@ -69,6 +69,14 @@ public class ModifyScalingConfigurationRequest extends Request {
     private String hpcClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpEndpoint")
+    private String httpEndpoint;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpTokens")
+    private String httpTokens;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageFamily")
     private String imageFamily;
 
@@ -103,6 +111,10 @@ public class ModifyScalingConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthIn")
+    private Integer internetMaxBandwidthIn;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
@@ -249,6 +261,8 @@ public class ModifyScalingConfigurationRequest extends Request {
         this.deploymentSetId = builder.deploymentSetId;
         this.hostName = builder.hostName;
         this.hpcClusterId = builder.hpcClusterId;
+        this.httpEndpoint = builder.httpEndpoint;
+        this.httpTokens = builder.httpTokens;
         this.imageFamily = builder.imageFamily;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
@@ -258,6 +272,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         this.instanceTypeOverrides = builder.instanceTypeOverrides;
         this.instanceTypes = builder.instanceTypes;
         this.internetChargeType = builder.internetChargeType;
+        this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
         this.ioOptimized = builder.ioOptimized;
         this.ipv6AddressCount = builder.ipv6AddressCount;
@@ -404,6 +419,20 @@ public class ModifyScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return httpEndpoint
+     */
+    public String getHttpEndpoint() {
+        return this.httpEndpoint;
+    }
+
+    /**
+     * @return httpTokens
+     */
+    public String getHttpTokens() {
+        return this.httpTokens;
+    }
+
+    /**
      * @return imageFamily
      */
     public String getImageFamily() {
@@ -464,6 +493,13 @@ public class ModifyScalingConfigurationRequest extends Request {
      */
     public String getInternetChargeType() {
         return this.internetChargeType;
+    }
+
+    /**
+     * @return internetMaxBandwidthIn
+     */
+    public Integer getInternetMaxBandwidthIn() {
+        return this.internetMaxBandwidthIn;
     }
 
     /**
@@ -705,6 +741,8 @@ public class ModifyScalingConfigurationRequest extends Request {
         private String deploymentSetId; 
         private String hostName; 
         private String hpcClusterId; 
+        private String httpEndpoint; 
+        private String httpTokens; 
         private String imageFamily; 
         private String imageId; 
         private String imageName; 
@@ -714,6 +752,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         private java.util.List < InstanceTypeOverrides> instanceTypeOverrides; 
         private java.util.List < String > instanceTypes; 
         private String internetChargeType; 
+        private Integer internetMaxBandwidthIn; 
         private Integer internetMaxBandwidthOut; 
         private String ioOptimized; 
         private Integer ipv6AddressCount; 
@@ -767,6 +806,8 @@ public class ModifyScalingConfigurationRequest extends Request {
             this.deploymentSetId = request.deploymentSetId;
             this.hostName = request.hostName;
             this.hpcClusterId = request.hpcClusterId;
+            this.httpEndpoint = request.httpEndpoint;
+            this.httpTokens = request.httpTokens;
             this.imageFamily = request.imageFamily;
             this.imageId = request.imageId;
             this.imageName = request.imageName;
@@ -776,6 +817,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             this.instanceTypeOverrides = request.instanceTypeOverrides;
             this.instanceTypes = request.instanceTypes;
             this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandwidthIn = request.internetMaxBandwidthIn;
             this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
             this.ioOptimized = request.ioOptimized;
             this.ipv6AddressCount = request.ipv6AddressCount;
@@ -998,6 +1040,24 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
+         * HttpEndpoint.
+         */
+        public Builder httpEndpoint(String httpEndpoint) {
+            this.putQueryParameter("HttpEndpoint", httpEndpoint);
+            this.httpEndpoint = httpEndpoint;
+            return this;
+        }
+
+        /**
+         * HttpTokens.
+         */
+        public Builder httpTokens(String httpTokens) {
+            this.putQueryParameter("HttpTokens", httpTokens);
+            this.httpTokens = httpTokens;
+            return this;
+        }
+
+        /**
          * <p>The name of the image family. If you specify this parameter, the latest custom images that are available in the specified image family are returned. Then, you can use the images to create instances. If you specify ImageId, you cannot specify ImageFamily.</p>
          * 
          * <strong>example:</strong>
@@ -1102,6 +1162,15 @@ public class ModifyScalingConfigurationRequest extends Request {
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
             this.internetChargeType = internetChargeType;
+            return this;
+        }
+
+        /**
+         * InternetMaxBandwidthIn.
+         */
+        public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+            this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
+            this.internetMaxBandwidthIn = internetMaxBandwidthIn;
             return this;
         }
 
