@@ -176,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReIndexResponse> reIndex(ReIndexRequest request);
 
     /**
+     * @param request the request parameters of RebuildTask  RebuildTaskRequest
+     * @return RebuildTaskResponse
+     */
+    CompletableFuture<RebuildTaskResponse> rebuildTask(RebuildTaskRequest request);
+
+    /**
      * @param request the request parameters of RecallDocument  RecallDocumentRequest
      * @return RecallDocumentResponse
      */
