@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationGroupBillResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApplicationGroupBillResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The consume of application group.
+         * <p>The consume of application group.</p>
          */
         public Builder applicationGroupConsume(java.util.List < ApplicationGroupConsume> applicationGroupConsume) {
             this.applicationGroupConsume = applicationGroupConsume;
@@ -81,7 +82,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -89,7 +93,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -97,7 +104,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E897A1AB-4701-5B71-93AD-38FD703763A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApplicationGroupBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationGroupBillResponseBody</p>
+     */
     public static class ApplicationGroupConsume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Float amount;
@@ -245,7 +261,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The amount consumed by the instance.
+             * <p>The amount consumed by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.88</p>
              */
             public Builder amount(Float amount) {
                 this.amount = amount;
@@ -253,7 +272,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-10T06:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -261,7 +283,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * The currency unit.
+             * <p>The currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -269,7 +294,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-0jl781czrhqey0s5zpsj</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -277,7 +305,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -285,7 +316,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::INSTANCE</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -293,7 +327,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * Optimization suggestions.
+             * <p>Optimization suggestions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder optimization(String optimization) {
                 this.optimization = optimization;
@@ -301,7 +338,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * The peak type.
+             * <p>The peak type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WHITE</p>
              */
             public Builder peakType(String peakType) {
                 this.peakType = peakType;
@@ -309,7 +349,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * The performance of the data synchronization instance.
+             * <p>The performance of the data synchronization instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;mem&quot;:&quot;6.82&quot;,&quot;cpu&quot;:&quot;0.55&quot;}&quot;</p>
              */
             public Builder performance(String performance) {
                 this.performance = performance;
@@ -317,7 +360,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * The status of instance.
+             * <p>The status of instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

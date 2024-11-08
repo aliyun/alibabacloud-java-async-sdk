@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpsItemResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpsItemResponseBody</p>
@@ -49,7 +50,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the O\&M item.
+         * <p>The information about the O&amp;M item.</p>
          */
         public Builder opsItem(OpsItem opsItem) {
             this.opsItem = opsItem;
@@ -57,7 +58,10 @@ public class GetOpsItemResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8BED4C16-BD30-5E27-94D4-7EBCCECF70C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetOpsItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpsItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpsItemResponseBody</p>
+     */
     public static class OpsItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.Map < String, ? > attributes;
@@ -289,7 +299,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The information about the attributes of the O\&M item.
+             * <p>The information about the attributes of the O&amp;M item.</p>
              */
             public Builder attributes(java.util.Map < String, ? > attributes) {
                 this.attributes = attributes;
@@ -297,7 +307,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the O\&M item.
+             * <p>The category of the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -305,7 +318,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the O\&M item.
+             * <p>The user who created the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createBy(String createBy) {
                 this.createBy = createBy;
@@ -313,7 +329,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the O\&M item was created.
+             * <p>The time when the O&amp;M item was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-10T06:15Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -321,7 +340,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-update</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -329,7 +351,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The user who last modified the O\&M item.
+             * <p>The user who last modified the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modifiedBy</p>
              */
             public Builder lastModifiedBy(String lastModifiedBy) {
                 this.lastModifiedBy = lastModifiedBy;
@@ -337,7 +362,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The O\&M item ID.
+             * <p>The O&amp;M item ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oi-d52b08695e2b46ae8413</p>
              */
             public Builder opsItemId(String opsItemId) {
                 this.opsItemId = opsItemId;
@@ -345,7 +373,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the O\&M item.
+             * <p>The priority of the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -353,7 +384,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzxkofnlxtn2i</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -361,7 +395,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Names (ARNs) of the associated resources.
+             * <p>The Alibaba Cloud Resource Names (ARNs) of the associated resources.</p>
              */
             public Builder resources(java.util.List < String > resources) {
                 this.resources = resources;
@@ -369,7 +403,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the O\&M item.
+             * <p>The severity level of the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -377,7 +414,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The solutions to the O\&M item.
+             * <p>The solutions to the O&amp;M item.</p>
              */
             public Builder solutions(java.util.List < java.util.Map<String, ?>> solutions) {
                 this.solutions = solutions;
@@ -385,7 +422,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The source business of the O\&M item.
+             * <p>The source business of the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/aliyun/appManager</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -393,7 +433,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the O\&M item.
+             * <p>The status of the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -401,7 +444,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The tags attached to the O\&M item.
+             * <p>The tags attached to the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;K1&quot;:&quot;V1&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -409,7 +455,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the O\&M item.
+             * <p>The title of the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -417,7 +466,10 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the O\&M item was updated.
+             * <p>The time when the O&amp;M item was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-10T06:15Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

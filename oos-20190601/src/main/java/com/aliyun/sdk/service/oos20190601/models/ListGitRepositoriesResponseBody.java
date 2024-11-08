@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGitRepositoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListGitRepositoriesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListGitRepositoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGitRepositoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGitRepositoriesResponseBody</p>
+     */
     public static class GitRepos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -103,11 +110,15 @@ public class ListGitRepositoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsPrivate")
         private Boolean isPrivate;
 
+        @com.aliyun.core.annotation.NameInMap("RepoId")
+        private Long repoId;
+
         private GitRepos(Builder builder) {
             this.description = builder.description;
             this.fullName = builder.fullName;
             this.htmlUrl = builder.htmlUrl;
             this.isPrivate = builder.isPrivate;
+            this.repoId = builder.repoId;
         }
 
         public static Builder builder() {
@@ -146,11 +157,19 @@ public class ListGitRepositoriesResponseBody extends TeaModel {
             return this.isPrivate;
         }
 
+        /**
+         * @return repoId
+         */
+        public Long getRepoId() {
+            return this.repoId;
+        }
+
         public static final class Builder {
             private String description; 
             private String fullName; 
             private String htmlUrl; 
             private Boolean isPrivate; 
+            private Long repoId; 
 
             /**
              * Description.
@@ -181,6 +200,14 @@ public class ListGitRepositoriesResponseBody extends TeaModel {
              */
             public Builder isPrivate(Boolean isPrivate) {
                 this.isPrivate = isPrivate;
+                return this;
+            }
+
+            /**
+             * RepoId.
+             */
+            public Builder repoId(Long repoId) {
+                this.repoId = repoId;
                 return this;
             }
 

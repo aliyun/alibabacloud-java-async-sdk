@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListParametersResponseBody} extends {@link TeaModel}
  *
  * <p>ListParametersResponseBody</p>
@@ -85,7 +86,10 @@ public class ListParametersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class ListParametersResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC6KPDUL0FIIb</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,7 @@ public class ListParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the common parameter.
+         * <p>The information about the common parameter.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -109,7 +116,10 @@ public class ListParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A81E4B2E-6B33-4BAE-9856-55DB7C893E01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParametersResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
@@ -289,7 +308,10 @@ public class ListParametersResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * The user who created the common parameter.
+             * <p>The user who created the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -297,7 +319,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the common parameter was created.
+             * <p>The time when the common parameter was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-01T08:01:43Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -305,7 +330,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the common parameter.
+             * <p>The description of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>parameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -313,7 +341,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The common parameter ID.
+             * <p>The common parameter ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-4c4b401cab6747xxxxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -321,7 +352,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the common parameter.
+             * <p>The name of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyParameter</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +363,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the common parameter.
+             * <p>The version number of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterVersion(String parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -337,7 +374,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m4******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -345,7 +385,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the common parameter.
+             * <p>The share type of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -353,7 +396,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags added to the common parameter.
+             * <p>The tags added to the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -361,7 +407,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the common parameter.
+             * <p>The data type of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -369,7 +418,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The user who updated the common parameter.
+             * <p>The user who updated the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -377,7 +429,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the common parameter was updated.
+             * <p>The time when the common parameter was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-01T08:01:43Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

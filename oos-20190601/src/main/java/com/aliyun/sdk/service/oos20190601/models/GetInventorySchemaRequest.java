@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInventorySchemaRequest} extends {@link RequestModel}
  *
  * <p>GetInventorySchemaRequest</p>
@@ -110,11 +111,14 @@ public class GetInventorySchemaRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return only properties that support the aggregate feature in the configuration list. Valid values:
-         * <p>
+         * <p>Specifies whether to return only properties that support the aggregate feature in the configuration list. Valid values:</p>
+         * <ul>
+         * <li>true: only returns properties that support the aggregate feature in the configuration list.</li>
+         * <li>false: returns all properties in the configuration list.</li>
+         * </ul>
          * 
-         * *   true: only returns properties that support the aggregate feature in the configuration list.
-         * *   false: returns all properties in the configuration list.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder aggregator(Boolean aggregator) {
             this.putQueryParameter("Aggregator", aggregator);
@@ -123,7 +127,10 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -132,7 +139,10 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABfh8MVLQI9AuKGACLgjbsXbWs-Mna47IDM6tr6wK7TZ1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -141,7 +151,10 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,17 +163,20 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * The configuration list type name. Valid values:
-         * <p>
+         * <p>The configuration list type name. Valid values:</p>
+         * <ul>
+         * <li>ACS:InstanceInformation</li>
+         * <li>ACS:Application</li>
+         * <li>ACS:File</li>
+         * <li>ACS:Network</li>
+         * <li>ACS:WindowsRole</li>
+         * <li>ACS:Service</li>
+         * <li>ACS:WindowsUpdate</li>
+         * <li>ACS:WindowsRegistry</li>
+         * </ul>
          * 
-         * *   ACS:InstanceInformation
-         * *   ACS:Application
-         * *   ACS:File
-         * *   ACS:Network
-         * *   ACS:WindowsRole
-         * *   ACS:Service
-         * *   ACS:WindowsUpdate
-         * *   ACS:WindowsRegistry
+         * <strong>example:</strong>
+         * <p>ACS:Application</p>
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);

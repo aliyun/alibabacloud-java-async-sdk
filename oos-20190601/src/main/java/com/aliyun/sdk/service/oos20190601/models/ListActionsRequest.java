@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListActionsRequest} extends {@link RequestModel}
  *
  * <p>ListActionsRequest</p>
@@ -95,7 +96,10 @@ public class ListActionsRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.
+         * <p>The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -104,7 +108,12 @@ public class ListActionsRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -113,7 +122,10 @@ public class ListActionsRequest extends Request {
         }
 
         /**
-         * The name of the action. All actions whose names contain the specified action name are returned.
+         * <p>The name of the action. All actions whose names contain the specified action name are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         public Builder OOSActionName(String OOSActionName) {
             this.putQueryParameter("OOSActionName", OOSActionName);
@@ -122,7 +134,10 @@ public class ListActionsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPatchBaselinesRequest} extends {@link RequestModel}
  *
  * <p>ListPatchBaselinesRequest</p>
@@ -193,7 +194,7 @@ public class ListPatchBaselinesRequest extends Request {
         } 
 
         /**
-         * The approved patches.
+         * <p>The approved patches.</p>
          */
         public Builder approvedPatches(java.util.List < String > approvedPatches) {
             String approvedPatchesShrink = shrink(approvedPatches, "ApprovedPatches", "json");
@@ -203,7 +204,10 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * Specifies whether the approved patch involves updates other than security-related updates.
+         * <p>Specifies whether the approved patch involves updates other than security-related updates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
             this.putQueryParameter("ApprovedPatchesEnableNonSecurity", approvedPatchesEnableNonSecurity);
@@ -212,7 +216,10 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -221,7 +228,10 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The name of the patch baseline.
+         * <p>The name of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyPatchBaseline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -230,7 +240,12 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -239,17 +254,20 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Ubuntu</li>
+         * <li>CentOS</li>
+         * <li>Debian</li>
+         * <li>AliyunLinux</li>
+         * <li>RedhatEnterpriseLinux</li>
+         * <li>Anolis</li>
+         * <li>AlmaLinux</li>
+         * </ul>
          * 
-         * *   Windows
-         * *   Ubuntu
-         * *   CentOS
-         * *   Debian
-         * *   AliyunLinux
-         * *   RedhatEnterpriseLinux
-         * *   Anolis
-         * *   AlmaLinux
+         * <strong>example:</strong>
+         * <p>AliyunLinux</p>
          */
         public Builder operationSystem(String operationSystem) {
             this.putQueryParameter("OperationSystem", operationSystem);
@@ -258,7 +276,10 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -267,7 +288,10 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -276,11 +300,14 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The share type of the template. Valid values:
-         * <p>
+         * <p>The share type of the template. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong></li>
+         * <li><strong>Private</strong></li>
+         * </ul>
          * 
-         * *   **Public**
-         * *   **Private**
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -289,7 +316,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The patch source configurations.
+         * <p>The patch source configurations.</p>
          */
         public Builder sources(java.util.List < String > sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -299,7 +326,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -315,6 +342,12 @@ public class ListPatchBaselinesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListPatchBaselinesRequest} extends {@link TeaModel}
+     *
+     * <p>ListPatchBaselinesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -354,7 +387,10 @@ public class ListPatchBaselinesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -362,7 +398,10 @@ public class ListPatchBaselinesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

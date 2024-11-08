@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancePatchStatesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancePatchStatesRequest</p>
@@ -95,7 +96,10 @@ public class ListInstancePatchStatesRequest extends Request {
         } 
 
         /**
-         * The ID of the Elastic Compute Service (ECS) instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the instance IDs with commas (,).
+         * <p>The ID of the Elastic Compute Service (ECS) instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the instance IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-bp1jaxa2bs4bps7*****&quot;, &quot;i-bp67acfmxazb4p****&quot;, … &quot;i-bp67acfmxazb4p****&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -104,7 +108,10 @@ public class ListInstancePatchStatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -113,7 +120,12 @@ public class ListInstancePatchStatesRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -122,7 +134,10 @@ public class ListInstancePatchStatesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance whose patches you want to query resides.
+         * <p>The ID of the region in which the instance whose patches you want to query resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

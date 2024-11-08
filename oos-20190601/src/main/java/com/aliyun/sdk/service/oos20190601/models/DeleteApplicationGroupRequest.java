@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteApplicationGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteApplicationGroupRequest</p>
@@ -97,7 +98,11 @@ public class DeleteApplicationGroupRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -106,7 +111,11 @@ public class DeleteApplicationGroupRequest extends Request {
         }
 
         /**
-         * The name of the application group.
+         * <p>The name of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplicationGroup</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -115,7 +124,10 @@ public class DeleteApplicationGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region. Set the value to cn-hangzhou.
+         * <p>The ID of the region. Set the value to cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,10 +136,14 @@ public class DeleteApplicationGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain resources created by application manager when deleting the application. Valid values:
-         * <p>
-         * - true
-         * - false
+         * <p>Specifies whether to retain resources created by application manager when deleting the application. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder retainResource(Boolean retainResource) {
             this.putQueryParameter("RetainResource", retainResource);

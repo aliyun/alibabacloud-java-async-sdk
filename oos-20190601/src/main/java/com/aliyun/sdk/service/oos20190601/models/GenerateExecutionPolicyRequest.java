@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateExecutionPolicyRequest} extends {@link RequestModel}
  *
  * <p>GenerateExecutionPolicyRequest</p>
@@ -109,7 +110,10 @@ public class GenerateExecutionPolicyRequest extends Request {
         } 
 
         /**
-         * The RAM role.
+         * <p>The RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForOOSBandwidthScheduler</p>
          */
         public Builder ramRole(String ramRole) {
             this.putQueryParameter("RamRole", ramRole);
@@ -118,7 +122,10 @@ public class GenerateExecutionPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,7 +134,10 @@ public class GenerateExecutionPolicyRequest extends Request {
         }
 
         /**
-         * The content of the template in the JSON or YAML format. This parameter is the same as the Content parameter that you can specify when you call the CreateTemplate operation. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.
+         * <p>The content of the template in the JSON or YAML format. This parameter is the same as the Content parameter that you can specify when you call the CreateTemplate operation. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;Description&quot;: &quot;Example template, describe instances in some status&quot;,   &quot;FormatVersion&quot;: &quot;OOS-2019-06-01&quot;,   &quot;Parameters&quot;: {},   &quot;Tasks&quot;: [     {       &quot;Name&quot;: &quot;describeInstances&quot;,       &quot;Action&quot;: &quot;ACS::ExecuteAPI&quot;,       &quot;Description&quot;: &quot;desc-en&quot;,       &quot;Properties&quot;: {         &quot;Service&quot;: &quot;ECS&quot;,         &quot;API&quot;: &quot;DescribeInstances&quot;,         &quot;Parameters&quot;: {           &quot;Status&quot;: &quot;Running&quot;         }       }     }   ] }</p>
          */
         public Builder templateContent(String templateContent) {
             this.putQueryParameter("TemplateContent", templateContent);
@@ -136,7 +146,10 @@ public class GenerateExecutionPolicyRequest extends Request {
         }
 
         /**
-         * The name of the template.
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vmeixme</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -145,7 +158,10 @@ public class GenerateExecutionPolicyRequest extends Request {
         }
 
         /**
-         * The version of the template. The default value is the latest version of the template.
+         * <p>The version of the template. The default value is the latest version of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

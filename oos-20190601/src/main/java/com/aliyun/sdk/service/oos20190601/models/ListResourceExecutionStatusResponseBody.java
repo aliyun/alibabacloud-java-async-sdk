@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceExecutionStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceExecutionStatusResponseBody</p>
@@ -73,7 +74,10 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         private java.util.List < ResourceExecutionStatus> resourceExecutionStatus; 
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,7 +85,10 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +96,10 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED571CBD-9F96-419D-B919-CF340BBCA157</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The execution information of the resource.
+         * <p>The execution information of the resource.</p>
          */
         public Builder resourceExecutionStatus(java.util.List < ResourceExecutionStatus> resourceExecutionStatus) {
             this.resourceExecutionStatus = resourceExecutionStatus;
@@ -110,6 +120,12 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceExecutionStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceExecutionStatusResponseBody</p>
+     */
     public static class ResourceExecutionStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutionId")
         private String executionId;
@@ -185,7 +201,10 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the execution.
+             * <p>The ID of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-6be6d6ff805349d9ac13</p>
              */
             public Builder executionId(String executionId) {
                 this.executionId = executionId;
@@ -193,7 +212,10 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution started running.
+             * <p>The time when the execution started running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-13T08:48:34Z</p>
              */
             public Builder executionTime(String executionTime) {
                 this.executionTime = executionTime;
@@ -201,7 +223,10 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The output of the template.
+             * <p>The output of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ 				&quot;commandOutput&quot;: &quot;hello\n&quot; 			}</p>
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -209,7 +234,10 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1e1bxxxxxxxxxxxxxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -217,7 +245,10 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the execution.
+             * <p>The status of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretParameterVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecretParameterVersionsResponseBody</p>
@@ -157,7 +158,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * The user who created the encryption parameter.
+         * <p>The user who created the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -165,7 +169,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the encryption parameter was created.
+         * <p>The time when the encryption parameter was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-01T08:01:43Z</p>
          */
         public Builder createdDate(String createdDate) {
             this.createdDate = createdDate;
@@ -173,7 +180,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the encryption parameter.
+         * <p>The description of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecretParameter</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -181,7 +191,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the encryption parameter.
+         * <p>The ID of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-4c4b401cab6747xxxxxx</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -189,7 +202,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -197,7 +213,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the encryption parameter.
+         * <p>The name of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySecretParameter</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -205,7 +224,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -213,7 +235,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the version of the encryption parameter.
+         * <p>The information about the version of the encryption parameter.</p>
          */
         public Builder parameterVersions(java.util.List < ParameterVersions> parameterVersions) {
             this.parameterVersions = parameterVersions;
@@ -221,7 +243,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBA6E6C8-F75D-41DE-AFF5-1FA03F551CA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -229,7 +254,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -237,7 +265,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the encryption parameter.
+         * <p>The type of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Secret</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -250,6 +281,12 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecretParameterVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretParameterVersionsResponseBody</p>
+     */
     public static class ParameterVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterVersion")
         private Integer parameterVersion;
@@ -313,7 +350,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The version number of the encryption parameter.
+             * <p>The version number of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -321,7 +361,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The user who updated the encryption parameter.
+             * <p>The user who updated the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -329,7 +372,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the encryption parameter was updated.
+             * <p>The time when the encryption parameter was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-01T08:01:43Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -337,7 +383,10 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the encryption parameter.
+             * <p>The value of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SecretParameter</p>
              */
             public Builder value(String value) {
                 this.value = value;

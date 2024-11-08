@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NotifyExecutionRequest} extends {@link RequestModel}
  *
  * <p>NotifyExecutionRequest</p>
@@ -181,7 +182,11 @@ public class NotifyExecutionRequest extends Request {
         } 
 
         /**
-         * The ID of the execution.
+         * <p>The ID of the execution.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxx</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -190,7 +195,10 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * The state of the terminated execution. This parameter is valid if you set the NotifyType parameter to CompleteExecution.
+         * <p>The state of the terminated execution. This parameter is valid if you set the NotifyType parameter to CompleteExecution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder executionStatus(String executionStatus) {
             this.putQueryParameter("ExecutionStatus", executionStatus);
@@ -199,7 +207,10 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * The items of the child node in the loop task.
+         * <p>The items of the child node in the loop task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxx</p>
          */
         public Builder loopItem(String loopItem) {
             this.putQueryParameter("LoopItem", loopItem);
@@ -208,7 +219,10 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * The description for the notification.
+         * <p>The description for the notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Note</p>
          */
         public Builder notifyNote(String notifyNote) {
             this.putQueryParameter("NotifyNote", notifyNote);
@@ -217,16 +231,20 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * The type of the notification. Valid values:
-         * <p>
+         * <p>The type of the notification. Valid values:</p>
+         * <ul>
+         * <li><strong>ExecuteTask</strong>: starts to run a specific task. This value is used if you perform debugging in the Debug mode. If you set this parameter to ExecuteTask, you also need to set the Parameters parameter.</li>
+         * <li><strong>CancelTask</strong>: cancels a current task. This value is used if you perform debugging in the Debug mode.</li>
+         * <li><strong>CompleteExecution</strong>: manually terminates an execution if you perform debugging in the Debug mode. You can specify the state of the terminated execution by using the <strong>ExecutionStatus</strong> parameter.</li>
+         * <li><strong>Approve</strong>: approves an execution. For example, you are aware of the risks of an operation task and agree to approve the execution.</li>
+         * <li><strong>Reject</strong>: rejects an execution. For example, you want to reject the execution of a high-risk operation task.</li>
+         * <li><strong>RetryTask</strong>: retries a failed task whose execution mode is Suspend upon Failure.</li>
+         * <li><strong>SkipTask</strong>: skips a failed task whose execution mode is Suspend upon Failure.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ExecuteTask**: starts to run a specific task. This value is used if you perform debugging in the Debug mode. If you set this parameter to ExecuteTask, you also need to set the Parameters parameter.
-         * *   **CancelTask**: cancels a current task. This value is used if you perform debugging in the Debug mode.
-         * *   **CompleteExecution**: manually terminates an execution if you perform debugging in the Debug mode. You can specify the state of the terminated execution by using the **ExecutionStatus** parameter.
-         * *   **Approve**: approves an execution. For example, you are aware of the risks of an operation task and agree to approve the execution.
-         * *   **Reject**: rejects an execution. For example, you want to reject the execution of a high-risk operation task.
-         * *   **RetryTask**: retries a failed task whose execution mode is Suspend upon Failure.
-         * *   **SkipTask**: skips a failed task whose execution mode is Suspend upon Failure.
+         * <strong>example:</strong>
+         * <p>Approve</p>
          */
         public Builder notifyType(String notifyType) {
             this.putQueryParameter("NotifyType", notifyType);
@@ -235,7 +253,10 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * The parameters of the subsequent task. This parameter is valid if you set the NotifyType parameter to ExecuteTask.
+         * <p>The parameters of the subsequent task. This parameter is valid if you set the NotifyType parameter to ExecuteTask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -244,7 +265,10 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the execution resides.
+         * <p>The ID of the region in which the execution resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +277,10 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * The execution ID of the task.
+         * <p>The execution ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-exec-xxx</p>
          */
         public Builder taskExecutionId(String taskExecutionId) {
             this.putQueryParameter("TaskExecutionId", taskExecutionId);
@@ -262,7 +289,10 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * The execution IDs of the tasks.
+         * <p>The execution IDs of the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;exec-79c321c11003a97c&quot;,&quot;exec-79c321c11003aqw97cz&quot;]</p>
          */
         public Builder taskExecutionIds(String taskExecutionIds) {
             this.putQueryParameter("TaskExecutionIds", taskExecutionIds);
@@ -271,7 +301,10 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * The name of the subsequent task.
+         * <p>The name of the subsequent task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>describeInstance</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

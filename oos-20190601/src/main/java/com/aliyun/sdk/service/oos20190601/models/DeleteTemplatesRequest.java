@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DeleteTemplatesRequest</p>
@@ -82,7 +83,10 @@ public class DeleteTemplatesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete the related executions when a template is deleted.
+         * <p>Specifies whether to delete the related executions when a template is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoDeleteExecutions(Boolean autoDeleteExecutions) {
             this.putQueryParameter("AutoDeleteExecutions", autoDeleteExecutions);
@@ -91,7 +95,10 @@ public class DeleteTemplatesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +107,11 @@ public class DeleteTemplatesRequest extends Request {
         }
 
         /**
-         * The names of the templates to be deleted.
+         * <p>The names of the templates to be deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;t1&quot;,&quot;t2&quot;]</p>
          */
         public Builder templateNames(String templateNames) {
             this.putQueryParameter("TemplateNames", templateNames);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListTemplateVersionsRequest</p>
@@ -110,7 +111,10 @@ public class ListTemplateVersionsRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: 10 to 100
+         * <p>The number of entries per page. Valid values: 10 to 100</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -119,7 +123,10 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H8xj9c-398djs9-39ajd9asdjjJ</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -128,7 +135,10 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -137,7 +147,10 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The type of the template. Valid values: Private and Public.
+         * <p>The type of the template. Valid values: Private and Public.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -146,7 +159,11 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The name of the template.
+         * <p>The name of the template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>describeinstances</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

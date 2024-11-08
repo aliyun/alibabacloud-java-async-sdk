@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchInventoryResponseBody} extends {@link TeaModel}
  *
  * <p>SearchInventoryResponseBody</p>
@@ -81,7 +82,10 @@ public class SearchInventoryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -89,7 +93,10 @@ public class SearchInventoryResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -97,7 +104,10 @@ public class SearchInventoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A81E4B2E-6B33-4BAE-9856-55DB7C893E01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

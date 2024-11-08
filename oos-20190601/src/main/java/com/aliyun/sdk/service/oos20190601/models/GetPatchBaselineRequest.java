@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPatchBaselineRequest} extends {@link RequestModel}
  *
  * <p>GetPatchBaselineRequest</p>
@@ -68,7 +69,11 @@ public class GetPatchBaselineRequest extends Request {
         } 
 
         /**
-         * The name of the patch baseline.
+         * <p>The name of the patch baseline.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyPatchBaseline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -77,7 +82,10 @@ public class GetPatchBaselineRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the patch baseline whose details you want to query resides.
+         * <p>The ID of the region in which the patch baseline whose details you want to query resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

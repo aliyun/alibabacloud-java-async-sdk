@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecretParameterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSecretParameterResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateSecretParameterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the encryption parameter.
+         * <p>The information about the encryption parameter.</p>
          */
         public Builder parameter(Parameter parameter) {
             this.parameter = parameter;
@@ -57,7 +58,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B419FF3-ABC6-4DF0-95E5-636DC8CBB8AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateSecretParameterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSecretParameterResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSecretParameterResponseBody</p>
+     */
     public static class Parameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Constraints")
         private String constraints;
@@ -265,7 +275,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * The constraints of the encryption parameter.
+             * <p>The constraints of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{ 	&quot;AllowedValues&quot;: [&quot;secretparameter&quot;], 	&quot;AllowedPattern&quot;: &quot;secretparameter&quot;, 	&quot;MinLength&quot;: 0, 	&quot;MaxLength&quot;: 20 }&quot;</p>
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -273,7 +286,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the encryption parameter.
+             * <p>The user who created the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -281,7 +297,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the encryption parameter was created.
+             * <p>The time when the encryption parameter was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-01T09:30:36Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -289,7 +308,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the KMS instance.
+             * <p>The instance ID of the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kst-hzz****</p>
              */
             public Builder DKMSInstanceId(String DKMSInstanceId) {
                 this.DKMSInstanceId = DKMSInstanceId;
@@ -297,7 +319,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the encryption parameter.
+             * <p>The description of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SecretParameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -305,7 +330,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the encryption parameter.
+             * <p>The ID of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-0b0fff9919c946xxxxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -313,7 +341,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The key ID of KMS that is used to encrypt the parameter.
+             * <p>The key ID of KMS that is used to encrypt the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80e9409f-78fa-42ab-84bd-83f40c******</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -321,7 +352,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the encryption parameter.
+             * <p>The name of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyParameter</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +363,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the encryption parameter.
+             * <p>The version number of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -337,7 +374,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m4******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -345,7 +385,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the encryption parameter.
+             * <p>The share type of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -353,7 +396,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -361,7 +407,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter.
+             * <p>The type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Secret</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -369,7 +418,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The user who updated the encryption parameter.
+             * <p>The user who updated the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -377,7 +429,10 @@ public class CreateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the encryption parameter was updated.
+             * <p>The time when the encryption parameter was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-01T09:30:36Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

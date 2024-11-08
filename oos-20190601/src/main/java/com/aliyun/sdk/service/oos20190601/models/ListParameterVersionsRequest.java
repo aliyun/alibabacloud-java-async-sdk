@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListParameterVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListParameterVersionsRequest</p>
@@ -111,7 +112,10 @@ public class ListParameterVersionsRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -120,7 +124,11 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * The name of the common parameter.
+         * <p>The name of the common parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyParameter</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -129,7 +137,10 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -138,7 +149,10 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +161,10 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * The share type of the common parameter.
+         * <p>The share type of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);

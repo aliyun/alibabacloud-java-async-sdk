@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPatchBaselinesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPatchBaselinesResponseBody</p>
@@ -73,7 +74,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,7 +85,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The number of entries returned on each page.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +96,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * The patch baselines.
+         * <p>The patch baselines.</p>
          */
         public Builder patchBaselines(java.util.List < PatchBaselines> patchBaselines) {
             this.patchBaselines = patchBaselines;
@@ -97,7 +104,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432996A1-03C0-5C4C-A8E6-66C4110765B8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPatchBaselinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPatchBaselinesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -149,7 +165,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -157,7 +176,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -171,6 +193,12 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPatchBaselinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPatchBaselinesResponseBody</p>
+     */
     public static class PatchBaselines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApprovedPatches")
         private java.util.List < String > approvedPatches;
@@ -366,7 +394,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * The approved patches.
+             * <p>The approved patches.</p>
              */
             public Builder approvedPatches(java.util.List < String > approvedPatches) {
                 this.approvedPatches = approvedPatches;
@@ -374,7 +402,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the approved patch involves updates other than security-related updates.
+             * <p>Indicates whether the approved patch involves updates other than security-related updates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
                 this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
@@ -382,7 +413,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the patch baseline.
+             * <p>The user who created the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -390,7 +424,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch baseline was created.
+             * <p>The time when the patch baseline was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08T03:41:23Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -398,7 +435,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the patch baseline.
+             * <p>The description of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ListPatchBaseline</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -406,7 +446,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the patch baseline.
+             * <p>The ID of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pb-c2838b5d89b540e19ee6</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -414,7 +457,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the patch baseline is set as the default patch baseline.
+             * <p>Indicates whether the patch baseline is set as the default patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -422,7 +468,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the patch baseline.
+             * <p>The name of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyPatchBaseline</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -430,7 +479,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system.
+             * <p>The type of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunLinux</p>
              */
             public Builder operationSystem(String operationSystem) {
                 this.operationSystem = operationSystem;
@@ -438,7 +490,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek256ia6vhsndy</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -446,7 +501,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the patch baseline.
+             * <p>The share type of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -454,7 +512,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of patch sources.
+             * <p>The configurations of patch sources.</p>
              */
             public Builder sources(java.util.List < String > sources) {
                 this.sources = sources;
@@ -462,7 +520,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the patch baseline.
+             * <p>The tags of the patch baseline.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -470,7 +528,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The user who last updated the patch baseline.
+             * <p>The user who last updated the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -478,7 +539,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch baseline was updated.
+             * <p>The time when the patch baseline was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08T03:44:34Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

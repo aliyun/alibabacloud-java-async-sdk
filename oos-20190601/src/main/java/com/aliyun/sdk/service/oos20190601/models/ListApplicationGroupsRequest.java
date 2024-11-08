@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationGroupsRequest</p>
@@ -151,7 +152,10 @@ public class ListApplicationGroupsRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -160,7 +164,10 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the related resources reside.
+         * <p>The ID of the region in which the related resources reside.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder deployRegionId(String deployRegionId) {
             this.putQueryParameter("DeployRegionId", deployRegionId);
@@ -169,7 +176,10 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -178,7 +188,12 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -187,7 +202,10 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region. Set the value to cn-hangzhou.
+         * <p>The ID of the region. Set the value to cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +214,10 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud resource.
+         * <p>The ID of the cloud resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2vcj9raxrhxb48zz3whw</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -205,7 +226,10 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * The code of the product to which the cloud resource belongs.
+         * <p>The code of the product to which the cloud resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder resourceProduct(String resourceProduct) {
             this.putQueryParameter("ResourceProduct", resourceProduct);
@@ -214,7 +238,10 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * The type of the cloud resource.
+         * <p>The type of the cloud resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancePackageStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancePackageStatesResponseBody</p>
@@ -97,7 +98,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1306108F-610C-40FD-AAD5-XXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancePackageStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancePackageStatesResponseBody</p>
+     */
     public static class PackageStates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;

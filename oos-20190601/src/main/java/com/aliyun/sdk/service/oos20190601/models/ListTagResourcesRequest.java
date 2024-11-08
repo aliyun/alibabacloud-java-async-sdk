@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -111,7 +112,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -120,7 +124,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,7 +137,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of resources. The number of resource IDs ranges from 1 to 50.
+         * <p>The IDs of resources. The number of resource IDs ranges from 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;templateNam1&quot;,&quot;templateName2&quot;]</p>
          */
         public Builder resourceIds(java.util.Map < String, ? > resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "json");
@@ -139,7 +150,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values: template execution
+         * <p>The type of the resource. Valid values: template execution</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +163,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
+         * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

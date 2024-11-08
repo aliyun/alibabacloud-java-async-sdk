@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationGroupRequest</p>
@@ -125,7 +126,11 @@ public class UpdateApplicationGroupRequest extends Request {
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -134,7 +139,11 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The name of the application group.
+         * <p>The name of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplicationGroup</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -143,7 +152,10 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The new name of the application group.
+         * <p>The new name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdateMyApplicationGroup</p>
          */
         public Builder newName(String newName) {
             this.putQueryParameter("NewName", newName);
@@ -171,7 +183,10 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-hangzhou.
+         * <p>The region ID. Set the value to cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

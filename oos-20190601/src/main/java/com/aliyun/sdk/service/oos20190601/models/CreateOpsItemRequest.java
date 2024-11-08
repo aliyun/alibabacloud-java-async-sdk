@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOpsItemRequest} extends {@link RequestModel}
  *
  * <p>CreateOpsItemRequest</p>
@@ -225,50 +226,48 @@ public class CreateOpsItemRequest extends Request {
         } 
 
         /**
-         * The category.
-         * <p>
+         * <p>The category.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Availability</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   Availability
+         * <!-- -->
+         * </li>
+         * <li><p>Performance</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Security</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Performance
+         * <!-- -->
+         * </li>
+         * <li><p>Cost</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Recovery</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Security
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Cost
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Recovery
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Security</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -277,7 +276,10 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e56767-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -286,7 +288,10 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The string to be deduplicated.
+         * <p>The string to be deduplicated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs_instance_Sys</p>
          */
         public Builder dedupString(String dedupString) {
             this.putQueryParameter("DedupString", dedupString);
@@ -295,7 +300,10 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The description of the operation.
+         * <p>The description of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpsItem</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -304,7 +312,10 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The priority. Valid values: 1 to 5. 1 indicates the highest priority.
+         * <p>The priority. Valid values: 1 to 5. 1 indicates the highest priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -313,7 +324,10 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -322,7 +336,10 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -331,7 +348,10 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Names (ARNs) of the associated resources.
+         * <p>The Alibaba Cloud Resource Names (ARNs) of the associated resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;acs:oos:cn-hangzhou:1563457855438522:application/test-33333/applicationgroup/default-cn-hangzhou-1&quot;]</p>
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -340,42 +360,41 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The severity level.
-         * <p>
+         * <p>The severity level.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>High</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   High
+         * <!-- -->
+         * </li>
+         * <li><p>Low</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Medium</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Low
+         * <!-- -->
+         * </li>
+         * <li><p>Critical</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         * *   Medium
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Critical
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Medium</p>
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -384,7 +403,10 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The solutions.
+         * <p>The solutions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\n \&quot;priority\&quot;:3,\n \&quot;type\&quot;:\&quot;SingleAZEcs\&quot;,\n \&quot;url\&quot;:\&quot;<a href="http://ecs.consle.aliyuncs.com%5C%5C%22,%5Cn">http://ecs.consle.aliyuncs.com\\&quot;,\n</a> \&quot;description\&quot;:\&quot;Create Elastic Compute Service (ECS) instances in different zones and import them to an application group.\&quot;\n}]</p>
          */
         public Builder solutions(String solutions) {
             this.putQueryParameter("Solutions", solutions);
@@ -393,7 +415,11 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The source business.
+         * <p>The source business.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/aliyun/ecs</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -402,7 +428,13 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;k1&quot;: &quot;v1&quot;,
+         *       &quot;k2&quot;: &quot;v2&quot;
+         * }</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -412,7 +444,11 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * The title of the O\&M item.
+         * <p>The title of the O&amp;M item.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS reboot is scheduled</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

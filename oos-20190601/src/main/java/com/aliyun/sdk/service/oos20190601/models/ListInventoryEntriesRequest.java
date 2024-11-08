@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInventoryEntriesRequest} extends {@link RequestModel}
  *
  * <p>ListInventoryEntriesRequest</p>
@@ -126,7 +127,7 @@ public class ListInventoryEntriesRequest extends Request {
         } 
 
         /**
-         * The filter rules for the component.
+         * <p>The filter rules for the component.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -135,7 +136,11 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cpoxxxwxxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -144,7 +149,10 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -153,7 +161,10 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -162,7 +173,10 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,17 +185,21 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The name of the component. Valid values:
-         * <p>
+         * <p>The name of the component. Valid values:</p>
+         * <ul>
+         * <li>ACS:InstanceInformation</li>
+         * <li>ACS:Application</li>
+         * <li>ACS:File</li>
+         * <li>ACS:Network</li>
+         * <li>ACS:WindowsRole</li>
+         * <li>ACS:Service</li>
+         * <li>ACS:WindowsRegistry</li>
+         * <li>ACS:WindowsUpdate</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ACS:InstanceInformation
-         * *   ACS:Application
-         * *   ACS:File
-         * *   ACS:Network
-         * *   ACS:WindowsRole
-         * *   ACS:Service
-         * *   ACS:WindowsRegistry
-         * *   ACS:WindowsUpdate
+         * <strong>example:</strong>
+         * <p>ACS:InstanceInformation</p>
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -196,6 +214,12 @@ public class ListInventoryEntriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInventoryEntriesRequest} extends {@link TeaModel}
+     *
+     * <p>ListInventoryEntriesRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -247,7 +271,10 @@ public class ListInventoryEntriesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The name of the component property. Valid values of N: 1 to 5.
+             * <p>The name of the component property. Valid values of N: 1 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PlatformName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -255,14 +282,17 @@ public class ListInventoryEntriesRequest extends Request {
             }
 
             /**
-             * The comparison operator that is used to filter property values. Valid values of N: 1 to 5. Valid values:
-             * <p>
+             * <p>The comparison operator that is used to filter property values. Valid values of N: 1 to 5. Valid values:</p>
+             * <ul>
+             * <li>Equal</li>
+             * <li>NotEqual</li>
+             * <li>BeginWith</li>
+             * <li>LessThan</li>
+             * <li>GreaterThan</li>
+             * </ul>
              * 
-             * *   Equal
-             * *   NotEqual
-             * *   BeginWith
-             * *   LessThan
-             * *   GreaterThan
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -270,7 +300,10 @@ public class ListInventoryEntriesRequest extends Request {
             }
 
             /**
-             * The values of properties. Valid values of the first N: 1 to 5. Valid values of the second N: 1 to 20.
+             * <p>The values of properties. Valid values of the first N: 1 to 5. Valid values of the second N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

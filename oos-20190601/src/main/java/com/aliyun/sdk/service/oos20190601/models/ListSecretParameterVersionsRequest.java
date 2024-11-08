@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretParameterVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListSecretParameterVersionsRequest</p>
@@ -125,7 +126,10 @@ public class ListSecretParameterVersionsRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -134,7 +138,11 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * The name of the encryption parameter.
+         * <p>The name of the encryption parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySecretParameter</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -143,7 +151,10 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -152,7 +163,10 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +175,10 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * The share type of the encryption parameter.
+         * <p>The share type of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -170,7 +187,10 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to decrypt the parameter value. The decrypted parameter value is returned only if this parameter is set to true. Otherwise, null is returned.
+         * <p>Specifies whether to decrypt the parameter value. The decrypted parameter value is returned only if this parameter is set to true. Otherwise, null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withDecryption(Boolean withDecryption) {
             this.putQueryParameter("WithDecryption", withDecryption);

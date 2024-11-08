@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGitRepositoriesRequest} extends {@link RequestModel}
  *
  * <p>ListGitRepositoriesRequest</p>
@@ -14,6 +15,10 @@ public class ListGitRepositoriesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrgId")
+    private String orgId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrgName")
@@ -44,6 +49,7 @@ public class ListGitRepositoriesRequest extends Request {
     private ListGitRepositoriesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.orgId = builder.orgId;
         this.orgName = builder.orgName;
         this.owner = builder.owner;
         this.pageNumber = builder.pageNumber;
@@ -70,6 +76,13 @@ public class ListGitRepositoriesRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return orgId
+     */
+    public String getOrgId() {
+        return this.orgId;
     }
 
     /**
@@ -116,6 +129,7 @@ public class ListGitRepositoriesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListGitRepositoriesRequest, Builder> {
         private String clientToken; 
+        private String orgId; 
         private String orgName; 
         private String owner; 
         private Integer pageNumber; 
@@ -130,6 +144,7 @@ public class ListGitRepositoriesRequest extends Request {
         private Builder(ListGitRepositoriesRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.orgId = request.orgId;
             this.orgName = request.orgName;
             this.owner = request.owner;
             this.pageNumber = request.pageNumber;
@@ -148,6 +163,15 @@ public class ListGitRepositoriesRequest extends Request {
         }
 
         /**
+         * OrgId.
+         */
+        public Builder orgId(String orgId) {
+            this.putQueryParameter("OrgId", orgId);
+            this.orgId = orgId;
+            return this;
+        }
+
+        /**
          * OrgName.
          */
         public Builder orgName(String orgName) {
@@ -157,7 +181,7 @@ public class ListGitRepositoriesRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>This parameter is required.</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -184,7 +208,7 @@ public class ListGitRepositoriesRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>This parameter is required.</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);

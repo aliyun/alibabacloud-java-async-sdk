@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
         private Template template; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2075899A-585D-4A41-A9B2-28DF4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of the template.
+         * <p>The metadata of the template.</p>
          */
         public Builder template(Template template) {
             this.template = template;
@@ -70,6 +74,12 @@ public class UpdateTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateTemplateResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
@@ -253,7 +263,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * The user who created the template.
+             * <p>The user who created the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130920000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -261,7 +274,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was created.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -269,7 +285,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Describe instances of given status</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -277,7 +296,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the template is configured with a trigger.
+             * <p>Indicates whether the template is configured with a trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasTrigger(Boolean hasTrigger) {
                 this.hasTrigger = hasTrigger;
@@ -285,7 +307,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA-256 value of the template content.
+             * <p>The SHA-256 value of the template content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4bc7d7a21b3e003434b9c223f6e6d2578b5ebfeb5be28c1fcf8a8a1b11907bb4</p>
              */
             public Builder hash(String hash) {
                 this.hash = hash;
@@ -293,7 +318,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m4******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -301,7 +329,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the template. The share type of a user-created template is **Private**.
+             * <p>The share type of the template. The share type of a user-created template is <strong>Private</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -309,7 +340,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
+             * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;k2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -317,7 +351,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the template. The system automatically determines whether the format is JSON or YAML.
+             * <p>The format of the template. The system automatically determines whether the format is JSON or YAML.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -325,7 +362,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-94753deed38</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -333,7 +373,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyTemplate</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -341,7 +384,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.
+             * <p>The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -349,7 +395,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The user who last modified the information about the template.
+             * <p>The user who last modified the information about the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(1309000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -357,7 +406,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the template was last modified.
+             * <p>The time when the information about the template was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

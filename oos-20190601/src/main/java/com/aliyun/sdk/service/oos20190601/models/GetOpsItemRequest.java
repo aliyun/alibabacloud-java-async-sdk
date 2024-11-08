@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpsItemRequest} extends {@link RequestModel}
  *
  * <p>GetOpsItemRequest</p>
@@ -68,7 +69,11 @@ public class GetOpsItemRequest extends Request {
         } 
 
         /**
-         * The O\&M item ID.
+         * <p>The O&amp;M item ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oi-d52b08695e2b46ae8413</p>
          */
         public Builder opsItemId(String opsItemId) {
             this.putQueryParameter("OpsItemId", opsItemId);
@@ -77,7 +82,10 @@ public class GetOpsItemRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

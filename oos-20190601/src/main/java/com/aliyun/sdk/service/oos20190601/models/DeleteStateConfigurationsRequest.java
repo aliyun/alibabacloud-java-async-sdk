@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStateConfigurationsRequest} extends {@link RequestModel}
  *
  * <p>DeleteStateConfigurationsRequest</p>
@@ -82,7 +83,10 @@ public class DeleteStateConfigurationsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde3OARpx77No54nv6</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -91,7 +95,10 @@ public class DeleteStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +107,11 @@ public class DeleteStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The IDs of desired-state configurations.
+         * <p>The IDs of desired-state configurations.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sc-asfgdhj12345&quot;]</p>
          */
         public Builder stateConfigurationIds(String stateConfigurationIds) {
             this.putQueryParameter("StateConfigurationIds", stateConfigurationIds);

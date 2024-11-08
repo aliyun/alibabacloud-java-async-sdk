@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstancePackageStateRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstancePackageStateRequest</p>
@@ -126,7 +127,10 @@ public class UpdateInstancePackageStateRequest extends Request {
         } 
 
         /**
-         * ConfigureAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>install</p>
          */
         public Builder configureAction(String configureAction) {
             this.putQueryParameter("ConfigureAction", configureAction);
@@ -135,7 +139,10 @@ public class UpdateInstancePackageStateRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1jaxa2bs4bps7*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -163,7 +170,10 @@ public class UpdateInstancePackageStateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-ECS-InventoryDataCollection</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

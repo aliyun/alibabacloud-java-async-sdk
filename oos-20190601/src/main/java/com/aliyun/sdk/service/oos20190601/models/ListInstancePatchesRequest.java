@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancePatchesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancePatchesRequest</p>
@@ -109,7 +110,10 @@ public class ListInstancePatchesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1jaxa2bs4bps7*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,7 +122,10 @@ public class ListInstancePatchesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -127,7 +134,10 @@ public class ListInstancePatchesRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC6KPDUL0FIIb</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -136,7 +146,10 @@ public class ListInstancePatchesRequest extends Request {
         }
 
         /**
-         * The status of the patches that you want to query. If you do not set this parameter, patches are not filtered.
+         * <p>The status of the patches that you want to query. If you do not set this parameter, patches are not filtered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Installed</p>
          */
         public Builder patchStatuses(String patchStatuses) {
             this.putQueryParameter("PatchStatuses", patchStatuses);
@@ -145,7 +158,10 @@ public class ListInstancePatchesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance whose patches you want to query resides.
+         * <p>The ID of the region in which the instance whose patches you want to query resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

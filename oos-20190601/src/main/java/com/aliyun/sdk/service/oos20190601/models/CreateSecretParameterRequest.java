@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecretParameterRequest} extends {@link RequestModel}
  *
  * <p>CreateSecretParameterRequest</p>
@@ -195,7 +196,10 @@ public class CreateSecretParameterRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). For more information, see "How to ensure idempotence".
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). For more information, see &quot;How to ensure idempotence&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,13 +208,16 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The constraints of the encryption parameter. By default, this parameter is null. Valid values:
-         * <p>
+         * <p>The constraints of the encryption parameter. By default, this parameter is null. Valid values:</p>
+         * <ul>
+         * <li>AllowedValues: The value that is allowed for the encryption parameter. It must be an array string.</li>
+         * <li>AllowedPattern: The pattern that is allowed for the encryption parameter. It must be a regular expression.</li>
+         * <li>MinLength: The minimum length of the encryption parameter.</li>
+         * <li>MaxLength: The maximum length of the encryption parameter.</li>
+         * </ul>
          * 
-         * *   AllowedValues: The value that is allowed for the encryption parameter. It must be an array string.
-         * *   AllowedPattern: The pattern that is allowed for the encryption parameter. It must be a regular expression.
-         * *   MinLength: The minimum length of the encryption parameter.
-         * *   MaxLength: The maximum length of the encryption parameter.
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;&quot;AllowedValues&quot;:[&quot;secretparameter&quot;],&quot;AllowedPattern&quot;:&quot;secretparameter&quot;,&quot;MinLength&quot;:0,&quot;MaxLength&quot;:20}&quot;</p>
          */
         public Builder constraints(String constraints) {
             this.putQueryParameter("Constraints", constraints);
@@ -219,7 +226,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The instance ID of the KMS instance.
+         * <p>The instance ID of the KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kst-hzz****</p>
          */
         public Builder DKMSInstanceId(String DKMSInstanceId) {
             this.putQueryParameter("DKMSInstanceId", DKMSInstanceId);
@@ -228,7 +238,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The description of the encryption parameter. The description must be 1 to 200 characters in length.
+         * <p>The description of the encryption parameter. The description must be 1 to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecretParameter</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -237,7 +250,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The key ID of Key Management Service (KMS) that is used to encrypt the parameter.
+         * <p>The key ID of Key Management Service (KMS) that is used to encrypt the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80e9409f-78fa-42ab-84bd-83f40c******</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -246,7 +262,11 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
+         * <p>The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySecretParameter</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -255,7 +275,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +287,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -273,7 +299,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -283,7 +312,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The type of the parameter. Set the value to Secret.
+         * <p>The type of the parameter. Set the value to Secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Secret</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -292,7 +324,11 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The value of the encryption parameter. The value must be 1 to 4096 characters in length.
+         * <p>The value of the encryption parameter. The value must be 1 to 4096 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecretParameter</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

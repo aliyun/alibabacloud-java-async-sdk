@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateStateConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateStateConfigurationResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
         private java.util.List < StateConfiguration> stateConfiguration; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1306108F-610C-40FD-AAD5-DA13E8B00BE9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the configuration.
+         * <p>The details of the configuration.</p>
          */
         public Builder stateConfiguration(java.util.List < StateConfiguration> stateConfiguration) {
             this.stateConfiguration = stateConfiguration;
@@ -70,6 +74,12 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateStateConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateStateConfigurationResponseBody</p>
+     */
     public static class StateConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigureMode")
         private String configureMode;
@@ -253,7 +263,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The configuration mode. Valid values:
+             * <p>The configuration mode. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApplyAndAutoCorrect</p>
              */
             public Builder configureMode(String configureMode) {
                 this.configureMode = configureMode;
@@ -261,7 +274,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configuration was created.
+             * <p>The time when the configuration was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-22T03:13:32Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -269,7 +285,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the desired-state configuration.
+             * <p>The description of the desired-state configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>collect inventory data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -277,7 +296,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters.
+             * <p>The parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;policy&quot;: {&quot;ACS:Network&quot;: {&quot;Collection&quot;: &quot;Enabled&quot;}, &quot;ACS:Application&quot;: {&quot;Collection&quot;: &quot;Enabled&quot;}}}</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -285,7 +307,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m4******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -293,7 +318,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The CRON expression.
+             * <p>The CRON expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 hour</p>
              */
             public Builder scheduleExpression(String scheduleExpression) {
                 this.scheduleExpression = scheduleExpression;
@@ -301,7 +329,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The schedule type.
+             * <p>The schedule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rate</p>
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -309,7 +340,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the desired-state configuration.
+             * <p>The ID of the desired-state configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StateConfigurationId</p>
              */
             public Builder stateConfigurationId(String stateConfigurationId) {
                 this.stateConfigurationId = stateConfigurationId;
@@ -317,7 +351,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The tags added to the configuration.
+             * <p>The tags added to the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Key&quot;: &quot;oos&quot;, &quot;Value&quot;: &quot;inventory&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -325,7 +362,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The queried resources.
+             * <p>The queried resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;ResourceType&quot;: &quot;ALIYUN::ECS::Instance&quot;, &quot;Filters&quot;: [ { &quot;Type&quot;: &quot;All&quot;, &quot;RegionId&quot;: &quot;cn-hangzhou&quot;, &quot;Parameters&quot;: { &quot;RegionId&quot;: &quot;cn-hangzhou&quot;, &quot;Status&quot;: &quot;Running&quot; } } ] }</p>
              */
             public Builder targets(String targets) {
                 this.targets = targets;
@@ -333,7 +373,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The template ID.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-1234asadf</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -341,7 +384,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-ECS-InventoryDataCollection</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -349,7 +395,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template version.
+             * <p>The name of the template version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -357,7 +406,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configuration was updated.
+             * <p>The time when the configuration was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-22T03:13:32Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

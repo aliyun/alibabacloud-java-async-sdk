@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteExecutionsRequest} extends {@link RequestModel}
  *
  * <p>DeleteExecutionsRequest</p>
@@ -82,10 +83,12 @@ public class DeleteExecutionsRequest extends Request {
         } 
 
         /**
-         * The execution IDs.
-         * <p>
+         * <p>The execution IDs.</p>
+         * <p>You can specify multiple execution IDs in a JSON array in the format of <code>[&quot;xxxxxxxxx&quot;, &quot;yyyyyyyyy&quot;, ... &quot;zzzzzzzzz&quot;]</code>. You can specify up to 100 execution IDs at a time. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can specify multiple execution IDs in a JSON array in the format of `["xxxxxxxxx", "yyyyyyyyy", ... "zzzzzzzzz"]`. You can specify up to 100 execution IDs at a time. Separate multiple IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>[&quot;exec-xxx&quot;]</p>
          */
         public Builder executionIds(String executionIds) {
             this.putQueryParameter("ExecutionIds", executionIds);
@@ -94,7 +97,10 @@ public class DeleteExecutionsRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Whether to force delete the running task, the default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -103,7 +109,10 @@ public class DeleteExecutionsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

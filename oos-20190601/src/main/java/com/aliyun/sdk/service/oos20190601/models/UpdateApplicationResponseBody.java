@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateApplicationResponseBody</p>
@@ -49,7 +50,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the application.
+         * <p>The information about the application.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -57,7 +58,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1F00F41-D24C-5377-831B-C97F739CE1AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class UpdateApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApplicationResponseBody</p>
+     */
     public static class Application extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
@@ -157,7 +167,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:17:46Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -165,7 +178,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -173,7 +189,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My-Application</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -181,7 +200,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m*****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -189,7 +211,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -197,7 +222,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was updated.
+             * <p>The time when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T10:17:46Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

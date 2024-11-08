@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationGroupBillRequest} extends {@link RequestModel}
  *
  * <p>DescribeApplicationGroupBillRequest</p>
@@ -142,7 +143,11 @@ public class DescribeApplicationGroupBillRequest extends Request {
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_application</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -151,7 +156,11 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * The billing cycle, in the YYYY-MM format.
+         * <p>The billing cycle, in the YYYY-MM format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -160,7 +169,10 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -169,7 +181,11 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * The application group name.
+         * <p>The application group name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_application_group</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -178,7 +194,12 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -187,7 +208,10 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +220,11 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * The type of the cloud resource.
+         * <p>The type of the cloud resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

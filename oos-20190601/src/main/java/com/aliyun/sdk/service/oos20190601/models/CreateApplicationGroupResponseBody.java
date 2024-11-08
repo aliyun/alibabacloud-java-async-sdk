@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApplicationGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the application group.
+         * <p>The information about the application group.</p>
          */
         public Builder applicationGroup(ApplicationGroup applicationGroup) {
             this.applicationGroup = applicationGroup;
@@ -57,7 +58,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E6BEBD3-7F9E-5878-834B-097633AB5F33</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationGroupResponseBody</p>
+     */
     public static class ApplicationGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -193,7 +203,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyApplication</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -201,7 +214,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group in CloudMonitor.
+             * <p>The ID of the application group in CloudMonitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1245768</p>
              */
             public Builder cmsGroupId(String cmsGroupId) {
                 this.cmsGroupId = cmsGroupId;
@@ -209,7 +225,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application group was created.
+             * <p>The time when the application group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T10:28:25Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -217,7 +236,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the related sources reside.
+             * <p>The ID of the region in which the related sources reside.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder deployRegionId(String deployRegionId) {
                 this.deployRegionId = deployRegionId;
@@ -225,7 +247,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application group.
+             * <p>The description of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApplicationGroup</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,7 +258,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder importTagKey(String importTagKey) {
                 this.importTagKey = importTagKey;
@@ -241,7 +269,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder importTagValue(String importTagValue) {
                 this.importTagValue = importTagValue;
@@ -249,7 +280,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application group.
+             * <p>The name of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyApplicationGroup</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +291,10 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application group was updated.
+             * <p>The time when the application group was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T10:28:25Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

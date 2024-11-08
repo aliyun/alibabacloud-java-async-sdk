@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePatchBaselineRequest} extends {@link RequestModel}
  *
  * <p>CreatePatchBaselineRequest</p>
@@ -224,7 +225,11 @@ public class CreatePatchBaselineRequest extends Request {
         } 
 
         /**
-         * The rules of scanning and installing patches for the specified operating system.
+         * <p>The rules of scanning and installing patches for the specified operating system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PatchRules&quot;:[{&quot;PatchFilterGroup&quot;:[{&quot;Key&quot;:&quot;PatchSet&quot;,&quot;Values&quot;:[&quot;OS&quot;]},{&quot;Key&quot;:&quot;ProductFamily&quot;,&quot;Values&quot;:[&quot;Windows&quot;]},{&quot;Key&quot;:&quot;Product&quot;,&quot;Values&quot;:[&quot;Windows 10&quot;,&quot;Windows 7&quot;]},{&quot;Key&quot;:&quot;Classification&quot;,&quot;Values&quot;:[&quot;Security Updates&quot;,&quot;Updates&quot;,&quot;Update Rollups&quot;,&quot;Critical Updates&quot;]},{&quot;Key&quot;:&quot;Severity&quot;,&quot;Values&quot;:[&quot;Critical&quot;,&quot;Important&quot;,&quot;Moderate&quot;]}],&quot;ApproveAfterDays&quot;:7,&quot;ApproveUntilDate&quot;:&quot;&quot;,&quot;EnableNonSecurity&quot;:true,&quot;ComplianceLevel&quot;:&quot;Medium&quot;}]}</p>
          */
         public Builder approvalRules(String approvalRules) {
             this.putQueryParameter("ApprovalRules", approvalRules);
@@ -233,7 +238,7 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The approved patches.
+         * <p>The approved patches.</p>
          */
         public Builder approvedPatches(java.util.List < String > approvedPatches) {
             String approvedPatchesShrink = shrink(approvedPatches, "ApprovedPatches", "json");
@@ -243,7 +248,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * Specifies whether the approved patch involves updates other than security-related updates.
+         * <p>Specifies whether the approved patch involves updates other than security-related updates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
             this.putQueryParameter("ApprovedPatchesEnableNonSecurity", approvedPatchesEnableNonSecurity);
@@ -252,7 +260,12 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -261,7 +274,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The description of the patch baseline.
+         * <p>The description of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PatchBaseline</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -270,7 +286,11 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The name of the patch baseline.
+         * <p>The name of the patch baseline.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyPatchBaseline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -279,17 +299,21 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Ubuntu</li>
+         * <li>CentOS</li>
+         * <li>Debian</li>
+         * <li>AliyunLinux</li>
+         * <li>RedhatEnterpriseLinux</li>
+         * <li>Anolis</li>
+         * <li>AlmaLinux</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Windows
-         * *   Ubuntu
-         * *   CentOS
-         * *   Debian
-         * *   AliyunLinux
-         * *   RedhatEnterpriseLinux
-         * *   Anolis
-         * *   AlmaLinux
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder operationSystem(String operationSystem) {
             this.putQueryParameter("OperationSystem", operationSystem);
@@ -298,7 +322,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to create a patch baseline.
+         * <p>The ID of the region in which you want to create a patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -307,7 +334,7 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The rejected patches.
+         * <p>The rejected patches.</p>
          */
         public Builder rejectedPatches(java.util.List < String > rejectedPatches) {
             String rejectedPatchesShrink = shrink(rejectedPatches, "RejectedPatches", "json");
@@ -317,7 +344,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The action of the rejected patch.
+         * <p>The action of the rejected patch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW_AS_DEPENDENCY</p>
          */
         public Builder rejectedPatchesAction(String rejectedPatchesAction) {
             this.putQueryParameter("RejectedPatchesAction", rejectedPatchesAction);
@@ -326,7 +356,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -335,7 +368,7 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The patch source configurations.
+         * <p>The patch source configurations.</p>
          */
         public Builder sources(java.util.List < String > sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -345,7 +378,7 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -361,6 +394,12 @@ public class CreatePatchBaselineRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePatchBaselineRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePatchBaselineRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -400,7 +439,10 @@ public class CreatePatchBaselineRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -408,7 +450,10 @@ public class CreatePatchBaselineRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecretParameterRequest} extends {@link RequestModel}
  *
  * <p>GetSecretParameterRequest</p>
@@ -97,7 +98,11 @@ public class GetSecretParameterRequest extends Request {
         } 
 
         /**
-         * The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
+         * <p>The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySecretParameter</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -106,7 +111,10 @@ public class GetSecretParameterRequest extends Request {
         }
 
         /**
-         * The version number of the common parameter. Valid values: 1 to 100.
+         * <p>The version number of the common parameter. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parameterVersion(Integer parameterVersion) {
             this.putQueryParameter("ParameterVersion", parameterVersion);
@@ -115,7 +123,10 @@ public class GetSecretParameterRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +135,10 @@ public class GetSecretParameterRequest extends Request {
         }
 
         /**
-         * Specifies whether to decrypt the parameter value. The decrypted parameter value is returned only if this parameter is set to true. Otherwise, null is returned.
+         * <p>Specifies whether to decrypt the parameter value. The decrypted parameter value is returned only if this parameter is set to true. Otherwise, null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withDecryption(Boolean withDecryption) {
             this.putQueryParameter("WithDecryption", withDecryption);

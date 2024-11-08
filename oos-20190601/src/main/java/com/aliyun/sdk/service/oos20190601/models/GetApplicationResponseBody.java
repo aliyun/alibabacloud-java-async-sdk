@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationResponseBody</p>
@@ -49,7 +50,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the application.
+         * <p>The information about the application.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -57,7 +58,10 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51004B8A-6D9A-5ACB-9158-6C6794496AD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class AlarmConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private java.util.List < String > contactGroups;
@@ -121,7 +131,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private java.util.List < String > templateIds; 
 
             /**
-             * The alert contact list.
+             * <p>The alert contact list.</p>
              */
             public Builder contactGroups(java.util.List < String > contactGroups) {
                 this.contactGroups = contactGroups;
@@ -129,7 +139,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The health check URL of the application.
+             * <p>The health check URL of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api/health/</p>
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -137,7 +150,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert template.
+             * <p>The ID of the alert template.</p>
              */
             public Builder templateIds(java.util.List < String > templateIds) {
                 this.templateIds = templateIds;
@@ -151,6 +164,12 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class Application extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmConfig")
         private AlarmConfig alarmConfig;
@@ -274,7 +293,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The configurations of application alerts.
+             * <p>The configurations of application alerts.</p>
              */
             public Builder alarmConfig(AlarmConfig alarmConfig) {
                 this.alarmConfig = alarmConfig;
@@ -282,34 +301,33 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application.
-             * <p>
+             * <p>The type of the application.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>ComputeNest</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   ComputeNest
+             * <!-- -->
+             * </li>
+             * <li><p>Custom</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>DingTalk</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Custom
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   DingTalk
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -317,7 +335,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:17:46Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -325,7 +346,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -333,7 +357,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyApplication</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -341,7 +368,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -349,7 +379,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-79538e30e44541b699d8</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -357,7 +390,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -365,7 +401,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was updated.
+             * <p>The time when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:17:46Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

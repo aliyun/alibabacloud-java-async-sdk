@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsResponseBody</p>
@@ -73,7 +74,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the application.
+         * <p>The details of the application.</p>
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -81,7 +82,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -89,7 +93,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -97,7 +106,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12067D53-56A9-561B-ADD6-61429D207117</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +122,12 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
@@ -209,7 +227,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The type of the application.
+             * <p>The type of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -217,7 +238,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:09:59Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -225,7 +249,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,7 +260,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyApplication</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -241,7 +271,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -249,7 +282,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags added to the application.
+             * <p>The tags added to the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;: &quot;v1&quot;,&quot;k2&quot;: &quot;v2&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -257,7 +293,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was updated.
+             * <p>The time when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:09:59Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

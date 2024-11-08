@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancePatchesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancePatchesResponseBody</p>
@@ -73,7 +74,10 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,7 +85,12 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +98,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the patch.
+         * <p>The information about the patch.</p>
          */
         public Builder patches(java.util.List < Patches> patches) {
             this.patches = patches;
@@ -97,7 +106,10 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A615755-9C86-5EA6-BF9E-6E8F1AFF9403</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +122,12 @@ public class ListInstancePatchesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancePatchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancePatchesResponseBody</p>
+     */
     public static class Patches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Classification")
         private String classification;
@@ -197,7 +215,10 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The classification of the patch.
+             * <p>The classification of the patch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder classification(String classification) {
                 this.classification = classification;
@@ -205,7 +226,10 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch was installed.
+             * <p>The time when the patch was installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-28T07:07:20Z</p>
              */
             public Builder installedTime(String installedTime) {
                 this.installedTime = installedTime;
@@ -213,7 +237,10 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * The Id of KBId.
+             * <p>The Id of KBId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apt-utils.amd64</p>
              */
             public Builder KBId(String KBId) {
                 this.KBId = KBId;
@@ -221,7 +248,10 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the severity.
+             * <p>The level of the severity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>important</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -229,7 +259,10 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the installation.
+             * <p>The status of the installation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Installed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -237,7 +270,10 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the patch.
+             * <p>The name of the patch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>isc-dhcp-common.amd64:4.3.5-3ubuntu7.3</p>
              */
             public Builder title(String title) {
                 this.title = title;

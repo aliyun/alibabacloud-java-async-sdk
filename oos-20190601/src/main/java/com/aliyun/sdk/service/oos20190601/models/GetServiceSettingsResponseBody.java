@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceSettingsResponseBody</p>
@@ -49,7 +50,10 @@ public class GetServiceSettingsResponseBody extends TeaModel {
         private java.util.List < ServiceSettings> serviceSettings; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F755DC9-C0CF-4598-B2E3-2CC763F18CB2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of service settings.
+         * <p>The information of service settings.</p>
          */
         public Builder serviceSettings(java.util.List < ServiceSettings> serviceSettings) {
             this.serviceSettings = serviceSettings;
@@ -70,6 +74,12 @@ public class GetServiceSettingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceSettingsResponseBody</p>
+     */
     public static class ServiceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeliveryOssBucketName")
         private String deliveryOssBucketName;
@@ -157,7 +167,10 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             private String rdcEnterpriseId; 
 
             /**
-             * The name of OSS bucket to deliver.
+             * <p>The name of OSS bucket to deliver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OssBucketName</p>
              */
             public Builder deliveryOssBucketName(String deliveryOssBucketName) {
                 this.deliveryOssBucketName = deliveryOssBucketName;
@@ -165,7 +178,10 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable OSS delivery.
+             * <p>Whether to enable OSS delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deliveryOssEnabled(Boolean deliveryOssEnabled) {
                 this.deliveryOssEnabled = deliveryOssEnabled;
@@ -173,7 +189,10 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The key prefix of OSS to deliver.
+             * <p>The key prefix of OSS to deliver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oos/execution</p>
              */
             public Builder deliveryOssKeyPrefix(String deliveryOssKeyPrefix) {
                 this.deliveryOssKeyPrefix = deliveryOssKeyPrefix;
@@ -181,7 +200,10 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable SLS delivery.
+             * <p>Whether to enable SLS delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deliverySlsEnabled(Boolean deliverySlsEnabled) {
                 this.deliverySlsEnabled = deliverySlsEnabled;
@@ -189,7 +211,10 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of SLS project to deliver.
+             * <p>The name of SLS project to deliver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SlsProjectName</p>
              */
             public Builder deliverySlsProjectName(String deliverySlsProjectName) {
                 this.deliverySlsProjectName = deliverySlsProjectName;
@@ -197,7 +222,10 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The id of RDC Enterprise.
+             * <p>The id of RDC Enterprise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RdcEnterpriseId</p>
              */
             public Builder rdcEnterpriseId(String rdcEnterpriseId) {
                 this.rdcEnterpriseId = rdcEnterpriseId;

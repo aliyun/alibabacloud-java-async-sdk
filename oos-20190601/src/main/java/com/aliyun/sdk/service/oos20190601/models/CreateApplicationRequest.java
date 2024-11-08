@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationRequest</p>
@@ -152,7 +153,7 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * The configurations of application alerts.
+         * <p>The configurations of application alerts.</p>
          */
         public Builder alarmConfig(AlarmConfig alarmConfig) {
             String alarmConfigShrink = shrink(alarmConfig, "AlarmConfig", "json");
@@ -162,7 +163,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TF-CreateApplication-1647587475-84104b89-eba5-47a8-b2fd-807b8b7d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -171,7 +175,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The description of the application.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -180,7 +187,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -189,7 +200,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-hangzhou.
+         * <p>The region ID. Set the value to cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +212,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -207,7 +224,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-79538e30e44541b699d8</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -216,7 +236,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -232,6 +255,12 @@ public class CreateApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
     public static class AlarmConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private java.util.List < String > contactGroups;
@@ -283,7 +312,7 @@ public class CreateApplicationRequest extends Request {
             private java.util.List < String > templateIds; 
 
             /**
-             * The alert contact groups.
+             * <p>The alert contact groups.</p>
              */
             public Builder contactGroups(java.util.List < String > contactGroups) {
                 this.contactGroups = contactGroups;
@@ -291,7 +320,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * The health check URL of the application.
+             * <p>The health check URL of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/healthcheck/tcp50122</p>
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -299,7 +331,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * The alert templates.
+             * <p>The alert templates.</p>
              */
             public Builder templateIds(java.util.List < String > templateIds) {
                 this.templateIds = templateIds;

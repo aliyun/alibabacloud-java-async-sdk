@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListParametersRequest} extends {@link RequestModel}
  *
  * <p>ListParametersRequest</p>
@@ -208,7 +209,10 @@ public class ListParametersRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -217,7 +221,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The name of the common parameter.
+         * <p>The name of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyParameter</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -226,7 +233,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The pagination token that can be used in the next request to retrieve a new page of results.
+         * <p>The pagination token that can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -235,7 +245,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.
+         * <p>The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path1/path2/</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -244,7 +257,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.
+         * <p>Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recursive(Boolean recursive) {
             this.putQueryParameter("Recursive", recursive);
@@ -253,7 +269,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +281,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -271,13 +293,15 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The share type of the common parameter. Valid values:
-         * <p>
+         * <p>The share type of the common parameter. Valid values:</p>
+         * <ul>
+         * <li>Public</li>
+         * <li>Private</li>
+         * </ul>
+         * <p>Default value: Private.</p>
          * 
-         * *   Public
-         * *   Private
-         * 
-         * Default value: Private.
+         * <strong>example:</strong>
+         * <p>‘Private’</p>
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -286,11 +310,14 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The field used to sort the query results. Valid values:
-         * <p>
+         * <p>The field used to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>Name</li>
+         * <li>CreatedDate</li>
+         * </ul>
          * 
-         * *   Name
-         * *   CreatedDate
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -299,11 +326,14 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The order in which the entries are sorted. Valid values:
-         * <p>
+         * <p>The order in which the entries are sorted. Valid values:</p>
+         * <ul>
+         * <li>Ascending</li>
+         * <li>Descending (Default)</li>
+         * </ul>
          * 
-         * *   Ascending
-         * *   Descending (Default)
+         * <strong>example:</strong>
+         * <p>Descending</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -312,7 +342,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -322,7 +355,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * The data type of the common parameter.
+         * <p>The data type of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

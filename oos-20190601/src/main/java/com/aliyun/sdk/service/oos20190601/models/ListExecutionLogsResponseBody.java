@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExecutionLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListExecutionLogsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The logs of the execution.
+         * <p>The logs of the execution.</p>
          */
         public Builder executionLogs(java.util.List < ExecutionLogs> executionLogs) {
             this.executionLogs = executionLogs;
@@ -93,7 +94,10 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log is truncated.
+         * <p>Indicates whether the log is truncated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -101,7 +105,10 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +116,10 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABdpsGWjX8dJ-a6dl_pvoS7AFxNHSNJKHLCAJJ0ylgA53nWW5V4HTEZKCYTaEPNOrxFir4z43UTOjE150cFr8AGTifA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +127,10 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +143,12 @@ public class ListExecutionLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExecutionLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExecutionLogsResponseBody</p>
+     */
     public static class ExecutionLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;
@@ -193,7 +212,10 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The log type.
+             * <p>The log type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -201,7 +223,10 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the task execution.
+             * <p>The details of the task execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The task CheckDiskCategory completed.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -209,7 +234,10 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The task execution ID.
+             * <p>The task execution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-1234567zxcvb.t0010</p>
              */
             public Builder taskExecutionId(String taskExecutionId) {
                 this.taskExecutionId = taskExecutionId;
@@ -217,7 +245,10 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the task was run.
+             * <p>The timestamp when the task was run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-24T:02:29:07Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancePatchStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancePatchStatesResponseBody</p>
@@ -73,7 +74,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of patches of the instance.
+         * <p>The details of patches of the instance.</p>
          */
         public Builder instancePatchStates(java.util.List < InstancePatchStates> instancePatchStates) {
             this.instancePatchStates = instancePatchStates;
@@ -81,7 +82,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -89,7 +93,12 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -97,7 +106,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A47C086-E64D-52EE-8B2C-EFD23877C55E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +122,12 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancePatchStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancePatchStatesResponseBody</p>
+     */
     public static class InstancePatchStates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineId")
         private String baselineId;
@@ -281,7 +299,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             private String patchGroup; 
 
             /**
-             * The ID of the patch baseline.
+             * <p>The ID of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pb-f9393021b7a049e1b34e</p>
              */
             public Builder baselineId(String baselineId) {
                 this.baselineId = baselineId;
@@ -289,7 +310,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that failed to be installed.
+             * <p>The number of patches that failed to be installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedCount(String failedCount) {
                 this.failedCount = failedCount;
@@ -297,7 +321,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of installed patches.
+             * <p>The number of installed patches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder installedCount(String installedCount) {
                 this.installedCount = installedCount;
@@ -305,7 +332,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that do not meet the baseline.
+             * <p>The number of patches that do not meet the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder installedOtherCount(String installedOtherCount) {
                 this.installedOtherCount = installedOtherCount;
@@ -313,7 +343,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that have been installed but require a restart to take effect.
+             * <p>The number of patches that have been installed but require a restart to take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder installedPendingRebootCount(String installedPendingRebootCount) {
                 this.installedPendingRebootCount = installedPendingRebootCount;
@@ -321,7 +354,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that are rejected by the user.
+             * <p>The number of patches that are rejected by the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder installedRejectedCount(String installedRejectedCount) {
                 this.installedRejectedCount = installedRejectedCount;
@@ -329,7 +365,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1jaxa2bs4bps7*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -337,7 +376,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that are not installed.
+             * <p>The number of patches that are not installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder missingCount(String missingCount) {
                 this.missingCount = missingCount;
@@ -345,7 +387,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation ended.
+             * <p>The time when the operation ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-10T11:42:22Z</p>
              */
             public Builder operationEndTime(String operationEndTime) {
                 this.operationEndTime = operationEndTime;
@@ -353,7 +398,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was initiated.
+             * <p>The time when the operation was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-10T11:42:22Z</p>
              */
             public Builder operationStartTime(String operationStartTime) {
                 this.operationStartTime = operationStartTime;
@@ -361,7 +409,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type.
+             * <p>The operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scan</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -369,7 +420,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the user.
+             * <p>The information about the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder ownerInformation(String ownerInformation) {
                 this.ownerInformation = ownerInformation;
@@ -377,7 +431,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The patch group.
+             * <p>The patch group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder patchGroup(String patchGroup) {
                 this.patchGroup = patchGroup;

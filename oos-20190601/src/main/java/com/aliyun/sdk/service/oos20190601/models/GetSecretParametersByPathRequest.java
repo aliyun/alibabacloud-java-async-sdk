@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecretParametersByPathRequest} extends {@link RequestModel}
  *
  * <p>GetSecretParametersByPathRequest</p>
@@ -125,7 +126,10 @@ public class GetSecretParametersByPathRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: 1 to 10. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 10. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -134,7 +138,10 @@ public class GetSecretParametersByPathRequest extends Request {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -143,7 +150,11 @@ public class GetSecretParametersByPathRequest extends Request {
         }
 
         /**
-         * The path of the encryption parameter. The path must be 1 to 200 characters in length. For example, if the name of an encryption parameter is /secretParameter/mySecretParameter, the path of the encryption parameter is /secretParameter.
+         * <p>The path of the encryption parameter. The path must be 1 to 200 characters in length. For example, if the name of an encryption parameter is /secretParameter/mySecretParameter, the path of the encryption parameter is /secretParameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/secretParameter</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -152,11 +163,14 @@ public class GetSecretParametersByPathRequest extends Request {
         }
 
         /**
-         * Specifies whether to recursively query encryption parameters from all levels of directories in the specified path. Valid values: true and false. For example, if you want to query the /secretParameter/mySecretParameter and /secretParameter/secretParameter 1/mySecretParameter parameters, the valid values specify the parameters to be returned.
-         * <p>
+         * <p>Specifies whether to recursively query encryption parameters from all levels of directories in the specified path. Valid values: true and false. For example, if you want to query the /secretParameter/mySecretParameter and /secretParameter/secretParameter 1/mySecretParameter parameters, the valid values specify the parameters to be returned.</p>
+         * <ul>
+         * <li>true: returns both of the /secretParameter/mySecretParameter and /secretParameter/secretParameter1/mySecretParameter parameters.</li>
+         * <li>false: returns only the /secretParameter/mySecretParameter parameter.</li>
+         * </ul>
          * 
-         * *   true: returns both of the /secretParameter/mySecretParameter and /secretParameter/secretParameter1/mySecretParameter parameters.
-         * *   false: returns only the /secretParameter/mySecretParameter parameter.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recursive(Boolean recursive) {
             this.putQueryParameter("Recursive", recursive);
@@ -165,7 +179,10 @@ public class GetSecretParametersByPathRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,11 +191,14 @@ public class GetSecretParametersByPathRequest extends Request {
         }
 
         /**
-         * Specifies whether to decrypt the parameter value. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to decrypt the parameter value. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withDecryption(Boolean withDecryption) {
             this.putQueryParameter("WithDecryption", withDecryption);

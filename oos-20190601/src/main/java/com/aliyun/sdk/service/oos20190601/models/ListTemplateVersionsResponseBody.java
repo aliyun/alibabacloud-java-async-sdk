@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTemplateVersionsResponseBody</p>
@@ -73,7 +74,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         private java.util.List < TemplateVersions> templateVersions; 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,7 +85,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NJSNDKLJS-SJKJDO090k30-JSDK232</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +96,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6CD612B-5889-4F1A-823F-8A4029E46</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The versions of the template.
+         * <p>The versions of the template.</p>
          */
         public Builder templateVersions(java.util.List < TemplateVersions> templateVersions) {
             this.templateVersions = templateVersions;
@@ -110,6 +120,12 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplateVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateVersionsResponseBody</p>
+     */
     public static class TemplateVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -197,7 +213,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * The description of the version.
+             * <p>The description of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Detach the eip from the special instance.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -205,7 +224,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the template content. Valid values: YAML and JSON.
+             * <p>The format of the template content. Valid values: YAML and JSON.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YAML</p>
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -213,7 +235,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the version.
+             * <p>The number of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -221,7 +246,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The user who last updated the version.
+             * <p>The user who last updated the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>foo</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -229,7 +257,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the version was last updated.
+             * <p>The time when the version was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-19T06:05:41Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -237,7 +268,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the version.
+             * <p>The name of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baz</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

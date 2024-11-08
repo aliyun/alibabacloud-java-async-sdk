@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetParametersResponseBody} extends {@link TeaModel}
  *
  * <p>GetParametersResponseBody</p>
@@ -61,7 +62,7 @@ public class GetParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Invalid parameters.
+         * <p>Invalid parameters.</p>
          */
         public Builder invalidParameters(java.util.List < String > invalidParameters) {
             this.invalidParameters = invalidParameters;
@@ -69,7 +70,7 @@ public class GetParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the common parameters.
+         * <p>The information about the common parameters.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -77,7 +78,10 @@ public class GetParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2597E94B-5346-42D1-BB58-D3333EDD0975</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class GetParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetParametersResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Constraints")
         private String constraints;
@@ -273,7 +283,10 @@ public class GetParametersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The constraints of the common parameter.
+             * <p>The constraints of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;MaxLength&quot;: 2}</p>
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -281,7 +294,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the common parameter.
+             * <p>The user who created the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -289,7 +305,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the common parameter was created.
+             * <p>The time when the common parameter was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T03:30:45Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -297,7 +316,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the common parameter.
+             * <p>The description of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>parameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -305,7 +327,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the common parameter.
+             * <p>The ID of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-7cdc0000000000000000</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -313,7 +338,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the common parameter.
+             * <p>The name of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyParameter</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -321,7 +349,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the common parameter.
+             * <p>The version number of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -329,7 +360,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m4******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -337,7 +371,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the common parameter.
+             * <p>The share type of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -345,7 +382,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -353,7 +393,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter.
+             * <p>The type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StringList</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -361,7 +404,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The user who updated the common parameter.
+             * <p>The user who updated the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -369,7 +415,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the parameter was updated.
+             * <p>The time when the parameter was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T03:30:45Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -377,7 +426,10 @@ public class GetParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the common parameter.
+             * <p>The value of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>parameter,parameter1</p>
              */
             public Builder value(String value) {
                 this.value = value;

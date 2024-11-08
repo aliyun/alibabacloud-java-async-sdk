@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesRequest} extends {@link RequestModel}
  *
  * <p>ListTagValuesRequest</p>
@@ -109,7 +110,10 @@ public class ListTagValuesRequest extends Request {
         } 
 
         /**
-         * The tag key to query.
+         * <p>The tag key to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -118,7 +122,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The maximum number of results on each page.
+         * <p>The maximum number of results on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -127,7 +134,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3272h923879hsaksad</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -136,7 +146,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,7 +158,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The type of the tagged resource.
+         * <p>The type of the tagged resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListTemplatesRequest</p>
@@ -291,7 +292,10 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * The type of the template. Valid values include TimerTrigger, EventTrigger, AlarmTrigger, and Other.
+         * <p>The type of the template. Valid values include TimerTrigger, EventTrigger, AlarmTrigger, and Other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TimerTrigger</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -300,11 +304,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The creator of the template.
-         * <p>
+         * <p>The creator of the template.</p>
+         * <ul>
+         * <li>To query the template provided by Alibaba Cloud, set this parameter to <strong>ACS</strong>.</li>
+         * <li>To query the template created by a user, set this parameter to the <strong>ID</strong> of the template or the <strong>name of the user</strong> who creates the template.</li>
+         * </ul>
          * 
-         * *   To query the template provided by Alibaba Cloud, set this parameter to **ACS**.
-         * *   To query the template created by a user, set this parameter to the **ID** of the template or the **name of the user** who creates the template.
+         * <strong>example:</strong>
+         * <p>ACS</p>
          */
         public Builder createdBy(String createdBy) {
             this.putQueryParameter("CreatedBy", createdBy);
@@ -313,10 +320,11 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Specifies to query the template that is created at or later than the specified time.
-         * <p>
+         * <p>Specifies to query the template that is created at or later than the specified time.</p>
+         * <p>The value must be in the YYYY-MM-DDThh:mm:ssZ format.</p>
          * 
-         * The value must be in the YYYY-MM-DDThh:mm:ssZ format.
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder createdDateAfter(String createdDateAfter) {
             this.putQueryParameter("CreatedDateAfter", createdDateAfter);
@@ -325,10 +333,11 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Specifies to query the template that is created at or before the specified time.
-         * <p>
+         * <p>Specifies to query the template that is created at or before the specified time.</p>
+         * <p>The value must be in the YYYY-MM-DDThh:mm::ssZ format.</p>
          * 
-         * The value must be in the YYYY-MM-DDThh:mm::ssZ format.
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder createdDateBefore(String createdDateBefore) {
             this.putQueryParameter("CreatedDateBefore", createdDateBefore);
@@ -337,7 +346,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the template that is configured with a trigger.
+         * <p>Specifies whether to query the template that is configured with a trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasTrigger(Boolean hasTrigger) {
             this.putQueryParameter("HasTrigger", hasTrigger);
@@ -346,7 +358,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Specifies whether the template is an example template
+         * <p>Specifies whether the template is an example template</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isExample(Boolean isExample) {
             this.putQueryParameter("IsExample", isExample);
@@ -355,7 +370,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Specifies whether the template is added to favorites.
+         * <p>Specifies whether the template is added to favorites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isFavorite(Boolean isFavorite) {
             this.putQueryParameter("IsFavorite", isFavorite);
@@ -364,7 +382,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -373,7 +394,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -382,7 +406,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to query templates.
+         * <p>The ID of the region in which you want to query templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -391,7 +418,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -400,11 +430,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The share type of the template. Valid values:
-         * <p>
+         * <p>The share type of the template. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong></li>
+         * <li><strong>Private</strong></li>
+         * </ul>
          * 
-         * *   **Public**
-         * *   **Private**
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -413,14 +446,17 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The field that is used to sort the templates to be queried. Valid values:
-         * <p>
+         * <p>The field that is used to sort the templates to be queried. Valid values:</p>
+         * <ul>
+         * <li><strong>TotalExecutionCount</strong> (default): The system sorts the returned templates based on the total number of times that the templates are used.</li>
+         * <li><strong>Popularity</strong>: The system sorts the returned templates based on the popularity of the templates.</li>
+         * <li><strong>TemplateName</strong>: The system sorts the returned templates based on the names of the templates.</li>
+         * <li><strong>CreatedDate</strong>: The system sorts the returned templates based on the points in time when the templates are created.</li>
+         * <li><strong>UpdatedDate</strong>: The system sorts the returned templates based on the points in time when the templates are updated.</li>
+         * </ul>
          * 
-         * *   **TotalExecutionCount** (default): The system sorts the returned templates based on the total number of times that the templates are used.
-         * *   **Popularity**: The system sorts the returned templates based on the popularity of the templates.
-         * *   **TemplateName**: The system sorts the returned templates based on the names of the templates.
-         * *   **CreatedDate**: The system sorts the returned templates based on the points in time when the templates are created.
-         * *   **UpdatedDate**: The system sorts the returned templates based on the points in time when the templates are updated.
+         * <strong>example:</strong>
+         * <p>Popularity</p>
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -429,11 +465,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the results. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the results. Valid values:</p>
+         * <ul>
+         * <li><strong>Ascending</strong>: ascending order.</li>
+         * <li><strong>Descending</strong>: descending order. This is the default value.</li>
+         * </ul>
          * 
-         * *   **Ascending**: ascending order.
-         * *   **Descending**: descending order. This is the default value.
+         * <strong>example:</strong>
+         * <p>Descending</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -442,7 +481,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
+         * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;k2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -452,11 +494,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The format of the template. Valid values:
-         * <p>
+         * <p>The format of the template. Valid values:</p>
+         * <ul>
+         * <li><strong>JSON</strong></li>
+         * <li><strong>YAML</strong></li>
+         * </ul>
          * 
-         * *   **JSON**
-         * *   **YAML**
+         * <strong>example:</strong>
+         * <p>YAML</p>
          */
         public Builder templateFormat(String templateFormat) {
             this.putQueryParameter("TemplateFormat", templateFormat);
@@ -465,7 +510,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The name of the template. All templates whose names contain the specified template name are to be returned.
+         * <p>The name of the template. All templates whose names contain the specified template name are to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -474,12 +522,15 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The type of the template. Valid values:
-         * <p>
+         * <p>The type of the template. Valid values:</p>
+         * <ul>
+         * <li>Automation: the template for automated tasks.</li>
+         * <li>State: the template for configuration inventories.</li>
+         * <li>Package: the template for software packages.</li>
+         * </ul>
          * 
-         * *   Automation: the template for automated tasks.
-         * *   State: the template for configuration inventories.
-         * *   Package: the template for software packages.
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

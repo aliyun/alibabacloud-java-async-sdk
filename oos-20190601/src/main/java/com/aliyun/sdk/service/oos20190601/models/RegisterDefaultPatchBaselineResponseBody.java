@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterDefaultPatchBaselineResponseBody} extends {@link TeaModel}
  *
  * <p>RegisterDefaultPatchBaselineResponseBody</p>
@@ -49,7 +50,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the patch baseline.
+         * <p>The details of the patch baseline.</p>
          */
         public Builder patchBaseline(PatchBaseline patchBaseline) {
             this.patchBaseline = patchBaseline;
@@ -57,7 +58,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6850689-348D-59FC-AE13-BB0EDB7C4BE8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RegisterDefaultPatchBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>RegisterDefaultPatchBaselineResponseBody</p>
+     */
     public static class PatchBaseline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApprovalRules")
         private String approvalRules;
@@ -217,7 +227,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * The rules of scanning and installing patches for the specified operating system.
+             * <p>The rules of scanning and installing patches for the specified operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;PatchRules&quot;:[{&quot;PatchFilterGroup&quot;:[{&quot;Key&quot;:&quot;PatchSet&quot;,&quot;Values&quot;:[&quot;OS&quot;]},{&quot;Key&quot;:&quot;ProductFamily&quot;,&quot;Values&quot;:[&quot;Windows&quot;]},{&quot;Key&quot;:&quot;Product&quot;,&quot;Values&quot;:[&quot;Windows 10&quot;,&quot;Windows 7&quot;]},{&quot;Key&quot;:&quot;Classification&quot;,&quot;Values&quot;:[&quot;Security Updates&quot;,&quot;Updates&quot;,&quot;Update Rollups&quot;,&quot;Critical Updates&quot;]},{&quot;Key&quot;:&quot;Severity&quot;,&quot;Values&quot;:[&quot;Critical&quot;,&quot;Important&quot;,&quot;Moderate&quot;]}],&quot;ApproveAfterDays&quot;:7,&quot;ApproveUntilDate&quot;:&quot;&quot;,&quot;EnableNonSecurity&quot;:true,&quot;ComplianceLevel&quot;:&quot;Medium&quot;}]}</p>
              */
             public Builder approvalRules(String approvalRules) {
                 this.approvalRules = approvalRules;
@@ -225,7 +238,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the patch baseline.
+             * <p>The user who created the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -233,7 +249,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch baseline was created.
+             * <p>The time when the patch baseline was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T03:42:56Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -241,7 +260,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the patch baseline.
+             * <p>The description of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegisterPatchBaseline</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -249,7 +271,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the patch baseline.
+             * <p>The ID of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pb-445340b5c6504a85a300</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -257,7 +282,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the patch baseline.
+             * <p>The name of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyPatchBaseline</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -265,7 +293,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system.
+             * <p>The operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder operationSystem(String operationSystem) {
                 this.operationSystem = operationSystem;
@@ -273,7 +304,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm4dpaq2yox6q</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -281,7 +315,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the patch baseline.
+             * <p>The share type of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -289,7 +326,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The user who last updated the patch baseline.
+             * <p>The user who last updated the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -297,7 +337,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch baseline was last updated.
+             * <p>The time when the patch baseline was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T03:42:56Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

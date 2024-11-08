@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskExecutionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskExecutionsResponseBody</p>
@@ -73,7 +74,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         private java.util.List < TaskExecutions> taskExecutions; 
 
         /**
-         * The details of the task executions.
+         * <p>The details of the task executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,7 +85,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +96,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDABABABAB-FC28-4D9C-8FB5-68DC6F0486FC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,7 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The execution ID of the child node.
+         * <p>The execution ID of the child node.</p>
          */
         public Builder taskExecutions(java.util.List < TaskExecutions> taskExecutions) {
             this.taskExecutions = taskExecutions;
@@ -110,6 +120,12 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskExecutionsResponseBody</p>
+     */
     public static class TaskExecutions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChildExecutionId")
         private String childExecutionId;
@@ -353,7 +369,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The output of the execution.
+             * <p>The output of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-xxx</p>
              */
             public Builder childExecutionId(String childExecutionId) {
                 this.childExecutionId = childExecutionId;
@@ -361,7 +380,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the execution.
+             * <p>The ID of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -369,7 +391,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution ID of the parent node.
+             * <p>The execution ID of the parent node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -377,7 +402,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The action of the task.
+             * <p>The action of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-44d32b45d2a449e49899</p>
              */
             public Builder executionId(String executionId) {
                 this.executionId = executionId;
@@ -385,7 +413,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The Input parameters of the task execution.
+             * <p>The Input parameters of the task execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{                     &quot;NotifyNote&quot;:&quot;&quot;                 }</p>
              */
             public Builder extraData(java.util.Map < String, ? > extraData) {
                 this.extraData = extraData;
@@ -393,7 +424,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder loop(java.util.Map < String, ? > loop) {
                 this.loop = loop;
@@ -401,7 +435,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status information of the task execution.
+             * <p>The status information of the task execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder loopBatchNumber(Integer loopBatchNumber) {
                 this.loopBatchNumber = loopBatchNumber;
@@ -409,7 +446,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution was created.
+             * <p>The time when the execution was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-1234566zxcvvb</p>
              */
             public Builder loopItem(String loopItem) {
                 this.loopItem = loopItem;
@@ -417,7 +457,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;InstanceId&quot;:&quot;i-xxx&quot; }</p>
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -425,7 +468,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-exec-xxx</p>
              */
             public Builder parentTaskExecutionId(String parentTaskExecutionId) {
                 this.parentTaskExecutionId = parentTaskExecutionId;
@@ -433,7 +479,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries task executions. Multiple methods are supported to filter task executions.
+             * <p>Queries task executions. Multiple methods are supported to filter task executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Status&quot;:&quot;Running&quot; }</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -441,7 +490,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The elements in the loop task.
+             * <p>The elements in the loop task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -449,7 +501,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task execution stopped running.
+             * <p>The time when the task execution stopped running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -457,7 +512,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -465,7 +523,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution ID of the task.
+             * <p>The execution ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::Sleep</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -473,7 +534,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution was last updated.
+             * <p>The time when the execution was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-exec-xxx</p>
              */
             public Builder taskExecutionId(String taskExecutionId) {
                 this.taskExecutionId = taskExecutionId;
@@ -481,7 +545,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution started.
+             * <p>The time when the execution started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describeInstance</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -489,7 +556,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times for which the loop task is run.
+             * <p>The number of times for which the loop task is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -497,7 +567,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration and statistics information of the loop task. This parameter is returned only for the parent node of the loop task.
+             * <p>The configuration and statistics information of the loop task. This parameter is returned only for the parent node of the loop task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

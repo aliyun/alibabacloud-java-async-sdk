@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetParameterRequest} extends {@link RequestModel}
  *
  * <p>GetParameterRequest</p>
@@ -96,7 +97,11 @@ public class GetParameterRequest extends Request {
         } 
 
         /**
-         * The name of the common parameter. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+         * <p>The name of the common parameter. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyParameter</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -105,7 +110,10 @@ public class GetParameterRequest extends Request {
         }
 
         /**
-         * The version number of the common parameter. Valid values: 1 to 100.
+         * <p>The version number of the common parameter. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parameterVersion(Integer parameterVersion) {
             this.putQueryParameter("ParameterVersion", parameterVersion);
@@ -114,7 +122,10 @@ public class GetParameterRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,7 +134,10 @@ public class GetParameterRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

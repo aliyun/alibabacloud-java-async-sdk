@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetParametersByPathResponseBody} extends {@link TeaModel}
  *
  * <p>GetParametersByPathResponseBody</p>
@@ -85,7 +86,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +97,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the common parameters.
+         * <p>The information about the common parameters.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -109,7 +116,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25156E99-7437-4590-AA58-2ACA17DE405C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class GetParametersByPathResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetParametersByPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetParametersByPathResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Constraints")
         private String constraints;
@@ -301,7 +320,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The constraints of the common parameter.
+             * <p>The constraints of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;MaxLength&quot;: 2}</p>
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -309,7 +331,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the common parameter.
+             * <p>The user who created the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -317,7 +342,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the common parameter was created.
+             * <p>The time when the common parameter was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-21T04:03:12Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -325,7 +353,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the common parameter.
+             * <p>The description of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>parameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -333,7 +364,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the common parameter.
+             * <p>The ID of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-7cdc0000000000000000</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -341,7 +375,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the common parameter.
+             * <p>The name of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myParameter</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -349,7 +386,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the common parameter.
+             * <p>The version number of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -357,7 +397,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the common parameter.
+             * <p>The share type of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -365,7 +408,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The tags added to the common parameters.
+             * <p>The tags added to the common parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -373,7 +419,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the common parameter.
+             * <p>The type of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StringList</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -381,7 +430,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The user who updated the common parameter.
+             * <p>The user who updated the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -389,7 +441,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the common parameter was last updated.
+             * <p>The time when the common parameter was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-21T04:03:12Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -397,7 +452,10 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the common parameter.
+             * <p>The value of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;parameter1,parameter2&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

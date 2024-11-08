@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskExecutionsRequest} extends {@link RequestModel}
  *
  * <p>ListTaskExecutionsRequest</p>
@@ -263,7 +264,10 @@ public class ListTaskExecutionsRequest extends Request {
         } 
 
         /**
-         * The execution ID of the task.
+         * <p>The execution ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder endDateAfter(String endDateAfter) {
             this.putQueryParameter("EndDateAfter", endDateAfter);
@@ -272,7 +276,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * Specifies to query task executions that stop running at or later than the specified time.
+         * <p>Specifies to query task executions that stop running at or later than the specified time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder endDateBefore(String endDateBefore) {
             this.putQueryParameter("EndDateBefore", endDateBefore);
@@ -281,7 +288,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * The status of the execution. Valid values: Running, Started, Success, Failed, Waiting, Cancelled, Pending, and Skipped.
+         * <p>The status of the execution. Valid values: Running, Started, Success, Failed, Waiting, Cancelled, Pending, and Skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxx</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -290,7 +300,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.
+         * <p>The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeChildTaskExecution(Boolean includeChildTaskExecution) {
             this.putQueryParameter("IncludeChildTaskExecution", includeChildTaskExecution);
@@ -299,7 +312,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -308,12 +324,15 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * Sorts the task executions to query. Valid values:
-         * <p>
+         * <p>Sorts the task executions to query. Valid values:</p>
+         * <ul>
+         * <li><strong>StartDate</strong>: specifies that the task executions are sorted based on the time when they are created. This is the default value.</li>
+         * <li><strong>EndDate</strong>: specifies that the task executions are sorted based on the time when the time when they stop running.</li>
+         * <li><strong>Status</strong>: specifies that the task executions are sorted based on their statuses.</li>
+         * </ul>
          * 
-         * *   **StartDate**: specifies that the task executions are sorted based on the time when they are created. This is the default value.
-         * *   **EndDate**: specifies that the task executions are sorted based on the time when the time when they stop running.
-         * *   **Status**: specifies that the task executions are sorted based on their statuses.
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -322,7 +341,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to show the child nodes in the loop task. Default value: False.
+         * <p>Specifies whether to show the child nodes in the loop task. Default value: False.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-exec-xxx</p>
          */
         public Builder parentTaskExecutionId(String parentTaskExecutionId) {
             this.putQueryParameter("ParentTaskExecutionId", parentTaskExecutionId);
@@ -331,7 +353,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the execution.
+         * <p>The ID of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -340,11 +365,14 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the task executions to query. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the task executions to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Ascending</strong>: ascending order.</li>
+         * <li><strong>Descending</strong>: descending order. This is the default value.</li>
+         * </ul>
          * 
-         * *   **Ascending**: ascending order.
-         * *   **Descending**: descending order. This is the default value.
+         * <strong>example:</strong>
+         * <p>StartDate</p>
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -353,7 +381,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ascending</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -362,7 +393,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * Specifies to query task executions that stop running at or before the specified time.
+         * <p>Specifies to query task executions that stop running at or before the specified time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder startDateAfter(String startDateAfter) {
             this.putQueryParameter("StartDateAfter", startDateAfter);
@@ -371,7 +405,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * Specifies to query task executions that start to run at or later than the specified time.
+         * <p>Specifies to query task executions that start to run at or later than the specified time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder startDateBefore(String startDateBefore) {
             this.putQueryParameter("StartDateBefore", startDateBefore);
@@ -380,7 +417,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * Specifies to query task executions that start to run at or before the specified time.
+         * <p>Specifies to query task executions that start to run at or before the specified time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -389,7 +429,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * The execution ID of the parent node. In a loop task, set this parameter to the execution ID of the parent node.
+         * <p>The execution ID of the parent node. In a loop task, set this parameter to the execution ID of the parent node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::Sleep</p>
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);
@@ -398,7 +441,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * The name of the task.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-exec-xxx</p>
          */
         public Builder taskExecutionId(String taskExecutionId) {
             this.putQueryParameter("TaskExecutionId", taskExecutionId);
@@ -407,7 +453,10 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * The action of the task.
+         * <p>The action of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>describeInstance</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

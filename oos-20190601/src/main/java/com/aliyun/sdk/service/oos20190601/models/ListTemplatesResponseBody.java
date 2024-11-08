@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTemplatesResponseBody</p>
@@ -73,7 +74,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         private java.util.List < Templates> templates; 
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,7 +85,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +96,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEF54BA-17B6-449F-A219-49ACB157E3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The template metadata.
+         * <p>The template metadata.</p>
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -110,6 +120,12 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -174,6 +190,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
+        @com.aliyun.core.annotation.NameInMap("VersionName")
+        private String versionName;
+
         private Templates(Builder builder) {
             this.category = builder.category;
             this.constraints = builder.constraints;
@@ -196,6 +215,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             this.totalExecutionCount = builder.totalExecutionCount;
             this.updatedBy = builder.updatedBy;
             this.updatedDate = builder.updatedDate;
+            this.versionName = builder.versionName;
         }
 
         public static Builder builder() {
@@ -353,6 +373,13 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.updatedDate;
         }
 
+        /**
+         * @return versionName
+         */
+        public String getVersionName() {
+            return this.versionName;
+        }
+
         public static final class Builder {
             private String category; 
             private String constraints; 
@@ -375,9 +402,13 @@ public class ListTemplatesResponseBody extends TeaModel {
             private Integer totalExecutionCount; 
             private String updatedBy; 
             private String updatedDate; 
+            private String versionName; 
 
             /**
-             * The template type.
+             * <p>The template type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TimerTrigger</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -385,7 +416,15 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template constraints.
+             * <p>The template constraints.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;InstanceTypeFamilies&quot;: [&quot;ecs.g8y&quot;, &quot;ecs.c8y&quot;],
+             *   &quot;ImageTypes&quot;: [&quot;system&quot;],
+             *   &quot;OSPlatforms&quot;: [&quot;CentOS&quot;, &quot;Ubuntu&quot;],
+             *   &quot;OSVersions&quot;: [&quot;CentOS7.9 64bit&quot;]
+             * }</p>
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -393,7 +432,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the template.
+             * <p>The user who created the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(1309200)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -401,7 +443,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time of the template.
+             * <p>The creation time of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -409,7 +454,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template description.
+             * <p>The template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Describe instances of given status</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -417,7 +465,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the template was configured with a trigger.
+             * <p>Indicates whether the template was configured with a trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasTrigger(Boolean hasTrigger) {
                 this.hasTrigger = hasTrigger;
@@ -425,7 +476,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA256 value of the template content.
+             * <p>The SHA256 value of the template content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4bc7d7a21b3e003434b9c223f6e6d2578b5ebfeb5be28c1fcf8a8a1b11907bb4</p>
              */
             public Builder hash(String hash) {
                 this.hash = hash;
@@ -433,7 +487,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the template is added to favorites.
+             * <p>Indicates whether the template is added to favorites.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFavorite(Boolean isFavorite) {
                 this.isFavorite = isFavorite;
@@ -441,10 +498,13 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If **ShareType** is set to **Private**, the value of this parameter is `-1`.
-             * <p>
+             * <p>The popularity of the public template. Valid values: <strong>1-10</strong>. A greater value indicates higher popularity. If <strong>ShareType</strong> is set to <strong>Private</strong>, the value of this parameter is <code>-1</code>.</p>
+             * <blockquote>
+             * <p> This parameter is valid only if <strong>ShareType</strong> is set to <strong>Public</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is valid only if **ShareType** is set to **Public**.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder popularity(Integer popularity) {
                 this.popularity = popularity;
@@ -452,7 +512,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The user who published the template.
+             * <p>The user who published the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder publisher(String publisher) {
                 this.publisher = publisher;
@@ -460,7 +523,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m4******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -468,11 +534,14 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the template. The share type of a template created by a user is **Private**. Valid values:
-             * <p>
+             * <p>The share type of the template. The share type of a template created by a user is <strong>Private</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong></li>
+             * <li><strong>Private</strong></li>
+             * </ul>
              * 
-             * *   **Public**
-             * *   **Private**
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -480,7 +549,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
+             * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -488,7 +560,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template format. The system automatically determines whether the format of the template is JSON or YAML.
+             * <p>The template format. The system automatically determines whether the format of the template is JSON or YAML.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -496,7 +571,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template ID.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-94753deed38</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -504,7 +582,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyTemplate</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -512,7 +593,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template type.
+             * <p>The template type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -520,7 +604,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template version. The version contains the letter v and a number. The number starts from 1.
+             * <p>The template version. The version contains the letter v and a number. The number starts from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -528,10 +615,13 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times for which the private template is executed. If **ShareType** is set to **Public**, the value of this parameter is `-1`.
-             * <p>
+             * <p>The number of times for which the private template is executed. If <strong>ShareType</strong> is set to <strong>Public</strong>, the value of this parameter is <code>-1</code>.</p>
+             * <blockquote>
+             * <p> This parameter is valid only if <strong>ShareType</strong> is set to <strong>Private</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is valid only if **ShareType** is set to **Private**.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalExecutionCount(Integer totalExecutionCount) {
                 this.totalExecutionCount = totalExecutionCount;
@@ -539,7 +629,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The user who last updated the template.
+             * <p>The user who last updated the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(13092000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -547,10 +640,21 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was last updated.
+             * <p>The time when the template was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
+                return this;
+            }
+
+            /**
+             * VersionName.
+             */
+            public Builder versionName(String versionName) {
+                this.versionName = versionName;
                 return this;
             }
 

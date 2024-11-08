@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationRequest</p>
@@ -124,7 +125,7 @@ public class UpdateApplicationRequest extends Request {
         } 
 
         /**
-         * The configurations of application alerts.
+         * <p>The configurations of application alerts.</p>
          */
         public Builder alarmConfig(AlarmConfig alarmConfig) {
             String alarmConfigShrink = shrink(alarmConfig, "AlarmConfig", "json");
@@ -134,7 +135,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete existing alert rules before applying the alert template. Default value: false.
+         * <p>Specifies whether to delete existing alert rules before applying the alert template. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteAlarmRulesBeforeUpdate(Boolean deleteAlarmRulesBeforeUpdate) {
             this.putQueryParameter("DeleteAlarmRulesBeforeUpdate", deleteAlarmRulesBeforeUpdate);
@@ -143,7 +147,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The description to be updated for the application.
+         * <p>The description to be updated for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test application</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -152,7 +159,11 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My-Application</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -161,7 +172,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-hangzhou.
+         * <p>The region ID. Set the value to cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +184,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -186,6 +203,12 @@ public class UpdateApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateApplicationRequest</p>
+     */
     public static class AlarmConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private java.util.List < String > contactGroups;
@@ -237,7 +260,7 @@ public class UpdateApplicationRequest extends Request {
             private java.util.List < String > templateIds; 
 
             /**
-             * The alert contact groups.
+             * <p>The alert contact groups.</p>
              */
             public Builder contactGroups(java.util.List < String > contactGroups) {
                 this.contactGroups = contactGroups;
@@ -245,7 +268,10 @@ public class UpdateApplicationRequest extends Request {
             }
 
             /**
-             * The health check URL of the application.
+             * <p>The health check URL of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/healthcheck/tcp50122</p>
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -253,7 +279,7 @@ public class UpdateApplicationRequest extends Request {
             }
 
             /**
-             * The alert templates.
+             * <p>The alert templates.</p>
              */
             public Builder templateIds(java.util.List < String > templateIds) {
                 this.templateIds = templateIds;

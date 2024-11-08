@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretParametersRequest} extends {@link RequestModel}
  *
  * <p>ListSecretParametersRequest</p>
@@ -180,7 +181,10 @@ public class ListSecretParametersRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -189,7 +193,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The name of the parameter. **You can enter a keyword to query parameter names in fuzzy match mode.
+         * <p>The name of the parameter. **You can enter a keyword to query parameter names in fuzzy match mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySecretParameter</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -198,7 +205,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sPH90GZOVGC6KPDUL0FIIbEtMQHq_19S6_4O_XqA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -207,7 +217,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.
+         * <p>The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path1/path2/</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -216,7 +229,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.
+         * <p>Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recursive(Boolean recursive) {
             this.putQueryParameter("Recursive", recursive);
@@ -225,7 +241,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +253,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -243,11 +265,14 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The field used to sort the query results. Valid values:
-         * <p>
+         * <p>The field used to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>Name</li>
+         * <li>CreatedDate</li>
+         * </ul>
          * 
-         * *   Name
-         * *   CreatedDate
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -256,11 +281,14 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The order in which the entries are sorted. Valid values:
-         * <p>
+         * <p>The order in which the entries are sorted. Valid values:</p>
+         * <ul>
+         * <li>Ascending</li>
+         * <li>Descending (Default)</li>
+         * </ul>
          * 
-         * *   Ascending
-         * *   Descending (Default)
+         * <strong>example:</strong>
+         * <p>Descending</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -269,7 +297,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The tags of the parameter.
+         * <p>The tags of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

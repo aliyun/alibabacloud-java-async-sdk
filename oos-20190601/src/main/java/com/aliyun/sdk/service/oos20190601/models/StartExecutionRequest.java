@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartExecutionRequest} extends {@link RequestModel}
  *
  * <p>StartExecutionRequest</p>
@@ -235,7 +236,10 @@ public class StartExecutionRequest extends Request {
         } 
 
         /**
-         * The access token.
+         * <p>The access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e56767-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -244,7 +248,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The description of the execution.
+         * <p>The description of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test execution.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -253,12 +260,15 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The loop mode. Valid values:
-         * <p>
+         * <p>The loop mode. Valid values:</p>
+         * <ul>
+         * <li>Automatic: does not suspend the execution of the template. This is the default value.</li>
+         * <li>FirstBatchPause: suspends the execution of the template after the first batch is complete.</li>
+         * <li>EveryBatchPause: suspends the execution of the template after each batch is complete.</li>
+         * </ul>
          * 
-         * *   Automatic: does not suspend the execution of the template. This is the default value.
-         * *   FirstBatchPause: suspends the execution of the template after the first batch is complete.
-         * *   EveryBatchPause: suspends the execution of the template after each batch is complete.
+         * <strong>example:</strong>
+         * <p>Automatic</p>
          */
         public Builder loopMode(String loopMode) {
             this.putQueryParameter("LoopMode", loopMode);
@@ -267,12 +277,15 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The execution mode. Valid values:
-         * <p>
+         * <p>The execution mode. Valid values:</p>
+         * <ul>
+         * <li>Automatic: automatically starts the execution of the template. This is the default value.</li>
+         * <li>FailurePause: suspends the execution of the template upon a failure.</li>
+         * <li>Debug: manually starts the execution of the template.</li>
+         * </ul>
          * 
-         * *   Automatic: automatically starts the execution of the template. This is the default value.
-         * *   FailurePause: suspends the execution of the template upon a failure.
-         * *   Debug: manually starts the execution of the template.
+         * <strong>example:</strong>
+         * <p>Automatic</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -281,7 +294,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The JSON string that consists of a set of parameters. Default value: {}.
+         * <p>The JSON string that consists of a set of parameters. Default value: {}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Status&quot;:&quot;Running&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -290,7 +306,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The ID of the parent execution.
+         * <p>The ID of the parent execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxx</p>
          */
         public Builder parentExecutionId(String parentExecutionId) {
             this.putQueryParameter("ParentExecutionId", parentExecutionId);
@@ -299,7 +318,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the execution resides.
+         * <p>The ID of the region in which the execution resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -308,7 +330,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -317,11 +342,14 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The security check mode. Valid values:
-         * <p>
+         * <p>The security check mode. Valid values:</p>
+         * <ul>
+         * <li>Skip: specifies that you are aware of the risks. The system performs all actions in the execution without manual confirmation, regardless of the risk level. This parameter is valid only if the <code>Mode</code> parameter is set to Automatic.</li>
+         * <li>ConfirmEveryHighRiskAction: requires you to confirm each high-risk action. This is the default value. You can call the <strong>NotifyExecution</strong> operation to confirm or cancel an action.</li>
+         * </ul>
          * 
-         * *   Skip: specifies that you are aware of the risks. The system performs all actions in the execution without manual confirmation, regardless of the risk level. This parameter is valid only if the `Mode` parameter is set to Automatic.
-         * *   ConfirmEveryHighRiskAction: requires you to confirm each high-risk action. This is the default value. You can call the **NotifyExecution** operation to confirm or cancel an action.
+         * <strong>example:</strong>
+         * <p>Skip</p>
          */
         public Builder safetyCheck(String safetyCheck) {
             this.putQueryParameter("SafetyCheck", safetyCheck);
@@ -330,7 +358,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The tags for the execution.
+         * <p>The tags for the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -340,7 +371,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The content of the template in the JSON or YAML format. This parameter is the same as the Content parameter that you can specify when you call the CreateTemplate operation. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.
+         * <p>The content of the template in the JSON or YAML format. This parameter is the same as the Content parameter that you can specify when you call the CreateTemplate operation. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;Description&quot;: &quot;Example template, describe instances in some status&quot;,   &quot;FormatVersion&quot;: &quot;OOS-2019-06-01&quot;,   &quot;Parameters&quot;: {},   &quot;Tasks&quot;: [     {       &quot;Name&quot;: &quot;describeInstances&quot;,       &quot;Action&quot;: &quot;ACS::ExecuteAPI&quot;,       &quot;Description&quot;: &quot;desc-en&quot;,       &quot;Properties&quot;: {         &quot;Service&quot;: &quot;ECS&quot;,         &quot;API&quot;: &quot;DescribeInstances&quot;,         &quot;Parameters&quot;: {           &quot;Status&quot;: &quot;Running&quot;         }       }     }   ] }</p>
          */
         public Builder templateContent(String templateContent) {
             this.putQueryParameter("TemplateContent", templateContent);
@@ -349,7 +383,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+         * <p>The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vmeixme</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -358,7 +395,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The Object Storage Service (OSS) URL of the object that stores the content of the Operation Orchestration Service (OOS) template. The access control list (ACL) of the object must be public-read. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.
+         * <p>The Object Storage Service (OSS) URL of the object that stores the content of the Operation Orchestration Service (OOS) template. The access control list (ACL) of the object must be public-read. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oos-template.cn-hangzhou.oss.aliyun-inc.com/oos-test-template.json">http://oos-template.cn-hangzhou.oss.aliyun-inc.com/oos-test-template.json</a></p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -367,7 +407,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The version number of the template. If you do not specify this parameter, the system uses the latest version.
+         * <p>The version number of the template. If you do not specify this parameter, the system uses the latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

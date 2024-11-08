@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetParametersRequest} extends {@link RequestModel}
  *
  * <p>GetParametersRequest</p>
@@ -68,7 +69,11 @@ public class GetParametersRequest extends Request {
         } 
 
         /**
-         * The names of the common parameters.
+         * <p>The names of the common parameters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;parameter1&quot;,&quot;parameter2&quot;]</p>
          */
         public Builder names(String names) {
             this.putQueryParameter("Names", names);
@@ -77,7 +82,10 @@ public class GetParametersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
