@@ -104,7 +104,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
@@ -297,7 +297,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * <p>The end time of the text after audio-to-text conversion. Unit: seconds.</p>
+             * <p>The end time of the audio segment in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -319,7 +319,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
+             * <p>Extended fields.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;riskTips&quot;:&quot;sexuality_Suggestive&quot;,&quot;riskWords&quot;:&quot;pxxxxy&quot;}</p>
@@ -341,7 +341,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reserved field.</p>
+             * <p>Reserved parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -352,7 +352,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -360,7 +363,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk details that are hit.</p>
+             * <p>The details of the risky content.</p>
              * 
              * <strong>example:</strong>
              * <p>sexuality_Suggestive</p>
@@ -371,7 +374,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk words that are hit.</p>
+             * <p>The term hit by the risky content.</p>
              * 
              * <strong>example:</strong>
              * <p>AAA,BBB,CCC</p>
@@ -382,7 +385,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk score, default range 0-99.</p>
+             * <p>The risk score. Default range: 0 to 99.</p>
              * 
              * <strong>example:</strong>
              * <p>87.01</p>
@@ -393,7 +396,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the text after audio-to-text conversion. Unit: seconds.</p>
+             * <p>The start time of the audio segment in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -415,7 +418,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text converted from voice.</p>
+             * <p>The text converted from the audio segment.</p>
              * 
              * <strong>example:</strong>
              * <p>Disgusting</p>
@@ -426,7 +429,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temporary access address of the audio segment. The validity period of the URL is 30 minutes. You must prepare another URL to store the audio segment at the earliest opportunity.</p>
+             * <p>The temporary URL of the audio segment.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
@@ -558,7 +561,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -566,7 +572,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the audio segments.</p>
+             * <p>The moderation results of audio segments.</p>
              */
             public Builder sliceDetails(java.util.List < SliceDetails> sliceDetails) {
                 this.sliceDetails = sliceDetails;
@@ -585,7 +591,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the moderation object.</p>
+             * <p>The URL of the moderated content.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
