@@ -157,7 +157,7 @@ public class StartRecordContentRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>This parameter is required.</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -184,7 +184,7 @@ public class StartRecordContentRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * <p>This parameter is required.</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -202,7 +202,7 @@ public class StartRecordContentRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -211,7 +211,7 @@ public class StartRecordContentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +220,7 @@ public class StartRecordContentRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

@@ -144,7 +144,10 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0764064c-1609-4d3c-8cb7-ab8d3feg****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -162,7 +165,10 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finger 1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -171,7 +177,10 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
-         * Index.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder index(Integer index) {
             this.putQueryParameter("Index", index);
@@ -180,7 +189,10 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v14e5a2404c495249f7541646535779667ea0b5d87754b5d2d2a3099bda774f3832e24756ef3e66eb574b1f3e99078****</p>
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -189,7 +201,10 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +213,10 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d28520d4-da0b-4a97-981d-683db865****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

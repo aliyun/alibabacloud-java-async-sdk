@@ -143,7 +143,10 @@ public class UnbindUserDesktopRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58f96f67-7944-4f97-9342-****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -170,7 +173,10 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v12307f5e0****</p>
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -179,7 +185,10 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -188,7 +197,10 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b053331-dc98-43d8-b247-****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -197,7 +209,10 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
-         * UserDesktopId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ud-sdfs****</p>
          */
         public Builder userDesktopId(String userDesktopId) {
             this.putQueryParameter("UserDesktopId", userDesktopId);

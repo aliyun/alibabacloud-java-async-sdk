@@ -170,6 +170,7 @@ public class StopDesktopsRequest extends Request {
 
         /**
          * <p>The client ID. The system generates a unique ID for each client.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>f4a0dc8e-1702-4728-9a60-95b27a35****</p>
@@ -193,7 +194,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How do I ensure the idempotence of a request?</a></p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence of a request?</a></p>
          * 
          * <strong>example:</strong>
          * <p>6ce412a8-399f-49f9-9518-66ee028a****</p>
@@ -218,6 +219,7 @@ public class StopDesktopsRequest extends Request {
 
         /**
          * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-7w78ozhjcwa3u****</p>
@@ -241,7 +243,8 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~196646~~">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

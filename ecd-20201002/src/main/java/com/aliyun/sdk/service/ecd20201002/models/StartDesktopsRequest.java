@@ -171,6 +171,7 @@ public class StartDesktopsRequest extends Request {
 
         /**
          * <p>The ID of the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client). The system generates a unique ID for each client.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>f4a0dc8e-1702-4728-9a60-95b27a35****</p>
@@ -194,7 +195,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>21e7be12-aa4f-4389-b3e1-82f4a1b5****</p>
@@ -219,6 +220,7 @@ public class StartDesktopsRequest extends Request {
 
         /**
          * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-cg27ufmapab08****</p>
@@ -231,6 +233,7 @@ public class StartDesktopsRequest extends Request {
 
         /**
          * <p>The logon token.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v18101ac6a9e69c66b04a163031680463660b4b216cd758f34b60b9ad6a7c7f7334b83dd8f75eef4209c68f9f1080b****</p>
@@ -242,7 +245,8 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~196646~~">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

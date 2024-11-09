@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ApproveFotaUpdate  ApproveFotaUpdateRequest
+     * @return ApproveFotaUpdateResponse
+     */
     @Override
     public CompletableFuture<ApproveFotaUpdateResponse> approveFotaUpdate(ApproveFotaUpdateRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangePassword  ChangePasswordRequest
+     * @return ChangePasswordResponse
+     */
     @Override
     public CompletableFuture<ChangePasswordResponse> changePassword(ChangePasswordRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFingerPrintTemplate  DeleteFingerPrintTemplateRequest
+     * @return DeleteFingerPrintTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteFingerPrintTemplateResponse> deleteFingerPrintTemplate(DeleteFingerPrintTemplateRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDirectories  DescribeDirectoriesRequest
+     * @return DescribeDirectoriesResponse
+     */
     @Override
     public CompletableFuture<DescribeDirectoriesResponse> describeDirectories(DescribeDirectoriesRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFingerPrintTemplates  DescribeFingerPrintTemplatesRequest
+     * @return DescribeFingerPrintTemplatesResponse
+     */
     @Override
     public CompletableFuture<DescribeFingerPrintTemplatesResponse> describeFingerPrintTemplates(DescribeFingerPrintTemplatesRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGlobalDesktops  DescribeGlobalDesktopsRequest
+     * @return DescribeGlobalDesktopsResponse
+     */
     @Override
     public CompletableFuture<DescribeGlobalDesktopsResponse> describeGlobalDesktops(DescribeGlobalDesktopsRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeOfficeSites  DescribeOfficeSitesRequest
+     * @return DescribeOfficeSitesResponse
+     */
     @Override
     public CompletableFuture<DescribeOfficeSitesResponse> describeOfficeSites(DescribeOfficeSitesRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSnapshots  DescribeSnapshotsRequest
+     * @return DescribeSnapshotsResponse
+     */
     @Override
     public CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EncryptPassword  EncryptPasswordRequest
+     * @return EncryptPasswordResponse
+     */
     @Override
     public CompletableFuture<EncryptPasswordResponse> encryptPassword(EncryptPasswordRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCloudDriveServiceMountToken  GetCloudDriveServiceMountTokenRequest
+     * @return GetCloudDriveServiceMountTokenResponse
+     */
     @Override
     public CompletableFuture<GetCloudDriveServiceMountTokenResponse> getCloudDriveServiceMountToken(GetCloudDriveServiceMountTokenRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
+     * @return GetConnectionTicketResponse
+     */
     @Override
     public CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLoginToken  GetLoginTokenRequest
+     * @return GetLoginTokenResponse
+     */
     @Override
     public CompletableFuture<GetLoginTokenResponse> getLoginToken(GetLoginTokenRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IsKeepAlive  IsKeepAliveRequest
+     * @return IsKeepAliveResponse
+     */
     @Override
     public CompletableFuture<IsKeepAliveResponse> isKeepAlive(IsKeepAliveRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEdsAgentReportConfig  QueryEdsAgentReportConfigRequest
+     * @return QueryEdsAgentReportConfigResponse
+     */
     @Override
     public CompletableFuture<QueryEdsAgentReportConfigResponse> queryEdsAgentReportConfig(QueryEdsAgentReportConfigRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RebootDesktops  RebootDesktopsRequest
+     * @return RebootDesktopsResponse
+     */
     @Override
     public CompletableFuture<RebootDesktopsResponse> rebootDesktops(RebootDesktopsRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshLoginToken  RefreshLoginTokenRequest
+     * @return RefreshLoginTokenResponse
+     */
     @Override
     public CompletableFuture<RefreshLoginTokenResponse> refreshLoginToken(RefreshLoginTokenRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReportEdsAgentInfo  ReportEdsAgentInfoRequest
+     * @return ReportEdsAgentInfoResponse
+     */
     @Override
     public CompletableFuture<ReportEdsAgentInfoResponse> reportEdsAgentInfo(ReportEdsAgentInfoRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReportSessionStatus  ReportSessionStatusRequest
+     * @return ReportSessionStatusResponse
+     */
     @Override
     public CompletableFuture<ReportSessionStatusResponse> reportSessionStatus(ReportSessionStatusRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetPassword  ResetPasswordRequest
+     * @return ResetPasswordResponse
+     */
     @Override
     public CompletableFuture<ResetPasswordResponse> resetPassword(ResetPasswordRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetSnapshot  ResetSnapshotRequest
+     * @return ResetSnapshotResponse
+     */
     @Override
     public CompletableFuture<ResetSnapshotResponse> resetSnapshot(ResetSnapshotRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendTokenCode  SendTokenCodeRequest
+     * @return SendTokenCodeResponse
+     */
     @Override
     public CompletableFuture<SendTokenCodeResponse> sendTokenCode(SendTokenCodeRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetFingerPrintTemplate  SetFingerPrintTemplateRequest
+     * @return SetFingerPrintTemplateResponse
+     */
     @Override
     public CompletableFuture<SetFingerPrintTemplateResponse> setFingerPrintTemplate(SetFingerPrintTemplateRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetFingerPrintTemplateDescription  SetFingerPrintTemplateDescriptionRequest
+     * @return SetFingerPrintTemplateDescriptionResponse
+     */
     @Override
     public CompletableFuture<SetFingerPrintTemplateDescriptionResponse> setFingerPrintTemplateDescription(SetFingerPrintTemplateDescriptionRequest request) {
         try {
@@ -378,6 +474,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.</p>
+     * 
+     * @param request the request parameters of StartDesktops  StartDesktopsRequest
+     * @return StartDesktopsResponse
      */
     @Override
     public CompletableFuture<StartDesktopsResponse> startDesktops(StartDesktopsRequest request) {
@@ -393,6 +492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartRecordContent  StartRecordContentRequest
+     * @return StartRecordContentResponse
+     */
     @Override
     public CompletableFuture<StartRecordContentResponse> startRecordContent(StartRecordContentRequest request) {
         try {
@@ -410,6 +513,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</p>
+     * 
+     * @param request the request parameters of StopDesktops  StopDesktopsRequest
+     * @return StopDesktopsResponse
      */
     @Override
     public CompletableFuture<StopDesktopsResponse> stopDesktops(StopDesktopsRequest request) {
@@ -425,6 +531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopRecordContent  StopRecordContentRequest
+     * @return StopRecordContentResponse
+     */
     @Override
     public CompletableFuture<StopRecordContentResponse> stopRecordContent(StopRecordContentRequest request) {
         try {
@@ -439,6 +549,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindUserDesktop  UnbindUserDesktopRequest
+     * @return UnbindUserDesktopResponse
+     */
     @Override
     public CompletableFuture<UnbindUserDesktopResponse> unbindUserDesktop(UnbindUserDesktopRequest request) {
         try {
@@ -453,6 +567,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyCredential  VerifyCredentialRequest
+     * @return VerifyCredentialResponse
+     */
     @Override
     public CompletableFuture<VerifyCredentialResponse> verifyCredential(VerifyCredentialRequest request) {
         try {

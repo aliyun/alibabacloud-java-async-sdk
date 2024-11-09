@@ -138,7 +138,10 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp167fcodoa90ixn****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +150,10 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +162,10 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
-         * SessionChangeTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642909143781</p>
          */
         public Builder sessionChangeTime(Long sessionChangeTime) {
             this.putQueryParameter("SessionChangeTime", sessionChangeTime);
@@ -165,7 +174,10 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -174,7 +186,10 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
-         * SessionStatus.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionLogOn</p>
          */
         public Builder sessionStatus(String sessionStatus) {
             this.putQueryParameter("SessionStatus", sessionStatus);

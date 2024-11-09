@@ -307,6 +307,7 @@ public class GetLoginTokenRequest extends Request {
 
         /**
          * <p>The ID of the Alibaba Cloud Workspace client. The system generates a unique ID for each client.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>f4a0dc8e-1702-4728-9a60-95b27a35****</p>
@@ -489,7 +490,8 @@ public class GetLoginTokenRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="~~196646~~">DescribeRegions</a> operation to query the regions supported by EDS.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by EDS.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

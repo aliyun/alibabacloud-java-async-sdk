@@ -42,6 +42,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
     private String keyword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoginRegionId")
     private String loginRegionId;
 
@@ -99,6 +103,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         this.desktopStatus = builder.desktopStatus;
         this.directoryId = builder.directoryId;
         this.keyword = builder.keyword;
+        this.language = builder.language;
         this.loginRegionId = builder.loginRegionId;
         this.loginToken = builder.loginToken;
         this.maxResults = builder.maxResults;
@@ -173,6 +178,13 @@ public class DescribeGlobalDesktopsRequest extends Request {
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -267,6 +279,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         private String desktopStatus; 
         private String directoryId; 
         private String keyword; 
+        private String language; 
         private String loginRegionId; 
         private String loginToken; 
         private Integer maxResults; 
@@ -293,6 +306,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
             this.desktopStatus = request.desktopStatus;
             this.directoryId = request.directoryId;
             this.keyword = request.keyword;
+            this.language = request.language;
             this.loginRegionId = request.loginRegionId;
             this.loginToken = request.loginToken;
             this.maxResults = request.maxResults;
@@ -308,7 +322,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c213150d-7ac3-432c-b749-6e1e090b****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -374,6 +391,15 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
+            return this;
+        }
+
+        /**
          * LoginRegionId.
          */
         public Builder loginRegionId(String loginRegionId) {
@@ -383,7 +409,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v147c9114a180489f89691663893169****</p>
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);

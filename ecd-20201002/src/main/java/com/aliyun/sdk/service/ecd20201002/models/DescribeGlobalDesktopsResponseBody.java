@@ -835,6 +835,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
+        @com.aliyun.core.annotation.NameInMap("OsDescription")
+        private String osDescription;
+
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
@@ -897,6 +900,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             this.networkInterfaceIp = builder.networkInterfaceIp;
             this.officeSiteId = builder.officeSiteId;
             this.os = builder.os;
+            this.osDescription = builder.osDescription;
             this.osType = builder.osType;
             this.platform = builder.platform;
             this.policyGroupId = builder.policyGroupId;
@@ -1115,6 +1119,13 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return osDescription
+         */
+        public String getOsDescription() {
+            return this.osDescription;
+        }
+
+        /**
          * @return osType
          */
         public String getOsType() {
@@ -1220,6 +1231,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String networkInterfaceIp; 
             private String officeSiteId; 
             private String os; 
+            private String osDescription; 
             private String osType; 
             private String platform; 
             private String policyGroupId; 
@@ -1453,6 +1465,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
              */
             public Builder os(String os) {
                 this.os = os;
+                return this;
+            }
+
+            /**
+             * OsDescription.
+             */
+            public Builder osDescription(String osDescription) {
+                this.osDescription = osDescription;
                 return this;
             }
 

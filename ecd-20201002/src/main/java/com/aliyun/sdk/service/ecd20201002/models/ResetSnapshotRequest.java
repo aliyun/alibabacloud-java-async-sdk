@@ -18,6 +18,10 @@ public class ResetSnapshotRequest extends Request {
     private String clientId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    private String desktopId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoginToken")
     @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
@@ -39,6 +43,7 @@ public class ResetSnapshotRequest extends Request {
     private ResetSnapshotRequest(Builder builder) {
         super(builder);
         this.clientId = builder.clientId;
+        this.desktopId = builder.desktopId;
         this.loginToken = builder.loginToken;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
@@ -63,6 +68,13 @@ public class ResetSnapshotRequest extends Request {
      */
     public String getClientId() {
         return this.clientId;
+    }
+
+    /**
+     * @return desktopId
+     */
+    public String getDesktopId() {
+        return this.desktopId;
     }
 
     /**
@@ -95,6 +107,7 @@ public class ResetSnapshotRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetSnapshotRequest, Builder> {
         private String clientId; 
+        private String desktopId; 
         private String loginToken; 
         private String regionId; 
         private String sessionId; 
@@ -107,6 +120,7 @@ public class ResetSnapshotRequest extends Request {
         private Builder(ResetSnapshotRequest request) {
             super(request);
             this.clientId = request.clientId;
+            this.desktopId = request.desktopId;
             this.loginToken = request.loginToken;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
@@ -114,7 +128,10 @@ public class ResetSnapshotRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b9d8ddfd-65d4-4857-9e97-56477d1f****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -123,7 +140,19 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * DesktopId.
+         */
+        public Builder desktopId(String desktopId) {
+            this.putQueryParameter("DesktopId", desktopId);
+            this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1fdef51b727aa91d6c881658978508114d3f5680fa99a66b2a631d17d5bb4860cccf1173be24d77d5ef1423c83aea****</p>
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -132,7 +161,10 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,7 +182,10 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2zeipxmnhej803x7****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
