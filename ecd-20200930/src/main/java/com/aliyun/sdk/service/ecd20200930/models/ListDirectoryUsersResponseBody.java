@@ -110,13 +110,21 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
+        @com.aliyun.core.annotation.NameInMap("Email")
+        private String email;
+
         @com.aliyun.core.annotation.NameInMap("EndUser")
         private String endUser;
+
+        @com.aliyun.core.annotation.NameInMap("Phone")
+        private String phone;
 
         private Users(Builder builder) {
             this.assignedDesktopNumber = builder.assignedDesktopNumber;
             this.displayName = builder.displayName;
+            this.email = builder.email;
             this.endUser = builder.endUser;
+            this.phone = builder.phone;
         }
 
         public static Builder builder() {
@@ -142,16 +150,32 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
+        }
+
+        /**
          * @return endUser
          */
         public String getEndUser() {
             return this.endUser;
         }
 
+        /**
+         * @return phone
+         */
+        public String getPhone() {
+            return this.phone;
+        }
+
         public static final class Builder {
             private Integer assignedDesktopNumber; 
             private String displayName; 
+            private String email; 
             private String endUser; 
+            private String phone; 
 
             /**
              * AssignedDesktopNumber.
@@ -173,6 +197,14 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
+             * Email.
+             */
+            public Builder email(String email) {
+                this.email = email;
+                return this;
+            }
+
+            /**
              * <p>The name of the user.</p>
              * 
              * <strong>example:</strong>
@@ -180,6 +212,14 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;
+                return this;
+            }
+
+            /**
+             * Phone.
+             */
+            public Builder phone(String phone) {
+                this.phone = phone;
                 return this;
             }
 

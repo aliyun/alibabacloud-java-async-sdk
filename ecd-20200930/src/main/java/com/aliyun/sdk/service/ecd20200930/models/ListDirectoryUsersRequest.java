@@ -26,6 +26,10 @@ public class ListDirectoryUsersRequest extends Request {
     private String filter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeAssignedUser")
+    private Boolean includeAssignedUser;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -51,6 +55,7 @@ public class ListDirectoryUsersRequest extends Request {
         this.assignedInfo = builder.assignedInfo;
         this.directoryId = builder.directoryId;
         this.filter = builder.filter;
+        this.includeAssignedUser = builder.includeAssignedUser;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.OUPath = builder.OUPath;
@@ -93,6 +98,13 @@ public class ListDirectoryUsersRequest extends Request {
     }
 
     /**
+     * @return includeAssignedUser
+     */
+    public Boolean getIncludeAssignedUser() {
+        return this.includeAssignedUser;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -131,6 +143,7 @@ public class ListDirectoryUsersRequest extends Request {
         private String assignedInfo; 
         private String directoryId; 
         private String filter; 
+        private Boolean includeAssignedUser; 
         private Integer maxResults; 
         private String nextToken; 
         private String OUPath; 
@@ -146,6 +159,7 @@ public class ListDirectoryUsersRequest extends Request {
             this.assignedInfo = request.assignedInfo;
             this.directoryId = request.directoryId;
             this.filter = request.filter;
+            this.includeAssignedUser = request.includeAssignedUser;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.OUPath = request.OUPath;
@@ -184,6 +198,15 @@ public class ListDirectoryUsersRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * IncludeAssignedUser.
+         */
+        public Builder includeAssignedUser(Boolean includeAssignedUser) {
+            this.putQueryParameter("IncludeAssignedUser", includeAssignedUser);
+            this.includeAssignedUser = includeAssignedUser;
             return this;
         }
 

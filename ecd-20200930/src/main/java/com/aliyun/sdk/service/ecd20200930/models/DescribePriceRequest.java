@@ -64,13 +64,21 @@ public class DescribePriceRequest extends Request {
     private String resourceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDiskCategory")
+    private String rootDiskCategory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
     @com.aliyun.core.annotation.Validation(maximum = 32768)
     private Integer rootDiskSizeGib;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskCategory")
+    private String userDiskCategory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
-    @com.aliyun.core.annotation.Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Validation(maximum = 65536)
     private Integer userDiskSizeGib;
 
     private DescribePriceRequest(Builder builder) {
@@ -87,7 +95,9 @@ public class DescribePriceRequest extends Request {
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
+        this.rootDiskCategory = builder.rootDiskCategory;
         this.rootDiskSizeGib = builder.rootDiskSizeGib;
+        this.userDiskCategory = builder.userDiskCategory;
         this.userDiskSizeGib = builder.userDiskSizeGib;
     }
 
@@ -189,10 +199,24 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
+     * @return rootDiskCategory
+     */
+    public String getRootDiskCategory() {
+        return this.rootDiskCategory;
+    }
+
+    /**
      * @return rootDiskSizeGib
      */
     public Integer getRootDiskSizeGib() {
         return this.rootDiskSizeGib;
+    }
+
+    /**
+     * @return userDiskCategory
+     */
+    public String getUserDiskCategory() {
+        return this.userDiskCategory;
     }
 
     /**
@@ -215,7 +239,9 @@ public class DescribePriceRequest extends Request {
         private String promotionId; 
         private String regionId; 
         private String resourceType; 
+        private String rootDiskCategory; 
         private Integer rootDiskSizeGib; 
+        private String userDiskCategory; 
         private Integer userDiskSizeGib; 
 
         private Builder() {
@@ -236,7 +262,9 @@ public class DescribePriceRequest extends Request {
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
+            this.rootDiskCategory = request.rootDiskCategory;
             this.rootDiskSizeGib = request.rootDiskSizeGib;
+            this.userDiskCategory = request.userDiskCategory;
             this.userDiskSizeGib = request.userDiskSizeGib;
         } 
 
@@ -433,6 +461,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
+         * RootDiskCategory.
+         */
+        public Builder rootDiskCategory(String rootDiskCategory) {
+            this.putQueryParameter("RootDiskCategory", rootDiskCategory);
+            this.rootDiskCategory = rootDiskCategory;
+            return this;
+        }
+
+        /**
          * <p>The system disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
@@ -441,6 +478,15 @@ public class DescribePriceRequest extends Request {
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
             this.rootDiskSizeGib = rootDiskSizeGib;
+            return this;
+        }
+
+        /**
+         * UserDiskCategory.
+         */
+        public Builder userDiskCategory(String userDiskCategory) {
+            this.putQueryParameter("UserDiskCategory", userDiskCategory);
+            this.userDiskCategory = userDiskCategory;
             return this;
         }
 

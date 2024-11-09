@@ -13,8 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListOfficeSiteUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssignedInfo")
+    private String assignedInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeAssignedUser")
+    private Boolean includeAssignedUser;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -38,14 +46,21 @@ public class ListOfficeSiteUsersRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
+    private String sortType;
+
     private ListOfficeSiteUsersRequest(Builder builder) {
         super(builder);
+        this.assignedInfo = builder.assignedInfo;
         this.filter = builder.filter;
+        this.includeAssignedUser = builder.includeAssignedUser;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.OUPath = builder.OUPath;
         this.officeSiteId = builder.officeSiteId;
         this.regionId = builder.regionId;
+        this.sortType = builder.sortType;
     }
 
     public static Builder builder() {
@@ -62,10 +77,24 @@ public class ListOfficeSiteUsersRequest extends Request {
     }
 
     /**
+     * @return assignedInfo
+     */
+    public String getAssignedInfo() {
+        return this.assignedInfo;
+    }
+
+    /**
      * @return filter
      */
     public String getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return includeAssignedUser
+     */
+    public Boolean getIncludeAssignedUser() {
+        return this.includeAssignedUser;
     }
 
     /**
@@ -103,13 +132,23 @@ public class ListOfficeSiteUsersRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return sortType
+     */
+    public String getSortType() {
+        return this.sortType;
+    }
+
     public static final class Builder extends Request.Builder<ListOfficeSiteUsersRequest, Builder> {
+        private String assignedInfo; 
         private String filter; 
+        private Boolean includeAssignedUser; 
         private Integer maxResults; 
         private String nextToken; 
         private String OUPath; 
         private String officeSiteId; 
         private String regionId; 
+        private String sortType; 
 
         private Builder() {
             super();
@@ -117,13 +156,25 @@ public class ListOfficeSiteUsersRequest extends Request {
 
         private Builder(ListOfficeSiteUsersRequest request) {
             super(request);
+            this.assignedInfo = request.assignedInfo;
             this.filter = request.filter;
+            this.includeAssignedUser = request.includeAssignedUser;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.OUPath = request.OUPath;
             this.officeSiteId = request.officeSiteId;
             this.regionId = request.regionId;
+            this.sortType = request.sortType;
         } 
+
+        /**
+         * AssignedInfo.
+         */
+        public Builder assignedInfo(String assignedInfo) {
+            this.putQueryParameter("AssignedInfo", assignedInfo);
+            this.assignedInfo = assignedInfo;
+            return this;
+        }
 
         /**
          * <p>The query string for fuzzy query.</p>
@@ -134,6 +185,15 @@ public class ListOfficeSiteUsersRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * IncludeAssignedUser.
+         */
+        public Builder includeAssignedUser(Boolean includeAssignedUser) {
+            this.putQueryParameter("IncludeAssignedUser", includeAssignedUser);
+            this.includeAssignedUser = includeAssignedUser;
             return this;
         }
 
@@ -200,6 +260,15 @@ public class ListOfficeSiteUsersRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SortType.
+         */
+        public Builder sortType(String sortType) {
+            this.putQueryParameter("SortType", sortType);
+            this.sortType = sortType;
             return this;
         }
 

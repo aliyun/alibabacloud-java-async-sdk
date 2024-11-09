@@ -60,6 +60,10 @@ public class UploadImageRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+    private String systemDiskSize;
+
     private UploadImageRequest(Builder builder) {
         super(builder);
         this.dataDiskSize = builder.dataDiskSize;
@@ -73,6 +77,7 @@ public class UploadImageRequest extends Request {
         this.ossObjectPath = builder.ossObjectPath;
         this.protocolType = builder.protocolType;
         this.regionId = builder.regionId;
+        this.systemDiskSize = builder.systemDiskSize;
     }
 
     public static Builder builder() {
@@ -165,6 +170,13 @@ public class UploadImageRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return systemDiskSize
+     */
+    public String getSystemDiskSize() {
+        return this.systemDiskSize;
+    }
+
     public static final class Builder extends Request.Builder<UploadImageRequest, Builder> {
         private Integer dataDiskSize; 
         private String description; 
@@ -177,6 +189,7 @@ public class UploadImageRequest extends Request {
         private String ossObjectPath; 
         private String protocolType; 
         private String regionId; 
+        private String systemDiskSize; 
 
         private Builder() {
             super();
@@ -195,6 +208,7 @@ public class UploadImageRequest extends Request {
             this.ossObjectPath = request.ossObjectPath;
             this.protocolType = request.protocolType;
             this.regionId = request.regionId;
+            this.systemDiskSize = request.systemDiskSize;
         } 
 
         /**
@@ -364,6 +378,15 @@ public class UploadImageRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SystemDiskSize.
+         */
+        public Builder systemDiskSize(String systemDiskSize) {
+            this.putQueryParameter("SystemDiskSize", systemDiskSize);
+            this.systemDiskSize = systemDiskSize;
             return this;
         }
 

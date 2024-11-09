@@ -104,15 +104,27 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
      * <p>ListOfficeSiteUsersResponseBody</p>
      */
     public static class Users extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssignedDesktopNumber")
+        private Integer assignedDesktopNumber;
+
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("Email")
+        private String email;
 
         @com.aliyun.core.annotation.NameInMap("EndUser")
         private String endUser;
 
+        @com.aliyun.core.annotation.NameInMap("Phone")
+        private String phone;
+
         private Users(Builder builder) {
+            this.assignedDesktopNumber = builder.assignedDesktopNumber;
             this.displayName = builder.displayName;
+            this.email = builder.email;
             this.endUser = builder.endUser;
+            this.phone = builder.phone;
         }
 
         public static Builder builder() {
@@ -124,10 +136,24 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return assignedDesktopNumber
+         */
+        public Integer getAssignedDesktopNumber() {
+            return this.assignedDesktopNumber;
+        }
+
+        /**
          * @return displayName
          */
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
         }
 
         /**
@@ -137,9 +163,27 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             return this.endUser;
         }
 
+        /**
+         * @return phone
+         */
+        public String getPhone() {
+            return this.phone;
+        }
+
         public static final class Builder {
+            private Integer assignedDesktopNumber; 
             private String displayName; 
+            private String email; 
             private String endUser; 
+            private String phone; 
+
+            /**
+             * AssignedDesktopNumber.
+             */
+            public Builder assignedDesktopNumber(Integer assignedDesktopNumber) {
+                this.assignedDesktopNumber = assignedDesktopNumber;
+                return this;
+            }
 
             /**
              * <p>The display name of the user.</p>
@@ -153,6 +197,14 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
+             * Email.
+             */
+            public Builder email(String email) {
+                this.email = email;
+                return this;
+            }
+
+            /**
              * <p>The name of the AD user.</p>
              * 
              * <strong>example:</strong>
@@ -160,6 +212,14 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;
+                return this;
+            }
+
+            /**
+             * Phone.
+             */
+            public Builder phone(String phone) {
+                this.phone = phone;
                 return this;
             }
 

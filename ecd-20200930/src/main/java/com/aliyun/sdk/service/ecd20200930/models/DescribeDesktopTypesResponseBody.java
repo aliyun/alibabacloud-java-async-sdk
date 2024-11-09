@@ -96,6 +96,9 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GpuCount")
         private Float gpuCount;
 
+        @com.aliyun.core.annotation.NameInMap("GpuMemory")
+        private Integer gpuMemory;
+
         @com.aliyun.core.annotation.NameInMap("GpuSpec")
         private String gpuSpec;
 
@@ -120,6 +123,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             this.desktopTypeId = builder.desktopTypeId;
             this.desktopTypeStatus = builder.desktopTypeStatus;
             this.gpuCount = builder.gpuCount;
+            this.gpuMemory = builder.gpuMemory;
             this.gpuSpec = builder.gpuSpec;
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.memorySize = builder.memorySize;
@@ -172,6 +176,13 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return gpuMemory
+         */
+        public Integer getGpuMemory() {
+            return this.gpuMemory;
+        }
+
+        /**
          * @return gpuSpec
          */
         public String getGpuSpec() {
@@ -219,6 +230,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private String desktopTypeId; 
             private String desktopTypeStatus; 
             private Float gpuCount; 
+            private Integer gpuMemory; 
             private String gpuSpec; 
             private String instanceTypeFamily; 
             private String memorySize; 
@@ -278,6 +290,14 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
              */
             public Builder gpuCount(Float gpuCount) {
                 this.gpuCount = gpuCount;
+                return this;
+            }
+
+            /**
+             * GpuMemory.
+             */
+            public Builder gpuMemory(Integer gpuMemory) {
+                this.gpuMemory = gpuMemory;
                 return this;
             }
 
