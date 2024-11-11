@@ -17,6 +17,10 @@ public class SendByFilterRequest extends Request {
     private AndroidPayload androidPayload;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AndroidShortPayload")
+    private AndroidShortPayload androidShortPayload;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ChannelProperties")
     private ChannelProperties channelProperties;
 
@@ -59,6 +63,7 @@ public class SendByFilterRequest extends Request {
     private SendByFilterRequest(Builder builder) {
         super(builder);
         this.androidPayload = builder.androidPayload;
+        this.androidShortPayload = builder.androidShortPayload;
         this.channelProperties = builder.channelProperties;
         this.description = builder.description;
         this.filter = builder.filter;
@@ -89,6 +94,13 @@ public class SendByFilterRequest extends Request {
      */
     public AndroidPayload getAndroidPayload() {
         return this.androidPayload;
+    }
+
+    /**
+     * @return androidShortPayload
+     */
+    public AndroidShortPayload getAndroidShortPayload() {
+        return this.androidShortPayload;
     }
 
     /**
@@ -163,6 +175,7 @@ public class SendByFilterRequest extends Request {
 
     public static final class Builder extends Request.Builder<SendByFilterRequest, Builder> {
         private AndroidPayload androidPayload; 
+        private AndroidShortPayload androidShortPayload; 
         private ChannelProperties channelProperties; 
         private String description; 
         private String filter; 
@@ -181,6 +194,7 @@ public class SendByFilterRequest extends Request {
         private Builder(SendByFilterRequest request) {
             super(request);
             this.androidPayload = request.androidPayload;
+            this.androidShortPayload = request.androidShortPayload;
             this.channelProperties = request.channelProperties;
             this.description = request.description;
             this.filter = request.filter;
@@ -200,6 +214,15 @@ public class SendByFilterRequest extends Request {
             String androidPayloadShrink = shrink(androidPayload, "AndroidPayload", "json");
             this.putBodyParameter("AndroidPayload", androidPayloadShrink);
             this.androidPayload = androidPayload;
+            return this;
+        }
+
+        /**
+         * AndroidShortPayload.
+         */
+        public Builder androidShortPayload(AndroidShortPayload androidShortPayload) {
+            this.putBodyParameter("AndroidShortPayload", androidShortPayload);
+            this.androidShortPayload = androidShortPayload;
             return this;
         }
 

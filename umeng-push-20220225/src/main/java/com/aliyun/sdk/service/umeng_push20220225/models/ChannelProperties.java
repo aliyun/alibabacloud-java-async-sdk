@@ -45,6 +45,9 @@ public class ChannelProperties extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("vivoCategory")
     private String vivoCategory;
 
+    @com.aliyun.core.annotation.NameInMap("vivoPushMode")
+    private String vivoPushMode;
+
     @com.aliyun.core.annotation.NameInMap("xiaomiChannelId")
     @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String xiaomiChannelId;
@@ -60,6 +63,7 @@ public class ChannelProperties extends TeaModel {
         this.useHuaweiMessage = builder.useHuaweiMessage;
         this.vivoAddBadge = builder.vivoAddBadge;
         this.vivoCategory = builder.vivoCategory;
+        this.vivoPushMode = builder.vivoPushMode;
         this.xiaomiChannelId = builder.xiaomiChannelId;
     }
 
@@ -142,6 +146,13 @@ public class ChannelProperties extends TeaModel {
     }
 
     /**
+     * @return vivoPushMode
+     */
+    public String getVivoPushMode() {
+        return this.vivoPushMode;
+    }
+
+    /**
      * @return xiaomiChannelId
      */
     public String getXiaomiChannelId() {
@@ -159,6 +170,7 @@ public class ChannelProperties extends TeaModel {
         private String useHuaweiMessage; 
         private String vivoAddBadge; 
         private String vivoCategory; 
+        private String vivoPushMode; 
         private String xiaomiChannelId; 
 
         /**
@@ -238,6 +250,14 @@ public class ChannelProperties extends TeaModel {
          */
         public Builder vivoCategory(String vivoCategory) {
             this.vivoCategory = vivoCategory;
+            return this;
+        }
+
+        /**
+         * vivoPushMode.
+         */
+        public Builder vivoPushMode(String vivoPushMode) {
+            this.vivoPushMode = vivoPushMode;
             return this;
         }
 

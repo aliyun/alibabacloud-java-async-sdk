@@ -21,6 +21,10 @@ public class SendByAliasFileIdRequest extends Request {
     private AndroidPayload androidPayload;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AndroidShortPayload")
+    private AndroidShortPayload androidShortPayload;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ChannelProperties")
     private ChannelProperties channelProperties;
 
@@ -65,6 +69,7 @@ public class SendByAliasFileIdRequest extends Request {
         super(builder);
         this.aliasType = builder.aliasType;
         this.androidPayload = builder.androidPayload;
+        this.androidShortPayload = builder.androidShortPayload;
         this.channelProperties = builder.channelProperties;
         this.description = builder.description;
         this.fileId = builder.fileId;
@@ -102,6 +107,13 @@ public class SendByAliasFileIdRequest extends Request {
      */
     public AndroidPayload getAndroidPayload() {
         return this.androidPayload;
+    }
+
+    /**
+     * @return androidShortPayload
+     */
+    public AndroidShortPayload getAndroidShortPayload() {
+        return this.androidShortPayload;
     }
 
     /**
@@ -177,6 +189,7 @@ public class SendByAliasFileIdRequest extends Request {
     public static final class Builder extends Request.Builder<SendByAliasFileIdRequest, Builder> {
         private String aliasType; 
         private AndroidPayload androidPayload; 
+        private AndroidShortPayload androidShortPayload; 
         private ChannelProperties channelProperties; 
         private String description; 
         private String fileId; 
@@ -196,6 +209,7 @@ public class SendByAliasFileIdRequest extends Request {
             super(request);
             this.aliasType = request.aliasType;
             this.androidPayload = request.androidPayload;
+            this.androidShortPayload = request.androidShortPayload;
             this.channelProperties = request.channelProperties;
             this.description = request.description;
             this.fileId = request.fileId;
@@ -224,6 +238,16 @@ public class SendByAliasFileIdRequest extends Request {
             String androidPayloadShrink = shrink(androidPayload, "AndroidPayload", "json");
             this.putBodyParameter("AndroidPayload", androidPayloadShrink);
             this.androidPayload = androidPayload;
+            return this;
+        }
+
+        /**
+         * AndroidShortPayload.
+         */
+        public Builder androidShortPayload(AndroidShortPayload androidShortPayload) {
+            String androidShortPayloadShrink = shrink(androidShortPayload, "AndroidShortPayload", "json");
+            this.putBodyParameter("AndroidShortPayload", androidShortPayloadShrink);
+            this.androidShortPayload = androidShortPayload;
             return this;
         }
 
