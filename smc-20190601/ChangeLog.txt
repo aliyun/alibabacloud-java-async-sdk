@@ -1,3 +1,6 @@
+2024-11-11 Version: 1.0.5
+- Generated java-async 2019-06-01 for smc.
+
 2024-10-29 Version: 1.0.4
 - Generated java-async 2019-06-01 for smc.
 

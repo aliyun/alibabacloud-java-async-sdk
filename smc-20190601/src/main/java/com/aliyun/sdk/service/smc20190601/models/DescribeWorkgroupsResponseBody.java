@@ -149,6 +149,120 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
      *
      * <p>DescribeWorkgroupsResponseBody</p>
      */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeWorkgroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWorkgroupsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeWorkgroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWorkgroupsResponseBody</p>
+     */
     public static class SourceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceId")
         private java.util.List < String > sourceId;
@@ -328,6 +442,9 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
         @com.aliyun.core.annotation.NameInMap("Warnings")
         private Warnings warnings;
 
@@ -338,6 +455,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
             this.description = builder.description;
             this.name = builder.name;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.warnings = builder.warnings;
             this.workgroupId = builder.workgroupId;
         }
@@ -372,6 +490,13 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return warnings
          */
         public Warnings getWarnings() {
@@ -389,6 +514,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String status; 
+            private Tags tags; 
             private Warnings warnings; 
             private String workgroupId; 
 
@@ -428,6 +554,14 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

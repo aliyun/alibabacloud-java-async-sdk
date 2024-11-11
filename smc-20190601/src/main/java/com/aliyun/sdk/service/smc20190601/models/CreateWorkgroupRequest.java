@@ -32,6 +32,10 @@ public class CreateWorkgroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private CreateWorkgroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -39,6 +43,7 @@ public class CreateWorkgroupRequest extends Request {
         this.name = builder.name;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -89,12 +94,20 @@ public class CreateWorkgroupRequest extends Request {
         return this.resourceOwnerAccount;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateWorkgroupRequest, Builder> {
         private String clientToken; 
         private String description; 
         private String name; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -107,6 +120,7 @@ public class CreateWorkgroupRequest extends Request {
             this.name = request.name;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tag = request.tag;
         } 
 
         /**
@@ -168,6 +182,15 @@ public class CreateWorkgroupRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public CreateWorkgroupRequest build() {
             return new CreateWorkgroupRequest(this);
@@ -175,4 +198,71 @@ public class CreateWorkgroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWorkgroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWorkgroupRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
