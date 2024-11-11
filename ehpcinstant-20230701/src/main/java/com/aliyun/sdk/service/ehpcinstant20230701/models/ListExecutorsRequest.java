@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExecutorsRequest} extends {@link RequestModel}
  *
  * <p>ListExecutorsRequest</p>
@@ -115,6 +116,12 @@ public class ListExecutorsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListExecutorsRequest} extends {@link TeaModel}
+     *
+     * <p>ListExecutorsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutorIds")
         private java.util.List < String > executorIds;
@@ -124,6 +131,9 @@ public class ListExecutorsRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private java.util.List < String > status;
 
         @com.aliyun.core.annotation.NameInMap("TimeCreatedAfter")
         private Integer timeCreatedAfter;
@@ -135,6 +145,7 @@ public class ListExecutorsRequest extends Request {
             this.executorIds = builder.executorIds;
             this.ipAddresses = builder.ipAddresses;
             this.jobName = builder.jobName;
+            this.status = builder.status;
             this.timeCreatedAfter = builder.timeCreatedAfter;
             this.timeCreatedBefore = builder.timeCreatedBefore;
         }
@@ -169,6 +180,13 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
+         * @return status
+         */
+        public java.util.List < String > getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return timeCreatedAfter
          */
         public Integer getTimeCreatedAfter() {
@@ -186,6 +204,7 @@ public class ListExecutorsRequest extends Request {
             private java.util.List < String > executorIds; 
             private java.util.List < String > ipAddresses; 
             private String jobName; 
+            private java.util.List < String > status; 
             private Integer timeCreatedAfter; 
             private Integer timeCreatedBefore; 
 
@@ -210,6 +229,14 @@ public class ListExecutorsRequest extends Request {
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(java.util.List < String > status) {
+                this.status = status;
                 return this;
             }
 

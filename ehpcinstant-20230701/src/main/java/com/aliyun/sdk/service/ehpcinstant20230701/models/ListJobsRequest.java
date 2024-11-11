@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsRequest} extends {@link RequestModel}
  *
  * <p>ListJobsRequest</p>
@@ -139,6 +140,12 @@ public class ListJobsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobsRequest} extends {@link TeaModel}
+     *
+     * <p>ListJobsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -260,6 +267,12 @@ public class ListJobsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsRequest} extends {@link TeaModel}
+     *
+     * <p>ListJobsRequest</p>
+     */
     public static class SortBy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;

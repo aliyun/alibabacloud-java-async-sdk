@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteJobsRequest} extends {@link RequestModel}
  *
  * <p>DeleteJobsRequest</p>
@@ -93,6 +94,12 @@ public class DeleteJobsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteJobsRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteJobsRequest</p>
+     */
     public static class TaskSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArrayIndex")
         private java.util.List < Integer > arrayIndex;
@@ -154,6 +161,12 @@ public class DeleteJobsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteJobsRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteJobsRequest</p>
+     */
     public static class JobSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;

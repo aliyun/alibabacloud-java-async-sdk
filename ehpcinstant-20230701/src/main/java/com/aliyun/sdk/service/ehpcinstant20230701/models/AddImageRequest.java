@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddImageRequest} extends {@link RequestModel}
  *
  * <p>AddImageRequest</p>
@@ -18,6 +19,10 @@ public class AddImageRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageType")
+    private String imageType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageVersion")
@@ -36,6 +41,7 @@ public class AddImageRequest extends Request {
         super(builder);
         this.containerImageSpec = builder.containerImageSpec;
         this.description = builder.description;
+        this.imageType = builder.imageType;
         this.imageVersion = builder.imageVersion;
         this.name = builder.name;
         this.VMImageSpec = builder.VMImageSpec;
@@ -69,6 +75,13 @@ public class AddImageRequest extends Request {
     }
 
     /**
+     * @return imageType
+     */
+    public String getImageType() {
+        return this.imageType;
+    }
+
+    /**
      * @return imageVersion
      */
     public String getImageVersion() {
@@ -92,6 +105,7 @@ public class AddImageRequest extends Request {
     public static final class Builder extends Request.Builder<AddImageRequest, Builder> {
         private ContainerImageSpec containerImageSpec; 
         private String description; 
+        private String imageType; 
         private String imageVersion; 
         private String name; 
         private VMImageSpec VMImageSpec; 
@@ -104,6 +118,7 @@ public class AddImageRequest extends Request {
             super(request);
             this.containerImageSpec = request.containerImageSpec;
             this.description = request.description;
+            this.imageType = request.imageType;
             this.imageVersion = request.imageVersion;
             this.name = request.name;
             this.VMImageSpec = request.VMImageSpec;
@@ -129,6 +144,15 @@ public class AddImageRequest extends Request {
         }
 
         /**
+         * ImageType.
+         */
+        public Builder imageType(String imageType) {
+            this.putQueryParameter("ImageType", imageType);
+            this.imageType = imageType;
+            return this;
+        }
+
+        /**
          * ImageVersion.
          */
         public Builder imageVersion(String imageVersion) {
@@ -138,7 +162,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-image</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -163,6 +190,12 @@ public class AddImageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddImageRequest} extends {@link TeaModel}
+     *
+     * <p>AddImageRequest</p>
+     */
     public static class RegistryCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
@@ -244,6 +277,12 @@ public class AddImageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddImageRequest} extends {@link TeaModel}
+     *
+     * <p>AddImageRequest</p>
+     */
     public static class ContainerImageSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsACREnterprise")
         private Boolean isACREnterprise;
@@ -365,6 +404,12 @@ public class AddImageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddImageRequest} extends {@link TeaModel}
+     *
+     * <p>AddImageRequest</p>
+     */
     public static class VMImageSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;

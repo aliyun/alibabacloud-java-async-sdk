@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobsResponseBody</p>
@@ -130,6 +131,79 @@ public class ListJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class JobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -158,6 +232,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("TaskCount")
         private Integer taskCount;
 
@@ -174,6 +251,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.ownerUid = builder.ownerUid;
             this.startTime = builder.startTime;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.taskCount = builder.taskCount;
             this.taskSustainable = builder.taskSustainable;
         }
@@ -250,6 +328,13 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return taskCount
          */
         public Integer getTaskCount() {
@@ -273,6 +358,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String ownerUid; 
             private String startTime; 
             private String status; 
+            private java.util.List < Tags> tags; 
             private Integer taskCount; 
             private Boolean taskSustainable; 
 
@@ -345,6 +431,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveImageRequest} extends {@link RequestModel}
  *
  * <p>RemoveImageRequest</p>
@@ -16,9 +17,14 @@ public class RemoveImageRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageType")
+    private String imageType;
+
     private RemoveImageRequest(Builder builder) {
         super(builder);
         this.imageId = builder.imageId;
+        this.imageType = builder.imageType;
     }
 
     public static Builder builder() {
@@ -41,8 +47,16 @@ public class RemoveImageRequest extends Request {
         return this.imageId;
     }
 
+    /**
+     * @return imageType
+     */
+    public String getImageType() {
+        return this.imageType;
+    }
+
     public static final class Builder extends Request.Builder<RemoveImageRequest, Builder> {
         private String imageId; 
+        private String imageType; 
 
         private Builder() {
             super();
@@ -51,14 +65,27 @@ public class RemoveImageRequest extends Request {
         private Builder(RemoveImageRequest request) {
             super(request);
             this.imageId = request.imageId;
+            this.imageType = request.imageType;
         } 
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp14wakr1rkxtb******</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * ImageType.
+         */
+        public Builder imageType(String imageType) {
+            this.putQueryParameter("ImageType", imageType);
+            this.imageType = imageType;
             return this;
         }
 

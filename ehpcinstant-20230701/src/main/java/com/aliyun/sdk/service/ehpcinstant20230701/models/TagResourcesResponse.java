@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetJobResponse} extends {@link TeaModel}
+ * {@link TagResourcesResponse} extends {@link TeaModel}
  *
- * <p>GetJobResponse</p>
+ * <p>TagResourcesResponse</p>
  */
-public class GetJobResponse extends Response {
+public class TagResourcesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetJobResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetJobResponseBody body;
+    private TagResourcesResponseBody body;
 
-    private GetJobResponse(BuilderImpl builder) {
+    private TagResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetJobResponse create() {
+    public static TagResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetJobResponse extends Response {
     /**
      * @return body
      */
-    public GetJobResponseBody getBody() {
+    public TagResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetJobResponse, Builder> {
+    public interface Builder extends Response.Builder<TagResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetJobResponseBody body);
+        Builder body(TagResourcesResponseBody body);
 
         @Override
-        GetJobResponse build();
+        TagResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetJobResponse, Builder>
+            extends Response.BuilderImpl<TagResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetJobResponseBody body; 
+        private TagResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetJobResponse response) {
+        private BuilderImpl(TagResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetJobResponseBody body) {
+        public Builder body(TagResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetJobResponse build() {
-            return new GetJobResponse(this);
+        public TagResourcesResponse build() {
+            return new TagResourcesResponse(this);
         } 
 
     } 

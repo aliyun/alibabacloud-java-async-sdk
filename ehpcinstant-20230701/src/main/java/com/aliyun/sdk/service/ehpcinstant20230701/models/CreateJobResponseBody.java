@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateJobResponseBody</p>
@@ -90,6 +91,12 @@ public class CreateJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateJobResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutorIds")
         private java.util.List < String > executorIds;

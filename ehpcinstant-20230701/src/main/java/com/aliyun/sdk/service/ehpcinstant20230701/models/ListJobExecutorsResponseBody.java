@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobExecutorsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobExecutorsResponseBody</p>
@@ -190,6 +191,12 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobExecutorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobExecutorsResponseBody</p>
+     */
     public static class ExecutorStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Deleted")
         private Integer deleted;
@@ -351,6 +358,79 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobExecutorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobExecutorsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListJobExecutorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobExecutorsResponseBody</p>
+     */
     public static class Executors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArrayIndex")
         private Integer arrayIndex;
@@ -364,11 +444,17 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutorId")
         private String executorId;
 
+        @com.aliyun.core.annotation.NameInMap("ExternalIpAddress")
+        private java.util.List < String > externalIpAddress;
+
         @com.aliyun.core.annotation.NameInMap("HostName")
         private java.util.List < String > hostName;
 
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -376,15 +462,21 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private Executors(Builder builder) {
             this.arrayIndex = builder.arrayIndex;
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
             this.executorId = builder.executorId;
+            this.externalIpAddress = builder.externalIpAddress;
             this.hostName = builder.hostName;
             this.ipAddress = builder.ipAddress;
+            this.startTime = builder.startTime;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -424,6 +516,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return externalIpAddress
+         */
+        public java.util.List < String > getExternalIpAddress() {
+            return this.externalIpAddress;
+        }
+
+        /**
          * @return hostName
          */
         public java.util.List < String > getHostName() {
@@ -435,6 +534,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
          */
         public java.util.List < String > getIpAddress() {
             return this.ipAddress;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
         }
 
         /**
@@ -451,15 +557,25 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             return this.statusReason;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private Integer arrayIndex; 
             private String createTime; 
             private String endTime; 
             private String executorId; 
+            private java.util.List < String > externalIpAddress; 
             private java.util.List < String > hostName; 
             private java.util.List < String > ipAddress; 
+            private String startTime; 
             private String status; 
             private String statusReason; 
+            private java.util.List < Tags> tags; 
 
             /**
              * ArrayIndex.
@@ -494,6 +610,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
+             * ExternalIpAddress.
+             */
+            public Builder externalIpAddress(java.util.List < String > externalIpAddress) {
+                this.externalIpAddress = externalIpAddress;
+                return this;
+            }
+
+            /**
              * HostName.
              */
             public Builder hostName(java.util.List < String > hostName) {
@@ -510,6 +634,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
@@ -522,6 +654,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

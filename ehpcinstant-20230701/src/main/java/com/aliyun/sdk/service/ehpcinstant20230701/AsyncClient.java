@@ -19,28 +19,94 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of AddImage  AddImageRequest
+     * @return AddImageResponse
+     */
     CompletableFuture<AddImageResponse> addImage(AddImageRequest request);
 
+    /**
+     * @param request the request parameters of CreateJob  CreateJobRequest
+     * @return CreateJobResponse
+     */
     CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
 
+    /**
+     * @param request the request parameters of DeleteJobs  DeleteJobsRequest
+     * @return DeleteJobsResponse
+     */
     CompletableFuture<DeleteJobsResponse> deleteJobs(DeleteJobsRequest request);
 
+    /**
+     * @param request the request parameters of DescribeJobMetricData  DescribeJobMetricDataRequest
+     * @return DescribeJobMetricDataResponse
+     */
     CompletableFuture<DescribeJobMetricDataResponse> describeJobMetricData(DescribeJobMetricDataRequest request);
 
+    /**
+     * @param request the request parameters of DescribeJobMetricLast  DescribeJobMetricLastRequest
+     * @return DescribeJobMetricLastResponse
+     */
     CompletableFuture<DescribeJobMetricLastResponse> describeJobMetricLast(DescribeJobMetricLastRequest request);
 
+    /**
+     * @param request the request parameters of GetImage  GetImageRequest
+     * @return GetImageResponse
+     */
     CompletableFuture<GetImageResponse> getImage(GetImageRequest request);
 
+    /**
+     * @param request the request parameters of GetJob  GetJobRequest
+     * @return GetJobResponse
+     */
     CompletableFuture<GetJobResponse> getJob(GetJobRequest request);
 
+    /**
+     * @param request the request parameters of ListExecutors  ListExecutorsRequest
+     * @return ListExecutorsResponse
+     */
     CompletableFuture<ListExecutorsResponse> listExecutors(ListExecutorsRequest request);
 
+    /**
+     * @param request the request parameters of ListImages  ListImagesRequest
+     * @return ListImagesResponse
+     */
     CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request);
 
+    /**
+     * @param request the request parameters of ListJobExecutors  ListJobExecutorsRequest
+     * @return ListJobExecutorsResponse
+     */
     CompletableFuture<ListJobExecutorsResponse> listJobExecutors(ListJobExecutorsRequest request);
 
+    /**
+     * @param request the request parameters of ListJobs  ListJobsRequest
+     * @return ListJobsResponse
+     */
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of RemoveImage  RemoveImageRequest
+     * @return RemoveImageResponse
+     */
     CompletableFuture<RemoveImageResponse> removeImage(RemoveImageRequest request);
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UnTagResources  UnTagResourcesRequest
+     * @return UnTagResourcesResponse
+     */
+    CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
 
 }

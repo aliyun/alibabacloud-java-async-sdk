@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListImagesResponseBody</p>
@@ -150,6 +151,12 @@ public class ListImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImagesResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -252,7 +259,7 @@ public class ListImagesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AppId.
+             * <p>This parameter is required.</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -276,7 +283,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp181x855551ww5yq****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -284,7 +294,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VM</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;

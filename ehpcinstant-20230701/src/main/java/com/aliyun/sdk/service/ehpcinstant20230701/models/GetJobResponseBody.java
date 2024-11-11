@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobResponseBody</p>
@@ -70,11 +71,21 @@ public class GetJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class Network extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableExternalIpAddress")
+        private Boolean enableExternalIpAddress;
+
         @com.aliyun.core.annotation.NameInMap("Vswitch")
         private java.util.List < String > vswitch;
 
         private Network(Builder builder) {
+            this.enableExternalIpAddress = builder.enableExternalIpAddress;
             this.vswitch = builder.vswitch;
         }
 
@@ -87,6 +98,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableExternalIpAddress
+         */
+        public Boolean getEnableExternalIpAddress() {
+            return this.enableExternalIpAddress;
+        }
+
+        /**
          * @return vswitch
          */
         public java.util.List < String > getVswitch() {
@@ -94,7 +112,16 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enableExternalIpAddress; 
             private java.util.List < String > vswitch; 
+
+            /**
+             * EnableExternalIpAddress.
+             */
+            public Builder enableExternalIpAddress(Boolean enableExternalIpAddress) {
+                this.enableExternalIpAddress = enableExternalIpAddress;
+                return this;
+            }
 
             /**
              * Vswitch.
@@ -111,6 +138,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class DeploymentPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationSpec")
         private String allocationSpec;
@@ -172,6 +205,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class ArraySpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IndexEnd")
         private Integer indexEnd;
@@ -253,6 +292,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class ExecutorPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArraySpec")
         private ArraySpec arraySpec;
@@ -314,6 +359,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class ExecutorStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArrayId")
         private Integer arrayId;
@@ -455,6 +506,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
@@ -516,6 +573,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cores")
         private Float cores;
@@ -597,6 +660,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class Vm extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -678,6 +747,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class TaskExecutor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VM")
         private Vm vm;
@@ -719,6 +794,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class TaskSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
@@ -780,6 +861,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutorPolicy")
         private ExecutorPolicy executorPolicy;
@@ -901,6 +988,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class JobInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

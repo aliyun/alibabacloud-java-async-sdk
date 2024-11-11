@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetJobResponse} extends {@link TeaModel}
+ * {@link UnTagResourcesResponse} extends {@link TeaModel}
  *
- * <p>GetJobResponse</p>
+ * <p>UnTagResourcesResponse</p>
  */
-public class GetJobResponse extends Response {
+public class UnTagResourcesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetJobResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetJobResponseBody body;
+    private UnTagResourcesResponseBody body;
 
-    private GetJobResponse(BuilderImpl builder) {
+    private UnTagResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetJobResponse create() {
+    public static UnTagResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetJobResponse extends Response {
     /**
      * @return body
      */
-    public GetJobResponseBody getBody() {
+    public UnTagResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetJobResponse, Builder> {
+    public interface Builder extends Response.Builder<UnTagResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetJobResponseBody body);
+        Builder body(UnTagResourcesResponseBody body);
 
         @Override
-        GetJobResponse build();
+        UnTagResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetJobResponse, Builder>
+            extends Response.BuilderImpl<UnTagResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetJobResponseBody body; 
+        private UnTagResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetJobResponse response) {
+        private BuilderImpl(UnTagResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetJobResponseBody body) {
+        public Builder body(UnTagResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetJobResponse build() {
-            return new GetJobResponse(this);
+        public UnTagResourcesResponse build() {
+            return new UnTagResourcesResponse(this);
         } 
 
     } 

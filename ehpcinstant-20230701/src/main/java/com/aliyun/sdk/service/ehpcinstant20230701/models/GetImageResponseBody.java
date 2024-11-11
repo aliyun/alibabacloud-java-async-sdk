@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageResponseBody} extends {@link TeaModel}
  *
  * <p>GetImageResponseBody</p>
@@ -110,6 +111,12 @@ public class GetImageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageResponseBody</p>
+     */
     public static class RegistryCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
@@ -191,6 +198,12 @@ public class GetImageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageResponseBody</p>
+     */
     public static class ContainerImageSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsACREnterprise")
         private Boolean isACREnterprise;
@@ -312,6 +325,12 @@ public class GetImageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageResponseBody</p>
+     */
     public static class VMImageSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -413,6 +432,12 @@ public class GetImageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageResponseBody</p>
+     */
     public static class Image extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -581,7 +606,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VM</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;

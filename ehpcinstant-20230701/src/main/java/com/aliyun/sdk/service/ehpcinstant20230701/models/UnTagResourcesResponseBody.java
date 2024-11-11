@@ -7,15 +7,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteJobsResponseBody} extends {@link TeaModel}
+ * {@link UnTagResourcesResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteJobsResponseBody</p>
+ * <p>UnTagResourcesResponseBody</p>
  */
-public class DeleteJobsResponseBody extends TeaModel {
+public class UnTagResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteJobsResponseBody(Builder builder) {
+    private UnTagResourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class DeleteJobsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteJobsResponseBody create() {
+    public static UnTagResourcesResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class DeleteJobsResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteJobsResponseBody build() {
-            return new DeleteJobsResponseBody(this);
+        public UnTagResourcesResponseBody build() {
+            return new UnTagResourcesResponseBody(this);
         } 
 
     } 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobRequest} extends {@link RequestModel}
  *
  * <p>CreateJobRequest</p>
@@ -130,7 +131,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testjob</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -148,7 +152,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Tasks.
+         * <p>This parameter is required.</p>
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             String tasksShrink = shrink(tasks, "Tasks", "json");
@@ -164,11 +168,21 @@ public class CreateJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class Network extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableExternalIpAddress")
+        private Boolean enableExternalIpAddress;
+
         @com.aliyun.core.annotation.NameInMap("Vswitch")
         private java.util.List < String > vswitch;
 
         private Network(Builder builder) {
+            this.enableExternalIpAddress = builder.enableExternalIpAddress;
             this.vswitch = builder.vswitch;
         }
 
@@ -181,6 +195,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return enableExternalIpAddress
+         */
+        public Boolean getEnableExternalIpAddress() {
+            return this.enableExternalIpAddress;
+        }
+
+        /**
          * @return vswitch
          */
         public java.util.List < String > getVswitch() {
@@ -188,7 +209,16 @@ public class CreateJobRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean enableExternalIpAddress; 
             private java.util.List < String > vswitch; 
+
+            /**
+             * EnableExternalIpAddress.
+             */
+            public Builder enableExternalIpAddress(Boolean enableExternalIpAddress) {
+                this.enableExternalIpAddress = enableExternalIpAddress;
+                return this;
+            }
 
             /**
              * Vswitch.
@@ -205,6 +235,80 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class DeploymentPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationSpec")
         private String allocationSpec;
@@ -212,9 +316,13 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
         private DeploymentPolicy(Builder builder) {
             this.allocationSpec = builder.allocationSpec;
             this.network = builder.network;
+            this.tag = builder.tag;
         }
 
         public static Builder builder() {
@@ -239,9 +347,17 @@ public class CreateJobRequest extends Request {
             return this.network;
         }
 
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
         public static final class Builder {
             private String allocationSpec; 
             private Network network; 
+            private java.util.List < Tag> tag; 
 
             /**
              * AllocationSpec.
@@ -259,6 +375,14 @@ public class CreateJobRequest extends Request {
                 return this;
             }
 
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
             public DeploymentPolicy build() {
                 return new DeploymentPolicy(this);
             } 
@@ -266,6 +390,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class ArraySpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IndexEnd")
         private Integer indexEnd;
@@ -347,6 +477,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class ExecutorPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArraySpec")
         private ArraySpec arraySpec;
@@ -408,6 +544,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
@@ -469,6 +611,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cores")
         private Float cores;
@@ -550,6 +698,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class EnvironmentVars extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -611,6 +765,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class Container extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -711,7 +871,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc/hpl:latest</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -733,6 +896,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class Vm extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -805,7 +974,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-xxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -835,6 +1007,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class TaskExecutor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Container")
         private Container container;
@@ -896,6 +1074,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class VolumeMount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountOptions")
         private String mountOptions;
@@ -977,6 +1161,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class TaskSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
@@ -1037,7 +1227,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * TaskExecutor.
+             * <p>This parameter is required.</p>
              */
             public Builder taskExecutor(java.util.List < TaskExecutor> taskExecutor) {
                 this.taskExecutor = taskExecutor;
@@ -1059,6 +1249,12 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutorPolicy")
         private ExecutorPolicy executorPolicy;

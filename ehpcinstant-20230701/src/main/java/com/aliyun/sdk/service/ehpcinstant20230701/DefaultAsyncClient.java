@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddImage  AddImageRequest
+     * @return AddImageResponse
+     */
     @Override
     public CompletableFuture<AddImageResponse> addImage(AddImageRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateJob  CreateJobRequest
+     * @return CreateJobResponse
+     */
     @Override
     public CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteJobs  DeleteJobsRequest
+     * @return DeleteJobsResponse
+     */
     @Override
     public CompletableFuture<DeleteJobsResponse> deleteJobs(DeleteJobsRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeJobMetricData  DescribeJobMetricDataRequest
+     * @return DescribeJobMetricDataResponse
+     */
     @Override
     public CompletableFuture<DescribeJobMetricDataResponse> describeJobMetricData(DescribeJobMetricDataRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeJobMetricLast  DescribeJobMetricLastRequest
+     * @return DescribeJobMetricLastResponse
+     */
     @Override
     public CompletableFuture<DescribeJobMetricLastResponse> describeJobMetricLast(DescribeJobMetricLastRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetImage  GetImageRequest
+     * @return GetImageResponse
+     */
     @Override
     public CompletableFuture<GetImageResponse> getImage(GetImageRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJob  GetJobRequest
+     * @return GetJobResponse
+     */
     @Override
     public CompletableFuture<GetJobResponse> getJob(GetJobRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListExecutors  ListExecutorsRequest
+     * @return ListExecutorsResponse
+     */
     @Override
     public CompletableFuture<ListExecutorsResponse> listExecutors(ListExecutorsRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListImages  ListImagesRequest
+     * @return ListImagesResponse
+     */
     @Override
     public CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobExecutors  ListJobExecutorsRequest
+     * @return ListJobExecutorsResponse
+     */
     @Override
     public CompletableFuture<ListJobExecutorsResponse> listJobExecutors(ListJobExecutorsRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobs  ListJobsRequest
+     * @return ListJobsResponse
+     */
     @Override
     public CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request) {
         try {
@@ -193,6 +237,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemoveImage  RemoveImageRequest
+     * @return RemoveImageResponse
+     */
     @Override
     public CompletableFuture<RemoveImageResponse> removeImage(RemoveImageRequest request) {
         try {
@@ -202,6 +268,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveImageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnTagResources  UnTagResourcesRequest
+     * @return UnTagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnTagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnTagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnTagResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
