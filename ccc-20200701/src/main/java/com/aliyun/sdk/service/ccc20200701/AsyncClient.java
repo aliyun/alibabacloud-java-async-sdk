@@ -340,6 +340,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EndConferenceResponse> endConference(EndConferenceRequest request);
 
     /**
+     * @param request the request parameters of ExportContactFlow  ExportContactFlowRequest
+     * @return ExportContactFlowResponse
+     */
+    CompletableFuture<ExportContactFlowResponse> exportContactFlow(ExportContactFlowRequest request);
+
+    /**
      * @deprecated OpenAPI ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.  * @param request  the request parameters of ExportCustomCallTagging  ExportCustomCallTaggingRequest
      * @return ExportCustomCallTaggingResponse
      */
@@ -603,6 +609,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ImportAdminsResponse
      */
     CompletableFuture<ImportAdminsResponse> importAdmins(ImportAdminsRequest request);
+
+    /**
+     * @param request the request parameters of ImportContactFlow  ImportContactFlowRequest
+     * @return ImportContactFlowResponse
+     */
+    CompletableFuture<ImportContactFlowResponse> importContactFlow(ImportContactFlowRequest request);
 
     /**
      * @param request the request parameters of ImportCorpNumbers  ImportCorpNumbersRequest
