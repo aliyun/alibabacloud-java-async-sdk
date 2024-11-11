@@ -127,7 +127,7 @@ public class UpdateArtifactRequest extends Request {
         } 
 
         /**
-         * ArtifactBuildProperty.
+         * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
          */
         public Builder artifactBuildProperty(ArtifactBuildProperty artifactBuildProperty) {
             String artifactBuildPropertyShrink = shrink(artifactBuildProperty, "ArtifactBuildProperty", "json");
@@ -270,7 +270,13 @@ public class UpdateArtifactRequest extends Request {
             private String sourceImageId; 
 
             /**
-             * CommandContent.
+             * <p>The command content.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>echo &quot;start run command&quot;</p>
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
@@ -278,7 +284,18 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * CommandType.
+             * <p>The command type. Valid values:</p>
+             * <ul>
+             * <li>RunBatScript: batch command, applicable to Windows instances.</li>
+             * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances.</li>
+             * <li>RunShellScript: shell command, applicable to Linux instances.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>RunShellScript</p>
              */
             public Builder commandType(String commandType) {
                 this.commandType = commandType;
@@ -286,7 +303,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID where the source mirror image is located.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -294,7 +317,21 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * SourceImageId.
+             * <p>The source image id. Supported Types:</p>
+             * <ul>
+             * <li><p>Image ID: Pass the Image ID of the Ecs image directly.</p>
+             * </li>
+             * <li><p>OOS Common Parameter Name: Obtain the corresponding Image ID automatically by using the OOS common parameter name.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a ecs image type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Image ID：m-t4nhenrdc38pe4*****
+             * ubuntu_22_04_x64_20G_alibase_20240926.vhd
+             * OOS Common Parameter Name：aliyun/services/computenest/images/aliyun_3_2104_python_3_11</p>
              */
             public Builder sourceImageId(String sourceImageId) {
                 this.sourceImageId = sourceImageId;

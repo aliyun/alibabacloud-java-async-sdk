@@ -105,6 +105,9 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ServiceDocUrl")
     private String serviceDocUrl;
 
+    @com.aliyun.core.annotation.NameInMap("ServiceDocumentInfos")
+    private java.util.List < ServiceDocumentInfos> serviceDocumentInfos;
+
     @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
@@ -212,6 +215,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.serviceAuditDocumentUrl = builder.serviceAuditDocumentUrl;
         this.serviceDiscoverable = builder.serviceDiscoverable;
         this.serviceDocUrl = builder.serviceDocUrl;
+        this.serviceDocumentInfos = builder.serviceDocumentInfos;
         this.serviceId = builder.serviceId;
         this.serviceInfos = builder.serviceInfos;
         this.serviceProductUrl = builder.serviceProductUrl;
@@ -465,6 +469,13 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceDocumentInfos
+     */
+    public java.util.List < ServiceDocumentInfos> getServiceDocumentInfos() {
+        return this.serviceDocumentInfos;
+    }
+
+    /**
      * @return serviceId
      */
     public String getServiceId() {
@@ -671,6 +682,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String serviceAuditDocumentUrl; 
         private String serviceDiscoverable; 
         private String serviceDocUrl; 
+        private java.util.List < ServiceDocumentInfos> serviceDocumentInfos; 
         private String serviceId; 
         private java.util.List < ServiceInfos> serviceInfos; 
         private String serviceProductUrl; 
@@ -1087,6 +1099,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder serviceDocUrl(String serviceDocUrl) {
             this.serviceDocUrl = serviceDocUrl;
+            return this;
+        }
+
+        /**
+         * ServiceDocumentInfos.
+         */
+        public Builder serviceDocumentInfos(java.util.List < ServiceDocumentInfos> serviceDocumentInfos) {
+            this.serviceDocumentInfos = serviceDocumentInfos;
             return this;
         }
 
@@ -2634,6 +2654,96 @@ public class GetServiceResponseBody extends TeaModel {
 
             public ComplianceMetadata build() {
                 return new ComplianceMetadata(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceResponseBody</p>
+     */
+    public static class ServiceDocumentInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DocumentUrl")
+        private String documentUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Locale")
+        private String locale;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
+        private String templateName;
+
+        private ServiceDocumentInfos(Builder builder) {
+            this.documentUrl = builder.documentUrl;
+            this.locale = builder.locale;
+            this.templateName = builder.templateName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceDocumentInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return documentUrl
+         */
+        public String getDocumentUrl() {
+            return this.documentUrl;
+        }
+
+        /**
+         * @return locale
+         */
+        public String getLocale() {
+            return this.locale;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public static final class Builder {
+            private String documentUrl; 
+            private String locale; 
+            private String templateName; 
+
+            /**
+             * DocumentUrl.
+             */
+            public Builder documentUrl(String documentUrl) {
+                this.documentUrl = documentUrl;
+                return this;
+            }
+
+            /**
+             * Locale.
+             */
+            public Builder locale(String locale) {
+                this.locale = locale;
+                return this;
+            }
+
+            /**
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template 1</p>
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
+                return this;
+            }
+
+            public ServiceDocumentInfos build() {
+                return new ServiceDocumentInfos(this);
             } 
 
         } 

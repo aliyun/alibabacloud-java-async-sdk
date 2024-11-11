@@ -158,7 +158,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * ArtifactBuildProperty.
+         * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;RegionId&quot;:&quot;xxx&quot;, &quot;SourceImageId&quot;:&quot;xxx&quot;, &quot;&quot;:&quot;xxx&quot;, &quot;CommandType&quot;:&quot;xxx&quot;, &quot;CommandContent&quot;:&quot;xxx&quot;}&quot;</p>
          */
         public Builder artifactBuildProperty(String artifactBuildProperty) {
             this.artifactBuildProperty = artifactBuildProperty;
