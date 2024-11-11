@@ -1,3 +1,6 @@
+2024-11-11 Version: 1.0.24
+- Generated java-async 2022-02-22 for Ess.
+
 2024-11-08 Version: 1.0.23
 - Generated java-async 2022-02-22 for Ess.
 

@@ -319,6 +319,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAlarmResponse> createAlarm(CreateAlarmRequest request);
 
     /**
+     * @param request the request parameters of CreateDiagnoseReport  CreateDiagnoseReportRequest
+     * @return CreateDiagnoseReportResponse
+     */
+    CompletableFuture<CreateDiagnoseReportResponse> createDiagnoseReport(CreateDiagnoseReportRequest request);
+
+    /**
      * <b>description</b> :
      * <p>A scaling configuration is a template that is used to create elastic container instances during scale-out events.
      * You can specify CPU and Memory to determine the range of instance types. Then, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Auto Scaling preferentially creates elastic container instances by using the lowest-priced instance type. This method applies only if you set Scaling Policy to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
@@ -560,6 +566,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAlertConfigurationResponse> describeAlertConfiguration(DescribeAlertConfigurationRequest request);
 
     /**
+     * @param request the request parameters of DescribeDiagnoseReports  DescribeDiagnoseReportsRequest
+     * @return DescribeDiagnoseReportsResponse
+     */
+    CompletableFuture<DescribeDiagnoseReportsResponse> describeDiagnoseReports(DescribeDiagnoseReportsRequest request);
+
+    /**
      * @param request the request parameters of DescribeEciScalingConfigurationDetail  DescribeEciScalingConfigurationDetailRequest
      * @return DescribeEciScalingConfigurationDetailResponse
      */
@@ -672,6 +684,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeScalingGroupDetailResponse
      */
     CompletableFuture<DescribeScalingGroupDetailResponse> describeScalingGroupDetail(DescribeScalingGroupDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeScalingGroupDiagnoseDetails  DescribeScalingGroupDiagnoseDetailsRequest
+     * @return DescribeScalingGroupDiagnoseDetailsResponse
+     */
+    CompletableFuture<DescribeScalingGroupDiagnoseDetailsResponse> describeScalingGroupDiagnoseDetails(DescribeScalingGroupDiagnoseDetailsRequest request);
 
     /**
      * @param request the request parameters of DescribeScalingGroups  DescribeScalingGroupsRequest
