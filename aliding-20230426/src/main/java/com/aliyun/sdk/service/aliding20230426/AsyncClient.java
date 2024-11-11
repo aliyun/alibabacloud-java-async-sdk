@@ -254,6 +254,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSubscribedCalendarResponse> createSubscribedCalendar(CreateSubscribedCalendarRequest request);
 
     /**
+     * @param request the request parameters of CreateTicket  CreateTicketRequest
+     * @return CreateTicketResponse
+     */
+    CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
+
+    /**
      * @param request the request parameters of CreateTodoTask  CreateTodoTaskRequest
      * @return CreateTodoTaskResponse
      */
