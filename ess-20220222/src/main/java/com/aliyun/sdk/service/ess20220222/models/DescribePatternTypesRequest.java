@@ -129,6 +129,10 @@ public class DescribePatternTypesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private java.util.List < String > vSwitchId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private java.util.List < String > zoneId;
+
     private DescribePatternTypesRequest(Builder builder) {
         super(builder);
         this.architecture = builder.architecture;
@@ -160,6 +164,7 @@ public class DescribePatternTypesRequest extends Request {
         this.regionId = builder.regionId;
         this.spotStrategy = builder.spotStrategy;
         this.vSwitchId = builder.vSwitchId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -378,6 +383,13 @@ public class DescribePatternTypesRequest extends Request {
         return this.vSwitchId;
     }
 
+    /**
+     * @return zoneId
+     */
+    public java.util.List < String > getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<DescribePatternTypesRequest, Builder> {
         private java.util.List < String > architecture; 
         private String burstablePerformance; 
@@ -408,6 +420,7 @@ public class DescribePatternTypesRequest extends Request {
         private String regionId; 
         private String spotStrategy; 
         private java.util.List < String > vSwitchId; 
+        private java.util.List < String > zoneId; 
 
         private Builder() {
             super();
@@ -444,6 +457,7 @@ public class DescribePatternTypesRequest extends Request {
             this.regionId = request.regionId;
             this.spotStrategy = request.spotStrategy;
             this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -812,6 +826,15 @@ public class DescribePatternTypesRequest extends Request {
         public Builder vSwitchId(java.util.List < String > vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(java.util.List < String > zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 
