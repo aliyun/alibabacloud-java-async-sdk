@@ -12,11 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConnectionTicketResponseBody</p>
  */
 public class GetConnectionTicketResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    private String desktopId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TaskCode")
+    private String taskCode;
+
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
+
+    @com.aliyun.core.annotation.NameInMap("TaskMessage")
+    private String taskMessage;
 
     @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
@@ -25,8 +34,11 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     private String ticket;
 
     private GetConnectionTicketResponseBody(Builder builder) {
+        this.desktopId = builder.desktopId;
         this.requestId = builder.requestId;
+        this.taskCode = builder.taskCode;
         this.taskId = builder.taskId;
+        this.taskMessage = builder.taskMessage;
         this.taskStatus = builder.taskStatus;
         this.ticket = builder.ticket;
     }
@@ -40,6 +52,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     /**
+     * @return desktopId
+     */
+    public String getDesktopId() {
+        return this.desktopId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,10 +66,24 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     /**
+     * @return taskCode
+     */
+    public String getTaskCode() {
+        return this.taskCode;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
         return this.taskId;
+    }
+
+    /**
+     * @return taskMessage
+     */
+    public String getTaskMessage() {
+        return this.taskMessage;
     }
 
     /**
@@ -68,10 +101,21 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String desktopId; 
         private String requestId; 
+        private String taskCode; 
         private String taskId; 
+        private String taskMessage; 
         private String taskStatus; 
         private String ticket; 
+
+        /**
+         * DesktopId.
+         */
+        public Builder desktopId(String desktopId) {
+            this.desktopId = desktopId;
+            return this;
+        }
 
         /**
          * <p>The ID of the request.</p>
@@ -85,6 +129,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
+         * TaskCode.
+         */
+        public Builder taskCode(String taskCode) {
+            this.taskCode = taskCode;
+            return this;
+        }
+
+        /**
          * <p>The ID of the cloud computer connection task.</p>
          * 
          * <strong>example:</strong>
@@ -92,6 +144,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * TaskMessage.
+         */
+        public Builder taskMessage(String taskMessage) {
+            this.taskMessage = taskMessage;
             return this;
         }
 
