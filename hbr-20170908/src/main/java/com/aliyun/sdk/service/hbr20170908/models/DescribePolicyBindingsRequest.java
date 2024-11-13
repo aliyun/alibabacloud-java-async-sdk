@@ -143,7 +143,11 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results for each query.</p>
+         * <p>Valid values: 10 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);

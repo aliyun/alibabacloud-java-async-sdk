@@ -277,7 +277,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -289,7 +289,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</p>
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

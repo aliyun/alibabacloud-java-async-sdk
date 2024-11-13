@@ -120,7 +120,19 @@ public class CreatePolicyV2Request extends Request {
         }
 
         /**
-         * PolicyType.
+         * <p>The policy type. Valid values:</p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: the general backup policy. This type of policy applies to backups other than Elastic Compute Service (ECS) instance backup.</li>
+         * <li><strong>UDM_ECS_ONLY</strong>: This type of policy applies only to ECS instance backup.</li>
+         * </ul>
+         * <p>If the policy type is not specified, Cloud Backup automatically sets the policy type based on whether the backup vault is specified in the rules of the policy:</p>
+         * <ul>
+         * <li>If the backup vault is specified, Cloud Backup sets the policy type to <strong>STANDARD</strong>.</li>
+         * <li>If the backup vault is not specified, Cloud Backup sets the policy type to <strong>UDM_ECS_ONLY</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder policyType(String policyType) {
             this.putBodyParameter("PolicyType", policyType);
@@ -271,6 +283,7 @@ public class CreatePolicyV2Request extends Request {
             /**
              * <p>The type of the special retention rule. Valid values:</p>
              * <ul>
+             * <li><strong>DAILY</strong>: retains daily backups</li>
              * <li><strong>WEEKLY</strong>: retains weekly backups</li>
              * <li><strong>MONTHLY</strong>: retains monthly backups</li>
              * <li><strong>YEARLY</strong>: retains yearly backups</li>
@@ -413,6 +426,9 @@ public class CreatePolicyV2Request extends Request {
         @com.aliyun.core.annotation.NameInMap("DataSourceFilters")
         private java.util.List < DataSourceFilters> dataSourceFilters;
 
+        @com.aliyun.core.annotation.NameInMap("Immutable")
+        private Boolean immutable;
+
         @com.aliyun.core.annotation.NameInMap("KeepLatestSnapshots")
         private Long keepLatestSnapshots;
 
@@ -441,6 +457,7 @@ public class CreatePolicyV2Request extends Request {
         private Rules(Builder builder) {
             this.backupType = builder.backupType;
             this.dataSourceFilters = builder.dataSourceFilters;
+            this.immutable = builder.immutable;
             this.keepLatestSnapshots = builder.keepLatestSnapshots;
             this.replicationRegionId = builder.replicationRegionId;
             this.retention = builder.retention;
@@ -471,6 +488,13 @@ public class CreatePolicyV2Request extends Request {
          */
         public java.util.List < DataSourceFilters> getDataSourceFilters() {
             return this.dataSourceFilters;
+        }
+
+        /**
+         * @return immutable
+         */
+        public Boolean getImmutable() {
+            return this.immutable;
         }
 
         /**
@@ -532,6 +556,7 @@ public class CreatePolicyV2Request extends Request {
         public static final class Builder {
             private String backupType; 
             private java.util.List < DataSourceFilters> dataSourceFilters; 
+            private Boolean immutable; 
             private Long keepLatestSnapshots; 
             private String replicationRegionId; 
             private Long retention; 
@@ -557,6 +582,14 @@ public class CreatePolicyV2Request extends Request {
              */
             public Builder dataSourceFilters(java.util.List < DataSourceFilters> dataSourceFilters) {
                 this.dataSourceFilters = dataSourceFilters;
+                return this;
+            }
+
+            /**
+             * Immutable.
+             */
+            public Builder immutable(Boolean immutable) {
+                this.immutable = immutable;
                 return this;
             }
 

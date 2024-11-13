@@ -54,7 +54,10 @@ public class DeleteUdmDiskRequest extends Request {
         } 
 
         /**
-         * DiskId.
+         * <p>The disk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp15************xy70</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);

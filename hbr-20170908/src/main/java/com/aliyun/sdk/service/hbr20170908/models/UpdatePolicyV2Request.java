@@ -422,6 +422,9 @@ public class UpdatePolicyV2Request extends Request {
         @com.aliyun.core.annotation.NameInMap("DataSourceFilters")
         private java.util.List < DataSourceFilters> dataSourceFilters;
 
+        @com.aliyun.core.annotation.NameInMap("Immutable")
+        private Boolean immutable;
+
         @com.aliyun.core.annotation.NameInMap("KeepLatestSnapshots")
         private Long keepLatestSnapshots;
 
@@ -451,6 +454,7 @@ public class UpdatePolicyV2Request extends Request {
             this.backupType = builder.backupType;
             this.coldArchiveDays = builder.coldArchiveDays;
             this.dataSourceFilters = builder.dataSourceFilters;
+            this.immutable = builder.immutable;
             this.keepLatestSnapshots = builder.keepLatestSnapshots;
             this.replicationRegionId = builder.replicationRegionId;
             this.retention = builder.retention;
@@ -495,6 +499,13 @@ public class UpdatePolicyV2Request extends Request {
          */
         public java.util.List < DataSourceFilters> getDataSourceFilters() {
             return this.dataSourceFilters;
+        }
+
+        /**
+         * @return immutable
+         */
+        public Boolean getImmutable() {
+            return this.immutable;
         }
 
         /**
@@ -558,6 +569,7 @@ public class UpdatePolicyV2Request extends Request {
             private String backupType; 
             private Long coldArchiveDays; 
             private java.util.List < DataSourceFilters> dataSourceFilters; 
+            private Boolean immutable; 
             private Long keepLatestSnapshots; 
             private String replicationRegionId; 
             private Long retention; 
@@ -605,6 +617,14 @@ public class UpdatePolicyV2Request extends Request {
              */
             public Builder dataSourceFilters(java.util.List < DataSourceFilters> dataSourceFilters) {
                 this.dataSourceFilters = dataSourceFilters;
+                return this;
+            }
+
+            /**
+             * Immutable.
+             */
+            public Builder immutable(Boolean immutable) {
+                this.immutable = immutable;
                 return this;
             }
 

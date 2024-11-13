@@ -379,6 +379,9 @@ public class UpdatePolicyBindingRequest extends Request {
      * <p>UpdatePolicyBindingRequest</p>
      */
     public static class OssDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IgnoreArchiveObject")
+        private Boolean ignoreArchiveObject;
+
         @com.aliyun.core.annotation.NameInMap("InventoryCleanupPolicy")
         private String inventoryCleanupPolicy;
 
@@ -386,6 +389,7 @@ public class UpdatePolicyBindingRequest extends Request {
         private String inventoryId;
 
         private OssDetail(Builder builder) {
+            this.ignoreArchiveObject = builder.ignoreArchiveObject;
             this.inventoryCleanupPolicy = builder.inventoryCleanupPolicy;
             this.inventoryId = builder.inventoryId;
         }
@@ -396,6 +400,13 @@ public class UpdatePolicyBindingRequest extends Request {
 
         public static OssDetail create() {
             return builder().build();
+        }
+
+        /**
+         * @return ignoreArchiveObject
+         */
+        public Boolean getIgnoreArchiveObject() {
+            return this.ignoreArchiveObject;
         }
 
         /**
@@ -413,8 +424,17 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean ignoreArchiveObject; 
             private String inventoryCleanupPolicy; 
             private String inventoryId; 
+
+            /**
+             * IgnoreArchiveObject.
+             */
+            public Builder ignoreArchiveObject(Boolean ignoreArchiveObject) {
+                this.ignoreArchiveObject = ignoreArchiveObject;
+                return this;
+            }
 
             /**
              * <p>Specifies whether the system deletes the inventory lists after a backup is complete. This parameter is available only when OSS inventory lists are used. Valid values:</p>

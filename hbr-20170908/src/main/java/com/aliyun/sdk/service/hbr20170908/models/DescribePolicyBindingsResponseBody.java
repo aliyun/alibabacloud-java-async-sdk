@@ -236,7 +236,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private Boolean fullOnIncrementFail; 
 
             /**
-             * FetchSliceSize.
+             * <p>The size of backup shards (the number of files).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder fetchSliceSize(Long fetchSliceSize) {
                 this.fetchSliceSize = fetchSliceSize;
@@ -244,7 +247,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * FullOnIncrementFail.
+             * <p>Specifies whether the system performs full backup if incremental backup fails. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The system performs full backup if incremental backup fails.</li>
+             * <li><strong>false</strong>: The system does not perform full backup if incremental backup fails.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullOnIncrementFail(Boolean fullOnIncrementFail) {
                 this.fullOnIncrementFail = fullOnIncrementFail;
@@ -338,7 +348,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the client group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl-000gkcofngi04j6k680a</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -466,6 +479,9 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
      * <p>DescribePolicyBindingsResponseBody</p>
      */
     public static class OssDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IgnoreArchiveObject")
+        private Boolean ignoreArchiveObject;
+
         @com.aliyun.core.annotation.NameInMap("InventoryCleanupPolicy")
         private String inventoryCleanupPolicy;
 
@@ -473,6 +489,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         private String inventoryId;
 
         private OssDetail(Builder builder) {
+            this.ignoreArchiveObject = builder.ignoreArchiveObject;
             this.inventoryCleanupPolicy = builder.inventoryCleanupPolicy;
             this.inventoryId = builder.inventoryId;
         }
@@ -483,6 +500,13 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
         public static OssDetail create() {
             return builder().build();
+        }
+
+        /**
+         * @return ignoreArchiveObject
+         */
+        public Boolean getIgnoreArchiveObject() {
+            return this.ignoreArchiveObject;
         }
 
         /**
@@ -500,8 +524,17 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean ignoreArchiveObject; 
             private String inventoryCleanupPolicy; 
             private String inventoryId; 
+
+            /**
+             * IgnoreArchiveObject.
+             */
+            public Builder ignoreArchiveObject(Boolean ignoreArchiveObject) {
+                this.ignoreArchiveObject = ignoreArchiveObject;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</p>
@@ -901,7 +934,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private UdmDetail udmDetail; 
 
             /**
-             * CommonFileSystemDetail.
+             * <p>The advanced options for large-scale file system backup.</p>
              */
             public Builder commonFileSystemDetail(CommonFileSystemDetail commonFileSystemDetail) {
                 this.commonFileSystemDetail = commonFileSystemDetail;
@@ -1361,7 +1394,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Exclude.
+             * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;<em>.doc&quot;,&quot;</em>.xltm&quot;]</p>
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -1377,7 +1413,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Include.
+             * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;<em>.doc&quot;,&quot;</em>.xltm&quot;]</p>
              */
             public Builder include(String include) {
                 this.include = include;
@@ -1418,7 +1457,13 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <ul>
+             * <li>If the SourceType parameter is set to <strong>OSS</strong>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</li>
+             * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup/</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -1440,7 +1485,15 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * SpeedLimit.
+             * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the throttling rules. Format: <code>{start}{end}{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</p>
+             * <ul>
+             * <li><strong>start</strong>: the start hour.</li>
+             * <li><strong>end</strong>: the end hour.</li>
+             * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0:24:10240</p>
              */
             public Builder speedLimit(String speedLimit) {
                 this.speedLimit = speedLimit;

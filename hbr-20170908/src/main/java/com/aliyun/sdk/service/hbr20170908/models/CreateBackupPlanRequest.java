@@ -600,7 +600,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * Disabled.
+         * <p>Specifies whether to disable the plan by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disabled(Boolean disabled) {
             this.putQueryParameter("Disabled", disabled);

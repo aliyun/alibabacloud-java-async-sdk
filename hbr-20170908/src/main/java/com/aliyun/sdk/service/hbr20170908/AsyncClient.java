@@ -39,7 +39,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  In Cloud Backup, you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.</p>
+     * <p>  In the Cloud Backup console, you can use resource groups to manage resources such as backup vaults, Cloud Backup clients, and SAP HANA instances.</p>
      * <ul>
      * <li>A resource is a cloud service entity that you create on Alibaba Cloud, such as an Elastic Compute Service (ECS) instance, a backup vault, or an SAP HANA instance.</li>
      * <li>You can sort resources owned by your Alibaba Cloud account into various resource groups. Resource groups facilitate resource management among multiple projects or applications within your Alibaba Cloud account and simplify permission management.</li>
@@ -78,7 +78,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billable items and billing methods</a>.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Cloud Backup. For more information, see <a href="https://help.aliyun.com/document_detail/89062.html">Billing methods and billable items</a>.</p>
      * 
      * @param request the request parameters of CreateClients  CreateClientsRequest
      * @return CreateClientsResponse
@@ -101,7 +101,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, Cloud Backup installs a Cloud Backup client on the Elastic Compute Service (ECS) instance that hosts the SAP HANA instance.</p>
+     * <p>To register an SAP HANA instance, you must configure the SAP HANA connection information. After the SAP HANA instance is registered, Cloud Backup installs a backup client on the node of the SAP HANA instance.</p>
      * 
      * @param request the request parameters of CreateHanaInstance  CreateHanaInstanceRequest
      * @return CreateHanaInstanceResponse

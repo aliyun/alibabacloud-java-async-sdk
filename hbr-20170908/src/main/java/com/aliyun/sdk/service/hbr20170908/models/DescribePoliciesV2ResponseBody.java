@@ -488,6 +488,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceFilters")
         private java.util.List < DataSourceFilters> dataSourceFilters;
 
+        @com.aliyun.core.annotation.NameInMap("Immutable")
+        private Boolean immutable;
+
         @com.aliyun.core.annotation.NameInMap("KeepLatestSnapshots")
         private Long keepLatestSnapshots;
 
@@ -519,6 +522,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             this.archiveDays = builder.archiveDays;
             this.backupType = builder.backupType;
             this.dataSourceFilters = builder.dataSourceFilters;
+            this.immutable = builder.immutable;
             this.keepLatestSnapshots = builder.keepLatestSnapshots;
             this.replicationRegionId = builder.replicationRegionId;
             this.retention = builder.retention;
@@ -557,6 +561,13 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
          */
         public java.util.List < DataSourceFilters> getDataSourceFilters() {
             return this.dataSourceFilters;
+        }
+
+        /**
+         * @return immutable
+         */
+        public Boolean getImmutable() {
+            return this.immutable;
         }
 
         /**
@@ -626,6 +637,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             private Long archiveDays; 
             private String backupType; 
             private java.util.List < DataSourceFilters> dataSourceFilters; 
+            private Boolean immutable; 
             private Long keepLatestSnapshots; 
             private String replicationRegionId; 
             private Long retention; 
@@ -663,6 +675,14 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
              */
             public Builder dataSourceFilters(java.util.List < DataSourceFilters> dataSourceFilters) {
                 this.dataSourceFilters = dataSourceFilters;
+                return this;
+            }
+
+            /**
+             * Immutable.
+             */
+            public Builder immutable(Boolean immutable) {
+                this.immutable = immutable;
                 return this;
             }
 
@@ -955,7 +975,14 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type. Valid values:</p>
+             * <ul>
+             * <li><strong>STANDARD</strong>: the general backup policy. This type of policy applies to backups other than Elastic Compute Service (ECS) instance backup.</li>
+             * <li><strong>UDM_ECS_ONLY</strong>: the ECS instance backup policy. This type of policy applies only to ECS instance backup.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

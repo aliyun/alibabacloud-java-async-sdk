@@ -98,10 +98,10 @@ public class GenerateRamPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The type of the policy that you want to generate. Valid values:</p>
+         * <p>The type of policy that you want to generate. Valid values:</p>
          * <ul>
-         * <li>custom: custom policy</li>
-         * <li>system: system policy</li>
+         * <li>BACKUP: the permission to back up data to a backup vault</li>
+         * <li>RESTORE: the permission to restore data from a backup vault</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
