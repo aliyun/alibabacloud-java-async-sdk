@@ -18,8 +18,14 @@ public class UnBindXBResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
+
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -27,7 +33,9 @@ public class UnBindXBResponseBody extends TeaModel {
     private UnBindXBResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
+        this.requestId = builder.requestId;
         this.success = builder.success;
     }
 
@@ -54,10 +62,24 @@ public class UnBindXBResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -70,7 +92,9 @@ public class UnBindXBResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
+        private Data data; 
         private String message; 
+        private String requestId; 
         private Boolean success; 
 
         /**
@@ -82,10 +106,7 @@ public class UnBindXBResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回状态码 0000表示成功 其他表示失败</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0000</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,10 +114,15 @@ public class UnBindXBResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回信息</p>
-         * 
-         * <strong>example:</strong>
-         * <p>成功</p>
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,10 +130,15 @@ public class UnBindXBResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回是否成功 true  表示成功 false表示失败</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -120,4 +151,100 @@ public class UnBindXBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UnBindXBResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnBindXBResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Boolean success;
+
+        private Data(Builder builder) {
+            this.code = builder.code;
+            this.message = builder.message;
+            this.success = builder.success;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return success
+         */
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String message; 
+            private Boolean success; 
+
+            /**
+             * <p>返回状态码 0000表示成功 其他表示失败</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0000</p>
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * <p>返回信息</p>
+             * 
+             * <strong>example:</strong>
+             * <p>成功</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>返回是否成功 true  表示成功 false表示失败</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder success(Boolean success) {
+                this.success = success;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

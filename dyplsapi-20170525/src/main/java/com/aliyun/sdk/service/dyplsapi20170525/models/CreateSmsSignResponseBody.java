@@ -15,11 +15,11 @@ public class CreateSmsSignResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @com.aliyun.core.annotation.NameInMap("CalledNoSign")
-    private String calledNoSign;
-
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -29,8 +29,8 @@ public class CreateSmsSignResponseBody extends TeaModel {
 
     private CreateSmsSignResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
-        this.calledNoSign = builder.calledNoSign;
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.success = builder.success;
     }
@@ -51,17 +51,17 @@ public class CreateSmsSignResponseBody extends TeaModel {
     }
 
     /**
-     * @return calledNoSign
-     */
-    public String getCalledNoSign() {
-        return this.calledNoSign;
-    }
-
-    /**
      * @return code
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
     }
 
     /**
@@ -80,8 +80,8 @@ public class CreateSmsSignResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessDeniedDetail; 
-        private String calledNoSign; 
         private String code; 
+        private Data data; 
         private String message; 
         private Boolean success; 
 
@@ -94,17 +94,6 @@ public class CreateSmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * <p>短信接收者号码签名串(加到短信内容中供解析真实被叫号码)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sign*****466</p>
-         */
-        public Builder calledNoSign(String calledNoSign) {
-            this.calledNoSign = calledNoSign;
-            return this;
-        }
-
-        /**
          * <p>返回状态码 0000表示成功 其他表示失败</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +101,14 @@ public class CreateSmsSignResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -143,4 +140,54 @@ public class CreateSmsSignResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSmsSignResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSmsSignResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CalledNoSign")
+        private String calledNoSign;
+
+        private Data(Builder builder) {
+            this.calledNoSign = builder.calledNoSign;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return calledNoSign
+         */
+        public String getCalledNoSign() {
+            return this.calledNoSign;
+        }
+
+        public static final class Builder {
+            private String calledNoSign; 
+
+            /**
+             * <p>短信接收者号码签名串(加到短信内容中供解析真实被叫号码)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sign23343466</p>
+             */
+            public Builder calledNoSign(String calledNoSign) {
+                this.calledNoSign = calledNoSign;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

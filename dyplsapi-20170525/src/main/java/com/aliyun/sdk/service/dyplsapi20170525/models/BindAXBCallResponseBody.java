@@ -15,11 +15,11 @@ public class BindAXBCallResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @com.aliyun.core.annotation.NameInMap("BindId")
-    private String bindId;
-
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -29,8 +29,8 @@ public class BindAXBCallResponseBody extends TeaModel {
 
     private BindAXBCallResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
-        this.bindId = builder.bindId;
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.success = builder.success;
     }
@@ -51,17 +51,17 @@ public class BindAXBCallResponseBody extends TeaModel {
     }
 
     /**
-     * @return bindId
-     */
-    public String getBindId() {
-        return this.bindId;
-    }
-
-    /**
      * @return code
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
     }
 
     /**
@@ -80,8 +80,8 @@ public class BindAXBCallResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessDeniedDetail; 
-        private String bindId; 
         private String code; 
+        private Data data; 
         private String message; 
         private Boolean success; 
 
@@ -94,17 +94,6 @@ public class BindAXBCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定关系ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>476567566</p>
-         */
-        public Builder bindId(String bindId) {
-            this.bindId = bindId;
-            return this;
-        }
-
-        /**
          * <p>返回状态码 0000表示成功 其他表示失败</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +101,14 @@ public class BindAXBCallResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -143,4 +140,54 @@ public class BindAXBCallResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BindAXBCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindAXBCallResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BindId")
+        private String bindId;
+
+        private Data(Builder builder) {
+            this.bindId = builder.bindId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindId
+         */
+        public String getBindId() {
+            return this.bindId;
+        }
+
+        public static final class Builder {
+            private String bindId; 
+
+            /**
+             * <p>绑定关系ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>476567566</p>
+             */
+            public Builder bindId(String bindId) {
+                this.bindId = bindId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

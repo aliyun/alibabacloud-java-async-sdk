@@ -15,51 +15,23 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @com.aliyun.core.annotation.NameInMap("CallAbility")
-    private String callAbility;
-
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @com.aliyun.core.annotation.NameInMap("GNFlag")
-    private String GNFlag;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
-
-    @com.aliyun.core.annotation.NameInMap("ReachJson")
-    private java.util.List < ReachJson> reachJson;
-
-    @com.aliyun.core.annotation.NameInMap("SequenceCalls")
-    private java.util.List < SequenceCalls> sequenceCalls;
-
-    @com.aliyun.core.annotation.NameInMap("SequenceEndTime")
-    private String sequenceEndTime;
-
-    @com.aliyun.core.annotation.NameInMap("SequenceStartTime")
-    private String sequenceStartTime;
-
-    @com.aliyun.core.annotation.NameInMap("SmsAbility")
-    private String smsAbility;
-
-    @com.aliyun.core.annotation.NameInMap("SmsSignMode")
-    private String smsSignMode;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetXDefaultConfigResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
-        this.callAbility = builder.callAbility;
         this.code = builder.code;
-        this.GNFlag = builder.GNFlag;
+        this.data = builder.data;
         this.message = builder.message;
-        this.reachJson = builder.reachJson;
-        this.sequenceCalls = builder.sequenceCalls;
-        this.sequenceEndTime = builder.sequenceEndTime;
-        this.sequenceStartTime = builder.sequenceStartTime;
-        this.smsAbility = builder.smsAbility;
-        this.smsSignMode = builder.smsSignMode;
         this.success = builder.success;
     }
 
@@ -79,13 +51,6 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return callAbility
-     */
-    public String getCallAbility() {
-        return this.callAbility;
-    }
-
-    /**
      * @return code
      */
     public String getCode() {
@@ -93,10 +58,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return GNFlag
+     * @return data
      */
-    public String getGNFlag() {
-        return this.GNFlag;
+    public Data getData() {
+        return this.data;
     }
 
     /**
@@ -104,48 +69,6 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
      */
     public String getMessage() {
         return this.message;
-    }
-
-    /**
-     * @return reachJson
-     */
-    public java.util.List < ReachJson> getReachJson() {
-        return this.reachJson;
-    }
-
-    /**
-     * @return sequenceCalls
-     */
-    public java.util.List < SequenceCalls> getSequenceCalls() {
-        return this.sequenceCalls;
-    }
-
-    /**
-     * @return sequenceEndTime
-     */
-    public String getSequenceEndTime() {
-        return this.sequenceEndTime;
-    }
-
-    /**
-     * @return sequenceStartTime
-     */
-    public String getSequenceStartTime() {
-        return this.sequenceStartTime;
-    }
-
-    /**
-     * @return smsAbility
-     */
-    public String getSmsAbility() {
-        return this.smsAbility;
-    }
-
-    /**
-     * @return smsSignMode
-     */
-    public String getSmsSignMode() {
-        return this.smsSignMode;
     }
 
     /**
@@ -157,16 +80,9 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessDeniedDetail; 
-        private String callAbility; 
         private String code; 
-        private String GNFlag; 
+        private Data data; 
         private String message; 
-        private java.util.List < ReachJson> reachJson; 
-        private java.util.List < SequenceCalls> sequenceCalls; 
-        private String sequenceEndTime; 
-        private String sequenceStartTime; 
-        private String smsAbility; 
-        private String smsSignMode; 
         private Boolean success; 
 
         /**
@@ -174,17 +90,6 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
-            return this;
-        }
-
-        /**
-         * <p>开/关呼叫能力状态： ‘0’：禁用； ‘1’：开启；</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
-        public Builder callAbility(String callAbility) {
-            this.callAbility = callAbility;
             return this;
         }
 
@@ -200,13 +105,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否透传来显为真实主叫： 00-非透传：互相拨打时都显示工作号; 10-透传：A客户为主叫时,B员工的来显为客户A号码;B员工为主叫时,A客户的来显为工作号; 默认为 00</p>
-         * 
-         * <strong>example:</strong>
-         * <p>00</p>
+         * Data.
          */
-        public Builder GNFlag(String GNFlag) {
-            this.GNFlag = GNFlag;
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -218,66 +120,6 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
-            return this;
-        }
-
-        /**
-         * <p>企业名片规则控制参数</p>
-         */
-        public Builder reachJson(java.util.List < ReachJson> reachJson) {
-            this.reachJson = reachJson;
-            return this;
-        }
-
-        /**
-         * <p>顺振控制参数</p>
-         */
-        public Builder sequenceCalls(java.util.List < SequenceCalls> sequenceCalls) {
-            this.sequenceCalls = sequenceCalls;
-            return this;
-        }
-
-        /**
-         * <p>顺振结束时间 格式：HH:mm:ss 18:00:00</p>
-         * 
-         * <strong>example:</strong>
-         * <p>09:01:00</p>
-         */
-        public Builder sequenceEndTime(String sequenceEndTime) {
-            this.sequenceEndTime = sequenceEndTime;
-            return this;
-        }
-
-        /**
-         * <p>顺振开启时间 格式：HH:mm:ss 09:00:00</p>
-         * 
-         * <strong>example:</strong>
-         * <p>09:00:00</p>
-         */
-        public Builder sequenceStartTime(String sequenceStartTime) {
-            this.sequenceStartTime = sequenceStartTime;
-            return this;
-        }
-
-        /**
-         * <p>开/关短信功能状态： ‘0’：禁用； ‘1’：开启；</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
-        public Builder smsAbility(String smsAbility) {
-            this.smsAbility = smsAbility;
-            return this;
-        }
-
-        /**
-         * <p>是否透传来显为真实用户 0：不透传; 1：透传 默认：0不透传</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
-        public Builder smsSignMode(String smsSignMode) {
-            this.smsSignMode = smsSignMode;
             return this;
         }
 
@@ -417,7 +259,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
              * <p>通话状态 1:通话振铃 2:接通前 3:接通后 4:通话结束 5:已接通6:未接通</p>
              * 
              * <strong>example:</strong>
-             * <p>3</p>
+             * <p>1</p>
              */
             public Builder callStatus(String callStatus) {
                 this.callStatus = callStatus;
@@ -492,7 +334,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
      *
      * <p>GetXDefaultConfigResponseBody</p>
      */
-    public static class SequenceCalls extends TeaModel {
+    public static class SequenceCall extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SequenceCallNoPlayCode")
         private String sequenceCallNoPlayCode;
 
@@ -502,7 +344,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SequenceCalledPlayCode")
         private String sequenceCalledPlayCode;
 
-        private SequenceCalls(Builder builder) {
+        private SequenceCall(Builder builder) {
             this.sequenceCallNoPlayCode = builder.sequenceCallNoPlayCode;
             this.sequenceCalledNo = builder.sequenceCalledNo;
             this.sequenceCalledPlayCode = builder.sequenceCalledPlayCode;
@@ -512,7 +354,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SequenceCalls create() {
+        public static SequenceCall create() {
             return builder().build();
         }
 
@@ -546,7 +388,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
              * <p>顺振提示音放音编号，格式如callNoPlayCode</p>
              * 
              * <strong>example:</strong>
-             * <p>01</p>
+             * <p>示例值</p>
              */
             public Builder sequenceCallNoPlayCode(String sequenceCallNoPlayCode) {
                 this.sequenceCallNoPlayCode = sequenceCallNoPlayCode;
@@ -557,7 +399,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
              * <p>顺振被叫号码</p>
              * 
              * <strong>example:</strong>
-             * <p>18*******33</p>
+             * <p>示例值示例值示例值</p>
              */
             public Builder sequenceCalledNo(String sequenceCalledNo) {
                 this.sequenceCalledNo = sequenceCalledNo;
@@ -568,15 +410,220 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
              * <p>接通后主被叫放音编号，格式如calledPlayCode</p>
              * 
              * <strong>example:</strong>
-             * <p>02</p>
+             * <p>示例值示例值示例值</p>
              */
             public Builder sequenceCalledPlayCode(String sequenceCalledPlayCode) {
                 this.sequenceCalledPlayCode = sequenceCalledPlayCode;
                 return this;
             }
 
-            public SequenceCalls build() {
-                return new SequenceCalls(this);
+            public SequenceCall build() {
+                return new SequenceCall(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetXDefaultConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetXDefaultConfigResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CallAbility")
+        private String callAbility;
+
+        @com.aliyun.core.annotation.NameInMap("GNFlag")
+        private String GNFlag;
+
+        @com.aliyun.core.annotation.NameInMap("ReachJson")
+        private java.util.List < ReachJson> reachJson;
+
+        @com.aliyun.core.annotation.NameInMap("SequenceCall")
+        private java.util.List < SequenceCall> sequenceCall;
+
+        @com.aliyun.core.annotation.NameInMap("SequenceEndTime")
+        private String sequenceEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("SequenceStartTime")
+        private String sequenceStartTime;
+
+        @com.aliyun.core.annotation.NameInMap("SmsAbility")
+        private String smsAbility;
+
+        @com.aliyun.core.annotation.NameInMap("SmsSignMode")
+        private String smsSignMode;
+
+        private Data(Builder builder) {
+            this.callAbility = builder.callAbility;
+            this.GNFlag = builder.GNFlag;
+            this.reachJson = builder.reachJson;
+            this.sequenceCall = builder.sequenceCall;
+            this.sequenceEndTime = builder.sequenceEndTime;
+            this.sequenceStartTime = builder.sequenceStartTime;
+            this.smsAbility = builder.smsAbility;
+            this.smsSignMode = builder.smsSignMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return callAbility
+         */
+        public String getCallAbility() {
+            return this.callAbility;
+        }
+
+        /**
+         * @return GNFlag
+         */
+        public String getGNFlag() {
+            return this.GNFlag;
+        }
+
+        /**
+         * @return reachJson
+         */
+        public java.util.List < ReachJson> getReachJson() {
+            return this.reachJson;
+        }
+
+        /**
+         * @return sequenceCall
+         */
+        public java.util.List < SequenceCall> getSequenceCall() {
+            return this.sequenceCall;
+        }
+
+        /**
+         * @return sequenceEndTime
+         */
+        public String getSequenceEndTime() {
+            return this.sequenceEndTime;
+        }
+
+        /**
+         * @return sequenceStartTime
+         */
+        public String getSequenceStartTime() {
+            return this.sequenceStartTime;
+        }
+
+        /**
+         * @return smsAbility
+         */
+        public String getSmsAbility() {
+            return this.smsAbility;
+        }
+
+        /**
+         * @return smsSignMode
+         */
+        public String getSmsSignMode() {
+            return this.smsSignMode;
+        }
+
+        public static final class Builder {
+            private String callAbility; 
+            private String GNFlag; 
+            private java.util.List < ReachJson> reachJson; 
+            private java.util.List < SequenceCall> sequenceCall; 
+            private String sequenceEndTime; 
+            private String sequenceStartTime; 
+            private String smsAbility; 
+            private String smsSignMode; 
+
+            /**
+             * <p>开/关呼叫能力状态： ‘0’：禁用； ‘1’：开启；</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder callAbility(String callAbility) {
+                this.callAbility = callAbility;
+                return this;
+            }
+
+            /**
+             * <p>是否透传来显为真实主叫： 00-非透传：互相拨打时都显示工作号; 10-透传：A客户为主叫时,B员工的来显为客户A号码;B员工为主叫时,A客户的来显为工作号; 默认为 00</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00</p>
+             */
+            public Builder GNFlag(String GNFlag) {
+                this.GNFlag = GNFlag;
+                return this;
+            }
+
+            /**
+             * <p>企业名片规则控制参数</p>
+             */
+            public Builder reachJson(java.util.List < ReachJson> reachJson) {
+                this.reachJson = reachJson;
+                return this;
+            }
+
+            /**
+             * <p>顺振控制参数</p>
+             */
+            public Builder sequenceCall(java.util.List < SequenceCall> sequenceCall) {
+                this.sequenceCall = sequenceCall;
+                return this;
+            }
+
+            /**
+             * <p>顺振结束时间 格式：HH:mm:ss 18:00:00</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00:00</p>
+             */
+            public Builder sequenceEndTime(String sequenceEndTime) {
+                this.sequenceEndTime = sequenceEndTime;
+                return this;
+            }
+
+            /**
+             * <p>顺振开启时间 格式：HH:mm:ss 09:00:00</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00:00</p>
+             */
+            public Builder sequenceStartTime(String sequenceStartTime) {
+                this.sequenceStartTime = sequenceStartTime;
+                return this;
+            }
+
+            /**
+             * <p>开/关短信功能状态： ‘0’：禁用； ‘1’：开启；</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder smsAbility(String smsAbility) {
+                this.smsAbility = smsAbility;
+                return this;
+            }
+
+            /**
+             * <p>是否透传来显为真实主叫： 00-非透传：互相拨打时都显示工作号; 10-透传：A客户为主叫时,B员工的来显为客户A号码;B员工为主叫时,A客户的来显为工作号; 默认为 00</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder smsSignMode(String smsSignMode) {
+                this.smsSignMode = smsSignMode;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
             } 
 
         } 

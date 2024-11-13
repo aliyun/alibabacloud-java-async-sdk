@@ -19,32 +19,20 @@ public class ListXTelephonesResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @com.aliyun.core.annotation.NameInMap("PageNo")
-    private Long pageNo;
-
-    @com.aliyun.core.annotation.NameInMap("PageSize")
-    private Long pageSize;
-
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
-
-    @com.aliyun.core.annotation.NameInMap("TotalCount")
-    private Long totalCount;
 
     private ListXTelephonesResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
-        this.pageNo = builder.pageNo;
-        this.pageSize = builder.pageSize;
         this.success = builder.success;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -72,7 +60,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -84,42 +72,18 @@ public class ListXTelephonesResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNo
-     */
-    public Long getPageNo() {
-        return this.pageNo;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
      * @return success
      */
     public Boolean getSuccess() {
         return this.success;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
-        private java.util.List < Data> data; 
+        private Data data; 
         private String message; 
-        private Long pageNo; 
-        private Long pageSize; 
         private Boolean success; 
-        private Long totalCount; 
 
         /**
          * AccessDeniedDetail.
@@ -141,9 +105,9 @@ public class ListXTelephonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据集合</p>
+         * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -160,28 +124,6 @@ public class ListXTelephonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>页码</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
-        public Builder pageNo(Long pageNo) {
-            this.pageNo = pageNo;
-            return this;
-        }
-
-        /**
-         * <p>每页条数</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        public Builder pageSize(Long pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
          * <p>返回是否成功 true  表示成功 false表示失败</p>
          * 
          * <strong>example:</strong>
@@ -189,17 +131,6 @@ public class ListXTelephonesResponseBody extends TeaModel {
          */
         public Builder success(Boolean success) {
             this.success = success;
-            return this;
-        }
-
-        /**
-         * <p>符合查询条件的总数量</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
-        public Builder totalCount(Long totalCount) {
-            this.totalCount = totalCount;
             return this;
         }
 
@@ -215,7 +146,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
      *
      * <p>ListXTelephonesResponseBody</p>
      */
-    public static class Data extends TeaModel {
+    public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthMsg")
         private String authMsg;
 
@@ -246,7 +177,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UnbindTime")
         private String unbindTime;
 
-        private Data(Builder builder) {
+        private List(Builder builder) {
             this.authMsg = builder.authMsg;
             this.bindTime = builder.bindTime;
             this.buyTime = builder.buyTime;
@@ -263,7 +194,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Data create() {
+        public static List create() {
             return builder().build();
         }
 
@@ -386,7 +317,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
              * <p>客户号码池key</p>
              * 
              * <strong>example:</strong>
-             * <p>FC5***********************a1a</p>
+             * <p>FC533e6eeb81f4400c87ef3745a21a1a</p>
              */
             public Builder customerPoolKey(String customerPoolKey) {
                 this.customerPoolKey = customerPoolKey;
@@ -430,7 +361,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
              * <p>X号码</p>
              * 
              * <strong>example:</strong>
-             * <p>17*******46</p>
+             * <p>17816876546</p>
              */
             public Builder telephone(String telephone) {
                 this.telephone = telephone;
@@ -456,6 +387,122 @@ public class ListXTelephonesResponseBody extends TeaModel {
              */
             public Builder unbindTime(String unbindTime) {
                 this.unbindTime = unbindTime;
+                return this;
+            }
+
+            public List build() {
+                return new List(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListXTelephonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListXTelephonesResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List < List> list;
+
+        @com.aliyun.core.annotation.NameInMap("PageNo")
+        private Long pageNo;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Long pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("Total")
+        private Long total;
+
+        private Data(Builder builder) {
+            this.list = builder.list;
+            this.pageNo = builder.pageNo;
+            this.pageSize = builder.pageSize;
+            this.total = builder.total;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return list
+         */
+        public java.util.List < List> getList() {
+            return this.list;
+        }
+
+        /**
+         * @return pageNo
+         */
+        public Long getPageNo() {
+            return this.pageNo;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Long getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return total
+         */
+        public Long getTotal() {
+            return this.total;
+        }
+
+        public static final class Builder {
+            private java.util.List < List> list; 
+            private Long pageNo; 
+            private Long pageSize; 
+            private Long total; 
+
+            /**
+             * <p>数据集合</p>
+             */
+            public Builder list(java.util.List < List> list) {
+                this.list = list;
+                return this;
+            }
+
+            /**
+             * <p>页码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder pageNo(Long pageNo) {
+                this.pageNo = pageNo;
+                return this;
+            }
+
+            /**
+             * <p>每页条数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder pageSize(Long pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * <p>符合查询条件的总数量</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
+             */
+            public Builder total(Long total) {
+                this.total = total;
                 return this;
             }
 

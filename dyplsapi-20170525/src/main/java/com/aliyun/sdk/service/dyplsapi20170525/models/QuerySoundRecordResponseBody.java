@@ -18,8 +18,8 @@ public class QuerySoundRecordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @com.aliyun.core.annotation.NameInMap("FileUrl")
-    private String fileUrl;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -30,7 +30,7 @@ public class QuerySoundRecordResponseBody extends TeaModel {
     private QuerySoundRecordResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
-        this.fileUrl = builder.fileUrl;
+        this.data = builder.data;
         this.message = builder.message;
         this.success = builder.success;
     }
@@ -58,10 +58,10 @@ public class QuerySoundRecordResponseBody extends TeaModel {
     }
 
     /**
-     * @return fileUrl
+     * @return data
      */
-    public String getFileUrl() {
-        return this.fileUrl;
+    public Data getData() {
+        return this.data;
     }
 
     /**
@@ -81,7 +81,7 @@ public class QuerySoundRecordResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
-        private String fileUrl; 
+        private Data data; 
         private String message; 
         private Boolean success; 
 
@@ -105,13 +105,10 @@ public class QuerySoundRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>通话录音url路径，最大长度1000，有效期1小时</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.***.com/temepl/a.mp3">http://www.***.com/temepl/a.mp3</a></p>
+         * Data.
          */
-        public Builder fileUrl(String fileUrl) {
-            this.fileUrl = fileUrl;
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -143,4 +140,54 @@ public class QuerySoundRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySoundRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySoundRecordResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
+        private String fileUrl;
+
+        private Data(Builder builder) {
+            this.fileUrl = builder.fileUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileUrl
+         */
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+        public static final class Builder {
+            private String fileUrl; 
+
+            /**
+             * <p>通话录音url路径，最大长度1000，有效期1小时</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.oss.com/temepl/a.mp3">http://www.oss.com/temepl/a.mp3</a></p>
+             */
+            public Builder fileUrl(String fileUrl) {
+                this.fileUrl = fileUrl;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }
