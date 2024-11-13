@@ -144,6 +144,73 @@ public class GetJobResponseBody extends TeaModel {
      *
      * <p>GetJobResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class DeploymentPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationSpec")
         private String allocationSpec;
@@ -151,9 +218,13 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private DeploymentPolicy(Builder builder) {
             this.allocationSpec = builder.allocationSpec;
             this.network = builder.network;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -178,9 +249,17 @@ public class GetJobResponseBody extends TeaModel {
             return this.network;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String allocationSpec; 
             private Network network; 
+            private java.util.List < Tags> tags; 
 
             /**
              * AllocationSpec.
@@ -195,6 +274,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder network(Network network) {
                 this.network = network;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
