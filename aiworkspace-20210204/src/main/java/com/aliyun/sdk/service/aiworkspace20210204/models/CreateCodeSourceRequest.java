@@ -21,6 +21,10 @@ public class CreateCodeSourceRequest extends Request {
     private String codeBranch;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeCommit")
+    private String codeCommit;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CodeRepo")
     private String codeRepo;
 
@@ -54,6 +58,7 @@ public class CreateCodeSourceRequest extends Request {
         super(builder);
         this.accessibility = builder.accessibility;
         this.codeBranch = builder.codeBranch;
+        this.codeCommit = builder.codeCommit;
         this.codeRepo = builder.codeRepo;
         this.codeRepoAccessToken = builder.codeRepoAccessToken;
         this.codeRepoUserName = builder.codeRepoUserName;
@@ -88,6 +93,13 @@ public class CreateCodeSourceRequest extends Request {
      */
     public String getCodeBranch() {
         return this.codeBranch;
+    }
+
+    /**
+     * @return codeCommit
+     */
+    public String getCodeCommit() {
+        return this.codeCommit;
     }
 
     /**
@@ -142,6 +154,7 @@ public class CreateCodeSourceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCodeSourceRequest, Builder> {
         private String accessibility; 
         private String codeBranch; 
+        private String codeCommit; 
         private String codeRepo; 
         private String codeRepoAccessToken; 
         private String codeRepoUserName; 
@@ -158,6 +171,7 @@ public class CreateCodeSourceRequest extends Request {
             super(request);
             this.accessibility = request.accessibility;
             this.codeBranch = request.codeBranch;
+            this.codeCommit = request.codeCommit;
             this.codeRepo = request.codeRepo;
             this.codeRepoAccessToken = request.codeRepoAccessToken;
             this.codeRepoUserName = request.codeRepoUserName;
@@ -182,6 +196,15 @@ public class CreateCodeSourceRequest extends Request {
         public Builder codeBranch(String codeBranch) {
             this.putBodyParameter("CodeBranch", codeBranch);
             this.codeBranch = codeBranch;
+            return this;
+        }
+
+        /**
+         * CodeCommit.
+         */
+        public Builder codeCommit(String codeCommit) {
+            this.putBodyParameter("CodeCommit", codeCommit);
+            this.codeCommit = codeCommit;
             return this;
         }
 
