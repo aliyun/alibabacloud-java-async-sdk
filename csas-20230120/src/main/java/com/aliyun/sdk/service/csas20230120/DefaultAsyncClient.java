@@ -1102,6 +1102,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListUserApplications  ListUserApplicationsRequest
+     * @return ListUserApplicationsResponse
+     */
+    @Override
+    public CompletableFuture<ListUserApplicationsResponse> listUserApplications(ListUserApplicationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUserApplications").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUserApplicationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUserApplicationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListUserDevices  ListUserDevicesRequest
      * @return ListUserDevicesResponse
      */
@@ -1168,6 +1186,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListUserGroupsForRegistrationPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUserPrivateAccessPolicies  ListUserPrivateAccessPoliciesRequest
+     * @return ListUserPrivateAccessPoliciesResponse
+     */
+    @Override
+    public CompletableFuture<ListUserPrivateAccessPoliciesResponse> listUserPrivateAccessPolicies(ListUserPrivateAccessPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUserPrivateAccessPolicies").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUserPrivateAccessPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUserPrivateAccessPoliciesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
