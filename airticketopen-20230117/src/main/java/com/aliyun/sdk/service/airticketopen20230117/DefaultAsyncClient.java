@@ -234,6 +234,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CollectFlightLowestPrice  CollectFlightLowestPriceRequest
+     * @return CollectFlightLowestPriceResponse
+     */
+    @Override
+    public CompletableFuture<CollectFlightLowestPriceResponse> collectFlightLowestPrice(CollectFlightLowestPriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CollectFlightLowestPrice").setMethod(HttpMethod.POST).setPathRegex("/airticket/v1/data-collect/flight-lowest-price").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CollectFlightLowestPriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CollectFlightLowestPriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Enrich supports two modes:</p>
      * <ol>

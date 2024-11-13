@@ -94,6 +94,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeDetailListOfOrderNumResponse> changeDetailListOfOrderNum(ChangeDetailListOfOrderNumRequest request);
 
     /**
+     * @param request the request parameters of CollectFlightLowestPrice  CollectFlightLowestPriceRequest
+     * @return CollectFlightLowestPriceResponse
+     */
+    CompletableFuture<CollectFlightLowestPriceResponse> collectFlightLowestPrice(CollectFlightLowestPriceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Enrich supports two modes:</p>
      * <ol>
