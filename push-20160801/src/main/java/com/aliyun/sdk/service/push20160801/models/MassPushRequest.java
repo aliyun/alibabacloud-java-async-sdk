@@ -149,6 +149,12 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AndroidMessageHuaweiUrgency")
         private String androidMessageHuaweiUrgency;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidMessageOppoCategory")
+        private String androidMessageOppoCategory;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidMessageOppoNotifyLevel")
+        private Integer androidMessageOppoNotifyLevel;
+
         @com.aliyun.core.annotation.NameInMap("AndroidMessageVivoCategory")
         private String androidMessageVivoCategory;
 
@@ -399,6 +405,8 @@ public class MassPushRequest extends Request {
             this.androidInboxBody = builder.androidInboxBody;
             this.androidMessageHuaweiCategory = builder.androidMessageHuaweiCategory;
             this.androidMessageHuaweiUrgency = builder.androidMessageHuaweiUrgency;
+            this.androidMessageOppoCategory = builder.androidMessageOppoCategory;
+            this.androidMessageOppoNotifyLevel = builder.androidMessageOppoNotifyLevel;
             this.androidMessageVivoCategory = builder.androidMessageVivoCategory;
             this.androidMusic = builder.androidMusic;
             this.androidNotificationBarPriority = builder.androidNotificationBarPriority;
@@ -587,6 +595,20 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidMessageHuaweiUrgency() {
             return this.androidMessageHuaweiUrgency;
+        }
+
+        /**
+         * @return androidMessageOppoCategory
+         */
+        public String getAndroidMessageOppoCategory() {
+            return this.androidMessageOppoCategory;
+        }
+
+        /**
+         * @return androidMessageOppoNotifyLevel
+         */
+        public Integer getAndroidMessageOppoNotifyLevel() {
+            return this.androidMessageOppoNotifyLevel;
         }
 
         /**
@@ -1130,6 +1152,8 @@ public class MassPushRequest extends Request {
             private String androidInboxBody; 
             private String androidMessageHuaweiCategory; 
             private String androidMessageHuaweiUrgency; 
+            private String androidMessageOppoCategory; 
+            private Integer androidMessageOppoNotifyLevel; 
             private String androidMessageVivoCategory; 
             private String androidMusic; 
             private Integer androidNotificationBarPriority; 
@@ -1323,6 +1347,22 @@ public class MassPushRequest extends Request {
              */
             public Builder androidMessageHuaweiUrgency(String androidMessageHuaweiUrgency) {
                 this.androidMessageHuaweiUrgency = androidMessageHuaweiUrgency;
+                return this;
+            }
+
+            /**
+             * AndroidMessageOppoCategory.
+             */
+            public Builder androidMessageOppoCategory(String androidMessageOppoCategory) {
+                this.androidMessageOppoCategory = androidMessageOppoCategory;
+                return this;
+            }
+
+            /**
+             * AndroidMessageOppoNotifyLevel.
+             */
+            public Builder androidMessageOppoNotifyLevel(Integer androidMessageOppoNotifyLevel) {
+                this.androidMessageOppoNotifyLevel = androidMessageOppoNotifyLevel;
                 return this;
             }
 

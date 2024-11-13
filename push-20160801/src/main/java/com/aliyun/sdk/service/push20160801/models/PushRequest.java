@@ -75,6 +75,14 @@ public class PushRequest extends Request {
     private String androidMessageHuaweiUrgency;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidMessageOppoCategory")
+    private String androidMessageOppoCategory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidMessageOppoNotifyLevel")
+    private Integer androidMessageOppoNotifyLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidMessageVivoCategory")
     private String androidMessageVivoCategory;
 
@@ -428,6 +436,8 @@ public class PushRequest extends Request {
         this.androidInboxBody = builder.androidInboxBody;
         this.androidMessageHuaweiCategory = builder.androidMessageHuaweiCategory;
         this.androidMessageHuaweiUrgency = builder.androidMessageHuaweiUrgency;
+        this.androidMessageOppoCategory = builder.androidMessageOppoCategory;
+        this.androidMessageOppoNotifyLevel = builder.androidMessageOppoNotifyLevel;
         this.androidMessageVivoCategory = builder.androidMessageVivoCategory;
         this.androidMusic = builder.androidMusic;
         this.androidNotificationBarPriority = builder.androidNotificationBarPriority;
@@ -627,6 +637,20 @@ public class PushRequest extends Request {
      */
     public String getAndroidMessageHuaweiUrgency() {
         return this.androidMessageHuaweiUrgency;
+    }
+
+    /**
+     * @return androidMessageOppoCategory
+     */
+    public String getAndroidMessageOppoCategory() {
+        return this.androidMessageOppoCategory;
+    }
+
+    /**
+     * @return androidMessageOppoNotifyLevel
+     */
+    public Integer getAndroidMessageOppoNotifyLevel() {
+        return this.androidMessageOppoNotifyLevel;
     }
 
     /**
@@ -1212,6 +1236,8 @@ public class PushRequest extends Request {
         private String androidInboxBody; 
         private String androidMessageHuaweiCategory; 
         private String androidMessageHuaweiUrgency; 
+        private String androidMessageOppoCategory; 
+        private Integer androidMessageOppoNotifyLevel; 
         private String androidMessageVivoCategory; 
         private String androidMusic; 
         private Integer androidNotificationBarPriority; 
@@ -1315,6 +1341,8 @@ public class PushRequest extends Request {
             this.androidInboxBody = request.androidInboxBody;
             this.androidMessageHuaweiCategory = request.androidMessageHuaweiCategory;
             this.androidMessageHuaweiUrgency = request.androidMessageHuaweiUrgency;
+            this.androidMessageOppoCategory = request.androidMessageOppoCategory;
+            this.androidMessageOppoNotifyLevel = request.androidMessageOppoNotifyLevel;
             this.androidMessageVivoCategory = request.androidMessageVivoCategory;
             this.androidMusic = request.androidMusic;
             this.androidNotificationBarPriority = request.androidNotificationBarPriority;
@@ -1530,6 +1558,24 @@ public class PushRequest extends Request {
         public Builder androidMessageHuaweiUrgency(String androidMessageHuaweiUrgency) {
             this.putQueryParameter("AndroidMessageHuaweiUrgency", androidMessageHuaweiUrgency);
             this.androidMessageHuaweiUrgency = androidMessageHuaweiUrgency;
+            return this;
+        }
+
+        /**
+         * AndroidMessageOppoCategory.
+         */
+        public Builder androidMessageOppoCategory(String androidMessageOppoCategory) {
+            this.putQueryParameter("AndroidMessageOppoCategory", androidMessageOppoCategory);
+            this.androidMessageOppoCategory = androidMessageOppoCategory;
+            return this;
+        }
+
+        /**
+         * AndroidMessageOppoNotifyLevel.
+         */
+        public Builder androidMessageOppoNotifyLevel(Integer androidMessageOppoNotifyLevel) {
+            this.putQueryParameter("AndroidMessageOppoNotifyLevel", androidMessageOppoNotifyLevel);
+            this.androidMessageOppoNotifyLevel = androidMessageOppoNotifyLevel;
             return this;
         }
 
