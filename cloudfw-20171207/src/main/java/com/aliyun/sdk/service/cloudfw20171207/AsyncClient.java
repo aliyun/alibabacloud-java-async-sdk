@@ -292,6 +292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAssetRiskListResponse> describeAssetRiskList(DescribeAssetRiskListRequest request);
 
     /**
+     * @param request the request parameters of DescribeAssetStatistic  DescribeAssetStatisticRequest
+     * @return DescribeAssetStatisticResponse
+     */
+    CompletableFuture<DescribeAssetStatisticResponse> describeAssetStatistic(DescribeAssetStatisticRequest request);
+
+    /**
      * @param request the request parameters of DescribeCfwRiskLevelSummary  DescribeCfwRiskLevelSummaryRequest
      * @return DescribeCfwRiskLevelSummaryResponse
      */
@@ -869,9 +875,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
+     * <p>You can call this operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
+     * <p>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request the request parameters of PutEnableFwSwitch  PutEnableFwSwitchRequest
      * @return PutEnableFwSwitchResponse

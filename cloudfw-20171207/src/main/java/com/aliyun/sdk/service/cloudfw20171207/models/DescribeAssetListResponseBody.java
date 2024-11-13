@@ -125,6 +125,9 @@ public class DescribeAssetListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpVersion")
         private Integer ipVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Last7DayOutTrafficBytes")
+        private Long last7DayOutTrafficBytes;
+
         @com.aliyun.core.annotation.NameInMap("MemberUid")
         private Long memberUid;
 
@@ -155,6 +158,9 @@ public class DescribeAssetListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
+        @com.aliyun.core.annotation.NameInMap("SensitiveDataStatus")
+        private String sensitiveDataStatus;
+
         @com.aliyun.core.annotation.NameInMap("SgStatus")
         private String sgStatus;
 
@@ -175,6 +181,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
             this.internetAddress = builder.internetAddress;
             this.intranetAddress = builder.intranetAddress;
             this.ipVersion = builder.ipVersion;
+            this.last7DayOutTrafficBytes = builder.last7DayOutTrafficBytes;
             this.memberUid = builder.memberUid;
             this.name = builder.name;
             this.newResourceTag = builder.newResourceTag;
@@ -185,6 +192,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
             this.resourceInstanceId = builder.resourceInstanceId;
             this.resourceType = builder.resourceType;
             this.riskLevel = builder.riskLevel;
+            this.sensitiveDataStatus = builder.sensitiveDataStatus;
             this.sgStatus = builder.sgStatus;
             this.sgStatusTime = builder.sgStatusTime;
             this.syncStatus = builder.syncStatus;
@@ -246,6 +254,13 @@ public class DescribeAssetListResponseBody extends TeaModel {
          */
         public Integer getIpVersion() {
             return this.ipVersion;
+        }
+
+        /**
+         * @return last7DayOutTrafficBytes
+         */
+        public Long getLast7DayOutTrafficBytes() {
+            return this.last7DayOutTrafficBytes;
         }
 
         /**
@@ -319,6 +334,13 @@ public class DescribeAssetListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sensitiveDataStatus
+         */
+        public String getSensitiveDataStatus() {
+            return this.sensitiveDataStatus;
+        }
+
+        /**
          * @return sgStatus
          */
         public String getSgStatus() {
@@ -354,6 +376,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
             private String internetAddress; 
             private String intranetAddress; 
             private Integer ipVersion; 
+            private Long last7DayOutTrafficBytes; 
             private Long memberUid; 
             private String name; 
             private String newResourceTag; 
@@ -364,6 +387,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
             private String resourceInstanceId; 
             private String resourceType; 
             private String riskLevel; 
+            private String sensitiveDataStatus; 
             private String sgStatus; 
             private Long sgStatusTime; 
             private String syncStatus; 
@@ -451,6 +475,14 @@ public class DescribeAssetListResponseBody extends TeaModel {
              */
             public Builder ipVersion(Integer ipVersion) {
                 this.ipVersion = ipVersion;
+                return this;
+            }
+
+            /**
+             * Last7DayOutTrafficBytes.
+             */
+            public Builder last7DayOutTrafficBytes(Long last7DayOutTrafficBytes) {
+                this.last7DayOutTrafficBytes = last7DayOutTrafficBytes;
                 return this;
             }
 
@@ -601,6 +633,14 @@ public class DescribeAssetListResponseBody extends TeaModel {
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * SensitiveDataStatus.
+             */
+            public Builder sensitiveDataStatus(String sensitiveDataStatus) {
+                this.sensitiveDataStatus = sensitiveDataStatus;
                 return this;
             }
 

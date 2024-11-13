@@ -235,6 +235,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
+        @com.aliyun.core.annotation.NameInMap("EcrList")
+        private java.util.List < String > ecrList;
+
         @com.aliyun.core.annotation.NameInMap("PeerTrList")
         private java.util.List < String > peerTrList;
 
@@ -249,6 +252,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
         private ProtectedResource(Builder builder) {
             this.count = builder.count;
+            this.ecrList = builder.ecrList;
             this.peerTrList = builder.peerTrList;
             this.vbrList = builder.vbrList;
             this.vpcList = builder.vpcList;
@@ -268,6 +272,13 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
          */
         public Integer getCount() {
             return this.count;
+        }
+
+        /**
+         * @return ecrList
+         */
+        public java.util.List < String > getEcrList() {
+            return this.ecrList;
         }
 
         /**
@@ -300,6 +311,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer count; 
+            private java.util.List < String > ecrList; 
             private java.util.List < String > peerTrList; 
             private java.util.List < String > vbrList; 
             private java.util.List < String > vpcList; 
@@ -313,6 +325,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
              */
             public Builder count(Integer count) {
                 this.count = count;
+                return this;
+            }
+
+            /**
+             * EcrList.
+             */
+            public Builder ecrList(java.util.List < String > ecrList) {
+                this.ecrList = ecrList;
                 return this;
             }
 
@@ -365,6 +385,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
+        @com.aliyun.core.annotation.NameInMap("EcrList")
+        private java.util.List < String > ecrList;
+
         @com.aliyun.core.annotation.NameInMap("PeerTrList")
         private java.util.List < String > peerTrList;
 
@@ -379,6 +402,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
         private UnprotectedResource(Builder builder) {
             this.count = builder.count;
+            this.ecrList = builder.ecrList;
             this.peerTrList = builder.peerTrList;
             this.vbrList = builder.vbrList;
             this.vpcList = builder.vpcList;
@@ -398,6 +422,13 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
          */
         public Integer getCount() {
             return this.count;
+        }
+
+        /**
+         * @return ecrList
+         */
+        public java.util.List < String > getEcrList() {
+            return this.ecrList;
         }
 
         /**
@@ -430,6 +461,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer count; 
+            private java.util.List < String > ecrList; 
             private java.util.List < String > peerTrList; 
             private java.util.List < String > vbrList; 
             private java.util.List < String > vpcList; 
@@ -443,6 +475,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
              */
             public Builder count(Integer count) {
                 this.count = count;
+                return this;
+            }
+
+            /**
+             * EcrList.
+             */
+            public Builder ecrList(java.util.List < String > ecrList) {
+                this.ecrList = ecrList;
                 return this;
             }
 
@@ -498,6 +538,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenName")
         private String cenName;
 
+        @com.aliyun.core.annotation.NameInMap("CloudFirewallVpcOrderType")
+        private String cloudFirewallVpcOrderType;
+
         @com.aliyun.core.annotation.NameInMap("FirewallId")
         private String firewallId;
 
@@ -540,6 +583,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         private VpcTrFirewalls(Builder builder) {
             this.cenId = builder.cenId;
             this.cenName = builder.cenName;
+            this.cloudFirewallVpcOrderType = builder.cloudFirewallVpcOrderType;
             this.firewallId = builder.firewallId;
             this.firewallSwitchStatus = builder.firewallSwitchStatus;
             this.ipsConfig = builder.ipsConfig;
@@ -575,6 +619,13 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
          */
         public String getCenName() {
             return this.cenName;
+        }
+
+        /**
+         * @return cloudFirewallVpcOrderType
+         */
+        public String getCloudFirewallVpcOrderType() {
+            return this.cloudFirewallVpcOrderType;
         }
 
         /**
@@ -671,6 +722,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         public static final class Builder {
             private String cenId; 
             private String cenName; 
+            private String cloudFirewallVpcOrderType; 
             private String firewallId; 
             private String firewallSwitchStatus; 
             private IpsConfig ipsConfig; 
@@ -704,6 +756,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
              */
             public Builder cenName(String cenName) {
                 this.cenName = cenName;
+                return this;
+            }
+
+            /**
+             * CloudFirewallVpcOrderType.
+             */
+            public Builder cloudFirewallVpcOrderType(String cloudFirewallVpcOrderType) {
+                this.cloudFirewallVpcOrderType = cloudFirewallVpcOrderType;
                 return this;
             }
 

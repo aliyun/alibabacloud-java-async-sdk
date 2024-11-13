@@ -34,6 +34,10 @@ public class DescribeAssetListRequest extends Request {
     private String newResourceTag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutStatistic")
+    private String outStatistic;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     @com.aliyun.core.annotation.Validation(required = true)
     private String pageSize;
@@ -49,6 +53,10 @@ public class DescribeAssetListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchItem")
     private String searchItem;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SensitiveStatus")
+    private String sensitiveStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SgStatus")
@@ -73,10 +81,12 @@ public class DescribeAssetListRequest extends Request {
         this.lang = builder.lang;
         this.memberUid = builder.memberUid;
         this.newResourceTag = builder.newResourceTag;
+        this.outStatistic = builder.outStatistic;
         this.pageSize = builder.pageSize;
         this.regionNo = builder.regionNo;
         this.resourceType = builder.resourceType;
         this.searchItem = builder.searchItem;
+        this.sensitiveStatus = builder.sensitiveStatus;
         this.sgStatus = builder.sgStatus;
         this.status = builder.status;
         this.type = builder.type;
@@ -132,6 +142,13 @@ public class DescribeAssetListRequest extends Request {
     }
 
     /**
+     * @return outStatistic
+     */
+    public String getOutStatistic() {
+        return this.outStatistic;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
@@ -157,6 +174,13 @@ public class DescribeAssetListRequest extends Request {
      */
     public String getSearchItem() {
         return this.searchItem;
+    }
+
+    /**
+     * @return sensitiveStatus
+     */
+    public String getSensitiveStatus() {
+        return this.sensitiveStatus;
     }
 
     /**
@@ -193,10 +217,12 @@ public class DescribeAssetListRequest extends Request {
         private String lang; 
         private Long memberUid; 
         private String newResourceTag; 
+        private String outStatistic; 
         private String pageSize; 
         private String regionNo; 
         private String resourceType; 
         private String searchItem; 
+        private String sensitiveStatus; 
         private String sgStatus; 
         private String status; 
         private String type; 
@@ -213,10 +239,12 @@ public class DescribeAssetListRequest extends Request {
             this.lang = request.lang;
             this.memberUid = request.memberUid;
             this.newResourceTag = request.newResourceTag;
+            this.outStatistic = request.outStatistic;
             this.pageSize = request.pageSize;
             this.regionNo = request.regionNo;
             this.resourceType = request.resourceType;
             this.searchItem = request.searchItem;
+            this.sensitiveStatus = request.sensitiveStatus;
             this.sgStatus = request.sgStatus;
             this.status = request.status;
             this.type = request.type;
@@ -298,6 +326,15 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
+         * OutStatistic.
+         */
+        public Builder outStatistic(String outStatistic) {
+            this.putQueryParameter("OutStatistic", outStatistic);
+            this.outStatistic = outStatistic;
+            return this;
+        }
+
+        /**
          * <p>The number of entries per page. Valid values: 1 to 50.</p>
          * <p>This parameter is required.</p>
          * 
@@ -359,6 +396,15 @@ public class DescribeAssetListRequest extends Request {
         public Builder searchItem(String searchItem) {
             this.putQueryParameter("SearchItem", searchItem);
             this.searchItem = searchItem;
+            return this;
+        }
+
+        /**
+         * SensitiveStatus.
+         */
+        public Builder sensitiveStatus(String sensitiveStatus) {
+            this.putQueryParameter("SensitiveStatus", sensitiveStatus);
+            this.sensitiveStatus = sensitiveStatus;
             return this;
         }
 
