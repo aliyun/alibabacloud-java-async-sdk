@@ -164,7 +164,7 @@ public class ModifyInstanceVncPasswdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the ECS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class ModifyInstanceVncPasswdRequest extends Request {
         }
 
         /**
-         * <p>The new VNC password of the instance.</p>
+         * <p>The new VNC password of the ECS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

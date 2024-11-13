@@ -200,7 +200,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private Integer usedAmount; 
 
             /**
-             * AccountId.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1144775968548340</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -208,7 +213,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -216,7 +226,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedAmount.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -370,7 +385,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AvailableAmount.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder availableAmount(Integer availableAmount) {
                 this.availableAmount = availableAmount;
@@ -378,7 +398,9 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticityAssuranceUsages.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              */
             public Builder elasticityAssuranceUsages(ElasticityAssuranceUsages elasticityAssuranceUsages) {
                 this.elasticityAssuranceUsages = elasticityAssuranceUsages;
@@ -828,7 +850,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private Integer usedAssuranceTimes; 
 
             /**
-             * <p>Details about the allocated resources.</p>
+             * <p>Details of the allocated resources.</p>
              */
             public Builder allocatedResources(AllocatedResources allocatedResources) {
                 this.allocatedResources = allocatedResources;
@@ -847,7 +869,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticityAssuranceOwnerId.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>e114477596854834</p>
              */
             public Builder elasticityAssuranceOwnerId(String elasticityAssuranceOwnerId) {
                 this.elasticityAssuranceOwnerId = elasticityAssuranceOwnerId;

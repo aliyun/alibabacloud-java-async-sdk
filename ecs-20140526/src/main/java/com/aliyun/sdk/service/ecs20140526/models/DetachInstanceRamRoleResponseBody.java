@@ -86,7 +86,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Details about the results of detaching instance RAM roles from the instances.</p>
+         * <p>The results of the instance RAM role detachment, which include the names of the instance RAM roles and the IDs of the ECS instances from which you attempted to detach the instance RAM roles.</p>
          */
         public Builder detachInstanceRamRoleResults(DetachInstanceRamRoleResults detachInstanceRamRoleResults) {
             this.detachInstanceRamRoleResults = detachInstanceRamRoleResults;
@@ -94,7 +94,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of instances from which instance RAM roles failed to be detached.</p>
+         * <p>The number of ECS instances from which instance RAM roles failed to be detached.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -127,7 +127,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances from which you attempted to detach instance RAM roles.</p>
+         * <p>The total number of ECS instances from which you attempted to detach instance RAM roles.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             private String ramRoleName; 
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The ID of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp67acfmxazb4p****</p>
@@ -355,7 +355,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance from which you attempted to detach the instance RAM role.</p>
+             * <p>The ID of the ECS instance from which you attempted to detach the instance RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp67acfmxazb4p****</p>
@@ -366,7 +366,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the instance RAM role of the instance.</p>
+             * <p>The name of the instance RAM role and the ID of the ECS instance.</p>
              */
             public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
                 this.instanceRamRoleSets = instanceRamRoleSets;

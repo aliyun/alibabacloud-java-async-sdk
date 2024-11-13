@@ -15,6 +15,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceSystemEventSet")
     private InstanceSystemEventSet instanceSystemEventSet;
 
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -29,6 +32,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     private DescribeInstanceHistoryEventsResponseBody(Builder builder) {
         this.instanceSystemEventSet = builder.instanceSystemEventSet;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
      */
     public InstanceSystemEventSet getInstanceSystemEventSet() {
         return this.instanceSystemEventSet;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -80,6 +91,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     public static final class Builder {
         private InstanceSystemEventSet instanceSystemEventSet; 
+        private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -90,6 +102,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
          */
         public Builder instanceSystemEventSet(InstanceSystemEventSet instanceSystemEventSet) {
             this.instanceSystemEventSet = instanceSystemEventSet;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

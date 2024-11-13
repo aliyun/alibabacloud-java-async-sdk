@@ -556,7 +556,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupToGroupRuleCount.
+             * <p>The number of rules that reference security groups in the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder groupToGroupRuleCount(Integer groupToGroupRuleCount) {
                 this.groupToGroupRuleCount = groupToGroupRuleCount;
@@ -575,7 +578,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * <p>The number of rules in the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;

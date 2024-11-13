@@ -57,6 +57,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
+    @com.aliyun.core.annotation.NameInMap("SourceDestCheck")
+    private Boolean sourceDestCheck;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -91,6 +94,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         this.securityGroupIds = builder.securityGroupIds;
         this.serviceID = builder.serviceID;
         this.serviceManaged = builder.serviceManaged;
+        this.sourceDestCheck = builder.sourceDestCheck;
         this.status = builder.status;
         this.tags = builder.tags;
         this.type = builder.type;
@@ -213,6 +217,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     /**
+     * @return sourceDestCheck
+     */
+    public Boolean getSourceDestCheck() {
+        return this.sourceDestCheck;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -270,6 +281,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         private SecurityGroupIds securityGroupIds; 
         private Long serviceID; 
         private Boolean serviceManaged; 
+        private Boolean sourceDestCheck; 
         private String status; 
         private Tags tags; 
         private String type; 
@@ -424,6 +436,14 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
+            return this;
+        }
+
+        /**
+         * SourceDestCheck.
+         */
+        public Builder sourceDestCheck(Boolean sourceDestCheck) {
+            this.sourceDestCheck = sourceDestCheck;
             return this;
         }
 

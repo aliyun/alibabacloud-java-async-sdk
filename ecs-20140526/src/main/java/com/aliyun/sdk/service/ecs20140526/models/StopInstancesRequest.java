@@ -261,7 +261,7 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of instances.</p>
+         * <p>The IDs of ECS instances. You can specify 1 to 100 instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

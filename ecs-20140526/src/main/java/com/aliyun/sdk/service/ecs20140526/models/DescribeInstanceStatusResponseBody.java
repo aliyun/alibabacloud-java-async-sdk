@@ -86,7 +86,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>The status information of the instances.</p>
+         * <p>The IDs and status of the ECS instances.</p>
          */
         public Builder instanceStatuses(InstanceStatuses instanceStatuses) {
             this.instanceStatuses = instanceStatuses;

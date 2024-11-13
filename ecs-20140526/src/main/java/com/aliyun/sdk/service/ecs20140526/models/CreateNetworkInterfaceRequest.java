@@ -140,6 +140,10 @@ public class CreateNetworkInterfaceRequest extends Request {
     private java.util.List < String > securityGroupIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDestCheck")
+    private Boolean sourceDestCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -189,6 +193,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         this.secondaryPrivateIpAddressCount = builder.secondaryPrivateIpAddressCount;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupIds = builder.securityGroupIds;
+        this.sourceDestCheck = builder.sourceDestCheck;
         this.tag = builder.tag;
         this.txQueueSize = builder.txQueueSize;
         this.vSwitchId = builder.vSwitchId;
@@ -426,6 +431,13 @@ public class CreateNetworkInterfaceRequest extends Request {
     }
 
     /**
+     * @return sourceDestCheck
+     */
+    public Boolean getSourceDestCheck() {
+        return this.sourceDestCheck;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -485,6 +497,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         private Integer secondaryPrivateIpAddressCount; 
         private String securityGroupId; 
         private java.util.List < String > securityGroupIds; 
+        private Boolean sourceDestCheck; 
         private java.util.List < Tag> tag; 
         private Integer txQueueSize; 
         private String vSwitchId; 
@@ -527,6 +540,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             this.secondaryPrivateIpAddressCount = request.secondaryPrivateIpAddressCount;
             this.securityGroupId = request.securityGroupId;
             this.securityGroupIds = request.securityGroupIds;
+            this.sourceDestCheck = request.sourceDestCheck;
             this.tag = request.tag;
             this.txQueueSize = request.txQueueSize;
             this.vSwitchId = request.vSwitchId;
@@ -936,6 +950,15 @@ public class CreateNetworkInterfaceRequest extends Request {
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+
+        /**
+         * SourceDestCheck.
+         */
+        public Builder sourceDestCheck(Boolean sourceDestCheck) {
+            this.putQueryParameter("SourceDestCheck", sourceDestCheck);
+            this.sourceDestCheck = sourceDestCheck;
             return this;
         }
 

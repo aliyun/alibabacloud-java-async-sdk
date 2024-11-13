@@ -74,7 +74,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Details about the instance RAM roles.</p>
+         * <p>The IDs of the ECS instances and the names of the corresponding instance RAM roles.</p>
          */
         public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
             this.instanceRamRoleSets = instanceRamRoleSets;
@@ -82,7 +82,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the instance RAM role.</p>
+         * <p>The region ID of the ECS instances.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -104,7 +104,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instance RAM roles returned.</p>
+         * <p>The number of ECS instances returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

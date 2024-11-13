@@ -3745,6 +3745,9 @@ public class RunInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
 
+        @com.aliyun.core.annotation.NameInMap("SourceDestCheck")
+        private Boolean sourceDestCheck;
+
         @com.aliyun.core.annotation.NameInMap("TxQueueSize")
         private Integer txQueueSize;
 
@@ -3767,6 +3770,7 @@ public class RunInstancesRequest extends Request {
             this.rxQueueSize = builder.rxQueueSize;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.sourceDestCheck = builder.sourceDestCheck;
             this.txQueueSize = builder.txQueueSize;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -3885,6 +3889,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
+         * @return sourceDestCheck
+         */
+        public Boolean getSourceDestCheck() {
+            return this.sourceDestCheck;
+        }
+
+        /**
          * @return txQueueSize
          */
         public Integer getTxQueueSize() {
@@ -3914,6 +3925,7 @@ public class RunInstancesRequest extends Request {
             private Integer rxQueueSize; 
             private String securityGroupId; 
             private java.util.List < String > securityGroupIds; 
+            private Boolean sourceDestCheck; 
             private Integer txQueueSize; 
             private String vSwitchId; 
 
@@ -4174,6 +4186,14 @@ public class RunInstancesRequest extends Request {
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * SourceDestCheck.
+             */
+            public Builder sourceDestCheck(Boolean sourceDestCheck) {
+                this.sourceDestCheck = sourceDestCheck;
                 return this;
             }
 

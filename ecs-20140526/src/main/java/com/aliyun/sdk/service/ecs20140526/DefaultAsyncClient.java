@@ -426,6 +426,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679686.html">DescribeInstanceRamRole</a> operation to query the instance RAM roles that are attached to ECS instances.</p>
+     * <blockquote>
+     * <p> If an ECS instance already has an instance RAM role, an error is returned when you attach another instance RAM role to the instance.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of AttachInstanceRamRole  AttachInstanceRamRoleRequest
      * @return AttachInstanceRamRoleResponse
      */
@@ -575,48 +581,55 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-     * When you call this operation, take note of the following items:</p>
+     * <p>  <strong>Precautions</strong>
+     *     *   <strong>Quantity limit:</strong> The total number of outbound security group rules in each security group cannot exceed 200. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.
+     *     *   <strong>Rule type:</strong> For outbound security group rules, you can set Policy to accept or drop to specify whether to allow or deny access.
+     *     *   <strong>Rule priority:</strong>: For outbound security group rules, the valid values of Priority range from 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</p>
      * <ul>
-     * <li>The total number of inbound and outbound security group rules in each security group cannot exceed 200. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota1~~"></a>.</li>
-     * <li>You can set Policy to accept or drop for each security group rule to allow or deny access.</li>
-     * <li>The valid value of Priority ranges from 1 to 100. A smaller value indicates a higher priority.</li>
-     * <li>When several security group rules have the same priority, drop rules take precedence.</li>
-     * <li>The destination can be a CIDR block specified by DestCidrIp, Ipv6DestCidrIp, or DestPrefixListId or can be Elastic Compute Service (ECS) instances in a security group specified by DestGroupId.</li>
-     * <li>For advanced security groups, security groups cannot be used as authorization objects.</li>
-     * <li>For each basic security group, a maximum of 20 security groups can be used as authorization objects.</li>
-     * <li>If the specified security group rule exists in the security group, the call is successful but no security group rule is created.</li>
-     * <li>The <code>Permissions.N</code> prefix is added to some parameters to generate new parameters. Original parameters and corresponding parameters prefixed with Permissions.N cannot be configured together. We recommend that you use parameters prefixed with <code>Permissions.N</code>.</li>
-     * <li>You can determine a security group rule by configuring one of the following groups of parameters. You cannot determine a security group rule by configuring only one parameter.<ul>
-     * <li>Parameters used to specify a security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestCidrIp. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.IpProtocol=ICMP
-     * &amp;Permissions.1.DestCidrIp=10.0.0.0/8
-     * &amp;Permissions.1.PortRange=-1/-1
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Accept
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to specify a security group rule that controls access to a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestGroupOwnerAccount, and DestGroupId. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.DestGroupId=sg-bp67acfmxazb4pi***
-     * &amp;Permissions.1.DestGroupOwnerAccount=<a href="mailto:Test@aliyun.com">Test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
-     * <li>Parameters used to specify a security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestPrefixListId. In this case, prefix lists support only security groups in virtual private clouds (VPCs). NicType must be set to intranet. Sample request:
-     * http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
-     * &amp;SecurityGroupId=sg-bp67acfmxazb4ph***
-     * &amp;Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
-     * &amp;Permissions.1.DestGroupOwnerAccount=<a href="mailto:Test@aliyun.com">Test@aliyun.com</a>
-     * &amp;Permissions.1.IpProtocol=TCP
-     * &amp;Permissions.1.PortRange=22/22
-     * &amp;Permissions.1.NicType=intranet
-     * &amp;Permissions.1.Policy=Drop
-     * &amp;<Common request parameters></li>
+     * <li><strong>Considerations</strong><ul>
+     * <li>If the security group rule that you call the AuthorizeSecurityGroupEgress operation to create exists in the security group, the call is successful but no security group rule is created.</li>
+     * <li>Parameters and their <code>Permissions.N</code>-prefixed counterparts cannot be specified in the same request. We recommend that you use the <code>Permissions.N</code>-prefixed parameters.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Parameters that define a security group rule</strong>
+     * Define a security group rule by configuring the following parameters together:<ul>
+     * <li>One of the following parameters: DestCidrIp, Ipv6DestCidrIp, DestPrefixListId, and DestGroupId. DestCidrIp specifies the destination IPv4 CIDR block. Ipv6DestCidrIp specifies the destination IPv6 CIDR block. DestPrefixListId specifies the ID of the destination prefix list. DestGroupId specifies the destination security group.</li>
+     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>IpProtocol: specifies the protocol.</li>
+     * <li>Policy: specifies the action.
+     * **
+     * <strong>Note</strong> Advanced security groups do not support security group rules that reference security groups as authorization objects. Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Sample requests</strong>
+     * Sample requests to create outbound security group rules that control access to different destinations in a security group in the China (Hangzhou) region:<ul>
+     * <li>Sample request to create an outbound security group rule that controls access to a specified CIDR block:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,  //The region ID.
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;, //The ID of the source security group.
+     * &quot;Permissions&quot;:[
+     *      {
+     *        &quot;DestCidrIp&quot;: &quot;10.0.0.0/8&quot;, //The destination IPv4 CIDR block.
+     *        &quot;PortRange&quot;: &quot;-1/-1&quot;, //The range of destination port numbers.
+     *        &quot;IpProtocol&quot;: &quot;ICMP&quot;, //The protocol.
+     *        &quot;Policy&quot;: &quot;Accept&quot; //The action.
+     *      }
+     * ]</li>
+     * <li>Sample request to create an outbound security group rule that controls access to a security group and an outbound security group rule that controls access to a prefix list:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;,
+     * &quot;Permissions&quot;:[
+     *      {
+     *        &quot;DestGroupId&quot;: &quot;sg-bp67acfmxazb4pi***&quot;, //The ID of the destination security group.
+     *        &quot;PortRange&quot;: &quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
+     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *      },{
+     *        &quot;DestPrefixListId&quot;: &quot;pl-x1j1k5ykzqlixdcy****&quot;, //The ID of the destination prefix list.
+     *        &quot;PortRange&quot;: &quot;22/22&quot;,
+     *        &quot;IpProtocol&quot;: &quot;TCP&quot;,
+     *        &quot;Policy&quot;: &quot;Drop&quot;
+     *      }
+     * ]</li>
      * </ul>
      * </li>
      * </ul>
@@ -1338,63 +1351,31 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query available resources in a specific region or zone. If you want to batch create instances that automatically enter the Running state after they are created, we recommend that you call the <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a> operation.
-     * Take note of the following items:</p>
+     * <p> This operation is no longer iterated or updated. We recommend that you call the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation instead.
+     * <strong>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</strong>
+     * This operation is an asynchronous operation. After a request to create an ECS instance is sent, an ECS instance ID is immediately returned but the instance may be still being created. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. If the status of the instance is <code>Stopped</code> in the DescribeInstanceStatus response, the instance is created. In this case, you can call the <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> operation to start the instance.</p>
      * </blockquote>
      * <ul>
-     * <li><strong>Billing</strong>:<ul>
-     * <li>You must familiarize yourself with ECS billing methods before you create an instance because you may be charged for the resources used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</li>
+     * <li><strong>Prerequisites</strong><ul>
+     * <li>Make sure that you are familiar with the ECS billing methods because you may be charged for the resources that are used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</li>
+     * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
+     * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Considerations</strong>:<ul>
      * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are used by default.</li>
+     * <li>If you want to create instances with 512 MiB of memory, you cannot use Windows Server images except for Windows Server Semi-Annual Channel images. If you want to create instances with 4 GiB or more of memory, you cannot use 32-bit OS image.</li>
+     * <li>If you call the CreateInstance operation to create an instance, no public IP address is automatically assigned to the instance. You can call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance.
+     * **
+     * <strong>Note</strong> Starting November 27, 2020, when you create ECS instances or change ECS instance configurations, the maximum bandwidth value that you can specify is subject to the throttling policy of your account. To increase the maximum bandwidth value, submit a ticket. The throttling policy imposes the following constraints: In a single region, the total maximum bandwidth value of all instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and the total bandwidth value of all instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
      * </ul>
      * </li>
-     * <li><strong>Instance type</strong>:<ul>
-     * <li>You can use the <code>IoOptimized</code> parameter to specify whether to create an I/O optimized instance.</li>
+     * <li><strong>Suggestions</strong>:<ul>
      * <li>Instance type selection: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the performance data of instance types, or see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn about how to select instance types.</li>
-     * <li>Query of available resources: Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query resources available in a specific region or zone.<blockquote>
-     * <p> If the <code>QuotaExceed.ElasticQuota</code> error is returned when you call this operation, it indicates that the maximum number of instances of the specified instance type in the region has been reached, or the maximum number of vCPUs for all instance types in a zone has been reached. You can go to the <a href="https://ecs.console.aliyun.com/?spm=a2c8b.12215451.favorites.decs.5e3a336aMGTtzy#/privileges/quota">ECS console</a> or <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to request a quota increase.</p>
-     * </blockquote>
-     * </li>
+     * <li>Query of available resources: Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query resources available in a specific region or zone.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/49121.html">User data</a>: If the instance type supports user data, you can use the UserData parameter to pass in user data. User data is encoded in Base64. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt <code>UserData</code> values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64 before you pass in the information. Then decode and decrypt the information in the same way within the instance.</li>
      * </ul>
      * </li>
-     * <li><strong>Image</strong>:<ul>
-     * <li>The image determines the system disk configurations of the new instance. The system disk of the new instance is a clone of the specified image.</li>
-     * <li>If you want to create instances with 512 MiB of memory, you cannot use Windows Server images except for Windows Server Semi-Annual Channel images.</li>
-     * <li>If you want to create instances with 4 GiB or more of memory, you cannot use 32-bit OS image.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Network type</strong>:<ul>
-     * <li>Each instance that resides in a virtual private cloud (VPC) must be connected to only a single vSwitch.</li>
-     * <li>If <code>VSwitchId</code> is specified, the security group specified by <code>SecurityGroupId</code> and the vSwitch specified by <code>VSwitchId</code> must belong to the same VPC.</li>
-     * <li>The value of <code>PrivateIpAddress</code> varies based on the value of <code>VSwitchId</code>. <code>PrivateIpAddress</code> cannot be separately specified. If <code>VSwitchId</code> and <code>PrivateIpAddress</code> are specified, the IP address specified by <code>PrivateIpAddress</code> must be an idle IP address in the CIDR block of the specified vSwitch.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Public bandwidth</strong>:<ul>
-     * <li>Starting November 27, 2020, the maximum bandwidth value that is available for you to create ECS instances or change ECS instance configurations is subject to the throttling policy of your account. To increase the bandwidth limit, submit a ticket. The throttling policy imposes the following constraints: In a single region, the total maximum bandwidth value of all instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and the total maximum bandwidth value of all instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
-     * <li>If you call the <code>CreateInstance</code> operation to create an instance, no public IP addresses are assigned to the instance. You can call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to an instance.</li>
-     * <li>Network usage fees vary based on the settings of <code>InternetChargeType</code> and <code>InternetMaxBandwidthOut</code>.</li>
-     * <li>The value of <code>InternetMaxBandwidthIn</code> does not affect billing because inbound data traffic is free of charge.</li>
-     * <li>If <code>InternetChargeType</code> is set to PayByBandwidth, <code>InternetMaxBandwidthOut</code> specifies the fixed bandwidth. A fixed bandwidth is a specified amount of public bandwidth allocated to an instance that uses the pay-by-bandwidth billing method for network usage.</li>
-     * <li>If <code>InternetChargeType</code> is set to PayByTraffic, <code>InternetMaxBandwidthOut</code> specifies the peak bandwidth. A peak bandwidth is the maximum amount of public bandwidth that an instance can consume when the instance uses the pay-by-traffic billing method for network usage. Network usage costs are calculated based on the volume of network traffic.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Security group</strong>:<ul>
-     * <li>If no security groups are available in the region where you want to create an instance, you must call the <a href="https://help.aliyun.com/document_detail/25553.html">CreateSecurityGroup</a> operation to create a security group in that region first.</li>
-     * <li>The maximum number of instances that a security group can contain varies based on the security group type. For more information, see the &quot;Security group limits&quot; section in the <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a> topic.</li>
-     * <li>Instances in the same security group can communicate with each other over the internal network. By default, instances in different security groups cannot communicate with each other. You can allow communication between instances by allowing mutual access between the security groups to which the instances belong. For more information, see <a href="https://help.aliyun.com/document_detail/25554.html">AuthorizeSecurityGroup</a> and <a href="https://help.aliyun.com/document_detail/25560.html">AuthorizeSecurityGroupEgress</a>.</li>
-     * </ul>
-     * </li>
-     * <li><strong>Storage</strong>:<ul>
-     * <li>The instance is assigned a system disk whose capacity varies based on the size of the specified image. The size of the system disk must be at least <code>20 GiB</code> and greater than or equal to the image size. For information about system disk categories, see the description of <code>SystemDisk.Category</code>.</li>
-     * <li>The system disk of an I/O optimized instance can only be an enhanced SSD (ESSD) (<code>cloud_essd</code>), a standard SSD (<code>cloud_ssd</code>), or an ultra disk (<code>cloud_efficiency</code>).</li>
-     * <li>The maximum size of a data disk varies based on the disk category. For more information, see the description of <code>DataDisk.N.Size</code>.</li>
-     * <li>Up to 16 data disks can be added to an instance. Mount points /dev/xvd[b-z] are automatically assigned to data disks in ascending alphanumeric order.<blockquote>
-     * <p> If the <code>QuotaExceed.DiskCapacity</code> error is returned when you call this operation, it indicates that the maximum capacity of the disks of the selected disk category in the specified zone has been reached. You can go to the <a href="https://quotas.console.aliyun.com/products/disk/quotas">Quota Center</a> to query and request a quota increase.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><strong>User data</strong>: If the instance type supports user data, you can use the UserData parameter to pass in user data.<a href="~~49121~~"></a> User data is encoded in Base64. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt <code>UserData</code> values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64 before you pass in the information. Then decode and decrypt the information in the same way within the instance.</li>
-     * <li><strong>Others</strong>: When you call API operations by using Alibaba Cloud CLI or SDKs, you must delete periods (.) from some request parameters before you use the parameters. For example, use <code>SystemDiskCategory</code> instead of <code>SystemDisk.Category</code> as a request parameter.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
@@ -3886,8 +3867,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</p>
      * 
      * @param request the request parameters of DescribeInstanceRamRole  DescribeInstanceRamRoleRequest
      * @return DescribeInstanceRamRoleResponse
@@ -3908,9 +3889,23 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  For information about the lifecycle states of an ECS instance, see <a href="https://help.aliyun.com/document_detail/25687.html">Instance states</a>.</p>
+     * <p>For information about the lifecycle states of an ECS instance, see <a href="https://help.aliyun.com/document_detail/25687.html">Instance lifecycle</a>.</p>
+     * <h2><a href="#"></a>Instructions</h2>
      * <ul>
-     * <li>You can also call this operation to query the list of ECS instances.</li>
+     * <li>Query the ECS instances and the status of the instances in a <strong>region</strong>. Sample request:<!---->
+     * {
+     *   &quot;RegionID&quot;: [&quot;cn-hangzhou&quot;]
+     * }</li>
+     * <li>Query the ECS instances and the status of the instances in a <strong>zone</strong> of a <strong>region</strong>. Sample request:<!---->
+     * {
+     *   &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;ZoneID&quot;: [&quot;cn-hangzhou-a&quot;]
+     * }</li>
+     * <li>Query the status of an ECS instance based on the <strong>instance ID</strong>. Sample request:<!---->
+     * {
+     *   &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;InstancesID&quot;: [&quot;i-bp1f7c1zqp999zvp****&quot;, &quot;i-bp1dqjv36biueg61****&quot;]
+     * }</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceStatus  DescribeInstanceStatusRequest
@@ -3996,22 +3991,19 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
-     * <ul>
-     * <li>The <strong>keepalive</strong> time of a connection to a VNC management terminal is 300 seconds. If you do not interact with the VNC management terminal for 300 seconds, the VNC management terminal is automatically disconnected.</li>
-     * <li>If the connection is interrupted, you must recall this operation to obtain a new logon address that is specified by <code>VncUrl</code> and use the new logon address to construct a URL that can be used to reconnect to the VNC management terminal. You can reconnect to a VNC management terminal for a maximum of 30 times per minute.</li>
-     * <li>You need to add the <code>vncUrl=\\*\\*\\*\\*</code>, <code>instanceId=\\*\\*\\*\\*</code>, and <code>isWindows=true/false</code> parameters to the end of the link <code>https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?</code> and use an ampersand (<code>&amp;</code>) between the parameters.<ul>
-     * <li><code>vncUrl</code>: the value of <code>VncUrl</code> that is returned after a successful call of this operation.</li>
-     * <li><code>instanceId</code>: the ID of your instance.</li>
-     * <li><code>isWindows</code>: specifies whether the operating system of your instance is Windows. A value of <code>true</code> indicates that the operating system is Windows. A value of <code>false</code> indicates that the operating system is not Windows.<blockquote>
-     * <p> You can connect to an instance without a VNC logon password. Therefore, you do not need to configure the <code>password</code> parameter.
-     * Sample URL:
-     * <a href="https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true">https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&amp;instanceId=i-wz9hhwq5a6tm****&amp;isWindows=true</a></p>
+     * <p>  You cannot directly use the VNC logon address (VncUrl) in the response to log on to an ECS instance. To log on to the ECS instance, you can use the <strong>web management terminal URL</strong> that contains the VNC logon address.</p>
+     * <blockquote>
+     * <p> To construct a web management terminal URL, add the <code>vncUrl=\\*\\*\\*\\*</code>, <code>instanceId=****</code>, and <code>isWindows=true/false</code> parameters at the end of <code>https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?</code>. Separate each parameter with an ampersand (<code>&amp;</code>). Parameter description:</p>
      * </blockquote>
-     * </li>
-     * </ul>
-     * </li>
+     * <ul>
+     * <li><code>vncUrl</code>: the VNC logon address.</li>
+     * <li><code>instanceId</code>: the instance ID.</li>
+     * <li><code>isWindows</code>: specifies whether the operating system of your ECS instance is Windows. A value of <code>true</code> specifies that the operating system is Windows. A value of <code>false</code> specifies that the operating system is not Windows.</li>
+     * <li>You can connect to an ECS instance without using a VNC logon password. Therefore, you do not need to specify the <code>password</code> parameter.</li>
+     * <li>The keepalive time of a connection to a VNC management terminal is 300 seconds. If you do not interact with the VNC management terminal within 300 seconds, the VNC management terminal is automatically disconnected.</li>
+     * <li>If the connection is interrupted, you must call the DescribeInstanceVncUrl operation to obtain a new VNC logon address (<code>VncUrl</code>) and use the new logon address to construct a new web management terminal URL that you can use to reconnect to the VNC management terminal. You can reconnect to a VNC management terminal up to 30 times per minute.
+     * Sample web management terminal URL:
+     * <a href="https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true">https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&amp;instanceId=i-wz9hhwq5a6tm****&amp;isWindows=true</a></li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceVncUrl  DescribeInstanceVncUrlRequest
@@ -4757,12 +4749,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The basic information about security groups includes their IDs and descriptions. The response returns security groups in descending order of the IDs of the security groups.</li>
+     * <li>The basic information of security groups includes their IDs and descriptions. The response returns security groups in descending order of their IDs.</li>
      * <li>We recommend that you use <code>MaxResults</code> and <code>NextToken</code> for a paged query. We recommend that you use <code>MaxResults</code> to specify the maximum number of entries to return for each request. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSecurityGroups operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value that is returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call. If the return value of <code>NextToken</code> is empty, the current page of results is the last page and no more results are to be returned.</li>
-     * <li>When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * <li>When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSecurityGroups  DescribeSecurityGroupsRequest
@@ -5158,10 +5149,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The returned custom data is encoded in Base64.</p>
-     * <ul>
-     * <li>If no user data is configured for the ECS instance, an empty result is returned.</li>
-     * </ul>
+     * <p>  If no user data is configured for the ECS instance, an empty string is returned.</p>
      * 
      * @param request the request parameters of DescribeUserData  DescribeUserDataRequest
      * @return DescribeUserDataResponse
@@ -5537,7 +5525,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>Before you export images, take note of the following items:</p>
      * <ul>
      * <li>Make sure that you are familiar with the prerequisites and considerations. For more information, see <a href="https://help.aliyun.com/document_detail/58181.html">Export a custom image</a>.</li>
-     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Australia (Sydney) Closing Down, Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
+     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
      * <li>Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:<ul>
      * <li>Create a role named <code>AliyunECSImageExportDefaultRole</code> and attach the following policy to the role:
      *    {
@@ -6964,11 +6952,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The password must be six characters in length and can contain only uppercase letters, lowercase letters, and digits.</p>
+     * <p>  The VNC password must be six characters in length and can contain uppercase letters, lowercase letters, and digits.</p>
      * <ul>
-     * <li>After you modify the VNC password of an instance, take note of the following items:<ul>
-     * <li>If the instance is I/O optimized, the new password takes effect immediately.</li>
-     * <li>If the instance is not I/O optimized, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> by using the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new password to take effect.</li>
+     * <li>After you modify the VNC password of an ECS instance, take note of the following items:<ul>
+     * <li>If the instance is I/O optimized, the new password takes effect immediately without the need to restart the instance.</li>
+     * <li>If the instance is not I/O optimized, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new password to take effect.</li>
      * </ul>
      * </li>
      * </ul>
@@ -7735,11 +7723,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Only instances that are in the <code>Running</code> state can be restarted.****</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
      * <ul>
-     * <li>After an instance is restarted, the status of the instance changes to <code>Starting</code>.****</li>
-     * <li>An instance can be forcibly restarted. A forced restart (<code>ForceStop</code>) is equivalent to performing a hard restart. This operation can cause data loss if data in the instance is not written to the disk.</li>
-     * <li>If you call the DescribeInstances operation to query the details of an instance and <code>OperationLocks</code> in the response contains &quot;LockReason&quot;: &quot;security&quot;, the instance is locked for security reasons and cannot be restarted. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to restart an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instance that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of RebootInstance  RebootInstanceRequest
@@ -7761,12 +7751,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This operation is an asynchronous operation. After you call this operation to restart an ECS instance, the operation sets the status of the ECS instance to <code>Starting</code> and begins the restart process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is restarted.</p>
      * <ul>
-     * <li>The ECS instances to be restarted must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
-     * <li>You can use <code>BatchOptimization</code> to specify the batch operation mode and restart multiple instances at a time.</li>
-     * <li>Instances can be forcefully restarted. A forced restart (<code>ForceReboot</code>) is equivalent to powering off a traditional server and then starting the server. If data in the instance operating system is not written to block storage devices when the operation is called, the data is lost.</li>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.</li>
+     * <li><strong>Precautions</strong><ul>
+     * <li>You cannot call this operation to restart ECS instances that are locked due to security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instances that you want to restart must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of RebootInstances  RebootInstancesRequest
@@ -8571,10 +8562,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to start an ECS instance, the operation sets the status of the ECS instance to Starting and begins the startup process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Running</code>, the instance is started.</p>
      * <ul>
-     * <li>The ECS instance must be in the <code>Stopped</code> state.</li>
-     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is <a href="https://help.aliyun.com/document_detail/25695.html">locked for security reasons</a> and cannot be started.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to start an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instance that you want to start must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>If an ECS instance is stopped in economical mode, the instance may fail to be restarted due to insufficient resources.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of StartInstance  StartInstanceRequest
@@ -8596,11 +8591,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to start an ECS instance, the operation sets the status of the ECS instance to Starting and begins the startup process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is started.</p>
      * <ul>
-     * <li>The ECS instances that you want to start must be in the <strong>Stopped</strong> state.``</li>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code>, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.</li>
-     * <li>You can start multiple ECS instances at the same time and use the <code>BatchOptimization</code> parameter to specify the batch operation mode.</li>
+     * <li><strong>Precautions</strong><ul>
+     * <li>You cannot call this operation to start ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The ECS instances that you want to start must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>ECS instances stopped in economical mode may fail to be started due to insufficient resources.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of StartInstances  StartInstancesRequest
@@ -8658,9 +8656,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  If you call the DescribeInstances operation to query the details of an instance and <code>OperationLocks</code> in the response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code>, the instance is locked for security reasons and cannot be stopped. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to stop an ECS instance, the operation sets the status of the ECS instance to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Stopped</code>, the instance is stopped.</p>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li>If the economical mode is enabled, you can set <code>StoppedMode</code> to KeepCharging to switch to the standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.</li>
+     * <li>You cannot call this operation to stop an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>After you enable the default economical mode for all pay-as-you-go ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the ECS instance that you want to stop to enable standard mode. This way, the ECS instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.</li>
      * </ul>
      * 
      * @param request the request parameters of StopInstance  StopInstanceRequest
@@ -8682,11 +8682,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This operation is an asynchronous operation. After you call this operation to stop ECS instances, the operation sets the status of the ECS instances to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instances. When the status of the ECS instances changes to <code>Stopped</code>, the instances are stopped.</p>
      * <ul>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.</li>
-     * <li>After you enable economical mode for a pay-as-you-go instance that resides in a virtual private cloud (VPC), you can set <code>StoppedMode</code> to KeepCharging. This way, the pay-as-you-go instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.</li>
-     * <li>Batch operations are supported. You can use <code>BatchOptimization</code> to specify the batch operation mode.</li>
+     * <li><strong>Notes</strong><ul>
+     * <li>You cannot call this operation to stop ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>After you enable the default economical mode for all pay-as-you-go ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the pay-as-you-go ECS instances that you want to stop. This way, the pay-as-you-go ECS instances continue to be billed after the instances are stopped. The instance type resources and public IP address of the instances are retained.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of StopInstances  StopInstancesRequest

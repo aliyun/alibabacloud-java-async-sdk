@@ -53,6 +53,14 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Long maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -109,6 +117,8 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         this.instanceEventCycleStatus = builder.instanceEventCycleStatus;
         this.instanceEventType = builder.instanceEventType;
         this.instanceId = builder.instanceId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -206,6 +216,20 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -293,6 +317,8 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         private java.util.List < String > instanceEventCycleStatus; 
         private java.util.List < String > instanceEventType; 
         private String instanceId; 
+        private Long maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -321,6 +347,8 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             this.instanceEventCycleStatus = request.instanceEventCycleStatus;
             this.instanceEventType = request.instanceEventType;
             this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -492,6 +520,24 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Long maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
