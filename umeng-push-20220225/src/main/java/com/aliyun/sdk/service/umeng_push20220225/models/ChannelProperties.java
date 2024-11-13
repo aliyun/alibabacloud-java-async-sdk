@@ -32,9 +32,15 @@ public class ChannelProperties extends TeaModel {
     @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String mainActivity;
 
+    @com.aliyun.core.annotation.NameInMap("oppoCategory")
+    private String oppoCategory;
+
     @com.aliyun.core.annotation.NameInMap("oppoChannelId")
     @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String oppoChannelId;
+
+    @com.aliyun.core.annotation.NameInMap("oppoNotifyLevel")
+    private String oppoNotifyLevel;
 
     @com.aliyun.core.annotation.NameInMap("useHuaweiMessage")
     private String useHuaweiMessage;
@@ -59,7 +65,9 @@ public class ChannelProperties extends TeaModel {
         this.huaweiChannelImportance = builder.huaweiChannelImportance;
         this.huaweiMessageUrgency = builder.huaweiMessageUrgency;
         this.mainActivity = builder.mainActivity;
+        this.oppoCategory = builder.oppoCategory;
         this.oppoChannelId = builder.oppoChannelId;
+        this.oppoNotifyLevel = builder.oppoNotifyLevel;
         this.useHuaweiMessage = builder.useHuaweiMessage;
         this.vivoAddBadge = builder.vivoAddBadge;
         this.vivoCategory = builder.vivoCategory;
@@ -118,10 +126,24 @@ public class ChannelProperties extends TeaModel {
     }
 
     /**
+     * @return oppoCategory
+     */
+    public String getOppoCategory() {
+        return this.oppoCategory;
+    }
+
+    /**
      * @return oppoChannelId
      */
     public String getOppoChannelId() {
         return this.oppoChannelId;
+    }
+
+    /**
+     * @return oppoNotifyLevel
+     */
+    public String getOppoNotifyLevel() {
+        return this.oppoNotifyLevel;
     }
 
     /**
@@ -166,7 +188,9 @@ public class ChannelProperties extends TeaModel {
         private String huaweiChannelImportance; 
         private String huaweiMessageUrgency; 
         private String mainActivity; 
+        private String oppoCategory; 
         private String oppoChannelId; 
+        private String oppoNotifyLevel; 
         private String useHuaweiMessage; 
         private String vivoAddBadge; 
         private String vivoCategory; 
@@ -222,10 +246,26 @@ public class ChannelProperties extends TeaModel {
         }
 
         /**
+         * oppoCategory.
+         */
+        public Builder oppoCategory(String oppoCategory) {
+            this.oppoCategory = oppoCategory;
+            return this;
+        }
+
+        /**
          * oppoChannelId.
          */
         public Builder oppoChannelId(String oppoChannelId) {
             this.oppoChannelId = oppoChannelId;
+            return this;
+        }
+
+        /**
+         * oppoNotifyLevel.
+         */
+        public Builder oppoNotifyLevel(String oppoNotifyLevel) {
+            this.oppoNotifyLevel = oppoNotifyLevel;
             return this;
         }
 
