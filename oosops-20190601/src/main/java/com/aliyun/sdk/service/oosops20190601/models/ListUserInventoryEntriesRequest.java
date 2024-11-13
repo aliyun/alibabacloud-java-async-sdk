@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserInventoryEntriesRequest} extends {@link RequestModel}
  *
  * <p>ListUserInventoryEntriesRequest</p>
@@ -141,7 +142,7 @@ public class ListUserInventoryEntriesRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * <p>This parameter is required.</p>
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -159,7 +160,7 @@ public class ListUserInventoryEntriesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -195,7 +196,7 @@ public class ListUserInventoryEntriesRequest extends Request {
         }
 
         /**
-         * TypeName.
+         * <p>This parameter is required.</p>
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -210,6 +211,12 @@ public class ListUserInventoryEntriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserInventoryEntriesRequest} extends {@link TeaModel}
+     *
+     * <p>ListUserInventoryEntriesRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserTaskExecutionsRequest} extends {@link RequestModel}
  *
  * <p>ListUserTaskExecutionsRequest</p>
@@ -278,7 +279,7 @@ public class ListUserTaskExecutionsRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * <p>This parameter is required.</p>
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);

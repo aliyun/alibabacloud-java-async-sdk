@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidatePublicTemplateContentResponseBody} extends {@link TeaModel}
  *
  * <p>ValidatePublicTemplateContentResponseBody</p>
@@ -150,6 +151,12 @@ public class ValidatePublicTemplateContentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ValidatePublicTemplateContentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ValidatePublicTemplateContentResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;

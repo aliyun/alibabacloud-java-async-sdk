@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQuotaRequest} extends {@link RequestModel}
  *
  * <p>GetQuotaRequest</p>
@@ -83,7 +84,7 @@ public class GetQuotaRequest extends Request {
         } 
 
         /**
-         * QuotaName.
+         * <p>This parameter is required.</p>
          */
         public Builder quotaName(String quotaName) {
             this.putQueryParameter("QuotaName", quotaName);
@@ -101,7 +102,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * Uid.
+         * <p>This parameter is required.</p>
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

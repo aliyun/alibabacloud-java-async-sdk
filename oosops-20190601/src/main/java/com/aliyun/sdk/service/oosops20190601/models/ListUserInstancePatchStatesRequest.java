@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserInstancePatchStatesRequest} extends {@link RequestModel}
  *
  * <p>ListUserInstancePatchStatesRequest</p>
@@ -111,7 +112,7 @@ public class ListUserInstancePatchStatesRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * <p>This parameter is required.</p>
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -120,7 +121,7 @@ public class ListUserInstancePatchStatesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

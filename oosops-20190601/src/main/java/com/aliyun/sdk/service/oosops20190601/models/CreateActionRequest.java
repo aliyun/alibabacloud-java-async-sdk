@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateActionRequest} extends {@link RequestModel}
  *
  * <p>CreateActionRequest</p>
@@ -112,7 +113,7 @@ public class CreateActionRequest extends Request {
         } 
 
         /**
-         * ActionName.
+         * <p>This parameter is required.</p>
          */
         public Builder actionName(String actionName) {
             this.putQueryParameter("ActionName", actionName);
@@ -121,7 +122,7 @@ public class CreateActionRequest extends Request {
         }
 
         /**
-         * ActionType.
+         * <p>This parameter is required.</p>
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -130,7 +131,7 @@ public class CreateActionRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);

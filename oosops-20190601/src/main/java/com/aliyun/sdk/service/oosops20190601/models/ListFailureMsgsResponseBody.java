@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFailureMsgsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFailureMsgsResponseBody</p>
@@ -110,6 +111,12 @@ public class ListFailureMsgsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFailureMsgsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFailureMsgsResponseBody</p>
+     */
     public static class FailureMsgs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;

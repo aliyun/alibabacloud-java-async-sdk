@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDefaultQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>ListDefaultQuotaResponseBody</p>
@@ -70,6 +71,12 @@ public class ListDefaultQuotaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDefaultQuotaResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDefaultQuotaResponseBody</p>
+     */
     public static class Quotas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConcurrentExecution")
         private Integer concurrentExecution;

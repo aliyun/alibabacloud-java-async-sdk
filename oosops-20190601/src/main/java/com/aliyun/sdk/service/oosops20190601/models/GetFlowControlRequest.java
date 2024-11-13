@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFlowControlRequest} extends {@link RequestModel}
  *
  * <p>GetFlowControlRequest</p>
@@ -114,7 +115,7 @@ public class GetFlowControlRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

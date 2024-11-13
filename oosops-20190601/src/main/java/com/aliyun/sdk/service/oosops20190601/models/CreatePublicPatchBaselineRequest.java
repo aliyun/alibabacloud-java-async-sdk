@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePublicPatchBaselineRequest} extends {@link RequestModel}
  *
  * <p>CreatePublicPatchBaselineRequest</p>
@@ -126,7 +127,7 @@ public class CreatePublicPatchBaselineRequest extends Request {
         } 
 
         /**
-         * ApprovalRules.
+         * <p>This parameter is required.</p>
          */
         public Builder approvalRules(String approvalRules) {
             this.putQueryParameter("ApprovalRules", approvalRules);
@@ -153,7 +154,7 @@ public class CreatePublicPatchBaselineRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -162,7 +163,7 @@ public class CreatePublicPatchBaselineRequest extends Request {
         }
 
         /**
-         * OperationSystem.
+         * <p>This parameter is required.</p>
          */
         public Builder operationSystem(String operationSystem) {
             this.putQueryParameter("OperationSystem", operationSystem);

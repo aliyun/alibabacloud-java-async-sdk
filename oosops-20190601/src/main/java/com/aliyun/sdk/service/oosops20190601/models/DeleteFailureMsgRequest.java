@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFailureMsgRequest} extends {@link RequestModel}
  *
  * <p>DeleteFailureMsgRequest</p>
@@ -69,7 +70,7 @@ public class DeleteFailureMsgRequest extends Request {
         } 
 
         /**
-         * Operation.
+         * <p>This parameter is required.</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -78,7 +79,7 @@ public class DeleteFailureMsgRequest extends Request {
         }
 
         /**
-         * RequestFingerprint.
+         * <p>This parameter is required.</p>
          */
         public Builder requestFingerprint(String requestFingerprint) {
             this.putQueryParameter("RequestFingerprint", requestFingerprint);

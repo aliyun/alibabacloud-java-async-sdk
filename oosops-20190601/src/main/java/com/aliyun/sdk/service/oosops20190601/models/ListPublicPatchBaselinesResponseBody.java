@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicPatchBaselinesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPublicPatchBaselinesResponseBody</p>
@@ -110,6 +111,12 @@ public class ListPublicPatchBaselinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublicPatchBaselinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublicPatchBaselinesResponseBody</p>
+     */
     public static class PatchBaselines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;

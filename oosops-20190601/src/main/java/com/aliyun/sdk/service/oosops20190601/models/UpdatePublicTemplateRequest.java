@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePublicTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdatePublicTemplateRequest</p>
@@ -37,6 +38,10 @@ public class UpdatePublicTemplateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionName")
+    private String versionName;
+
     private UpdatePublicTemplateRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
@@ -45,6 +50,7 @@ public class UpdatePublicTemplateRequest extends Request {
         this.publisher = builder.publisher;
         this.regionId = builder.regionId;
         this.templateName = builder.templateName;
+        this.versionName = builder.versionName;
     }
 
     public static Builder builder() {
@@ -102,6 +108,13 @@ public class UpdatePublicTemplateRequest extends Request {
         return this.templateName;
     }
 
+    /**
+     * @return versionName
+     */
+    public String getVersionName() {
+        return this.versionName;
+    }
+
     public static final class Builder extends Request.Builder<UpdatePublicTemplateRequest, Builder> {
         private String category; 
         private String content; 
@@ -109,6 +122,7 @@ public class UpdatePublicTemplateRequest extends Request {
         private String publisher; 
         private String regionId; 
         private String templateName; 
+        private String versionName; 
 
         private Builder() {
             super();
@@ -122,6 +136,7 @@ public class UpdatePublicTemplateRequest extends Request {
             this.publisher = request.publisher;
             this.regionId = request.regionId;
             this.templateName = request.templateName;
+            this.versionName = request.versionName;
         } 
 
         /**
@@ -134,7 +149,7 @@ public class UpdatePublicTemplateRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -170,11 +185,20 @@ public class UpdatePublicTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
             this.templateName = templateName;
+            return this;
+        }
+
+        /**
+         * VersionName.
+         */
+        public Builder versionName(String versionName) {
+            this.putQueryParameter("VersionName", versionName);
+            this.versionName = versionName;
             return this;
         }
 

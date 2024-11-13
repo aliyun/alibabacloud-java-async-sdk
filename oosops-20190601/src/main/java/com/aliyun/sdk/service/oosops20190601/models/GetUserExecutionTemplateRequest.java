@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserExecutionTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetUserExecutionTemplateRequest</p>
@@ -83,7 +84,7 @@ public class GetUserExecutionTemplateRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * <p>This parameter is required.</p>
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -92,7 +93,7 @@ public class GetUserExecutionTemplateRequest extends Request {
         }
 
         /**
-         * ExecutionId.
+         * <p>This parameter is required.</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);

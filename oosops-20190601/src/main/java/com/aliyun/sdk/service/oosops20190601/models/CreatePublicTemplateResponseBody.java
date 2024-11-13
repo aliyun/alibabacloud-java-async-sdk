@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePublicTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePublicTemplateResponseBody</p>
@@ -70,6 +71,12 @@ public class CreatePublicTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePublicTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePublicTemplateResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;

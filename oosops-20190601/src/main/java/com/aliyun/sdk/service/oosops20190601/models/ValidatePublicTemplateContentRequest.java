@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidatePublicTemplateContentRequest} extends {@link RequestModel}
  *
  * <p>ValidatePublicTemplateContentRequest</p>
@@ -97,7 +98,7 @@ public class ValidatePublicTemplateContentRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -124,7 +125,7 @@ public class ValidatePublicTemplateContentRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

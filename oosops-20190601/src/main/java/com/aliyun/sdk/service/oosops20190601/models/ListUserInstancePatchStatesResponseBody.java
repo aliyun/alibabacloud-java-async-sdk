@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserInstancePatchStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserInstancePatchStatesResponseBody</p>
@@ -110,6 +111,12 @@ public class ListUserInstancePatchStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserInstancePatchStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserInstancePatchStatesResponseBody</p>
+     */
     public static class InstancePatchStates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineId")
         private String baselineId;

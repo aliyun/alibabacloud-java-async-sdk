@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePublicParameterRequest} extends {@link RequestModel}
  *
  * <p>DeletePublicParameterRequest</p>
@@ -68,7 +69,7 @@ public class DeletePublicParameterRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

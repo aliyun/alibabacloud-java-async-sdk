@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TerminateUserExecutionRequest} extends {@link RequestModel}
  *
  * <p>TerminateUserExecutionRequest</p>
@@ -83,7 +84,7 @@ public class TerminateUserExecutionRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * <p>This parameter is required.</p>
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -92,7 +93,7 @@ public class TerminateUserExecutionRequest extends Request {
         }
 
         /**
-         * ExecutionId.
+         * <p>This parameter is required.</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);

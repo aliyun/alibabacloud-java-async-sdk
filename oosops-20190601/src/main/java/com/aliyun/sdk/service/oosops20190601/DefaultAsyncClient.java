@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AuditPublicTemplateRegistration  AuditPublicTemplateRegistrationRequest
+     * @return AuditPublicTemplateRegistrationResponse
+     */
     @Override
     public CompletableFuture<AuditPublicTemplateRegistrationResponse> auditPublicTemplateRegistration(AuditPublicTemplateRegistrationRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAction  CreateActionRequest
+     * @return CreateActionResponse
+     */
     @Override
     public CompletableFuture<CreateActionResponse> createAction(CreateActionRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePublicParameter  CreatePublicParameterRequest
+     * @return CreatePublicParameterResponse
+     */
     @Override
     public CompletableFuture<CreatePublicParameterResponse> createPublicParameter(CreatePublicParameterRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePublicPatchBaseline  CreatePublicPatchBaselineRequest
+     * @return CreatePublicPatchBaselineResponse
+     */
     @Override
     public CompletableFuture<CreatePublicPatchBaselineResponse> createPublicPatchBaseline(CreatePublicPatchBaselineRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePublicTemplate  CreatePublicTemplateRequest
+     * @return CreatePublicTemplateResponse
+     */
     @Override
     public CompletableFuture<CreatePublicTemplateResponse> createPublicTemplate(CreatePublicTemplateRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFailureMsg  DeleteFailureMsgRequest
+     * @return DeleteFailureMsgResponse
+     */
     @Override
     public CompletableFuture<DeleteFailureMsgResponse> deleteFailureMsg(DeleteFailureMsgRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePublicParameter  DeletePublicParameterRequest
+     * @return DeletePublicParameterResponse
+     */
     @Override
     public CompletableFuture<DeletePublicParameterResponse> deletePublicParameter(DeletePublicParameterRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePublicPatchBaseline  DeletePublicPatchBaselineRequest
+     * @return DeletePublicPatchBaselineResponse
+     */
     @Override
     public CompletableFuture<DeletePublicPatchBaselineResponse> deletePublicPatchBaseline(DeletePublicPatchBaselineRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePublicTemplate  DeletePublicTemplateRequest
+     * @return DeletePublicTemplateResponse
+     */
     @Override
     public CompletableFuture<DeletePublicTemplateResponse> deletePublicTemplate(DeletePublicTemplateRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DoCheckResource  DoCheckResourceRequest
+     * @return DoCheckResourceResponse
+     */
     @Override
     public CompletableFuture<DoCheckResourceResponse> doCheckResource(DoCheckResourceRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAction  GetActionRequest
+     * @return GetActionResponse
+     */
     @Override
     public CompletableFuture<GetActionResponse> getAction(GetActionRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFlowControl  GetFlowControlRequest
+     * @return GetFlowControlResponse
+     */
     @Override
     public CompletableFuture<GetFlowControlResponse> getFlowControl(GetFlowControlRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPublicParameter  GetPublicParameterRequest
+     * @return GetPublicParameterResponse
+     */
     @Override
     public CompletableFuture<GetPublicParameterResponse> getPublicParameter(GetPublicParameterRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPublicPatchBaseline  GetPublicPatchBaselineRequest
+     * @return GetPublicPatchBaselineResponse
+     */
     @Override
     public CompletableFuture<GetPublicPatchBaselineResponse> getPublicPatchBaseline(GetPublicPatchBaselineRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPublicTemplate  GetPublicTemplateRequest
+     * @return GetPublicTemplateResponse
+     */
     @Override
     public CompletableFuture<GetPublicTemplateResponse> getPublicTemplate(GetPublicTemplateRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQuota  GetQuotaRequest
+     * @return GetQuotaResponse
+     */
     @Override
     public CompletableFuture<GetQuotaResponse> getQuota(GetQuotaRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserExecutionTemplate  GetUserExecutionTemplateRequest
+     * @return GetUserExecutionTemplateResponse
+     */
     @Override
     public CompletableFuture<GetUserExecutionTemplateResponse> getUserExecutionTemplate(GetUserExecutionTemplateRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserTemplate  GetUserTemplateRequest
+     * @return GetUserTemplateResponse
+     */
     @Override
     public CompletableFuture<GetUserTemplateResponse> getUserTemplate(GetUserTemplateRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListActions  ListActionsRequest
+     * @return ListActionsResponse
+     */
     @Override
     public CompletableFuture<ListActionsResponse> listActions(ListActionsRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDefaultQuota  ListDefaultQuotaRequest
+     * @return ListDefaultQuotaResponse
+     */
     @Override
     public CompletableFuture<ListDefaultQuotaResponse> listDefaultQuota(ListDefaultQuotaRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFailureMsgs  ListFailureMsgsRequest
+     * @return ListFailureMsgsResponse
+     */
     @Override
     public CompletableFuture<ListFailureMsgsResponse> listFailureMsgs(ListFailureMsgsRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOOSLogs  ListOOSLogsRequest
+     * @return ListOOSLogsResponse
+     */
     @Override
     public CompletableFuture<ListOOSLogsResponse> listOOSLogs(ListOOSLogsRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicParameters  ListPublicParametersRequest
+     * @return ListPublicParametersResponse
+     */
     @Override
     public CompletableFuture<ListPublicParametersResponse> listPublicParameters(ListPublicParametersRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicPatchBaselines  ListPublicPatchBaselinesRequest
+     * @return ListPublicPatchBaselinesResponse
+     */
     @Override
     public CompletableFuture<ListPublicPatchBaselinesResponse> listPublicPatchBaselines(ListPublicPatchBaselinesRequest request) {
         try {
@@ -375,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicTemplateRegistrations  ListPublicTemplateRegistrationsRequest
+     * @return ListPublicTemplateRegistrationsResponse
+     */
     @Override
     public CompletableFuture<ListPublicTemplateRegistrationsResponse> listPublicTemplateRegistrations(ListPublicTemplateRegistrationsRequest request) {
         try {
@@ -389,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicTemplates  ListPublicTemplatesRequest
+     * @return ListPublicTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListPublicTemplatesResponse> listPublicTemplates(ListPublicTemplatesRequest request) {
         try {
@@ -403,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserExecutionLogs  ListUserExecutionLogsRequest
+     * @return ListUserExecutionLogsResponse
+     */
     @Override
     public CompletableFuture<ListUserExecutionLogsResponse> listUserExecutionLogs(ListUserExecutionLogsRequest request) {
         try {
@@ -417,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserExecutions  ListUserExecutionsRequest
+     * @return ListUserExecutionsResponse
+     */
     @Override
     public CompletableFuture<ListUserExecutionsResponse> listUserExecutions(ListUserExecutionsRequest request) {
         try {
@@ -431,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserInstancePatchStates  ListUserInstancePatchStatesRequest
+     * @return ListUserInstancePatchStatesResponse
+     */
     @Override
     public CompletableFuture<ListUserInstancePatchStatesResponse> listUserInstancePatchStates(ListUserInstancePatchStatesRequest request) {
         try {
@@ -445,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserInstancePatches  ListUserInstancePatchesRequest
+     * @return ListUserInstancePatchesResponse
+     */
     @Override
     public CompletableFuture<ListUserInstancePatchesResponse> listUserInstancePatches(ListUserInstancePatchesRequest request) {
         try {
@@ -459,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserInventoryEntries  ListUserInventoryEntriesRequest
+     * @return ListUserInventoryEntriesResponse
+     */
     @Override
     public CompletableFuture<ListUserInventoryEntriesResponse> listUserInventoryEntries(ListUserInventoryEntriesRequest request) {
         try {
@@ -473,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserTaskExecutions  ListUserTaskExecutionsRequest
+     * @return ListUserTaskExecutionsResponse
+     */
     @Override
     public CompletableFuture<ListUserTaskExecutionsResponse> listUserTaskExecutions(ListUserTaskExecutionsRequest request) {
         try {
@@ -487,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserTemplates  ListUserTemplatesRequest
+     * @return ListUserTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListUserTemplatesResponse> listUserTemplates(ListUserTemplatesRequest request) {
         try {
@@ -501,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetTimerTriggerExecution  ResetTimerTriggerExecutionRequest
+     * @return ResetTimerTriggerExecutionResponse
+     */
     @Override
     public CompletableFuture<ResetTimerTriggerExecutionResponse> resetTimerTriggerExecution(ResetTimerTriggerExecutionRequest request) {
         try {
@@ -515,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetUserExecution  ResetUserExecutionRequest
+     * @return ResetUserExecutionResponse
+     */
     @Override
     public CompletableFuture<ResetUserExecutionResponse> resetUserExecution(ResetUserExecutionRequest request) {
         try {
@@ -529,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetFlowControl  SetFlowControlRequest
+     * @return SetFlowControlResponse
+     */
     @Override
     public CompletableFuture<SetFlowControlResponse> setFlowControl(SetFlowControlRequest request) {
         try {
@@ -543,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetQuota  SetQuotaRequest
+     * @return SetQuotaResponse
+     */
     @Override
     public CompletableFuture<SetQuotaResponse> setQuota(SetQuotaRequest request) {
         try {
@@ -557,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TerminateUserExecution  TerminateUserExecutionRequest
+     * @return TerminateUserExecutionResponse
+     */
     @Override
     public CompletableFuture<TerminateUserExecutionResponse> terminateUserExecution(TerminateUserExecutionRequest request) {
         try {
@@ -571,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAction  UpdateActionRequest
+     * @return UpdateActionResponse
+     */
     @Override
     public CompletableFuture<UpdateActionResponse> updateAction(UpdateActionRequest request) {
         try {
@@ -585,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePublicParameter  UpdatePublicParameterRequest
+     * @return UpdatePublicParameterResponse
+     */
     @Override
     public CompletableFuture<UpdatePublicParameterResponse> updatePublicParameter(UpdatePublicParameterRequest request) {
         try {
@@ -599,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePublicPatchBaseline  UpdatePublicPatchBaselineRequest
+     * @return UpdatePublicPatchBaselineResponse
+     */
     @Override
     public CompletableFuture<UpdatePublicPatchBaselineResponse> updatePublicPatchBaseline(UpdatePublicPatchBaselineRequest request) {
         try {
@@ -613,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePublicTemplate  UpdatePublicTemplateRequest
+     * @return UpdatePublicTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdatePublicTemplateResponse> updatePublicTemplate(UpdatePublicTemplateRequest request) {
         try {
@@ -627,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidatePublicTemplateContent  ValidatePublicTemplateContentRequest
+     * @return ValidatePublicTemplateContentResponse
+     */
     @Override
     public CompletableFuture<ValidatePublicTemplateContentResponse> validatePublicTemplateContent(ValidatePublicTemplateContentRequest request) {
         try {

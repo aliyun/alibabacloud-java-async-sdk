@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListActionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListActionsResponseBody</p>
@@ -110,6 +111,12 @@ public class ListActionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListActionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActionsResponseBody</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;

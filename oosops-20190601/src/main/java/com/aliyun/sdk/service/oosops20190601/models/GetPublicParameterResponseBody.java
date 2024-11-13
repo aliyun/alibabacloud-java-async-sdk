@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPublicParameterResponseBody} extends {@link TeaModel}
  *
  * <p>GetPublicParameterResponseBody</p>
@@ -70,6 +71,12 @@ public class GetPublicParameterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPublicParameterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPublicParameterResponseBody</p>
+     */
     public static class Parameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Constraints")
         private String constraints;

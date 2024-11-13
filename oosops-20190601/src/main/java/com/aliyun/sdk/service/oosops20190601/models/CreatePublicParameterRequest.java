@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePublicParameterRequest} extends {@link RequestModel}
  *
  * <p>CreatePublicParameterRequest</p>
@@ -167,7 +168,7 @@ public class CreatePublicParameterRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -176,7 +177,7 @@ public class CreatePublicParameterRequest extends Request {
         }
 
         /**
-         * ParameterType.
+         * <p>This parameter is required.</p>
          */
         public Builder parameterType(String parameterType) {
             this.putQueryParameter("ParameterType", parameterType);
@@ -194,7 +195,7 @@ public class CreatePublicParameterRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>This parameter is required.</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

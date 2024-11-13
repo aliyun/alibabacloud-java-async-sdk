@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePublicPatchBaselineResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePublicPatchBaselineResponseBody</p>
@@ -70,6 +71,12 @@ public class CreatePublicPatchBaselineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePublicPatchBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePublicPatchBaselineResponseBody</p>
+     */
     public static class PatchBaseline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApprovalRules")
         private String approvalRules;

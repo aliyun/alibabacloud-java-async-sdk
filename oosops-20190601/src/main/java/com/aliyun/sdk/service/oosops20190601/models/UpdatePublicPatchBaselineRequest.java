@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePublicPatchBaselineRequest} extends {@link RequestModel}
  *
  * <p>UpdatePublicPatchBaselineRequest</p>
@@ -137,7 +138,7 @@ public class UpdatePublicPatchBaselineRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

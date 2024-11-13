@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserExecutionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserExecutionsResponseBody</p>
@@ -110,6 +111,12 @@ public class ListUserExecutionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserExecutionsResponseBody</p>
+     */
     public static class CurrentTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
@@ -191,6 +198,12 @@ public class ListUserExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserExecutionsResponseBody</p>
+     */
     public static class Executions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Counters")
         private String counters;

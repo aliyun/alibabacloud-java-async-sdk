@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserExecutionLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserExecutionLogsResponseBody</p>
@@ -110,6 +111,12 @@ public class ListUserExecutionLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserExecutionLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserExecutionLogsResponseBody</p>
+     */
     public static class ExecutionLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;

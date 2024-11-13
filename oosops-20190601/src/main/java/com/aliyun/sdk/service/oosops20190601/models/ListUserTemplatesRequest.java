@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListUserTemplatesRequest</p>
@@ -250,7 +251,7 @@ public class ListUserTemplatesRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * <p>This parameter is required.</p>
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);

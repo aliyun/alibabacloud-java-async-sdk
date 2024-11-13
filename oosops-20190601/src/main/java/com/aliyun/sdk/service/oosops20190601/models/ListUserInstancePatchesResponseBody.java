@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserInstancePatchesResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserInstancePatchesResponseBody</p>
@@ -110,6 +111,12 @@ public class ListUserInstancePatchesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserInstancePatchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserInstancePatchesResponseBody</p>
+     */
     public static class Patches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Classification")
         private String classification;

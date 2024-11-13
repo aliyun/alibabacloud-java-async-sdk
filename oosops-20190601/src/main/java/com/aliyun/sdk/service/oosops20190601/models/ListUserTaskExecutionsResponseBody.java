@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserTaskExecutionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserTaskExecutionsResponseBody</p>
@@ -110,6 +111,12 @@ public class ListUserTaskExecutionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserTaskExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserTaskExecutionsResponseBody</p>
+     */
     public static class TaskExecutions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChildExecutionId")
         private String childExecutionId;

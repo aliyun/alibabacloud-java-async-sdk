@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicTemplateRegistrationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPublicTemplateRegistrationsResponseBody</p>
@@ -110,6 +111,12 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublicTemplateRegistrationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublicTemplateRegistrationsResponseBody</p>
+     */
     public static class Registrations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;

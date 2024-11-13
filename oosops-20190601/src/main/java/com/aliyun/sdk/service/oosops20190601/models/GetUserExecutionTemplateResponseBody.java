@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserExecutionTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserExecutionTemplateResponseBody</p>
@@ -90,6 +91,12 @@ public class GetUserExecutionTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserExecutionTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserExecutionTemplateResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
