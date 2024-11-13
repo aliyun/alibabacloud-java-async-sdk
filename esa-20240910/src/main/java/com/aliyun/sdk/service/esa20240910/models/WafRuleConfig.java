@@ -358,6 +358,9 @@ public class WafRuleConfig extends TeaModel {
      * <p>WafRuleConfig</p>
      */
     public static class Bypass extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomRules")
+        private java.util.List < Long > customRules;
+
         @com.aliyun.core.annotation.NameInMap("RegularRules")
         private java.util.List < Long > regularRules;
 
@@ -371,6 +374,7 @@ public class WafRuleConfig extends TeaModel {
         private java.util.List < String > tags;
 
         private Bypass(Builder builder) {
+            this.customRules = builder.customRules;
             this.regularRules = builder.regularRules;
             this.regularTypes = builder.regularTypes;
             this.skip = builder.skip;
@@ -383,6 +387,13 @@ public class WafRuleConfig extends TeaModel {
 
         public static Bypass create() {
             return builder().build();
+        }
+
+        /**
+         * @return customRules
+         */
+        public java.util.List < Long > getCustomRules() {
+            return this.customRules;
         }
 
         /**
@@ -414,10 +425,19 @@ public class WafRuleConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < Long > customRules; 
             private java.util.List < Long > regularRules; 
             private java.util.List < String > regularTypes; 
             private String skip; 
             private java.util.List < String > tags; 
+
+            /**
+             * CustomRules.
+             */
+            public Builder customRules(java.util.List < Long > customRules) {
+                this.customRules = customRules;
+                return this;
+            }
 
             /**
              * RegularRules.

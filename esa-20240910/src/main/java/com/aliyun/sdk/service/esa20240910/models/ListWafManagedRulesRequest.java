@@ -35,6 +35,10 @@ public class ListWafManagedRulesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtectionLevel")
+    private Integer protectionLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryArgs")
     private QueryArgs queryArgs;
 
@@ -50,6 +54,7 @@ public class ListWafManagedRulesRequest extends Request {
         this.language = builder.language;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.protectionLevel = builder.protectionLevel;
         this.queryArgs = builder.queryArgs;
         this.siteId = builder.siteId;
     }
@@ -103,6 +108,13 @@ public class ListWafManagedRulesRequest extends Request {
     }
 
     /**
+     * @return protectionLevel
+     */
+    public Integer getProtectionLevel() {
+        return this.protectionLevel;
+    }
+
+    /**
      * @return queryArgs
      */
     public QueryArgs getQueryArgs() {
@@ -122,6 +134,7 @@ public class ListWafManagedRulesRequest extends Request {
         private String language; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Integer protectionLevel; 
         private QueryArgs queryArgs; 
         private Long siteId; 
 
@@ -136,6 +149,7 @@ public class ListWafManagedRulesRequest extends Request {
             this.language = request.language;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.protectionLevel = request.protectionLevel;
             this.queryArgs = request.queryArgs;
             this.siteId = request.siteId;
         } 
@@ -192,6 +206,15 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
+         * ProtectionLevel.
+         */
+        public Builder protectionLevel(Integer protectionLevel) {
+            this.putQueryParameter("ProtectionLevel", protectionLevel);
+            this.protectionLevel = protectionLevel;
+            return this;
+        }
+
+        /**
          * QueryArgs.
          */
         public Builder queryArgs(QueryArgs queryArgs) {
@@ -233,9 +256,6 @@ public class ListWafManagedRulesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("IdNameLike")
         private String idNameLike;
 
-        @com.aliyun.core.annotation.NameInMap("ProtectionLevel")
-        private Integer protectionLevel;
-
         @com.aliyun.core.annotation.NameInMap("ProtectionLevels")
         private java.util.List < Integer > protectionLevels;
 
@@ -245,7 +265,6 @@ public class ListWafManagedRulesRequest extends Request {
         private QueryArgs(Builder builder) {
             this.action = builder.action;
             this.idNameLike = builder.idNameLike;
-            this.protectionLevel = builder.protectionLevel;
             this.protectionLevels = builder.protectionLevels;
             this.status = builder.status;
         }
@@ -273,13 +292,6 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * @return protectionLevel
-         */
-        public Integer getProtectionLevel() {
-            return this.protectionLevel;
-        }
-
-        /**
          * @return protectionLevels
          */
         public java.util.List < Integer > getProtectionLevels() {
@@ -296,7 +308,6 @@ public class ListWafManagedRulesRequest extends Request {
         public static final class Builder {
             private String action; 
             private String idNameLike; 
-            private Integer protectionLevel; 
             private java.util.List < Integer > protectionLevels; 
             private String status; 
 
@@ -313,14 +324,6 @@ public class ListWafManagedRulesRequest extends Request {
              */
             public Builder idNameLike(String idNameLike) {
                 this.idNameLike = idNameLike;
-                return this;
-            }
-
-            /**
-             * ProtectionLevel.
-             */
-            public Builder protectionLevel(Integer protectionLevel) {
-                this.protectionLevel = protectionLevel;
                 return this;
             }
 

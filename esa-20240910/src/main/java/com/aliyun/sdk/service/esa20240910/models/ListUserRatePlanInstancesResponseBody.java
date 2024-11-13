@@ -251,14 +251,35 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillingMode")
         private String billingMode;
 
+        @com.aliyun.core.annotation.NameInMap("BotInstanceLevel")
+        private String botInstanceLevel;
+
         @com.aliyun.core.annotation.NameInMap("Coverages")
         private String coverages;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("CrossborderTraffic")
+        private String crossborderTraffic;
+
+        @com.aliyun.core.annotation.NameInMap("DdosBurstableDomesticProtection")
+        private String ddosBurstableDomesticProtection;
+
+        @com.aliyun.core.annotation.NameInMap("DdosBurstableOverseasProtection")
+        private String ddosBurstableOverseasProtection;
+
+        @com.aliyun.core.annotation.NameInMap("DdosInstanceLevel")
+        private String ddosInstanceLevel;
+
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
+
+        @com.aliyun.core.annotation.NameInMap("EdgeRoutineRquest")
+        private String edgeRoutineRquest;
+
+        @com.aliyun.core.annotation.NameInMap("EdgeWafRequest")
+        private String edgeWafRequest;
 
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
@@ -266,8 +287,17 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("Layer4Traffic")
+        private String layer4Traffic;
+
+        @com.aliyun.core.annotation.NameInMap("Layer4TrafficIntl")
+        private String layer4TrafficIntl;
+
         @com.aliyun.core.annotation.NameInMap("PlanName")
         private String planName;
+
+        @com.aliyun.core.annotation.NameInMap("PlanTraffic")
+        private String planTraffic;
 
         @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
@@ -278,20 +308,38 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sites")
         private java.util.List < Sites> sites;
 
+        @com.aliyun.core.annotation.NameInMap("SmartRoutingRequest")
+        private String smartRoutingRequest;
+
+        @com.aliyun.core.annotation.NameInMap("StaticRequest")
+        private String staticRequest;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private InstanceInfo(Builder builder) {
             this.billingMode = builder.billingMode;
+            this.botInstanceLevel = builder.botInstanceLevel;
             this.coverages = builder.coverages;
             this.createTime = builder.createTime;
+            this.crossborderTraffic = builder.crossborderTraffic;
+            this.ddosBurstableDomesticProtection = builder.ddosBurstableDomesticProtection;
+            this.ddosBurstableOverseasProtection = builder.ddosBurstableOverseasProtection;
+            this.ddosInstanceLevel = builder.ddosInstanceLevel;
             this.duration = builder.duration;
+            this.edgeRoutineRquest = builder.edgeRoutineRquest;
+            this.edgeWafRequest = builder.edgeWafRequest;
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
+            this.layer4Traffic = builder.layer4Traffic;
+            this.layer4TrafficIntl = builder.layer4TrafficIntl;
             this.planName = builder.planName;
+            this.planTraffic = builder.planTraffic;
             this.planType = builder.planType;
             this.siteQuota = builder.siteQuota;
             this.sites = builder.sites;
+            this.smartRoutingRequest = builder.smartRoutingRequest;
+            this.staticRequest = builder.staticRequest;
             this.status = builder.status;
         }
 
@@ -311,6 +359,13 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return botInstanceLevel
+         */
+        public String getBotInstanceLevel() {
+            return this.botInstanceLevel;
+        }
+
+        /**
          * @return coverages
          */
         public String getCoverages() {
@@ -325,10 +380,52 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return crossborderTraffic
+         */
+        public String getCrossborderTraffic() {
+            return this.crossborderTraffic;
+        }
+
+        /**
+         * @return ddosBurstableDomesticProtection
+         */
+        public String getDdosBurstableDomesticProtection() {
+            return this.ddosBurstableDomesticProtection;
+        }
+
+        /**
+         * @return ddosBurstableOverseasProtection
+         */
+        public String getDdosBurstableOverseasProtection() {
+            return this.ddosBurstableOverseasProtection;
+        }
+
+        /**
+         * @return ddosInstanceLevel
+         */
+        public String getDdosInstanceLevel() {
+            return this.ddosInstanceLevel;
+        }
+
+        /**
          * @return duration
          */
         public Integer getDuration() {
             return this.duration;
+        }
+
+        /**
+         * @return edgeRoutineRquest
+         */
+        public String getEdgeRoutineRquest() {
+            return this.edgeRoutineRquest;
+        }
+
+        /**
+         * @return edgeWafRequest
+         */
+        public String getEdgeWafRequest() {
+            return this.edgeWafRequest;
         }
 
         /**
@@ -346,10 +443,31 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return layer4Traffic
+         */
+        public String getLayer4Traffic() {
+            return this.layer4Traffic;
+        }
+
+        /**
+         * @return layer4TrafficIntl
+         */
+        public String getLayer4TrafficIntl() {
+            return this.layer4TrafficIntl;
+        }
+
+        /**
          * @return planName
          */
         public String getPlanName() {
             return this.planName;
+        }
+
+        /**
+         * @return planTraffic
+         */
+        public String getPlanTraffic() {
+            return this.planTraffic;
         }
 
         /**
@@ -374,6 +492,20 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return smartRoutingRequest
+         */
+        public String getSmartRoutingRequest() {
+            return this.smartRoutingRequest;
+        }
+
+        /**
+         * @return staticRequest
+         */
+        public String getStaticRequest() {
+            return this.staticRequest;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -382,15 +514,27 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String billingMode; 
+            private String botInstanceLevel; 
             private String coverages; 
             private String createTime; 
+            private String crossborderTraffic; 
+            private String ddosBurstableDomesticProtection; 
+            private String ddosBurstableOverseasProtection; 
+            private String ddosInstanceLevel; 
             private Integer duration; 
+            private String edgeRoutineRquest; 
+            private String edgeWafRequest; 
             private String expireTime; 
             private String instanceId; 
+            private String layer4Traffic; 
+            private String layer4TrafficIntl; 
             private String planName; 
+            private String planTraffic; 
             private String planType; 
             private String siteQuota; 
             private java.util.List < Sites> sites; 
+            private String smartRoutingRequest; 
+            private String staticRequest; 
             private String status; 
 
             /**
@@ -398,6 +542,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
              */
             public Builder billingMode(String billingMode) {
                 this.billingMode = billingMode;
+                return this;
+            }
+
+            /**
+             * BotInstanceLevel.
+             */
+            public Builder botInstanceLevel(String botInstanceLevel) {
+                this.botInstanceLevel = botInstanceLevel;
                 return this;
             }
 
@@ -418,10 +570,58 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * CrossborderTraffic.
+             */
+            public Builder crossborderTraffic(String crossborderTraffic) {
+                this.crossborderTraffic = crossborderTraffic;
+                return this;
+            }
+
+            /**
+             * DdosBurstableDomesticProtection.
+             */
+            public Builder ddosBurstableDomesticProtection(String ddosBurstableDomesticProtection) {
+                this.ddosBurstableDomesticProtection = ddosBurstableDomesticProtection;
+                return this;
+            }
+
+            /**
+             * DdosBurstableOverseasProtection.
+             */
+            public Builder ddosBurstableOverseasProtection(String ddosBurstableOverseasProtection) {
+                this.ddosBurstableOverseasProtection = ddosBurstableOverseasProtection;
+                return this;
+            }
+
+            /**
+             * DdosInstanceLevel.
+             */
+            public Builder ddosInstanceLevel(String ddosInstanceLevel) {
+                this.ddosInstanceLevel = ddosInstanceLevel;
+                return this;
+            }
+
+            /**
              * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
+                return this;
+            }
+
+            /**
+             * EdgeRoutineRquest.
+             */
+            public Builder edgeRoutineRquest(String edgeRoutineRquest) {
+                this.edgeRoutineRquest = edgeRoutineRquest;
+                return this;
+            }
+
+            /**
+             * EdgeWafRequest.
+             */
+            public Builder edgeWafRequest(String edgeWafRequest) {
+                this.edgeWafRequest = edgeWafRequest;
                 return this;
             }
 
@@ -442,10 +642,34 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * Layer4Traffic.
+             */
+            public Builder layer4Traffic(String layer4Traffic) {
+                this.layer4Traffic = layer4Traffic;
+                return this;
+            }
+
+            /**
+             * Layer4TrafficIntl.
+             */
+            public Builder layer4TrafficIntl(String layer4TrafficIntl) {
+                this.layer4TrafficIntl = layer4TrafficIntl;
+                return this;
+            }
+
+            /**
              * PlanName.
              */
             public Builder planName(String planName) {
                 this.planName = planName;
+                return this;
+            }
+
+            /**
+             * PlanTraffic.
+             */
+            public Builder planTraffic(String planTraffic) {
+                this.planTraffic = planTraffic;
                 return this;
             }
 
@@ -470,6 +694,22 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
              */
             public Builder sites(java.util.List < Sites> sites) {
                 this.sites = sites;
+                return this;
+            }
+
+            /**
+             * SmartRoutingRequest.
+             */
+            public Builder smartRoutingRequest(String smartRoutingRequest) {
+                this.smartRoutingRequest = smartRoutingRequest;
+                return this;
+            }
+
+            /**
+             * StaticRequest.
+             */
+            public Builder staticRequest(String staticRequest) {
+                this.staticRequest = staticRequest;
                 return this;
             }
 

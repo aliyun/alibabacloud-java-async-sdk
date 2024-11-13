@@ -938,18 +938,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopScheduledPreloadExecutionResponse> stopScheduledPreloadExecution(StopScheduledPreloadExecutionRequest request);
 
     /**
-     * @param request the request parameters of TransformExpressionToMatch  TransformExpressionToMatchRequest
-     * @return TransformExpressionToMatchResponse
-     */
-    CompletableFuture<TransformExpressionToMatchResponse> transformExpressionToMatch(TransformExpressionToMatchRequest request);
-
-    /**
-     * @param request the request parameters of TransformMatchToExpression  TransformMatchToExpressionRequest
-     * @return TransformMatchToExpressionResponse
-     */
-    CompletableFuture<TransformMatchToExpressionResponse> transformMatchToExpression(TransformMatchToExpressionRequest request);
-
-    /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest
      * @return UntagResourcesResponse
      */

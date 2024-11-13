@@ -109,7 +109,7 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
         private Integer interval;
 
         @com.aliyun.core.annotation.NameInMap("SliceLen")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 10, minimum = 1)
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
         private Integer sliceLen;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")

@@ -556,9 +556,6 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PostStart")
         private String postStart;
 
-        @com.aliyun.core.annotation.NameInMap("PreStart")
-        private String preStart;
-
         @com.aliyun.core.annotation.NameInMap("PreStop")
         private String preStop;
 
@@ -583,7 +580,6 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             this.isACRImage = builder.isACRImage;
             this.name = builder.name;
             this.postStart = builder.postStart;
-            this.preStart = builder.preStart;
             this.preStop = builder.preStop;
             this.probeContent = builder.probeContent;
             this.probeType = builder.probeType;
@@ -656,13 +652,6 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         }
 
         /**
-         * @return preStart
-         */
-        public String getPreStart() {
-            return this.preStart;
-        }
-
-        /**
          * @return preStop
          */
         public String getPreStop() {
@@ -706,7 +695,6 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             private Boolean isACRImage; 
             private String name; 
             private String postStart; 
-            private String preStart; 
             private String preStop; 
             private ProbeContent probeContent; 
             private String probeType; 
@@ -774,14 +762,6 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
              */
             public Builder postStart(String postStart) {
                 this.postStart = postStart;
-                return this;
-            }
-
-            /**
-             * PreStart.
-             */
-            public Builder preStart(String preStart) {
-                this.preStart = preStart;
                 return this;
             }
 

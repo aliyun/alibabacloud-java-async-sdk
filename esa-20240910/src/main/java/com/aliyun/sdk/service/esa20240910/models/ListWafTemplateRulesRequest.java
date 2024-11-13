@@ -20,10 +20,15 @@ public class ListWafTemplateRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("QueryArgs")
     private QueryArgs queryArgs;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SiteId")
+    private Long siteId;
+
     private ListWafTemplateRulesRequest(Builder builder) {
         super(builder);
         this.phase = builder.phase;
         this.queryArgs = builder.queryArgs;
+        this.siteId = builder.siteId;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class ListWafTemplateRulesRequest extends Request {
         return this.queryArgs;
     }
 
+    /**
+     * @return siteId
+     */
+    public Long getSiteId() {
+        return this.siteId;
+    }
+
     public static final class Builder extends Request.Builder<ListWafTemplateRulesRequest, Builder> {
         private String phase; 
         private QueryArgs queryArgs; 
+        private Long siteId; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class ListWafTemplateRulesRequest extends Request {
             super(request);
             this.phase = request.phase;
             this.queryArgs = request.queryArgs;
+            this.siteId = request.siteId;
         } 
 
         /**
@@ -83,6 +97,15 @@ public class ListWafTemplateRulesRequest extends Request {
             String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
             this.putQueryParameter("QueryArgs", queryArgsShrink);
             this.queryArgs = queryArgs;
+            return this;
+        }
+
+        /**
+         * SiteId.
+         */
+        public Builder siteId(Long siteId) {
+            this.putQueryParameter("SiteId", siteId);
+            this.siteId = siteId;
             return this;
         }
 

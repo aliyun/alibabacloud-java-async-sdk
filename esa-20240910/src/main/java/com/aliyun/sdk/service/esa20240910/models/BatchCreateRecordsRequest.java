@@ -104,6 +104,133 @@ public class BatchCreateRecordsRequest extends Request {
      *
      * <p>BatchCreateRecordsRequest</p>
      */
+    public static class AuthConf extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
+        private String accessKey;
+
+        @com.aliyun.core.annotation.NameInMap("AuthType")
+        private String authType;
+
+        @com.aliyun.core.annotation.NameInMap("Region")
+        private String region;
+
+        @com.aliyun.core.annotation.NameInMap("SecretKey")
+        private String secretKey;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
+        private AuthConf(Builder builder) {
+            this.accessKey = builder.accessKey;
+            this.authType = builder.authType;
+            this.region = builder.region;
+            this.secretKey = builder.secretKey;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthConf create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessKey
+         */
+        public String getAccessKey() {
+            return this.accessKey;
+        }
+
+        /**
+         * @return authType
+         */
+        public String getAuthType() {
+            return this.authType;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
+         * @return secretKey
+         */
+        public String getSecretKey() {
+            return this.secretKey;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String accessKey; 
+            private String authType; 
+            private String region; 
+            private String secretKey; 
+            private String version; 
+
+            /**
+             * AccessKey.
+             */
+            public Builder accessKey(String accessKey) {
+                this.accessKey = accessKey;
+                return this;
+            }
+
+            /**
+             * AuthType.
+             */
+            public Builder authType(String authType) {
+                this.authType = authType;
+                return this;
+            }
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * SecretKey.
+             */
+            public Builder secretKey(String secretKey) {
+                this.secretKey = secretKey;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public AuthConf build() {
+                return new AuthConf(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BatchCreateRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>BatchCreateRecordsRequest</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Algorithm")
         private Integer algorithm;
@@ -412,6 +539,9 @@ public class BatchCreateRecordsRequest extends Request {
      * <p>BatchCreateRecordsRequest</p>
      */
     public static class RecordList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthConf")
+        private AuthConf authConf;
+
         @com.aliyun.core.annotation.NameInMap("BizName")
         private String bizName;
 
@@ -439,6 +569,7 @@ public class BatchCreateRecordsRequest extends Request {
         private String type;
 
         private RecordList(Builder builder) {
+            this.authConf = builder.authConf;
             this.bizName = builder.bizName;
             this.data = builder.data;
             this.proxied = builder.proxied;
@@ -454,6 +585,13 @@ public class BatchCreateRecordsRequest extends Request {
 
         public static RecordList create() {
             return builder().build();
+        }
+
+        /**
+         * @return authConf
+         */
+        public AuthConf getAuthConf() {
+            return this.authConf;
         }
 
         /**
@@ -506,6 +644,7 @@ public class BatchCreateRecordsRequest extends Request {
         }
 
         public static final class Builder {
+            private AuthConf authConf; 
             private String bizName; 
             private Data data; 
             private Boolean proxied; 
@@ -513,6 +652,14 @@ public class BatchCreateRecordsRequest extends Request {
             private String sourceType; 
             private Integer ttl; 
             private String type; 
+
+            /**
+             * AuthConf.
+             */
+            public Builder authConf(AuthConf authConf) {
+                this.authConf = authConf;
+                return this;
+            }
 
             /**
              * BizName.
