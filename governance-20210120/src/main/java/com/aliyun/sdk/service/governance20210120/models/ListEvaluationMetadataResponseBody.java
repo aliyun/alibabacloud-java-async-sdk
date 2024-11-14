@@ -50,7 +50,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EvaluationMetadata.
+         * <p>The metadata of a governance maturity check.</p>
          */
         public Builder evaluationMetadata(java.util.List < EvaluationMetadata> evaluationMetadata) {
             this.evaluationMetadata = evaluationMetadata;
@@ -58,7 +58,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16B208DD-86BD-5E7D-AC93-FFD44B6FBDF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +143,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * ButtonName.
+             * <p>The display name of the fixing button.</p>
              */
             public Builder buttonName(String buttonName) {
                 this.buttonName = buttonName;
@@ -148,7 +151,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * ButtonRef.
+             * <p>The navigation URL of the fixing button.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
              */
             public Builder buttonRef(String buttonRef) {
                 this.buttonRef = buttonRef;
@@ -156,7 +162,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The fixing procedure.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -164,7 +170,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the fixing procedure.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -271,7 +277,13 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * Classification.
+             * <p>The fixing method.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>UnusedAccessKeyInRamUser</p>
              */
             public Builder classification(String classification) {
                 this.classification = classification;
@@ -279,7 +291,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * CostDescription.
+             * <p>The fixing cost.</p>
              */
             public Builder costDescription(String costDescription) {
                 this.costDescription = costDescription;
@@ -287,7 +299,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the fixing item.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
+             * </blockquote>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -295,7 +310,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Guidance.
+             * <p>The content of the fixing items.</p>
              */
             public Builder guidance(java.util.List < Guidance> guidance) {
                 this.guidance = guidance;
@@ -303,7 +318,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Notice.
+             * <p>The usage notes of the fixing item.</p>
              */
             public Builder notice(String notice) {
                 this.notice = notice;
@@ -311,7 +326,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The fixing suggestion.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
+             * </blockquote>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -370,7 +388,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String remediationType; 
 
             /**
-             * Actions.
+             * <p>The fixing operations.</p>
              */
             public Builder actions(java.util.List < Actions> actions) {
                 this.actions = actions;
@@ -378,7 +396,15 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * RemediationType.
+             * <p>The type of the fixing method. Valid values:</p>
+             * <ul>
+             * <li>Manual: manual fixing</li>
+             * <li>QuickFix: quick fixing</li>
+             * <li>Analysis: auxiliary decision-making</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder remediationType(String remediationType) {
                 this.remediationType = remediationType;
@@ -425,7 +451,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private java.util.List < Remediation> remediation; 
 
             /**
-             * Remediation.
+             * <p>The fixing items.</p>
              */
             public Builder remediation(java.util.List < Remediation> remediation) {
                 this.remediation = remediation;
@@ -496,7 +522,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String propertyType; 
 
             /**
-             * DisplayName.
+             * <p>The display name of the resource property.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -504,7 +530,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyName.
+             * <p>The name of the resource property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AkLastUsedTime</p>
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;
@@ -512,7 +541,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyType.
+             * <p>The type of the resource property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder propertyType(String propertyType) {
                 this.propertyType = propertyType;
@@ -559,7 +591,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private java.util.List < ResourcePropertyMetadata> resourcePropertyMetadata; 
 
             /**
-             * ResourcePropertyMetadata.
+             * <p>The metadata of the resource properties.</p>
              */
             public Builder resourcePropertyMetadata(java.util.List < ResourcePropertyMetadata> resourcePropertyMetadata) {
                 this.resourcePropertyMetadata = resourcePropertyMetadata;
@@ -702,7 +734,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String stage; 
 
             /**
-             * Category.
+             * <p>The category of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -710,7 +745,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the check item.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -718,7 +753,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the check item.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -726,7 +761,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxgtda****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -734,7 +772,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendationLevel.
+             * <p>The governance level of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder recommendationLevel(String recommendationLevel) {
                 this.recommendationLevel = recommendationLevel;
@@ -742,7 +783,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * RemediationMetadata.
+             * <p>The metadata of the fixing task.</p>
              */
             public Builder remediationMetadata(RemediationMetadata remediationMetadata) {
                 this.remediationMetadata = remediationMetadata;
@@ -750,7 +791,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceMetadata.
+             * <p>The metadata of the checked resources.</p>
              */
             public Builder resourceMetadata(ResourceMetadata resourceMetadata) {
                 this.resourceMetadata = resourceMetadata;
@@ -758,7 +799,14 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The scope of the check item. Valid values:</p>
+             * <ul>
+             * <li>Account: the check item in a single-account governance maturity check</li>
+             * <li>ResourceDirectory: the check item in a multi-account governance maturity check</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Account</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -766,7 +814,14 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Stage.
+             * <p>The status of the check item. Valid values:</p>
+             * <ul>
+             * <li>Released: The check item is released.</li>
+             * <li>Beta: The check item is pre-released.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Released</p>
              */
             public Builder stage(String stage) {
                 this.stage = stage;
@@ -825,7 +880,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Metadata.
+             * <p>The metadata objects of a specific metadata type.</p>
              */
             public Builder metadata(java.util.List < Metadata> metadata) {
                 this.metadata = metadata;
@@ -833,7 +888,13 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the metadata. Valid values:</p>
+             * <ul>
+             * <li>Metric: the check item</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Metric</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -38,7 +38,10 @@ public class RunEvaluationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D3E2A3A-F2B8-578D-9659-3195F94A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

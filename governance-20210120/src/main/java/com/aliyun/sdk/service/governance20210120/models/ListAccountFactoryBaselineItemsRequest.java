@@ -124,7 +124,11 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +137,7 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         }
 
         /**
-         * Names.
+         * <p>The names of the baseline items.</p>
          */
         public Builder names(java.util.List < String > names) {
             this.putQueryParameter("Names", names);
@@ -142,7 +146,10 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAACDGQdAEX3m42z3sQ+f3VTK2Xr2DzYbz/SAfc/zJRqod</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -151,7 +158,7 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         }
 
         /**
-         * <p>RegionId</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -163,7 +170,10 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the baseline items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccountFactory</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -172,7 +182,7 @@ public class ListAccountFactoryBaselineItemsRequest extends Request {
         }
 
         /**
-         * Versions.
+         * <p>The versions of the baseline items.</p>
          */
         public Builder versions(java.util.List < String > versions) {
             this.putQueryParameter("Versions", versions);

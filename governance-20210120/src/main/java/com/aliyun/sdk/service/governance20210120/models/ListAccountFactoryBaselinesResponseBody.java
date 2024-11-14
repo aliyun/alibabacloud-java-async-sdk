@@ -62,7 +62,7 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>An array that consists of baselines.</p>
+         * <p>The baselines.</p>
          */
         public Builder baselines(java.util.List < Baselines> baselines) {
             this.baselines = baselines;
@@ -236,8 +236,8 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
             /**
              * <p>The type of the baseline. Valid values:</p>
              * <ul>
-             * <li>System: default baseline</li>
-             * <li>Custom: custom baseline</li>
+             * <li>System: default baseline.</li>
+             * <li>Custom: custom baseline.</li>
              * </ul>
              * 
              * <strong>example:</strong>

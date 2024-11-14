@@ -68,7 +68,14 @@ public class ListEvaluationMetadataRequest extends Request {
         } 
 
         /**
-         * Language.
+         * <p>The language. The information is returned in the specified language. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh: Chinese</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -77,7 +84,10 @@ public class ListEvaluationMetadataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

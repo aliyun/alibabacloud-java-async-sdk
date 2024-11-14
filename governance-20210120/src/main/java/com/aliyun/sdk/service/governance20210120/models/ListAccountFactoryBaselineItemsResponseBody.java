@@ -62,7 +62,7 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BaselineItems.
+         * <p>The baseline items.</p>
          */
         public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
             this.baselineItems = baselineItems;
@@ -70,7 +70,10 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAACDGQdAEX3m42z3sQ+f3VTK2Xr2DzYbz/SAfc/zJRqod</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +81,10 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B40D73D8-76AC-5D3C-AC63-4FC8AFCE6671</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,7 +154,10 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Name.
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -156,7 +165,10 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccountFactory</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -164,7 +176,10 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -259,7 +274,7 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * DependsOn.
+             * <p>The dependency of the baseline item.</p>
              */
             public Builder dependsOn(java.util.List < DependsOn> dependsOn) {
                 this.dependsOn = dependsOn;
@@ -267,7 +282,10 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Notification.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -275,7 +293,10 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_ACCOUNT_NOTIFICATION</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -283,7 +304,10 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccountFactory</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -291,7 +315,10 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

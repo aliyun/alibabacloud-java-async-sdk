@@ -110,7 +110,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>The account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103144549568****</p>
          */
         public Builder accountId(Long accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -119,7 +122,11 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the check item.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2841889.html">ListEvaluationMetadata</a> operation to query the ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xfyve5****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -128,7 +135,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for a single request. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -137,7 +147,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAGEaXR18y1rqykZHIqRuBejOqED4S3Xne33c7zbn****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -146,7 +159,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

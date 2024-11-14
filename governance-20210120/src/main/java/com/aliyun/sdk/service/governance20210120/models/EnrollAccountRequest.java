@@ -314,7 +314,7 @@ public class EnrollAccountRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -498,7 +498,10 @@ public class EnrollAccountRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -506,7 +509,10 @@ public class EnrollAccountRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

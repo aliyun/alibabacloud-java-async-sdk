@@ -38,7 +38,10 @@ public class DeleteAccountFactoryBaselineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F45D888-8C4D-55E5-ACA2-D1515159181D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

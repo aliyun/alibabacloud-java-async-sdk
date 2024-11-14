@@ -68,7 +68,10 @@ public class DeleteAccountFactoryBaselineRequest extends Request {
         } 
 
         /**
-         * BaselineId.
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afb-bp1durvn3lgqe28v****</p>
          */
         public Builder baselineId(String baselineId) {
             this.putQueryParameter("BaselineId", baselineId);
@@ -77,7 +80,10 @@ public class DeleteAccountFactoryBaselineRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -96,7 +96,7 @@ public class BatchEnrollAccountsRequest extends Request {
         } 
 
         /**
-         * Accounts.
+         * <p>The resource accounts.</p>
          */
         public Builder accounts(java.util.List < Accounts> accounts) {
             this.putQueryParameter("Accounts", accounts);
@@ -105,7 +105,11 @@ public class BatchEnrollAccountsRequest extends Request {
         }
 
         /**
-         * BaselineId.
+         * <p>The baseline ID.</p>
+         * <p>If this parameter is left empty, the default baseline is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afb-bp1durvn3lgqe28v****</p>
          */
         public Builder baselineId(String baselineId) {
             this.putQueryParameter("BaselineId", baselineId);
@@ -114,7 +118,8 @@ public class BatchEnrollAccountsRequest extends Request {
         }
 
         /**
-         * BaselineItems.
+         * <p>The baseline items.</p>
+         * <p>If this parameter is specified, the configurations of the baseline items are merged with the baseline applied to the specified account. The configurations of the same baseline items are subject to the configurations of this parameter. We recommend that you leave this parameter empty and configure the <code>BaselineId</code> parameter to specify an account baseline and apply the configurations of the account baseline to the account.</p>
          */
         public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
             this.putQueryParameter("BaselineItems", baselineItems);
@@ -123,7 +128,10 @@ public class BatchEnrollAccountsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +179,10 @@ public class BatchEnrollAccountsRequest extends Request {
             private Long accountUid; 
 
             /**
-             * AccountUid.
+             * <p>The account ID. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12868156179****</p>
              */
             public Builder accountUid(Long accountUid) {
                 this.accountUid = accountUid;
@@ -254,7 +265,10 @@ public class BatchEnrollAccountsRequest extends Request {
             private String version; 
 
             /**
-             * Config.
+             * <p>The configurations of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Notifications&quot;:[{&quot;GroupKey&quot;:&quot;account_msg&quot;,&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;aa&quot;}],&quot;PmsgStatus&quot;:1,&quot;EmailStatus&quot;:1,&quot;SmsStatus&quot;:1}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -262,7 +276,10 @@ public class BatchEnrollAccountsRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +287,14 @@ public class BatchEnrollAccountsRequest extends Request {
             }
 
             /**
-             * Skip.
+             * <p>Specifies whether to skip the baseline item. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -278,7 +302,10 @@ public class BatchEnrollAccountsRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

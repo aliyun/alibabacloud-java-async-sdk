@@ -50,7 +50,10 @@ public class CreateAccountFactoryBaselineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BaselineId.
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afb-bp1e6ixtiwupap8m****</p>
          */
         public Builder baselineId(String baselineId) {
             this.baselineId = baselineId;
@@ -58,7 +61,10 @@ public class CreateAccountFactoryBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5592E2E-0FC4-557C-B989-DF229B5EBE13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

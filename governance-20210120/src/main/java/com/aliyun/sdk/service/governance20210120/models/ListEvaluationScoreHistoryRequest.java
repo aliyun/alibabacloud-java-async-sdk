@@ -96,7 +96,10 @@ public class ListEvaluationScoreHistoryRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176618589410****</p>
          */
         public Builder accountId(Long accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -105,7 +108,11 @@ public class ListEvaluationScoreHistoryRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+         * <p>By default, the historical scores that were generated in the seven days before the current date are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-11</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -114,7 +121,10 @@ public class ListEvaluationScoreHistoryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,7 +133,11 @@ public class ListEvaluationScoreHistoryRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+         * <p>You can query the historical scores within the previous 180 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-11</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

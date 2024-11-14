@@ -96,7 +96,8 @@ public class CreateAccountFactoryBaselineRequest extends Request {
         } 
 
         /**
-         * BaselineItems.
+         * <p>The baseline items.</p>
+         * <p>You can call the <a href="~~ListAccountFactoryBaselineItems~~">ListAccountFactoryBaselineItems</a> operation to query a list of baseline items supported by the account factory in Cloud Governance Center.</p>
          */
         public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
             this.putQueryParameter("BaselineItems", baselineItems);
@@ -105,7 +106,10 @@ public class CreateAccountFactoryBaselineRequest extends Request {
         }
 
         /**
-         * BaselineName.
+         * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder baselineName(String baselineName) {
             this.putQueryParameter("BaselineName", baselineName);
@@ -114,7 +118,10 @@ public class CreateAccountFactoryBaselineRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default Baseline.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -123,7 +130,7 @@ public class CreateAccountFactoryBaselineRequest extends Request {
         }
 
         /**
-         * <p>RegionId</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -198,7 +205,10 @@ public class CreateAccountFactoryBaselineRequest extends Request {
             private String version; 
 
             /**
-             * Config.
+             * <p>The configurations of the baseline item. The value of this parameter is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;EnabledServices&quot;:[&quot;CEN_TR&quot;,&quot;CDT&quot;,&quot;CMS&quot;,&quot;KMS&quot;]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -206,7 +216,10 @@ public class CreateAccountFactoryBaselineRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -214,7 +227,10 @@ public class CreateAccountFactoryBaselineRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

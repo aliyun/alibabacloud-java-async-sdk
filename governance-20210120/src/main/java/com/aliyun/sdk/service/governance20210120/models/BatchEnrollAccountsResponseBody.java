@@ -38,7 +38,10 @@ public class BatchEnrollAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16B208DD-86BD-5E7D-AC93-FFD44B6FBDF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

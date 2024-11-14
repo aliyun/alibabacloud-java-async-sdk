@@ -62,7 +62,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAGEaXR18y1rqykZHIqRuBejOqED4S3Xne33c7zbn****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC9BD94C-D20C-4D27-88D4-89E8D75C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>The details of the non-compliant resources.</p>
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -136,7 +142,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             private String propertyValue; 
 
             /**
-             * PropertyName.
+             * <p>The name of the resource attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DisplayName</p>
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;
@@ -144,7 +153,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValue.
+             * <p>The value of the resource attribute.</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -275,7 +284,16 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * ComplianceType.
+             * <p>合规状态。取值：</p>
+             * <ul>
+             * <li>NonCompliant：不合规。</li>
+             * <li>Excluded：已忽略。</li>
+             * <li>PendingExclusion：已忽略未生效。</li>
+             * <li>PendingInclusion：已取消忽略未生效。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NonCompliant</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -283,7 +301,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -291,7 +312,13 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceClassification.
+             * <p>The check results further analyzed by auxiliary decision-making.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the check item supports the auxiliary decision-making feature.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>RecentUnloginRamUser</p>
              */
             public Builder resourceClassification(String resourceClassification) {
                 this.resourceClassification = resourceClassification;
@@ -299,7 +326,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26435103783237****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -307,7 +337,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The name of the resource.</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -315,7 +345,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceOwnerId.
+             * <p>The ID of the Alibaba Cloud account that owns the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>176618589410****</p>
              */
             public Builder resourceOwnerId(Long resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -323,7 +356,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceProperties.
+             * <p>The attributes of the resource.</p>
              */
             public Builder resourceProperties(java.util.List < ResourceProperties> resourceProperties) {
                 this.resourceProperties = resourceProperties;
@@ -331,7 +364,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::RAM::User</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

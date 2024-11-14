@@ -20,6 +20,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to apply an account baseline to existing resource accounts.
+     * Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</p>
+     * 
      * @param request the request parameters of BatchEnrollAccounts  BatchEnrollAccountsRequest
      * @return BatchEnrollAccountsResponse
      */

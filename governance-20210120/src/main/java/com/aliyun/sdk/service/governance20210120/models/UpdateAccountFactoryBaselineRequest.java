@@ -110,7 +110,10 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
         } 
 
         /**
-         * BaselineId.
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afb-bp1pq3emlkt27vsj****</p>
          */
         public Builder baselineId(String baselineId) {
             this.putQueryParameter("BaselineId", baselineId);
@@ -119,7 +122,8 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
         }
 
         /**
-         * BaselineItems.
+         * <p>The baseline items.</p>
+         * <p>You can call the <a href="~~ListAccountFactoryBaselineItems~~">ListAccountFactoryBaselineItems</a> operation to query a list of baseline items supported by the account factory in Cloud Governance Center.</p>
          */
         public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
             this.putQueryParameter("BaselineItems", baselineItems);
@@ -128,7 +132,7 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
         }
 
         /**
-         * BaselineName.
+         * <p>The name of the baseline.</p>
          */
         public Builder baselineName(String baselineName) {
             this.putQueryParameter("BaselineName", baselineName);
@@ -137,7 +141,7 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the baseline.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -146,7 +150,7 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
         }
 
         /**
-         * <p>RegionId</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -221,7 +225,10 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
             private String version; 
 
             /**
-             * Config.
+             * <p>The configurations of the baseline item. The value of this parameter is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;EnabledServices&quot;:[&quot;CEN_TR&quot;,&quot;CDT&quot;,&quot;CMS&quot;,&quot;KMS&quot;]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -229,7 +236,10 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,7 +247,10 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
