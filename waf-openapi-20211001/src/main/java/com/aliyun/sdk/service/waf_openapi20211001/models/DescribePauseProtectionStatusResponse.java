@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePauseProtectionStatusResponse} extends {@link TeaModel}
  *
  * <p>DescribePauseProtectionStatusResponse</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePostpaidInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreatePostpaidInstanceRequest</p>
@@ -67,11 +68,14 @@ public class CreatePostpaidInstanceRequest extends Request {
         } 
 
         /**
-         * The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -80,7 +84,10 @@ public class CreatePostpaidInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4gh****wela</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -111,7 +112,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -120,11 +124,15 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,7 +141,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can specify up to 50 resource IDs.
+         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -142,7 +150,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.
+         * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::WAF::DEFENSERESOURCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -151,7 +163,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that are added to the resource.
+         * <p>The tags that are added to the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -166,6 +178,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -205,7 +223,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that is added to the resource. Valid values of N: 1 to 20.
+             * <p>The key of tag N that is added to the resource. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tagkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -213,7 +234,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the resource. Valid values of N: 1 to 20.
+             * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

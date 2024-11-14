@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlsAuthStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlsAuthStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSlsAuthStatusResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3589D3A3-4A04-51CB-AA89-353ED20A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class DescribeSlsAuthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether WAF is authorized to access Logstores. Valid values:
-         * <p>
+         * <p>Indicates whether WAF is authorized to access Logstores. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

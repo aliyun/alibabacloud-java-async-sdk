@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHybridCloudClusterBypassStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyHybridCloudClusterBypassStatusRequest</p>
@@ -84,7 +85,11 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the hybrid cloud cluster.
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdbc_cluster_****</p>
          */
         public Builder clusterResourceId(String clusterResourceId) {
             this.putQueryParameter("ClusterResourceId", clusterResourceId);
@@ -93,12 +98,13 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>**</p>
+         * <p>**You can call the **DescribeInstanceInfo<a href="https://help.aliyun.com/document_detail/140857.html"> operation to obtain the ID of the WAF instance.</a></p>
+         * <p>This parameter is required.</p>
          * 
-         * **
-         * 
-         * **You can call the **DescribeInstanceInfo[ operation to obtain the ID of the WAF instance.](~~140857~~)
+         * <strong>example:</strong>
+         * <p>waf_elasticity-cn-0xldbqt****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -107,11 +113,15 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends Request {
         }
 
         /**
-         * The status of manual bypass. Valid values:
-         * <p>
+         * <p>The status of manual bypass. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled.</li>
+         * <li><strong>off</strong>: disabled. This is the default value.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: enabled.
-         * *   **off**: disabled. This is the default value.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleStatus(String ruleStatus) {
             this.putQueryParameter("RuleStatus", ruleStatus);

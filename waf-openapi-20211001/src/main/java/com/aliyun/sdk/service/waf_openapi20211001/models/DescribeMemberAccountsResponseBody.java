@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMemberAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMemberAccountsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the member.
+         * <p>The information about the member.</p>
          */
         public Builder accountInfos(java.util.List < AccountInfos> accountInfos) {
             this.accountInfos = accountInfos;
@@ -57,7 +58,10 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50C4A80D-D46C-57E0-9A7D-03C0****4852</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMemberAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMemberAccountsResponseBody</p>
+     */
     public static class AccountInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -145,7 +155,10 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             private Long gmtCreate; 
 
             /**
-             * The ID of the member.
+             * <p>The ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>169************21</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -153,7 +166,10 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member.
+             * <p>The name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipflgmqqnbjg</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -161,12 +177,15 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member.
-             * <p>
+             * <p>The status of the member.</p>
+             * <ul>
+             * <li><strong>enabled</strong>: managed.</li>
+             * <li><strong>disabled</strong>: not managed.</li>
+             * <li><strong>disabling</strong>: being deleted.</li>
+             * </ul>
              * 
-             * *   **enabled**: managed.
-             * *   **disabled**: not managed.
-             * *   **disabling**: being deleted.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -174,7 +193,10 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the member.
+             * <p>The description of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -182,7 +204,10 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member was added.
+             * <p>The time when the member was added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683367751000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;

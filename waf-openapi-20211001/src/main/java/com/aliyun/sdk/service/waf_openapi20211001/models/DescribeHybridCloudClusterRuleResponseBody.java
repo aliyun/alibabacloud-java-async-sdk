@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridCloudClusterRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHybridCloudClusterRuleResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the rule.
+         * <p>The details of the rule.</p>
          */
         public Builder clusterRule(ClusterRule clusterRule) {
             this.clusterRule = clusterRule;
@@ -57,7 +58,10 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F29A6D2-9EB6-526D-A997-36888**99CB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHybridCloudClusterRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridCloudClusterRuleResponseBody</p>
+     */
     public static class ClusterRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleConfig")
         private String ruleConfig;
@@ -121,7 +131,10 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
             private String ruleType; 
 
             /**
-             * The configuration of the rule.
+             * <p>The configuration of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;check_mode&quot;:&quot;all&quot;,&quot;exclude&quot;:{&quot;exact&quot;:[],&quot;regex&quot;:[]}}</p>
              */
             public Builder ruleConfig(String ruleConfig) {
                 this.ruleConfig = ruleConfig;
@@ -129,11 +142,14 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled.</li>
+             * <li><strong>off</strong>: disabled.</li>
+             * </ul>
              * 
-             * *   **on**: enabled.
-             * *   **off**: disabled.
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -141,10 +157,13 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>pullin</strong>: The traffic redirection rule of the hybrid cloud cluster.</li>
+             * </ul>
              * 
-             * *   **pullin**: The traffic redirection rule of the hybrid cloud cluster.
+             * <strong>example:</strong>
+             * <p>pullin</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -112,11 +113,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the specified resource groups or members. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the specified resource groups or members. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
          * 
-         * *   false (default)
-         * *   true
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -125,11 +129,15 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +146,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can specify up to 50 resource IDs.
+         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -147,7 +156,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.
+         * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::WAF::DEFENSERESOURCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -156,7 +169,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys. You can specify up to 20 tag keys.
+         * <p>The tag keys. You can specify up to 20 tag keys.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

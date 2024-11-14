@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVisitUasResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVisitUasResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeVisitUasResponseBody extends TeaModel {
         private java.util.List < Uas> uas; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2847CE98-AFAE-5A64-B80E-60461717F9DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeVisitUasResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the top 10 user agents that are used to initiate requests.
+         * <p>The array of the top 10 user agents that are used to initiate requests.</p>
          */
         public Builder uas(java.util.List < Uas> uas) {
             this.uas = uas;
@@ -70,6 +74,12 @@ public class DescribeVisitUasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVisitUasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVisitUasResponseBody</p>
+     */
     public static class Uas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeVisitUasResponseBody extends TeaModel {
             private String ua; 
 
             /**
-             * The number of requests that use the user agent.
+             * <p>The number of requests that use the user agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>698455</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class DescribeVisitUasResponseBody extends TeaModel {
             }
 
             /**
-             * The user agent.
+             * <p>The user agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chrome</p>
              */
             public Builder ua(String ua) {
                 this.ua = ua;

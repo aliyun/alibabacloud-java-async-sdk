@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMemberAccountRequest} extends {@link RequestModel}
  *
  * <p>ModifyMemberAccountRequest</p>
@@ -126,7 +127,11 @@ public class ModifyMemberAccountRequest extends Request {
         } 
 
         /**
-         * The description of the member. The description must be 1 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and asterisks (\*).
+         * <p>The description of the member. The description must be 1 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), and asterisks (*).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,10 +140,14 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_elasticity**-*******021</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +156,11 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the managed member.
+         * <p>The Alibaba Cloud account ID of the managed member.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131**********39</p>
          */
         public Builder memberAccountId(String memberAccountId) {
             this.putQueryParameter("MemberAccountId", memberAccountId);
@@ -156,11 +169,14 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +185,10 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -178,7 +197,10 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. The system automatically obtains the value of this parameter.
+         * <p>The source IP address of the request. The system automatically obtains the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

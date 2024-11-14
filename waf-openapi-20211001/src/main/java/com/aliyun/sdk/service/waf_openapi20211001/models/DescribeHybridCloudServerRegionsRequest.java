@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridCloudServerRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeHybridCloudServerRegionsRequest</p>
@@ -111,10 +112,14 @@ public class DescribeHybridCloudServerRegionsRequest extends Request {
         } 
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v3prepaid_public_cn-5yd****7009</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,10 +128,13 @@ public class DescribeHybridCloudServerRegionsRequest extends Request {
         }
 
         /**
-         * The code of the region.
-         * <p>
+         * <p>The code of the region.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set RegionType to region. The value is the code of the city.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if you set RegionType to region. The value is the code of the city.
+         * <strong>example:</strong>
+         * <p>410</p>
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
@@ -135,11 +143,14 @@ public class DescribeHybridCloudServerRegionsRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,12 +159,16 @@ public class DescribeHybridCloudServerRegionsRequest extends Request {
         }
 
         /**
-         * The type of the region. Valid values:
-         * <p>
+         * <p>The type of the region. Valid values:</p>
+         * <ul>
+         * <li><strong>operator</strong>: the ISP.</li>
+         * <li><strong>continents</strong>: the continent.</li>
+         * <li><strong>region</strong>: the city.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **operator**: the ISP.
-         * *   **continents**: the continent.
-         * *   **region**: the city.
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         public Builder regionType(String regionType) {
             this.putQueryParameter("RegionType", regionType);
@@ -162,7 +177,10 @@ public class DescribeHybridCloudServerRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>DescribeDefenseRuleRequest</p>
@@ -112,10 +113,14 @@ public class DescribeDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,11 +129,14 @@ public class DescribeDefenseRuleRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -137,7 +145,10 @@ public class DescribeDefenseRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -146,7 +157,11 @@ public class DescribeDefenseRuleRequest extends Request {
         }
 
         /**
-         * The ID of the protection rule that you want to query.
+         * <p>The ID of the protection rule that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20026192</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -155,7 +170,11 @@ public class DescribeDefenseRuleRequest extends Request {
         }
 
         /**
-         * The ID of the protection rule template to which the protection rule that you want to query belongs.
+         * <p>The ID of the protection rule template to which the protection rule that you want to query belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10318</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

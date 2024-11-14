@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisecSensitiveDomainStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisecSensitiveDomainStatisticResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         private Long totalCount; 
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56B40D30-4960-4F19-B7D5-2B1F***6CB70</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisecSensitiveDomainStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisecSensitiveDomainStatisticResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiCount")
         private Long apiCount;
@@ -165,7 +178,10 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
             private String sensitiveName; 
 
             /**
-             * ApiCount.
+             * <p>The number of APIs that are involved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder apiCount(Long apiCount) {
                 this.apiCount = apiCount;
@@ -173,7 +189,10 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
             }
 
             /**
-             * DomainCount.
+             * <p>The number of sites that are involved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder domainCount(Long domainCount) {
                 this.domainCount = domainCount;
@@ -181,7 +200,10 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
             }
 
             /**
-             * SensitiveCode.
+             * <p>The code of the sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sensitiveCode(String sensitiveCode) {
                 this.sensitiveCode = sensitiveCode;
@@ -189,7 +211,10 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
             }
 
             /**
-             * SensitiveLevel.
+             * <p>The sensitivity level of the sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L3</p>
              */
             public Builder sensitiveLevel(String sensitiveLevel) {
                 this.sensitiveLevel = sensitiveLevel;
@@ -197,7 +222,10 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
             }
 
             /**
-             * SensitiveName.
+             * <p>The name of the sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1002</p>
              */
             public Builder sensitiveName(String sensitiveName) {
                 this.sensitiveName = sensitiveName;

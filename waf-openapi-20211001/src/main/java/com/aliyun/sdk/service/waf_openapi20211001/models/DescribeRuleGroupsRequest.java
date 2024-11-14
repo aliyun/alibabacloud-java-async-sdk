@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRuleGroupsRequest</p>
@@ -138,10 +139,14 @@ public class DescribeRuleGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -150,7 +155,10 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -159,7 +167,10 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,11 +179,14 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -181,7 +195,10 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -190,11 +207,14 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The type of the query condition. Valid values:
-         * <p>
+         * <p>The type of the query condition. Valid values:</p>
+         * <ul>
+         * <li><strong>id:</strong> queries regular expression rule groups by ID.</li>
+         * <li><strong>name:</strong> queries regular expression rule groups by name.</li>
+         * </ul>
          * 
-         * *   **id:** queries regular expression rule groups by ID.
-         * *   **name:** queries regular expression rule groups by name.
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder searchType(String searchType) {
             this.putQueryParameter("SearchType", searchType);
@@ -203,7 +223,10 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The query condition.
+         * <p>The query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchValue(String searchValue) {
             this.putQueryParameter("SearchValue", searchValue);

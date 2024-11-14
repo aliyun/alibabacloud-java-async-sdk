@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProductInstancesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The information about the instances.
+         * <p>The information about the instances.</p>
          */
         public Builder productInstances(java.util.List < ProductInstances> productInstances) {
             this.productInstances = productInstances;
@@ -69,7 +70,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDCBAE1E-2B3F-5C13-AD20-844B9473****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProductInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductInstancesResponseBody</p>
+     */
     public static class Certificates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
@@ -129,7 +142,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             private String certificateName; 
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10106183</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -137,7 +153,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trafficxxxx.cn</p>
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
@@ -151,6 +170,12 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductInstancesResponseBody</p>
+     */
     public static class ResourcePorts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Certificates")
         private java.util.List < Certificates> certificates;
@@ -202,7 +227,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * The information about the certificates.
+             * <p>The information about the certificates.</p>
              */
             public Builder certificates(java.util.List < Certificates> certificates) {
                 this.certificates = certificates;
@@ -210,7 +235,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -218,11 +246,14 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type. Valid values:
-             * <p>
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li><strong>http</strong></li>
+             * <li><strong>https</strong></li>
+             * </ul>
              * 
-             * *   **http**
-             * *   **https**
+             * <strong>example:</strong>
+             * <p>https</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -236,6 +267,12 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductInstancesResponseBody</p>
+     */
     public static class ProductInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
@@ -361,7 +398,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             private String resourceRegionId; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1704********9107</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -369,7 +409,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze1tm4pvghp****cluv</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -377,7 +420,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceIp.
+             * <p>The IP address of the instance that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.X.X.1</p>
              */
             public Builder resourceInstanceIp(String resourceInstanceIp) {
                 this.resourceInstanceIp = resourceInstanceIp;
@@ -385,7 +431,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceName.
+             * <p>The name of the instance that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demoInstanceName</p>
              */
             public Builder resourceInstanceName(String resourceInstanceName) {
                 this.resourceInstanceName = resourceInstanceName;
@@ -393,7 +442,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the instance.
+             * <p>The public IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.X.X.1</p>
              */
             public Builder resourceIp(String resourceIp) {
                 this.resourceIp = resourceIp;
@@ -401,7 +453,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-test</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -409,7 +464,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the ports.
+             * <p>The information about the ports.</p>
              */
             public Builder resourcePorts(java.util.List < ResourcePorts> resourcePorts) {
                 this.resourcePorts = resourcePorts;
@@ -417,12 +472,15 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service to which the instance belongs. Valid values:
-             * <p>
+             * <p>The cloud service to which the instance belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+             * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+             * <li><strong>ecs</strong>: ECS.</li>
+             * </ul>
              * 
-             * *   **clb4**: Layer 4 CLB.
-             * *   **clb7**: Layer 7 CLB.
-             * *   **ecs**: ECS.
+             * <strong>example:</strong>
+             * <p>clb4</p>
              */
             public Builder resourceProduct(String resourceProduct) {
                 this.resourceProduct = resourceProduct;
@@ -430,19 +488,22 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance. Valid values:
-             * <p>
+             * <p>The region ID of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>cn-chengdu</strong>: China (Chengdu).</li>
+             * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+             * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</li>
+             * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
+             * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
+             * <li><strong>cn-shenzhen</strong>: China (Shenzhen).</li>
+             * <li><strong>cn-qingdao</strong>: China (Qingdao).</li>
+             * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
+             * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
+             * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
+             * </ul>
              * 
-             * *   **cn-chengdu**: China (Chengdu).
-             * *   **cn-beijing**: China (Beijing).
-             * *   **cn-zhangjiakou**: China (Zhangjiakou).
-             * *   **cn-hangzhou**: China (Hangzhou).
-             * *   **cn-shanghai**: China (Shanghai).
-             * *   **cn-shenzhen**: China (Shenzhen).
-             * *   **cn-qingdao**: China (Qingdao).
-             * *   **cn-hongkong**: China (Hong Kong).
-             * *   **ap-southeast-3**: Malaysia (Kuala Lumpur).
-             * *   **ap-southeast-5**: Indonesia (Jakarta).
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;

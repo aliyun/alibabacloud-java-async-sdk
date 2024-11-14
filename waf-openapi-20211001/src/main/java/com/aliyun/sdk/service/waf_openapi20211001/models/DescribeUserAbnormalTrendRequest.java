@@ -6,15 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteApisecAbnormalRequest} extends {@link RequestModel}
+ * 
+ * {@link DescribeUserAbnormalTrendRequest} extends {@link RequestModel}
  *
- * <p>DeleteApisecAbnormalRequest</p>
+ * <p>DescribeUserAbnormalTrendRequest</p>
  */
-public class DeleteApisecAbnormalRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AbnormalId")
-    private String abnormalId;
-
+public class DescribeUserAbnormalTrendRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
@@ -25,10 +22,6 @@ public class DeleteApisecAbnormalRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Region")
-    private String region;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -36,12 +29,10 @@ public class DeleteApisecAbnormalRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DeleteApisecAbnormalRequest(Builder builder) {
+    private DescribeUserAbnormalTrendRequest(Builder builder) {
         super(builder);
-        this.abnormalId = builder.abnormalId;
         this.clusterId = builder.clusterId;
         this.instanceId = builder.instanceId;
-        this.region = builder.region;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
@@ -50,20 +41,13 @@ public class DeleteApisecAbnormalRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteApisecAbnormalRequest create() {
+    public static DescribeUserAbnormalTrendRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return abnormalId
-     */
-    public String getAbnormalId() {
-        return this.abnormalId;
     }
 
     /**
@@ -81,13 +65,6 @@ public class DeleteApisecAbnormalRequest extends Request {
     }
 
     /**
-     * @return region
-     */
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -101,11 +78,9 @@ public class DeleteApisecAbnormalRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteApisecAbnormalRequest, Builder> {
-        private String abnormalId; 
+    public static final class Builder extends Request.Builder<DescribeUserAbnormalTrendRequest, Builder> {
         private String clusterId; 
         private String instanceId; 
-        private String region; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
 
@@ -113,27 +88,22 @@ public class DeleteApisecAbnormalRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteApisecAbnormalRequest request) {
+        private Builder(DescribeUserAbnormalTrendRequest request) {
             super(request);
-            this.abnormalId = request.abnormalId;
             this.clusterId = request.clusterId;
             this.instanceId = request.instanceId;
-            this.region = request.region;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * AbnormalId.
-         */
-        public Builder abnormalId(String abnormalId) {
-            this.putQueryParameter("AbnormalId", abnormalId);
-            this.abnormalId = abnormalId;
-            return this;
-        }
-
-        /**
-         * ClusterId.
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * <blockquote>
+         * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>428</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -142,7 +112,14 @@ public class DeleteApisecAbnormalRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf-cn-uqm342yj***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,16 +128,14 @@ public class DeleteApisecAbnormalRequest extends Request {
         }
 
         /**
-         * Region.
-         */
-        public Builder region(String region) {
-            this.putQueryParameter("Region", region);
-            this.region = region;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +144,10 @@ public class DeleteApisecAbnormalRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -178,8 +156,8 @@ public class DeleteApisecAbnormalRequest extends Request {
         }
 
         @Override
-        public DeleteApisecAbnormalRequest build() {
-            return new DeleteApisecAbnormalRequest(this);
+        public DescribeUserAbnormalTrendRequest build() {
+            return new DescribeUserAbnormalTrendRequest(this);
         } 
 
     } 

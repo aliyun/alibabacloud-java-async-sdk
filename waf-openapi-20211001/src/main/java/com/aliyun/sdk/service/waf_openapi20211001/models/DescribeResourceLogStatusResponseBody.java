@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceLogStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceLogStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DABF8AB-2321-5F8D-A8D7-922D757FBFFE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourceLogStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceLogStatusResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
@@ -109,7 +119,10 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * The protected object.
+             * <p>The protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-wewbb23dfsetetcic****</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -117,11 +130,14 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the log collection feature is enabled for the protected object. Valid values:
-             * <p>
+             * <p>Indicates whether the log collection feature is enabled for the protected object. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The log collection feature is enabled.</li>
+             * <li><strong>false:</strong> The log collection feature is disabled.</li>
+             * </ul>
              * 
-             * *   **true:** The log collection feature is enabled.
-             * *   **false:** The log collection feature is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

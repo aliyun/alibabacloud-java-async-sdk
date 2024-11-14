@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHybridCloudSdkPullinStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyHybridCloudSdkPullinStatusRequest</p>
@@ -84,10 +85,14 @@ public class ModifyHybridCloudSdkPullinStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstanceInfo](~~140857~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf-cn-7pp2le***01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -96,7 +101,11 @@ public class ModifyHybridCloudSdkPullinStatusRequest extends Request {
         }
 
         /**
-         * The ID of the SDK.
+         * <p>The ID of the SDK.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b3dbc5153317c79d8ca9f9***ea</p>
          */
         public Builder mid(String mid) {
             this.putQueryParameter("Mid", mid);
@@ -105,11 +114,15 @@ public class ModifyHybridCloudSdkPullinStatusRequest extends Request {
         }
 
         /**
-         * The status of traffic redirection. Valid values:
-         * <p>
+         * <p>The status of traffic redirection. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder pullinStatus(String pullinStatus) {
             this.putQueryParameter("PullinStatus", pullinStatus);

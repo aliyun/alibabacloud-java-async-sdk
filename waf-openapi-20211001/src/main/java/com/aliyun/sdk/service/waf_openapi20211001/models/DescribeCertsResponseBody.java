@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCertsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCertsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The certificates.
+         * <p>The certificates.</p>
          */
         public Builder certs(java.util.List < Certs> certs) {
             this.certs = certs;
@@ -69,7 +70,10 @@ public class DescribeCertsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19511B0D-5AE0-5600-BB8A-DC2C8345****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeCertsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeCertsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCertsResponseBody</p>
+     */
     public static class Certs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
@@ -189,7 +202,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             private Boolean isChainCompleted; 
 
             /**
-             * The time when the certificate becomes valid.
+             * <p>The time when the certificate becomes valid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1976256736582</p>
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
@@ -197,7 +213,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate expires.
+             * <p>The time when the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1976256836582</p>
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
@@ -205,7 +224,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The globally unique ID of the certificate. The value is in the "Certificate ID-cn-hangzhou" format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.
+             * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567-cn-hangzhou</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -213,7 +235,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf1234</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -221,7 +246,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The common name.
+             * <p>The common name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.example.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -229,7 +257,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that is added to WAF.
+             * <p>The domain name that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -237,11 +268,14 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate chain is complete. Valid values:
-             * <p>
+             * <p>Indicates whether the certificate chain is complete. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isChainCompleted(Boolean isChainCompleted) {
                 this.isChainCompleted = isChainCompleted;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDomainRequest} extends {@link RequestModel}
  *
  * <p>ModifyDomainRequest</p>
@@ -128,10 +129,13 @@ public class ModifyDomainRequest extends Request {
         } 
 
         /**
-         * The mode in which you want to add the domain name to WAF. Set the value to share.
-         * <p>
+         * <p>The mode in which you want to add the domain name to WAF. Set the value to share.</p>
+         * <ul>
+         * <li><strong>share:</strong> adds the domain name to WAF in CNAME record mode. This is the default value.</li>
+         * </ul>
          * 
-         * *   **share:** adds the domain name to WAF in CNAME record mode. This is the default value.
+         * <strong>example:</strong>
+         * <p>share</p>
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -140,7 +144,11 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
-         * The domain name whose access configurations you want to modify.
+         * <p>The domain name whose access configurations you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -149,10 +157,14 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,7 +173,8 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
-         * The configurations of the listeners.
+         * <p>The configurations of the listeners.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder listen(Listen listen) {
             String listenShrink = shrink(listen, "Listen", "json");
@@ -171,7 +184,8 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
-         * The configurations of the forwarding rule.
+         * <p>The configurations of the forwarding rule.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder redirect(Redirect redirect) {
             String redirectShrink = shrink(redirect, "Redirect", "json");
@@ -181,11 +195,15 @@ public class ModifyDomainRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,6 +218,12 @@ public class ModifyDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDomainRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDomainRequest</p>
+     */
     public static class Listen extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
@@ -419,7 +443,10 @@ public class ModifyDomainRequest extends Request {
             private java.util.List < String > xffHeaders; 
 
             /**
-             * The ID of the certificate that you want to add.
+             * <p>The ID of the certificate that you want to add.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -427,12 +454,15 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The type of cipher suite that you want to add. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:
-             * <p>
+             * <p>The type of cipher suite that you want to add. This parameter is available only when you specify the <strong>HttpsPorts</strong> parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>1:</strong> all cipher suites.</li>
+             * <li><strong>2:</strong> strong cipher suites. You can select this value only when you set the <strong>TLSVersion</strong> parameter to <strong>tlsv1.2</strong>.</li>
+             * <li><strong>99:</strong> custom cipher suites.</li>
+             * </ul>
              * 
-             * *   **1:** all cipher suites.
-             * *   **2:** strong cipher suites. You can select this value only when you set the **TLSVersion** parameter to **tlsv1.2**.
-             * *   **99:** custom cipher suites.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cipherSuite(Integer cipherSuite) {
                 this.cipherSuite = cipherSuite;
@@ -440,7 +470,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The custom cipher suites that you want to add. This parameter is available only when you set the **CipherSuite** parameter to **99**.
+             * <p>The custom cipher suites that you want to add. This parameter is available only when you set the <strong>CipherSuite</strong> parameter to <strong>99</strong>.</p>
              */
             public Builder customCiphers(java.util.List < String > customCiphers) {
                 this.customCiphers = customCiphers;
@@ -448,11 +478,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to support TLS 1.3. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:
-             * <p>
+             * <p>Specifies whether to support TLS 1.3. This parameter is available only when you specify the <strong>HttpsPorts</strong> parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> supports TLS 1.3.</li>
+             * <li><strong>false:</strong> does not support TLS 1.3.</li>
+             * </ul>
              * 
-             * *   **true:** supports TLS 1.3.
-             * *   **false:** does not support TLS 1.3.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTLSv3(Boolean enableTLSv3) {
                 this.enableTLSv3 = enableTLSv3;
@@ -460,11 +493,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable an exclusive IP address for the domain name. This parameter is available only when you set the **IPv6Enabled** parameter to false and the **ProtectionResource** parameter to **share**. Valid values:
-             * <p>
+             * <p>Specifies whether to enable an exclusive IP address for the domain name. This parameter is available only when you set the <strong>IPv6Enabled</strong> parameter to false and the <strong>ProtectionResource</strong> parameter to <strong>share</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> enables an exclusive IP address for the domain name.</li>
+             * <li><strong>false:</strong> does not enable an exclusive IP address for the domain name. This is the default value.</li>
+             * </ul>
              * 
-             * *   **true:** enables an exclusive IP address for the domain name.
-             * *   **false:** does not enable an exclusive IP address for the domain name. This is the default value.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
                 this.exclusiveIp = exclusiveIp;
@@ -472,11 +508,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable HTTP to HTTPS redirection for the domain name. This parameter is available only when you specify the **HttpsPorts** parameter and leave the **HttpPorts** parameter empty. Valid values:
-             * <p>
+             * <p>Specifies whether to enable HTTP to HTTPS redirection for the domain name. This parameter is available only when you specify the <strong>HttpsPorts</strong> parameter and leave the <strong>HttpPorts</strong> parameter empty. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> enables HTTP to HTTPS redirection.</li>
+             * <li><strong>false:</strong> disables HTTP to HTTPS redirection.</li>
+             * </ul>
              * 
-             * *   **true:** enables HTTP to HTTPS redirection.
-             * *   **false:** disables HTTP to HTTPS redirection.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder focusHttps(Boolean focusHttps) {
                 this.focusHttps = focusHttps;
@@ -484,11 +523,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable HTTP/2. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:
-             * <p>
+             * <p>Specifies whether to enable HTTP/2. This parameter is available only when you specify the <strong>HttpsPorts</strong> parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> enables HTTP/2.</li>
+             * <li><strong>false:</strong> disables HTTP/2. This is the default value.</li>
+             * </ul>
              * 
-             * *   **true:** enables HTTP/2.
-             * *   **false:** disables HTTP/2. This is the default value.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder http2Enabled(Boolean http2Enabled) {
                 this.http2Enabled = http2Enabled;
@@ -496,7 +538,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * An array of HTTP listener ports. Specify the value of this parameter in the \[port1,port2,...] format.
+             * <p>An array of HTTP listener ports. Specify the value of this parameter in the [port1,port2,...] format.</p>
              */
             public Builder httpPorts(java.util.List < Integer > httpPorts) {
                 this.httpPorts = httpPorts;
@@ -504,7 +546,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * An array of HTTPS listener ports. Specify the value of this parameter in the \[port1,port2,...] format.
+             * <p>An array of HTTPS listener ports. Specify the value of this parameter in the [port1,port2,...] format.</p>
              */
             public Builder httpsPorts(java.util.List < Integer > httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -512,11 +554,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable IPv6. Valid values:
-             * <p>
+             * <p>Specifies whether to enable IPv6. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> enables IPv6.</li>
+             * <li><strong>false:</strong> disables IPv6. This is the default value.</li>
+             * </ul>
              * 
-             * *   **true:** enables IPv6.
-             * *   **false:** disables IPv6. This is the default value.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder iPv6Enabled(Boolean iPv6Enabled) {
                 this.iPv6Enabled = iPv6Enabled;
@@ -524,11 +569,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The type of the protection resource that you want to use. Valid values:
-             * <p>
+             * <p>The type of the protection resource that you want to use. Valid values:</p>
+             * <ul>
+             * <li><strong>share:</strong> shared cluster. This is the default value.</li>
+             * <li><strong>gslb:</strong> shared cluster-based intelligent load balancing.</li>
+             * </ul>
              * 
-             * *   **share:** shared cluster. This is the default value.
-             * *   **gslb:** shared cluster-based intelligent load balancing.
+             * <strong>example:</strong>
+             * <p>share</p>
              */
             public Builder protectionResource(String protectionResource) {
                 this.protectionResource = protectionResource;
@@ -536,11 +584,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to allow access only from SM certificate-based clients. This parameter is available only if you set SM2Enabled to true.
-             * <p>
+             * <p>Specifies whether to allow access only from SM certificate-based clients. This parameter is available only if you set SM2Enabled to true.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sM2AccessOnly(Boolean sM2AccessOnly) {
                 this.sM2AccessOnly = sM2AccessOnly;
@@ -548,7 +599,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The ID of the SM certificate that you want to add. This parameter is available only if you set SM2Enabled to true.
+             * <p>The ID of the SM certificate that you want to add. This parameter is available only if you set SM2Enabled to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-cn-hangzhou</p>
              */
             public Builder sM2CertId(String sM2CertId) {
                 this.sM2CertId = sM2CertId;
@@ -556,11 +610,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Indicates whether SM certificate-based verification is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SM certificate-based verification is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sM2Enabled(Boolean sM2Enabled) {
                 this.sM2Enabled = sM2Enabled;
@@ -568,12 +625,15 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The version of the Transport Layer Security (TLS) protocol. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:
-             * <p>
+             * <p>The version of the Transport Layer Security (TLS) protocol. This parameter is available only when you specify the <strong>HttpsPorts</strong> parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>tlsv1</strong></li>
+             * <li><strong>tlsv1.1</strong></li>
+             * <li><strong>tlsv1.2</strong></li>
+             * </ul>
              * 
-             * *   **tlsv1**
-             * *   **tlsv1.1**
-             * *   **tlsv1.2**
+             * <strong>example:</strong>
+             * <p>tlsv1</p>
              */
             public Builder TLSVersion(String TLSVersion) {
                 this.TLSVersion = TLSVersion;
@@ -581,12 +641,15 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The method that you want WAF to use to obtain the actual IP address of a client. Valid values:
-             * <p>
+             * <p>The method that you want WAF to use to obtain the actual IP address of a client. Valid values:</p>
+             * <ul>
+             * <li><strong>0:</strong> No Layer 7 proxies are deployed in front of WAF. This is the default value.</li>
+             * <li><strong>1:</strong> WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.</li>
+             * <li><strong>2:</strong> WAF reads the value of a custom header field as the actual IP address of the client.</li>
+             * </ul>
              * 
-             * *   **0:** No Layer 7 proxies are deployed in front of WAF. This is the default value.
-             * *   **1:** WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.
-             * *   **2:** WAF reads the value of a custom header field as the actual IP address of the client.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder xffHeaderMode(Integer xffHeaderMode) {
                 this.xffHeaderMode = xffHeaderMode;
@@ -594,10 +657,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The custom header fields that you want to use to obtain the actual IP address of a client. Specify the value of this parameter in the \["header1","header2",...] format.
-             * <p>
-             * 
-             * >  If you set the **XffHeaderMode** parameter to 2, this parameter is required.
+             * <p>The custom header fields that you want to use to obtain the actual IP address of a client. Specify the value of this parameter in the [&quot;header1&quot;,&quot;header2&quot;,...] format.</p>
+             * <blockquote>
+             * <p> If you set the <strong>XffHeaderMode</strong> parameter to 2, this parameter is required.</p>
+             * </blockquote>
              */
             public Builder xffHeaders(java.util.List < String > xffHeaders) {
                 this.xffHeaders = xffHeaders;
@@ -611,6 +674,12 @@ public class ModifyDomainRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyDomainRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDomainRequest</p>
+     */
     public static class RequestHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -650,7 +719,10 @@ public class ModifyDomainRequest extends Request {
             private String value; 
 
             /**
-             * The key of the custom header field.
+             * <p>The key of the custom header field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -658,7 +730,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The value of the custom header field.
+             * <p>The value of the custom header field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbb</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -672,6 +747,12 @@ public class ModifyDomainRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyDomainRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDomainRequest</p>
+     */
     public static class Redirect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backends")
         private java.util.List < String > backends;
@@ -885,11 +966,11 @@ public class ModifyDomainRequest extends Request {
             private Boolean xffProto; 
 
             /**
-             * The IP addresses or domain names of the origin server. You can use only one of the address types. If you use the domain name type, the domain name can be resolved only to an IPv4 address.
-             * <p>
-             * 
-             * *   If you use the IP address type, specify the value in the \["ip1","ip2",...] format. You can enter up to 20 IP addresses.
-             * *   If you use the domain name type, specify the value in the \["domain"] format. You can enter up to 20 domain names.
+             * <p>The IP addresses or domain names of the origin server. You can use only one of the address types. If you use the domain name type, the domain name can be resolved only to an IPv4 address.</p>
+             * <ul>
+             * <li>If you use the IP address type, specify the value in the [&quot;ip1&quot;,&quot;ip2&quot;,...] format. You can enter up to 20 IP addresses.</li>
+             * <li>If you use the domain name type, specify the value in the [&quot;domain&quot;] format. You can enter up to 20 domain names.</li>
+             * </ul>
              */
             public Builder backends(java.util.List < String > backends) {
                 this.backends = backends;
@@ -897,11 +978,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the public cloud disaster recovery feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the public cloud disaster recovery feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cnameEnabled(Boolean cnameEnabled) {
                 this.cnameEnabled = cnameEnabled;
@@ -909,7 +993,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The timeout period for connections. Unit: seconds. Valid values: 1 to 3600.
+             * <p>The timeout period for connections. Unit: seconds. Valid values: 1 to 3600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder connectTimeout(Integer connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -917,11 +1004,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable HTTPS to HTTP redirection for back-to-origin requests. This parameter is available only if you specify **HttpsPorts**. Valid values:
-             * <p>
+             * <p>Specifies whether to enable HTTPS to HTTP redirection for back-to-origin requests. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder focusHttpBackend(Boolean focusHttpBackend) {
                 this.focusHttpBackend = focusHttpBackend;
@@ -929,11 +1019,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the persistent connection feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the persistent connection feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true** (default)
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder keepalive(Boolean keepalive) {
                 this.keepalive = keepalive;
@@ -941,10 +1034,13 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The number of reused persistent connections. Valid values: 60 to 1000.
-             * <p>
+             * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
+             * <blockquote>
+             * <p> This parameter specifies the number of reused persistent connections after you enable the persistent connection feature.</p>
+             * </blockquote>
              * 
-             * >  This parameter specifies the number of reused persistent connections after you enable the persistent connection feature.
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder keepaliveRequests(Integer keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -952,10 +1048,13 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.
-             * <p>
+             * <p>The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
+             * <blockquote>
+             * <p> This parameter specifies the time for which a reused persistent connection can remain in the Idle state before the persistent connection is released.</p>
+             * </blockquote>
              * 
-             * >  This parameter specifies the time for which a reused persistent connection can remain in the Idle state before the persistent connection is released.
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -963,12 +1062,16 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The load balancing algorithm that you want to use to forward requests to the origin server. Valid values:
-             * <p>
+             * <p>The load balancing algorithm that you want to use to forward requests to the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>ip_hash</strong></li>
+             * <li><strong>roundRobin</strong></li>
+             * <li><strong>leastTime</strong> You can set the parameter to this value only if you set <strong>ProtectionResource</strong> to <strong>gslb</strong>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **ip_hash**
-             * *   **roundRobin**
-             * *   **leastTime** You can set the parameter to this value only if you set **ProtectionResource** to **gslb**.
+             * <strong>example:</strong>
+             * <p>iphash</p>
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
@@ -976,7 +1079,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.
+             * <p>The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -984,10 +1090,8 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The custom header field that you want to use to label requests that are processed by WAF.
-             * <p>
-             * 
-             * When a request passes through WAF, the custom header field is automatically used to label the request. This way, the backend service can identify requests that are processed by WAF.
+             * <p>The custom header field that you want to use to label requests that are processed by WAF.</p>
+             * <p>When a request passes through WAF, the custom header field is automatically used to label the request. This way, the backend service can identify requests that are processed by WAF.</p>
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -995,11 +1099,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether WAF retries forwarding requests to the origin server when the requests fail to be forwarded to the origin server. Valid values:
-             * <p>
+             * <p>Specifies whether WAF retries forwarding requests to the origin server when the requests fail to be forwarded to the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true** (default)
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder retry(Boolean retry) {
                 this.retry = retry;
@@ -1007,12 +1114,23 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The forwarding rules that you want to configure for the domain name that you want to add to WAF in hybrid cloud mode. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
-             * <p>
+             * <p>The forwarding rules that you want to configure for the domain name that you want to add to WAF in hybrid cloud mode. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+             * <ul>
+             * <li><strong>rs</strong>: the back-to-origin IP addresses or CNAMEs. The value must be of the ARRAY type.</li>
+             * <li><strong>location</strong>: the name of the protection node. The value must be of the STRING type.</li>
+             * <li><strong>locationId</strong>: the ID of the protection node. The value must be of the LONG type.</li>
+             * </ul>
              * 
-             * *   **rs**: the back-to-origin IP addresses or CNAMEs. The value must be of the ARRAY type.
-             * *   **location**: the name of the protection node. The value must be of the STRING type.
-             * *   **locationId**: the ID of the protection node. The value must be of the LONG type.
+             * <strong>example:</strong>
+             * <p>[
+             *       {
+             *             &quot;rs&quot;: [
+             *                   &quot;1.1.XX.XX&quot;
+             *             ],
+             *             &quot;locationId&quot;: 535,
+             *             &quot;location&quot;: &quot;test1111&quot;
+             *       }
+             * ]</p>
              */
             public Builder routingRules(String routingRules) {
                 this.routingRules = routingRules;
@@ -1020,11 +1138,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable origin Server Name Indication (SNI). This parameter is available only if you specify **HttpsPorts**. Valid values:
-             * <p>
+             * <p>Specifies whether to enable origin Server Name Indication (SNI). This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sniEnabled(Boolean sniEnabled) {
                 this.sniEnabled = sniEnabled;
@@ -1032,10 +1153,13 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The value of the SNI field. If you do not specify this parameter, the value of the **Host** field is automatically used. This parameter is optional. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.
-             * <p>
+             * <p>The value of the SNI field. If you do not specify this parameter, the value of the <strong>Host</strong> field is automatically used. This parameter is optional. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.</p>
+             * <blockquote>
+             * <p> This parameter is required only if you set <strong>SniEnalbed</strong> to xxx.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required only if you set **SniEnalbed** to xxx.
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;
@@ -1043,7 +1167,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.
+             * <p>The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
@@ -1051,11 +1178,14 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:
-             * <p>
+             * <p>Specifies whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true** (default)
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xffProto(Boolean xffProto) {
                 this.xffProto = xffProto;

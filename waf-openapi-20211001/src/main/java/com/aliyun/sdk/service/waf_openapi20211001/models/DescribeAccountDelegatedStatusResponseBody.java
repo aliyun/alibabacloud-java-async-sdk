@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountDelegatedStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountDelegatedStatusResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10***********34</p>
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -81,7 +85,10 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Alibaba Cloud account. This parameter is returned only if the account is the delegated administrator account.
+         * <p>The name of the Alibaba Cloud account. This parameter is returned only if the account is the delegated administrator account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_test</p>
          */
         public Builder accountName(String accountName) {
             this.accountName = accountName;
@@ -89,11 +96,14 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Alibaba Cloud account is the delegated administrator account of the WAF instance.
-         * <p>
+         * <p>Indicates whether the Alibaba Cloud account is the delegated administrator account of the WAF instance.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder delegatedStatus(Boolean delegatedStatus) {
             this.delegatedStatus = delegatedStatus;
@@ -101,7 +111,10 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8161375D-5958-5627-BFDE-DF14****3E87</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

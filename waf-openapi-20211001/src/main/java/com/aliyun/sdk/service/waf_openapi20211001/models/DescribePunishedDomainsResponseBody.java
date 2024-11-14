@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePunishedDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePunishedDomainsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePunishedDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The domain names that are penalized for failing to obtain an ICP filing.
+         * <p>The domain names that are penalized for failing to obtain an ICP filing.</p>
          */
         public Builder punishedDomains(java.util.List < String > punishedDomains) {
             this.punishedDomains = punishedDomains;
@@ -57,7 +58,10 @@ public class DescribePunishedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1F4D802-55A1-5D53-A247-7E79****85E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

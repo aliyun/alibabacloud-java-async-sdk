@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCloudResourceRequest} extends {@link RequestModel}
  *
  * <p>ModifyCloudResourceRequest</p>
@@ -112,7 +113,14 @@ public class ModifyCloudResourceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v3prepaid_public_cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -121,7 +129,8 @@ public class ModifyCloudResourceRequest extends Request {
         }
 
         /**
-         * Listen.
+         * <p>The configurations of the listeners.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder listen(Listen listen) {
             String listenShrink = shrink(listen, "Listen", "json");
@@ -131,7 +140,7 @@ public class ModifyCloudResourceRequest extends Request {
         }
 
         /**
-         * Redirect.
+         * <p>The configurations of the forwarding rule.</p>
          */
         public Builder redirect(Redirect redirect) {
             String redirectShrink = shrink(redirect, "Redirect", "json");
@@ -141,7 +150,15 @@ public class ModifyCloudResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,7 +167,10 @@ public class ModifyCloudResourceRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -165,6 +185,12 @@ public class ModifyCloudResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCloudResourceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCloudResourceRequest</p>
+     */
     public static class Certificates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppliedType")
         private String appliedType;
@@ -204,7 +230,14 @@ public class ModifyCloudResourceRequest extends Request {
             private String certificateId; 
 
             /**
-             * AppliedType.
+             * <p>The type of the HTTPS certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: default certificate.</li>
+             * <li><strong>extension</strong>: additional certificate.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder appliedType(String appliedType) {
                 this.appliedType = appliedType;
@@ -212,7 +245,10 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * CertificateId.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-cn-hangzhou</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -226,6 +262,12 @@ public class ModifyCloudResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyCloudResourceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCloudResourceRequest</p>
+     */
     public static class Listen extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Certificates")
         private java.util.List < Certificates> certificates;
@@ -365,7 +407,7 @@ public class ModifyCloudResourceRequest extends Request {
             private String TLSVersion; 
 
             /**
-             * Certificates.
+             * <p>An array of certificates.</p>
              */
             public Builder certificates(java.util.List < Certificates> certificates) {
                 this.certificates = certificates;
@@ -373,7 +415,15 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * CipherSuite.
+             * <p>The type of the cipher suites that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: all cipher suites.</li>
+             * <li><strong>2</strong>: strong cipher suites. You can set the parameter to this value only if you set <strong>TLSVersion</strong> to <strong>tlsv1.2</strong>.</li>
+             * <li><strong>99</strong>: custom cipher suites.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cipherSuite(Integer cipherSuite) {
                 this.cipherSuite = cipherSuite;
@@ -381,7 +431,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * CustomCiphers.
+             * <p>An array of custom cipher suites.</p>
              */
             public Builder customCiphers(java.util.List < String > customCiphers) {
                 this.customCiphers = customCiphers;
@@ -389,7 +439,14 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * EnableTLSv3.
+             * <p>Specifies whether to support TLS 1.3. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTLSv3(Boolean enableTLSv3) {
                 this.enableTLSv3 = enableTLSv3;
@@ -397,7 +454,14 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * Http2Enabled.
+             * <p>Specifies whether to enable HTTP/2. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder http2Enabled(Boolean http2Enabled) {
                 this.http2Enabled = http2Enabled;
@@ -405,7 +469,11 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port of the resource that you want to add to WAF.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -413,7 +481,15 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>http</strong></li>
+             * <li><strong>https</strong></li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -421,7 +497,11 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * ResourceInstanceId.
+             * <p>The ID of the resource.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-***</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -429,7 +509,16 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * ResourceProduct.
+             * <p>The cloud service. Valid values:</p>
+             * <ul>
+             * <li><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</li>
+             * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+             * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clb7</p>
              */
             public Builder resourceProduct(String resourceProduct) {
                 this.resourceProduct = resourceProduct;
@@ -437,7 +526,15 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * TLSVersion.
+             * <p>The Transport Layer Security (TLS) version. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>tlsv1</strong></li>
+             * <li><strong>tlsv1.1</strong></li>
+             * <li><strong>tlsv1.2</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>tlsv1.2</p>
              */
             public Builder TLSVersion(String TLSVersion) {
                 this.TLSVersion = TLSVersion;
@@ -451,6 +548,12 @@ public class ModifyCloudResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyCloudResourceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCloudResourceRequest</p>
+     */
     public static class RequestHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -490,7 +593,10 @@ public class ModifyCloudResourceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the custom header field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -498,7 +604,10 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the custom header field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -512,6 +621,12 @@ public class ModifyCloudResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyCloudResourceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCloudResourceRequest</p>
+     */
     public static class Redirect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keepalive")
         private Boolean keepalive;
@@ -639,7 +754,14 @@ public class ModifyCloudResourceRequest extends Request {
             private Boolean xffProto; 
 
             /**
-             * Keepalive.
+             * <p>Specifies whether to enable the persistent connection feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false:</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder keepalive(Boolean keepalive) {
                 this.keepalive = keepalive;
@@ -647,7 +769,13 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * KeepaliveRequests.
+             * <p>The number of requests that reuse persistent connections. Valid values: 60 to 1000.</p>
+             * <blockquote>
+             * <p> This parameter specifies the number of requests that can reuse persistent connections after you enable the persistent connection feature.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder keepaliveRequests(Integer keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -655,7 +783,13 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * KeepaliveTimeout.
+             * <p>The timeout period for idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</p>
+             * <blockquote>
+             * <p> If no new requests are initiated over the idle persistent connection within the specified timeout period, the connection is closed.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -663,7 +797,10 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * ReadTimeout.
+             * <p>The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -671,7 +808,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * RequestHeaders.
+             * <p>The custom header field that you want to use to label requests that are processed by WAF.</p>
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -679,7 +816,10 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * WriteTimeout.
+             * <p>The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
@@ -687,7 +827,15 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * XffHeaderMode.
+             * <p>The method that WAF uses to obtain the originating IP address of a client. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: No Layer 7 proxies are deployed in front of WAF.</li>
+             * <li><strong>1</strong>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the originating IP address of the client.</li>
+             * <li><strong>2</strong>: WAF reads the value of a custom header field as the originating IP address of the client.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder xffHeaderMode(Integer xffHeaderMode) {
                 this.xffHeaderMode = xffHeaderMode;
@@ -695,7 +843,10 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * XffHeaders.
+             * <p>The custom header field that is used to obtain the originating IP address of a client. Specify the value in the [&quot;header1&quot;,&quot;header2&quot;,...] format.</p>
+             * <blockquote>
+             * <p> This parameter is required only if you set <strong>XffHeaderMode</strong> to 2.</p>
+             * </blockquote>
              */
             public Builder xffHeaders(java.util.List < String > xffHeaders) {
                 this.xffHeaders = xffHeaders;
@@ -703,7 +854,14 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * XffProto.
+             * <p>Specifies whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xffProto(Boolean xffProto) {
                 this.xffProto = xffProto;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudResourcesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The cloud service resources that are added to WAF.
+         * <p>The cloud service resources that are added to WAF.</p>
          */
         public Builder cloudResources(java.util.List < CloudResources> cloudResources) {
             this.cloudResources = cloudResources;
@@ -69,7 +70,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C327F81A-CCE2-5B21-817C-F93E29C5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of cloud service resources returned.
+         * <p>The total number of cloud service resources returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudResourcesResponseBody</p>
+     */
     public static class CloudResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpPortCount")
         private Integer httpPortCount;
@@ -291,7 +304,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11769793******</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -299,7 +315,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name. This parameter has a value only if the value of ResourceProduct is fc or sae.
+             * <p>The domain name. This parameter has a value only if the value of ResourceProduct is fc or sae.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-resource-domain</p>
              */
             public Builder resourceDomain(String resourceDomain) {
                 this.resourceDomain = resourceDomain;
@@ -307,7 +326,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The function name. This parameter has a value only if the value of ResourceProduct is fc.
+             * <p>The function name. This parameter has a value only if the value of ResourceProduct is fc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-resource-function</p>
              */
             public Builder resourceFunction(String resourceFunction) {
                 this.resourceFunction = resourceFunction;
@@ -315,7 +337,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-ffff****</p>
              */
             public Builder resourceInstance(String resourceInstance) {
                 this.resourceInstance = resourceInstance;
@@ -347,7 +372,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-resource-name</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -355,13 +383,16 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service to which the resource belongs. Valid values:
-             * <p>
+             * <p>The cloud service to which the resource belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>alb</strong>: ALB.</li>
+             * <li><strong>mse</strong>: MSE.</li>
+             * <li><strong>fc</strong>: Function Compute.</li>
+             * <li><strong>sae</strong>: SAE.</li>
+             * </ul>
              * 
-             * *   **alb**: ALB.
-             * *   **mse**: MSE.
-             * *   **fc**: Function Compute.
-             * *   **sae**: SAE.
+             * <strong>example:</strong>
+             * <p>alb</p>
              */
             public Builder resourceProduct(String resourceProduct) {
                 this.resourceProduct = resourceProduct;
@@ -369,7 +400,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the resource.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -377,7 +411,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The route name. This parameter has a value only if the value of ResourceProduct is mse.
+             * <p>The route name. This parameter has a value only if the value of ResourceProduct is mse.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-route-name</p>
              */
             public Builder resourceRouteName(String resourceRouteName) {
                 this.resourceRouteName = resourceRouteName;
@@ -385,7 +422,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The service name. This parameter has a value only if the value of ResourceProduct is fc.
+             * <p>The service name. This parameter has a value only if the value of ResourceProduct is fc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-resource-service</p>
              */
             public Builder resourceService(String resourceService) {
                 this.resourceService = resourceService;

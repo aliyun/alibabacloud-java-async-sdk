@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceSupportRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeResourceSupportRegionsRequest</p>
@@ -24,11 +25,16 @@ public class DescribeResourceSupportRegionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceProduct")
+    private String resourceProduct;
+
     private DescribeResourceSupportRegionsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.resourceProduct = builder.resourceProduct;
     }
 
     public static Builder builder() {
@@ -65,10 +71,18 @@ public class DescribeResourceSupportRegionsRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
+    /**
+     * @return resourceProduct
+     */
+    public String getResourceProduct() {
+        return this.resourceProduct;
+    }
+
     public static final class Builder extends Request.Builder<DescribeResourceSupportRegionsRequest, Builder> {
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
+        private String resourceProduct; 
 
         private Builder() {
             super();
@@ -79,13 +93,18 @@ public class DescribeResourceSupportRegionsRequest extends Request {
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.resourceProduct = request.resourceProduct;
         } 
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,11 +113,14 @@ public class DescribeResourceSupportRegionsRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -107,11 +129,23 @@ public class DescribeResourceSupportRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzpks****kdjq</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
             this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceProduct.
+         */
+        public Builder resourceProduct(String resourceProduct) {
+            this.putQueryParameter("ResourceProduct", resourceProduct);
+            this.resourceProduct = resourceProduct;
             return this;
         }
 

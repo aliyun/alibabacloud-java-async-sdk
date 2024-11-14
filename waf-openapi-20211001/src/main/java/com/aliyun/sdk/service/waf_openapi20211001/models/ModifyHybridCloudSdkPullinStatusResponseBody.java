@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHybridCloudSdkPullinStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyHybridCloudSdkPullinStatusResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyHybridCloudSdkPullinStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B191**EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

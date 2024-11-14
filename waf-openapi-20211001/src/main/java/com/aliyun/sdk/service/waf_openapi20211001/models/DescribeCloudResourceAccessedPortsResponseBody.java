@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudResourceAccessedPortsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudResourceAccessedPortsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Http.
+         * <p>The HTTP ports.</p>
          */
         public Builder http(java.util.List < Integer > http) {
             this.http = http;
@@ -69,7 +70,7 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
         }
 
         /**
-         * Https.
+         * <p>The HTTPS ports.</p>
          */
         public Builder https(java.util.List < Integer > https) {
             this.https = https;
@@ -77,7 +78,10 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1823E96-EF4B-5BD2-9E02-1D18****3ED8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

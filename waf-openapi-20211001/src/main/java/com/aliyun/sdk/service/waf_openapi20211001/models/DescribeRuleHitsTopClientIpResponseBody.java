@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleHitsTopClientIpResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleHitsTopClientIpResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F0F9AD6-62E2-50BB-A3E5-30FFB9410262</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the top 10 IP addresses from which attacks are initiated.
+         * <p>The array of the top 10 IP addresses from which attacks are initiated.</p>
          */
         public Builder ruleHitsTopClientIp(java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp) {
             this.ruleHitsTopClientIp = ruleHitsTopClientIp;
@@ -70,6 +74,12 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleHitsTopClientIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleHitsTopClientIpResponseBody</p>
+     */
     public static class RuleHitsTopClientIp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
@@ -109,7 +119,10 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
             private Long count; 
 
             /**
-             * The IP address of the service client.
+             * <p>The IP address of the service client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.3.XX.XX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -117,7 +130,10 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * The number of attacks that are initiated from the IP address.
+             * <p>The number of attacks that are initiated from the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>531</p>
              */
             public Builder count(Long count) {
                 this.count = count;

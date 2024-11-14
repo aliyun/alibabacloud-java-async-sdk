@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApisecLogDeliveryStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyApisecLogDeliveryStatusRequest</p>
@@ -112,12 +113,16 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         } 
 
         /**
-         * The type of the log subscription. Valid values:
-         * <p>
+         * <p>The type of the log subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>risk</strong>: risk information.</li>
+         * <li><strong>event</strong>: attack event information.</li>
+         * <li><strong>asset</strong>: asset information.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **risk**: risk information.
-         * *   **event**: attack event information.
-         * *   **asset**: asset information.
+         * <strong>example:</strong>
+         * <p>risk</p>
          */
         public Builder assertKey(String assertKey) {
             this.putQueryParameter("AssertKey", assertKey);
@@ -126,10 +131,14 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v3_public_cn-uqm2z****0a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -138,11 +147,14 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +163,10 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -160,11 +175,15 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * The status of API security log subscription. Valid values:
-         * <p>
+         * <p>The status of API security log subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: enabled.
-         * *   **false**: disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);

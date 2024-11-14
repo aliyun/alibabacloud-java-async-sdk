@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHybridCloudGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyHybridCloudGroupRequest</p>
@@ -141,7 +142,10 @@ public class ModifyHybridCloudGroupRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clusterId(Long clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -150,7 +154,10 @@ public class ModifyHybridCloudGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -159,7 +166,7 @@ public class ModifyHybridCloudGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>This parameter is required.</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -168,7 +175,10 @@ public class ModifyHybridCloudGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf-cn-tl32ast****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

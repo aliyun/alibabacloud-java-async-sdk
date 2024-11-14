@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudResourcesRequest</p>
@@ -238,10 +239,14 @@ public class DescribeCloudResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v3prepaid_public_cn-lbj****cn0c</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -250,7 +255,10 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resource belongs.
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11769793******</p>
          */
         public Builder ownerUserId(String ownerUserId) {
             this.putQueryParameter("OwnerUserId", ownerUserId);
@@ -259,7 +267,10 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -268,7 +279,10 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,11 +291,14 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -290,7 +307,10 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The domain name. You can use this parameter if you set ResourceProduct to fc or sae.
+         * <p>The domain name. You can use this parameter if you set ResourceProduct to fc or sae.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc-domain-test</p>
          */
         public Builder resourceDomain(String resourceDomain) {
             this.putQueryParameter("ResourceDomain", resourceDomain);
@@ -299,7 +319,10 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The function name. You can use this parameter if you set ResourceProduct to fc.
+         * <p>The function name. You can use this parameter if you set ResourceProduct to fc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc-test</p>
          */
         public Builder resourceFunction(String resourceFunction) {
             this.putQueryParameter("ResourceFunction", resourceFunction);
@@ -308,7 +331,10 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-43glijk0fr****gths</p>
          */
         public Builder resourceInstanceId(String resourceInstanceId) {
             this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
@@ -326,7 +352,10 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4gh****wela</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -335,7 +364,10 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The name of the resource.
+         * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-name</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -344,15 +376,19 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The cloud service to which the resource belongs. Valid values:
-         * <p>
+         * <p>The cloud service to which the resource belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>alb</strong>: Application Load Balancer (ALB).</li>
+         * <li><strong>mse</strong>: Microservices Engine (MSE).</li>
+         * <li><strong>fc</strong>: Function Compute.</li>
+         * <li><strong>sae</strong>: Serverless App Engine (SAE).</li>
+         * </ul>
+         * <blockquote>
+         * <p> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</p>
+         * </blockquote>
          * 
-         * *   **alb**: Application Load Balancer (ALB).
-         * *   **mse**: Microservices Engine (MSE).
-         * *   **fc**: Function Compute.
-         * *   **sae**: Serverless App Engine (SAE).
-         * 
-         * >  Different cloud services are available in different regions. The specified cloud service must be available in the specified region.
+         * <strong>example:</strong>
+         * <p>alb</p>
          */
         public Builder resourceProduct(String resourceProduct) {
             this.putQueryParameter("ResourceProduct", resourceProduct);
@@ -361,10 +397,13 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. For information about region IDs, see the following table.
-         * <p>
+         * <p>The region ID of the resource. For information about region IDs, see the following table.</p>
+         * <blockquote>
+         * <p> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</p>
+         * </blockquote>
          * 
-         * >  Different cloud services are available in different regions. The specified cloud service must be available in the specified region.
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
@@ -373,7 +412,10 @@ public class DescribeCloudResourcesRequest extends Request {
         }
 
         /**
-         * The route name. You can use this parameter if you set ResourceProduct to mse.
+         * <p>The route name. You can use this parameter if you set ResourceProduct to mse.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-default-traffic</p>
          */
         public Builder resourceRouteName(String resourceRouteName) {
             this.putQueryParameter("ResourceRouteName", resourceRouteName);

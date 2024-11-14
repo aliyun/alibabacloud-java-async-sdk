@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisecSlsProjectsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisecSlsProjectsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The names of the projects in Simple Log Service.
+         * <p>The names of the projects in Simple Log Service.</p>
          */
         public Builder projects(java.util.List < String > projects) {
             this.projects = projects;
@@ -57,7 +58,10 @@ public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

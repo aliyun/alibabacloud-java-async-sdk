@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudResourceRequest} extends {@link RequestModel}
  *
  * <p>DeleteCloudResourceRequest</p>
@@ -128,7 +129,14 @@ public class DeleteCloudResourceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -137,7 +145,11 @@ public class DeleteCloudResourceRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port of the resource that is added to WAF.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -146,7 +158,15 @@ public class DeleteCloudResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -155,7 +175,11 @@ public class DeleteCloudResourceRequest extends Request {
         }
 
         /**
-         * ResourceInstanceId.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1*****jqnnqk5uj2p</p>
          */
         public Builder resourceInstanceId(String resourceInstanceId) {
             this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
@@ -164,7 +188,10 @@ public class DeleteCloudResourceRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -173,7 +200,16 @@ public class DeleteCloudResourceRequest extends Request {
         }
 
         /**
-         * ResourceProduct.
+         * <p>The cloud service. Valid values:</p>
+         * <ul>
+         * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+         * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+         * <li><strong>ecs</strong>: ECS.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clb7</p>
          */
         public Builder resourceProduct(String resourceProduct) {
             this.putQueryParameter("ResourceProduct", resourceProduct);

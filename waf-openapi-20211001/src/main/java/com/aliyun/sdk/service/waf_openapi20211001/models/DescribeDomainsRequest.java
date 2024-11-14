@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainsRequest</p>
@@ -153,7 +154,10 @@ public class DescribeDomainsRequest extends Request {
         } 
 
         /**
-         * An array of HTTPS listener ports.
+         * <p>An array of HTTPS listener ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder backend(String backend) {
             this.putQueryParameter("Backend", backend);
@@ -162,7 +166,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -171,7 +178,11 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Default value: 1.
+         * <p>The page number of the page to return. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -180,7 +191,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +203,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,11 +215,14 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +231,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -220,7 +243,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The tag of the resource. You can specify up to 20 tags.
+         * <p>The tag of the resource. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -235,6 +258,12 @@ public class DescribeDomainsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -274,7 +303,10 @@ public class DescribeDomainsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -282,7 +314,10 @@ public class DescribeDomainsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

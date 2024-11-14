@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagKeysResponseBody</p>
@@ -61,7 +62,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The keys and types of the tags.
+         * <p>The keys and types of the tags.</p>
          */
         public Builder keys(java.util.List < Keys> keys) {
             this.keys = keys;
@@ -69,7 +70,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +81,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8CB8BB88-24C7-5608-BF5E-4DCA****CF1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListTagKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagKeysResponseBody</p>
+     */
     public static class Keys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -129,11 +142,14 @@ public class ListTagKeysResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The type of the tag. Valid values:
-             * <p>
+             * <p>The type of the tag. Valid values:</p>
+             * <ul>
+             * <li>custom</li>
+             * <li>system</li>
+             * </ul>
              * 
-             * *   custom
-             * *   system
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -141,7 +157,10 @@ public class ListTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demoTagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefenseResourceResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         private Resource resource; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>439AADF2-368C-5E98-B14E-3086****0573</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the protected object.
+         * <p>The information about the protected object.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -70,6 +74,12 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDefenseResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseResourceResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcwCookieStatus")
         private Integer acwCookieStatus;
@@ -277,11 +287,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             private Integer xffStatus; 
 
             /**
-             * The status of the tracking cookie.
-             * <p>
+             * <p>The status of the tracking cookie.</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: enabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder acwCookieStatus(Integer acwCookieStatus) {
                 this.acwCookieStatus = acwCookieStatus;
@@ -289,11 +302,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the secure attribute of the tracking cookie.
-             * <p>
+             * <p>The status of the secure attribute of the tracking cookie.</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: enabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder acwSecureStatus(Integer acwSecureStatus) {
                 this.acwSecureStatus = acwSecureStatus;
@@ -301,11 +317,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the secure attribute of the slider CAPTCHA cookie.
-             * <p>
+             * <p>The status of the secure attribute of the slider CAPTCHA cookie.</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: enabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder acwV3SecureStatus(Integer acwV3SecureStatus) {
                 this.acwV3SecureStatus = acwV3SecureStatus;
@@ -313,10 +332,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The custom header fields.
-             * <p>
-             * 
-             * >  If the value of XffStatus is 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent X-Forwarded-For (XFF) forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the XFF header field is used as the originating IP address of the client.
+             * <p>The custom header fields.</p>
+             * <blockquote>
+             * <p> If the value of XffStatus is 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent X-Forwarded-For (XFF) forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the XFF header field is used as the originating IP address of the client.</p>
+             * </blockquote>
              */
             public Builder customHeaders(java.util.List < String > customHeaders) {
                 this.customHeaders = customHeaders;
@@ -324,7 +343,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the protected object.
+             * <p>The description of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -332,7 +354,13 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the protected object. Different key-value pairs indicate different attributes of the protected object.
+             * <p>The details of the protected object. Different key-value pairs indicate different attributes of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             * &quot;product&quot;: &quot;waf&quot;,
+             *  &quot;domain&quot;: &quot;demo.aliyundoc****.com&quot;
+             * }</p>
              */
             public Builder detail(java.util.Map < String, ? > detail) {
                 this.detail = detail;
@@ -340,7 +368,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the protected object was created. Unit: milliseconds.
+             * <p>The time when the protected object was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1607493144000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -348,7 +379,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the protected object was modified. Unit: milliseconds.
+             * <p>The time when the protected object was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1691720010000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -356,7 +390,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID (UID) of the Alibaba Cloud account to which the protected object belongs.
+             * <p>The user ID (UID) of the Alibaba Cloud account to which the protected object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170457******9107</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -364,7 +401,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The pattern used for the protected object.
+             * <p>The pattern used for the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -372,7 +412,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service.
+             * <p>The name of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -380,7 +423,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protected object.
+             * <p>The name of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-rencs***</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -388,7 +434,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protected object group to which the protected object belongs.
+             * <p>The name of the protected object group to which the protected object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example_resource_group</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -396,7 +445,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud resource group.
+             * <p>The ID of the Alibaba Cloud resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmoiy****p2oq</p>
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -404,11 +456,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The origin of the protected object. Valid values:
-             * <p>
+             * <p>The origin of the protected object. Valid values:</p>
+             * <ul>
+             * <li><strong>custom</strong></li>
+             * <li><strong>access</strong></li>
+             * </ul>
              * 
-             * *   **custom**
-             * *   **access**
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder resourceOrigin(String resourceOrigin) {
                 this.resourceOrigin = resourceOrigin;
@@ -416,11 +471,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a Layer 7 proxy is deployed in front of WAF, such as Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:
-             * <p>
+             * <p>Indicates whether a Layer 7 proxy is deployed in front of WAF, such as Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: No Layer 7 proxy is deployed.</li>
+             * <li><strong>1</strong>: A Layer 7 proxy is deployed.</li>
+             * </ul>
              * 
-             * *   **0**: No Layer 7 proxy is deployed.
-             * *   **1**: A Layer 7 proxy is deployed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder xffStatus(Integer xffStatus) {
                 this.xffStatus = xffStatus;

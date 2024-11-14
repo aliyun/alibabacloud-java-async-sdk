@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleHitsTopUrlResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleHitsTopUrlResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopUrl> ruleHitsTopUrl; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D8AF43B-08EB-51CE-B33A-93AA****9B0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The top 10 URLs that match protection rules.
+         * <p>The top 10 URLs that match protection rules.</p>
          */
         public Builder ruleHitsTopUrl(java.util.List < RuleHitsTopUrl> ruleHitsTopUrl) {
             this.ruleHitsTopUrl = ruleHitsTopUrl;
@@ -70,6 +74,12 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleHitsTopUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleHitsTopUrlResponseBody</p>
+     */
     public static class RuleHitsTopUrl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The number of requests that match protection rules.
+             * <p>The number of requests that match protection rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21862</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,10 +130,13 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The request URL.
-             * <p>
+             * <p>The request URL.</p>
+             * <blockquote>
+             * <p> The value is Base64-encoded.</p>
+             * </blockquote>
              * 
-             * >  The value is Base64-encoded.
+             * <strong>example:</strong>
+             * <p>d3d3LmFsaXl1bmRvYy5jb20vcGF0aDM=</p>
              */
             public Builder url(String url) {
                 this.url = url;

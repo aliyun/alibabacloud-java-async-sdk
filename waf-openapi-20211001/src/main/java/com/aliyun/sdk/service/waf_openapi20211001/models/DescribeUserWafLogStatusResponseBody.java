@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserWafLogStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserWafLogStatusResponseBody</p>
@@ -73,31 +74,35 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         private Long statusUpdateTime; 
 
         /**
-         * The ID of the region where WAF logs are stored. Valid values:
-         * <p>
+         * <p>The ID of the region where WAF logs are stored. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
+         * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+         * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore.</li>
+         * <li><strong>ap-southeast-2</strong>: Australia (Sydney).</li>
+         * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
+         * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
+         * <li><strong>ap-southeast-6</strong>: Philippines (Manila).</li>
+         * <li><strong>ap-southeast-7</strong>: Thailand (Bangkok).</li>
+         * <li><strong>me-east-1</strong>: UAE (Dubai).</li>
+         * <li><strong>eu-central-1</strong>: Germany (Frankfurt).</li>
+         * <li><strong>us-east-1</strong>: US (Virginia).</li>
+         * <li><strong>us-west-1</strong>: US (Silicon Valley).</li>
+         * <li><strong>ap-northeast-1</strong>: Japan (Tokyo).</li>
+         * <li><strong>ap-northeast-2</strong>: South Korea (Seoul).</li>
+         * <li><strong>ap-south-1</strong>: India (Mumbai) Closing Down.</li>
+         * <li><strong>eu-west-1</strong>: UK (London).</li>
+         * <li><strong>cn-hangzhou-finance</strong>: China East 1 Finance.</li>
+         * <li><strong>cn-shanghai-finance-1</strong>: China East 2 Finance.</li>
+         * <li><strong>cn-shenzhen-finance</strong>: China South 1 Finance.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The China East 1 Finance, China East 2 Finance, and China South 1 Finance regions are available only for Alibaba Finance Cloud users. Alibaba Finance Cloud users are also limited to storing logs within these specific regions.</p>
+         * </blockquote>
          * 
-         * *   **cn-hangzhou**: China (Hangzhou).
-         * *   **cn-beijing**: China (Beijing).
-         * *   **cn-hongkong**: China (Hong Kong).
-         * *   **ap-southeast-1**: Singapore.
-         * *   **ap-southeast-2**: Australia (Sydney).
-         * *   **ap-southeast-3**: Malaysia (Kuala Lumpur).
-         * *   **ap-southeast-5**: Indonesia (Jakarta).
-         * *   **ap-southeast-6**: Philippines (Manila).
-         * *   **ap-southeast-7**: Thailand (Bangkok).
-         * *   **me-east-1**: UAE (Dubai).
-         * *   **eu-central-1**: Germany (Frankfurt).
-         * *   **us-east-1**: US (Virginia).
-         * *   **us-west-1**: US (Silicon Valley).
-         * *   **ap-northeast-1**: Japan (Tokyo).
-         * *   **ap-northeast-2**: South Korea (Seoul).
-         * *   **ap-south-1**: India (Mumbai) Closing Down.
-         * *   **eu-west-1**: UK (London).
-         * *   **cn-hangzhou-finance**: China East 1 Finance.
-         * *   **cn-shanghai-finance-1**: China East 2 Finance.
-         * *   **cn-shenzhen-finance**: China South 1 Finance.
-         * 
-         * >  The China East 1 Finance, China East 2 Finance, and China South 1 Finance regions are available only for Alibaba Finance Cloud users. Alibaba Finance Cloud users are also limited to storing logs within these specific regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.logRegionId = logRegionId;
@@ -105,14 +110,17 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of WAF logs.
-         * <p>
+         * <p>The status of WAF logs.</p>
+         * <ul>
+         * <li><strong>initializing</strong></li>
+         * <li><strong>initialize_failed</strong></li>
+         * <li><strong>normal</strong></li>
+         * <li><strong>releasing</strong></li>
+         * <li><strong>release_failed</strong></li>
+         * </ul>
          * 
-         * *   **initializing**
-         * *   **initialize_failed**
-         * *   **normal**
-         * *   **releasing**
-         * *   **release_failed**
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder logStatus(String logStatus) {
             this.logStatus = logStatus;
@@ -120,7 +128,10 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19160D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +139,10 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the log status was modified. Unit: milliseconds.
+         * <p>The time when the log status was modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706771796859</p>
          */
         public Builder statusUpdateTime(Long statusUpdateTime) {
             this.statusUpdateTime = statusUpdateTime;

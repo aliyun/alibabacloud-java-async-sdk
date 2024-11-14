@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisecEventDomainStatisticRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisecEventDomainStatisticRequest</p>
@@ -34,11 +35,8 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Long pageSize;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Region")
-    private String region;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -60,7 +58,6 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         this.orderWay = builder.orderWay;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.region = builder.region;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.startTime = builder.startTime;
@@ -122,13 +119,6 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
     }
 
     /**
-     * @return region
-     */
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -156,7 +146,6 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         private String orderWay; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String region; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
         private Long startTime; 
@@ -173,14 +162,16 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
             this.orderWay = request.orderWay;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.region = request.region;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>428</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -189,7 +180,10 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1686895256</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -198,7 +192,14 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_elasticity-cn-0xldbqt****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -207,7 +208,14 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * OrderWay.
+         * <p>The sorting order.</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder orderWay(String orderWay) {
             this.putQueryParameter("OrderWay", orderWay);
@@ -216,7 +224,10 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +236,10 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,16 +248,14 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * Region.
-         */
-        public Builder region(String region) {
-            this.putQueryParameter("Region", region);
-            this.region = region;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,7 +264,10 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvyknl****fa</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -261,7 +276,10 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1668496310</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

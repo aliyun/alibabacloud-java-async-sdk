@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The domain names that are added to WAF in CNAME record mode.
+         * <p>The domain names that are added to WAF in CNAME record mode.</p>
          */
         public Builder domains(java.util.List < Domains> domains) {
             this.domains = domains;
@@ -69,7 +70,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABF68BB3-2C48-5FA4-9750-D5FE55700E36</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>146</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Http extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backend")
         private String backend;
@@ -117,7 +130,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String backend; 
 
             /**
-             * The HTTP address of the origin server.
+             * <p>The HTTP address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
              */
             public Builder backend(String backend) {
                 this.backend = backend;
@@ -131,6 +147,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Https extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backend")
         private String backend;
@@ -158,7 +180,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String backend; 
 
             /**
-             * The HTTPS address of the origin server.
+             * <p>The HTTPS address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
              */
             public Builder backend(String backend) {
                 this.backend = backend;
@@ -172,6 +197,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Backeds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Http")
         private java.util.List < Http> http;
@@ -211,7 +242,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private java.util.List < Https> https; 
 
             /**
-             * The HTTP addresses of the origin server.
+             * <p>The HTTP addresses of the origin server.</p>
              */
             public Builder http(java.util.List < Http> http) {
                 this.http = http;
@@ -219,7 +250,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTPS addresses of the origin server.
+             * <p>The HTTPS addresses of the origin server.</p>
              */
             public Builder https(java.util.List < Https> https) {
                 this.https = https;
@@ -233,6 +264,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class ListenPorts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Http")
         private java.util.List < Long > http;
@@ -272,7 +309,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private java.util.List < Long > https; 
 
             /**
-             * The HTTP listener ports.
+             * <p>The HTTP listener ports.</p>
              */
             public Builder http(java.util.List < Long > http) {
                 this.http = http;
@@ -280,7 +317,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTPS listener ports.
+             * <p>The HTTPS listener ports.</p>
              */
             public Builder https(java.util.List < Long > https) {
                 this.https = https;
@@ -294,6 +331,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backeds")
         private Backeds backeds;
@@ -381,7 +424,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The back-to-origin settings.
+             * <p>The back-to-origin settings.</p>
              */
             public Builder backeds(Backeds backeds) {
                 this.backeds = backeds;
@@ -389,7 +432,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME assigned by WAF to the domain name.
+             * <p>The CNAME assigned by WAF to the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxcvdaf.****.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -397,7 +443,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that is added to WAF in CNAME record mode.
+             * <p>The domain name that is added to WAF in CNAME record mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -405,7 +454,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the listeners.
+             * <p>The configurations of the listeners.</p>
              */
             public Builder listenPorts(ListenPorts listenPorts) {
                 this.listenPorts = listenPorts;
@@ -413,7 +462,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmvtc5z52****</p>
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -421,14 +473,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name. Valid values:
-             * <p>
+             * <p>The status of the domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>1:</strong> The domain name is in a normal state.</li>
+             * <li><strong>2:</strong> The domain name is being created.</li>
+             * <li><strong>3:</strong> The domain name is being modified.</li>
+             * <li><strong>4:</strong> The domain name is being released.</li>
+             * <li><strong>5:</strong> WAF no longer forwards traffic that is sent to the domain name.</li>
+             * </ul>
              * 
-             * *   **1:** The domain name is in a normal state.
-             * *   **2:** The domain name is being created.
-             * *   **3:** The domain name is being modified.
-             * *   **4:** The domain name is being released.
-             * *   **5:** WAF no longer forwards traffic that is sent to the domain name.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

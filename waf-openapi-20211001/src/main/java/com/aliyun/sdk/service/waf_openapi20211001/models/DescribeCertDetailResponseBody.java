@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCertDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCertDetailResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the certificate.
+         * <p>The details of the certificate.</p>
          */
         public Builder certDetail(CertDetail certDetail) {
             this.certDetail = certDetail;
@@ -57,7 +58,10 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C115DBE-8E53-5A12-9CAF-FD3F****CDF6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCertDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCertDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCertDetailResponseBody</p>
+     */
     public static class CertDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
@@ -169,7 +179,10 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             private java.util.List < String > sans; 
 
             /**
-             * The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1976256736582</p>
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
@@ -177,7 +190,10 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate was issued. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the certificate was issued. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1976256736582</p>
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
@@ -185,7 +201,10 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-cn-hangzhou</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -193,7 +212,10 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testCertName</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -201,7 +223,10 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The primary domain name, which is a common name.
+             * <p>The primary domain name, which is a common name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.xxxaliyun.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -209,7 +234,10 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that is associated with the certificate.
+             * <p>The domain name that is associated with the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo.xxxaliyun.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -217,7 +245,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The other domain names that are associated with the certificate.
+             * <p>The other domain names that are associated with the certificate.</p>
              */
             public Builder sans(java.util.List < String > sans) {
                 this.sans = sans;

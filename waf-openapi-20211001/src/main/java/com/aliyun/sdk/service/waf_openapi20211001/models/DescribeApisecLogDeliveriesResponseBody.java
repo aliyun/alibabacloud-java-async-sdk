@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisecLogDeliveriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisecLogDeliveriesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configurations of API security log subscription.
+         * <p>The configurations of API security log subscription.</p>
          */
         public Builder deliveryConfigs(java.util.List < DeliveryConfigs> deliveryConfigs) {
             this.deliveryConfigs = deliveryConfigs;
@@ -57,7 +58,10 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2EFCFE18-78F8-5079-B312-07***48B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisecLogDeliveriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisecLogDeliveriesResponseBody</p>
+     */
     public static class DeliveryConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssertKey")
         private String assertKey;
@@ -145,12 +155,15 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * The type of the log subscription. Valid values:
-             * <p>
+             * <p>The type of the log subscription. Valid values:</p>
+             * <ul>
+             * <li><strong>risk</strong>: risk information.</li>
+             * <li><strong>event</strong>: attack event information.</li>
+             * <li><strong>asset</strong>: asset information.</li>
+             * </ul>
              * 
-             * *   **risk**: risk information.
-             * *   **event**: attack event information.
-             * *   **asset**: asset information.
+             * <strong>example:</strong>
+             * <p>risk</p>
              */
             public Builder assertKey(String assertKey) {
                 this.assertKey = assertKey;
@@ -158,7 +171,10 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where logs are stored.
+             * <p>The ID of the region where logs are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder logRegionId(String logRegionId) {
                 this.logRegionId = logRegionId;
@@ -166,7 +182,10 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore in Simple Log Service.
+             * <p>The name of the Logstore in Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apisec-logstore***</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -174,7 +193,10 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project in Simple Log Service.
+             * <p>The name of the project in Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apisec-project-14316572********</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -182,11 +204,14 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of API security log subscription. Valid values:
-             * <p>
+             * <p>The status of API security log subscription. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enabled.</li>
+             * <li><strong>false</strong>: disabled.</li>
+             * </ul>
              * 
-             * *   **true**: enabled.
-             * *   **false**: disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

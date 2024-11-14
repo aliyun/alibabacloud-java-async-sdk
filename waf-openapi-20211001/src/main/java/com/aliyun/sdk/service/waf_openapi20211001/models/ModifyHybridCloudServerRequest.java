@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHybridCloudServerRequest} extends {@link RequestModel}
  *
  * <p>ModifyHybridCloudServerRequest</p>
@@ -157,7 +158,11 @@ public class ModifyHybridCloudServerRequest extends Request {
         } 
 
         /**
-         * The continent.
+         * <p>The continent.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asiapacific</p>
          */
         public Builder continents(String continents) {
             this.putQueryParameter("Continents", continents);
@@ -166,7 +171,8 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * The name of the node.
+         * <p>The name of the node.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder customName(String customName) {
             this.putQueryParameter("CustomName", customName);
@@ -175,10 +181,14 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstanceInfo](~~140857~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +197,11 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * The ID of the node.
+         * <p>The ID of the node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b1bf3f544f30c1de0b72d91290**ccb</p>
          */
         public Builder mid(String mid) {
             this.putQueryParameter("Mid", mid);
@@ -196,7 +210,11 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * The cloud service provider.
+         * <p>The cloud service provider.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);
@@ -205,7 +223,11 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * The city.
+         * <p>The city.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beijing</p>
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
@@ -214,11 +236,14 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid value:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid value:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -227,7 +252,10 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

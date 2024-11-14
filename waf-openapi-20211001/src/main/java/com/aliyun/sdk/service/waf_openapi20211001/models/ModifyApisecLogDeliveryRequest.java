@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApisecLogDeliveryRequest} extends {@link RequestModel}
  *
  * <p>ModifyApisecLogDeliveryRequest</p>
@@ -142,12 +143,16 @@ public class ModifyApisecLogDeliveryRequest extends Request {
         } 
 
         /**
-         * The type of the log subscription. Valid values:
-         * <p>
+         * <p>The type of the log subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>risk</strong>: risk information.</li>
+         * <li><strong>event</strong>: attack event information.</li>
+         * <li><strong>asset</strong>: asset information.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **risk**: risk information.
-         * *   **event**: attack event information.
-         * *   **asset**: asset information.
+         * <strong>example:</strong>
+         * <p>risk</p>
          */
         public Builder assertKey(String assertKey) {
             this.putQueryParameter("AssertKey", assertKey);
@@ -156,10 +161,14 @@ public class ModifyApisecLogDeliveryRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v3_public_cn-uqm2z****0a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -168,10 +177,14 @@ public class ModifyApisecLogDeliveryRequest extends Request {
         }
 
         /**
-         * The ID of the region where logs are stored.
-         * <p>
+         * <p>The ID of the region where logs are stored.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2712598.html">DescribeUserSlsLogRegions</a> operation to query available log storage regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeUserSlsLogRegions](~~2712598~~) operation to query available log storage regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.putQueryParameter("LogRegionId", logRegionId);
@@ -180,10 +193,14 @@ public class ModifyApisecLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the Logstore in Simple Log Service.
-         * <p>
+         * <p>The name of the Logstore in Simple Log Service.</p>
+         * <blockquote>
+         * <p> API security logs can be delivered only to Logstores whose names start with apisec-.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  API security logs can be delivered only to Logstores whose names start with apisec-.
+         * <strong>example:</strong>
+         * <p>apisec-logstore***</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -192,10 +209,14 @@ public class ModifyApisecLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the project in Simple Log Service.
-         * <p>
+         * <p>The name of the project in Simple Log Service.</p>
+         * <blockquote>
+         * <p> API security logs can be delivered only to projects whose names start with apisec-.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  API security logs can be delivered only to projects whose names start with apisec-.
+         * <strong>example:</strong>
+         * <p>apisec-project-14316572********</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -204,11 +225,14 @@ public class ModifyApisecLogDeliveryRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +241,10 @@ public class ModifyApisecLogDeliveryRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplateResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTemplateResourcesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         private java.util.List < String > resources; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7BC9373-3960-53B0-8968-2B13454AE18F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * An array of protected objects or protected object groups that are associated to the protection rule template.
+         * <p>An array of protected objects or protected object groups that are associated to the protection rule template.</p>
          */
         public Builder resources(java.util.List < String > resources) {
             this.resources = resources;

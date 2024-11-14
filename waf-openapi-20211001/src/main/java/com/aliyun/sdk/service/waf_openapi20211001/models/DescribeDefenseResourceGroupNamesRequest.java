@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseResourceGroupNamesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDefenseResourceGroupNamesRequest</p>
@@ -124,7 +125,10 @@ public class DescribeDefenseResourceGroupNamesRequest extends Request {
         } 
 
         /**
-         * The name of the protected object group. Fuzzy queries are supported.
+         * <p>The name of the protected object group. Fuzzy queries are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-group</p>
          */
         public Builder groupNameLike(String groupNameLike) {
             this.putQueryParameter("GroupNameLike", groupNameLike);
@@ -133,10 +137,14 @@ public class DescribeDefenseResourceGroupNamesRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v3prepaid_public_cn-lbj****cc03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +153,10 @@ public class DescribeDefenseResourceGroupNamesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +165,10 @@ public class DescribeDefenseResourceGroupNamesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,11 +177,14 @@ public class DescribeDefenseResourceGroupNamesRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +193,10 @@ public class DescribeDefenseResourceGroupNamesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzwwk****cv5i</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

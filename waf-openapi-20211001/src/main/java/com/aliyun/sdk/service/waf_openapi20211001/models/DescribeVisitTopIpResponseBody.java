@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVisitTopIpResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVisitTopIpResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
         private java.util.List < TopIp> topIp; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D2B8DAE-A761-58CB-A68D-74989E4831DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the top 10 IP addresses from which requests are sent.
+         * <p>The array of the top 10 IP addresses from which requests are sent.</p>
          */
         public Builder topIp(java.util.List < TopIp> topIp) {
             this.topIp = topIp;
@@ -70,6 +74,12 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVisitTopIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVisitTopIpResponseBody</p>
+     */
     public static class TopIp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -133,7 +143,10 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
             private String isp; 
 
             /**
-             * The ordinal number of the area to which the IP address belongs.
+             * <p>The ordinal number of the area to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>310000</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -141,7 +154,10 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests that are sent from the IP address.
+             * <p>The total number of requests that are sent from the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2622</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -149,7 +165,10 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -157,7 +176,10 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * The ISP.
+             * <p>The ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAA</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;

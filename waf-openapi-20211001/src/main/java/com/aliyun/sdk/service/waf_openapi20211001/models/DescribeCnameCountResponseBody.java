@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCnameCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCnameCountResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCnameCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CnameCount.
+         * <p>The information about the number of domain names that are added to WAF in CNAME record mode and hybrid cloud reverse proxy mode.</p>
          */
         public Builder cnameCount(CnameCount cnameCount) {
             this.cnameCount = cnameCount;
@@ -57,7 +58,10 @@ public class DescribeCnameCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62D****E840</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCnameCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCnameCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCnameCountResponseBody</p>
+     */
     public static class CnameCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cname")
         private Long cname;
@@ -121,7 +131,10 @@ public class DescribeCnameCountResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Cname.
+             * <p>The number of domain names that are added to WAF in CNAME record mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cname(Long cname) {
                 this.cname = cname;
@@ -129,7 +142,10 @@ public class DescribeCnameCountResponseBody extends TeaModel {
             }
 
             /**
-             * HybridCloudCname.
+             * <p>The number of domain names that are added to WAF in hybrid cloud reverse proxy mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hybridCloudCname(Long hybridCloudCname) {
                 this.hybridCloudCname = hybridCloudCname;
@@ -137,7 +153,10 @@ public class DescribeCnameCountResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of domain names that are added to WAF in CNAME record mode and hybrid cloud reverse proxy mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

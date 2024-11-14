@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleHitsTopUaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleHitsTopUaResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopUa> ruleHitsTopUa; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8E5C7ED7-503A-5986-A005-36F2511EB89F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the top 10 user agents that are used to initiate attacks.
+         * <p>The array of the top 10 user agents that are used to initiate attacks.</p>
          */
         public Builder ruleHitsTopUa(java.util.List < RuleHitsTopUa> ruleHitsTopUa) {
             this.ruleHitsTopUa = ruleHitsTopUa;
@@ -70,6 +74,12 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleHitsTopUaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleHitsTopUaResponseBody</p>
+     */
     public static class RuleHitsTopUa extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
             private String ua; 
 
             /**
-             * The number of attacks that are initiated from the IP address.
+             * <p>The number of attacks that are initiated from the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>531</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
             }
 
             /**
-             * The user agent.
+             * <p>The user agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>android</p>
              */
             public Builder ua(String ua) {
                 this.ua = ua;

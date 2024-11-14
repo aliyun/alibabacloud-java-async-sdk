@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePostpaidInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePostpaidInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class CreatePostpaidInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the WAF instance.
+         * <p>The ID of the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-x0r****gr1i</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -57,7 +61,10 @@ public class CreatePostpaidInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73A4E786-8235-50C0-9631-87C8****4A36</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

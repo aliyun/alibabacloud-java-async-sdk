@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDefenseTemplatesRequest</p>
@@ -194,19 +195,22 @@ public class DescribeDefenseTemplatesRequest extends Request {
         } 
 
         /**
-         * The scenario in which the protection template is used.
-         * <p>
+         * <p>The scenario in which the protection template is used.</p>
+         * <ul>
+         * <li><strong>waf_group</strong>: basic protection.</li>
+         * <li><strong>antiscan</strong>: scan protection.</li>
+         * <li><strong>ip_blacklist</strong>: IP address blacklist.</li>
+         * <li><strong>custom_acl</strong>: custom rule.</li>
+         * <li><strong>whitelist</strong>: whitelist.</li>
+         * <li><strong>region_block</strong>: region blacklist.</li>
+         * <li><strong>custom_response</strong>: custom response.</li>
+         * <li><strong>cc</strong>: HTTP flood protection.</li>
+         * <li><strong>tamperproof</strong>: website tamper-proofing.</li>
+         * <li><strong>dlp</strong>: data leakage prevention.</li>
+         * </ul>
          * 
-         * *   **waf_group**: basic protection.
-         * *   **antiscan**: scan protection.
-         * *   **ip_blacklist**: IP address blacklist.
-         * *   **custom_acl**: custom rule.
-         * *   **whitelist**: whitelist.
-         * *   **region_block**: region blacklist.
-         * *   **custom_response**: custom response.
-         * *   **cc**: HTTP flood protection.
-         * *   **tamperproof**: website tamper-proofing.
-         * *   **dlp**: data leakage prevention.
+         * <strong>example:</strong>
+         * <p>region_block</p>
          */
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
@@ -215,12 +219,15 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The sub-scenario in which the protection template is used. Valid values:
-         * <p>
+         * <p>The sub-scenario in which the protection template is used. Valid values:</p>
+         * <ul>
+         * <li><strong>web</strong>: bot management for website protection.</li>
+         * <li><strong>app</strong>: bot management for app protection.</li>
+         * <li><strong>basic</strong>: bot management for basic protection.</li>
+         * </ul>
          * 
-         * *   **web**: bot management for website protection.
-         * *   **app**: bot management for app protection.
-         * *   **basic**: bot management for basic protection.
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder defenseSubScene(String defenseSubScene) {
             this.putQueryParameter("DefenseSubScene", defenseSubScene);
@@ -229,10 +236,14 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v3prepaid_public_cn-pe33b****03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -241,7 +252,10 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +264,10 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,11 +276,14 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,10 +292,13 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The name of the protected object or protected object group.
-         * <p>
+         * <p>The name of the protected object or protected object group.</p>
+         * <blockquote>
+         * <p> If you specify ResourceType, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * >  If you specify ResourceType, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>xxxqiu.cc-ecs</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -284,7 +307,10 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvyknl****fa</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -293,13 +319,17 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The type of the protected resource. Valid values:
-         * <p>
+         * <p>The type of the protected resource. Valid values:</p>
+         * <ul>
+         * <li><strong>single</strong>: protected object. This is the default value.</li>
+         * <li><strong>group</strong>: protected object group.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you specify Resource, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * *   **single**: protected object. This is the default value.
-         * *   **group**: protected object group.
-         * 
-         * >  If you specify Resource, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>single</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -308,7 +338,10 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the protection template.
+         * <p>The ID of the protection template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -317,11 +350,14 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * The type of the protection template. Valid values:
-         * <p>
+         * <p>The type of the protection template. Valid values:</p>
+         * <ul>
+         * <li><strong>user_default</strong>: default template.</li>
+         * <li><strong>user_custom</strong>: custom template.</li>
+         * </ul>
          * 
-         * *   **user_default**: default template.
-         * *   **user_custom**: custom template.
+         * <strong>example:</strong>
+         * <p>user_default</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

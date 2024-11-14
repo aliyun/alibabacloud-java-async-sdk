@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteApisecAbnormalResponse} extends {@link TeaModel}
+ * 
+ * {@link DescribeApisecProtectionGroupsResponse} extends {@link TeaModel}
  *
- * <p>DeleteApisecAbnormalResponse</p>
+ * <p>DescribeApisecProtectionGroupsResponse</p>
  */
-public class DeleteApisecAbnormalResponse extends Response {
+public class DescribeApisecProtectionGroupsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class DeleteApisecAbnormalResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteApisecAbnormalResponseBody body;
+    private DescribeApisecProtectionGroupsResponseBody body;
 
-    private DeleteApisecAbnormalResponse(BuilderImpl builder) {
+    private DescribeApisecProtectionGroupsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteApisecAbnormalResponse create() {
+    public static DescribeApisecProtectionGroupsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class DeleteApisecAbnormalResponse extends Response {
     /**
      * @return body
      */
-    public DeleteApisecAbnormalResponseBody getBody() {
+    public DescribeApisecProtectionGroupsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteApisecAbnormalResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeApisecProtectionGroupsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteApisecAbnormalResponseBody body);
+        Builder body(DescribeApisecProtectionGroupsResponseBody body);
 
         @Override
-        DeleteApisecAbnormalResponse build();
+        DescribeApisecProtectionGroupsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteApisecAbnormalResponse, Builder>
+            extends Response.BuilderImpl<DescribeApisecProtectionGroupsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteApisecAbnormalResponseBody body; 
+        private DescribeApisecProtectionGroupsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteApisecAbnormalResponse response) {
+        private BuilderImpl(DescribeApisecProtectionGroupsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class DeleteApisecAbnormalResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteApisecAbnormalResponseBody body) {
+        public Builder body(DescribeApisecProtectionGroupsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteApisecAbnormalResponse build() {
-            return new DeleteApisecAbnormalResponse(this);
+        public DescribeApisecProtectionGroupsResponse build() {
+            return new DescribeApisecProtectionGroupsResponse(this);
         } 
 
     } 

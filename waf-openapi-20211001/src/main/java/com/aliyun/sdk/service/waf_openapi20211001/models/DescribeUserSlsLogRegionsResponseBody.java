@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserSlsLogRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserSlsLogRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeUserSlsLogRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The region IDs.
+         * <p>The region IDs.</p>
          */
         public Builder logRegions(java.util.List < String > logRegions) {
             this.logRegions = logRegions;
@@ -57,7 +58,10 @@ public class DescribeUserSlsLogRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D11AC3A-A10C-56E7-A342-E87EC892****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

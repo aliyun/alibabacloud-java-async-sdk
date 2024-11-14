@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridCloudClustersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHybridCloudClustersResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterInfos.
+         * <p>The information about the clusters.</p>
          */
         public Builder clusterInfos(java.util.List < ClusterInfos> clusterInfos) {
             this.clusterInfos = clusterInfos;
@@ -57,7 +58,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-ER12-WE34-23PO-301469*****E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHybridCloudClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridCloudClustersResponseBody</p>
+     */
     public static class ClusterInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessMode")
         private String accessMode;
@@ -253,7 +263,14 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             private String ruleType; 
 
             /**
-             * AccessMode.
+             * <p>The network access mode. Valid values:</p>
+             * <ul>
+             * <li><strong>internet</strong>: Internet access.</li>
+             * <li><strong>vpc</strong>: internal network access by using Express Connect circuits.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>internet</p>
              */
             public Builder accessMode(String accessMode) {
                 this.accessMode = accessMode;
@@ -261,7 +278,15 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * AccessRegion.
+             * <p>The region where the virtual private cloud (VPC) resides. Valid values:</p>
+             * <ul>
+             * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
+             * <li><strong>cn-beiijng</strong>: China (Beijing).</li>
+             * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder accessRegion(String accessRegion) {
                 this.accessRegion = accessRegion;
@@ -269,7 +294,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>The name of the cluster.</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -277,7 +302,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterResourceId.
+             * <p>The ID of the hybrid cloud cluster resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdbc-cluster-t1****a</p>
              */
             public Builder clusterResourceId(String clusterResourceId) {
                 this.clusterResourceId = clusterResourceId;
@@ -285,7 +313,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * HttpPorts.
+             * <p>The HTTP ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80,8080</p>
              */
             public Builder httpPorts(String httpPorts) {
                 this.httpPorts = httpPorts;
@@ -293,7 +324,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPorts.
+             * <p>The HTTPS ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443,8443</p>
              */
             public Builder httpsPorts(String httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -301,7 +335,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>524**8</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -309,7 +346,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectionServerCount.
+             * <p>The number of protection nodes that can be added to the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder protectionServerCount(Integer protectionServerCount) {
                 this.protectionServerCount = protectionServerCount;
@@ -317,7 +357,14 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyStatus.
+             * <p>The status of the proxy gateway. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled.</li>
+             * <li><strong>off</strong>: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder proxyStatus(String proxyStatus) {
                 this.proxyStatus = proxyStatus;
@@ -325,7 +372,14 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyType.
+             * <p>The type of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>cname</strong>: reverse proxy cluster.</li>
+             * <li><strong>service</strong>: SDK-based traffic mirroring cluster.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cname</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;
@@ -333,7 +387,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The remarks about the cluster.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -341,7 +395,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RuleConfig.
+             * <p>The configurations of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;enable&quot;:true,&quot;param&quot;:{&quot;breaker&quot;:{&quot;duration&quot;:1,&quot;failed&quot;:1,&quot;recent_failed&quot;:1},&quot;disable_protect&quot;:false,&quot;max_request_body_len&quot;:1,&quot;timeout&quot;:1}}</p>
              */
             public Builder ruleConfig(String ruleConfig) {
                 this.ruleConfig = ruleConfig;
@@ -349,7 +406,14 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RuleStatus.
+             * <p>The status of manual bypass. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled.</li>
+             * <li><strong>off</strong>: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -357,7 +421,13 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * <p>The type of the rule. Valid value:</p>
+             * <ul>
+             * <li><strong>bypass</strong>: Requests are allowed without security checks.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>bypass</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHybridCloudClusterRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyHybridCloudClusterRuleRequest</p>
@@ -141,7 +142,11 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the hybrid cloud cluster.
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1018</p>
          */
         public Builder clusterId(Long clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -150,10 +155,14 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the DescribeInstanceInfo operation to query the ID of the WAF instance.<a href="~~140857~~"></a></p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the DescribeInstanceInfo operation to query the ID of the WAF instance.[](~~140857~~)
+         * <strong>example:</strong>
+         * <p>waf-cn-n6w***x52m</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -162,11 +171,14 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +187,10 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -184,7 +199,10 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * The configuration of the rule.
+         * <p>The configuration of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;check_mode&quot;:&quot;part&quot;,&quot;include&quot;:{&quot;exact&quot;:[],&quot;regex&quot;:[]}}</p>
          */
         public Builder ruleConfig(String ruleConfig) {
             this.putQueryParameter("RuleConfig", ruleConfig);
@@ -193,11 +211,15 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * The status of the rule. Valid values:
-         * <p>
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enables the rule.</li>
+         * <li><strong>off</strong>: disables the rule.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: enables the rule.
-         * *   **off**: disables the rule.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleStatus(String ruleStatus) {
             this.putQueryParameter("RuleStatus", ruleStatus);
@@ -206,10 +228,14 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * The type of the rule. Valid values:
-         * <p>
+         * <p>The type of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>pullin</strong>: The traffic redirection rule.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **pullin**: The traffic redirection rule.
+         * <strong>example:</strong>
+         * <p>pullin</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);

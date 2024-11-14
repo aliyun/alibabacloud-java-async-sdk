@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFlowTopUrlResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFlowTopUrlResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopUrl> ruleHitsTopUrl; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>520D4E4C-B8EC-5602-ACB6-4D378ACBA28D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the top 10 URLs that are used to initiate requests.
+         * <p>The array of the top 10 URLs that are used to initiate requests.</p>
          */
         public Builder ruleHitsTopUrl(java.util.List < RuleHitsTopUrl> ruleHitsTopUrl) {
             this.ruleHitsTopUrl = ruleHitsTopUrl;
@@ -70,6 +74,12 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFlowTopUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowTopUrlResponseBody</p>
+     */
     public static class RuleHitsTopUrl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The total number of requests that are initiated by using the URL.
+             * <p>The total number of requests that are initiated by using the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>181174784</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to initiate requests.
+             * <p>The URL that is used to initiate requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com/path1">www.aliyundoc.com/path1</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

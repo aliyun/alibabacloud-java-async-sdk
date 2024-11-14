@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyDefenseRuleRequest</p>
@@ -29,7 +30,7 @@ public class ModifyDefenseRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Rules")
     @com.aliyun.core.annotation.Validation(required = true)
     private String rules;
@@ -127,7 +128,11 @@ public class ModifyDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The scenario in which you want to use the protection rule. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+         * <p>The scenario in which you want to use the protection rule. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_group</p>
          */
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
@@ -136,10 +141,14 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,11 +157,14 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +173,10 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -170,20 +185,20 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * The details of the protection rule. Specify a string that contains multiple parameters in the JSON format. You must specify the ID and the new configurations of the protection rule.
-         * <p>
-         * 
-         * *   **id:** The ID of the protection rule. Data type: long. You must specify this parameter.
-         * *   The protection rule configurations: The role of this parameter is the same as that of the **Rules** parameter in the **CreateDefenseRule** topic. For more information, see the "**Protection rule parameters**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+         * <p>This parameter is required.</p>
          */
         public Builder rules(String rules) {
-            this.putQueryParameter("Rules", rules);
+            this.putBodyParameter("Rules", rules);
             this.rules = rules;
             return this;
         }
 
         /**
-         * The ID of the protection rule template to which the protection rule whose configurations you want to modify belongs.
+         * <p>The ID of the protection rule template to which the protection rule whose configurations you want to modify belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5325</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

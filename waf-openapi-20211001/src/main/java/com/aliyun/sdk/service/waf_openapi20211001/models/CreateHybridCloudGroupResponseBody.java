@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHybridCloudGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHybridCloudGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateHybridCloudGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the node group.
+         * <p>The ID of the node group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class CreateHybridCloudGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48F7C7BA-0932-50EA-89AD-5B0E1***274</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

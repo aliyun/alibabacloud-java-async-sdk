@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDefenseResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyDefenseResourceGroupRequest</p>
@@ -139,7 +140,10 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         } 
 
         /**
-         * The protected objects that you want to add to the protected object group. Separate the protected objects with commas (,). If you leave this parameter empty, no protected objects are added to the protected object group.
+         * <p>The protected objects that you want to add to the protected object group. Separate the protected objects with commas (,). If you leave this parameter empty, no protected objects are added to the protected object group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1.aliyundoc.com,test2.aliyundoc.com</p>
          */
         public Builder addList(String addList) {
             this.putQueryParameter("AddList", addList);
@@ -148,7 +152,10 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * The protected objects that you want to remove from the protected object group. Separate the protected objects with commas (,). If you leave this parameter empty, no protected objects are removed from the protected object group.
+         * <p>The protected objects that you want to remove from the protected object group. Separate the protected objects with commas (,). If you leave this parameter empty, no protected objects are removed from the protected object group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test14.waf.com,test24.waf.com</p>
          */
         public Builder deleteList(String deleteList) {
             this.putQueryParameter("DeleteList", deleteList);
@@ -157,7 +164,10 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * The description of the protected object group.
+         * <p>The description of the protected object group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -166,7 +176,11 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * The name of the protected object group whose configurations you want to modify.
+         * <p>The name of the protected object group whose configurations you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -175,10 +189,14 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,11 +205,14 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,7 +221,10 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

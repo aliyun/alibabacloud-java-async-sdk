@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePeakTrendResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePeakTrendResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array of the QPS statistics of the WAF instance.
+         * <p>An array of the QPS statistics of the WAF instance.</p>
          */
         public Builder flowChart(java.util.List < FlowChart> flowChart) {
             this.flowChart = flowChart;
@@ -57,7 +58,10 @@ public class DescribePeakTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D11AC3A-A10C-56E7-A342-E87EC892BAE2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePeakTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePeakTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePeakTrendResponseBody</p>
+     */
     public static class FlowChart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclSum")
         private Long aclSum;
@@ -157,7 +167,10 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             private Long wafSum; 
 
             /**
-             * The number of requests that are monitored or blocked by the custom rule (access control) module.
+             * <p>The number of requests that are monitored or blocked by the custom rule (access control) module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder aclSum(Long aclSum) {
                 this.aclSum = aclSum;
@@ -165,7 +178,10 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that are monitored or blocked by the scan protection module.
+             * <p>The number of requests that are monitored or blocked by the scan protection module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder antiScanSum(Long antiScanSum) {
                 this.antiScanSum = antiScanSum;
@@ -173,7 +189,10 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that are monitored or blocked by the HTTP flood protection module.
+             * <p>The number of requests that are monitored or blocked by the HTTP flood protection module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ccSum(Long ccSum) {
                 this.ccSum = ccSum;
@@ -181,7 +200,10 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2622</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -189,7 +211,10 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the time interval. The serial numbers are arranged in chronological order.
+             * <p>The serial number of the time interval. The serial numbers are arranged in chronological order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -197,7 +222,10 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that are monitored or blocked by the regular expression protection engine.
+             * <p>The number of requests that are monitored or blocked by the regular expression protection engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder wafSum(Long wafSum) {
                 this.wafSum = wafSum;

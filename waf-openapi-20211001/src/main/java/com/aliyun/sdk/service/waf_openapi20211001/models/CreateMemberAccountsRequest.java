@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMemberAccountsRequest} extends {@link RequestModel}
  *
  * <p>CreateMemberAccountsRequest</p>
@@ -111,10 +112,14 @@ public class CreateMemberAccountsRequest extends Request {
         } 
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +128,8 @@ public class CreateMemberAccountsRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account IDs of the members that you want to add. You can add up to 10 members at the same time.
+         * <p>The Alibaba Cloud account IDs of the members that you want to add. You can add up to 10 members at the same time.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder memberAccountIds(java.util.List < String > memberAccountIds) {
             this.putQueryParameter("MemberAccountIds", memberAccountIds);
@@ -132,11 +138,14 @@ public class CreateMemberAccountsRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,7 +154,10 @@ public class CreateMemberAccountsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -154,7 +166,10 @@ public class CreateMemberAccountsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. The system automatically obtains the value of this parameter.
+         * <p>The source IP address of the request. The system automatically obtains the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.X.X</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

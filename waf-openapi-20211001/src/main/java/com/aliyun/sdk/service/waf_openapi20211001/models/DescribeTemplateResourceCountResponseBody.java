@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplateResourceCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTemplateResourceCountResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
         private java.util.List < ResourceCount> resourceCount; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8064433-9781-5E86-806E-C1DD****1D95</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of protected objects or protected object groups for which the protection template takes effect.
+         * <p>The number of protected objects or protected object groups for which the protection template takes effect.</p>
          */
         public Builder resourceCount(java.util.List < ResourceCount> resourceCount) {
             this.resourceCount = resourceCount;
@@ -70,6 +74,12 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTemplateResourceCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplateResourceCountResponseBody</p>
+     */
     public static class ResourceCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
@@ -121,7 +131,10 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The number of protected object groups.
+             * <p>The number of protected object groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder groupCount(Integer groupCount) {
                 this.groupCount = groupCount;
@@ -129,7 +142,10 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of protected objects.
+             * <p>The number of protected objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder singleCount(Integer singleCount) {
                 this.singleCount = singleCount;
@@ -137,7 +153,10 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection template.
+             * <p>The ID of the protection template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

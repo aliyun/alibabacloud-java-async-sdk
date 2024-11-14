@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourcePortResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourcePortResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeResourcePortResponseBody extends TeaModel {
         private java.util.List < String > resourcePorts; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeResourcePortResponseBody extends TeaModel {
         }
 
         /**
-         * An array of HTTP and HTTPS listener ports that are added to the WAF instance.
+         * <p>An array of HTTP and HTTPS listener ports that are added to the WAF instance.</p>
          */
         public Builder resourcePorts(java.util.List < String > resourcePorts) {
             this.resourcePorts = resourcePorts;

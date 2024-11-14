@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisecAssetTrendResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisecAssetTrendResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisecAssetTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisecAssetTrendResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetActive")
         private Long assetActive;
@@ -133,7 +143,10 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * AssetActive.
+             * <p>The number of active assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder assetActive(Long assetActive) {
                 this.assetActive = assetActive;
@@ -141,7 +154,10 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
             }
 
             /**
-             * AssetCount.
+             * <p>The total number of assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder assetCount(Long assetCount) {
                 this.assetCount = assetCount;
@@ -149,7 +165,10 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
             }
 
             /**
-             * AssetOffline.
+             * <p>The number of deactivated assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder assetOffline(Long assetOffline) {
                 this.assetOffline = assetOffline;
@@ -157,7 +176,10 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683600042</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

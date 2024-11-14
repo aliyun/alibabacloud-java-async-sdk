@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleGroupsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02E9A4B8-90FB-5F41-A049-C82277EB82FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * An array of regular expression rule groups.
+         * <p>An array of regular expression rule groups.</p>
          */
         public Builder ruleGroups(java.util.List < RuleGroups> ruleGroups) {
             this.ruleGroups = ruleGroups;
@@ -77,7 +81,10 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that are returned.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleGroupsResponseBody</p>
+     */
     public static class RuleGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
@@ -177,7 +190,10 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             private Integer ruleTotalCount; 
 
             /**
-             * The most recent time when the rule group was modified.
+             * <p>The most recent time when the rule group was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1664336364000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -185,11 +201,14 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic update feature is enabled for the rule group.
-             * <p>
+             * <p>Indicates whether the automatic update feature is enabled for the rule group.</p>
+             * <ul>
+             * <li>1: The automatic update feature is enabled for the rule group.</li>
+             * <li>2: The automatic update feature is disabled for the rule group.</li>
+             * </ul>
              * 
-             * *   1: The automatic update feature is enabled for the rule group.
-             * *   2: The automatic update feature is disabled for the rule group.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isSubscribe(Integer isSubscribe) {
                 this.isSubscribe = isSubscribe;
@@ -197,13 +216,16 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule group.
-             * <p>
+             * <p>The ID of the rule group.</p>
+             * <ul>
+             * <li>0: The rule group is created from scratch.</li>
+             * <li>1011: The rule group is a strict rule group.</li>
+             * <li>1012: The rule group is a medium rule group.</li>
+             * <li>1013: The rue group is a loose rule group.</li>
+             * </ul>
              * 
-             * *   0: The rule group is created from scratch.
-             * *   1011: The rule group is a strict rule group.
-             * *   1012: The rule group is a medium rule group.
-             * *   1013: The rue group is a loose rule group.
+             * <strong>example:</strong>
+             * <p>1012</p>
              */
             public Builder parentRuleGroupId(Long parentRuleGroupId) {
                 this.parentRuleGroupId = parentRuleGroupId;
@@ -211,7 +233,10 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the regular expression rule group.
+             * <p>The ID of the regular expression rule group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>115361</p>
              */
             public Builder ruleGroupId(Long ruleGroupId) {
                 this.ruleGroupId = ruleGroupId;
@@ -219,7 +244,10 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule group.
+             * <p>The name of the rule group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssssss</p>
              */
             public Builder ruleGroupName(String ruleGroupName) {
                 this.ruleGroupName = ruleGroupName;
@@ -227,7 +255,10 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of built-in rules in the rule group.
+             * <p>The number of built-in rules in the rule group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4444</p>
              */
             public Builder ruleTotalCount(Integer ruleTotalCount) {
                 this.ruleTotalCount = ruleTotalCount;

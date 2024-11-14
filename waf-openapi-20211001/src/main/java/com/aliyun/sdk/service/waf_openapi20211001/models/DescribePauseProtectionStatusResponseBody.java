@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePauseProtectionStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePauseProtectionStatusResponseBody</p>
@@ -49,11 +50,14 @@ public class DescribePauseProtectionStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether WAF protection is paused.
-         * <p>
+         * <p>Indicates whether WAF protection is paused.</p>
+         * <ul>
+         * <li><strong>0</strong>: indicates that WAF protection is not paused. This is the default value.</li>
+         * <li><strong>1</strong>: indicates that WAF protection is paused.</li>
+         * </ul>
          * 
-         * *   **0**: indicates that WAF protection is not paused. This is the default value.
-         * *   **1**: indicates that WAF protection is paused.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pauseStatus(Integer pauseStatus) {
             this.pauseStatus = pauseStatus;
@@ -61,7 +65,10 @@ public class DescribePauseProtectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-<strong><strong>-46CE-A47C-6B19</strong></strong>5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

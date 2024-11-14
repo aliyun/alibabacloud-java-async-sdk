@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDefenseResourcesRequest</p>
@@ -138,10 +139,14 @@ public class DescribeDefenseResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -150,7 +155,10 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -159,7 +167,10 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,10 +179,13 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * The query conditions. Specify the value of this parameter as a string in the JSON format.
-         * <p>
+         * <p>The query conditions. Specify the value of this parameter as a string in the JSON format.</p>
+         * <blockquote>
+         * <p> The results vary based on the query condition. For more information, see the &quot;<strong>Query parameters</strong>&quot; section in this topic.</p>
+         * </blockquote>
          * 
-         * >  The results vary based on the query condition. For more information, see the "**Query parameters**" section in this topic.
+         * <strong>example:</strong>
+         * <p>{&quot;product&quot;:&quot;waf&quot;}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -180,11 +194,14 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +210,10 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -202,7 +222,7 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * The tags of the resources that you want to query. You can specify up to 20 tags.
+         * <p>The tags of the resources that you want to query. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -217,6 +237,12 @@ public class DescribeDefenseResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDefenseResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -256,7 +282,10 @@ public class DescribeDefenseResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tagkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -264,7 +293,10 @@ public class DescribeDefenseResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

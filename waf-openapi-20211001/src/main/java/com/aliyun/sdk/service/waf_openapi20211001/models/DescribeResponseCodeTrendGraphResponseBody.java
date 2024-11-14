@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResponseCodeTrendGraphResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResponseCodeTrendGraphResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         private java.util.List < ResponseCodes> responseCodes; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D46493E-84DD-58CE-80A7-8643****9ECC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the statistics of the error codes.
+         * <p>The array of the statistics of the error codes.</p>
          */
         public Builder responseCodes(java.util.List < ResponseCodes> responseCodes) {
             this.responseCodes = responseCodes;
@@ -70,6 +74,12 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResponseCodeTrendGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResponseCodeTrendGraphResponseBody</p>
+     */
     public static class ResponseCodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("302Pv")
         private Long code302Pv;
@@ -157,7 +167,10 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             private Long index; 
 
             /**
-             * The number of 302 error codes that are returned.
+             * <p>The number of 302 error codes that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code302Pv(Long code302Pv) {
                 this.code302Pv = code302Pv;
@@ -165,7 +178,10 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The number of 405 error codes that are returned.
+             * <p>The number of 405 error codes that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121645464</p>
              */
             public Builder code405Pv(Long code405Pv) {
                 this.code405Pv = code405Pv;
@@ -173,7 +189,10 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The number of 444 error codes that are returned.
+             * <p>The number of 444 error codes that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code444Pv(Long code444Pv) {
                 this.code444Pv = code444Pv;
@@ -181,7 +200,10 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The number of 499 error codes that are returned.
+             * <p>The number of 499 error codes that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code499Pv(Long code499Pv) {
                 this.code499Pv = code499Pv;
@@ -189,7 +211,10 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The number of 5xx error codes that are returned.
+             * <p>The number of 5xx error codes that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2932</p>
              */
             public Builder code5xxPv(Long code5xxPv) {
                 this.code5xxPv = code5xxPv;
@@ -197,7 +222,10 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the time interval. The serial numbers are arranged in chronological order.
+             * <p>The serial number of the time interval. The serial numbers are arranged in chronological order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder index(Long index) {
                 this.index = index;

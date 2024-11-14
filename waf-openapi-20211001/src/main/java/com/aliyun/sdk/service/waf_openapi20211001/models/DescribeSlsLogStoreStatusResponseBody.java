@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlsLogStoreStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlsLogStoreStatusResponseBody</p>
@@ -49,11 +50,14 @@ public class DescribeSlsLogStoreStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether a Logstore is created for WAF. Valid values:
-         * <p>
+         * <p>Indicates whether a Logstore is created for WAF. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder existStatus(Boolean existStatus) {
             this.existStatus = existStatus;
@@ -61,7 +65,10 @@ public class DescribeSlsLogStoreStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>184F538F-C115-5C89-A4EF-C79CD2E29AC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

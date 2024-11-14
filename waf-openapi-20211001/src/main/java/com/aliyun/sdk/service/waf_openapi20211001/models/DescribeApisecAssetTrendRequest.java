@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisecAssetTrendRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisecAssetTrendRequest</p>
@@ -25,10 +26,6 @@ public class DescribeApisecAssetTrendRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Region")
-    private String region;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -45,7 +42,6 @@ public class DescribeApisecAssetTrendRequest extends Request {
         this.clusterId = builder.clusterId;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
-        this.region = builder.region;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.startTime = builder.startTime;
@@ -86,13 +82,6 @@ public class DescribeApisecAssetTrendRequest extends Request {
     }
 
     /**
-     * @return region
-     */
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -117,7 +106,6 @@ public class DescribeApisecAssetTrendRequest extends Request {
         private String clusterId; 
         private Long endTime; 
         private String instanceId; 
-        private String region; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
         private Long startTime; 
@@ -131,14 +119,16 @@ public class DescribeApisecAssetTrendRequest extends Request {
             this.clusterId = request.clusterId;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
-            this.region = request.region;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>590</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -147,7 +137,10 @@ public class DescribeApisecAssetTrendRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683183599</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -156,7 +149,14 @@ public class DescribeApisecAssetTrendRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-ww**b06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -165,16 +165,14 @@ public class DescribeApisecAssetTrendRequest extends Request {
         }
 
         /**
-         * Region.
-         */
-        public Builder region(String region) {
-            this.putQueryParameter("Region", region);
-            this.region = region;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +181,10 @@ public class DescribeApisecAssetTrendRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek**7uq</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -192,7 +193,10 @@ public class DescribeApisecAssetTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1668496310</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseTemplateValidGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefenseTemplateValidGroupsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDefenseTemplateValidGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The names of the protected object groups.
+         * <p>The names of the protected object groups.</p>
          */
         public Builder groups(java.util.List < String > groups) {
             this.groups = groups;
@@ -69,7 +70,10 @@ public class DescribeDefenseTemplateValidGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EA4B39A-9C0C-5E57-993E-30B6****3AD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeDefenseTemplateValidGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

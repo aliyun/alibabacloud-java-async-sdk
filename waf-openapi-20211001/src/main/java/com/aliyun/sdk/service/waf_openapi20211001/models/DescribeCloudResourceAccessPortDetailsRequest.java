@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudResourceAccessPortDetailsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudResourceAccessPortDetailsRequest</p>
@@ -167,7 +168,14 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf-cn-tl32ast****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -176,7 +184,10 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -185,7 +196,10 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +208,10 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port of the cloud service that is added to WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -203,7 +220,14 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>The type of the protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>http</strong></li>
+         * <li><strong>https</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -212,7 +236,14 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +252,11 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends Request {
         }
 
         /**
-         * ResourceInstanceId.
+         * <p>The instance ID of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2zeugkfj81jvo****4tqm</p>
          */
         public Builder resourceInstanceId(String resourceInstanceId) {
             this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
@@ -230,7 +265,10 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -239,7 +277,15 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends Request {
         }
 
         /**
-         * ResourceProduct.
+         * <p>The cloud service. Valid values:</p>
+         * <ul>
+         * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+         * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+         * <li><strong>ecs</strong>: ECS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>clb7</p>
          */
         public Builder resourceProduct(String resourceProduct) {
             this.putQueryParameter("ResourceProduct", resourceProduct);

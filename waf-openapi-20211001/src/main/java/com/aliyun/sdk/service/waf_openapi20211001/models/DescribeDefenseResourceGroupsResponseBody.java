@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseResourceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefenseResourceGroupsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The list of protected object groups.
+         * <p>The list of protected object groups.</p>
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -69,7 +70,10 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFEC5C77-049B-5E88-A5B6-CB0C****B66E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDefenseResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseResourceGroupsResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -165,7 +178,10 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
             private String resourceList; 
 
             /**
-             * The description of the protected object group.
+             * <p>The description of the protected object group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is test description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -173,7 +189,10 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the protected object group was created. Unit: milliseconds.
+             * <p>The time when the protected object group was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624343180000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -181,7 +200,10 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent time when the protected object group was modified. Unit: milliseconds.
+             * <p>The most recent time when the protected object group was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1701656305000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -189,7 +211,10 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protected object group.
+             * <p>The name of the protected object group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apptest</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -197,7 +222,10 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the protected objects that are added to the protected object group. Separate multiple protected objects with commas (,).
+             * <p>The names of the protected objects that are added to the protected object group. Separate multiple protected objects with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example02.aliyun-waf,example01.aliyun-waf</p>
              */
             public Builder resourceList(String resourceList) {
                 this.resourceList = resourceList;

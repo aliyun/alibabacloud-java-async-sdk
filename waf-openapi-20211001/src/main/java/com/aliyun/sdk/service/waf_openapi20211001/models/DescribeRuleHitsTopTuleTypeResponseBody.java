@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleHitsTopTuleTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleHitsTopTuleTypeResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45E377CE-0B04-578E-B653-EEA63CFE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The top 10 protection modules that are matched.
+         * <p>The top 10 protection modules that are matched.</p>
          */
         public Builder ruleHitsTopTuleType(java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType) {
             this.ruleHitsTopTuleType = ruleHitsTopTuleType;
@@ -70,6 +74,12 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleHitsTopTuleTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleHitsTopTuleTypeResponseBody</p>
+     */
     public static class RuleHitsTopTuleType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
             private String ruleType; 
 
             /**
-             * The number of requests that match protection rules.
+             * <p>The number of requests that match protection rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>698455</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,17 +130,20 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of rule that is matched. By default, this parameter is not returned. This indicates that all types of rules that are matched are returned.
-             * <p>
+             * <p>The type of rule that is matched. By default, this parameter is not returned. This indicates that all types of rules that are matched are returned.</p>
+             * <ul>
+             * <li><strong>waf:</strong> basic protection rules.</li>
+             * <li><strong>blacklist:</strong> IP address blacklist rules.</li>
+             * <li><strong>custom:</strong> custom rules.</li>
+             * <li><strong>antiscan:</strong> scan protection rules.</li>
+             * <li><strong>cc_system:</strong> HTTP flood protection rules.</li>
+             * <li><strong>region_block:</strong> region blacklist rules.</li>
+             * <li><strong>scene:</strong> bot management rules.</li>
+             * <li><strong>dlp:</strong> data leakage prevention rules.</li>
+             * </ul>
              * 
-             * *   **waf:** basic protection rules.
-             * *   **blacklist:** IP address blacklist rules.
-             * *   **custom:** custom rules.
-             * *   **antiscan:** scan protection rules.
-             * *   **cc_system:** HTTP flood protection rules.
-             * *   **region_block:** region blacklist rules.
-             * *   **scene:** bot management rules.
-             * *   **dlp:** data leakage prevention rules.
+             * <strong>example:</strong>
+             * <p>cc_system</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;

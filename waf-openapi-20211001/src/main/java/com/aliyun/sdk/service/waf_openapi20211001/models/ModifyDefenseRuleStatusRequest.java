@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDefenseRuleStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyDefenseRuleStatusRequest</p>
@@ -127,10 +128,14 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,11 +144,14 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,7 +160,10 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -161,7 +172,11 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         }
 
         /**
-         * The ID of the protection rule whose status you want to change.
+         * <p>The ID of the protection rule whose status you want to change.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20002615</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -170,11 +185,15 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         }
 
         /**
-         * The new status of the protection rule. Valid values:
-         * <p>
+         * <p>The new status of the protection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0:</strong> disabled.</li>
+         * <li><strong>1:</strong> enabled.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0:** disabled.
-         * *   **1:** enabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleStatus(Integer ruleStatus) {
             this.putQueryParameter("RuleStatus", ruleStatus);
@@ -183,7 +202,11 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         }
 
         /**
-         * The ID of the protection rule template to which the protection rule whose status you want to change belongs.
+         * <p>The ID of the protection rule template to which the protection rule whose status you want to change belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7239</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDoSStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDDoSStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether DDoS attacks occur on specific domain names.
+         * <p>Indicates whether DDoS attacks occur on specific domain names.</p>
          */
         public Builder dDoSStatus(java.util.List < DDoSStatus> dDoSStatus) {
             this.dDoSStatus = dDoSStatus;
@@ -57,7 +58,10 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDDoSStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDDoSStatusResponseBody</p>
+     */
     public static class DDoSStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
@@ -109,11 +119,14 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The type of events that are triggered by DDoS attacks. Valid values:
-             * <p>
+             * <p>The type of events that are triggered by DDoS attacks. Valid values:</p>
+             * <ul>
+             * <li>defense: traffic scrubbing events.</li>
+             * <li>blackhole: blackhole filtering events.</li>
+             * </ul>
              * 
-             * *   defense: traffic scrubbing events.
-             * *   blackhole: blackhole filtering events.
+             * <strong>example:</strong>
+             * <p>blackhole</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -121,10 +134,13 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DDoS attacks occur on specific domain names. Valid value:
-             * <p>
+             * <p>Indicates whether DDoS attacks occur on specific domain names. Valid value:</p>
+             * <ul>
+             * <li><strong>doing</strong>: DDoS attacks occur on specific domain names.</li>
+             * </ul>
              * 
-             * *   **doing**: DDoS attacks occur on specific domain names.
+             * <strong>example:</strong>
+             * <p>doing</p>
              */
             public Builder status(String status) {
                 this.status = status;

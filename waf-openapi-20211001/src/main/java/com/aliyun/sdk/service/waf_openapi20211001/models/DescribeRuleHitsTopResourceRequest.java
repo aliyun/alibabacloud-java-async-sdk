@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleHitsTopResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeRuleHitsTopResourceRequest</p>
@@ -125,7 +126,10 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.
+         * <p>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665386340</p>
          */
         public Builder endTimestamp(String endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -134,10 +138,14 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,11 +154,14 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -159,7 +170,10 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -168,14 +182,17 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.
-         * <p>
+         * <p>The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.</p>
+         * <ul>
+         * <li><strong>blacklist:</strong> IP address blacklist rules.</li>
+         * <li><strong>custom:</strong> custom rules.</li>
+         * <li><strong>antiscan:</strong> scan protection rules.</li>
+         * <li><strong>cc_system:</strong> HTTP flood protection rules.</li>
+         * <li><strong>region_block:</strong> region blacklist rules.</li>
+         * </ul>
          * 
-         * *   **blacklist:** IP address blacklist rules.
-         * *   **custom:** custom rules.
-         * *   **antiscan:** scan protection rules.
-         * *   **cc_system:** HTTP flood protection rules.
-         * *   **region_block:** region blacklist rules.
+         * <strong>example:</strong>
+         * <p>blacklist</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -184,7 +201,11 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: seconds.
+         * <p>The beginning of the time range to query. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665331200</p>
          */
         public Builder startTimestamp(String startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

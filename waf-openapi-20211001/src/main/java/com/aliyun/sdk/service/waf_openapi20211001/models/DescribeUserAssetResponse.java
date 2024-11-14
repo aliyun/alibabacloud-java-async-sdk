@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteApisecEventResponse} extends {@link TeaModel}
+ * 
+ * {@link DescribeUserAssetResponse} extends {@link TeaModel}
  *
- * <p>DeleteApisecEventResponse</p>
+ * <p>DescribeUserAssetResponse</p>
  */
-public class DeleteApisecEventResponse extends Response {
+public class DescribeUserAssetResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class DeleteApisecEventResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteApisecEventResponseBody body;
+    private DescribeUserAssetResponseBody body;
 
-    private DeleteApisecEventResponse(BuilderImpl builder) {
+    private DescribeUserAssetResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteApisecEventResponse create() {
+    public static DescribeUserAssetResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class DeleteApisecEventResponse extends Response {
     /**
      * @return body
      */
-    public DeleteApisecEventResponseBody getBody() {
+    public DescribeUserAssetResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteApisecEventResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeUserAssetResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteApisecEventResponseBody body);
+        Builder body(DescribeUserAssetResponseBody body);
 
         @Override
-        DeleteApisecEventResponse build();
+        DescribeUserAssetResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteApisecEventResponse, Builder>
+            extends Response.BuilderImpl<DescribeUserAssetResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteApisecEventResponseBody body; 
+        private DescribeUserAssetResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteApisecEventResponse response) {
+        private BuilderImpl(DescribeUserAssetResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class DeleteApisecEventResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteApisecEventResponseBody body) {
+        public Builder body(DescribeUserAssetResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteApisecEventResponse build() {
-            return new DeleteApisecEventResponse(this);
+        public DescribeUserAssetResponse build() {
+            return new DescribeUserAssetResponse(this);
         } 
 
     } 

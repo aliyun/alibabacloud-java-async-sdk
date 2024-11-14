@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSM2CertResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSM2CertResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateSM2CertResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -57,7 +61,10 @@ public class CreateSM2CertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

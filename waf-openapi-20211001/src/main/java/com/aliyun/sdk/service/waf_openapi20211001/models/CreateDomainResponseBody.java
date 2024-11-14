@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDomainResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDomainResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the domain name.
+         * <p>The information about the domain name.</p>
          */
         public Builder domainInfo(DomainInfo domainInfo) {
             this.domainInfo = domainInfo;
@@ -57,7 +58,10 @@ public class CreateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19160D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDomainResponseBody</p>
+     */
     public static class DomainInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
@@ -109,7 +119,10 @@ public class CreateDomainResponseBody extends TeaModel {
             private String domain; 
 
             /**
-             * The CNAME that is assigned by WAF to the domain name.
+             * <p>The CNAME that is assigned by WAF to the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxwww.****.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -117,7 +130,10 @@ public class CreateDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that you added to WAF.
+             * <p>The domain name that you added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlsLogStoreResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlsLogStoreResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         private Long used; 
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wafng-logstore</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.logStoreName = logStoreName;
@@ -105,7 +109,10 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Simple Log Service project.
+         * <p>The name of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wafng-project-14316572********-cn-hangzhou</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -113,7 +120,10 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * The capacity of the Logstore. Unit: bytes.
+         * <p>The capacity of the Logstore. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3298534883328</p>
          */
         public Builder quota(Long quota) {
             this.quota = quota;
@@ -121,7 +131,10 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAC0A24B-486A-5E12-9894-BE860E5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,10 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * The storage duration of the Logstore. Unit: days.
+         * <p>The storage duration of the Logstore. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -137,7 +153,10 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * The used capacity of the Logstore. Unit: bytes.
+         * <p>The used capacity of the Logstore. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35471136</p>
          */
         public Builder used(Long used) {
             this.used = used;

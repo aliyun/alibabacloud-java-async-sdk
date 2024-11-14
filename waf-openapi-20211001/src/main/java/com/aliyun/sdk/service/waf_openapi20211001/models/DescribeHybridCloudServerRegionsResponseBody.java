@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridCloudServerRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHybridCloudServerRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the regions.
+         * <p>The information about the regions.</p>
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FBBDE11-C35F-531B-96BA-64CA****C875</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHybridCloudServerRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridCloudServerRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -109,7 +119,10 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the region.
+             * <p>The code of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -117,7 +130,10 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder name(String name) {
                 this.name = name;

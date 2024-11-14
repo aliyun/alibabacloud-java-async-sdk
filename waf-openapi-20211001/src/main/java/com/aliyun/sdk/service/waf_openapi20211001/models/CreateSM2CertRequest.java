@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSM2CertRequest} extends {@link RequestModel}
  *
  * <p>CreateSM2CertRequest</p>
@@ -25,6 +26,7 @@ public class CreateSM2CertRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
@@ -151,7 +153,10 @@ public class CreateSM2CertRequest extends Request {
         } 
 
         /**
-         * The name of the SM certificate.
+         * <p>The name of the SM certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-sm2</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -160,7 +165,12 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * The content of the SM certificate.
+         * <p>The content of the SM certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----</p>
+         * <hr>
+         * <p>-----END CERTIFICATE-----</p>
          */
         public Builder encryptCertificate(String encryptCertificate) {
             this.putQueryParameter("EncryptCertificate", encryptCertificate);
@@ -169,7 +179,12 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * The private key of the SM certificate.
+         * <p>The private key of the SM certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PRIVATE KEY-----</p>
+         * <hr>
+         * <p>-----END PRIVATE KEY-----</p>
          */
         public Builder encryptPrivateKey(String encryptPrivateKey) {
             this.putQueryParameter("EncryptPrivateKey", encryptPrivateKey);
@@ -178,10 +193,14 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -190,11 +209,14 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +225,10 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -212,7 +237,12 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * The content of the signing certificate for the SM certificate.
+         * <p>The content of the signing certificate for the SM certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----</p>
+         * <hr>
+         * <p>-----END CERTIFICATE-----</p>
          */
         public Builder signCertificate(String signCertificate) {
             this.putQueryParameter("SignCertificate", signCertificate);
@@ -221,7 +251,12 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * The private key of the signing certificate for the SM certificate.
+         * <p>The private key of the signing certificate for the SM certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PRIVATE KEY-----</p>
+         * <hr>
+         * <p>-----END PRIVATE KEY-----</p>
          */
         public Builder signPrivateKey(String signPrivateKey) {
             this.putQueryParameter("SignPrivateKey", signPrivateKey);

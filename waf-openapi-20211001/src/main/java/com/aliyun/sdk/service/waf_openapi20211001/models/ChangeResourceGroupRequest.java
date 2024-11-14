@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
@@ -13,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ChangeResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newResourceGroupId;
 
     @com.aliyun.core.annotation.Query
@@ -21,6 +23,7 @@ public class ChangeResourceGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
     @com.aliyun.core.annotation.Query
@@ -29,6 +32,7 @@ public class ChangeResourceGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private ChangeResourceGroupRequest(Builder builder) {
@@ -109,7 +113,11 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * NewResourceGroupId.
+         * <p>The ID of the new resource group. You can view the available resource groups in the Resource Management console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2mcq***</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -118,7 +126,14 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,7 +142,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the protected object in Web Application Firewall (WAF) that you want to manage.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyun.com-waf</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -136,7 +155,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -145,7 +167,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. The value is fixed as defenseresource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defenseresource</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

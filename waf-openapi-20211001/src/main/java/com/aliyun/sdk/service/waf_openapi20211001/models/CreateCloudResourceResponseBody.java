@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudResourceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCloudResourceResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateCloudResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CloudResourceId.
+         * <p>The ID of the resource that is added to WAF. The ID is automatically generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-***</p>
          */
         public Builder cloudResourceId(String cloudResourceId) {
             this.cloudResourceId = cloudResourceId;
@@ -57,7 +61,10 @@ public class CreateCloudResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-ER12-WE34-23PO-301469*****E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

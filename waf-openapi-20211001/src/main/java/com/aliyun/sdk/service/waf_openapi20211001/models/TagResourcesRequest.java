@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -99,11 +100,15 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -112,7 +117,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the resources. You can specify up to 50 resource IDs.
+         * <p>The IDs of the resources. You can specify up to 50 resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -121,7 +127,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.
+         * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::WAF::DEFENSERESOURCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -130,7 +140,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags to add to the resource.
+         * <p>The tags to add to the resource.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -145,6 +156,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -184,7 +201,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. Valid values of N: 1 to 20.
+             * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demoTagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -192,7 +212,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. Valid values of N: 1 to 20.
+             * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demoTagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

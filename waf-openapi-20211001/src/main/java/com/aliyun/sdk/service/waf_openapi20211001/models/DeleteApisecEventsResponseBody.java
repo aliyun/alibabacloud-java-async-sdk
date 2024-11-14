@@ -6,27 +6,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteApisecEventResponseBody} extends {@link TeaModel}
+ * 
+ * {@link DeleteApisecEventsResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteApisecEventResponseBody</p>
+ * <p>DeleteApisecEventsResponseBody</p>
  */
-public class DeleteApisecEventResponseBody extends TeaModel {
+public class DeleteApisecEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("Result")
-    private Boolean result;
-
-    private DeleteApisecEventResponseBody(Builder builder) {
+    private DeleteApisecEventsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.result = builder.result;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteApisecEventResponseBody create() {
+    public static DeleteApisecEventsResponseBody create() {
         return builder().build();
     }
 
@@ -37,35 +34,22 @@ public class DeleteApisecEventResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return result
-     */
-    public Boolean getResult() {
-        return this.result;
-    }
-
     public static final class Builder {
         private String requestId; 
-        private Boolean result; 
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * Result.
-         */
-        public Builder result(Boolean result) {
-            this.result = result;
-            return this;
-        }
-
-        public DeleteApisecEventResponseBody build() {
-            return new DeleteApisecEventResponseBody(this);
+        public DeleteApisecEventsResponseBody build() {
+            return new DeleteApisecEventsResponseBody(this);
         } 
 
     } 

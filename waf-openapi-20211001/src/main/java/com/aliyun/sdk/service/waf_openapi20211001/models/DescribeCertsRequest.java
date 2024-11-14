@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCertsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCertsRequest</p>
@@ -139,11 +140,14 @@ public class DescribeCertsRequest extends Request {
         } 
 
         /**
-         * The type of the encryption algorithm. Valid values:
-         * <p>
+         * <p>The type of the encryption algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>NotSM2</strong>: The encryption algorithm is not the SM2 algorithm. This is the default value.</li>
+         * <li><strong>SM2</strong>: The encryption algorithm is the SM2 algorithm.</li>
+         * </ul>
          * 
-         * *   **NotSM2**: The encryption algorithm is not the SM2 algorithm. This is the default value.
-         * *   **SM2**: The encryption algorithm is the SM2 algorithm.
+         * <strong>example:</strong>
+         * <p>SM2</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -152,7 +156,10 @@ public class DescribeCertsRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyun.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -161,10 +168,14 @@ public class DescribeCertsRequest extends Request {
         }
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v3prepaid_public_cn-5yd****tb02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -173,7 +184,10 @@ public class DescribeCertsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -182,7 +196,10 @@ public class DescribeCertsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: **10**.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -191,11 +208,14 @@ public class DescribeCertsRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -204,7 +224,10 @@ public class DescribeCertsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmoiy****p2oq</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

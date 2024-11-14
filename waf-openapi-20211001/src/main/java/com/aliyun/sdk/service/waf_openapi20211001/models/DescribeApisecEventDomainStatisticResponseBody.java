@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisecEventDomainStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisecEventDomainStatisticResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-*******-80A6-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisecEventDomainStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisecEventDomainStatisticResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiCount")
         private Long apiCount;
@@ -165,7 +178,10 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
             private Long medium; 
 
             /**
-             * ApiCount.
+             * <p>The number of APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder apiCount(Long apiCount) {
                 this.apiCount = apiCount;
@@ -173,7 +189,10 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.aliyun.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -181,7 +200,10 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * High.
+             * <p>The number of high-risk security events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder high(Long high) {
                 this.high = high;
@@ -189,7 +211,10 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Low.
+             * <p>The number of low-risk security events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder low(Long low) {
                 this.low = low;
@@ -197,7 +222,10 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Medium.
+             * <p>The number of medium-risk security events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder medium(Long medium) {
                 this.medium = medium;

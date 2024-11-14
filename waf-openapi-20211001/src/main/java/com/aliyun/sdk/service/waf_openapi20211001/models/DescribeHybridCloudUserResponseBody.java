@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridCloudUserResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHybridCloudUserResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
         private UserInfo userInfo; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9178CB86-285F-5679-A30A-3B3F007E4206</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the ports that can be used by a hybrid cloud cluster.
+         * <p>The information about the ports that can be used by a hybrid cloud cluster.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             this.userInfo = userInfo;
@@ -70,6 +74,12 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHybridCloudUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridCloudUserResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpPorts")
         private String httpPorts;
@@ -109,7 +119,10 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
             private String httpsPorts; 
 
             /**
-             * The HTTP ports. The value is a string. If multiple ports are returned, the value is in the **port1,port2,port3** format.
+             * <p>The HTTP ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80,8080</p>
              */
             public Builder httpPorts(String httpPorts) {
                 this.httpPorts = httpPorts;
@@ -117,7 +130,10 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTPS ports. The value is a string. If multiple ports are returned, the value is in the **port1,port2,port3** format.
+             * <p>The HTTPS ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8443,443</p>
              */
             public Builder httpsPorts(String httpsPorts) {
                 this.httpsPorts = httpsPorts;

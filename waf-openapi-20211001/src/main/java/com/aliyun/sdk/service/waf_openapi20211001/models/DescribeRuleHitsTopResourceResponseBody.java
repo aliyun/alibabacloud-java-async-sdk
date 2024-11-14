@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleHitsTopResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleHitsTopResourceResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopResource> ruleHitsTopResource; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADA11BC7-AA95-5C31-9095-5802C02ED1DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the top 10 protected objects that trigger protection rules.
+         * <p>The array of the top 10 protected objects that trigger protection rules.</p>
          */
         public Builder ruleHitsTopResource(java.util.List < RuleHitsTopResource> ruleHitsTopResource) {
             this.ruleHitsTopResource = ruleHitsTopResource;
@@ -70,6 +74,12 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleHitsTopResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleHitsTopResourceResponseBody</p>
+     */
     public static class RuleHitsTopResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
             private String resource; 
 
             /**
-             * The number of requests that match protection rules.
+             * <p>The number of requests that match protection rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14219</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The protected object.
+             * <p>The protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;

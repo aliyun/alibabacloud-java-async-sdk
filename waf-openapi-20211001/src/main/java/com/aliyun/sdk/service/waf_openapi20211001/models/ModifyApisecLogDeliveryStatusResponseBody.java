@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApisecLogDeliveryStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyApisecLogDeliveryStatusResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyApisecLogDeliveryStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62D****E840</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

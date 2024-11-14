@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDefaultHttpsRequest} extends {@link RequestModel}
  *
  * <p>ModifyDefaultHttpsRequest</p>
@@ -154,7 +155,11 @@ public class ModifyDefaultHttpsRequest extends Request {
         } 
 
         /**
-         * CertId.
+         * <p>The ID of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-cn-hangzhou</p>
          */
         public Builder certId(String certId) {
             this.putQueryParameter("CertId", certId);
@@ -163,7 +168,15 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * CipherSuite.
+         * <p>The type of the cipher suites. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: all cipher suites.</li>
+         * <li><strong>2</strong>: strong cipher suites.</li>
+         * <li><strong>99</strong>: custom cipher suites.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cipherSuite(Integer cipherSuite) {
             this.putQueryParameter("CipherSuite", cipherSuite);
@@ -172,7 +185,7 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * CustomCiphers.
+         * <p>The custom cipher suites that you want to add. This parameter is available only if you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
          */
         public Builder customCiphers(java.util.List < String > customCiphers) {
             this.putQueryParameter("CustomCiphers", customCiphers);
@@ -181,7 +194,14 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * EnableTLSv3.
+         * <p>Specifies whether to support TLS 1.3. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTLSv3(Boolean enableTLSv3) {
             this.putQueryParameter("EnableTLSv3", enableTLSv3);
@@ -190,7 +210,14 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +226,14 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +242,10 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -217,7 +254,16 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * TLSVersion.
+         * <p>The version of the TLS protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>tlsv1</strong></li>
+         * <li><strong>tlsv1.1</strong></li>
+         * <li><strong>tlsv1.2</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tlsv1</p>
          */
         public Builder TLSVersion(String TLSVersion) {
             this.putQueryParameter("TLSVersion", TLSVersion);
