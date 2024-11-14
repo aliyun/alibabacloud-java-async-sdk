@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionByCodeRequest} extends {@link RequestModel}
  *
  * <p>GetPermissionByCodeRequest</p>
@@ -82,7 +83,11 @@ public class GetPermissionByCodeRequest extends Request {
         } 
 
         /**
-         * Code.
+         * <p>Authorize code information.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("Code", code);
@@ -91,7 +96,10 @@ public class GetPermissionByCodeRequest extends Request {
         }
 
         /**
-         * The space ID of the RAM user within the independent software vendor (ISV) account.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>393847477</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -100,7 +108,7 @@ public class GetPermissionByCodeRequest extends Request {
         }
 
         /**
-         * The permissions.
+         * <p>The permissions.</p>
          */
         public Builder permissions(java.util.List < String > permissions) {
             String permissionsShrink = shrink(permissions, "Permissions", "json");

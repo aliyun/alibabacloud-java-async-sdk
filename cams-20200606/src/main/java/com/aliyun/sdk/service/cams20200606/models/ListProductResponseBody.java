@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductResponseBody</p>
@@ -97,7 +98,10 @@ public class ListProductResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details about the access denial.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -105,11 +109,14 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +124,10 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -125,7 +135,7 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder model(Model model) {
             this.model = model;
@@ -133,7 +143,10 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,11 +154,14 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,6 +174,12 @@ public class ListProductResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductResponseBody</p>
+     */
     public static class Cursors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("After")
         private String after;
@@ -197,7 +219,10 @@ public class ListProductResponseBody extends TeaModel {
             private String before; 
 
             /**
-             * The cursor that points to the end of the page of the returned data.
+             * <p>The cursor that points to the end of the page of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sjsuueu83838</p>
              */
             public Builder after(String after) {
                 this.after = after;
@@ -205,7 +230,10 @@ public class ListProductResponseBody extends TeaModel {
             }
 
             /**
-             * The cursor that points to the beginning of the page of the returned data.
+             * <p>The cursor that points to the beginning of the page of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sjjsjdjjdjd83883</p>
              */
             public Builder before(String before) {
                 this.before = before;
@@ -219,6 +247,12 @@ public class ListProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductResponseBody</p>
+     */
     public static class Paging extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cursors")
         private Cursors cursors;
@@ -246,7 +280,7 @@ public class ListProductResponseBody extends TeaModel {
             private Cursors cursors; 
 
             /**
-             * The cursors for pagination.
+             * <p>The cursors for pagination.</p>
              */
             public Builder cursors(Cursors cursors) {
                 this.cursors = cursors;
@@ -260,6 +294,12 @@ public class ListProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < java.util.Map<String, ?>> data;
@@ -299,7 +339,7 @@ public class ListProductResponseBody extends TeaModel {
             private Paging paging; 
 
             /**
-             * The returned data.
+             * <p>The returned data.</p>
              */
             public Builder data(java.util.List < java.util.Map<String, ?>> data) {
                 this.data = data;
@@ -307,7 +347,7 @@ public class ListProductResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination details.
+             * <p>The pagination details.</p>
              */
             public Builder paging(Paging paging) {
                 this.paging = paging;

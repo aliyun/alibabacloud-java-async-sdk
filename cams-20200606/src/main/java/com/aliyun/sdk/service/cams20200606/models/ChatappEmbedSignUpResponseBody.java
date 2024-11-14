@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChatappEmbedSignUpResponseBody} extends {@link TeaModel}
  *
  * <p>ChatappEmbedSignUpResponseBody</p>
@@ -85,7 +86,10 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         private java.util.List < Wabas> wabas; 
 
         /**
-         * The details about the access denial.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,11 +97,14 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +112,10 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +123,10 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +134,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         }
 
         /**
-         * The list of the WhatsApp Business accounts.
+         * <p>The list of the WhatsApp Business accounts.</p>
          */
         public Builder wabas(java.util.List < Wabas> wabas) {
             this.wabas = wabas;
@@ -134,6 +147,12 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChatappEmbedSignUpResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatappEmbedSignUpResponseBody</p>
+     */
     public static class Wabas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountReviewStatus")
         private String accountReviewStatus;
@@ -209,7 +228,10 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The review state of the WABA.
+             * <p>The review state of the WABA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VERIFIED</p>
              */
             public Builder accountReviewStatus(String accountReviewStatus) {
                 this.accountReviewStatus = accountReviewStatus;
@@ -217,7 +239,10 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * The currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -225,7 +250,10 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the WABA.
+             * <p>The ID of the WABA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2939933992*****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -233,7 +261,10 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the message template.
+             * <p>The namespace of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alals-lsslls-slslsos-slsl</p>
              */
             public Builder messageTemplateNamespace(String messageTemplateNamespace) {
                 this.messageTemplateNamespace = messageTemplateNamespace;
@@ -241,7 +272,10 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the WABA.
+             * <p>The name of the WABA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder name(String name) {
                 this.name = name;

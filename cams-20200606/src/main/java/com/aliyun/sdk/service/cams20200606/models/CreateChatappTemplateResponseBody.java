@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateChatappTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateChatappTemplateResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,11 +97,14 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +112,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;templateCode&quot;: &quot;****4b5c79c9432497a075bdfca36bf5&quot;，&quot;templateName&quot;: &quot;hello_whatsapp&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +123,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +134,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,6 +150,12 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateChatappTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateChatappTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
@@ -173,7 +195,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * The code of the message template.
+             * <p>The code of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS_232907****</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -181,7 +206,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the message template.
+             * <p>The name of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello_whatsapp</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

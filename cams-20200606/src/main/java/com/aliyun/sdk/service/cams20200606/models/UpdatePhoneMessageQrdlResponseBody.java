@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePhoneMessageQrdlResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePhoneMessageQrdlResponseBody</p>
@@ -73,7 +74,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The result returns OK as normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612C226-E271-4CFE-9F18-4066D******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePhoneMessageQrdlResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePhoneMessageQrdlResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeepLinkUrl")
         private String deepLinkUrl;
@@ -197,7 +213,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             private String qrdlCode; 
 
             /**
-             * DeepLinkUrl.
+             * <p>Deep link address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://wa.msg/">https://wa.msg/</a></p>
              */
             public Builder deepLinkUrl(String deepLinkUrl) {
                 this.deepLinkUrl = deepLinkUrl;
@@ -205,7 +224,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * GenerateQrImage.
+             * <p>Generate image types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PNG</p>
              */
             public Builder generateQrImage(String generateQrImage) {
                 this.generateQrImage = generateQrImage;
@@ -213,7 +235,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>Number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613800</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -221,7 +246,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * PrefilledMessage.
+             * <p>Message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello</p>
              */
             public Builder prefilledMessage(String prefilledMessage) {
                 this.prefilledMessage = prefilledMessage;
@@ -229,7 +257,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * QrImageUrl.
+             * <p>QR code address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.png">https://img.png</a></p>
              */
             public Builder qrImageUrl(String qrImageUrl) {
                 this.qrImageUrl = qrImageUrl;
@@ -237,7 +268,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * QrdlCode.
+             * <p>QR code encoding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEDEE998</p>
              */
             public Builder qrdlCode(String qrdlCode) {
                 this.qrdlCode = qrdlCode;

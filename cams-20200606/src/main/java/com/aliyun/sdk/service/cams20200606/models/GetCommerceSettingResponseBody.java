@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCommerceSettingResponseBody} extends {@link TeaModel}
  *
  * <p>GetCommerceSettingResponseBody</p>
@@ -97,7 +98,10 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Access denied for detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -105,11 +109,14 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +124,7 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +132,10 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,7 +143,10 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +154,14 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +174,12 @@ public class GetCommerceSettingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCommerceSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCommerceSettingResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CartEnable")
         private Boolean cartEnable;
@@ -193,7 +219,14 @@ public class GetCommerceSettingResponseBody extends TeaModel {
             private Boolean catalogVisible; 
 
             /**
-             * Indicates whether the shopping cart button is displayed.
+             * <p>Indicates whether the shopping cart button is displayed. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder cartEnable(Boolean cartEnable) {
                 this.cartEnable = cartEnable;
@@ -201,7 +234,14 @@ public class GetCommerceSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the catalog button is displayed.
+             * <p>Indicates whether the catalog button is displayed. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder catalogVisible(Boolean catalogVisible) {
                 this.catalogVisible = catalogVisible;

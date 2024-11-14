@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryChatappPhoneNumbersResponseBody} extends {@link TeaModel}
  *
  * <p>QueryChatappPhoneNumbersResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,11 +97,14 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +112,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +123,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * The list of phone numbers.
+         * <p>The phone numbers.</p>
          */
         public Builder phoneNumbers(java.util.List < PhoneNumbers> phoneNumbers) {
             this.phoneNumbers = phoneNumbers;
@@ -121,7 +131,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,6 +147,12 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryChatappPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryChatappPhoneNumbersResponseBody</p>
+     */
     public static class PhoneNumbers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CodeVerificationStatus")
         private String codeVerificationStatus;
@@ -293,7 +312,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             private String verifiedName; 
 
             /**
-             * The verification status of the phone number.
+             * <p>The verification status of the phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VERIFIED</p>
              */
             public Builder codeVerificationStatus(String codeVerificationStatus) {
                 this.codeVerificationStatus = codeVerificationStatus;
@@ -301,7 +323,19 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of messages that can be sent to users by using the phone number.
+             * <p>The number of phone numbers to which messages can be sent in a day.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>TIER_100K: 100,000</li>
+             * <li>TIER_UNLIMITED: unlimited</li>
+             * <li>TIER_250: 250</li>
+             * <li>TIER_1K: 1,000</li>
+             * <li>TIER_50: 50</li>
+             * <li>TIER_10K: 10,000</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TIER_10</p>
              */
             public Builder messagingLimitTier(String messagingLimitTier) {
                 this.messagingLimitTier = messagingLimitTier;
@@ -309,7 +343,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the business name.
+             * <p>The status of the business name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Approval</p>
              */
             public Builder nameStatus(String nameStatus) {
                 this.nameStatus = nameStatus;
@@ -317,7 +354,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The review status of the new business name.
+             * <p>The review status of the new business name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Approval</p>
              */
             public Builder newNameStatus(String newNameStatus) {
                 this.newNameStatus = newNameStatus;
@@ -325,7 +365,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613800000</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -333,13 +376,17 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The quality rating of the phone number. Valid values:
-             * <p>
+             * <p>The quality rating of the phone number.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RED</li>
+             * <li>YELLOW</li>
+             * <li>UNKNOWN</li>
+             * <li>GREEN</li>
+             * </ul>
              * 
-             * *   **GREEN**
-             * *   **YELLOW**
-             * *   **RED**
-             * *   **UNKNOWN**
+             * <strong>example:</strong>
+             * <p>GREEN</p>
              */
             public Builder qualityRating(String qualityRating) {
                 this.qualityRating = qualityRating;
@@ -347,20 +394,24 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the phone number.
-             * <p>
+             * <p>The state of the phone number.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>MIGRATED</li>
+             * <li>FLAGGED</li>
+             * <li>DISCONNECTED</li>
+             * <li>UNVERIFIED</li>
+             * <li>BANNED</li>
+             * <li>RATE_LIMITED</li>
+             * <li>PENDING</li>
+             * <li>CONNECTED</li>
+             * <li>UNKNOWN</li>
+             * <li>DELETED</li>
+             * <li>RESTRICTED</li>
+             * </ul>
              * 
-             * *   PENDING
-             * *   DELETED
-             * *   MIGRATED
-             * *   BANNED
-             * *   RESTRICTED
-             * *   RATE_LIMITED
-             * *   FLAGGED
-             * *   CONNECTED
-             * *   DISCONNECTED
-             * *   UNKNOWN
-             * *   UNVERIFIED
+             * <strong>example:</strong>
+             * <p>CONNECTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -368,7 +419,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL to which status reports are sent by using HTTP callbacks.
+             * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ali.com/status">https://ali.com/status</a></p>
              */
             public Builder statusCallbackUrl(String statusCallbackUrl) {
                 this.statusCallbackUrl = statusCallbackUrl;
@@ -376,7 +430,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The status report notification queue.
+             * <p>The status report queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alicom-Queue-****-ChatAppStatus</p>
              */
             public Builder statusQueue(String statusQueue) {
                 this.statusQueue = statusQueue;
@@ -384,7 +441,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL to which MO messages are sent by using HTTP callbacks.
+             * <p>The callback URL to which MO messages are sent by using HTTP callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ali.com/inbound">https://ali.com/inbound</a></p>
              */
             public Builder upCallbackUrl(String upCallbackUrl) {
                 this.upCallbackUrl = upCallbackUrl;
@@ -392,7 +452,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile originated (MO) message notification queue.
+             * <p>The mobile originated (MO) message notification queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alicom-Queue-****-ChatAppInbound</p>
              */
             public Builder upQueue(String upQueue) {
                 this.upQueue = upQueue;
@@ -400,7 +463,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the company with which the phone number is associated.
+             * <p>The name of the company with which the phone number is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder verifiedName(String verifiedName) {
                 this.verifiedName = verifiedName;

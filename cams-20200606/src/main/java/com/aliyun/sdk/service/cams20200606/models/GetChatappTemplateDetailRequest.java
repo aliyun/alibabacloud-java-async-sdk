@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatappTemplateDetailRequest} extends {@link RequestModel}
  *
  * <p>GetChatappTemplateDetailRequest</p>
@@ -139,7 +140,10 @@ public class GetChatappTemplateDetailRequest extends Request {
         } 
 
         /**
-         * The space ID of the user within the ISV account.
+         * <p>The space ID of the user within the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28251486512358****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -148,10 +152,13 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.
-         * <p>
+         * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
+         * <blockquote>
+         * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+         * </blockquote>
          * 
-         * >  CustWabaId is an obsolete parameter. Use CustSpaceId instead.
+         * <strong>example:</strong>
+         * <p>65921621816****</p>
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -160,7 +167,10 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.
+         * <p>The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skdi3kksloslikdkkdk</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -169,7 +179,11 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+         * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -178,7 +192,10 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The code of the message template.
+         * <p>The code of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****4b5c79c9432497a075bdfca36bf5</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -187,7 +204,10 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>Name of a template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -196,12 +216,15 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The type of the message template. Valid values:
-         * <p>
+         * <p>The type of the message template. Valid values:</p>
+         * <ul>
+         * <li><strong>WHATSAPP</strong></li>
+         * <li><strong>VIBER</strong></li>
+         * <li>LINE (developing)</li>
+         * </ul>
          * 
-         * *   **WHATSAPP**
-         * *   **VIBER**
-         * *   LINE (developing)
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

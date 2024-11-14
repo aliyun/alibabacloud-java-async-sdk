@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPhoneBusinessProfileResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyPhoneBusinessProfileResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,7 +97,10 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the website.
+         * <p>The URL of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,10 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The websites.
+         * <p>The websites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,14 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

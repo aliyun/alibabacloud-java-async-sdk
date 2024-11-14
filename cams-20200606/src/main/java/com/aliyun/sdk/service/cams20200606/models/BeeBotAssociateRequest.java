@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BeeBotAssociateRequest} extends {@link RequestModel}
  *
  * <p>BeeBotAssociateRequest</p>
@@ -139,7 +140,11 @@ public class BeeBotAssociateRequest extends Request {
         } 
 
         /**
-         * The ID of a bot instance.
+         * <p>The ID of a bot instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder chatBotInstanceId(String chatBotInstanceId) {
             this.putBodyParameter("ChatBotInstanceId", chatBotInstanceId);
@@ -148,7 +153,10 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -157,7 +165,10 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by ISV.
+         * <p>The ISV verification code, which is used to verify whether the user is authorized by ISV.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ksiekdki39ksks93939</p>
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -166,7 +177,7 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * The list of codes for answers from different perspectives.
+         * <p>The list of codes for answers from different perspectives.</p>
          */
         public Builder perspective(java.util.List < String > perspective) {
             String perspectiveShrink = shrink(perspective, "Perspective", "json");
@@ -176,7 +187,10 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * The number of recommended questions. The value ranges from 1 to 10.
+         * <p>The number of recommended questions. The value ranges from 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recommendNum(Integer recommendNum) {
             this.putBodyParameter("RecommendNum", recommendNum);
@@ -185,7 +199,10 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * The ID of the session, which is used to identify the session and store context information in the session.
+         * <p>The ID of the session, which is used to identify the session and store context information in the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2334324234</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
@@ -194,7 +211,10 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * The input of the visitor.
+         * <p>The input of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder utterance(String utterance) {
             this.putBodyParameter("Utterance", utterance);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConversationalAutomationRequest} extends {@link RequestModel}
  *
  * <p>UpdateConversationalAutomationRequest</p>
@@ -153,7 +154,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         } 
 
         /**
-         * Commands.
+         * <p>The commands.</p>
          */
         public Builder commands(java.util.List < Commands> commands) {
             String commandsShrink = shrink(commands, "Commands", "json");
@@ -163,7 +164,11 @@ public class UpdateConversationalAutomationRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2993****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -172,7 +177,10 @@ public class UpdateConversationalAutomationRequest extends Request {
         }
 
         /**
-         * EnableWelcomeMessage.
+         * <p>Specifies whether to enable the welcoming message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableWelcomeMessage(Boolean enableWelcomeMessage) {
             this.putQueryParameter("EnableWelcomeMessage", enableWelcomeMessage);
@@ -190,7 +198,11 @@ public class UpdateConversationalAutomationRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number of the enterprise.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86130000***</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -199,7 +211,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         }
 
         /**
-         * Prompts.
+         * <p>The opening remarks.</p>
          */
         public Builder prompts(java.util.List < String > prompts) {
             String promptsShrink = shrink(prompts, "Prompts", "json");
@@ -233,6 +245,12 @@ public class UpdateConversationalAutomationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateConversationalAutomationRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateConversationalAutomationRequest</p>
+     */
     public static class Commands extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommandDescription")
         private String commandDescription;
@@ -272,7 +290,10 @@ public class UpdateConversationalAutomationRequest extends Request {
             private String commandName; 
 
             /**
-             * CommandDescription.
+             * <p>The description of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Command 1.</p>
              */
             public Builder commandDescription(String commandDescription) {
                 this.commandDescription = commandDescription;
@@ -280,7 +301,10 @@ public class UpdateConversationalAutomationRequest extends Request {
             }
 
             /**
-             * CommandName.
+             * <p>The command name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder commandName(String commandName) {
                 this.commandName = commandName;

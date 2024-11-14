@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChatappPhoneNumberDeregisterRequest} extends {@link RequestModel}
  *
  * <p>ChatappPhoneNumberDeregisterRequest</p>
@@ -69,7 +70,11 @@ public class ChatappPhoneNumberDeregisterRequest extends Request {
         } 
 
         /**
-         * The space ID of the RAM user within the independent software vendor (ISV) account.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>939283893939</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -78,7 +83,11 @@ public class ChatappPhoneNumberDeregisterRequest extends Request {
         }
 
         /**
-         * The phone number that you want to deregister.
+         * <p>The phone number that you want to deregister.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613800000000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

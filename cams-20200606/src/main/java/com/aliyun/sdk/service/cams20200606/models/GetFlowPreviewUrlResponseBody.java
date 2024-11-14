@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFlowPreviewUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetFlowPreviewUrlResponseBody</p>
@@ -73,7 +74,10 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * If OK is returned, the request was successful.
+         * <p>If OK is returned, the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFlowPreviewUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFlowPreviewUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
@@ -161,7 +177,10 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
             private Long previewUrlExpires; 
 
             /**
-             * The Flow ID.
+             * <p>The Flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6dd31e1b7cc940fc99e293d9952b5b79</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -169,7 +188,10 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The temporary preview URL.
+             * <p>The temporary preview URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://url">https://url</a></p>
              */
             public Builder previewUrl(String previewUrl) {
                 this.previewUrl = previewUrl;
@@ -177,7 +199,10 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700617436633</p>
              */
             public Builder previewUrlExpires(Long previewUrlExpires) {
                 this.previewUrlExpires = previewUrlExpires;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePhoneWebhookRequest} extends {@link RequestModel}
  *
  * <p>UpdatePhoneWebhookRequest</p>
@@ -125,7 +126,11 @@ public class UpdatePhoneWebhookRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>SpaceId for ISV sub clients.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -134,7 +139,14 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * HttpFlag.
+         * <p>Whether to use HTTP to receive receipts. Value:</p>
+         * <ul>
+         * <li>Y: Yes.</li>
+         * <li>N: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder httpFlag(String httpFlag) {
             this.putQueryParameter("HttpFlag", httpFlag);
@@ -143,7 +155,11 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613800001234</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -152,7 +168,14 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * QueueFlag.
+         * <p>Whether to use queue method to receive receipts. Value:</p>
+         * <ul>
+         * <li>Y: Yes.</li>
+         * <li>N: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder queueFlag(String queueFlag) {
             this.putQueryParameter("QueueFlag", queueFlag);
@@ -161,7 +184,10 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * StatusCallbackUrl.
+         * <p>HTTP status report interface callback address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
         public Builder statusCallbackUrl(String statusCallbackUrl) {
             this.putQueryParameter("StatusCallbackUrl", statusCallbackUrl);
@@ -170,7 +196,10 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * UpCallbackUrl.
+         * <p>HTTP upstream message interface callback address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://aliyun.com">http://aliyun.com</a></p>
          */
         public Builder upCallbackUrl(String upCallbackUrl) {
             this.putQueryParameter("UpCallbackUrl", upCallbackUrl);

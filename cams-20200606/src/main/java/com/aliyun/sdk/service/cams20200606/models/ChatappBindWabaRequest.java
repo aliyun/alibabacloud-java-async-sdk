@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChatappBindWabaRequest} extends {@link RequestModel}
  *
  * <p>ChatappBindWabaRequest</p>
@@ -123,7 +124,10 @@ public class ChatappBindWabaRequest extends Request {
         }
 
         /**
-         * WabaId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33993***</p>
          */
         public Builder wabaId(String wabaId) {
             this.putQueryParameter("WabaId", wabaId);

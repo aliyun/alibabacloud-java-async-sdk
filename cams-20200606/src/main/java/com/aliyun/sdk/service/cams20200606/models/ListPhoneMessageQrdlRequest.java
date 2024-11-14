@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPhoneMessageQrdlRequest} extends {@link RequestModel}
  *
  * <p>ListPhoneMessageQrdlRequest</p>
@@ -68,7 +69,10 @@ public class ListPhoneMessageQrdlRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9383883</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -77,7 +81,11 @@ public class ListPhoneMessageQrdlRequest extends Request {
         }
 
         /**
-         * The phone number. Add the country code before the phone number.
+         * <p>The phone number. Add the country code before the phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>861380000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

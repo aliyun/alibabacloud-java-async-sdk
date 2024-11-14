@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChatappPhoneNumberRegisterRequest} extends {@link RequestModel}
  *
  * <p>ChatappPhoneNumberRegisterRequest</p>
@@ -111,7 +112,10 @@ public class ChatappPhoneNumberRegisterRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>939283893939</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -129,7 +133,10 @@ public class ChatappPhoneNumberRegisterRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613800000000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

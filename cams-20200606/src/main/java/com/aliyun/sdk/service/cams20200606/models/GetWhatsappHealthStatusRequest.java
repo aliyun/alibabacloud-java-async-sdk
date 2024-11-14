@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWhatsappHealthStatusRequest} extends {@link RequestModel}
  *
  * <p>GetWhatsappHealthStatusRequest</p>
@@ -167,7 +168,11 @@ public class GetWhatsappHealthStatusRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2993****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -176,7 +181,10 @@ public class GetWhatsappHealthStatusRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The template language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -185,7 +193,17 @@ public class GetWhatsappHealthStatusRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The node type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>template: message template</li>
+         * <li>phone: phone number</li>
+         * <li>waba: WhatsApp Business Account (WABA)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waba</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -203,7 +221,10 @@ public class GetWhatsappHealthStatusRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number of the enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86138***</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -230,7 +251,10 @@ public class GetWhatsappHealthStatusRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * <p>The template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399299***</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -239,7 +263,10 @@ public class GetWhatsappHealthStatusRequest extends Request {
         }
 
         /**
-         * WabaId
+         * <p>WabaId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>299399****</p>
          */
         public Builder wabaId(String wabaId) {
             this.putQueryParameter("WabaId", wabaId);

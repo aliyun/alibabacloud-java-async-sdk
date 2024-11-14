@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConversationalAutomationResponseBody} extends {@link TeaModel}
  *
  * <p>GetConversationalAutomationResponseBody</p>
@@ -97,7 +98,10 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -105,7 +109,14 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -113,7 +124,7 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -121,7 +132,10 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +143,10 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +154,14 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +174,12 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConversationalAutomationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConversationalAutomationResponseBody</p>
+     */
     public static class Commands extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommandDescription")
         private String commandDescription;
@@ -189,7 +219,10 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
             private String commandName; 
 
             /**
-             * CommandDescription.
+             * <p>The description of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder commandDescription(String commandDescription) {
                 this.commandDescription = commandDescription;
@@ -197,7 +230,10 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
             }
 
             /**
-             * CommandName.
+             * <p>The name of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>common1</p>
              */
             public Builder commandName(String commandName) {
                 this.commandName = commandName;
@@ -211,6 +247,12 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConversationalAutomationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConversationalAutomationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Commands")
         private java.util.List < Commands> commands;
@@ -274,7 +316,7 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
             private java.util.List < String > prompts; 
 
             /**
-             * Commands.
+             * <p>The commands.</p>
              */
             public Builder commands(java.util.List < Commands> commands) {
                 this.commands = commands;
@@ -282,7 +324,10 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
             }
 
             /**
-             * EnableWelcomeMessage.
+             * <p>Indicates whether the welcoming message is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableWelcomeMessage(Boolean enableWelcomeMessage) {
                 this.enableWelcomeMessage = enableWelcomeMessage;
@@ -290,7 +335,10 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The phone number of the enterprise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86138****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -298,7 +346,7 @@ public class GetConversationalAutomationResponseBody extends TeaModel {
             }
 
             /**
-             * Prompts.
+             * <p>The opening remarks.</p>
              */
             public Builder prompts(java.util.List < String > prompts) {
                 this.prompts = prompts;

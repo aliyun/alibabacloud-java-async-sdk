@@ -40,8 +40,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * @param request the request parameters of AddChatappPhoneNumber  AddChatappPhoneNumberRequest
+     * @return AddChatappPhoneNumberResponse
      */
     @Override
     public CompletableFuture<AddChatappPhoneNumberResponse> addChatappPhoneNumber(AddChatappPhoneNumberRequest request) {
@@ -58,8 +58,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of BeeBotAssociate  BeeBotAssociateRequest
+     * @return BeeBotAssociateResponse
      */
     @Override
     public CompletableFuture<BeeBotAssociateResponse> beeBotAssociate(BeeBotAssociateRequest request) {
@@ -76,8 +79,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>The ID of the session.</p>
+     * 
+     * @param request the request parameters of BeeBotChat  BeeBotChatRequest
+     * @return BeeBotChatResponse
      */
     @Override
     public CompletableFuture<BeeBotChatResponse> beeBotChat(BeeBotChatRequest request) {
@@ -94,8 +100,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ChatappBindWaba  ChatappBindWabaRequest
+     * @return ChatappBindWabaResponse
      */
     @Override
     public CompletableFuture<ChatappBindWabaResponse> chatappBindWaba(ChatappBindWabaRequest request) {
@@ -112,8 +121,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ChatappEmbedSignUp  ChatappEmbedSignUpRequest
+     * @return ChatappEmbedSignUpResponse
      */
     @Override
     public CompletableFuture<ChatappEmbedSignUpResponse> chatappEmbedSignUp(ChatappEmbedSignUpRequest request) {
@@ -130,8 +142,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * 
+     * @param request the request parameters of ChatappMigrationRegister  ChatappMigrationRegisterRequest
+     * @return ChatappMigrationRegisterResponse
      */
     @Override
     public CompletableFuture<ChatappMigrationRegisterResponse> chatappMigrationRegister(ChatappMigrationRegisterRequest request) {
@@ -148,8 +163,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ChatappMigrationVerified  ChatappMigrationVerifiedRequest
+     * @return ChatappMigrationVerifiedResponse
      */
     @Override
     public CompletableFuture<ChatappMigrationVerifiedResponse> chatappMigrationVerified(ChatappMigrationVerifiedRequest request) {
@@ -166,8 +184,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ChatappPhoneNumberDeregister  ChatappPhoneNumberDeregisterRequest
+     * @return ChatappPhoneNumberDeregisterResponse
      */
     @Override
     public CompletableFuture<ChatappPhoneNumberDeregisterResponse> chatappPhoneNumberDeregister(ChatappPhoneNumberDeregisterRequest request) {
@@ -184,8 +205,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ChatappPhoneNumberRegister  ChatappPhoneNumberRegisterRequest
+     * @return ChatappPhoneNumberRegisterResponse
      */
     @Override
     public CompletableFuture<ChatappPhoneNumberRegisterResponse> chatappPhoneNumberRegister(ChatappPhoneNumberRegisterRequest request) {
@@ -202,8 +226,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ChatappSyncPhoneNumber  ChatappSyncPhoneNumberRequest
+     * @return ChatappSyncPhoneNumberResponse
      */
     @Override
     public CompletableFuture<ChatappSyncPhoneNumberResponse> chatappSyncPhoneNumber(ChatappSyncPhoneNumberRequest request) {
@@ -220,8 +247,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ChatappVerifyAndRegister  ChatappVerifyAndRegisterRequest
+     * @return ChatappVerifyAndRegisterResponse
      */
     @Override
     public CompletableFuture<ChatappVerifyAndRegisterResponse> chatappVerifyAndRegister(ChatappVerifyAndRegisterRequest request) {
@@ -238,8 +268,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The status of the phone number.
-      *
+     * <b>description</b> :
+     * <p>The status of the phone number.</p>
+     * 
+     * @param request the request parameters of CreateChatappMigrationInitiate  CreateChatappMigrationInitiateRequest
+     * @return CreateChatappMigrationInitiateResponse
      */
     @Override
     public CompletableFuture<CreateChatappMigrationInitiateResponse> createChatappMigrationInitiate(CreateChatappMigrationInitiateRequest request) {
@@ -256,8 +289,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The error message.
-      *
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of CreateChatappTemplate  CreateChatappTemplateRequest
+     * @return CreateChatappTemplateResponse
      */
     @Override
     public CompletableFuture<CreateChatappTemplateResponse> createChatappTemplate(CreateChatappTemplateRequest request) {
@@ -274,8 +311,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of CreateFlow  CreateFlowRequest
+     * @return CreateFlowResponse
      */
     @Override
     public CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request) {
@@ -291,6 +331,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePhoneMessageQrdl  CreatePhoneMessageQrdlRequest
+     * @return CreatePhoneMessageQrdlResponse
+     */
     @Override
     public CompletableFuture<CreatePhoneMessageQrdlResponse> createPhoneMessageQrdl(CreatePhoneMessageQrdlRequest request) {
         try {
@@ -306,9 +350,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### QPS limit
-      * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DeleteChatappTemplate  DeleteChatappTemplateRequest
+     * @return DeleteChatappTemplateResponse
      */
     @Override
     public CompletableFuture<DeleteChatappTemplateResponse> deleteChatappTemplate(DeleteChatappTemplateRequest request) {
@@ -325,8 +372,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DeleteFlow  DeleteFlowRequest
+     * @return DeleteFlowResponse
      */
     @Override
     public CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request) {
@@ -342,6 +392,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePhoneMessageQrdl  DeletePhoneMessageQrdlRequest
+     * @return DeletePhoneMessageQrdlResponse
+     */
     @Override
     public CompletableFuture<DeletePhoneMessageQrdlResponse> deletePhoneMessageQrdl(DeletePhoneMessageQrdlRequest request) {
         try {
@@ -356,6 +410,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeprecateFlow  DeprecateFlowRequest
+     * @return DeprecateFlowResponse
+     */
     @Override
     public CompletableFuture<DeprecateFlowResponse> deprecateFlow(DeprecateFlowRequest request) {
         try {
@@ -371,8 +429,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of EnableWhatsappROIMetric  EnableWhatsappROIMetricRequest
+     * @return EnableWhatsappROIMetricResponse
      */
     @Override
     public CompletableFuture<EnableWhatsappROIMetricResponse> enableWhatsappROIMetric(EnableWhatsappROIMetricRequest request) {
@@ -389,8 +450,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetChatappPhoneNumberMetric  GetChatappPhoneNumberMetricRequest
+     * @return GetChatappPhoneNumberMetricResponse
      */
     @Override
     public CompletableFuture<GetChatappPhoneNumberMetricResponse> getChatappPhoneNumberMetric(GetChatappPhoneNumberMetricRequest request) {
@@ -407,9 +471,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### QPS limit
-      * You can call this API operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetChatappTemplateDetail  GetChatappTemplateDetailRequest
+     * @return GetChatappTemplateDetailResponse
      */
     @Override
     public CompletableFuture<GetChatappTemplateDetailResponse> getChatappTemplateDetail(GetChatappTemplateDetailRequest request) {
@@ -426,8 +493,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetChatappTemplateMetric  GetChatappTemplateMetricRequest
+     * @return GetChatappTemplateMetricResponse
      */
     @Override
     public CompletableFuture<GetChatappTemplateMetricResponse> getChatappTemplateMetric(GetChatappTemplateMetricRequest request) {
@@ -444,8 +514,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetChatappUploadAuthorization  GetChatappUploadAuthorizationRequest
+     * @return GetChatappUploadAuthorizationResponse
      */
     @Override
     public CompletableFuture<GetChatappUploadAuthorizationResponse> getChatappUploadAuthorization(GetChatappUploadAuthorizationRequest request) {
@@ -462,8 +535,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetChatappVerifyCode  GetChatappVerifyCodeRequest
+     * @return GetChatappVerifyCodeResponse
      */
     @Override
     public CompletableFuture<GetChatappVerifyCodeResponse> getChatappVerifyCode(GetChatappVerifyCodeRequest request) {
@@ -480,8 +556,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetCommerceSetting  GetCommerceSettingRequest
+     * @return GetCommerceSettingResponse
      */
     @Override
     public CompletableFuture<GetCommerceSettingResponse> getCommerceSetting(GetCommerceSettingRequest request) {
@@ -497,6 +576,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetConversationalAutomation  GetConversationalAutomationRequest
+     * @return GetConversationalAutomationResponse
+     */
     @Override
     public CompletableFuture<GetConversationalAutomationResponse> getConversationalAutomation(GetConversationalAutomationRequest request) {
         try {
@@ -512,8 +600,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetFlow  GetFlowRequest
+     * @return GetFlowResponse
      */
     @Override
     public CompletableFuture<GetFlowResponse> getFlow(GetFlowRequest request) {
@@ -529,6 +620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFlowJSONAssest  GetFlowJSONAssestRequest
+     * @return GetFlowJSONAssestResponse
+     */
     @Override
     public CompletableFuture<GetFlowJSONAssestResponse> getFlowJSONAssest(GetFlowJSONAssestRequest request) {
         try {
@@ -544,8 +639,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetFlowPreviewUrl  GetFlowPreviewUrlRequest
+     * @return GetFlowPreviewUrlResponse
      */
     @Override
     public CompletableFuture<GetFlowPreviewUrlResponse> getFlowPreviewUrl(GetFlowPreviewUrlRequest request) {
@@ -562,8 +660,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the phone number.
-      *
+     * <b>description</b> :
+     * <p>The single user QPS limit for this interface is 10 times per second. Exceeding the limit may result in restricted API calls, which may affect your business. Please make reasonable calls.</p>
+     * 
+     * @param request the request parameters of GetMigrationVerifyCode  GetMigrationVerifyCodeRequest
+     * @return GetMigrationVerifyCodeResponse
      */
     @Override
     public CompletableFuture<GetMigrationVerifyCodeResponse> getMigrationVerifyCode(GetMigrationVerifyCodeRequest request) {
@@ -579,6 +680,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPermissionByCode  GetPermissionByCodeRequest
+     * @return GetPermissionByCodeResponse
+     */
     @Override
     public CompletableFuture<GetPermissionByCodeResponse> getPermissionByCode(GetPermissionByCodeRequest request) {
         try {
@@ -593,6 +698,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPhoneEncryptionPublicKey  GetPhoneEncryptionPublicKeyRequest
+     * @return GetPhoneEncryptionPublicKeyResponse
+     */
     @Override
     public CompletableFuture<GetPhoneEncryptionPublicKeyResponse> getPhoneEncryptionPublicKey(GetPhoneEncryptionPublicKeyRequest request) {
         try {
@@ -608,8 +717,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetPhoneNumberVerificationStatus  GetPhoneNumberVerificationStatusRequest
+     * @return GetPhoneNumberVerificationStatusResponse
      */
     @Override
     public CompletableFuture<GetPhoneNumberVerificationStatusResponse> getPhoneNumberVerificationStatus(GetPhoneNumberVerificationStatusRequest request) {
@@ -626,8 +738,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetPreValidatePhoneId  GetPreValidatePhoneIdRequest
+     * @return GetPreValidatePhoneIdResponse
      */
     @Override
     public CompletableFuture<GetPreValidatePhoneIdResponse> getPreValidatePhoneId(GetPreValidatePhoneIdRequest request) {
@@ -644,8 +759,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetWhatsappConnectionCatalog  GetWhatsappConnectionCatalogRequest
+     * @return GetWhatsappConnectionCatalogResponse
      */
     @Override
     public CompletableFuture<GetWhatsappConnectionCatalogResponse> getWhatsappConnectionCatalog(GetWhatsappConnectionCatalogRequest request) {
@@ -661,6 +779,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of GetWhatsappHealthStatus  GetWhatsappHealthStatusRequest
+     * @return GetWhatsappHealthStatusResponse
+     */
     @Override
     public CompletableFuture<GetWhatsappHealthStatusResponse> getWhatsappHealthStatus(GetWhatsappHealthStatusRequest request) {
         try {
@@ -676,8 +803,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of IsvGetAppId  IsvGetAppIdRequest
+     * @return IsvGetAppIdResponse
      */
     @Override
     public CompletableFuture<IsvGetAppIdResponse> isvGetAppId(IsvGetAppIdRequest request) {
@@ -694,9 +824,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### QPS limit
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ListChatappTemplate  ListChatappTemplateRequest
+     * @return ListChatappTemplateResponse
      */
     @Override
     public CompletableFuture<ListChatappTemplateResponse> listChatappTemplate(ListChatappTemplateRequest request) {
@@ -713,8 +846,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ListFlow  ListFlowRequest
+     * @return ListFlowResponse
      */
     @Override
     public CompletableFuture<ListFlowResponse> listFlow(ListFlowRequest request) {
@@ -730,6 +866,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPhoneMessageQrdl  ListPhoneMessageQrdlRequest
+     * @return ListPhoneMessageQrdlResponse
+     */
     @Override
     public CompletableFuture<ListPhoneMessageQrdlResponse> listPhoneMessageQrdl(ListPhoneMessageQrdlRequest request) {
         try {
@@ -745,8 +885,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ListProduct  ListProductRequest
+     * @return ListProductResponse
      */
     @Override
     public CompletableFuture<ListProductResponse> listProduct(ListProductRequest request) {
@@ -763,8 +906,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ListProductCatalog  ListProductCatalogRequest
+     * @return ListProductCatalogResponse
      */
     @Override
     public CompletableFuture<ListProductCatalogResponse> listProductCatalog(ListProductCatalogRequest request) {
@@ -781,8 +927,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The name of the message template.
-      *
+     * <b>description</b> :
+     * <p>The name of the message template.</p>
+     * 
+     * @param request the request parameters of ModifyChatappTemplate  ModifyChatappTemplateRequest
+     * @return ModifyChatappTemplateResponse
      */
     @Override
     public CompletableFuture<ModifyChatappTemplateResponse> modifyChatappTemplate(ModifyChatappTemplateRequest request) {
@@ -799,8 +948,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ModifyFlow  ModifyFlowRequest
+     * @return ModifyFlowResponse
      */
     @Override
     public CompletableFuture<ModifyFlowResponse> modifyFlow(ModifyFlowRequest request) {
@@ -817,8 +969,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ModifyPhoneBusinessProfile
-      *
+     * <b>description</b> :
+     * <p>ModifyPhoneBusinessProfile</p>
+     * 
+     * @param request the request parameters of ModifyPhoneBusinessProfile  ModifyPhoneBusinessProfileRequest
+     * @return ModifyPhoneBusinessProfileResponse
      */
     @Override
     public CompletableFuture<ModifyPhoneBusinessProfileResponse> modifyPhoneBusinessProfile(ModifyPhoneBusinessProfileRequest request) {
@@ -835,8 +990,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of PublishFlow  PublishFlowRequest
+     * @return PublishFlowResponse
      */
     @Override
     public CompletableFuture<PublishFlowResponse> publishFlow(PublishFlowRequest request) {
@@ -853,8 +1011,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of QueryChatappBindWaba  QueryChatappBindWabaRequest
+     * @return QueryChatappBindWabaResponse
      */
     @Override
     public CompletableFuture<QueryChatappBindWabaResponse> queryChatappBindWaba(QueryChatappBindWabaRequest request) {
@@ -871,8 +1032,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of QueryChatappPhoneNumbers  QueryChatappPhoneNumbersRequest
+     * @return QueryChatappPhoneNumbersResponse
      */
     @Override
     public CompletableFuture<QueryChatappPhoneNumbersResponse> queryChatappPhoneNumbers(QueryChatappPhoneNumbersRequest request) {
@@ -889,8 +1053,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of QueryPhoneBusinessProfile  QueryPhoneBusinessProfileRequest
+     * @return QueryPhoneBusinessProfileResponse
      */
     @Override
     public CompletableFuture<QueryPhoneBusinessProfileResponse> queryPhoneBusinessProfile(QueryPhoneBusinessProfileRequest request) {
@@ -907,8 +1074,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of QueryWabaBusinessInfo  QueryWabaBusinessInfoRequest
+     * @return QueryWabaBusinessInfoResponse
      */
     @Override
     public CompletableFuture<QueryWabaBusinessInfoResponse> queryWabaBusinessInfo(QueryWabaBusinessInfoRequest request) {
@@ -925,9 +1095,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      * You can send messages to up to 1,000 phone numbers in a single request.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * You can send messages to up to 1,000 phone numbers in a single request.</p>
+     * 
+     * @param request the request parameters of SendChatappMassMessage  SendChatappMassMessageRequest
+     * @return SendChatappMassMessageResponse
      */
     @Override
     public CompletableFuture<SendChatappMassMessageResponse> sendChatappMassMessage(SendChatappMassMessageRequest request) {
@@ -944,8 +1117,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of SendChatappMessage  SendChatappMessageRequest
+     * @return SendChatappMessageResponse
      */
     @Override
     public CompletableFuture<SendChatappMessageResponse> sendChatappMessage(SendChatappMessageRequest request) {
@@ -962,8 +1138,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>After you call the <a href="~~GetChatappUploadAuthorization~~">GetChatappUploadAuthorization</a> operation to obtain the authentication information for uploading the file to Object Storage Service (OSS), you can use the authentication information to upload the file to the OSS server. To upload the file, you can call the SDK provided by OSS. When you upload the file, set the value of the key to the value of <code>Dir + &quot;/&quot; + file name</code>, such as C200293990209/isvTerms.pdf. The value of Dir is obtained from the <a href="~~GetChatappUploadAuthorization~~">GetChatappUploadAuthorization</a> operation. The value of IsvTerms is obtained from the PutObject operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SubmitIsvCustomerTerms  SubmitIsvCustomerTermsRequest
+     * @return SubmitIsvCustomerTermsResponse
      */
     @Override
     public CompletableFuture<SubmitIsvCustomerTermsResponse> submitIsvCustomerTerms(SubmitIsvCustomerTermsRequest request) {
@@ -980,8 +1162,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>After triggering an online flow, if your flow contains components that incur costs for cloud products, such as message sending or function calls, please ensure you fully understand the billing methods and prices of the related products before using this interface.</p>
+     * 
+     * @param request the request parameters of TriggerChatFlow  TriggerChatFlowRequest
+     * @return TriggerChatFlowResponse
+     */
+    @Override
+    public CompletableFuture<TriggerChatFlowResponse> triggerChatFlow(TriggerChatFlowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TriggerChatFlow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TriggerChatFlowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TriggerChatFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of UpdateAccountWebhook  UpdateAccountWebhookRequest
+     * @return UpdateAccountWebhookResponse
      */
     @Override
     public CompletableFuture<UpdateAccountWebhookResponse> updateAccountWebhook(UpdateAccountWebhookRequest request) {
@@ -998,8 +1204,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of UpdateCommerceSetting  UpdateCommerceSettingRequest
+     * @return UpdateCommerceSettingResponse
      */
     @Override
     public CompletableFuture<UpdateCommerceSettingResponse> updateCommerceSetting(UpdateCommerceSettingRequest request) {
@@ -1015,6 +1224,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3><a href="#qps-"></a>QPS limit</h3>
+     * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of UpdateConversationalAutomation  UpdateConversationalAutomationRequest
+     * @return UpdateConversationalAutomationResponse
+     */
     @Override
     public CompletableFuture<UpdateConversationalAutomationResponse> updateConversationalAutomation(UpdateConversationalAutomationRequest request) {
         try {
@@ -1029,6 +1247,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFlowJSONAsset  UpdateFlowJSONAssetRequest
+     * @return UpdateFlowJSONAssetResponse
+     */
     @Override
     public CompletableFuture<UpdateFlowJSONAssetResponse> updateFlowJSONAsset(UpdateFlowJSONAssetRequest request) {
         try {
@@ -1043,6 +1265,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePhoneEncryptionPublicKey  UpdatePhoneEncryptionPublicKeyRequest
+     * @return UpdatePhoneEncryptionPublicKeyResponse
+     */
     @Override
     public CompletableFuture<UpdatePhoneEncryptionPublicKeyResponse> updatePhoneEncryptionPublicKey(UpdatePhoneEncryptionPublicKeyRequest request) {
         try {
@@ -1057,6 +1283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePhoneMessageQrdl  UpdatePhoneMessageQrdlRequest
+     * @return UpdatePhoneMessageQrdlResponse
+     */
     @Override
     public CompletableFuture<UpdatePhoneMessageQrdlResponse> updatePhoneMessageQrdl(UpdatePhoneMessageQrdlRequest request) {
         try {
@@ -1072,8 +1302,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The error message returned.
-      *
+     * <b>description</b> :
+     * <p>The error message returned.</p>
+     * 
+     * @param request the request parameters of UpdatePhoneWebhook  UpdatePhoneWebhookRequest
+     * @return UpdatePhoneWebhookResponse
      */
     @Override
     public CompletableFuture<UpdatePhoneWebhookResponse> updatePhoneWebhook(UpdatePhoneWebhookRequest request) {

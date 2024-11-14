@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFlowJSONAssestRequest} extends {@link RequestModel}
  *
  * <p>GetFlowJSONAssestRequest</p>
@@ -68,7 +69,10 @@ public class GetFlowJSONAssestRequest extends Request {
         } 
 
         /**
-         * The space ID of the user within the independent software vendor (ISV) account.
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83883873</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -77,7 +81,11 @@ public class GetFlowJSONAssestRequest extends Request {
         }
 
         /**
-         * The Flow ID.
+         * <p>The Flow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder flowId(String flowId) {
             this.putBodyParameter("FlowId", flowId);

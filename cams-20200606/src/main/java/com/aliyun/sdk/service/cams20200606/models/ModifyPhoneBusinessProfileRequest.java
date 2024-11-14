@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPhoneBusinessProfileRequest} extends {@link RequestModel}
  *
  * <p>ModifyPhoneBusinessProfileRequest</p>
@@ -209,7 +210,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         } 
 
         /**
-         * About.
+         * <p>The business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>business profile</p>
          */
         public Builder about(String about) {
             this.putQueryParameter("About", about);
@@ -218,7 +222,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The space ID of the user under the independent software vendor (ISV) account.
+         * <p>The address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The phone number.</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -227,7 +234,11 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * Modifies the business information of the account to which a specified phone number is bound.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -236,7 +247,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The address.
+         * <p>The description of the phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -245,7 +259,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:aa@aliyun.com">aa@aliyun.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -263,7 +280,11 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * <p>The mobile phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613800001234</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -272,10 +293,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The industry.
-         * <p>
+         * <p>The URL of the profile picture.</p>
          * 
-         * > Enum: {OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, RESTAURANT}
+         * <strong>example:</strong>
+         * <p><a href="http://a.img">http://a.img</a></p>
          */
         public Builder profilePictureUrl(String profilePictureUrl) {
             this.putQueryParameter("ProfilePictureUrl", profilePictureUrl);
@@ -302,7 +323,13 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * Sichuan
+         * <p>The industry.</p>
+         * <blockquote>
+         * <p> Valid values: OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, and RESTAURANT.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>OTHER</p>
          */
         public Builder vertical(String vertical) {
             this.putQueryParameter("Vertical", vertical);
@@ -311,7 +338,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The email address.
+         * <p>The URLs of the websites.</p>
          */
         public Builder websites(java.util.List < String > websites) {
             String websitesShrink = shrink(websites, "Websites", "json");

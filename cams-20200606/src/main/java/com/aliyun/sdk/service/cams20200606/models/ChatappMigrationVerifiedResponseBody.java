@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChatappMigrationVerifiedResponseBody} extends {@link TeaModel}
  *
  * <p>ChatappMigrationVerifiedResponseBody</p>
@@ -93,11 +94,14 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,6 +144,12 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChatappMigrationVerifiedResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatappMigrationVerifiedResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -173,7 +189,10 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
             private String phoneNumber; 
 
             /**
-             * The ID of the phone number.
+             * <p>The ID of the phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>82828893332</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -181,7 +200,10 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613800001234</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;

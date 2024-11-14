@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWhatsappConnectionCatalogRequest} extends {@link RequestModel}
  *
  * <p>GetWhatsappConnectionCatalogRequest</p>
@@ -110,7 +111,10 @@ public class GetWhatsappConnectionCatalogRequest extends Request {
         } 
 
         /**
-         * The space ID of the user within the ISV account.
+         * <p>The space ID of the user within the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2020939922929292</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -146,7 +150,11 @@ public class GetWhatsappConnectionCatalogRequest extends Request {
         }
 
         /**
-         * The WABA ID.
+         * <p>The WABA ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>292939399393</p>
          */
         public Builder wabaId(String wabaId) {
             this.putQueryParameter("WabaId", wabaId);

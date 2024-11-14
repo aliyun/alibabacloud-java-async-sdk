@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFlowJSONAssetRequest} extends {@link RequestModel}
  *
  * <p>UpdateFlowJSONAssetRequest</p>
@@ -83,7 +84,10 @@ public class UpdateFlowJSONAssetRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>SpaceId/instance ID of ISV sub customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9399393</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -92,7 +96,11 @@ public class UpdateFlowJSONAssetRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>JSON file generated according to Facebook flow rules.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun/json.json">https://aliyun/json.json</a></p>
          */
         public Builder filePath(String filePath) {
             this.putBodyParameter("FilePath", filePath);
@@ -101,7 +109,11 @@ public class UpdateFlowJSONAssetRequest extends Request {
         }
 
         /**
-         * The Flow ID.
+         * <p>The Flow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder flowId(String flowId) {
             this.putBodyParameter("FlowId", flowId);

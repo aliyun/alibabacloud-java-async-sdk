@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatappVerifyCodeRequest} extends {@link RequestModel}
  *
  * <p>GetChatappVerifyCodeRequest</p>
@@ -141,7 +142,10 @@ public class GetChatappVerifyCodeRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-kei****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -150,7 +154,10 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
-         * Locale.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CN</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -159,7 +166,10 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
-         * Method.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms</p>
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -177,7 +187,10 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613800000000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

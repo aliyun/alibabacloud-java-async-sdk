@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCommerceSettingRequest} extends {@link RequestModel}
  *
  * <p>UpdateCommerceSettingRequest</p>
@@ -141,7 +142,15 @@ public class UpdateCommerceSettingRequest extends Request {
         } 
 
         /**
-         * Specifies whether to display the shopping cart button.
+         * <p>Specifies whether to display the shopping cart button. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cartEnable(Boolean cartEnable) {
             this.putQueryParameter("CartEnable", cartEnable);
@@ -150,7 +159,15 @@ public class UpdateCommerceSettingRequest extends Request {
         }
 
         /**
-         * Specifies whether to display the catalog button.
+         * <p>Specifies whether to display the catalog button. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder catalogVisible(Boolean catalogVisible) {
             this.putQueryParameter("CatalogVisible", catalogVisible);
@@ -159,7 +176,11 @@ public class UpdateCommerceSettingRequest extends Request {
         }
 
         /**
-         * The space ID of the user within the independent software vendor (ISV) account.
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -177,7 +198,11 @@ public class UpdateCommerceSettingRequest extends Request {
         }
 
         /**
-         * The phone number.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

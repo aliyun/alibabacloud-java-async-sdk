@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryChatappBindWabaRequest} extends {@link RequestModel}
  *
  * <p>QueryChatappBindWabaRequest</p>
@@ -109,7 +110,10 @@ public class QueryChatappBindWabaRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the ISV account.
+         * <p>The space ID of the user under the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -118,7 +122,10 @@ public class QueryChatappBindWabaRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aksik93kdkkxmwol93939</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);

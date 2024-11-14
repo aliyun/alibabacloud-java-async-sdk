@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatappUploadAuthorizationResponseBody} extends {@link TeaModel}
  *
  * <p>GetChatappUploadAuthorizationResponseBody</p>
@@ -85,7 +86,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Access denied for detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,11 +97,14 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +112,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +120,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +131,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,6 +147,12 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetChatappUploadAuthorizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChatappUploadAuthorizationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
@@ -233,7 +252,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * The AccessKey ID that is used to authorize a user to upload a file to Object Storage Service (OSS).
+             * <p>The AccessKey ID that is used to authorize a user to upload a file to Object Storage Service (OSS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2skeuurfj****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -241,7 +263,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret that is used to authorize a user to upload a file to OSS.
+             * <p>The AccessKey secret that is used to authorize a user to upload a file to OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skdkdukeuuuu****</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -249,7 +274,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the bucket to which a file is uploaded in OSS.
+             * <p>The name of the bucket to which a file is uploaded in OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -257,7 +285,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * The directory to which a file is uploaded in OSS.
+             * <p>The directory to which the file is uploaded in Object Storage Service (OSS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000102939</p>
              */
             public Builder dir(String dir) {
                 this.dir = dir;
@@ -265,7 +296,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the OSS server to which a file is uploaded.
+             * <p>The address of the OSS server to which a file is uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss.com">https://oss.com</a></p>
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -273,7 +307,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period.
+             * <p>The timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder expire(Integer expire) {
                 this.expire = expire;
@@ -281,7 +318,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * The security token.
+             * <p>The security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dkdieiii**</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

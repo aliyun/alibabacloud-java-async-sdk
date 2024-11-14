@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddChatappPhoneNumberRequest} extends {@link RequestModel}
  *
  * <p>AddChatappPhoneNumberRequest</p>
@@ -32,6 +33,7 @@ public class AddChatappPhoneNumberRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PreValidateId")
+    @Deprecated
     private String preValidateId;
 
     @com.aliyun.core.annotation.Query
@@ -155,7 +157,11 @@ public class AddChatappPhoneNumberRequest extends Request {
         } 
 
         /**
-         * Cc.
+         * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder cc(String cc) {
             this.putQueryParameter("Cc", cc);
@@ -164,7 +170,11 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>Adds a phone number for a WhatsApp Business account (WABA).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93928389****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -182,7 +192,11 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>AddChatappPhoneNumber</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -191,7 +205,10 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * PreValidateId.
+         * <p>cams:ChatappPhoneNumberRegister</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1020****</p>
          */
         public Builder preValidateId(String preValidateId) {
             this.putQueryParameter("PreValidateId", preValidateId);
@@ -218,7 +235,11 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * VerifiedName.
+         * <p>Private</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         public Builder verifiedName(String verifiedName) {
             this.putQueryParameter("VerifiedName", verifiedName);

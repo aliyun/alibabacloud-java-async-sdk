@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePhoneEncryptionPublicKeyRequest} extends {@link RequestModel}
  *
  * <p>UpdatePhoneEncryptionPublicKeyRequest</p>
@@ -83,7 +84,10 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>SpaceId/instanceId of ISV sub clients.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399382882</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -92,7 +96,19 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
         }
 
         /**
-         * EncryptionPublicKey.
+         * <p>Encrypt the public key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PUBLIC KEY-----
+         * AAA
+         * BBB
+         * CCC
+         * DDD
+         * EEE
+         * FFF
+         * GGG
+         * -----END PUBLIC KEY-----</p>
          */
         public Builder encryptionPublicKey(String encryptionPublicKey) {
             this.putBodyParameter("EncryptionPublicKey", encryptionPublicKey);
@@ -101,7 +117,11 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
         }
 
         /**
-         * The phone number.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86138000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

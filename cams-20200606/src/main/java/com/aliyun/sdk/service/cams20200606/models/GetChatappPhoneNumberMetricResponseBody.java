@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatappPhoneNumberMetricResponseBody} extends {@link TeaModel}
  *
  * <p>GetChatappPhoneNumberMetricResponseBody</p>
@@ -85,7 +86,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the access denial.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,7 +97,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The value OK indicates that the request was successful.
+         * <p>The value OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -109,7 +116,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +127,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612C226-E271-4CFE-9F18-4066D******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +143,12 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetChatappPhoneNumberMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChatappPhoneNumberMetricResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeliveredCount")
         private Integer deliveredCount;
@@ -217,7 +236,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             private Long start; 
 
             /**
-             * The number of delivered messages.
+             * <p>The number of delivered messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder deliveredCount(Integer deliveredCount) {
                 this.deliveredCount = deliveredCount;
@@ -225,7 +247,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range that you queried.
+             * <p>The end of the time range that you queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1667196043904</p>
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -233,13 +258,15 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The granularity of the metric.
-             * <p>
+             * <p>The granularity of the metric.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DAILY</li>
+             * <li>HALF_HOUR</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   DAILY
-             * *   HALF_HOUR
+             * <strong>example:</strong>
+             * <p>DAILY</p>
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -247,7 +274,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The business phone number.
+             * <p>The business phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>861380000</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -255,7 +285,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sent messages.
+             * <p>The number of sent messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sentCount(Integer sentCount) {
                 this.sentCount = sentCount;
@@ -263,7 +296,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range that you queried.
+             * <p>The beginning of the time range that you queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669619491000</p>
              */
             public Builder start(Long start) {
                 this.start = start;

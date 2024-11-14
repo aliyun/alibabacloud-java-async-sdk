@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneEncryptionPublicKeyRequest} extends {@link RequestModel}
  *
  * <p>GetPhoneEncryptionPublicKeyRequest</p>
@@ -68,7 +69,10 @@ public class GetPhoneEncryptionPublicKeyRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>393838848</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -77,7 +81,11 @@ public class GetPhoneEncryptionPublicKeyRequest extends Request {
         }
 
         /**
-         * The phone number.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

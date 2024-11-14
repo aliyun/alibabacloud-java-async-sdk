@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWabaBusinessInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryWabaBusinessInfoRequest</p>
@@ -111,7 +112,11 @@ public class QueryWabaBusinessInfoRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the independent software vendor (ISV) account.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -147,7 +152,11 @@ public class QueryWabaBusinessInfoRequest extends Request {
         }
 
         /**
-         * The ID of the WABA.
+         * <p>The ID of the WhatsApp Business Account (WABA).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293848822333</p>
          */
         public Builder wabaId(String wabaId) {
             this.putQueryParameter("WabaId", wabaId);

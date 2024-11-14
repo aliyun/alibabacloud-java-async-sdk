@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitIsvCustomerTermsRequest} extends {@link RequestModel}
  *
  * <p>SubmitIsvCustomerTermsRequest</p>
@@ -144,7 +145,11 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         } 
 
         /**
-         * The use scenario.
+         * <p>The business scenario.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Marketing products</p>
          */
         public Builder businessDesc(String businessDesc) {
             this.putQueryParameter("BusinessDesc", businessDesc);
@@ -153,7 +158,11 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * The email address of your business.
+         * <p>The enterprise mail.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:partner@aliyun.com">partner@aliyun.com</a></p>
          */
         public Builder contactMail(String contactMail) {
             this.putQueryParameter("ContactMail", contactMail);
@@ -162,7 +171,14 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * The country code.
+         * <p>The country code.</p>
+         * <blockquote>
+         * <p> For more information about country codes, see <a href="https://help.aliyun.com/document_detail/608210.html">Country codes</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder countryId(String countryId) {
             this.putQueryParameter("CountryId", countryId);
@@ -171,7 +187,11 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * The display name of your business.
+         * <p>The enterprise name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder custName(String custName) {
             this.putQueryParameter("CustName", custName);
@@ -180,7 +200,11 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * The space ID of the user under the ISV account.
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -189,12 +213,11 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * The ISV or Client Agreement.
-         * <p>
+         * <p>The ISV or Client agreement.</p>
+         * <p>This parameter is required.</p>
          * 
-         * > Before you upload files to Object Storage Service (OSS) servers, you must call the GetChatappUploadAuthorization operation to obtain the authentication information required to upload files. You can use the SDK provided by OSS to upload files. When you upload a file, you must set the key parameter value. To set the value for the key parameter, concatenate the value of the Dir parameter and the file name by using a forward slash (/). You can obtain the value of the Dir parameter by calling the GetChatappUploadAuthorization operation.
-         * 
-         * > The value of this parameter is the name of the uploaded file.
+         * <strong>example:</strong>
+         * <p>isvTerms.pdf</p>
          */
         public Builder isvTerms(String isvTerms) {
             this.putQueryParameter("IsvTerms", isvTerms);
@@ -203,7 +226,11 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * The address of your business.
+         * <p>The enterprise address.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder officeAddress(String officeAddress) {
             this.putQueryParameter("OfficeAddress", officeAddress);

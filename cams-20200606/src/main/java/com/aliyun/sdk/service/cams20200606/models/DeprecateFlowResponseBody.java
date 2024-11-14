@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeprecateFlowResponseBody} extends {@link TeaModel}
  *
  * <p>DeprecateFlowResponseBody</p>
@@ -61,7 +62,10 @@ public class DeprecateFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The result returns OK as normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +73,10 @@ public class DeprecateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +84,10 @@ public class DeprecateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

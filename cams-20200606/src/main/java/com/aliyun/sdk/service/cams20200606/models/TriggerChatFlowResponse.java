@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateFlowJSONAssetResponse} extends {@link TeaModel}
+ * {@link TriggerChatFlowResponse} extends {@link TeaModel}
  *
- * <p>UpdateFlowJSONAssetResponse</p>
+ * <p>TriggerChatFlowResponse</p>
  */
-public class UpdateFlowJSONAssetResponse extends Response {
+public class TriggerChatFlowResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class UpdateFlowJSONAssetResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateFlowJSONAssetResponseBody body;
+    private TriggerChatFlowResponseBody body;
 
-    private UpdateFlowJSONAssetResponse(BuilderImpl builder) {
+    private TriggerChatFlowResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateFlowJSONAssetResponse create() {
+    public static TriggerChatFlowResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class UpdateFlowJSONAssetResponse extends Response {
     /**
      * @return body
      */
-    public UpdateFlowJSONAssetResponseBody getBody() {
+    public TriggerChatFlowResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateFlowJSONAssetResponse, Builder> {
+    public interface Builder extends Response.Builder<TriggerChatFlowResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateFlowJSONAssetResponseBody body);
+        Builder body(TriggerChatFlowResponseBody body);
 
         @Override
-        UpdateFlowJSONAssetResponse build();
+        TriggerChatFlowResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateFlowJSONAssetResponse, Builder>
+            extends Response.BuilderImpl<TriggerChatFlowResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpdateFlowJSONAssetResponseBody body; 
+        private TriggerChatFlowResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateFlowJSONAssetResponse response) {
+        private BuilderImpl(TriggerChatFlowResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class UpdateFlowJSONAssetResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateFlowJSONAssetResponseBody body) {
+        public Builder body(TriggerChatFlowResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateFlowJSONAssetResponse build() {
-            return new UpdateFlowJSONAssetResponse(this);
+        public TriggerChatFlowResponse build() {
+            return new TriggerChatFlowResponse(this);
         } 
 
     } 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddChatappPhoneNumberResponseBody} extends {@link TeaModel}
  *
  * <p>AddChatappPhoneNumberResponseBody</p>
@@ -85,7 +86,10 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details about the access denial.
+         * <p>com.alicom.access.oxs.client.channel.aliyun.flow.AyFlowExecuteService</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://pop_access_slb_sgvpc/#vpc">http://pop_access_slb_sgvpc/#vpc</a></p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,11 +97,10 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
-         * <p>
+         * <p>The phone number.</p>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +108,10 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>com.alicom.access.oxs.client.channel.aliyun.flow.dto.AyCommonApiRequest</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +119,10 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>formData</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +130,10 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>13800000000</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

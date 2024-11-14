@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneNumberVerificationStatusRequest} extends {@link RequestModel}
  *
  * <p>GetPhoneNumberVerificationStatusRequest</p>
@@ -69,7 +70,11 @@ public class GetPhoneNumberVerificationStatusRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the ISV account.
+         * <p>The space ID of the user under the ISV account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>229393838****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -78,7 +83,11 @@ public class GetPhoneNumberVerificationStatusRequest extends Request {
         }
 
         /**
-         * The phone number.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613900001234</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

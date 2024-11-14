@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatappUploadAuthorizationRequest} extends {@link RequestModel}
  *
  * <p>GetChatappUploadAuthorizationRequest</p>
@@ -54,7 +55,11 @@ public class GetChatappUploadAuthorizationRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the independent software vendor (ISV) account.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);

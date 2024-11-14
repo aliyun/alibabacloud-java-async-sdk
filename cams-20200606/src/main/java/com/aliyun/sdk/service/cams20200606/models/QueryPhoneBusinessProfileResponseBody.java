@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPhoneBusinessProfileResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPhoneBusinessProfileResponseBody</p>
@@ -97,7 +98,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -105,11 +109,14 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +124,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +132,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,7 +143,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +154,14 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +174,12 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPhoneBusinessProfileResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPhoneBusinessProfileResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("About")
         private String about;
@@ -253,7 +279,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             private java.util.List < String > websites; 
 
             /**
-             * About.
+             * <p>Regarding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business profile</p>
              */
             public Builder about(String about) {
                 this.about = about;
@@ -261,7 +290,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The address.
+             * <p>The address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Changsha</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -269,7 +301,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -277,7 +312,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The email address.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:aa@aliyun.com">aa@aliyun.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -285,7 +323,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the profile picture.
+             * <p>The profile picture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://....img</p>
              */
             public Builder profilePictureUrl(String profilePictureUrl) {
                 this.profilePictureUrl = profilePictureUrl;
@@ -293,7 +334,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The industry.
+             * <p>The industry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Retail</p>
              */
             public Builder vertical(String vertical) {
                 this.vertical = vertical;
@@ -301,7 +345,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The websites.
+             * <p>The website.</p>
              */
             public Builder websites(java.util.List < String > websites) {
                 this.websites = websites;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChatappBindWabaResponseBody} extends {@link TeaModel}
  *
  * <p>ChatappBindWabaResponseBody</p>
@@ -97,7 +98,10 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -105,11 +109,14 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +124,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +132,10 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,7 +143,10 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +154,14 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +174,12 @@ public class ChatappBindWabaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChatappBindWabaResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatappBindWabaResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustSpaceId")
         private String custSpaceId;
@@ -193,7 +219,10 @@ public class ChatappBindWabaResponseBody extends TeaModel {
             private String wabaId; 
 
             /**
-             * The space ID of the user.
+             * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C02029392939939</p>
              */
             public Builder custSpaceId(String custSpaceId) {
                 this.custSpaceId = custSpaceId;
@@ -201,7 +230,10 @@ public class ChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the WhatsApp Business account.
+             * <p>The ID of the WhatsApp Business Account (WABA).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2939828282</p>
              */
             public Builder wabaId(String wabaId) {
                 this.wabaId = wabaId;

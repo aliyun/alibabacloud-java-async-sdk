@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFlowRequest} extends {@link RequestModel}
  *
  * <p>ListFlowRequest</p>
@@ -81,7 +82,10 @@ public class ListFlowRequest extends Request {
         } 
 
         /**
-         * The space ID of the RAM user within the independent software vendor (ISV) account.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99948484</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -90,7 +94,10 @@ public class ListFlowRequest extends Request {
         }
 
         /**
-         * The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.
+         * <p>The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -99,7 +106,7 @@ public class ListFlowRequest extends Request {
         }
 
         /**
-         * The returned pages.
+         * <p>The returned pages.</p>
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -115,6 +122,12 @@ public class ListFlowRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListFlowRequest} extends {@link TeaModel}
+     *
+     * <p>ListFlowRequest</p>
+     */
     public static class Page extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
@@ -154,7 +167,10 @@ public class ListFlowRequest extends Request {
             private Integer size; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -162,7 +178,10 @@ public class ListFlowRequest extends Request {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Integer size) {
                 this.size = size;

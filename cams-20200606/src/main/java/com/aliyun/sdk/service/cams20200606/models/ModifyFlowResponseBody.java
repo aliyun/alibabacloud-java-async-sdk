@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyFlowResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyFlowResponseBody</p>
@@ -73,7 +74,10 @@ public class ModifyFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * If OK is returned, the request was successful.
+         * <p>If OK is returned, the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ModifyFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ModifyFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class ModifyFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612C226-E271-4CFE-9F18-4066D******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ModifyFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyFlowResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;
@@ -161,7 +177,7 @@ public class ModifyFlowResponseBody extends TeaModel {
             private String flowName; 
 
             /**
-             * The categories of the Flow.
+             * <p>The categories of the Flow.</p>
              */
             public Builder categories(java.util.List < String > categories) {
                 this.categories = categories;
@@ -169,7 +185,10 @@ public class ModifyFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The Flow ID.
+             * <p>The Flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3939399****</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -177,7 +196,10 @@ public class ModifyFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The Flow name.
+             * <p>The Flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow-00203</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

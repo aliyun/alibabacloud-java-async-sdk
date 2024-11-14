@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneNumberVerificationStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetPhoneNumberVerificationStatusResponseBody</p>
@@ -73,11 +74,14 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +89,7 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +97,10 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,6 +124,12 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPhoneNumberVerificationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPhoneNumberVerificationStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CodeVerificationStatus")
         private String codeVerificationStatus;
@@ -165,7 +181,10 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
             private String phoneNumber; 
 
             /**
-             * The verification status.
+             * <p>The verification status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VERIFIED</p>
              */
             public Builder codeVerificationStatus(String codeVerificationStatus) {
                 this.codeVerificationStatus = codeVerificationStatus;
@@ -173,7 +192,10 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the number.
+             * <p>The ID of the number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2224342624</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -181,7 +203,10 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613900001234</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;

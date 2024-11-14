@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyChatappTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyChatappTemplateResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the access denial.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,11 +97,14 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +112,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +120,10 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +131,10 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,6 +147,12 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyChatappTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyChatappTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
@@ -173,7 +192,10 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * The code of the message template.
+             * <p>The code of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8472929283883</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -181,7 +203,10 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the message template.
+             * <p>The name of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello_whatsapp</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConversationalAutomationRequest} extends {@link RequestModel}
  *
  * <p>GetConversationalAutomationRequest</p>
@@ -111,7 +112,11 @@ public class GetConversationalAutomationRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-3ie***</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -129,7 +134,11 @@ public class GetConversationalAutomationRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number of the enterprise.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86130000***</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

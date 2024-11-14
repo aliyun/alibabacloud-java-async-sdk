@@ -7,22 +7,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetWhatsappConnectionCatalogResponseBody} extends {@link TeaModel}
+ * {@link TriggerChatFlowResponseBody} extends {@link TeaModel}
  *
- * <p>GetWhatsappConnectionCatalogResponseBody</p>
+ * <p>TriggerChatFlowResponseBody</p>
  */
-public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
+public class TriggerChatFlowResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.Map < String, ? > data;
+
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
-
-    @com.aliyun.core.annotation.NameInMap("Model")
-    private java.util.Map < String, ? > model;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,11 +30,11 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private GetWhatsappConnectionCatalogResponseBody(Builder builder) {
+    private TriggerChatFlowResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
-        this.model = builder.model;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -43,7 +43,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetWhatsappConnectionCatalogResponseBody create() {
+    public static TriggerChatFlowResponseBody create() {
         return builder().build();
     }
 
@@ -62,17 +62,17 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public java.util.Map < String, ? > getData() {
+        return this.data;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
         return this.message;
-    }
-
-    /**
-     * @return model
-     */
-    public java.util.Map < String, ? > getModel() {
-        return this.model;
     }
 
     /**
@@ -92,16 +92,16 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
+        private java.util.Map < String, ? > data; 
         private String message; 
-        private java.util.Map < String, ? > model; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>Details of access denial</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>无</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -109,14 +109,10 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code.</p>
-         * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
-         * </ul>
+         * <p>Status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>无</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -124,10 +120,21 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>Returned data.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>{}</p>
+         */
+        public Builder data(java.util.Map < String, ? > data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * <p>Error description message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,21 +142,10 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;id&quot;:&quot;200292992&quot;}</p>
-         */
-        public Builder model(java.util.Map < String, ? > model) {
-            this.model = model;
-            return this;
-        }
-
-        /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
+         * <p>无</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,22 +153,22 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Whether the call was successful.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Call succeeded.</li>
+         * <li><strong>false</strong>: Call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public GetWhatsappConnectionCatalogResponseBody build() {
-            return new GetWhatsappConnectionCatalogResponseBody(this);
+        public TriggerChatFlowResponseBody build() {
+            return new TriggerChatFlowResponseBody(this);
         } 
 
     } 

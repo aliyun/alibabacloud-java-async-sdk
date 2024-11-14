@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChatappTemplateRequest} extends {@link RequestModel}
  *
  * <p>ListChatappTemplateRequest</p>
@@ -166,13 +167,16 @@ public class ListChatappTemplateRequest extends Request {
         } 
 
         /**
-         * The review status of the message template. Valid values:
-         * <p>
+         * <p>The review status of the message template. Valid values:</p>
+         * <ul>
+         * <li><strong>pass</strong>: The message template is approved.</li>
+         * <li><strong>fail</strong>: The message template is rejected.</li>
+         * <li><strong>auditing</strong>: The message template is being reviewed.</li>
+         * <li><strong>unaudit</strong>: The review is suspended.</li>
+         * </ul>
          * 
-         * *   **pass**: The message template is approved.
-         * *   **fail**: The message template is rejected.
-         * *   **auditing**: The message template is being reviewed.
-         * *   **unaudit**: The review is suspended.
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -181,7 +185,10 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * Code.
+         * <p>Template encoding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>838888822*****</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -190,7 +197,10 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The space ID of the user under the ISV account.
+         * <p>The space ID of the user under the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28251486512358****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -199,10 +209,13 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.
-         * <p>
+         * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
+         * <blockquote>
+         * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+         * </blockquote>
          * 
-         * >  CustWabaId is an obsolete parameter. Use CustSpaceId instead.
+         * <strong>example:</strong>
+         * <p>65921621816****</p>
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -211,7 +224,10 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
+         * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skdi3kksloslikdkkdk</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -220,7 +236,10 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+         * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -229,7 +248,10 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The name of the message template.
+         * <p>The name of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello_whatsapp</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -238,7 +260,10 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The pagination settings.
+         * <p>The pagination settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;page&quot;: &quot;{&quot;index&quot;: 1,&quot;size&quot;: 20}</p>
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -248,12 +273,15 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The type of the message template.
-         * <p>
+         * <p>The type of the message template.</p>
+         * <ul>
+         * <li><strong>WHATSAPP</strong></li>
+         * <li><strong>VIBER</strong></li>
+         * <li>LINE: the Line message template. This type of message template will be released later.</li>
+         * </ul>
          * 
-         * *   **WHATSAPP**
-         * *   **VIBER**
-         * *   LINE: the Line message template. This type of message template will be released later.
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
@@ -268,6 +296,12 @@ public class ListChatappTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListChatappTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ListChatappTemplateRequest</p>
+     */
     public static class Page extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -309,7 +343,11 @@ public class ListChatappTemplateRequest extends Request {
             private Integer size; 
 
             /**
-             * The page number. Default value: 1.
+             * <p>The page number. Default value: 1.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -317,7 +355,11 @@ public class ListChatappTemplateRequest extends Request {
             }
 
             /**
-             * The number of entries per page. Default value: 10.
+             * <p>The number of entries per page. Default value: 10.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder size(Integer size) {
                 this.size = size;

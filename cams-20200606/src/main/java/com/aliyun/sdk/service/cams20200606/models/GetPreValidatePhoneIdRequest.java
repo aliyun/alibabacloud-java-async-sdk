@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPreValidatePhoneIdRequest} extends {@link RequestModel}
  *
  * <p>GetPreValidatePhoneIdRequest</p>
@@ -69,7 +70,11 @@ public class GetPreValidatePhoneIdRequest extends Request {
         } 
 
         /**
-         * The phone number.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>861380000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);
@@ -78,7 +83,11 @@ public class GetPreValidatePhoneIdRequest extends Request {
         }
 
         /**
-         * The verification code provided when you purchased the pre-registered phone number.
+         * <p>The verification code provided when you purchased the pre-registered phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>208393</p>
          */
         public Builder verifyCode(String verifyCode) {
             this.putBodyParameter("VerifyCode", verifyCode);

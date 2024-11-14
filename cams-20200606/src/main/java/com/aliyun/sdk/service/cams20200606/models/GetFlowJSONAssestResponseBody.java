@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFlowJSONAssestResponseBody} extends {@link TeaModel}
  *
  * <p>GetFlowJSONAssestResponseBody</p>
@@ -73,7 +74,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>If OK is returned, the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFlowJSONAssestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFlowJSONAssestResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
@@ -149,7 +165,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
             private String flowId; 
 
             /**
-             * The file path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://url.com/json.json">https://url.com/json.json</a></p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -157,7 +176,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
             }
 
             /**
-             * The Flow ID.
+             * <p>The Flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow_id_arms</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;

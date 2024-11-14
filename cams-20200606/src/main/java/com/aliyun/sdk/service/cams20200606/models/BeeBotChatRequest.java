@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BeeBotChatRequest} extends {@link RequestModel}
  *
  * <p>BeeBotChatRequest</p>
@@ -195,7 +196,11 @@ public class BeeBotChatRequest extends Request {
         } 
 
         /**
-         * The ID of the bot instance.
+         * <p>Indicates whether the answer is in plain text or rich text.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder chatBotInstanceId(String chatBotInstanceId) {
             this.putBodyParameter("ChatBotInstanceId", chatBotInstanceId);
@@ -204,7 +209,10 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -213,7 +221,10 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\&A based on the intent.
+         * <p>The source of the answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>intent</p>
          */
         public Builder intentName(String intentName) {
             this.putBodyParameter("IntentName", intentName);
@@ -222,7 +233,10 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * <p>The source of the answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ksiekdki39ksks93939</p>
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -231,7 +245,10 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The ID of the knowledge title in the knowledge base.
+         * <p>The hit statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder knowledgeId(String knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);
@@ -240,7 +257,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The list of codes for answers from different perspectives.
+         * <p>Beijing</p>
          */
         public Builder perspective(java.util.List < String > perspective) {
             String perspectiveShrink = shrink(perspective, "Perspective", "json");
@@ -250,7 +267,10 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The ID of the visitor, which is used to identify users in the current session.
+         * <p>The information about the slot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>861500000000</p>
          */
         public Builder senderId(String senderId) {
             this.putBodyParameter("SenderId", senderId);
@@ -259,7 +279,10 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The nickname of the visitor in the current session.
+         * <p>Beijing</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nick</p>
          */
         public Builder senderNick(String senderNick) {
             this.putBodyParameter("SenderNick", senderNick);
@@ -268,7 +291,10 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The ID of the session, which is used to identify the session and store context information of the session.
+         * <p>The title of the related knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
@@ -277,7 +303,11 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The input of the visitor.
+         * <p>The title of the hit question.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>659216218162179</p>
          */
         public Builder utterance(String utterance) {
             this.putBodyParameter("Utterance", utterance);
@@ -286,7 +316,10 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The user-defined parameter set in JSON format. You can specify user-defined parameters for conversation engines.
+         * <p>The node name. When AnswerSource is set to BotFramework, a value is returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;skills&quot;:&quot;chat_search&quot;,&quot;accessToken&quot;:&quot;73f4d5c8e8c334d9b538890bca68ac9a&quot;,&quot;senderStaffId&quot;:&quot;1697204021326&quot;,&quot;senderCorpId&quot;:&quot;dingee291fb2828058b9&quot;}</p>
          */
         public Builder vendorParam(java.util.Map < String, ? > vendorParam) {
             String vendorParamShrink = shrink(vendorParam, "VendorParam", "json");

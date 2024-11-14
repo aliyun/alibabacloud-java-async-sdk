@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFlowResponseBody} extends {@link TeaModel}
  *
  * <p>GetFlowResponseBody</p>
@@ -73,7 +74,10 @@ public class GetFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * If OK is returned, the request was successful.
+         * <p>If OK is returned, the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class GetFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFlowResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;
@@ -221,7 +237,7 @@ public class GetFlowResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The categories of the Flow.
+             * <p>The categories of the Flow.</p>
              */
             public Builder categories(java.util.List < String > categories) {
                 this.categories = categories;
@@ -229,7 +245,10 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the API.
+             * <p>The version number of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.0</p>
              */
             public Builder dataApiVersion(String dataApiVersion) {
                 this.dataApiVersion = dataApiVersion;
@@ -237,7 +256,10 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The Flow ID.
+             * <p>The Flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow_id_arms</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -245,7 +267,10 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The Flow name.
+             * <p>The Flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dnjn</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -253,7 +278,10 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The JSON version.
+             * <p>The JSON version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.1</p>
              */
             public Builder JSONVersion(String JSONVersion) {
                 this.JSONVersion = JSONVersion;
@@ -261,7 +289,10 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The temporary preview URL.
+             * <p>The temporary preview URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://pre-url">https://pre-url</a></p>
              */
             public Builder previewUrl(String previewUrl) {
                 this.previewUrl = previewUrl;
@@ -269,7 +300,10 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700617436633</p>
              */
             public Builder previewUrlExpires(Long previewUrlExpires) {
                 this.previewUrlExpires = previewUrlExpires;
@@ -277,34 +311,33 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the Flow.
-             * <p>
+             * <p>The state of the Flow.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>PUBLISHED</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   PUBLISHED
+             * <!-- -->
+             * </li>
+             * <li><p>DRAFT</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>DEPRECATED</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   DRAFT
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   DEPRECATED
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>DRAFT</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePhoneMessageQrdlRequest} extends {@link RequestModel}
  *
  * <p>UpdatePhoneMessageQrdlRequest</p>
@@ -113,7 +114,10 @@ public class UpdatePhoneMessageQrdlRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>SpaceId/instance ID of ISV sub customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9383884</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -122,7 +126,11 @@ public class UpdatePhoneMessageQrdlRequest extends Request {
         }
 
         /**
-         * GenerateQrImage.
+         * <p>Produce QR code image format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PNG</p>
          */
         public Builder generateQrImage(String generateQrImage) {
             this.putBodyParameter("GenerateQrImage", generateQrImage);
@@ -131,7 +139,11 @@ public class UpdatePhoneMessageQrdlRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>Number, enter the country/region code+number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>861380000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);
@@ -140,7 +152,11 @@ public class UpdatePhoneMessageQrdlRequest extends Request {
         }
 
         /**
-         * PrefilledMessage.
+         * <p>Message content.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
          */
         public Builder prefilledMessage(String prefilledMessage) {
             this.putBodyParameter("PrefilledMessage", prefilledMessage);
@@ -149,7 +165,11 @@ public class UpdatePhoneMessageQrdlRequest extends Request {
         }
 
         /**
-         * QrdlCode.
+         * <p>QR code encoding.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29338838</p>
          */
         public Builder qrdlCode(String qrdlCode) {
             this.putBodyParameter("QrdlCode", qrdlCode);

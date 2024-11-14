@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCommerceSettingRequest} extends {@link RequestModel}
  *
  * <p>GetCommerceSettingRequest</p>
@@ -111,7 +112,11 @@ public class GetCommerceSettingRequest extends Request {
         } 
 
         /**
-         * The space ID of the user within the independent software vendor (ISV) account.
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -129,7 +134,11 @@ public class GetCommerceSettingRequest extends Request {
         }
 
         /**
-         * The phone number.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

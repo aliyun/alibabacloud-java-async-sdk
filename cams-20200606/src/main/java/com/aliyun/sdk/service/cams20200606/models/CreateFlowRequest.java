@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFlowRequest} extends {@link RequestModel}
  *
  * <p>CreateFlowRequest</p>
@@ -83,7 +84,8 @@ public class CreateFlowRequest extends Request {
         } 
 
         /**
-         * The categories of the Flow.
+         * <p>The categories of the Flow.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder categories(java.util.List < String > categories) {
             String categoriesShrink = shrink(categories, "Categories", "json");
@@ -93,7 +95,10 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * The space ID of the user within the independent software vendor (ISV) account.
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93994848</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -102,7 +107,11 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * The name of the Flow.
+         * <p>The name of the Flow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
