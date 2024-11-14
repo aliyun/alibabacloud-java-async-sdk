@@ -27,11 +27,16 @@ public class GetParseResultRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String libraryId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("useUrlResult")
+    private Boolean useUrlResult;
+
     private GetParseResultRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.docId = builder.docId;
         this.libraryId = builder.libraryId;
+        this.useUrlResult = builder.useUrlResult;
     }
 
     public static Builder builder() {
@@ -68,10 +73,18 @@ public class GetParseResultRequest extends Request {
         return this.libraryId;
     }
 
+    /**
+     * @return useUrlResult
+     */
+    public Boolean getUseUrlResult() {
+        return this.useUrlResult;
+    }
+
     public static final class Builder extends Request.Builder<GetParseResultRequest, Builder> {
         private String workspaceId; 
         private String docId; 
         private String libraryId; 
+        private Boolean useUrlResult; 
 
         private Builder() {
             super();
@@ -82,6 +95,7 @@ public class GetParseResultRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.docId = request.docId;
             this.libraryId = request.libraryId;
+            this.useUrlResult = request.useUrlResult;
         } 
 
         /**
@@ -117,6 +131,15 @@ public class GetParseResultRequest extends Request {
         public Builder libraryId(String libraryId) {
             this.putBodyParameter("libraryId", libraryId);
             this.libraryId = libraryId;
+            return this;
+        }
+
+        /**
+         * useUrlResult.
+         */
+        public Builder useUrlResult(Boolean useUrlResult) {
+            this.putBodyParameter("useUrlResult", useUrlResult);
+            this.useUrlResult = useUrlResult;
             return this;
         }
 

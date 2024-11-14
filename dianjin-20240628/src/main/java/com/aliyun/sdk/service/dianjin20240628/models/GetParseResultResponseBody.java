@@ -210,6 +210,9 @@ public class GetParseResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("result")
         private java.util.Map < String, ? > result;
 
+        @com.aliyun.core.annotation.NameInMap("resultUrl")
+        private String resultUrl;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
@@ -218,6 +221,7 @@ public class GetParseResultResponseBody extends TeaModel {
             this.providerType = builder.providerType;
             this.requestId = builder.requestId;
             this.result = builder.result;
+            this.resultUrl = builder.resultUrl;
             this.status = builder.status;
         }
 
@@ -258,6 +262,13 @@ public class GetParseResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return resultUrl
+         */
+        public String getResultUrl() {
+            return this.resultUrl;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -269,6 +280,7 @@ public class GetParseResultResponseBody extends TeaModel {
             private String providerType; 
             private String requestId; 
             private java.util.Map < String, ? > result; 
+            private String resultUrl; 
             private String status; 
 
             /**
@@ -300,6 +312,14 @@ public class GetParseResultResponseBody extends TeaModel {
              */
             public Builder result(java.util.Map < String, ? > result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * resultUrl.
+             */
+            public Builder resultUrl(String resultUrl) {
+                this.resultUrl = resultUrl;
                 return this;
             }
 

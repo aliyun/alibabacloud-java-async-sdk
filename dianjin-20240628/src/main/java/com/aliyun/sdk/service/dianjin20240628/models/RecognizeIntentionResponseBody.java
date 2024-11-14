@@ -207,6 +207,9 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("intentionName")
         private String intentionName;
 
+        @com.aliyun.core.annotation.NameInMap("intentionScript")
+        private String intentionScript;
+
         @com.aliyun.core.annotation.NameInMap("recommendIntention")
         private String recommendIntention;
 
@@ -217,6 +220,7 @@ public class RecognizeIntentionResponseBody extends TeaModel {
             this.analysisProcess = builder.analysisProcess;
             this.intentionCode = builder.intentionCode;
             this.intentionName = builder.intentionName;
+            this.intentionScript = builder.intentionScript;
             this.recommendIntention = builder.recommendIntention;
             this.recommendScript = builder.recommendScript;
         }
@@ -251,6 +255,13 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         }
 
         /**
+         * @return intentionScript
+         */
+        public String getIntentionScript() {
+            return this.intentionScript;
+        }
+
+        /**
          * @return recommendIntention
          */
         public String getRecommendIntention() {
@@ -268,6 +279,7 @@ public class RecognizeIntentionResponseBody extends TeaModel {
             private String analysisProcess; 
             private String intentionCode; 
             private String intentionName; 
+            private String intentionScript; 
             private String recommendIntention; 
             private String recommendScript; 
 
@@ -292,6 +304,14 @@ public class RecognizeIntentionResponseBody extends TeaModel {
              */
             public Builder intentionName(String intentionName) {
                 this.intentionName = intentionName;
+                return this;
+            }
+
+            /**
+             * intentionScript.
+             */
+            public Builder intentionScript(String intentionScript) {
+                this.intentionScript = intentionScript;
                 return this;
             }
 

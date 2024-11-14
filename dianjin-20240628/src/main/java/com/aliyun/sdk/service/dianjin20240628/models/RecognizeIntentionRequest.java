@@ -40,6 +40,10 @@ public class RecognizeIntentionRequest extends Request {
     private java.util.List < HierarchicalIntentionList> hierarchicalIntentionList;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("intentionDomainCode")
+    private String intentionDomainCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("intentionList")
     private java.util.List < IntentionList> intentionList;
 
@@ -59,6 +63,7 @@ public class RecognizeIntentionRequest extends Request {
         this.conversation = builder.conversation;
         this.globalIntentionList = builder.globalIntentionList;
         this.hierarchicalIntentionList = builder.hierarchicalIntentionList;
+        this.intentionDomainCode = builder.intentionDomainCode;
         this.intentionList = builder.intentionList;
         this.opType = builder.opType;
         this.recommend = builder.recommend;
@@ -120,6 +125,13 @@ public class RecognizeIntentionRequest extends Request {
     }
 
     /**
+     * @return intentionDomainCode
+     */
+    public String getIntentionDomainCode() {
+        return this.intentionDomainCode;
+    }
+
+    /**
      * @return intentionList
      */
     public java.util.List < IntentionList> getIntentionList() {
@@ -147,6 +159,7 @@ public class RecognizeIntentionRequest extends Request {
         private String conversation; 
         private java.util.List < GlobalIntentionList> globalIntentionList; 
         private java.util.List < HierarchicalIntentionList> hierarchicalIntentionList; 
+        private String intentionDomainCode; 
         private java.util.List < IntentionList> intentionList; 
         private String opType; 
         private Boolean recommend; 
@@ -163,6 +176,7 @@ public class RecognizeIntentionRequest extends Request {
             this.conversation = request.conversation;
             this.globalIntentionList = request.globalIntentionList;
             this.hierarchicalIntentionList = request.hierarchicalIntentionList;
+            this.intentionDomainCode = request.intentionDomainCode;
             this.intentionList = request.intentionList;
             this.opType = request.opType;
             this.recommend = request.recommend;
@@ -229,6 +243,15 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
+         * intentionDomainCode.
+         */
+        public Builder intentionDomainCode(String intentionDomainCode) {
+            this.putBodyParameter("intentionDomainCode", intentionDomainCode);
+            this.intentionDomainCode = intentionDomainCode;
+            return this;
+        }
+
+        /**
          * intentionList.
          */
         public Builder intentionList(java.util.List < IntentionList> intentionList) {
@@ -278,10 +301,14 @@ public class RecognizeIntentionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("intentionCode")
         private String intentionCode;
 
+        @com.aliyun.core.annotation.NameInMap("intentionScript")
+        private String intentionScript;
+
         private GlobalIntentionList(Builder builder) {
             this.description = builder.description;
             this.intention = builder.intention;
             this.intentionCode = builder.intentionCode;
+            this.intentionScript = builder.intentionScript;
         }
 
         public static Builder builder() {
@@ -313,10 +340,18 @@ public class RecognizeIntentionRequest extends Request {
             return this.intentionCode;
         }
 
+        /**
+         * @return intentionScript
+         */
+        public String getIntentionScript() {
+            return this.intentionScript;
+        }
+
         public static final class Builder {
             private String description; 
             private String intention; 
             private String intentionCode; 
+            private String intentionScript; 
 
             /**
              * description.
@@ -339,6 +374,14 @@ public class RecognizeIntentionRequest extends Request {
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
+                return this;
+            }
+
+            /**
+             * intentionScript.
+             */
+            public Builder intentionScript(String intentionScript) {
+                this.intentionScript = intentionScript;
                 return this;
             }
 
@@ -365,10 +408,14 @@ public class RecognizeIntentionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("intentionCode")
         private String intentionCode;
 
+        @com.aliyun.core.annotation.NameInMap("intentionScript")
+        private String intentionScript;
+
         private HierarchicalIntentionList(Builder builder) {
             this.description = builder.description;
             this.intention = builder.intention;
             this.intentionCode = builder.intentionCode;
+            this.intentionScript = builder.intentionScript;
         }
 
         public static Builder builder() {
@@ -400,10 +447,18 @@ public class RecognizeIntentionRequest extends Request {
             return this.intentionCode;
         }
 
+        /**
+         * @return intentionScript
+         */
+        public String getIntentionScript() {
+            return this.intentionScript;
+        }
+
         public static final class Builder {
             private String description; 
             private String intention; 
             private String intentionCode; 
+            private String intentionScript; 
 
             /**
              * description.
@@ -426,6 +481,14 @@ public class RecognizeIntentionRequest extends Request {
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
+                return this;
+            }
+
+            /**
+             * intentionScript.
+             */
+            public Builder intentionScript(String intentionScript) {
+                this.intentionScript = intentionScript;
                 return this;
             }
 
@@ -452,10 +515,14 @@ public class RecognizeIntentionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("intentionCode")
         private String intentionCode;
 
+        @com.aliyun.core.annotation.NameInMap("intentionScript")
+        private String intentionScript;
+
         private IntentionList(Builder builder) {
             this.description = builder.description;
             this.intention = builder.intention;
             this.intentionCode = builder.intentionCode;
+            this.intentionScript = builder.intentionScript;
         }
 
         public static Builder builder() {
@@ -487,10 +554,18 @@ public class RecognizeIntentionRequest extends Request {
             return this.intentionCode;
         }
 
+        /**
+         * @return intentionScript
+         */
+        public String getIntentionScript() {
+            return this.intentionScript;
+        }
+
         public static final class Builder {
             private String description; 
             private String intention; 
             private String intentionCode; 
+            private String intentionScript; 
 
             /**
              * description.
@@ -513,6 +588,14 @@ public class RecognizeIntentionRequest extends Request {
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
+                return this;
+            }
+
+            /**
+             * intentionScript.
+             */
+            public Builder intentionScript(String intentionScript) {
+                this.intentionScript = intentionScript;
                 return this;
             }
 
