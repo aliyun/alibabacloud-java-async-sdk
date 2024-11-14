@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrafficResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrafficResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried traffic statistics.
+         * <p>The queried traffic statistics.</p>
          */
         public Builder flowList(java.util.List < FlowList> flowList) {
             this.flowList = flowList;
@@ -57,7 +58,10 @@ public class DescribeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A507DC8-F657-4C13-84E2-D1D1B9400753</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeTrafficResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrafficResponseBody</p>
+     */
     public static class FlowList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttackBps")
         private Long attackBps;
@@ -169,10 +179,13 @@ public class DescribeTrafficResponseBody extends TeaModel {
             private Integer time; 
 
             /**
-             * The bandwidth of attack traffic. Unit: bit/s.
-             * <p>
+             * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if attack traffic exists.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if attack traffic exists.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attackBps(Long attackBps) {
                 this.attackBps = attackBps;
@@ -180,10 +193,13 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of attack traffic. Unit: packets per second.
-             * <p>
+             * <p>The packet forwarding rate of attack traffic. Unit: packets per second.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if attack traffic exists.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if attack traffic exists.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attackPps(Long attackPps) {
                 this.attackPps = attackPps;
@@ -191,11 +207,14 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the traffic statistics. Valid values:
-             * <p>
+             * <p>The type of the traffic statistics. Valid values:</p>
+             * <ul>
+             * <li><strong>max</strong>: the peak traffic within the specified interval</li>
+             * <li><strong>avg</strong>: the average traffic within the specified interval</li>
+             * </ul>
              * 
-             * *   **max**: the peak traffic within the specified interval
-             * *   **avg**: the average traffic within the specified interval
+             * <strong>example:</strong>
+             * <p>max</p>
              */
             public Builder flowType(String flowType) {
                 this.flowType = flowType;
@@ -203,7 +222,10 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth of the total traffic. Unit: Kbit/s.
+             * <p>The bandwidth of the total traffic. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>417</p>
              */
             public Builder kbps(Integer kbps) {
                 this.kbps = kbps;
@@ -211,7 +233,10 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the traffic statistics.
+             * <p>The ID of the traffic statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8e33f19e-5644-11eb-b5c1-d89d67182200</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -219,7 +244,10 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of the total traffic. Unit: packets per second.
+             * <p>The packet forwarding rate of the total traffic. Unit: packets per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>274</p>
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -227,7 +255,10 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620951900</p>
              */
             public Builder time(Integer time) {
                 this.time = time;

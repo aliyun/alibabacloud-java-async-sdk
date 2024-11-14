@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigSchedruleOnDemandResponseBody} extends {@link TeaModel}
  *
  * <p>ConfigSchedruleOnDemandResponseBody</p>
@@ -37,7 +38,10 @@ public class ConfigSchedruleOnDemandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD06F539-2FBE-450D-9391-7EFF787128F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

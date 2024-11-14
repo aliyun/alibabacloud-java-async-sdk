@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPolicyContentRequest} extends {@link RequestModel}
  *
  * <p>ModifyPolicyContentRequest</p>
@@ -105,7 +106,7 @@ public class ModifyPolicyContentRequest extends Request {
         }
 
         /**
-         * The content of the policy.
+         * <p>The policy content.</p>
          */
         public Builder content(Content content) {
             String contentShrink = shrink(content, "Content", "json");
@@ -115,7 +116,11 @@ public class ModifyPolicyContentRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83967609-7ea5-4f6d-a6ea-380b09e****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -124,7 +129,10 @@ public class ModifyPolicyContentRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo**</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -139,6 +147,12 @@ public class ModifyPolicyContentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPolicyContentRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyContentRequest</p>
+     */
     public static class FingerPrintRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstPortEnd")
         @com.aliyun.core.annotation.Validation(required = true, maximum = 65535)
@@ -322,7 +336,11 @@ public class ModifyPolicyContentRequest extends Request {
             private Integer srcPortStart; 
 
             /**
-             * The end of the destination port range. Valid values: **0** to **65535**.
+             * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65535</p>
              */
             public Builder dstPortEnd(Integer dstPortEnd) {
                 this.dstPortEnd = dstPortEnd;
@@ -330,7 +348,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The start of the destination port range. Valid values: **0** to **65535**.
+             * <p>The start of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dstPortStart(Integer dstPortStart) {
                 this.dstPortStart = dstPortStart;
@@ -338,7 +360,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83967609-7ea5-4f6d-a6ea-380b09e****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -346,13 +371,17 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The action triggered if the rule is matched. Valid values:
-             * <p>
+             * <p>The action triggered if the rule is matched. Valid values:</p>
+             * <ul>
+             * <li><strong>permit</strong>: allows the traffic that matches the conditions in the byte-match filter rule.</li>
+             * <li><strong>drop</strong>: discards the traffic that matches the conditions in the byte-match filter rule.</li>
+             * <li><strong>ip_rate</strong>: limits rates on the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by <strong>RateValue</strong>.</li>
+             * <li><strong>session_rate</strong>: limits the number of sessions from the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by <strong>RateValue</strong>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **permit**: allows the traffic that matches the conditions in the byte-match filter rule.
-             * *   **drop**: discards the traffic that matches the conditions in the byte-match filter rule.
-             * *   **ip_rate**: limits rates on the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by **RateValue**.
-             * *   **session_rate**: limits the number of sessions from the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by **RateValue**.
+             * <strong>example:</strong>
+             * <p>drop</p>
              */
             public Builder matchAction(String matchAction) {
                 this.matchAction = matchAction;
@@ -360,7 +389,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The maximum packet length. Valid values: **1** to **1500**.
+             * <p>The maximum packet length. Valid values: <strong>1</strong> to <strong>1500</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder maxPktLen(Integer maxPktLen) {
                 this.maxPktLen = maxPktLen;
@@ -368,7 +401,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The minimum packet length. Valid values: **1** to **1500**.
+             * <p>The minimum packet length. Valid values: <strong>1</strong> to <strong>1500</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minPktLen(Integer minPktLen) {
                 this.minPktLen = minPktLen;
@@ -376,7 +413,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The offset. Valid values: **0** to **1500**.
+             * <p>The offset. Valid values: <strong>0</strong> to <strong>1500</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder offset(Integer offset) {
                 this.offset = offset;
@@ -384,7 +424,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The payload. The value is a hexadecimal string.
+             * <p>The payload. The value is a hexadecimal string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder payloadBytes(String payloadBytes) {
                 this.payloadBytes = payloadBytes;
@@ -392,11 +435,15 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The protocol type. Valid values:
-             * <p>
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -404,10 +451,13 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The rate limit. Valid values: **1** to **100000**.
-             * <p>
+             * <p>The rate limit. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is required when <strong>MatchAction</strong> is set to <strong>ip_rate</strong> or <strong>session_rate</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required when **MatchAction** is set to **ip_rate** or **session_rate**.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rateValue(Integer rateValue) {
                 this.rateValue = rateValue;
@@ -415,10 +465,14 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The sequence number that indicates the order for the rule to take effect. The value is an integer.
-             * <p>
+             * <p>The sequence number that indicates the order for the rule to take effect. The value is an integer.</p>
+             * <blockquote>
+             * <p> A smaller number indicates a higher priority.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  A smaller number indicates a higher priority.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder seqNo(Integer seqNo) {
                 this.seqNo = seqNo;
@@ -426,7 +480,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The end of the source port range. Valid values: **0** to **65535**.
+             * <p>The end of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65535</p>
              */
             public Builder srcPortEnd(Integer srcPortEnd) {
                 this.srcPortEnd = srcPortEnd;
@@ -434,7 +492,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The start of the source port range. Valid values: **0** to **65535**.
+             * <p>The start of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder srcPortStart(Integer srcPortStart) {
                 this.srcPortStart = srcPortStart;
@@ -448,6 +510,12 @@ public class ModifyPolicyContentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyContentRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyContentRequest</p>
+     */
     public static class ConditionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arg")
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 4096, minLength = 1)
@@ -502,10 +570,14 @@ public class ModifyPolicyContentRequest extends Request {
             private Integer position; 
 
             /**
-             * The term that is used for matching.
-             * <p>
+             * <p>The term that is used for matching.</p>
+             * <blockquote>
+             * <p> If Method is set to <strong>char</strong>, the value of this parameter must be ASCII strings. If Method is set to <strong>hex</strong>, the value of this parameter must be hexadecimal strings. Maximum length: 2,048.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  If Method is set to **char**, the value of this parameter must be ASCII strings. If Method is set to **hex**, the value of this parameter must be hexadecimal strings. Maximum length: 2,048.
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder arg(String arg) {
                 this.arg = arg;
@@ -513,7 +585,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The number of bytes from the start position for matching. Valid values: **1** to **2048**.
+             * <p>The number of bytes from the start position for matching. Valid values: <strong>1</strong> to <strong>2048</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -521,7 +597,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The start position for matching. Valid values: **0** to **2047**.
+             * <p>The start position for matching. Valid values: <strong>0</strong> to <strong>2047</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder position(Integer position) {
                 this.position = position;
@@ -535,6 +615,12 @@ public class ModifyPolicyContentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyContentRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyContentRequest</p>
+     */
     public static class L4RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -641,10 +727,14 @@ public class ModifyPolicyContentRequest extends Request {
             private Integer priority; 
 
             /**
-             * The action that is specified in the rule. Valid value:
-             * <p>
+             * <p>The action that is specified in the rule. Valid value:</p>
+             * <ul>
+             * <li><strong>2</strong>: The traffic is discarded.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **2**: The traffic is discarded.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -652,7 +742,8 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The match conditions.
+             * <p>The match conditions.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder conditionList(java.util.List < ConditionList> conditionList) {
                 this.conditionList = conditionList;
@@ -660,7 +751,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The minimum number of bytes in a session to trigger matching. Valid values: **0** to **2048**.
+             * <p>The minimum number of bytes in a session to trigger matching. Valid values: <strong>0</strong> to <strong>2048</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder limited(Integer limited) {
                 this.limited = limited;
@@ -668,11 +763,15 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The condition based on which an action is performed. Valid values:
-             * <p>
+             * <p>The condition based on which an action is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: If the rule is matched, the action specified in the rule is performed.</li>
+             * <li><strong>1</strong>: If the rule is not matched, the action specified in the rule is performed.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **0**: If the rule is matched, the action specified in the rule is performed.
-             * *   **1**: If the rule is not matched, the action specified in the rule is performed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder match(String match) {
                 this.match = match;
@@ -680,11 +779,15 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>char</strong>: string match.</li>
+             * <li><strong>hex</strong>: hexadecimal string match.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **char**: string match.
-             * *   **hex**: hexadecimal string match.
+             * <strong>example:</strong>
+             * <p>char</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -692,7 +795,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test**</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -700,10 +807,14 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The priority of the rule. Valid values: 1 to 100.
-             * <p>
+             * <p>The priority of the rule. Valid values: 1 to 100.</p>
+             * <blockquote>
+             * <p> A smaller value indicates a higher priority.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  A smaller value indicates a higher priority.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -717,6 +828,12 @@ public class ModifyPolicyContentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyContentRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyContentRequest</p>
+     */
     public static class PortRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstPortEnd")
         @com.aliyun.core.annotation.Validation(required = true, maximum = 65535)
@@ -835,7 +952,11 @@ public class ModifyPolicyContentRequest extends Request {
             private Integer srcPortStart; 
 
             /**
-             * The end of the destination port range. Valid values: **0** to **65535**.
+             * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65535</p>
              */
             public Builder dstPortEnd(Integer dstPortEnd) {
                 this.dstPortEnd = dstPortEnd;
@@ -843,7 +964,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The start of the destination port range. Valid values: **0** to **65535**.
+             * <p>The start of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dstPortStart(Integer dstPortStart) {
                 this.dstPortStart = dstPortStart;
@@ -851,7 +976,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>412a7312-58ff-4e32-a202-0ab0*******</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -859,10 +987,14 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The action triggered if the rule is matched. Valid value:
-             * <p>
+             * <p>The action triggered if the rule is matched. Valid values:</p>
+             * <ul>
+             * <li><strong>drop</strong>: The traffic is discarded.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **drop**: The traffic is discarded.
+             * <strong>example:</strong>
+             * <p>drop</p>
              */
             public Builder matchAction(String matchAction) {
                 this.matchAction = matchAction;
@@ -870,11 +1002,15 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The protocol type. Valid values:
-             * <p>
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -882,10 +1018,14 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The sequence number that indicates the order for the rule to take effect. The value is an integer.
-             * <p>
+             * <p>The sequence number that indicates the order for the rule to take effect. The value is an integer.</p>
+             * <blockquote>
+             * <p> A smaller number indicates a higher priority.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  A smaller number indicates a higher priority.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder seqNo(Integer seqNo) {
                 this.seqNo = seqNo;
@@ -893,7 +1033,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The end of the source port range. Valid values: **0** to **65535**.
+             * <p>The end of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65535</p>
              */
             public Builder srcPortEnd(Integer srcPortEnd) {
                 this.srcPortEnd = srcPortEnd;
@@ -901,7 +1045,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The start of the source port range. Valid values: **0** to **65535**.
+             * <p>The start of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder srcPortStart(Integer srcPortStart) {
                 this.srcPortStart = srcPortStart;
@@ -915,6 +1063,12 @@ public class ModifyPolicyContentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyContentRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyContentRequest</p>
+     */
     public static class SourceBlockList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockExpireSeconds")
         @com.aliyun.core.annotation.Validation(required = true, maximum = 2592000, minimum = 60)
@@ -982,7 +1136,11 @@ public class ModifyPolicyContentRequest extends Request {
             private Integer type; 
 
             /**
-             * The validity period of the blacklist to which the source IP address is added. Unit: seconds.
+             * <p>The validity period of the blacklist to which the source IP address is added. Unit: seconds.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder blockExpireSeconds(Integer blockExpireSeconds) {
                 this.blockExpireSeconds = blockExpireSeconds;
@@ -990,7 +1148,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The statistical period during which the system collects data on source IP addresses to determine whether to add the source IP addresses to the blacklist. Unit: seconds.
+             * <p>The statistical period during which the system collects data on source IP addresses to determine whether to add the source IP addresses to the blacklist. Unit: seconds.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder everySeconds(Integer everySeconds) {
                 this.everySeconds = everySeconds;
@@ -998,7 +1160,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The number of times that the source IP address exceeds a limit in a statistical period.
+             * <p>The number of times that the source IP address exceeds a limit in a statistical period.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder exceedLimitTimes(Integer exceedLimitTimes) {
                 this.exceedLimitTimes = exceedLimitTimes;
@@ -1006,13 +1172,17 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The type of the source rate limit. Valid values:
-             * <p>
+             * <p>The type of the source rate limit. Valid values:</p>
+             * <ul>
+             * <li><strong>3</strong>: the pps limit on source IP addresses.</li>
+             * <li><strong>4</strong>: the bandwidth limit on source IP addresses.</li>
+             * <li><strong>5</strong>: the pps limit on source SYN packets.</li>
+             * <li><strong>6</strong>: the bandwidth limit on source SYN packets.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **3**: the PPS limit on source IP addresses.
-             * *   **4**: the bandwidth limit on source IP addresses.
-             * *   **5**: the PPS limit on source SYN packets.
-             * *   **6**: the bandwidth limit on source SYN packets.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -1026,6 +1196,12 @@ public class ModifyPolicyContentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyContentRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyContentRequest</p>
+     */
     public static class SourceLimit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bps")
         @com.aliyun.core.annotation.Validation(maximum = 268435456, minimum = 1024)
@@ -1093,7 +1269,10 @@ public class ModifyPolicyContentRequest extends Request {
             private Integer synPps; 
 
             /**
-             * The bandwidth limit on source IP addresses. Unit: bytes per second.
+             * <p>The bandwidth limit on source IP addresses. Unit: bytes per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder bps(Integer bps) {
                 this.bps = bps;
@@ -1101,7 +1280,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The packets per second (PPS) limit on source IP addresses.
+             * <p>The packets per second (pps) limit on source IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -1109,7 +1291,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The bandwidth limit on source SYN packets. Unit: bytes per second.
+             * <p>The bandwidth limit on source SYN packets. Unit: bytes per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder synBps(Integer synBps) {
                 this.synBps = synBps;
@@ -1117,7 +1302,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The PPS limit on source SYN packets.
+             * <p>The pps limit on source SYN packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder synPps(Integer synPps) {
                 this.synPps = synPps;
@@ -1131,6 +1319,12 @@ public class ModifyPolicyContentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPolicyContentRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyContentRequest</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackIpListExpireAt")
         private Long blackIpListExpireAt;
@@ -1314,7 +1508,10 @@ public class ModifyPolicyContentRequest extends Request {
             private Boolean whitenGfbrNets; 
 
             /**
-             * The validity period of the IP address blacklist. The value is a UNIX timestamp.
+             * <p>The validity period of the IP address blacklist. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1716878000</p>
              */
             public Builder blackIpListExpireAt(Long blackIpListExpireAt) {
                 this.blackIpListExpireAt = blackIpListExpireAt;
@@ -1322,7 +1519,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable ICMP blocking.
+             * <p>Specifies whether to enable ICMP blocking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableDropIcmp(Boolean enableDropIcmp) {
                 this.enableDropIcmp = enableDropIcmp;
@@ -1330,7 +1530,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable intelligent protection.
+             * <p>Specifies whether to enable intelligent protection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIntelligence(Boolean enableIntelligence) {
                 this.enableIntelligence = enableIntelligence;
@@ -1338,7 +1541,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable port-specific mitigation.
+             * <p>Specifies whether to enable port-specific mitigation.</p>
              */
             public Builder enableL4Defense(Boolean enableL4Defense) {
                 this.enableL4Defense = enableL4Defense;
@@ -1346,7 +1549,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The byte-match filter rules.
+             * <p>The byte-match filter rules.</p>
              */
             public Builder fingerPrintRuleList(java.util.List < FingerPrintRuleList> fingerPrintRuleList) {
                 this.fingerPrintRuleList = fingerPrintRuleList;
@@ -1354,12 +1557,15 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The level of intelligent protection. Valid values:
-             * <p>
+             * <p>The level of intelligent protection. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: normal.</li>
+             * <li><strong>hard</strong>: strict.</li>
+             * <li><strong>weak</strong>: loose.</li>
+             * </ul>
              * 
-             * *   **default**: normal.
-             * *   **hard**: strict.
-             * *   **weak**: loose.
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder intelligenceLevel(String intelligenceLevel) {
                 this.intelligenceLevel = intelligenceLevel;
@@ -1367,7 +1573,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The port-specific mitigation rules.
+             * <p>The port-specific mitigation rules.</p>
              */
             public Builder l4RuleList(java.util.List < L4RuleList> l4RuleList) {
                 this.l4RuleList = l4RuleList;
@@ -1375,7 +1581,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The port blocking rules.
+             * <p>The port blocking rules.</p>
              */
             public Builder portRuleList(java.util.List < PortRuleList> portRuleList) {
                 this.portRuleList = portRuleList;
@@ -1383,7 +1589,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The ports whose traffic is filtered out by the filtering policies for UDP reflection attacks.
+             * <p>The ports whose traffic is filtered out by the filtering policies for UDP reflection attacks.</p>
              */
             public Builder reflectBlockUdpPortList(java.util.List < Integer > reflectBlockUdpPortList) {
                 this.reflectBlockUdpPortList = reflectBlockUdpPortList;
@@ -1391,7 +1597,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The countries in the location blacklist.
+             * <p>The countries in the location blacklist.</p>
              */
             public Builder regionBlockCountryList(java.util.List < Integer > regionBlockCountryList) {
                 this.regionBlockCountryList = regionBlockCountryList;
@@ -1399,7 +1605,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The provinces in the location blacklist.
+             * <p>The provinces in the location blacklist.</p>
              */
             public Builder regionBlockProvinceList(java.util.List < Integer > regionBlockProvinceList) {
                 this.regionBlockProvinceList = regionBlockProvinceList;
@@ -1407,7 +1613,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The source IP addresses that are added to the blacklist.
+             * <p>The source IP addresses that are added to the blacklist.</p>
              */
             public Builder sourceBlockList(java.util.List < SourceBlockList> sourceBlockList) {
                 this.sourceBlockList = sourceBlockList;
@@ -1415,7 +1621,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * The settings for source rate limiting.
+             * <p>The settings for source rate limiting.</p>
              */
             public Builder sourceLimit(SourceLimit sourceLimit) {
                 this.sourceLimit = sourceLimit;
@@ -1423,7 +1629,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Specifies whether to add back-to-origin CIDR blocks of Anti-DDoS Proxy to the whitelist.
+             * <p>Specifies whether to add back-to-origin CIDR blocks of Anti-DDoS Proxy to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder whitenGfbrNets(Boolean whitenGfbrNets) {
                 this.whitenGfbrNets = whitenGfbrNets;

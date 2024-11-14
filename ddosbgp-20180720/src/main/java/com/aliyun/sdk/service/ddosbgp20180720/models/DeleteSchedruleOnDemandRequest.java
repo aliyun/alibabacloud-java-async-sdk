@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSchedruleOnDemandRequest} extends {@link RequestModel}
  *
  * <p>DeleteSchedruleOnDemandRequest</p>
@@ -83,10 +84,14 @@ public class DeleteSchedruleOnDemandRequest extends Request {
         } 
 
         /**
-         * The ID of the anti-DDoS diversion instance.
-         * <p>
+         * <p>The ID of the anti-DDoS diversion instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all anti-DDoS diversion instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all anti-DDoS diversion instances.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-z2q1qzxb****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -95,10 +100,13 @@ public class DeleteSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The region ID of the anti-DDoS diversion instance.
-         * <p>
+         * <p>The region ID of the anti-DDoS diversion instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -107,7 +115,11 @@ public class DeleteSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The name of the scheduling rule that you want to delete.
+         * <p>The name of the scheduling rule that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

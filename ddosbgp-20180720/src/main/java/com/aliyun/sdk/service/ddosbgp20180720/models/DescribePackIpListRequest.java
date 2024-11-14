@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePackIpListRequest} extends {@link RequestModel}
  *
  * <p>DescribePackIpListRequest</p>
@@ -154,10 +155,14 @@ public class DescribePackIpListRequest extends Request {
         } 
 
         /**
-         * The ID of the Anti-DDoS Origin instance to query.
-         * <p>
+         * <p>The ID of the Anti-DDoS Origin instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w1r7nz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -166,7 +171,10 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The protected IP address to query.
+         * <p>The protected IP address to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.98.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -175,7 +183,10 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The ID of the member.
+         * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170858869679****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -184,7 +195,11 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -193,7 +208,11 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,13 +221,16 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The type of the cloud asset to which the protected IP address to query belongs. Valid values:
-         * <p>
+         * <p>The type of the cloud asset to which the protected IP address to query belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>SLB</strong>: a Classic Load Balancer (CLB) instance, originally called a Server Load Balancer (SLB) instance.</li>
+         * <li><strong>EIP</strong>: an elastic IP address (EIP). An Internet-facing Application Load Balancer (ALB) instance uses an EIP. If the IP address belongs to the Internet-facing ALB instance, set this parameter to EIP.</li>
+         * <li><strong>WAF</strong>: a Web Application Firewall (WAF) instance.</li>
+         * </ul>
          * 
-         * *   **ECS**: an Elastic Compute Service (ECS) instance.
-         * *   **SLB**: a Classic Load Balancer (CLB) instance, originally called a Server Load Balancer (SLB) instance.
-         * *   **EIP**: an elastic IP address (EIP). An Internet-facing Application Load Balancer (ALB) instance uses an EIP. If the IP address belongs to the Internet-facing ALB instance, set this parameter to EIP.
-         * *   **WAF**: a Web Application Firewall (WAF) instance.
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder productName(String productName) {
             this.putQueryParameter("ProductName", productName);
@@ -217,10 +239,13 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Anti-DDoS Origin instance resides.
-         * <p>
+         * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -229,10 +254,11 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

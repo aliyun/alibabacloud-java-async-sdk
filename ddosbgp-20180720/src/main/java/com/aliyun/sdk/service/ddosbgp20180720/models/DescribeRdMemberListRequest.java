@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdMemberListRequest} extends {@link RequestModel}
  *
  * <p>DescribeRdMemberListRequest</p>
@@ -81,7 +82,10 @@ public class DescribeRdMemberListRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -90,7 +94,10 @@ public class DescribeRdMemberListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -99,7 +106,10 @@ public class DescribeRdMemberListRequest extends Request {
         }
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-x9bLhd</p>
          */
         public Builder resourceDirectoryId(String resourceDirectoryId) {
             this.putQueryParameter("ResourceDirectoryId", resourceDirectoryId);

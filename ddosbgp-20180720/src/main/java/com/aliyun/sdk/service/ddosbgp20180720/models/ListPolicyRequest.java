@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicyRequest} extends {@link RequestModel}
  *
  * <p>ListPolicyRequest</p>
@@ -132,7 +133,10 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test**</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -141,7 +145,10 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -150,7 +157,10 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -159,7 +169,19 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
+         * <li><strong>slb</strong>: Server Load Balancer (SLB).</li>
+         * <li><strong>eip</strong>: Elastic IP Address (EIP).</li>
+         * <li><strong>gf-eip</strong>: EIP with Anti-DDoS (Enhanced) enabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only if Type is set to <code>default</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -168,11 +190,15 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid values:
-         * <p>
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: the default mitigation policy.</li>
+         * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
+         * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+         * </ul>
          * 
-         * *   **l3**: IP-specific mitigation policies.
-         * *   **l4**: port-specific mitigation policies.
+         * <strong>example:</strong>
+         * <p>l3</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

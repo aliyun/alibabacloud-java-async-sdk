@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicyAttachmentRequest} extends {@link RequestModel}
  *
  * <p>ListPolicyAttachmentRequest</p>
@@ -132,7 +133,7 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * The protected objects.
+         * <p>The protected objects.</p>
          */
         public Builder ipPortProtocolList(java.util.List < IpPortProtocolList> ipPortProtocolList) {
             String ipPortProtocolListShrink = shrink(ipPortProtocolList, "IpPortProtocolList", "json");
@@ -142,7 +143,10 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -151,7 +155,10 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +167,10 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f38f6520-92b7-451e-b520-9ab3********</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -169,12 +179,15 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid values:
-         * <p>
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: the default mitigation policies.</li>
+         * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
+         * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+         * </ul>
          * 
-         * *   **default**: the default mitigation policies.
-         * *   **l3**: IP-specific mitigation policies.
-         * *   **l4**: port-specific mitigation policies.
+         * <strong>example:</strong>
+         * <p>l3</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -189,6 +202,12 @@ public class ListPolicyAttachmentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListPolicyAttachmentRequest} extends {@link TeaModel}
+     *
+     * <p>ListPolicyAttachmentRequest</p>
+     */
     public static class IpPortProtocolList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -242,7 +261,11 @@ public class ListPolicyAttachmentRequest extends Request {
             private String protocol; 
 
             /**
-             * The IP address of the protected object.
+             * <p>The IP address of the protected object.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.118.172.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -250,7 +273,10 @@ public class ListPolicyAttachmentRequest extends Request {
             }
 
             /**
-             * The port number of the protected object.
+             * <p>The port number of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8*</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -258,11 +284,14 @@ public class ListPolicyAttachmentRequest extends Request {
             }
 
             /**
-             * The protocol type of the protected object. Valid values:
-             * <p>
+             * <p>The protocol type of the protected object. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

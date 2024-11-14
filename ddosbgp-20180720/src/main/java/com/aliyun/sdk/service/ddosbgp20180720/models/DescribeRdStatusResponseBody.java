@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRdStatusResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         private Boolean servicePrincipalEnabled; 
 
         /**
-         * The Alibaba Cloud account ID of the current account.
+         * <p>The Alibaba Cloud account ID of the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125085778340****</p>
          */
         public Builder currentUid(String currentUid) {
             this.currentUid = currentUid;
@@ -141,12 +145,15 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the Alibaba Cloud account. Valid values:
-         * <p>
+         * <p>The type of the Alibaba Cloud account. Valid values:</p>
+         * <ul>
+         * <li><strong>MasterAccount</strong>: management account</li>
+         * <li><strong>DelegatedAdminAccount</strong>: delegated administrator account</li>
+         * <li><strong>MasterAccount</strong>: member</li>
+         * </ul>
          * 
-         * *   **MasterAccount**: management account
-         * *   **DelegatedAdminAccount**: delegated administrator account
-         * *   **MasterAccount**: member
+         * <strong>example:</strong>
+         * <p>MemberAccount</p>
          */
         public Builder currentUidType(String currentUidType) {
             this.currentUidType = currentUidType;
@@ -154,7 +161,10 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the multi-account management feature is enabled for Anti-DDoS Origin.
+         * <p>Indicates whether the multi-account management feature is enabled for Anti-DDoS Origin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -162,7 +172,10 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the multi-account management feature is enabled for the current account in Anti-DDoS Origin.
+         * <p>Indicates whether the multi-account management feature is enabled for the current account in Anti-DDoS Origin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder localEnable(Boolean localEnable) {
             this.localEnable = localEnable;
@@ -170,7 +183,10 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud account ID of the management account in the resource directory.
+         * <p>The Alibaba Cloud account ID of the management account in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125085778340****</p>
          */
         public Builder masterUid(String masterUid) {
             this.masterUid = masterUid;
@@ -178,7 +194,10 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Resource Directory is enabled in the [Resource Management console](https://resourcemanager.console.aliyun.com).
+         * <p>Indicates whether Resource Directory is enabled in the <a href="https://resourcemanager.console.aliyun.com">Resource Management console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder remoteEnable(Boolean remoteEnable) {
             this.remoteEnable = remoteEnable;
@@ -186,7 +205,10 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B0F7EC6-51D7-4D70-B0EC-CD8A9E998D86</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +216,10 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud account ID of the management account for which the multi-account management feature is enabled in Anti-DDoS Origin.
+         * <p>The Alibaba Cloud account ID of the management account for which the multi-account management feature is enabled in Anti-DDoS Origin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125085778340****</p>
          */
         public Builder rootUid(String rootUid) {
             this.rootUid = rootUid;
@@ -202,7 +227,10 @@ public class DescribeRdStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the trusted service is enabled.
+         * <p>Indicates whether the trusted service is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder servicePrincipalEnabled(Boolean servicePrincipalEnabled) {
             this.servicePrincipalEnabled = servicePrincipalEnabled;

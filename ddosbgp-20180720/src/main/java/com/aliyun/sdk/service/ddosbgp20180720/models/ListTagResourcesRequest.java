@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -125,7 +126,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -134,10 +138,14 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Anti-DDoS Origin instance resides.
-         * <p>
+         * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,10 +154,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -158,10 +167,13 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the Anti-DDoS Origin instances to query.
-         * <p>
+         * <p>The IDs of the Anti-DDoS Origin instances to query.</p>
+         * <blockquote>
+         * <p> The <strong>ResourceId</strong> parameter and the <strong>key-value pair for the Tag parameter</strong> cannot be left empty at the same time.</p>
+         * </blockquote>
          * 
-         * >  The **ResourceId** parameter and the **key-value pair for the Tag parameter** cannot be left empty at the same time.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-v0h1fmwbc024</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -170,7 +182,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource to query. Set the value to **INSTANCE**.
+         * <p>The type of the resource to query. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -179,7 +195,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The key-value pair of the tag to query.
+         * <p>The key-value pair of the tag to query.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -194,6 +210,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -233,10 +255,13 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag to query.
-             * <p>
+             * <p>The key of the tag to query.</p>
+             * <blockquote>
+             * <p> The <strong>ResourceId</strong> parameter and the <strong>key-value pair for the Tag parameter</strong> cannot be left empty at the same time.</p>
+             * </blockquote>
              * 
-             * >  The **ResourceId** parameter and the **key-value pair for the Tag parameter** cannot be left empty at the same time.
+             * <strong>example:</strong>
+             * <p>testKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -244,10 +269,13 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag to query.
-             * <p>
+             * <p>The value of the tag to query.</p>
+             * <blockquote>
+             * <p> The <strong>ResourceId</strong> parameter and the <strong>key-value pair for the Tag parameter</strong> cannot be left empty at the same time.</p>
+             * </blockquote>
              * 
-             * >  The **ResourceId** parameter and the **key-value pair for the Tag parameter** cannot be left empty at the same time.
+             * <strong>example:</strong>
+             * <p>testValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

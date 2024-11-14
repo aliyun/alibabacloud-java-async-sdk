@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDdosOriginInstanceBillRequest} extends {@link RequestModel}
  *
  * <p>DescribeDdosOriginInstanceBillRequest</p>
@@ -95,7 +96,10 @@ public class DescribeDdosOriginInstanceBillRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The value is a timestamp. Unit: milliseconds. The time span between StartTime and EndTime cannot exceed 30 days.
+         * <p>The end of the time range to query. The value is a timestamp. Unit: milliseconds. The time span between StartTime and EndTime cannot exceed 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1711382399410</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -104,11 +108,14 @@ public class DescribeDdosOriginInstanceBillRequest extends Request {
         }
 
         /**
-         * Specifies whether to display the bill details. Valid values:
-         * <p>
+         * <p>Specifies whether to display the bill details. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isShowList(Boolean isShowList) {
             this.putQueryParameter("IsShowList", isShowList);
@@ -117,7 +124,10 @@ public class DescribeDdosOriginInstanceBillRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1711209600410</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -126,15 +136,18 @@ public class DescribeDdosOriginInstanceBillRequest extends Request {
         }
 
         /**
-         * The bill type. Valid values:
-         * <p>
+         * <p>The bill type. Valid values:</p>
+         * <ul>
+         * <li><strong>flow_cn</strong>: the bill for the clean bandwidth of elastic IP addresses (EIPs) with Anti-DDoS (Enhanced) enabled in the Chinese mainland</li>
+         * <li><strong>flow_ov</strong>: the bill for the clean bandwidth of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland</li>
+         * <li><strong>standard_assets_flow_cn</strong>: the bill for the clean bandwidth of regular Alibaba Cloud services in the Chinese mainland</li>
+         * <li><strong>standard_assets_flow_ov</strong>: the bill for the clean bandwidth of regular Alibaba Cloud services outside the Chinese mainland</li>
+         * <li><strong>function</strong>: the bill for the basic fee</li>
+         * <li><strong>ip_count</strong>: the bill for protected IP addresses</li>
+         * </ul>
          * 
-         * *   **flow_cn**: the bill for the clean bandwidth of elastic IP addresses (EIPs) with Anti-DDoS (Enhanced) enabled in the Chinese mainland
-         * *   **flow_ov**: the bill for the clean bandwidth of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland
-         * *   **standard_assets_flow_cn**: the bill for the clean bandwidth of regular Alibaba Cloud services in the Chinese mainland
-         * *   **standard_assets_flow_ov**: the bill for the clean bandwidth of regular Alibaba Cloud services outside the Chinese mainland
-         * *   **function**: the bill for the basic fee
-         * *   **ip_count**: the bill for protected IP addresses
+         * <strong>example:</strong>
+         * <p>function</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -112,10 +113,14 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the instance resides.
-         * <p>
+         * <p>The ID of the region in which the instance resides.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,10 +129,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -136,7 +142,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the instances to which you want to add tags. You can specify up to 51 IDs.
+         * <p>The IDs of the instances to which you want to add tags. You can specify up to 51 IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-v0h1fmwb****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -145,7 +155,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource to which you want to add tags. Set the value to **INSTANCE**, which indicates instances.
+         * <p>The type of the resource to which you want to add tags. Set the value to <strong>INSTANCE</strong>, which indicates instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -154,7 +168,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags to add. You can specify up to 21 tags.
+         * <p>The tags to add. You can specify up to 21 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -169,6 +183,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -208,10 +228,13 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag to add.
-             * <p>
+             * <p>The key of the tag to add.</p>
+             * <blockquote>
+             * <p>If the specified key does not exist, a key is created.</p>
+             * </blockquote>
              * 
-             * > If the specified key does not exist, a key is created.
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,10 +242,13 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag to add.
-             * <p>
+             * <p>The value of the tag to add.</p>
+             * <blockquote>
+             * <p>If the specified tag value does not exist, the tag value is created.</p>
+             * </blockquote>
              * 
-             * > If the specified tag value does not exist, the tag value is created.
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

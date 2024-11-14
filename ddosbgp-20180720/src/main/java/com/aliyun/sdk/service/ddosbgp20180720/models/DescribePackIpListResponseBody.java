@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePackIpListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePackIpListResponseBody</p>
@@ -85,10 +86,11 @@ public class DescribePackIpListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code of the request.
-         * <p>
+         * <p>The HTTP status code of the request.</p>
+         * <p>For more information about status codes, see <a href="https://help.aliyun.com/document_detail/118841.html">Common parameters</a>.</p>
          * 
-         * For more information about status codes, see [Common parameters](~~118841~~).
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +98,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The IP addresses that are protected by the instance.
+         * <p>The IP addresses that are protected by the instance.</p>
          */
         public Builder ipList(java.util.List < IpList> ipList) {
             this.ipList = ipList;
@@ -104,7 +106,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FD1578A-BD77-50B7-A969-45A374A7ED22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,11 +117,14 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call fails.</li>
+         * </ul>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -124,7 +132,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of protected IP addresses.
+         * <p>The number of protected IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -137,6 +148,12 @@ public class DescribePackIpListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePackIpListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePackIpListResponseBody</p>
+     */
     public static class IpList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -260,7 +277,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.98.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -268,7 +288,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the member.
+             * <p>The ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170858869679****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -276,7 +299,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the near-origin traffic diversion feature was disabled.
+             * <p>The time when the near-origin traffic diversion feature was disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715658000</p>
              */
             public Builder nsmExpireAt(Long nsmExpireAt) {
                 this.nsmExpireAt = nsmExpireAt;
@@ -284,7 +310,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the near-origin traffic diversion feature was enabled.
+             * <p>The time when the near-origin traffic diversion feature was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715655000</p>
              */
             public Builder nsmStartAt(Long nsmStartAt) {
                 this.nsmStartAt = nsmStartAt;
@@ -292,11 +321,14 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the near-origin traffic diversion feature. Valid values:
-             * <p>
+             * <p>The status of the near-origin traffic diversion feature. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The near-origin traffic diversion feature is enabled.</li>
+             * <li><strong>0</strong>: The near-origin traffic diversion feature is disabled.</li>
+             * </ul>
              * 
-             * *   **1**: The near-origin traffic diversion feature is enabled.
-             * *   **0**: The near-origin traffic diversion feature is disabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nsmStatus(Integer nsmStatus) {
                 this.nsmStatus = nsmStatus;
@@ -304,13 +336,16 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud asset to which the IP address belongs. Valid values:
-             * <p>
+             * <p>The type of the cloud asset to which the IP address belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS</strong>: an ECS instance.</li>
+             * <li><strong>SLB</strong>: a CLB (formerly SLB) instance.</li>
+             * <li><strong>EIP</strong>: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.</li>
+             * <li><strong>WAF</strong>: a WAF instance.</li>
+             * </ul>
              * 
-             * *   **ECS**: an ECS instance.
-             * *   **SLB**: a CLB (formerly SLB) instance.
-             * *   **EIP**: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.
-             * *   **WAF**: a WAF instance.
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -318,10 +353,13 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the protected IP address belongs.
-             * <p>
+             * <p>The region to which the protected IP address belongs.</p>
+             * <blockquote>
+             * <p> If the protected IP address is in the same region as the instance, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * >  If the protected IP address is in the same region as the instance, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -329,10 +367,13 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cloud asset to which the IP address belongs. The asset can be an ECS instance or an SLB instance.
-             * <p>
+             * <p>The description of the cloud asset to which the IP address belongs. The asset can be an ECS instance or an SLB instance.</p>
+             * <blockquote>
+             * <p> If no descriptions are provided for the asset, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * >  If no descriptions are provided for the asset, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -340,11 +381,14 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IP address. Valid values:
-             * <p>
+             * <p>The status of the IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: The IP address is not under attack.</li>
+             * <li><strong>hole_begin</strong>: Blackhole filtering is triggered for the IP address.</li>
+             * </ul>
              * 
-             * *   **normal**: The IP address is not under attack.
-             * *   **hole_begin**: Blackhole filtering is triggered for the IP address.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;

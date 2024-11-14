@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachFromPolicyRequest} extends {@link RequestModel}
  *
  * <p>DetachFromPolicyRequest</p>
@@ -92,7 +93,8 @@ public class DetachFromPolicyRequest extends Request {
         }
 
         /**
-         * The protected objects.
+         * <p>The protected objects.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ipPortProtocolList(java.util.List < IpPortProtocolList> ipPortProtocolList) {
             String ipPortProtocolListShrink = shrink(ipPortProtocolList, "IpPortProtocolList", "json");
@@ -102,12 +104,16 @@ public class DetachFromPolicyRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid values:
-         * <p>
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: the default mitigation policies.</li>
+         * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
+         * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **default**: the default mitigation policies.
-         * *   **l3**: IP-specific mitigation policies.
-         * *   **l4**: port-specific mitigation policies.
+         * <strong>example:</strong>
+         * <p>l3</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -122,6 +128,12 @@ public class DetachFromPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DetachFromPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>DetachFromPolicyRequest</p>
+     */
     public static class IpPortProtocolList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -175,7 +187,11 @@ public class DetachFromPolicyRequest extends Request {
             private String protocol; 
 
             /**
-             * The IP address of the protected object.
+             * <p>The IP address of the protected object.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.118.172.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -183,7 +199,10 @@ public class DetachFromPolicyRequest extends Request {
             }
 
             /**
-             * The port of the protected object.
+             * <p>The port of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8*</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -191,11 +210,14 @@ public class DetachFromPolicyRequest extends Request {
             }
 
             /**
-             * The protocol type of the protected object. Valid values:
-             * <p>
+             * <p>The protocol type of the protected object. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

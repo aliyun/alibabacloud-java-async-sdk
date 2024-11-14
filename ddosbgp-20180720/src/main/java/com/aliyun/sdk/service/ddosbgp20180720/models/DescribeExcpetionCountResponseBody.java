@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExcpetionCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExcpetionCountResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeExcpetionCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of assets that are in an abnormal state.
+         * <p>The number of assets that are in an abnormal state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder exceptionIpCount(Integer exceptionIpCount) {
             this.exceptionIpCount = exceptionIpCount;
@@ -69,7 +73,10 @@ public class DescribeExcpetionCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Anti-DDoS Origin instances that are about to expire.
+         * <p>The number of Anti-DDoS Origin instances that are about to expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder expireTimeCount(Integer expireTimeCount) {
             this.expireTimeCount = expireTimeCount;
@@ -77,7 +84,10 @@ public class DescribeExcpetionCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B45279A-B1BE-5EEE-87CA-58AF4183EA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

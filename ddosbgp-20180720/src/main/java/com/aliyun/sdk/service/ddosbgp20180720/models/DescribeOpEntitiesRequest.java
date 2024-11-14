@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOpEntitiesRequest} extends {@link RequestModel}
  *
  * <p>DescribeOpEntitiesRequest</p>
@@ -24,6 +25,10 @@ public class DescribeOpEntitiesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpAction")
+    private Integer opAction;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderBy")
@@ -56,6 +61,7 @@ public class DescribeOpEntitiesRequest extends Request {
         this.currentPage = builder.currentPage;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.opAction = builder.opAction;
         this.orderBy = builder.orderBy;
         this.orderDir = builder.orderDir;
         this.pageSize = builder.pageSize;
@@ -96,6 +102,13 @@ public class DescribeOpEntitiesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return opAction
+     */
+    public Integer getOpAction() {
+        return this.opAction;
     }
 
     /**
@@ -144,6 +157,7 @@ public class DescribeOpEntitiesRequest extends Request {
         private Integer currentPage; 
         private Long endTime; 
         private String instanceId; 
+        private Integer opAction; 
         private String orderBy; 
         private String orderDir; 
         private Integer pageSize; 
@@ -160,6 +174,7 @@ public class DescribeOpEntitiesRequest extends Request {
             this.currentPage = request.currentPage;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.opAction = request.opAction;
             this.orderBy = request.orderBy;
             this.orderDir = request.orderDir;
             this.pageSize = request.pageSize;
@@ -169,7 +184,11 @@ public class DescribeOpEntitiesRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -178,7 +197,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The end time. Operation logs that were generated before this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end time. Operation logs that were generated before this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640880000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -187,10 +210,13 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The ID of the instance to query.
-         * <p>
+         * <p>The ID of the instance to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w1r7nz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +225,19 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The sorting method of operation logs. Set the value to **opdate**, which indicates sorting based on the operation time.
+         * OpAction.
+         */
+        public Builder opAction(Integer opAction) {
+            this.putQueryParameter("OpAction", opAction);
+            this.opAction = opAction;
+            return this;
+        }
+
+        /**
+         * <p>The sorting method of operation logs. Set the value to <strong>opdate</strong>, which indicates sorting based on the operation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opdate</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -208,13 +246,15 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The sort order of operation logs. Valid values:
-         * <p>
+         * <p>The sort order of operation logs. Valid values:</p>
+         * <ul>
+         * <li><strong>ASC</strong>: the ascending order.</li>
+         * <li><strong>DESC</strong>: the descending order.</li>
+         * </ul>
+         * <p>Default value: <strong>DESC</strong>.</p>
          * 
-         * *   **ASC**: the ascending order.
-         * *   **DESC**: the descending order.
-         * 
-         * Default value: **DESC**.
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderDir(String orderDir) {
             this.putQueryParameter("OrderDir", orderDir);
@@ -223,7 +263,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 50.
+         * <p>The number of entries per page. Maximum value: 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -232,10 +276,13 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides.
-         * <p>
+         * <p>The ID of the region where the instance resides.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,10 +291,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -256,7 +304,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The start time. Operation logs that were generated after this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The start time. Operation logs that were generated after this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1609430400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

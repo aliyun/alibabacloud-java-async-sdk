@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySchedruleOnDemandResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySchedruleOnDemandResponseBody</p>
@@ -85,7 +86,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * The ID of the on-demand instance.
+         * <p>The ID of the on-demand instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-z2q1qzxb****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -93,7 +97,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A8F9980-5ACB-497F-9F15-48E9D6B29028</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the scheduling rule.
+         * <p>The configurations of the scheduling rule.</p>
          */
         public Builder ruleConfig(java.util.List < RuleConfig> ruleConfig) {
             this.ruleConfig = ruleConfig;
@@ -109,7 +116,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the scheduling rule.
+         * <p>The status of the scheduling rule.</p>
          */
         public Builder ruleStatus(java.util.List < RuleStatus> ruleStatus) {
             this.ruleStatus = ruleStatus;
@@ -117,7 +124,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>171986973287****</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -130,6 +140,12 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySchedruleOnDemandResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySchedruleOnDemandResponseBody</p>
+     */
     public static class RuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleAction")
         private String ruleAction;
@@ -265,7 +281,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * The scheduling action. The value is set to **declare**, which indicates that the route is advertised.
+             * <p>The scheduling action. The value is set to <strong>declare</strong>, which indicates that the route is advertised.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>declare</p>
              */
             public Builder ruleAction(String ruleAction) {
                 this.ruleAction = ruleAction;
@@ -273,10 +292,13 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * If the inbound bandwidth or packets consecutively exceed the threshold for the specified number of times, the scheduling rule is triggered and traffic is rerouted to the on-demand instance. The specified number of times is the value of this parameter.
-             * <p>
+             * <p>If the inbound bandwidth or packets consecutively exceed the threshold for the specified number of times, the scheduling rule is triggered and traffic is rerouted to the on-demand instance. The specified number of times is the value of this parameter.</p>
+             * <blockquote>
+             * <p> The threshold of inbound bandwidth is the value of <strong>RuleConditionMbps</strong>. The threshold of inbound packets is the value of <strong>RuleConditionKpps</strong>.</p>
+             * </blockquote>
              * 
-             * >  The threshold of inbound bandwidth is the value of **RuleConditionMbps**. The threshold of inbound packets is the value of **RuleConditionKpps**.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder ruleConditionCnt(String ruleConditionCnt) {
                 this.ruleConditionCnt = ruleConditionCnt;
@@ -284,7 +306,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold of inbound packets. Unit: kilo packets per second (Kpps). Minimum value: **10**.
+             * <p>The threshold of inbound packets. Unit: kilo packets per second (Kpps). Minimum value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ruleConditionKpps(String ruleConditionKpps) {
                 this.ruleConditionKpps = ruleConditionKpps;
@@ -292,7 +317,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold of inbound bandwidth. Unit: Mbit/s. Minimum value: **100**.
+             * <p>The threshold of inbound bandwidth. Unit: Mbit/s. Minimum value: <strong>100</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ruleConditionMbps(String ruleConditionMbps) {
                 this.ruleConditionMbps = ruleConditionMbps;
@@ -300,7 +328,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scheduling rule.
+             * <p>The name of the scheduling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddosbgp-cn-z2q1qzxb****</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -308,11 +339,14 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the scheduling rule is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the scheduling rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled.</li>
+             * <li><strong>off</strong>: disabled.</li>
+             * </ul>
              * 
-             * *   **on**: enabled.
-             * *   **off**: disabled.
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleSwitch(String ruleSwitch) {
                 this.ruleSwitch = ruleSwitch;
@@ -320,12 +354,14 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the `hh:mm` format.
-             * <p>
+             * <p>The start time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the <code>hh:mm</code> format.</p>
+             * <p>If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only when the value of <strong>RuleUndoMode</strong> is <strong>auto</strong>.</p>
+             * </blockquote>
              * 
-             * If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.
-             * 
-             * >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
+             * <strong>example:</strong>
+             * <p>03:00</p>
              */
             public Builder ruleUndoBeginTime(String ruleUndoBeginTime) {
                 this.ruleUndoBeginTime = ruleUndoBeginTime;
@@ -333,7 +369,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the `hh:mm` format.
+             * <p>The end time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the <code>hh:mm</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03:05</p>
              */
             public Builder ruleUndoEndTime(String ruleUndoEndTime) {
                 this.ruleUndoEndTime = ruleUndoEndTime;
@@ -341,11 +380,14 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The stop method of the scheduling rule. Valid values:
-             * <p>
+             * <p>The stop method of the scheduling rule. Valid values:</p>
+             * <ul>
+             * <li><strong>auto</strong></li>
+             * <li><strong>manual</strong></li>
+             * </ul>
              * 
-             * *   **auto**
-             * *   **manual**
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder ruleUndoMode(String ruleUndoMode) {
                 this.ruleUndoMode = ruleUndoMode;
@@ -353,12 +395,14 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the time when the scheduling rule automatically stops. The time zone must be in the `GMT-hh:mm` format.
-             * <p>
+             * <p>The time zone of the time when the scheduling rule automatically stops. The time zone must be in the <code>GMT-hh:mm</code> format.</p>
+             * <p>For example, the value <code>GMT-08:00</code> indicates that the time zone is UTC+8.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only when the value of <strong>RuleUndoMode</strong> is <strong>auto</strong>.</p>
+             * </blockquote>
              * 
-             * For example, the value `GMT-08:00` indicates that the time zone is UTC+8.
-             * 
-             * >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
+             * <strong>example:</strong>
+             * <p>GMT-08:00</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -372,6 +416,12 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySchedruleOnDemandResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySchedruleOnDemandResponseBody</p>
+     */
     public static class RuleStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Net")
         private String net;
@@ -411,7 +461,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             private String ruleSchedStatus; 
 
             /**
-             * The CIDR block of the on-demand instance.
+             * <p>The CIDR block of the on-demand instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.<em><strong>.</strong></em>.0/24</p>
              */
             public Builder net(String net) {
                 this.net = net;
@@ -419,11 +472,14 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling status. Valid values:
-             * <p>
+             * <p>The scheduling status. Valid values:</p>
+             * <ul>
+             * <li><strong>scheduled</strong></li>
+             * <li><strong>unscheduled</strong></li>
+             * </ul>
              * 
-             * *   **scheduled**
-             * *   **unscheduled**
+             * <strong>example:</strong>
+             * <p>unscheduled</p>
              */
             public Builder ruleSchedStatus(String ruleSchedStatus) {
                 this.ruleSchedStatus = ruleSchedStatus;

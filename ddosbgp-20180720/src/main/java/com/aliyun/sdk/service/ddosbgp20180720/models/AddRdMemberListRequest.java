@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddRdMemberListRequest} extends {@link RequestModel}
  *
  * <p>AddRdMemberListRequest</p>
@@ -54,7 +55,8 @@ public class AddRdMemberListRequest extends Request {
         } 
 
         /**
-         * The list of the members.
+         * <p>The list of the members.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder memberList(java.util.List < MemberList> memberList) {
             String memberListShrink = shrink(memberList, "MemberList", "json");
@@ -70,6 +72,12 @@ public class AddRdMemberListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddRdMemberListRequest} extends {@link TeaModel}
+     *
+     * <p>AddRdMemberListRequest</p>
+     */
     public static class MemberList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
@@ -97,7 +105,10 @@ public class AddRdMemberListRequest extends Request {
             private String uid; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19510843762****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

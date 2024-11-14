@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeAssetGroupRequest</p>
@@ -97,7 +98,10 @@ public class DescribeAssetGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.
+         * <p>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-lbj382l****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -106,7 +110,11 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the asset.
+         * <p>The region ID of the asset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -115,10 +123,13 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides.
-         * <p>
+         * <p>The ID of the region in which the instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,11 +138,15 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * The type of the asset. Valid values:
-         * <p>
+         * <p>The type of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>waf</strong>: WAF instance</li>
+         * <li><strong>ga</strong>: Global Accelerator (GA) instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **waf**: WAF instance
-         * *   **ga**: Global Accelerator (GA) instance
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

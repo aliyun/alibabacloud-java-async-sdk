@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdMemberListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRdMemberListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The list of the members.
+         * <p>The list of the members.</p>
          */
         public Builder memberList(java.util.List < MemberList> memberList) {
             this.memberList = memberList;
@@ -69,7 +70,10 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC245DEE-9800-5579-BF99-189D6A5BA9FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -90,6 +97,12 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRdMemberListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdMemberListResponseBody</p>
+     */
     public static class MemberList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -141,7 +154,10 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624954942000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -149,7 +165,10 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member.
+             * <p>The name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -157,7 +176,10 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1960279802016267</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAssetGroupResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The information about the asset.
+         * <p>The information about the asset.</p>
          */
         public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
             this.assetGroupList = assetGroupList;
@@ -69,7 +70,10 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>487EC0F7-8D14-504E-914E-3A1BC314B581</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -90,6 +97,12 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAssetGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAssetGroupResponseBody</p>
+     */
     public static class AssetGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -141,7 +154,10 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the asset.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_v2_public_cn-lbj382l****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,7 +165,10 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the asset belongs.
+             * <p>The region to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -157,7 +176,10 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset.
+             * <p>The type of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf</p>
              */
             public Builder type(String type) {
                 this.type = type;

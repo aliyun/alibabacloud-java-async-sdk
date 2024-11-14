@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicyAttachmentResponseBody} extends {@link TeaModel}
  *
  * <p>ListPolicyAttachmentResponseBody</p>
@@ -61,7 +62,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The records of attachments to the mitigation policy.
+         * <p>The records of attachments to the mitigation policy.</p>
          */
         public Builder attachmentList(java.util.List < AttachmentList> attachmentList) {
             this.attachmentList = attachmentList;
@@ -69,7 +70,10 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4B379C2-9319-4C6B-B579-FE36831B09F4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of attachments to the mitigation policy.
+         * <p>The total number of attachments to the mitigation policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -90,6 +97,12 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPolicyAttachmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyAttachmentResponseBody</p>
+     */
     public static class AttachmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -213,7 +226,10 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The IP address of the protected object.
+             * <p>The IP address of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>147.139.183.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -221,7 +237,10 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the member to which the IP address of the protected object belongs.
+             * <p>The UID of the member to which the IP address of the protected object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>177699790631****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -229,7 +248,10 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1b43f44e-65e1-411a-b0c0-d6c1********</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -237,7 +259,10 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test**</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -245,7 +270,10 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyRemark.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder policyRemark(String policyRemark) {
                 this.policyRemark = policyRemark;
@@ -253,11 +281,14 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the policy. Valid values:
-             * <p>
+             * <p>The type of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
+             * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+             * </ul>
              * 
-             * *   **l3**: IP-specific mitigation policies.
-             * *   **l4**: port-specific mitigation policies.
+             * <strong>example:</strong>
+             * <p>l3</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -265,7 +296,10 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the protected object.
+             * <p>The port number of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8*</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -273,11 +307,14 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type of the protected object. Valid values:
-             * <p>
+             * <p>The protocol type of the protected object. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>udp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -285,7 +322,10 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the IP address of the protected object belongs.
+             * <p>The region to which the IP address of the protected object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;

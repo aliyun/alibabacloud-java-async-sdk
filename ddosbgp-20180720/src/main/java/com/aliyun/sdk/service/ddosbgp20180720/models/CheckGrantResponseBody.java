@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckGrantResponseBody} extends {@link TeaModel}
  *
  * <p>CheckGrantResponseBody</p>
@@ -49,7 +50,10 @@ public class CheckGrantResponseBody extends TeaModel {
         private Integer status; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB002CE5-5E6C-5F11-AE15-B525299A40F6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class CheckGrantResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:
-         * <p>
+         * <p>Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.</li>
+         * <li><strong>0</strong>: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.</li>
+         * </ul>
          * 
-         * *   **1**: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
-         * *   **0**: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;

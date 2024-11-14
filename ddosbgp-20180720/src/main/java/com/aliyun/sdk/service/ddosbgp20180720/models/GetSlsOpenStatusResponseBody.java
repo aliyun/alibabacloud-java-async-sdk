@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSlsOpenStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetSlsOpenStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class GetSlsOpenStatusResponseBody extends TeaModel {
         private Boolean slsOpenStatus; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D01666F5-541B-4C78-98A6-D29E02DAAC7C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class GetSlsOpenStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Simple Log Service was activated. Valid values:
-         * <p>
+         * <p>Indicates whether Simple Log Service was activated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder slsOpenStatus(Boolean slsOpenStatus) {
             this.slsOpenStatus = slsOpenStatus;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DettachAssetGroupToInstanceRequest} extends {@link RequestModel}
  *
  * <p>DettachAssetGroupToInstanceRequest</p>
@@ -83,7 +84,8 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         } 
 
         /**
-         * The information about the asset that you want to dissociate.
+         * <p>The information about the asset that you want to dissociate.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
             String assetGroupListShrink = shrink(assetGroupList, "AssetGroupList", "json");
@@ -93,10 +95,14 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.
+         * <strong>example:</strong>
+         * <p>ddosbgp-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,10 +111,13 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides.
-         * <p>
+         * <p>The ID of the region in which the instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,6 +132,12 @@ public class DettachAssetGroupToInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DettachAssetGroupToInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>DettachAssetGroupToInstanceRequest</p>
+     */
     public static class AssetGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -177,7 +192,11 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             private String type; 
 
             /**
-             * The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.
+             * <p>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_v2_public_cn-lbj382l****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -185,7 +204,11 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * The region ID of the asset.
+             * <p>The region ID of the asset.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -193,11 +216,15 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * The type of the asset. Valid values:
-             * <p>
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>waf</strong>: WAF instance</li>
+             * <li><strong>ga</strong>: Global Accelerator (GA) instance</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **waf**: WAF instance
-             * *   **ga**: Global Accelerator (GA) instance
+             * <strong>example:</strong>
+             * <p>waf</p>
              */
             public Builder type(String type) {
                 this.type = type;

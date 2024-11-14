@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyRequest} extends {@link RequestModel}
  *
  * <p>CreatePolicyRequest</p>
@@ -92,7 +93,11 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,11 +106,15 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid values:
-         * <p>
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
+         * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **l3**: IP-specific mitigation policies.
-         * *   **l4**: port-specific mitigation policies.
+         * <strong>example:</strong>
+         * <p>l3</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

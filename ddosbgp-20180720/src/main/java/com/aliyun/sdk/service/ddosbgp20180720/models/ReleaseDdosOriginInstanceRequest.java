@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseDdosOriginInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReleaseDdosOriginInstanceRequest</p>
@@ -54,10 +55,14 @@ public class ReleaseDdosOriginInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the Anti-DDoS Origin instance that you want to release.
-         * <p>
+         * <p>The ID of the Anti-DDoS Origin instance that you want to release.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+         * <strong>example:</strong>
+         * <p>ddosorigin_cn-pe335v7gs01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

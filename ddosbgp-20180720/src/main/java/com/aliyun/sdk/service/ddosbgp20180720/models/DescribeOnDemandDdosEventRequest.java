@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOnDemandDdosEventRequest} extends {@link RequestModel}
  *
  * <p>DescribeOnDemandDdosEventRequest</p>
@@ -156,7 +157,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         } 
 
         /**
-         * The end time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.
+         * <p>The end time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557909844</p>
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -165,10 +170,14 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The ID of the anti-DDoS diversion instance to query.
-         * <p>
+         * <p>The ID of the anti-DDoS diversion instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all anti-DDoS diversion instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all anti-DDoS diversion instances.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w1r7nz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -177,7 +186,10 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The IP address of the anti-DDoS diversion instance to query.
+         * <p>The IP address of the anti-DDoS diversion instance to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.1</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -186,7 +198,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -195,7 +211,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -204,10 +224,13 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The region ID of the anti-DDoS diversion instance to query.
-         * <p>
+         * <p>The region ID of the anti-DDoS diversion instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,10 +239,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -228,7 +252,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The start time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.
+         * <p>The start time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557305044</p>
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

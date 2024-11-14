@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachAssetGroupToInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>AttachAssetGroupToInstanceResponseBody</p>
@@ -37,7 +38,10 @@ public class AttachAssetGroupToInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52B49F64-5A36-5CE0-BD00-765792C26AA9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

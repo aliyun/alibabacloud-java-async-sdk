@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOnDemandInstanceStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeOnDemandInstanceStatusRequest</p>
@@ -68,10 +69,14 @@ public class DescribeOnDemandInstanceStatusRequest extends Request {
         } 
 
         /**
-         * The IDs of the anti-DDoS diversion instances.
-         * <p>
+         * <p>The IDs of the anti-DDoS diversion instances.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all anti-DDoS diversion instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all anti-DDoS diversion instances.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-z2q1qzxb****</p>
          */
         public Builder instanceIdList(java.util.List < String > instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -80,10 +85,13 @@ public class DescribeOnDemandInstanceStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the anti-DDoS diversion instance.
-         * <p>
+         * <p>The region ID of the anti-DDoS diversion instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions that are supported by Anti-DDoS Origin.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~118703~~) operation to query all regions that are supported by Anti-DDoS Origin.
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOnDemandDdosEventResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOnDemandDdosEventResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The details about the DDoS attack event.
+         * <p>The details about the DDoS attack event.</p>
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -69,7 +70,10 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A507DC8-F657-4C13-84E2-D1D1B9400753</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DDoS attack events that are returned.
+         * <p>The total number of DDoS attack events that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -90,6 +97,12 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOnDemandDdosEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOnDemandDdosEventResponseBody</p>
+     */
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Integer endTime;
@@ -177,7 +190,10 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1557891306</p>
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -185,7 +201,10 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The attacked IP address.
+             * <p>The attacked IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.XX.XX.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -193,7 +212,10 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The attack traffic. Unit: Mbit/s.
+             * <p>The attack traffic. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110000</p>
              */
             public Builder mbps(Integer mbps) {
                 this.mbps = mbps;
@@ -201,7 +223,10 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of the DDoS attack. Unit: packets per second (PPS).
+             * <p>The packet forwarding rate of the DDoS attack. Unit: packets per second (PPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -209,7 +234,10 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1557889506</p>
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;
@@ -217,13 +245,16 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DDoS attack event. Valid values:
-             * <p>
+             * <p>The status of the DDoS attack event. Valid values:</p>
+             * <ul>
+             * <li><strong>hole_begin</strong>: indicates that blackhole filtering is triggered.</li>
+             * <li><strong>hole_end</strong>: indicates that tblackhole filtering is deactivated.</li>
+             * <li><strong>defense_begin</strong>: indicates that traffic scrubbing is in progress.</li>
+             * <li><strong>defense_end</strong>: indicates that traffic scrubbing is complete.</li>
+             * </ul>
              * 
-             * *   **hole_begin**: indicates that blackhole filtering is triggered.
-             * *   **hole_end**: indicates that tblackhole filtering is deactivated.
-             * *   **defense_begin**: indicates that traffic scrubbing is in progress.
-             * *   **defense_end**: indicates that traffic scrubbing is complete.
+             * <strong>example:</strong>
+             * <p>defense_end</p>
              */
             public Builder status(String status) {
                 this.status = status;

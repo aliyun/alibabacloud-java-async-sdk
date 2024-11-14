@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetGroupToInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAssetGroupToInstanceResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -69,7 +70,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C73C59B9-9F5C-57FF-A394-13EC8FC3B2FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -90,6 +97,12 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAssetGroupToInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAssetGroupToInstanceResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -165,7 +178,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the Anti-DDoS Origin instance of a paid edition.
+             * <p>The ID of the Anti-DDoS Origin instance of a paid edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddosbgp-cn-7212zaa5v***</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -173,7 +189,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the member to which the asset belongs.
+             * <p>The UID of the member to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170858869679****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -181,7 +200,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_v2_public_cn-lbj382l****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -189,7 +211,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the asset.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -197,7 +222,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset.
+             * <p>The type of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf</p>
              */
             public Builder type(String type) {
                 this.type = type;

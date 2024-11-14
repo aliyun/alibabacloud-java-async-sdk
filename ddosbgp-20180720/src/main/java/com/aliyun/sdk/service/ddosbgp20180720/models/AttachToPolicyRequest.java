@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachToPolicyRequest} extends {@link RequestModel}
  *
  * <p>AttachToPolicyRequest</p>
@@ -92,7 +93,8 @@ public class AttachToPolicyRequest extends Request {
         }
 
         /**
-         * The protected objects.
+         * <p>The protected objects.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ipPortProtocolList(java.util.List < IpPortProtocolList> ipPortProtocolList) {
             String ipPortProtocolListShrink = shrink(ipPortProtocolList, "IpPortProtocolList", "json");
@@ -102,7 +104,11 @@ public class AttachToPolicyRequest extends Request {
         }
 
         /**
-         * The policy ID.
+         * <p>The policy ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd8b4d70-e4e0-413a-b390-e71d********</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -117,6 +123,12 @@ public class AttachToPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AttachToPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>AttachToPolicyRequest</p>
+     */
     public static class IpPortProtocolList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -170,7 +182,11 @@ public class AttachToPolicyRequest extends Request {
             private String protocol; 
 
             /**
-             * The IP address of the protected object.
+             * <p>The IP address of the protected object.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112.124.241.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -178,10 +194,13 @@ public class AttachToPolicyRequest extends Request {
             }
 
             /**
-             * The port number of the protected object.
-             * <p>
+             * <p>The port number of the protected object.</p>
+             * <blockquote>
+             * <p> This parameter is available for only port-specific mitigation policies.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available for only port-specific mitigation policies.
+             * <strong>example:</strong>
+             * <p>8*</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -189,13 +208,17 @@ public class AttachToPolicyRequest extends Request {
             }
 
             /**
-             * The protocol type of the protected object. Valid values:
-             * <p>
+             * <p>The protocol type of the protected object. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available for only port-specific mitigation policies.</p>
+             * </blockquote>
              * 
-             * *   **tcp**
-             * *   **udp**
-             * 
-             * >  This parameter is available for only port-specific mitigation policies.
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

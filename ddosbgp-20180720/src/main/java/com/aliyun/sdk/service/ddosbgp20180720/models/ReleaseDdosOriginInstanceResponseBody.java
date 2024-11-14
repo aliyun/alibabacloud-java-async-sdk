@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseDdosOriginInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ReleaseDdosOriginInstanceResponseBody</p>
@@ -37,7 +38,10 @@ public class ReleaseDdosOriginInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4B379C2-9319-4C6B-B579-FE36831B09F4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
