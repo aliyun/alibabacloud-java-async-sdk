@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddAnswerSample  AddAnswerSampleRequest
+     * @return AddAnswerSampleResponse
+     */
+    CompletableFuture<AddAnswerSampleResponse> addAnswerSample(AddAnswerSampleRequest request);
+
+    /**
      * @param request the request parameters of AddImageLib  AddImageLibRequest
      * @return AddImageLibResponse
      */
@@ -68,10 +74,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatStockOssCheckTaskResponse> creatStockOssCheckTask(CreatStockOssCheckTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateAnswerLib  CreateAnswerLibRequest
+     * @return CreateAnswerLibResponse
+     */
+    CompletableFuture<CreateAnswerLibResponse> createAnswerLib(CreateAnswerLibRequest request);
+
+    /**
+     * @param request the request parameters of CreateCallback  CreateCallbackRequest
+     * @return CreateCallbackResponse
+     */
+    CompletableFuture<CreateCallbackResponse> createCallback(CreateCallbackRequest request);
+
+    /**
      * @param request the request parameters of CreatePreCheck  CreatePreCheckRequest
      * @return CreatePreCheckResponse
      */
     CompletableFuture<CreatePreCheckResponse> createPreCheck(CreatePreCheckRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAnswerLib  DeleteAnswerLibRequest
+     * @return DeleteAnswerLibResponse
+     */
+    CompletableFuture<DeleteAnswerLibResponse> deleteAnswerLib(DeleteAnswerLibRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAnswerSample  DeleteAnswerSampleRequest
+     * @return DeleteAnswerSampleResponse
+     */
+    CompletableFuture<DeleteAnswerSampleResponse> deleteAnswerSample(DeleteAnswerSampleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCallback  DeleteCallbackRequest
+     * @return DeleteCallbackResponse
+     */
+    CompletableFuture<DeleteCallbackResponse> deleteCallback(DeleteCallbackRequest request);
 
     /**
      * @param request the request parameters of DeleteImagesFromLib  DeleteImagesFromLibRequest
@@ -90,6 +126,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteKeywordLibResponse
      */
     CompletableFuture<DeleteKeywordLibResponse> deleteKeywordLib(DeleteKeywordLibRequest request);
+
+    /**
+     * @param request the request parameters of ExportAnswerSample  ExportAnswerSampleRequest
+     * @return ExportAnswerSampleResponse
+     */
+    CompletableFuture<ExportAnswerSampleResponse> exportAnswerSample(ExportAnswerSampleRequest request);
 
     /**
      * @param request the request parameters of ExportCipStats  ExportCipStatsRequest
@@ -128,6 +170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportTextScanResultResponse> exportTextScanResult(ExportTextScanResultRequest request);
 
     /**
+     * @param request the request parameters of GetAnswerImportProgress  GetAnswerImportProgressRequest
+     * @return GetAnswerImportProgressResponse
+     */
+    CompletableFuture<GetAnswerImportProgressResponse> getAnswerImportProgress(GetAnswerImportProgressRequest request);
+
+    /**
      * @param request the request parameters of GetBackupBucketsList  GetBackupBucketsListRequest
      * @return GetBackupBucketsListResponse
      */
@@ -164,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetExecuteTimeResponse> getExecuteTime(GetExecuteTimeRequest request);
 
     /**
+     * @param request the request parameters of GetImageSceneLabelConf  GetImageSceneLabelConfRequest
+     * @return GetImageSceneLabelConfResponse
+     */
+    CompletableFuture<GetImageSceneLabelConfResponse> getImageSceneLabelConf(GetImageSceneLabelConfRequest request);
+
+    /**
      * @param request the request parameters of GetImageSceneLabelListConf  GetImageSceneLabelListConfRequest
      * @return GetImageSceneLabelListConfResponse
      */
@@ -180,6 +234,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetKeywordImportResultResponse
      */
     CompletableFuture<GetKeywordImportResultResponse> getKeywordImportResult(GetKeywordImportResultRequest request);
+
+    /**
+     * @param request the request parameters of GetKeywordLib  GetKeywordLibRequest
+     * @return GetKeywordLibResponse
+     */
+    CompletableFuture<GetKeywordLibResponse> getKeywordLib(GetKeywordLibRequest request);
 
     /**
      * @param request the request parameters of GetOssCheckStat  GetOssCheckStatRequest
@@ -248,6 +308,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserBuyStatusResponse> getUserBuyStatus(GetUserBuyStatusRequest request);
 
     /**
+     * @param request the request parameters of ListAnswerLib  ListAnswerLibRequest
+     * @return ListAnswerLibResponse
+     */
+    CompletableFuture<ListAnswerLibResponse> listAnswerLib(ListAnswerLibRequest request);
+
+    /**
+     * @param request the request parameters of ListCallback  ListCallbackRequest
+     * @return ListCallbackResponse
+     */
+    CompletableFuture<ListCallbackResponse> listCallback(ListCallbackRequest request);
+
+    /**
      * @param request the request parameters of ListImageLib  ListImageLibRequest
      * @return ListImageLibResponse
      */
@@ -284,10 +356,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceConfigsResponse> listServiceConfigs(ListServiceConfigsRequest request);
 
     /**
+     * @param request the request parameters of ModifyAnswerLib  ModifyAnswerLibRequest
+     * @return ModifyAnswerLibResponse
+     */
+    CompletableFuture<ModifyAnswerLibResponse> modifyAnswerLib(ModifyAnswerLibRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCallback  ModifyCallbackRequest
+     * @return ModifyCallbackResponse
+     */
+    CompletableFuture<ModifyCallbackResponse> modifyCallback(ModifyCallbackRequest request);
+
+    /**
      * @param request the request parameters of ModifyServiceInfo  ModifyServiceInfoRequest
      * @return ModifyServiceInfoResponse
      */
     CompletableFuture<ModifyServiceInfoResponse> modifyServiceInfo(ModifyServiceInfoRequest request);
+
+    /**
+     * @param request the request parameters of QueryAnswerSampleByPage  QueryAnswerSampleByPageRequest
+     * @return QueryAnswerSampleByPageResponse
+     */
+    CompletableFuture<QueryAnswerSampleByPageResponse> queryAnswerSampleByPage(QueryAnswerSampleByPageRequest request);
+
+    /**
+     * @param request the request parameters of QueryCallback  QueryCallbackRequest
+     * @return QueryCallbackResponse
+     */
+    CompletableFuture<QueryCallbackResponse> queryCallback(QueryCallbackRequest request);
+
+    /**
+     * @param request the request parameters of QueryCallbackByPage  QueryCallbackByPageRequest
+     * @return QueryCallbackByPageResponse
+     */
+    CompletableFuture<QueryCallbackByPageResponse> queryCallbackByPage(QueryCallbackByPageRequest request);
 
     /**
      * @param request the request parameters of UpdateBackupConfig  UpdateBackupConfigRequest

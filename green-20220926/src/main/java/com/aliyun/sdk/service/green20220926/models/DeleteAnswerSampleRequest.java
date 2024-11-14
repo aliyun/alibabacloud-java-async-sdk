@@ -7,18 +7,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteKeywordRequest} extends {@link RequestModel}
+ * {@link DeleteAnswerSampleRequest} extends {@link RequestModel}
  *
- * <p>DeleteKeywordRequest</p>
+ * <p>DeleteAnswerSampleRequest</p>
  */
-public class DeleteKeywordRequest extends Request {
+public class DeleteAnswerSampleRequest extends Request {
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("KeywordIdList")
-    private String keywordIdList;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("KeywordIds")
-    private String keywordIds;
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    private String ids;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LibId")
@@ -28,10 +24,9 @@ public class DeleteKeywordRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    private DeleteKeywordRequest(Builder builder) {
+    private DeleteAnswerSampleRequest(Builder builder) {
         super(builder);
-        this.keywordIdList = builder.keywordIdList;
-        this.keywordIds = builder.keywordIds;
+        this.ids = builder.ids;
         this.libId = builder.libId;
         this.regionId = builder.regionId;
     }
@@ -40,7 +35,7 @@ public class DeleteKeywordRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteKeywordRequest create() {
+    public static DeleteAnswerSampleRequest create() {
         return builder().build();
     }
 
@@ -50,17 +45,10 @@ public class DeleteKeywordRequest extends Request {
     }
 
     /**
-     * @return keywordIdList
+     * @return ids
      */
-    public String getKeywordIdList() {
-        return this.keywordIdList;
-    }
-
-    /**
-     * @return keywordIds
-     */
-    public String getKeywordIds() {
-        return this.keywordIds;
+    public String getIds() {
+        return this.ids;
     }
 
     /**
@@ -77,9 +65,8 @@ public class DeleteKeywordRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteKeywordRequest, Builder> {
-        private String keywordIdList; 
-        private String keywordIds; 
+    public static final class Builder extends Request.Builder<DeleteAnswerSampleRequest, Builder> {
+        private String ids; 
         private String libId; 
         private String regionId; 
 
@@ -87,29 +74,19 @@ public class DeleteKeywordRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteKeywordRequest request) {
+        private Builder(DeleteAnswerSampleRequest request) {
             super(request);
-            this.keywordIdList = request.keywordIdList;
-            this.keywordIds = request.keywordIds;
+            this.ids = request.ids;
             this.libId = request.libId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * KeywordIdList.
+         * Ids.
          */
-        public Builder keywordIdList(String keywordIdList) {
-            this.putBodyParameter("KeywordIdList", keywordIdList);
-            this.keywordIdList = keywordIdList;
-            return this;
-        }
-
-        /**
-         * KeywordIds.
-         */
-        public Builder keywordIds(String keywordIds) {
-            this.putBodyParameter("KeywordIds", keywordIds);
-            this.keywordIds = keywordIds;
+        public Builder ids(String ids) {
+            this.putBodyParameter("Ids", ids);
+            this.ids = ids;
             return this;
         }
 
@@ -132,8 +109,8 @@ public class DeleteKeywordRequest extends Request {
         }
 
         @Override
-        public DeleteKeywordRequest build() {
-            return new DeleteKeywordRequest(this);
+        public DeleteAnswerSampleRequest build() {
+            return new DeleteAnswerSampleRequest(this);
         } 
 
     } 
