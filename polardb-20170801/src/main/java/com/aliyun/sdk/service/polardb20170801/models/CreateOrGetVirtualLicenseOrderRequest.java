@@ -111,6 +111,7 @@ public class CreateOrGetVirtualLicenseOrderRequest extends Request {
         } 
 
         /**
+         * <p>The type of the engine. Valid values: PG, Oracle, and MySQL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -86,7 +86,7 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * <p>The queried orders.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +116,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34458CD3-33E0-4624-BFEF-840C15******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -308,7 +320,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             private String virtualAliyunOrderId; 
 
             /**
-             * ActivatedCodeCount.
+             * <p>The number of generated activation codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder activatedCodeCount(Integer activatedCodeCount) {
                 this.activatedCodeCount = activatedCodeCount;
@@ -316,7 +331,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * ActivationCodeQuota.
+             * <p>The maximum number of activation codes that you can apply for.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder activationCodeQuota(Integer activationCodeQuota) {
                 this.activationCodeQuota = activationCodeQuota;
@@ -324,7 +342,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunOrderId.
+             * <p>The ID of the Alibaba Cloud order. The ID of a virtual order may be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>227638319690519</p>
              */
             public Builder aliyunOrderId(String aliyunOrderId) {
                 this.aliyunOrderId = aliyunOrderId;
@@ -332,7 +353,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * AllowEmptySystemIdentifier.
+             * <p>Indicates whether the SystemIdentifier parameter can be left empty when the system generates an activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowEmptySystemIdentifier(Boolean allowEmptySystemIdentifier) {
                 this.allowEmptySystemIdentifier = allowEmptySystemIdentifier;
@@ -340,7 +364,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The engine of the PolarDB cluster. Valid values: PG, Oracle, and MySQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PG</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -348,7 +375,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the order was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-11 03:14:15</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -356,7 +386,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the order was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-11 03:14:15</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -364,7 +397,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * IsVirtualOrder.
+             * <p>Indicates whether the order is a virtual order. Pre-generation of activation codes is allowed for virtual orders.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isVirtualOrder(Boolean isVirtualOrder) {
                 this.isVirtualOrder = isVirtualOrder;
@@ -372,7 +408,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * IsVirtualOrderFrozen.
+             * <p>Indicates whether the virtual order is frozen. Generation of activation codes is not allowed for frozen virtual orders.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isVirtualOrderFrozen(Boolean isVirtualOrderFrozen) {
                 this.isVirtualOrderFrozen = isVirtualOrderFrozen;
@@ -380,7 +419,17 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * PackageType.
+             * <p>The type of the package. Valid values:</p>
+             * <ul>
+             * <li>single_node_subscribe: Single-node Edition (Subscription).</li>
+             * <li>single_node_long_term: Single-node Edition (Long-term).</li>
+             * <li>primary_backup_subscribe: HA Edition (Subscription).</li>
+             * <li>primary_backup_long_term: HA Edition (Long-term).</li>
+             * <li>pre_generation_long_term: Pre-generated (Long-term).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>single_node_subscribe</p>
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -388,7 +437,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * PackageValidity.
+             * <p>The validity period of the package. Valid values: 1 year and 30 years.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 year</p>
              */
             public Builder packageValidity(String packageValidity) {
                 this.packageValidity = packageValidity;
@@ -396,7 +448,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * PurchaseChannel.
+             * <p>The purchase channel. Valid values: aliyun_market and aliyun_public. aliyun_market indicates Alibaba Cloud Marketplace. aliyun_public indicates the PolarDB buy page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_public</p>
              */
             public Builder purchaseChannel(String purchaseChannel) {
                 this.purchaseChannel = purchaseChannel;
@@ -404,7 +459,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * VirtualAliyunOrderId.
+             * <p>The ID of the virtual order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>227638319690519</p>
              */
             public Builder virtualAliyunOrderId(String virtualAliyunOrderId) {
                 this.virtualAliyunOrderId = virtualAliyunOrderId;

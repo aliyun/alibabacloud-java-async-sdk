@@ -169,6 +169,7 @@ public class CreateActivationCodeRequest extends Request {
         } 
 
         /**
+         * <p>The Alibaba Cloud order ID (including the virtual order ID).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +182,10 @@ public class CreateActivationCodeRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testCode</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -190,6 +194,7 @@ public class CreateActivationCodeRequest extends Request {
         }
 
         /**
+         * <p>The MAC address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +207,7 @@ public class CreateActivationCodeRequest extends Request {
         }
 
         /**
+         * <p>The name of the activation code. The name can contain only letters, digits, underscores (_), and hyphens (-). The activation code file downloaded from the console is named based on this name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +256,10 @@ public class CreateActivationCodeRequest extends Request {
         }
 
         /**
-         * SystemIdentifier.
+         * <p>The system identifier of the database. This parameter is required if you set AllowEmptySystemIdentifier to false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder systemIdentifier(String systemIdentifier) {
             this.putQueryParameter("SystemIdentifier", systemIdentifier);

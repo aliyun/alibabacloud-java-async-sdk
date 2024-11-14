@@ -29,6 +29,10 @@ public class CreateDBClusterRequest extends Request {
     private String backupRetentionPolicyOnClusterDeletion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
+    private String burstingEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -241,6 +245,7 @@ public class CreateDBClusterRequest extends Request {
         this.architecture = builder.architecture;
         this.autoRenew = builder.autoRenew;
         this.backupRetentionPolicyOnClusterDeletion = builder.backupRetentionPolicyOnClusterDeletion;
+        this.burstingEnabled = builder.burstingEnabled;
         this.clientToken = builder.clientToken;
         this.cloneDataPoint = builder.cloneDataPoint;
         this.clusterNetworkType = builder.clusterNetworkType;
@@ -332,6 +337,13 @@ public class CreateDBClusterRequest extends Request {
      */
     public String getBackupRetentionPolicyOnClusterDeletion() {
         return this.backupRetentionPolicyOnClusterDeletion;
+    }
+
+    /**
+     * @return burstingEnabled
+     */
+    public String getBurstingEnabled() {
+        return this.burstingEnabled;
     }
 
     /**
@@ -689,6 +701,7 @@ public class CreateDBClusterRequest extends Request {
         private String architecture; 
         private Boolean autoRenew; 
         private String backupRetentionPolicyOnClusterDeletion; 
+        private String burstingEnabled; 
         private String clientToken; 
         private String cloneDataPoint; 
         private String clusterNetworkType; 
@@ -750,6 +763,7 @@ public class CreateDBClusterRequest extends Request {
             this.architecture = request.architecture;
             this.autoRenew = request.autoRenew;
             this.backupRetentionPolicyOnClusterDeletion = request.backupRetentionPolicyOnClusterDeletion;
+            this.burstingEnabled = request.burstingEnabled;
             this.clientToken = request.clientToken;
             this.cloneDataPoint = request.cloneDataPoint;
             this.clusterNetworkType = request.clusterNetworkType;
@@ -878,6 +892,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder backupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
             this.putQueryParameter("BackupRetentionPolicyOnClusterDeletion", backupRetentionPolicyOnClusterDeletion);
             this.backupRetentionPolicyOnClusterDeletion = backupRetentionPolicyOnClusterDeletion;
+            return this;
+        }
+
+        /**
+         * BurstingEnabled.
+         */
+        public Builder burstingEnabled(String burstingEnabled) {
+            this.putQueryParameter("BurstingEnabled", burstingEnabled);
+            this.burstingEnabled = burstingEnabled;
             return this;
         }
 

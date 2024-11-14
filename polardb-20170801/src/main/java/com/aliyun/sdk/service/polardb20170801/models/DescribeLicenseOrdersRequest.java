@@ -181,7 +181,10 @@ public class DescribeLicenseOrdersRequest extends Request {
         } 
 
         /**
-         * AliyunOrderId.
+         * <p>The ID of the Alibaba Cloud order. The value can be the ID of a virtual order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>239618016570503</p>
          */
         public Builder aliyunOrderId(String aliyunOrderId) {
             this.putQueryParameter("AliyunOrderId", aliyunOrderId);
@@ -208,7 +211,17 @@ public class DescribeLicenseOrdersRequest extends Request {
         }
 
         /**
-         * PackageType.
+         * <p>The type of the package. Valid values:</p>
+         * <ul>
+         * <li>single_node_subscribe: Single-node Edition (Subscription).</li>
+         * <li>single_node_long_term: Single-node Edition (Long-term).</li>
+         * <li>primary_backup_subscribe: HA Edition (Subscription).</li>
+         * <li>primary_backup_long_term: HA Edition (Long-term).</li>
+         * <li>pre_generation_long_term: Pre-generated (Long-term).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>single_node_subscribe</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -217,7 +230,10 @@ public class DescribeLicenseOrdersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +242,10 @@ public class DescribeLicenseOrdersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +254,10 @@ public class DescribeLicenseOrdersRequest extends Request {
         }
 
         /**
-         * PurchaseChannel.
+         * <p>The purchase channel. Valid values: aliyun_market and aliyun_public. aliyun_market specifies Alibaba Cloud Marketplace. aliyun_public specifies the PolarDB buy page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_market</p>
          */
         public Builder purchaseChannel(String purchaseChannel) {
             this.putQueryParameter("PurchaseChannel", purchaseChannel);
@@ -262,7 +284,7 @@ public class DescribeLicenseOrdersRequest extends Request {
         }
 
         /**
-         * VirtualOrder.
+         * <p>Specifies whether to query only virtual orders.</p>
          */
         public Builder virtualOrder(Boolean virtualOrder) {
             this.putQueryParameter("VirtualOrder", virtualOrder);

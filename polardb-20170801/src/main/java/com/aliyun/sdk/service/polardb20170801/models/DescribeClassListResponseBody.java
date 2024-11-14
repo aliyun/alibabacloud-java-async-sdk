@@ -116,6 +116,9 @@ public class DescribeClassListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("EssdMaxStorageCapacity")
+        private String essdMaxStorageCapacity;
+
         @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private String maxConnections;
 
@@ -137,6 +140,9 @@ public class DescribeClassListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pl3MaxIOPS")
         private String pl3MaxIOPS;
 
+        @com.aliyun.core.annotation.NameInMap("PolarStoreMaxStorageCapacity")
+        private String polarStoreMaxStorageCapacity;
+
         @com.aliyun.core.annotation.NameInMap("Psl4MaxIOPS")
         private String psl4MaxIOPS;
 
@@ -154,6 +160,7 @@ public class DescribeClassListResponseBody extends TeaModel {
             this.classGroup = builder.classGroup;
             this.classTypeLevel = builder.classTypeLevel;
             this.cpu = builder.cpu;
+            this.essdMaxStorageCapacity = builder.essdMaxStorageCapacity;
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
             this.maxStorageCapacity = builder.maxStorageCapacity;
@@ -161,6 +168,7 @@ public class DescribeClassListResponseBody extends TeaModel {
             this.pl1MaxIOPS = builder.pl1MaxIOPS;
             this.pl2MaxIOPS = builder.pl2MaxIOPS;
             this.pl3MaxIOPS = builder.pl3MaxIOPS;
+            this.polarStoreMaxStorageCapacity = builder.polarStoreMaxStorageCapacity;
             this.psl4MaxIOPS = builder.psl4MaxIOPS;
             this.psl5MaxIOPS = builder.psl5MaxIOPS;
             this.referenceExtPrice = builder.referenceExtPrice;
@@ -201,6 +209,13 @@ public class DescribeClassListResponseBody extends TeaModel {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return essdMaxStorageCapacity
+         */
+        public String getEssdMaxStorageCapacity() {
+            return this.essdMaxStorageCapacity;
         }
 
         /**
@@ -253,6 +268,13 @@ public class DescribeClassListResponseBody extends TeaModel {
         }
 
         /**
+         * @return polarStoreMaxStorageCapacity
+         */
+        public String getPolarStoreMaxStorageCapacity() {
+            return this.polarStoreMaxStorageCapacity;
+        }
+
+        /**
          * @return psl4MaxIOPS
          */
         public String getPsl4MaxIOPS() {
@@ -285,6 +307,7 @@ public class DescribeClassListResponseBody extends TeaModel {
             private String classGroup; 
             private String classTypeLevel; 
             private String cpu; 
+            private String essdMaxStorageCapacity; 
             private String maxConnections; 
             private String maxIOPS; 
             private String maxStorageCapacity; 
@@ -292,6 +315,7 @@ public class DescribeClassListResponseBody extends TeaModel {
             private String pl1MaxIOPS; 
             private String pl2MaxIOPS; 
             private String pl3MaxIOPS; 
+            private String polarStoreMaxStorageCapacity; 
             private String psl4MaxIOPS; 
             private String psl5MaxIOPS; 
             private String referenceExtPrice; 
@@ -344,6 +368,14 @@ public class DescribeClassListResponseBody extends TeaModel {
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * EssdMaxStorageCapacity.
+             */
+            public Builder essdMaxStorageCapacity(String essdMaxStorageCapacity) {
+                this.essdMaxStorageCapacity = essdMaxStorageCapacity;
                 return this;
             }
 
@@ -421,6 +453,14 @@ public class DescribeClassListResponseBody extends TeaModel {
              */
             public Builder pl3MaxIOPS(String pl3MaxIOPS) {
                 this.pl3MaxIOPS = pl3MaxIOPS;
+                return this;
+            }
+
+            /**
+             * PolarStoreMaxStorageCapacity.
+             */
+            public Builder polarStoreMaxStorageCapacity(String polarStoreMaxStorageCapacity) {
+                this.polarStoreMaxStorageCapacity = polarStoreMaxStorageCapacity;
                 return this;
             }
 

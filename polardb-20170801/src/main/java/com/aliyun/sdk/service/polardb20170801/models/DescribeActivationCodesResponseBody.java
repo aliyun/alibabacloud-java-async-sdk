@@ -86,7 +86,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * <p>The queried activation codes.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +116,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>65D7ACE6-4A61-4B6E-B357-8CB24A******</p>
@@ -121,7 +127,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -263,7 +272,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             private String systemIdentifier; 
 
             /**
-             * ActivateAt.
+             * <p>The time when the activation code takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-16 16:46:20</p>
              */
             public Builder activateAt(String activateAt) {
                 this.activateAt = activateAt;
@@ -271,7 +283,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testCode</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -279,7 +294,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireAt.
+             * <p>The time when the activation code expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2054-10-16 16:46:20</p>
              */
             public Builder expireAt(String expireAt) {
                 this.expireAt = expireAt;
@@ -287,7 +305,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the activation code was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-16 16:46:20</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -295,7 +316,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the activation code was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-16 16:46:20</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -303,7 +327,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The activation code ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -311,7 +338,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             }
 
             /**
-             * MacAddress.
+             * <p>The media access control (MAC) address used in the generation of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:34:56:78:98:00</p>
              */
             public Builder macAddress(String macAddress) {
                 this.macAddress = macAddress;
@@ -319,7 +349,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +360,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemIdentifier.
+             * <p>The unique identifier of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123456</p>
              */
             public Builder systemIdentifier(String systemIdentifier) {
                 this.systemIdentifier = systemIdentifier;

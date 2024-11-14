@@ -203,7 +203,10 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * EnableGlobalDomainName.
+         * <p>Specifies whether to create a global domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableGlobalDomainName(Boolean enableGlobalDomainName) {
             this.putQueryParameter("EnableGlobalDomainName", enableGlobalDomainName);

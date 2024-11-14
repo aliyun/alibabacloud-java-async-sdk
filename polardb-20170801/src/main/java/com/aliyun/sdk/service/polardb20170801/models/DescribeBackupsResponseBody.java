@@ -24,6 +24,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalLevel2BackupSize")
+    private String totalLevel2BackupSize;
+
     @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private String totalRecordCount;
 
@@ -32,6 +35,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         this.pageNumber = builder.pageNumber;
         this.pageRecordCount = builder.pageRecordCount;
         this.requestId = builder.requestId;
+        this.totalLevel2BackupSize = builder.totalLevel2BackupSize;
         this.totalRecordCount = builder.totalRecordCount;
     }
 
@@ -72,6 +76,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalLevel2BackupSize
+     */
+    public String getTotalLevel2BackupSize() {
+        return this.totalLevel2BackupSize;
+    }
+
+    /**
      * @return totalRecordCount
      */
     public String getTotalRecordCount() {
@@ -83,6 +94,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String pageNumber; 
         private String pageRecordCount; 
         private String requestId; 
+        private String totalLevel2BackupSize; 
         private String totalRecordCount; 
 
         /**
@@ -123,6 +135,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalLevel2BackupSize.
+         */
+        public Builder totalLevel2BackupSize(String totalLevel2BackupSize) {
+            this.totalLevel2BackupSize = totalLevel2BackupSize;
             return this;
         }
 

@@ -429,10 +429,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click</a>.</p>
-     * <ul>
-     * <li>Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>.</li>
-     * </ul>
+     * <p>The ID of the request.</p>
      * 
      * @param request the request parameters of DescribeDBClusterMigration  DescribeDBClusterMigrationRequest
      * @return DescribeDBClusterMigrationResponse

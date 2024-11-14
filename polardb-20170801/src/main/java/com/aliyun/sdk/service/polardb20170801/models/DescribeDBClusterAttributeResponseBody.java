@@ -27,6 +27,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BlktagUsed")
     private Long blktagUsed;
 
+    @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
+    private String burstingEnabled;
+
     @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
@@ -204,6 +207,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.architecture = builder.architecture;
         this.blktagTotal = builder.blktagTotal;
         this.blktagUsed = builder.blktagUsed;
+        this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
         this.compressStorageMode = builder.compressStorageMode;
         this.compressStorageUsed = builder.compressStorageUsed;
@@ -304,6 +308,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public Long getBlktagUsed() {
         return this.blktagUsed;
+    }
+
+    /**
+     * @return burstingEnabled
+     */
+    public String getBurstingEnabled() {
+        return this.burstingEnabled;
     }
 
     /**
@@ -711,6 +722,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String architecture; 
         private Long blktagTotal; 
         private Long blktagUsed; 
+        private String burstingEnabled; 
         private String category; 
         private String compressStorageMode; 
         private Long compressStorageUsed; 
@@ -829,6 +841,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder blktagUsed(Long blktagUsed) {
             this.blktagUsed = blktagUsed;
+            return this;
+        }
+
+        /**
+         * BurstingEnabled.
+         */
+        public Builder burstingEnabled(String burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
             return this;
         }
 
@@ -1599,6 +1619,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
+        @com.aliyun.core.annotation.NameInMap("DBNodeDescription")
+        private String DBNodeDescription;
+
         @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
@@ -1665,6 +1688,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.cpuCores = builder.cpuCores;
             this.creationTime = builder.creationTime;
             this.DBNodeClass = builder.DBNodeClass;
+            this.DBNodeDescription = builder.DBNodeDescription;
             this.DBNodeId = builder.DBNodeId;
             this.DBNodeRole = builder.DBNodeRole;
             this.DBNodeStatus = builder.DBNodeStatus;
@@ -1721,6 +1745,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getDBNodeClass() {
             return this.DBNodeClass;
+        }
+
+        /**
+         * @return DBNodeDescription
+         */
+        public String getDBNodeDescription() {
+            return this.DBNodeDescription;
         }
 
         /**
@@ -1868,6 +1899,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String cpuCores; 
             private String creationTime; 
             private String DBNodeClass; 
+            private String DBNodeDescription; 
             private String DBNodeId; 
             private String DBNodeRole; 
             private String DBNodeStatus; 
@@ -1930,6 +1962,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
+                return this;
+            }
+
+            /**
+             * DBNodeDescription.
+             */
+            public Builder DBNodeDescription(String DBNodeDescription) {
+                this.DBNodeDescription = DBNodeDescription;
                 return this;
             }
 
