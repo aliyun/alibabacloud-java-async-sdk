@@ -205,7 +205,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the instance.</p>
+         * <p>Specifies whether to enable auto-renewal.</p>
          * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>

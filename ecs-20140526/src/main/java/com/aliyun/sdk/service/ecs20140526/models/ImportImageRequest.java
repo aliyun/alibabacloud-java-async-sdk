@@ -25,6 +25,10 @@ public class ImportImageRequest extends Request {
     private String bootMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -98,6 +102,7 @@ public class ImportImageRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.architecture = builder.architecture;
         this.bootMode = builder.bootMode;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.detectionStrategy = builder.detectionStrategy;
         this.diskDeviceMapping = builder.diskDeviceMapping;
@@ -149,6 +154,13 @@ public class ImportImageRequest extends Request {
      */
     public String getBootMode() {
         return this.bootMode;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -274,6 +286,7 @@ public class ImportImageRequest extends Request {
         private String sourceRegionId; 
         private String architecture; 
         private String bootMode; 
+        private String clientToken; 
         private String description; 
         private String detectionStrategy; 
         private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
@@ -301,6 +314,7 @@ public class ImportImageRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.architecture = request.architecture;
             this.bootMode = request.bootMode;
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.detectionStrategy = request.detectionStrategy;
             this.diskDeviceMapping = request.diskDeviceMapping;
@@ -364,6 +378,15 @@ public class ImportImageRequest extends Request {
         public Builder bootMode(String bootMode) {
             this.putQueryParameter("BootMode", bootMode);
             this.bootMode = bootMode;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

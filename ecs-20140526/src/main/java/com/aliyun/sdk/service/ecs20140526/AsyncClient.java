@@ -2645,7 +2645,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use Account-level EBS Default Encryption, <a href="https://workorder-intl.console.aliyun.com/console.htm#/ticket/list">submit a ticket</a>.</p>
+     * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use Account-level EBS Default Encryption, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
      * </blockquote>
      * <ul>
      * <li><strong>Precautions</strong><ul>
@@ -3851,12 +3851,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>  You cannot call this operation to start ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</p>
      * <ul>
-     * <li>The instance must be in the <code>Stopped</code> state.****</li>
-     * <li>If an instance has overdue payments for more than 15 days, the instance is stopped and released, and data on the instance can no longer be recovered. You must complete the overdue payments and reactivate the instance within 15 days. If you cannot reactivate an instance that resides in a virtual private cloud (VPC), wait a few minutes and try again.</li>
-     * <li>After the operation is called, the instance enters the <code>Starting</code> state.****</li>
-     * <li>You cannot call this operation on ECS instances that are locked for security reasons. If <code>OperationLocks</code> in the response returned for the DescribeInstances operation contains <code>LockReason: security</code>, the instance is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li>The instance must be in the <strong>Stopped</strong> <code>(Stopped)</code> state.</li>
+     * <li>You must pay the bills and reactivate the instance within 15 days after the instance is suspended due to overdue payments. Otherwise, the instance is released and the data cannot be restored. If you cannot restart an instance of the Virtual Private Cloud (VPC) type, try again later.</li>
+     * <li>After the operation is called, the instance enters the <strong>Starting</strong> <code>(Starting)</code> state.</li>
      * </ul>
      * 
      * @param request the request parameters of ReActivateInstances  ReActivateInstancesRequest
@@ -4304,64 +4303,68 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p><strong>Before you call this operation, familiarize yourself with the billing rules and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS resources.</strong>
+     * <p><em>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
      * This operation is an asynchronous operation. After a request to create ECS instances is sent, ECS instance IDs are returned but the creation and startup of the instances may be incomplete. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instances. When the status of an instance is <code>Running</code> in the DescribeInstanceStatus response, the instance is created and started.</p>
+     * <h3><a href="#"></a>Instructions</h3>
      * <ul>
-     * <li><strong>Prerequisites</strong>:<ul>
-     * <li>Make sure that real-name verification is completed for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
-     * <li>Make sure that the number of ECS instances you created or the number of vCPUs on ECS instances of all instance types you created does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
+     * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
      * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
      * </ul>
-     * </li>
-     * <li><strong>Limits</strong>:<ul>
-     * <li>You can call the RunInstances operation to create up to 100 ECS instances at a time. To create more than 100 ECS instances, we recommend that you call this operation multiple times.</li>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <ul>
+     * <li>You can call the RunInstances operation to create up to 100 ECS instances at a time. To create more than 100 ECS instances, we recommend that you initiate multiple requests in batches or concurrently.</li>
      * <li>If you set <code>InternetMaxBandwidthOut</code> to a value greater than 0, public IP addresses are automatically assigned to the ECS instances to be created.<blockquote>
-     * <p> Starting November 27, 2020, when you create ECS instances or change ECS instance configurations, the maximum bandwidth value that you can specify is subject to the throttling policy of your account. To increase the maximum bandwidth value, submit a ticket. The throttling policy imposes the following constraints: In a single region, the total maximum bandwidth value of all instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and the total bandwidth value of all instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</p>
+     * <p> Starting November 27, 2020, when you create ECS instances or change ECS instance configurations, the maximum bandwidth value that you can specify is subject to the throttling policy of your account. To increase the maximum bandwidth value, submit a ticket. The throttling policy imposes the following constraints: In a single region, the total maximum bandwidth value of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and the total bandwidth value of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * </li>
-     * <li><strong>Suggestions</strong>:<ul>
-     * <li>In test scenarios, you can set <code>DryRun</code> to true to perform a dry run without performing the actual request.</li>
-     * <li>You can use <code>AutoReleaseTime</code> to configure an automatic release time for ECS instances in the request to RunInstances or call the <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> operation to release the instances.</li>
-     * <li>To better manage and search for ECS instances, we recommend that you add tags to the instances by specifying <code>Tag.N.Key</code> and <code>Tag.N.Value</code> and append incremental suffixes by specifying <code>UniqueSuffix</code> to the hostname specified by <code>HostName</code> and the instance name specified by <code>InstanceName</code>.</li>
-     * <li>A launch template contains the parameters required to create an instance so that you do not have to specify these parameters every time you create instances. You can call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, in the request to <code>RunInstances</code>, you can specify <code>LaunchTemplateId</code> and <code>LaunchTemplateVersion</code> to use the launch template.</li>
-     * <li>In memory-intensive scenarios, you can set <code>CpuOptions.ThreadsPerCore</code> to 1 to disable Hyper-Threading (HT) and increase the memory-to-vCPU ratio.</li>
-     * <li>You can set <code>NetworkOptions.EnableJumboFrame</code> to true to enable the <code>Jumbo Frames</code> feature when you create ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</li>
+     * <h3><a href="#"></a>Suggestions</h3>
+     * <ul>
+     * <li><strong>Test scenarios</strong>: Set <code>DryRun</code> to true to perform a dry run without performing the actual request.</li>
+     * <li><strong>Release of ECS instances</strong>: Use <code>AutoReleaseTime</code> to configure an automatic release time for ECS instances in the request to RunInstances or call the <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> operation to release the instances.</li>
+     * <li><strong>Management and search of ECS instances</strong>: Add tags to the ECS instances by specifying <code>Tag.N.Key</code> and <code>Tag.N.Value</code> and append incremental suffixes by specifying <code>UniqueSuffix</code> to the hostname specified by <code>HostName</code> and the instance name specified by <code>InstanceName</code>. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</li>
+     * <li><strong>Launch template</strong>: A launch template contains the parameters required to create an ECS instance so that you do not have to specify the parameters every time you create ECS instances. You can call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, in the request to <code>RunInstances</code>, you can specify <code>LaunchTemplateId</code> and <code>LaunchTemplateVersion</code> to use the launch template.</li>
+     * <li><strong>Disabling of Hyper-Threading (HT)</strong>: In memory-intensive scenarios, set <code>CpuOptions.ThreadsPerCore</code> to 1 to disable HT and increase the memory-to-vCPU ratio.</li>
+     * <li><strong>Enabling of Jumbo Frames</strong>: Set <code>NetworkOptions.EnableJumboFrame</code> to true to enable the <code>Jumbo Frames</code> feature when you create ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</li>
      * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#"></a>Sample requests:</h2>
+     * <h2><a href="#"></a>Sample requests</h2>
      * <p>Use a specific image to create ECS instances of a specific instance type in the China (Hangzhou) region. The instances use disks with a specific capacity as the system disk and data disks and are automatically assigned public IP addresses. The instances have user-defined names and logon passwords. The instances are assigned to a specific security group and connected to a specific vSwitch. Request parameters:
-     *     RegionId: Set RegionId to cn-hangzhou, which indicates the China (Hangzhou) region.
-     *     ImageId: Specify the ID of an image. Example: aliyun_3_x64_20G_alibase_20221102.vhd.
-     *     InstanceType: Specify an instance type. Example: ecs.g7.large.
-     *     SecurityGroupId: Specify a security group ID. Example: sg-bp150uqocpf9jj70****.
-     *     VSwitchId: Specify a vSwitch ID. Example: vsw-bp1qo7s91cbch5i4l****.
-     *     SystemDisk.Size: Specify the size of the system disk. Example: 40.
-     *     DataDisk.Size: Specify the size of a data disk. Example: 100.
-     *     DataDisk.Category: Specify the category of a data disk. Example: cloud_essd.
-     *     SystemDisk.Category: Specify the category of the system disk. Example: cloud_essd.
-     *     HostName: Specify a hostname for the instance. Example: ECS-test.
-     *     Password: Specify the logon password of the instance. Example: ECS@test1234.
-     *     InternetMaxBandwidthOut: Specify the outbound public bandwidth. Example: 10.
+     *     RegionId: Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.ImageId: Set the image ID to aliyun_3_x64_20G_alibase_20221102.vhd.
+     *     InstanceType: Set the instance type to ecs.g7.large.
+     *     SecurityGroupId: Set the security group ID to sg-bp150uqocpf9jj70****.
+     *     VSwitchId: Set the vSwitch ID to vsw-bp1qo7s91cbch5i4l****.
+     *     SystemDisk.Category: Set the system disk category to cloud_essd, which specifies the Enterprise SSD (ESSD) category.
+     *     SystemDisk.Size: Set the system disk size to 40. Unit: GiB.
+     *     DataDisk.Category: Set the data disk category to cloud_essd, which specifies the ESSD category.
+     *     DataDisk.Size: Set the data disk size to 100. Unit: GiB.
+     *     HostName: Set the instance hostname to ECS-test.
+     *     Password: Set the logon password to ECS@test1234.
+     *     InternetMaxBandwidthOut: Set the outbound public bandwidth to 10. Unit: Mbit/s.
      * Examples on how to create instances of different types based on the preceding parameters:
-     * <strong>Example 1: Create five subscription ECS instances for which auto-renewal is enabled</strong>
-     *     Amount: &quot;5&quot;.
-     *     InstanceChargeType: &quot;PrePaid&quot;, which specifies the subscription billing method.
-     *     Period: &quot;1&quot;.
-     *     PeriodUnit: &quot;Month&quot;.
-     *     AutoRenew: &quot;true&quot;, which specifies that auto-renewal is enabled.
-     *     AutoRenewPeriod: &quot;1&quot;, which specifies a subscription period of one month.
-     * <strong>Example 2: Create 10 pay-as-you-go instances</strong>
-     *     Amount: &quot;10&quot;.InstanceChargeType: &quot;PostPaid&quot;.
-     *     SpotStrategy: &quot;NoSpot&quot;, which specifies that the instance is created as a pay-as-you-go instance.
-     * <strong>Example 3: Create 20 preemptible instances that have a specified bidding policy and a protection period</strong>
-     *     Amount: &quot;20&quot;.
-     *     InstanceChargeType: &quot;PostPaid&quot;.
-     *     SpotStrategy: Specify the bidding policy for the instance. Example: SpotAsPriceGo, which specifies that the instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
-     *     SpotDuration: &quot;1&quot;, which specifies a 1-hour protection period.</p>
+     * <strong>Example: Create five subscription ECS instances for which auto-renewal is enabled</strong>
+     *     Amount: Set the number of ECS instances that you want to create to 5.
+     *     InstanceChargeType: Set the billing method to PrePaid, which specifies the subscription billing method.
+     *     PeriodUnit: Set the period unit to Month.
+     *     Period: Set the subscription period to 1. The unit is specified by PeriodUnit, which is Month in this example.
+     *     AutoRenew: Set this parameter to true to enable auto-renewal.
+     *     AutoRenewPeriod: Set the renewal period to 1. The unit is specified by PeriodUnit, which is Month in this example.
+     * <strong>Example: Create 10 pay-as-you-go ECS instances</strong>
+     *     Amount: Set the number of ECS instances that you want to create to 10.
+     *     InstanceChargeType: Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
+     *     SpotStrategy: Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
+     * <strong>Example: Create 20 preemptible instances that have a specified bidding policy and a protection period</strong>
+     *     Amount: Set the number of ECS instances that you want to create to 20.
+     *     InstanceChargeType: Set the billing method to PostPaid.
+     *     SpotStrategy: Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
+     *     SpotDuration: Set the protection period of the preemptible instances to 1. Unit: hours.
+     * Call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, use the launch template to create ECS instances in the China (Hangzhou) region. Sample request:
+     * <strong>Example: Create 10 ECS instances based on a launch template</strong>
+     *     RegionId: Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.
+     *     Amount: Set the number of ECS instances that you want to create to 10.
+     *     LaunchTemplateId: Set the launch template ID to lt-bp14xczpoxvb6rre****.</p>
+     * <blockquote>
+     * <p> If a parameter is specified both in the launch template that you reference in a request and in the instance parameters of the same request, the value specified in the instance parameters takes precedence. For example, if you set InstanceChargeType in the launch template to PrePaid (subscription) and set InstanceChargeType in the instance parameters to PostPaid (pay-as-you-go), the created instances are pay-as-you-go instances.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of RunInstances  RunInstancesRequest
      * @return RunInstancesResponse
@@ -4403,13 +4406,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>This operation is an asynchronous operation. After you call this operation to start an ECS instance, the operation sets the status of the ECS instance to Starting and begins the startup process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Running</code>, the instance is started.</p>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li><strong>Notes</strong><ul>
      * <li>You cannot call this operation to start an ECS instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * <li>The ECS instance that you want to start must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>If an ECS instance is stopped in economical mode, the instance may fail to be restarted due to insufficient resources.</li>
-     * </ul>
-     * </li>
+     * <li>If an ECS instance is stopped in economical mode, the instance may fail to be started due to insufficient resources.</li>
      * </ul>
      * 
      * @param request the request parameters of StartInstance  StartInstanceRequest
@@ -4419,14 +4420,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is an asynchronous operation. After you call this operation to start an ECS instance, the operation sets the status of the ECS instance to Starting and begins the startup process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. When the status of the ECS instance changes to <code>Running</code>, the instance is started.</p>
+     * <p>This operation is an asynchronous operation. After you call this operation to start ECS instances, the operation sets the status of the ECS instances to Starting and begins the startup process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instances. When the status of the ECS instances changes to <code>Running</code>, the instances are started.</p>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li><strong>Precautions</strong><ul>
      * <li>You cannot call this operation to start ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * <li>The ECS instances that you want to start must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
      * <li>ECS instances stopped in economical mode may fail to be started due to insufficient resources.</li>
-     * </ul>
-     * </li>
      * </ul>
      * 
      * @param request the request parameters of StartInstances  StartInstancesRequest
@@ -4475,12 +4474,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>This operation is an asynchronous operation. After you call this operation to stop ECS instances, the operation sets the status of the ECS instances to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instances. When the status of the ECS instances changes to <code>Stopped</code>, the instances are stopped.</p>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li><strong>Notes</strong><ul>
      * <li>You cannot call this operation to stop ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
-     * <li>After you enable the default economical mode for all pay-as-you-go ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the pay-as-you-go ECS instances that you want to stop. This way, the pay-as-you-go ECS instances continue to be billed after the instances are stopped. The instance type resources and public IP address of the instances are retained.</li>
-     * </ul>
-     * </li>
+     * <li>After you enable the default economical mode for all pay-as-you-go ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the pay-as-you-go ECS instances that you want to stop to enable standard mode. This way, the instances continue to be billed after they are stopped. The instance type resources and public IP addresses of the instances are retained.</li>
      * </ul>
      * 
      * @param request the request parameters of StopInstances  StopInstancesRequest

@@ -200,9 +200,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>The default value of the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -213,9 +211,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>The name of the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -226,9 +222,13 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>The type of the parameter.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>String</li>
+             * <li>Number</li>
+             * <li>Boolean</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -588,9 +588,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>The version number of the image component.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -671,9 +669,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>The parameters contained in the image component.</p>
              */
             public Builder parameters(Parameters parameters) {
                 this.parameters = parameters;
