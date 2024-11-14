@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobRunResponse> getJobRun(GetJobRunRequest request);
 
     /**
+     * @param request the request parameters of GetSessionCluster  GetSessionClusterRequest
+     * @return GetSessionClusterResponse
+     */
+    CompletableFuture<GetSessionClusterResponse> getSessionCluster(GetSessionClusterRequest request);
+
+    /**
      * @param request the request parameters of GetSqlStatement  GetSqlStatementRequest
      * @return GetSqlStatementResponse
      */
