@@ -48,6 +48,9 @@ public class AnchorResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("supportBgChange")
+    private Integer supportBgChange;
+
     @com.aliyun.core.annotation.NameInMap("useScene")
     private String useScene;
 
@@ -65,6 +68,7 @@ public class AnchorResponse extends Response {
         this.gender = builder.gender;
         this.resourceTypeDesc = builder.resourceTypeDesc;
         this.status = builder.status;
+        this.supportBgChange = builder.supportBgChange;
         this.useScene = builder.useScene;
     }
 
@@ -162,6 +166,13 @@ public class AnchorResponse extends Response {
     }
 
     /**
+     * @return supportBgChange
+     */
+    public Integer getSupportBgChange() {
+        return this.supportBgChange;
+    }
+
+    /**
      * @return useScene
      */
     public String getUseScene() {
@@ -194,6 +205,8 @@ public class AnchorResponse extends Response {
 
         Builder status(String status);
 
+        Builder supportBgChange(Integer supportBgChange);
+
         Builder useScene(String useScene);
 
         @Override
@@ -216,6 +229,7 @@ public class AnchorResponse extends Response {
         private String gender; 
         private String resourceTypeDesc; 
         private String status; 
+        private Integer supportBgChange; 
         private String useScene; 
 
         private BuilderImpl() {
@@ -236,6 +250,7 @@ public class AnchorResponse extends Response {
             this.gender = response.gender;
             this.resourceTypeDesc = response.resourceTypeDesc;
             this.status = response.status;
+            this.supportBgChange = response.supportBgChange;
             this.useScene = response.useScene;
         } 
 
@@ -344,6 +359,15 @@ public class AnchorResponse extends Response {
         @Override
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * supportBgChange.
+         */
+        @Override
+        public Builder supportBgChange(Integer supportBgChange) {
+            this.supportBgChange = supportBgChange;
             return this;
         }
 

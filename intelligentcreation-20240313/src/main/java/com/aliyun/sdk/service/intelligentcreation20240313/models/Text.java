@@ -22,6 +22,9 @@ public class Text extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String desc;
 
+    @com.aliyun.core.annotation.NameInMap("errMsg")
+    private String errMsg;
+
     @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
@@ -76,6 +79,7 @@ public class Text extends TeaModel {
         this.agentId = builder.agentId;
         this.agentName = builder.agentName;
         this.desc = builder.desc;
+        this.errMsg = builder.errMsg;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.illustrationTaskIdList = builder.illustrationTaskIdList;
@@ -120,6 +124,13 @@ public class Text extends TeaModel {
      */
     public String getDesc() {
         return this.desc;
+    }
+
+    /**
+     * @return errMsg
+     */
+    public String getErrMsg() {
+        return this.errMsg;
     }
 
     /**
@@ -231,6 +242,7 @@ public class Text extends TeaModel {
         private String agentId; 
         private String agentName; 
         private String desc; 
+        private String errMsg; 
         private String gmtCreate; 
         private String gmtModified; 
         private java.util.List < Long > illustrationTaskIdList; 
@@ -271,6 +283,14 @@ public class Text extends TeaModel {
          */
         public Builder desc(String desc) {
             this.desc = desc;
+            return this;
+        }
+
+        /**
+         * errMsg.
+         */
+        public Builder errMsg(String errMsg) {
+            this.errMsg = errMsg;
             return this;
         }
 
