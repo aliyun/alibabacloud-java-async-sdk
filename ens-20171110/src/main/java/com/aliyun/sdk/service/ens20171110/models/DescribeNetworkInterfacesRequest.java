@@ -248,7 +248,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * Ipv6Address.
+         * <p>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             String ipv6AddressShrink = shrink(ipv6Address, "Ipv6Address", "simple");
@@ -362,7 +362,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The type of the ENI. Valid Values:</p>
+         * <p>The type of the ENI. Valid values:</p>
          * <ul>
          * <li>Primary: primary ENI.</li>
          * <li>Secondary: secondary ENI.</li>

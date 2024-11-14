@@ -50,7 +50,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Clusters.
+         * <p>An array that consists of the information about clusters.</p>
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -58,7 +58,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -152,7 +155,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8f0377146d104687ac562eef9403****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -160,7 +166,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentVersion.
+             * <p>The version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.18.8</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -168,7 +177,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vc-a622bb**</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -176,7 +188,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * NextVersion.
+             * <p>The next version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.20.8</p>
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -184,7 +199,15 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The health status of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>healthy</li>
+             * <li>unhealthy</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;

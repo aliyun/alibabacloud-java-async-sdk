@@ -272,7 +272,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * IdleTimeout.
+             * <p>The timeout period for idle connections. Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900</p>
              */
             public Builder idleTimeout(Integer idleTimeout) {
                 this.idleTimeout = idleTimeout;

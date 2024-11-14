@@ -114,6 +114,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         } 
 
         /**
+         * <p>The end of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,6 +127,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         }
 
         /**
+         * <p>The ID of the ELB instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +140,10 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         }
 
         /**
-         * Proto.
+         * <p>The network protocol, such as tcp or udp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -147,6 +152,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +165,7 @@ public class DescribeLoadBalancerListenMonitorRequest extends Request {
         }
 
         /**
+         * <p>The virtual IP address (VIP) port of the ELB instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -54,7 +54,10 @@ public class DescribeClusterKubeConfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8f0377146d104687ac562eef9403****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

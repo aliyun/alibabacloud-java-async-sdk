@@ -23,7 +23,7 @@ public class PreloadRegionSDGRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RedundantNum")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 5, minimum = 1)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 1)
     private Integer redundantNum;
 
     @com.aliyun.core.annotation.Query

@@ -50,7 +50,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LoadBalancerMonitorListenData.
+         * <p>The TCP/UDP monitoring data of the ELB instance.</p>
          */
         public Builder loadBalancerMonitorListenData(java.util.List < LoadBalancerMonitorListenData> loadBalancerMonitorListenData) {
             this.loadBalancerMonitorListenData = loadBalancerMonitorListenData;
@@ -347,7 +347,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             private String vni; 
 
             /**
-             * ActConns.
+             * <p>The number of active connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80285</p>
              */
             public Builder actConns(String actConns) {
                 this.actConns = actConns;
@@ -355,7 +358,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * BizTime.
+             * <p>The business time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-15 16:03:00</p>
              */
             public Builder bizTime(String bizTime) {
                 this.bizTime = bizTime;
@@ -363,7 +369,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Conns.
+             * <p>The number of new connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37150</p>
              */
             public Builder conns(String conns) {
                 this.conns = conns;
@@ -371,7 +380,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * DropConns.
+             * <p>The number of dropped connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dropConns(String dropConns) {
                 this.dropConns = dropConns;
@@ -379,7 +391,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the node to which the ELB instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-dongguan-9</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -387,7 +402,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * InActConns.
+             * <p>The number of inactive connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16322</p>
              */
             public Builder inActConns(String inActConns) {
                 this.inActConns = inActConns;
@@ -395,7 +413,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * <p>The inbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67532</p>
              */
             public Builder inBytes(String inBytes) {
                 this.inBytes = inBytes;
@@ -403,7 +424,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * InDropBytes.
+             * <p>The dropped inbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>324</p>
              */
             public Builder inDropBytes(String inDropBytes) {
                 this.inDropBytes = inDropBytes;
@@ -411,7 +435,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * InDropPkts.
+             * <p>The number of dropped inbound packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder inDropPkts(String inDropPkts) {
                 this.inDropPkts = inDropPkts;
@@ -419,7 +446,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * InPkts.
+             * <p>The number of inbound packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder inPkts(String inPkts) {
                 this.inPkts = inPkts;
@@ -427,7 +457,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * InValidRsNum.
+             * <p>The number of unavailable servers that are attached to the monitored ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inValidRsNum(String inValidRsNum) {
                 this.inValidRsNum = inValidRsNum;
@@ -435,7 +468,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * <p>The ID of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-5q73cv04zeyh43lh74lp4****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -443,7 +479,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>The outbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5155487</p>
              */
             public Builder outBytes(String outBytes) {
                 this.outBytes = outBytes;
@@ -451,7 +490,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * OutDropBytes.
+             * <p>The dropped outbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outDropBytes(String outDropBytes) {
                 this.outDropBytes = outDropBytes;
@@ -459,7 +501,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * OutDropPkts.
+             * <p>The number of dropped outbound packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>76</p>
              */
             public Builder outDropPkts(String outDropPkts) {
                 this.outDropPkts = outDropPkts;
@@ -467,7 +512,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * OutPkts.
+             * <p>The number of outbound packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder outPkts(String outPkts) {
                 this.outPkts = outPkts;
@@ -475,7 +523,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Proto.
+             * <p>The network protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -483,7 +534,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * VPort.
+             * <p>The VIP port of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder vPort(String vPort) {
                 this.vPort = vPort;
@@ -491,7 +545,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * ValidRsNum.
+             * <p>The number of available servers that are attached to the monitored ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder validRsNum(String validRsNum) {
                 this.validRsNum = validRsNum;
@@ -499,7 +556,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Vip.
+             * <p>The VIP of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.8.<em>.</em></p>
              */
             public Builder vip(String vip) {
                 this.vip = vip;
@@ -507,7 +567,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Vni.
+             * <p>The ID of the tunnel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53284</p>
              */
             public Builder vni(String vni) {
                 this.vni = vni;

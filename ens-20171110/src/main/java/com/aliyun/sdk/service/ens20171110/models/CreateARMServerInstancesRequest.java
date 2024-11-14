@@ -31,6 +31,10 @@ public class CreateARMServerInstancesRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentVar")
+    private String environmentVar;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Frequency")
     private Integer frequency;
 
@@ -88,6 +92,7 @@ public class CreateARMServerInstancesRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.ensRegionId = builder.ensRegionId;
+        this.environmentVar = builder.environmentVar;
         this.frequency = builder.frequency;
         this.imageId = builder.imageId;
         this.instanceType = builder.instanceType;
@@ -140,6 +145,13 @@ public class CreateARMServerInstancesRequest extends Request {
      */
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    /**
+     * @return environmentVar
+     */
+    public String getEnvironmentVar() {
+        return this.environmentVar;
     }
 
     /**
@@ -224,6 +236,7 @@ public class CreateARMServerInstancesRequest extends Request {
         private Boolean autoRenew; 
         private Boolean autoUseCoupon; 
         private String ensRegionId; 
+        private String environmentVar; 
         private Integer frequency; 
         private String imageId; 
         private String instanceType; 
@@ -246,6 +259,7 @@ public class CreateARMServerInstancesRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
             this.ensRegionId = request.ensRegionId;
+            this.environmentVar = request.environmentVar;
             this.frequency = request.frequency;
             this.imageId = request.imageId;
             this.instanceType = request.instanceType;
@@ -314,6 +328,15 @@ public class CreateARMServerInstancesRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * EnvironmentVar.
+         */
+        public Builder environmentVar(String environmentVar) {
+            this.putQueryParameter("EnvironmentVar", environmentVar);
+            this.environmentVar = environmentVar;
             return this;
         }
 

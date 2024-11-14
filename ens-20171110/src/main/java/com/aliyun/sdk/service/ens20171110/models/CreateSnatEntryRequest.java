@@ -155,7 +155,10 @@ public class CreateSnatEntryRequest extends Request {
         } 
 
         /**
-         * IdleTimeout.
+         * <p>The timeout period for idle connections. Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);

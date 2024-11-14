@@ -180,6 +180,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation to associate an HAVIP, take note of the following items:</p>
+     * <ul>
+     * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</li>
+     * <li>The HAVIP and ENS instance must belong to the same vSwitch.</li>
+     * <li>The ENS instance must be in the Running or Stopped state.</li>
+     * <li>The HAVIP must be in the Available or InUse state.</li>
+     * <li>AssociateHaVip is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the DescribeHaVips operation to query the status of an HAVIP:<ul>
+     * <li>If the HAVIP is in the Associating state, the HAVIP is being associated.<!----></li>
+     * <li>If the HAVIP is in the InUse state, the HAVIP is associated.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of AssociateHaVip  AssociateHaVipRequest
      * @return AssociateHaVipResponse
      */
@@ -417,6 +431,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateCluster  CreateClusterRequest
      * @return CreateClusterResponse
      */
@@ -579,6 +599,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateForwardEntryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateHaVip  CreateHaVipRequest
+     * @return CreateHaVipResponse
+     */
+    @Override
+    public CompletableFuture<CreateHaVipResponse> createHaVip(CreateHaVipRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateHaVip").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateHaVipResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateHaVipResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1232,6 +1270,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteHaVips  DeleteHaVipsRequest
+     * @return DeleteHaVipsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteHaVipsResponse> deleteHaVips(DeleteHaVipsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteHaVips").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteHaVipsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteHaVipsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteImage  DeleteImageRequest
      * @return DeleteImageResponse
      */
@@ -1760,6 +1816,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * 
      * @param request the request parameters of DescribeCluster  DescribeClusterRequest
      * @return DescribeClusterResponse
      */
@@ -1778,6 +1837,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  The maximum number of times that each user can call this operation per second is 100.</p>
+     * 
      * @param request the request parameters of DescribeClusterKubeConfig  DescribeClusterKubeConfigRequest
      * @return DescribeClusterKubeConfigResponse
      */
@@ -2135,6 +2197,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeEnsRouteEntryListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeEnsRouteTables  DescribeEnsRouteTablesRequest
+     * @return DescribeEnsRouteTablesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeEnsRouteTablesResponse> describeEnsRouteTables(DescribeEnsRouteTablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeEnsRouteTables").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEnsRouteTablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeEnsRouteTablesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2662,6 +2742,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeLoadBalancerListenMonitor  DescribeLoadBalancerListenMonitorRequest
      * @return DescribeLoadBalancerListenMonitorResponse
      */
@@ -3196,6 +3282,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeServerLoadBalancerListenMonitor  DescribeServerLoadBalancerListenMonitorRequest
      * @return DescribeServerLoadBalancerListenMonitorResponse
      */
@@ -3214,6 +3306,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeServerLoadBalancerMonitor  DescribeServerLoadBalancerMonitorRequest
      * @return DescribeServerLoadBalancerMonitorResponse
      */
@@ -4687,9 +4785,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>When you call this operation, take note of the following items:</p>
      * <ul>
      * <li>The disk must be in the In Use (In_Use) or Unattached (Available) state.</li>
-     * <li>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <strong>StopInstance</strong> operation to stop an instance.</li>
-     * <li>The snapshot specified by the SnapshotId parameter must be created from the disk specified by the DiskId parameter.</li>
-     * <li>When you call the <strong>DescribeInstance</strong> operation to query instance information, if the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> for an instance, the instance is locked for security reasons and you cannot perform operations on the instance.</li>
+     * <li>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <a href="~~StopInstance~~">StopInstance</a> operation to stop an instance.</li>
+     * <li>The specified snapshot must be created from the disk specified by the DiskId parameter.</li>
+     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query information about an ENS instance by calling the <a href="~~DescribeInstances~~">DescribeInstances</a> operation, the instance is locked for security reasons and no operations are allowed on the instance.</li>
      * </ul>
      * 
      * @param request the request parameters of ResetDisk  ResetDiskRequest

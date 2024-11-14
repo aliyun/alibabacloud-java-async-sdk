@@ -176,7 +176,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String ipv6Address; 
 
             /**
-             * Ipv6Address.
+             * <p>The IPv6 address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2605:340:cdb1:XXXX:XXXX:XXXX:XXXX:e2d6</p>
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -665,7 +668,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Sets.
+             * <p>The IPv6 addresses of the ENIs.</p>
              */
             public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
                 this.ipv6Sets = ipv6Sets;

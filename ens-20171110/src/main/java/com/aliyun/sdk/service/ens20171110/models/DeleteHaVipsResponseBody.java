@@ -7,15 +7,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AssociateHaVipResponseBody} extends {@link TeaModel}
+ * {@link DeleteHaVipsResponseBody} extends {@link TeaModel}
  *
- * <p>AssociateHaVipResponseBody</p>
+ * <p>DeleteHaVipsResponseBody</p>
  */
-public class AssociateHaVipResponseBody extends TeaModel {
+public class DeleteHaVipsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private AssociateHaVipResponseBody(Builder builder) {
+    private DeleteHaVipsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class AssociateHaVipResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AssociateHaVipResponseBody create() {
+    public static DeleteHaVipsResponseBody create() {
         return builder().build();
     }
 
@@ -38,18 +38,15 @@ public class AssociateHaVipResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public AssociateHaVipResponseBody build() {
-            return new AssociateHaVipResponseBody(this);
+        public DeleteHaVipsResponseBody build() {
+            return new DeleteHaVipsResponseBody(this);
         } 
 
     } 

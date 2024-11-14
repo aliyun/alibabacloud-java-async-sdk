@@ -148,11 +148,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cn-beijing</li>
-         * </ul>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

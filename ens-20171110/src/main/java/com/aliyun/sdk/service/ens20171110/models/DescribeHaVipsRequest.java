@@ -166,7 +166,10 @@ public class DescribeHaVipsRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-cmcc</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -175,7 +178,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * HaVipAddress.
+         * <p>The IP address of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.5.XX.XX</p>
          */
         public Builder haVipAddress(String haVipAddress) {
             this.putQueryParameter("HaVipAddress", haVipAddress);
@@ -184,7 +190,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * HaVipId.
+         * <p>The ID of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>havip-5p14t****</p>
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -193,7 +202,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -202,7 +214,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-57gqcdfvx6n****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -211,7 +226,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -220,7 +238,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +250,16 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the HAVIP. Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Available</li>
+         * <li>InUse</li>
+         * <li>Deleting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -238,7 +268,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

@@ -50,7 +50,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         private java.util.List < ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData; 
 
         /**
-         * <p>Id of the request。</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
@@ -61,7 +61,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * ServerLoadBalancerMonitorData.
+         * <p>The array of the monitoring data.</p>
          */
         public Builder serverLoadBalancerMonitorData(java.util.List < ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData) {
             this.serverLoadBalancerMonitorData = serverLoadBalancerMonitorData;
@@ -251,7 +251,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             private Integer vni; 
 
             /**
-             * Acc.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder acc(Integer acc) {
                 this.acc = acc;
@@ -259,7 +262,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * BizTime.
+             * <p>The business time of the log. Logs are collected every minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-15 16:00:00</p>
              */
             public Builder bizTime(String bizTime) {
                 this.bizTime = bizTime;
@@ -267,7 +273,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the node to which the ELB instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-wuxi-10</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -275,7 +284,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * <p>The ID of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-5sc1s9zrui8lpb8u7cl4f****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -283,7 +295,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerName.
+             * <p>The name of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esk-edge-service-lb-a34****</p>
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -291,7 +306,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerSpec.
+             * <p>The specification of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elb.s2.medium</p>
              */
             public Builder loadBalancerSpec(String loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;
@@ -299,7 +317,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Reqs2xx.
+             * <p>The number of requests with HTTP 2xx status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder reqs2xx(Integer reqs2xx) {
                 this.reqs2xx = reqs2xx;
@@ -307,7 +328,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Reqs3xx.
+             * <p>The number of requests with HTTP 3xx status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reqs3xx(Integer reqs3xx) {
                 this.reqs3xx = reqs3xx;
@@ -315,7 +339,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Reqs4xx.
+             * <p>The number of requests with HTTP 4xx status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder reqs4xx(Integer reqs4xx) {
                 this.reqs4xx = reqs4xx;
@@ -323,7 +350,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Reqs5xx.
+             * <p>The number of requests with HTTP 5xx status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reqs5xx(Integer reqs5xx) {
                 this.reqs5xx = reqs5xx;
@@ -331,7 +361,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * RtAvg.
+             * <p>The average response time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1404</p>
              */
             public Builder rtAvg(Integer rtAvg) {
                 this.rtAvg = rtAvg;
@@ -339,7 +372,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Vip.
+             * <p>The virtual IP address (VIP) of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0****</p>
              */
             public Builder vip(String vip) {
                 this.vip = vip;
@@ -347,7 +383,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Vni.
+             * <p>The ID of the tunnel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3018</p>
              */
             public Builder vni(Integer vni) {
                 this.vni = vni;

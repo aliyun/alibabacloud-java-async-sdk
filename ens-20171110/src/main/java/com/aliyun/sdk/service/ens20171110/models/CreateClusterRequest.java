@@ -68,7 +68,10 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * ClusterVersion.
+         * <p>The version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.18.8</p>
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("ClusterVersion", clusterVersion);
@@ -77,7 +80,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mycluster-1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

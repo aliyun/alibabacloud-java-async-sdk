@@ -85,6 +85,7 @@ public class DescribeServerLoadBalancerMonitorRequest extends Request {
         } 
 
         /**
+         * <p>The end of the time range to query. The maximum range between StartTime and EndTime is 24 hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,6 +98,7 @@ public class DescribeServerLoadBalancerMonitorRequest extends Request {
         }
 
         /**
+         * <p>The ID of the ELB instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,6 +111,7 @@ public class DescribeServerLoadBalancerMonitorRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

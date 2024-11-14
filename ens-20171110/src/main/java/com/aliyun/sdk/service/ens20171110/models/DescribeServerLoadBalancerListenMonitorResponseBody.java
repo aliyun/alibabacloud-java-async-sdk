@@ -50,7 +50,7 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
         private java.util.List < ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData; 
 
         /**
-         * <p>Id of the request。</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
@@ -61,7 +61,7 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
         }
 
         /**
-         * ServerLoadBalancerMonitorData.
+         * <p>The array of the monitoring data.</p>
          */
         public Builder serverLoadBalancerMonitorData(java.util.List < ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData) {
             this.serverLoadBalancerMonitorData = serverLoadBalancerMonitorData;
@@ -275,7 +275,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             private Integer vport; 
 
             /**
-             * Acc.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder acc(Integer acc) {
                 this.acc = acc;
@@ -283,7 +286,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * BizTime.
+             * <p>The business time of the log. Logs are collected every minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-16 15:00:00</p>
              */
             public Builder bizTime(String bizTime) {
                 this.bizTime = bizTime;
@@ -291,7 +297,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the node to which the ELB instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-fuzhou-7</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -299,7 +308,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * LoadBalancerId.
+             * <p>The ID of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-5rcvo1n1t3hykfhhjwjgqp****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -307,7 +319,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * LoadBalancerName.
+             * <p>The name of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esk-edge-service-lb-8377****</p>
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -315,7 +330,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * LoadBalancerSpec.
+             * <p>The specification of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elb.s2.medium</p>
              */
             public Builder loadBalancerSpec(String loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;
@@ -323,7 +341,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * Proto.
+             * <p>The request protocol, such as http, https, or tcp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -331,7 +352,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * Reqs2xx.
+             * <p>The number of requests with HTTP 2xx status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder reqs2xx(Integer reqs2xx) {
                 this.reqs2xx = reqs2xx;
@@ -339,7 +363,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * Reqs3xx.
+             * <p>The number of requests with HTTP 3xx status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reqs3xx(Integer reqs3xx) {
                 this.reqs3xx = reqs3xx;
@@ -347,7 +374,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * Reqs4xx.
+             * <p>The number of requests with HTTP 4xx status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reqs4xx(Integer reqs4xx) {
                 this.reqs4xx = reqs4xx;
@@ -355,7 +385,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * Reqs5xx.
+             * <p>The number of requests with HTTP 5xx status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder reqs5xx(Integer reqs5xx) {
                 this.reqs5xx = reqs5xx;
@@ -363,7 +396,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * RtAvg.
+             * <p>The average response time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1037</p>
              */
             public Builder rtAvg(Integer rtAvg) {
                 this.rtAvg = rtAvg;
@@ -371,7 +407,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * Vip.
+             * <p>The VIP of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0****</p>
              */
             public Builder vip(String vip) {
                 this.vip = vip;
@@ -379,7 +418,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * Vni.
+             * <p>The ID of the tunnel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52497</p>
              */
             public Builder vni(Integer vni) {
                 this.vni = vni;
@@ -387,7 +429,10 @@ public class DescribeServerLoadBalancerListenMonitorResponseBody extends TeaMode
             }
 
             /**
-             * Vport.
+             * <p>The VIP port, such as 80, 8080, or 443.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder vport(Integer vport) {
                 this.vport = vport;
