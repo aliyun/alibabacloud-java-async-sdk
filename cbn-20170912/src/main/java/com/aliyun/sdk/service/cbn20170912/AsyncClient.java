@@ -540,6 +540,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCenBandwidthPackageResponse> deleteCenBandwidthPackage(DeleteCenBandwidthPackageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can delete routes only from virtual private clouds (VPCs) and virtual border routers (VBRs) whose next hop is an <strong>Enterprise Edition transit router connection</strong>, which is the connection to the network instance.</p>
+     * <ul>
+     * <li><strong>DeleteCenChildInstanceRouteEntryToAttachment</strong> is an asynchronous operation. After you send a request, the system returns a <strong>request ID</strong> and runs the task in the background. You can call the <strong>DescribeRouteEntryList</strong> operation to query the status of a route.<ul>
+     * <li>If a route is in the <strong>Deleting</strong> state, the route is being deleted. You can query the route but cannot perform other operations.</li>
+     * <li>If a route cannot be found, the route is deleted.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteCenChildInstanceRouteEntryToAttachment  DeleteCenChildInstanceRouteEntryToAttachmentRequest
      * @return DeleteCenChildInstanceRouteEntryToAttachmentResponse
      */

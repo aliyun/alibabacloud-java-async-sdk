@@ -34,6 +34,11 @@ public class CreateFlowlogRequest extends Request {
     private Long interval;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogFormatString")
+    @com.aliyun.core.annotation.Validation(maxLength = 1000)
+    private String logFormatString;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogStoreName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String logStoreName;
@@ -72,6 +77,10 @@ public class CreateFlowlogRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
+    private String transitRouterId;
+
     private CreateFlowlogRequest(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
@@ -79,6 +88,7 @@ public class CreateFlowlogRequest extends Request {
         this.description = builder.description;
         this.flowLogName = builder.flowLogName;
         this.interval = builder.interval;
+        this.logFormatString = builder.logFormatString;
         this.logStoreName = builder.logStoreName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -88,6 +98,7 @@ public class CreateFlowlogRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
         this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
+        this.transitRouterId = builder.transitRouterId;
     }
 
     public static Builder builder() {
@@ -136,6 +147,13 @@ public class CreateFlowlogRequest extends Request {
      */
     public Long getInterval() {
         return this.interval;
+    }
+
+    /**
+     * @return logFormatString
+     */
+    public String getLogFormatString() {
+        return this.logFormatString;
     }
 
     /**
@@ -201,12 +219,20 @@ public class CreateFlowlogRequest extends Request {
         return this.transitRouterAttachmentId;
     }
 
+    /**
+     * @return transitRouterId
+     */
+    public String getTransitRouterId() {
+        return this.transitRouterId;
+    }
+
     public static final class Builder extends Request.Builder<CreateFlowlogRequest, Builder> {
         private String cenId; 
         private String clientToken; 
         private String description; 
         private String flowLogName; 
         private Long interval; 
+        private String logFormatString; 
         private String logStoreName; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -216,6 +242,7 @@ public class CreateFlowlogRequest extends Request {
         private Long resourceOwnerId; 
         private java.util.List < Tag> tag; 
         private String transitRouterAttachmentId; 
+        private String transitRouterId; 
 
         private Builder() {
             super();
@@ -228,6 +255,7 @@ public class CreateFlowlogRequest extends Request {
             this.description = request.description;
             this.flowLogName = request.flowLogName;
             this.interval = request.interval;
+            this.logFormatString = request.logFormatString;
             this.logStoreName = request.logStoreName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -237,6 +265,7 @@ public class CreateFlowlogRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
             this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
@@ -303,6 +332,15 @@ public class CreateFlowlogRequest extends Request {
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
             this.interval = interval;
+            return this;
+        }
+
+        /**
+         * LogFormatString.
+         */
+        public Builder logFormatString(String logFormatString) {
+            this.putQueryParameter("LogFormatString", logFormatString);
+            this.logFormatString = logFormatString;
             return this;
         }
 
@@ -429,6 +467,15 @@ public class CreateFlowlogRequest extends Request {
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
             this.transitRouterAttachmentId = transitRouterAttachmentId;
+            return this;
+        }
+
+        /**
+         * TransitRouterId.
+         */
+        public Builder transitRouterId(String transitRouterId) {
+            this.putQueryParameter("TransitRouterId", transitRouterId);
+            this.transitRouterId = transitRouterId;
             return this;
         }
 

@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyFlowLogAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CenId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
     @com.aliyun.core.annotation.Query
@@ -33,6 +32,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowLogName")
     private String flowLogName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    private Long interval;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -62,6 +65,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         this.description = builder.description;
         this.flowLogId = builder.flowLogId;
         this.flowLogName = builder.flowLogName;
+        this.interval = builder.interval;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -118,6 +122,13 @@ public class ModifyFlowLogAttributeRequest extends Request {
     }
 
     /**
+     * @return interval
+     */
+    public Long getInterval() {
+        return this.interval;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -158,6 +169,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         private String description; 
         private String flowLogId; 
         private String flowLogName; 
+        private Long interval; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -175,6 +187,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
             this.description = request.description;
             this.flowLogId = request.flowLogId;
             this.flowLogName = request.flowLogName;
+            this.interval = request.interval;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -184,7 +197,6 @@ public class ModifyFlowLogAttributeRequest extends Request {
 
         /**
          * <p>The ID of the CEN instance.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-7qthudw0ll6jmc****</p>
@@ -247,6 +259,15 @@ public class ModifyFlowLogAttributeRequest extends Request {
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
             this.flowLogName = flowLogName;
+            return this;
+        }
+
+        /**
+         * Interval.
+         */
+        public Builder interval(Long interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
             return this;
         }
 

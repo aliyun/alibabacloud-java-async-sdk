@@ -38,7 +38,10 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentResponseBody extends Te
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>250E717B-9823-5FD8-A1C6-5714234FB825</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

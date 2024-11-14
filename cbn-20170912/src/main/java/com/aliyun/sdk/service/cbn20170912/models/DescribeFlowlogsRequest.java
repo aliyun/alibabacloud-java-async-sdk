@@ -33,6 +33,14 @@ public class DescribeFlowlogsRequest extends Request {
     private String flowLogName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowLogVersion")
+    private String flowLogVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    private Integer interval;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogStoreName")
     private String logStoreName;
 
@@ -80,6 +88,10 @@ public class DescribeFlowlogsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
+    private String transitRouterId;
+
     private DescribeFlowlogsRequest(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
@@ -87,6 +99,8 @@ public class DescribeFlowlogsRequest extends Request {
         this.description = builder.description;
         this.flowLogId = builder.flowLogId;
         this.flowLogName = builder.flowLogName;
+        this.flowLogVersion = builder.flowLogVersion;
+        this.interval = builder.interval;
         this.logStoreName = builder.logStoreName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -99,6 +113,7 @@ public class DescribeFlowlogsRequest extends Request {
         this.status = builder.status;
         this.tag = builder.tag;
         this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
+        this.transitRouterId = builder.transitRouterId;
     }
 
     public static Builder builder() {
@@ -147,6 +162,20 @@ public class DescribeFlowlogsRequest extends Request {
      */
     public String getFlowLogName() {
         return this.flowLogName;
+    }
+
+    /**
+     * @return flowLogVersion
+     */
+    public String getFlowLogVersion() {
+        return this.flowLogVersion;
+    }
+
+    /**
+     * @return interval
+     */
+    public Integer getInterval() {
+        return this.interval;
     }
 
     /**
@@ -233,12 +262,21 @@ public class DescribeFlowlogsRequest extends Request {
         return this.transitRouterAttachmentId;
     }
 
+    /**
+     * @return transitRouterId
+     */
+    public String getTransitRouterId() {
+        return this.transitRouterId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeFlowlogsRequest, Builder> {
         private String cenId; 
         private String clientToken; 
         private String description; 
         private String flowLogId; 
         private String flowLogName; 
+        private String flowLogVersion; 
+        private Integer interval; 
         private String logStoreName; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -251,6 +289,7 @@ public class DescribeFlowlogsRequest extends Request {
         private String status; 
         private java.util.List < Tag> tag; 
         private String transitRouterAttachmentId; 
+        private String transitRouterId; 
 
         private Builder() {
             super();
@@ -263,6 +302,8 @@ public class DescribeFlowlogsRequest extends Request {
             this.description = request.description;
             this.flowLogId = request.flowLogId;
             this.flowLogName = request.flowLogName;
+            this.flowLogVersion = request.flowLogVersion;
+            this.interval = request.interval;
             this.logStoreName = request.logStoreName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -275,6 +316,7 @@ public class DescribeFlowlogsRequest extends Request {
             this.status = request.status;
             this.tag = request.tag;
             this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
@@ -340,6 +382,24 @@ public class DescribeFlowlogsRequest extends Request {
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
             this.flowLogName = flowLogName;
+            return this;
+        }
+
+        /**
+         * FlowLogVersion.
+         */
+        public Builder flowLogVersion(String flowLogVersion) {
+            this.putQueryParameter("FlowLogVersion", flowLogVersion);
+            this.flowLogVersion = flowLogVersion;
+            return this;
+        }
+
+        /**
+         * Interval.
+         */
+        public Builder interval(Integer interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
             return this;
         }
 
@@ -477,6 +537,15 @@ public class DescribeFlowlogsRequest extends Request {
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
             this.transitRouterAttachmentId = transitRouterAttachmentId;
+            return this;
+        }
+
+        /**
+         * TransitRouterId.
+         */
+        public Builder transitRouterId(String transitRouterId) {
+            this.putQueryParameter("TransitRouterId", transitRouterId);
+            this.transitRouterId = transitRouterId;
             return this;
         }
 

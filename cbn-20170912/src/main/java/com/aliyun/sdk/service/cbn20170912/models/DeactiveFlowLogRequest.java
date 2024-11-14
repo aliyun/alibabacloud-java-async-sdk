@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeactiveFlowLogRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CenId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
     @com.aliyun.core.annotation.Query
@@ -156,7 +155,6 @@ public class DeactiveFlowLogRequest extends Request {
 
         /**
          * <p>The ID of the CEN instance.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-7qthudw0ll6jmc****</p>
