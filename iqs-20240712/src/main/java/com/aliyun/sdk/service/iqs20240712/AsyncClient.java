@@ -20,10 +20,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of BicyclingDirection  BicyclingDirectionRequest
+     * @return BicyclingDirectionResponse
+     */
+    CompletableFuture<BicyclingDirectionResponse> bicyclingDirection(BicyclingDirectionRequest request);
+
+    /**
      * @param request the request parameters of BicyclingDirectionNova  BicyclingDirectionNovaRequest
      * @return BicyclingDirectionNovaResponse
      */
     CompletableFuture<BicyclingDirectionNovaResponse> bicyclingDirectionNova(BicyclingDirectionNovaRequest request);
+
+    /**
+     * @param request the request parameters of CircleTrafficStatus  CircleTrafficStatusRequest
+     * @return CircleTrafficStatusResponse
+     */
+    CompletableFuture<CircleTrafficStatusResponse> circleTrafficStatus(CircleTrafficStatusRequest request);
 
     /**
      * @param request the request parameters of CommonQueryByScene  CommonQueryBySceneRequest
@@ -32,10 +44,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CommonQueryBySceneResponse> commonQueryByScene(CommonQueryBySceneRequest request);
 
     /**
+     * @param request the request parameters of DrivingDirection  DrivingDirectionRequest
+     * @return DrivingDirectionResponse
+     */
+    CompletableFuture<DrivingDirectionResponse> drivingDirection(DrivingDirectionRequest request);
+
+    /**
      * @param request the request parameters of DrivingDirectionNova  DrivingDirectionNovaRequest
      * @return DrivingDirectionNovaResponse
      */
     CompletableFuture<DrivingDirectionNovaResponse> drivingDirectionNova(DrivingDirectionNovaRequest request);
+
+    /**
+     * @param request the request parameters of ElectrobikeDirection  ElectrobikeDirectionRequest
+     * @return ElectrobikeDirectionResponse
+     */
+    CompletableFuture<ElectrobikeDirectionResponse> electrobikeDirection(ElectrobikeDirectionRequest request);
 
     /**
      * @param request the request parameters of ElectrobikeDirectionNova  ElectrobikeDirectionNovaRequest
@@ -92,16 +116,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryRestaurantsResponse> queryRestaurants(QueryRestaurantsRequest request);
 
     /**
+     * @param request the request parameters of RectangleTrafficStatus  RectangleTrafficStatusRequest
+     * @return RectangleTrafficStatusResponse
+     */
+    CompletableFuture<RectangleTrafficStatusResponse> rectangleTrafficStatus(RectangleTrafficStatusRequest request);
+
+    /**
      * @param request the request parameters of RgeoCode  RgeoCodeRequest
      * @return RgeoCodeResponse
      */
     CompletableFuture<RgeoCodeResponse> rgeoCode(RgeoCodeRequest request);
 
     /**
+     * @param request the request parameters of RoadTrafficStatus  RoadTrafficStatusRequest
+     * @return RoadTrafficStatusResponse
+     */
+    CompletableFuture<RoadTrafficStatusResponse> roadTrafficStatus(RoadTrafficStatusRequest request);
+
+    /**
      * @param request the request parameters of TransitIntegratedDirection  TransitIntegratedDirectionRequest
      * @return TransitIntegratedDirectionResponse
      */
     CompletableFuture<TransitIntegratedDirectionResponse> transitIntegratedDirection(TransitIntegratedDirectionRequest request);
+
+    /**
+     * @param request the request parameters of TransitIntegratedDirectionOld  TransitIntegratedDirectionOldRequest
+     * @return TransitIntegratedDirectionOldResponse
+     */
+    CompletableFuture<TransitIntegratedDirectionOldResponse> transitIntegratedDirectionOld(TransitIntegratedDirectionOldRequest request);
+
+    /**
+     * @param request the request parameters of WalkingDirection  WalkingDirectionRequest
+     * @return WalkingDirectionResponse
+     */
+    CompletableFuture<WalkingDirectionResponse> walkingDirection(WalkingDirectionRequest request);
 
     /**
      * @param request the request parameters of WalkingDirectionNova  WalkingDirectionNovaRequest
