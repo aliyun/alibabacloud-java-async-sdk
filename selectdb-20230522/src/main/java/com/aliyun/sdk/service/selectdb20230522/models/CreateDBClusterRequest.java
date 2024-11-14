@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateDBClusterRequest</p>
@@ -54,10 +55,6 @@ public class CreateDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
@@ -92,7 +89,6 @@ public class CreateDBClusterRequest extends Request {
         this.engineVersion = builder.engineVersion;
         this.period = builder.period;
         this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
@@ -177,13 +173,6 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -228,7 +217,6 @@ public class CreateDBClusterRequest extends Request {
         private String engineVersion; 
         private String period; 
         private String regionId; 
-        private String resourceGroupId; 
         private Long resourceOwnerId; 
         private String usedTime; 
         private String vSwitchId; 
@@ -250,7 +238,6 @@ public class CreateDBClusterRequest extends Request {
             this.engineVersion = request.engineVersion;
             this.period = request.period;
             this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
@@ -259,7 +246,10 @@ public class CreateDBClusterRequest extends Request {
         } 
 
         /**
-         * CacheSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder cacheSize(String cacheSize) {
             this.putQueryParameter("CacheSize", cacheSize);
@@ -268,7 +258,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -277,7 +270,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterClass.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb.2xlarge</p>
          */
         public Builder DBClusterClass(String DBClusterClass) {
             this.putQueryParameter("DBClusterClass", DBClusterClass);
@@ -286,7 +282,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterDescription.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -295,7 +294,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putBodyParameter("DBInstanceId", DBInstanceId);
@@ -313,7 +316,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -331,20 +337,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * 代表资源组的资源属性字段
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putBodyParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -367,7 +367,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1gzt31twhlo0sa5****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -376,7 +379,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * VPC ID。
+         * <p>VPC ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp175iuvg8nxqraf2****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -385,7 +392,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

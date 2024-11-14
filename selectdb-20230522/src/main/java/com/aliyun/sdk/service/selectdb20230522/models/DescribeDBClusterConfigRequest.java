@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterConfigRequest</p>
@@ -98,7 +99,15 @@ public class DescribeDBClusterConfigRequest extends Request {
         } 
 
         /**
-         * ConfigKey.
+         * <p>The configuration file to be modified.</p>
+         * <ul>
+         * <li>For a compute cluster, set the value to be.conf.</li>
+         * <li>For a frontend (FE) cluster, set the value to fe.conf.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be.conf</p>
          */
         public Builder configKey(String configKey) {
             this.putQueryParameter("ConfigKey", configKey);
@@ -107,7 +116,11 @@ public class DescribeDBClusterConfigRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213c8yvv09-be</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -116,7 +129,11 @@ public class DescribeDBClusterConfigRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -125,7 +142,10 @@ public class DescribeDBClusterConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

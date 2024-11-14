@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterConfigChangeLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterConfigChangeLogsResponseBody</p>
@@ -93,7 +94,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +102,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic code. This parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -109,7 +113,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An error occurred while processing your request.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -130,6 +137,12 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterConfigChangeLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterConfigChangeLogsResponseBody</p>
+     */
     public static class ParamChangeLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
@@ -245,7 +258,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the change log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>617975</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -253,7 +269,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * IsApplied.
+             * <p>Indicates whether the modification has taken effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isApplied(Boolean isApplied) {
                 this.isApplied = isApplied;
@@ -261,7 +280,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cumulative_compaction_rounds_for_each_base_compaction_round</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,6 +313,12 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterConfigChangeLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterConfigChangeLogsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbClusterId")
         private String dbClusterId;
@@ -390,7 +418,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamChangeLogs.
+             * <p>The parameter change logs.</p>
              */
             public Builder paramChangeLogs(java.util.List < ParamChangeLogs> paramChangeLogs) {
                 this.paramChangeLogs = paramChangeLogs;
@@ -398,7 +426,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107841167</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

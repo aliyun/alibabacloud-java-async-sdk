@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterConfigResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) authentication failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,7 +97,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic code. This parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -109,7 +116,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An error occurred while processing your request.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -117,7 +127,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADF42B18-43FD-5100-83A9-BE81AB70C863</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +143,12 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterConfigResponseBody</p>
+     */
     public static class Params extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
@@ -241,7 +260,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Comment.
+             * <p>The comments on the parameter.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -249,7 +268,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -257,7 +279,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IsDynamic.
+             * <p>Indicates whether the parameter immediately takes effect without requiring a restart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDynamic(Integer isDynamic) {
                 this.isDynamic = isDynamic;
@@ -265,7 +290,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IsUserModifiable.
+             * <p>Indicates whether the parameter is modifiable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isUserModifiable(Integer isUserModifiable) {
                 this.isUserModifiable = isUserModifiable;
@@ -273,7 +301,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doris_scanner_thread_pool_thread_num</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -281,7 +312,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Optional.
+             * <p>The value range of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0-20000]</p>
              */
             public Builder optional(String optional) {
                 this.optional = optional;
@@ -289,7 +323,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ParamCategory.
+             * <p>The category of the parameter.</p>
              */
             public Builder paramCategory(String paramCategory) {
                 this.paramCategory = paramCategory;
@@ -297,7 +331,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The current value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -311,6 +348,12 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbClusterId")
         private String dbClusterId;
@@ -386,7 +429,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             private Integer taskId; 
 
             /**
-             * DbClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-wny3li00g02-be</p>
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -394,7 +440,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceId.
+             * <p>The numeric ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6585</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -402,7 +451,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-wny3li00g02</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -410,7 +462,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The details about each parameter returned.</p>
              */
             public Builder params(java.util.List < Params> params) {
                 this.params = params;
@@ -418,7 +470,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107841167</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

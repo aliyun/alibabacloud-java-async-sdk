@@ -7,16 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeDBInstanceNetInfoRequest} extends {@link RequestModel}
+ * {@link DescribeAllDBInstanceClassRequest} extends {@link RequestModel}
  *
- * <p>DescribeDBInstanceNetInfoRequest</p>
+ * <p>DescribeAllDBInstanceClassRequest</p>
  */
-public class DescribeDBInstanceNetInfoRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DBInstanceId;
-
+public class DescribeAllDBInstanceClassRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -26,9 +21,8 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeDBInstanceNetInfoRequest(Builder builder) {
+    private DescribeAllDBInstanceClassRequest(Builder builder) {
         super(builder);
-        this.DBInstanceId = builder.DBInstanceId;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -37,20 +31,13 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeDBInstanceNetInfoRequest create() {
+    public static DescribeAllDBInstanceClassRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return DBInstanceId
-     */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
     }
 
     /**
@@ -67,8 +54,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDBInstanceNetInfoRequest, Builder> {
-        private String DBInstanceId; 
+    public static final class Builder extends Request.Builder<DescribeAllDBInstanceClassRequest, Builder> {
         private String regionId; 
         private Long resourceOwnerId; 
 
@@ -76,28 +62,13 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceNetInfoRequest request) {
+        private Builder(DescribeAllDBInstanceClassRequest request) {
             super(request);
-            this.DBInstanceId = request.DBInstanceId;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * <p>The instance ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>selectdb-cn-7213cjv****</p>
-         */
-        public Builder DBInstanceId(String DBInstanceId) {
-            this.putQueryParameter("DBInstanceId", DBInstanceId);
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-
-        /**
-         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,8 +90,8 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         @Override
-        public DescribeDBInstanceNetInfoRequest build() {
-            return new DescribeDBInstanceNetInfoRequest(this);
+        public DescribeAllDBInstanceClassRequest build() {
+            return new DescribeAllDBInstanceClassRequest(this);
         } 
 
     } 

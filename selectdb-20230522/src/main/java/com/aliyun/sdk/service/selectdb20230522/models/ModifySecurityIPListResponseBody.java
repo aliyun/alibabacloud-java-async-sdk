@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityIPListResponseBody} extends {@link TeaModel}
  *
  * <p>ModifySecurityIPListResponseBody</p>
@@ -121,7 +122,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         private String whitelistNetType; 
 
         /**
-         * DBInstanceName.
+         * <p>The name of the instance.</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -129,7 +130,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -137,7 +141,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * GroupTag.
+         * <p>The tag of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grouptag</p>
          */
         public Builder groupTag(String groupTag) {
             this.groupTag = groupTag;
@@ -145,7 +152,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>195F64C2-8F11-532B-A436-FC08A221D756</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,7 +163,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIPList.
+         * <p>The IP addresses in the whitelist of the instance. Multiple IP addresses are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX,127.2.XX.XX</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.securityIPList = securityIPList;
@@ -161,7 +174,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIPType.
+         * <p>The IP address type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder securityIPType(String securityIPType) {
             this.securityIPType = securityIPType;
@@ -169,7 +185,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>479095561</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -177,7 +196,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * WhitelistNetType.
+         * <p>The network type of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mix</p>
          */
         public Builder whitelistNetType(String whitelistNetType) {
             this.whitelistNetType = whitelistNetType;

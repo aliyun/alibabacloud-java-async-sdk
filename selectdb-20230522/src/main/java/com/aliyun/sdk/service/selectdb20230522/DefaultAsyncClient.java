@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AllocateInstancePublicConnection  AllocateInstancePublicConnectionRequest
+     * @return AllocateInstancePublicConnectionResponse
+     */
     @Override
     public CompletableFuture<AllocateInstancePublicConnectionResponse> allocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckCreateDBInstance  CheckCreateDBInstanceRequest
+     * @return CheckCreateDBInstanceResponse
+     */
     @Override
     public CompletableFuture<CheckCreateDBInstanceResponse> checkCreateDBInstance(CheckCreateDBInstanceRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckServiceLinkedRole  CheckServiceLinkedRoleRequest
+     * @return CheckServiceLinkedRoleResponse
+     */
     @Override
     public CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
+     * @return CreateDBClusterResponse
+     */
     @Override
     public CompletableFuture<CreateDBClusterResponse> createDBCluster(CreateDBClusterRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
+     * @return CreateDBInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateDBInstanceResponse> createDBInstance(CreateDBInstanceRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateServiceLinkedRoleForSelectDB  CreateServiceLinkedRoleForSelectDBRequest
+     * @return CreateServiceLinkedRoleForSelectDBResponse
+     */
     @Override
     public CompletableFuture<CreateServiceLinkedRoleForSelectDBResponse> createServiceLinkedRoleForSelectDB(CreateServiceLinkedRoleForSelectDBRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDBCluster  DeleteDBClusterRequest
+     * @return DeleteDBClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDBInstance  DeleteDBInstanceRequest
+     * @return DeleteDBInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteDBInstanceResponse> deleteDBInstance(DeleteDBInstanceRequest request) {
         try {
@@ -151,6 +183,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllDBInstanceClass  DescribeAllDBInstanceClassRequest
+     * @return DescribeAllDBInstanceClassResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAllDBInstanceClassResponse> describeAllDBInstanceClass(DescribeAllDBInstanceClassRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAllDBInstanceClass").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAllDBInstanceClassResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAllDBInstanceClassResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDBClusterConfig  DescribeDBClusterConfigRequest
+     * @return DescribeDBClusterConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterConfigResponse> describeDBClusterConfig(DescribeDBClusterConfigRequest request) {
         try {
@@ -165,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterConfigChangeLogs  DescribeDBClusterConfigChangeLogsRequest
+     * @return DescribeDBClusterConfigChangeLogsResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterConfigChangeLogsResponse> describeDBClusterConfigChangeLogs(DescribeDBClusterConfigChangeLogsRequest request) {
         try {
@@ -179,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
+     * @return DescribeDBInstanceAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceAttributeResponse> describeDBInstanceAttribute(DescribeDBInstanceAttributeRequest request) {
         try {
@@ -193,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBInstanceNetInfo  DescribeDBInstanceNetInfoRequest
+     * @return DescribeDBInstanceNetInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceNetInfoResponse> describeDBInstanceNetInfo(DescribeDBInstanceNetInfoRequest request) {
         try {
@@ -207,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBInstances  DescribeDBInstancesRequest
+     * @return DescribeDBInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request) {
         try {
@@ -221,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecurityIPList  DescribeSecurityIPListRequest
+     * @return DescribeSecurityIPListResponse
+     */
     @Override
     public CompletableFuture<DescribeSecurityIPListResponse> describeSecurityIPList(DescribeSecurityIPListRequest request) {
         try {
@@ -235,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCreateBEClusterInquiry  GetCreateBEClusterInquiryRequest
+     * @return GetCreateBEClusterInquiryResponse
+     */
     @Override
     public CompletableFuture<GetCreateBEClusterInquiryResponse> getCreateBEClusterInquiry(GetCreateBEClusterInquiryRequest request) {
         try {
@@ -249,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetModifyBEClusterInquiry  GetModifyBEClusterInquiryRequest
+     * @return GetModifyBEClusterInquiryResponse
+     */
     @Override
     public CompletableFuture<GetModifyBEClusterInquiryResponse> getModifyBEClusterInquiry(GetModifyBEClusterInquiryRequest request) {
         try {
@@ -263,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBEClusterAttribute  ModifyBEClusterAttributeRequest
+     * @return ModifyBEClusterAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyBEClusterAttributeResponse> modifyBEClusterAttribute(ModifyBEClusterAttributeRequest request) {
         try {
@@ -277,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBCluster  ModifyDBClusterRequest
+     * @return ModifyDBClusterResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterResponse> modifyDBCluster(ModifyDBClusterRequest request) {
         try {
@@ -291,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterConfig  ModifyDBClusterConfigRequest
+     * @return ModifyDBClusterConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterConfigResponse> modifyDBClusterConfig(ModifyDBClusterConfigRequest request) {
         try {
@@ -305,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBInstanceAttribute  ModifyDBInstanceAttributeRequest
+     * @return ModifyDBInstanceAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceAttributeResponse> modifyDBInstanceAttribute(ModifyDBInstanceAttributeRequest request) {
         try {
@@ -319,11 +417,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySecurityIPList  ModifySecurityIPListRequest
+     * @return ModifySecurityIPListResponse
+     */
     @Override
     public CompletableFuture<ModifySecurityIPListResponse> modifySecurityIPList(ModifySecurityIPListRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySecurityIPList").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySecurityIPList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySecurityIPListResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -333,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseInstancePublicConnection  ReleaseInstancePublicConnectionRequest
+     * @return ReleaseInstancePublicConnectionResponse
+     */
     @Override
     public CompletableFuture<ReleaseInstancePublicConnectionResponse> releaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request) {
         try {
@@ -347,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     */
     @Override
     public CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request) {
         try {
@@ -361,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartDBCluster  RestartDBClusterRequest
+     * @return RestartDBClusterResponse
+     */
     @Override
     public CompletableFuture<RestartDBClusterResponse> restartDBCluster(RestartDBClusterRequest request) {
         try {
@@ -375,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartBECluster  StartBEClusterRequest
+     * @return StartBEClusterResponse
+     */
     @Override
     public CompletableFuture<StartBEClusterResponse> startBECluster(StartBEClusterRequest request) {
         try {
@@ -389,11 +507,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopBECluster  StopBEClusterRequest
+     * @return StopBEClusterResponse
+     */
     @Override
     public CompletableFuture<StopBEClusterResponse> stopBECluster(StopBEClusterRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopBECluster").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopBECluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopBEClusterResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -403,11 +525,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeDBInstanceEngineVersion  UpgradeDBInstanceEngineVersionRequest
+     * @return UpgradeDBInstanceEngineVersionResponse
+     */
     @Override
     public CompletableFuture<UpgradeDBInstanceEngineVersionResponse> upgradeDBInstanceEngineVersion(UpgradeDBInstanceEngineVersionRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeDBInstanceEngineVersion").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeDBInstanceEngineVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeDBInstanceEngineVersionResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

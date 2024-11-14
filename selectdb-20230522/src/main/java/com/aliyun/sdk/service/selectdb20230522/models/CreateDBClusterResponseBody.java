@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBClusterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDBClusterResponseBody</p>
@@ -70,7 +71,16 @@ public class CreateDBClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDBClusterResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
@@ -78,6 +88,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         private Long orderId;
 
         private Data(Builder builder) {
+            this.clusterId = builder.clusterId;
             this.DBInstanceId = builder.DBInstanceId;
             this.orderId = builder.orderId;
         }
@@ -88,6 +99,13 @@ public class CreateDBClusterResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         /**
@@ -105,8 +123,17 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String clusterId; 
             private String DBInstanceId; 
             private Long orderId; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
 
             /**
              * DBInstanceId.

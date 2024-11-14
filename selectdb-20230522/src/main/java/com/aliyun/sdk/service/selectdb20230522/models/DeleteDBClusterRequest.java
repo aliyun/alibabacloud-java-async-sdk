@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBClusterRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBClusterRequest</p>
@@ -112,7 +113,10 @@ public class DeleteDBClusterRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-xxxb9f2w-be</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -121,7 +125,11 @@ public class DeleteDBClusterRequest extends Request {
         }
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putBodyParameter("DBInstanceId", DBInstanceId);
@@ -130,7 +138,10 @@ public class DeleteDBClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +150,10 @@ public class DeleteDBClusterRequest extends Request {
         }
 
         /**
-         * 代表资源组的资源属性字段
+         * <p>代表资源组的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

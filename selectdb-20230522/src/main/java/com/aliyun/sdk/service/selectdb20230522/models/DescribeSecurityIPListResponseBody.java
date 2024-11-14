@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIPListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityIPListResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceName.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -69,7 +73,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * GroupItems.
+         * <p>The details about each IP address whitelist returned.</p>
          */
         public Builder groupItems(java.util.List < GroupItems> groupItems) {
             this.groupItems = groupItems;
@@ -77,7 +81,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CBE044D-4594-525D-AC65-E988553D853E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityIPListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIPListResponseBody</p>
+     */
     public static class GroupItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AecurityIPType")
         private String aecurityIPType;
@@ -165,7 +178,14 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             private String whitelistNetType; 
 
             /**
-             * AecurityIPType.
+             * <p>The IP address type. Valid values:</p>
+             * <ul>
+             * <li>ipv4</li>
+             * <li>ipv6 (not supported)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder aecurityIPType(String aecurityIPType) {
                 this.aecurityIPType = aecurityIPType;
@@ -173,7 +193,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -181,7 +204,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTag.
+             * <p>The tag of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder groupTag(String groupTag) {
                 this.groupTag = groupTag;
@@ -189,7 +215,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP addresses in the whitelist. Multiple IP addresses are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.XX.XX</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -197,7 +226,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * WhitelistNetType.
+             * <p>The network type of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mix</p>
              */
             public Builder whitelistNetType(String whitelistNetType) {
                 this.whitelistNetType = whitelistNetType;

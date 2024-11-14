@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModifyBEClusterInquiryRequest} extends {@link RequestModel}
  *
  * <p>GetModifyBEClusterInquiryRequest</p>
@@ -213,7 +214,10 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         } 
 
         /**
-         * CacheSize.
+         * <p>The size of the elastic cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder cacheSize(Long cacheSize) {
             this.putQueryParameter("CacheSize", cacheSize);
@@ -222,7 +226,16 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PREPAY: subscription</li>
+         * <li>POSTPAY: pay-as-you-go</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -231,7 +244,10 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-xxx-be</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -240,7 +256,18 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * <p>The commodity code.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>selectdb_pre_public_intl: subscription commodity on the international site (alibabacloud.com)</li>
+         * <li>selectdb_go_public_cn: pay-as-you-go commodity on the China site (aliyun.com)</li>
+         * <li>selectdb_go_public_intl: pay-as-you-go commodity on the international site (alibabacloud.com)</li>
+         * <li>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb_go_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -249,7 +276,10 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * ComputeSize.
+         * <p>The number of elastic CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder computeSize(Long computeSize) {
             this.putQueryParameter("ComputeSize", computeSize);
@@ -258,7 +288,11 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * DbInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-xxx</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -267,7 +301,10 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * PreCacheSize.
+         * <p>The size of the reserved cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder preCacheSize(Long preCacheSize) {
             this.putQueryParameter("PreCacheSize", preCacheSize);
@@ -276,7 +313,10 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * PreComputeSize.
+         * <p>The number of reserved CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder preComputeSize(Long preComputeSize) {
             this.putQueryParameter("PreComputeSize", preComputeSize);
@@ -285,7 +325,19 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The billing cycle.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * <li>Minute</li>
+         * <li>Hour</li>
+         * <li>Day</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -294,7 +346,11 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * <p>The number of clusters whose specifications are to be changed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Long quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -303,7 +359,11 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

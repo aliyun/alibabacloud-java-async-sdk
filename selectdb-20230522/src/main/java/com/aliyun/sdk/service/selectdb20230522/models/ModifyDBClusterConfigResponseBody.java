@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBClusterConfigResponseBody</p>
@@ -101,7 +102,10 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic code. This parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -109,7 +113,10 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An error occurred while processing your request.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -130,6 +137,12 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBClusterConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDBClusterConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbClusterId")
         private String dbClusterId;

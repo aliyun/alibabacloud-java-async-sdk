@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCreateDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CheckCreateDBInstanceRequest</p>
@@ -285,7 +286,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * CacheSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder cacheSize(Integer cacheSize) {
             this.putQueryParameter("CacheSize", cacheSize);
@@ -294,7 +298,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -321,7 +328,20 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * <p>The specifications of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>selectdb.xlarge</strong>: 4 CPU cores and 32 GB of memory.</li>
+         * <li><strong>selectdb.2xlarge</strong>: 8 CPU cores and 64 GB of memory.</li>
+         * <li><strong>selectdb.4xlarge</strong>: 16 CPU cores and 128 GB of memory.</li>
+         * <li><strong>selectdb.8xlarge</strong>: 32 CPU cores and 256 GB of memory.</li>
+         * <li><strong>selectdb.16xlarge</strong>: 64 CPU cores and 512 GB of memory.</li>
+         * <li><strong>selectdb.24xlarge</strong>: 96 CPU cores and 768 GB of memory.</li>
+         * <li><strong>selectdb.32xlarge</strong>: 128 CPU cores and 1,024 GB of memory.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb.xlarge</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -348,7 +368,11 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>The version of the database engine.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -366,7 +390,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -402,7 +429,17 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration of the instance. Valid values:</p>
+         * <ul>
+         * <li>If Period is set to Year, valid values of UsedTime are 1, 2, 3, 4, and 5.</li>
+         * <li>If Period is set to Month, valid values of UsedTime are 1 to 12.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect and is required only if ChargeType is set to Prepaid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -411,7 +448,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1gzt31twhlo0sa5****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -420,7 +460,11 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VPC ID。
+         * <p>VPC ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp175iuvg8nxqraf2****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -429,7 +473,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

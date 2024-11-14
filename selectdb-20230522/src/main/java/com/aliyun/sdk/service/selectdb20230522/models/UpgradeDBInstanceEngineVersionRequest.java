@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceEngineVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBInstanceEngineVersionRequest</p>
@@ -112,7 +113,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -121,7 +126,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>The database engine version of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -130,7 +139,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +161,10 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * SwitchTimeMode.
+         * <p>The update mode. If you do not specify this parameter, the system immediately updates the database engine version. If you set this parameter to 1, the system updates the database engine version during the maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);

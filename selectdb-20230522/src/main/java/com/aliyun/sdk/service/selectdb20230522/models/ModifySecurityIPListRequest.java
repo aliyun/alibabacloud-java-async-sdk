@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityIPListRequest} extends {@link RequestModel}
  *
  * <p>ModifySecurityIPListRequest</p>
@@ -128,7 +129,11 @@ public class ModifySecurityIPListRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -137,7 +142,11 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the whitelist. Default value: <strong>Default</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -146,7 +155,16 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * <p>The mode in which you want to modify the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: overwrites the IP addresses in the whitelist.</li>
+         * <li><strong>1</strong>: adds IP addresses to the whitelist.</li>
+         * <li><strong>2</strong>: removes IP addresses from the whitelist.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -155,7 +173,11 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +195,11 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX,127.2.XX.XX</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);

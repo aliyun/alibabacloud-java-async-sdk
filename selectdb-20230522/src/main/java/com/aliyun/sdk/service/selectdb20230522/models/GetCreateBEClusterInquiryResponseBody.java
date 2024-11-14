@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCreateBEClusterInquiryResponseBody} extends {@link TeaModel}
  *
  * <p>GetCreateBEClusterInquiryResponseBody</p>
@@ -49,7 +50,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The information returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06758CAB-1204-5852-A471-29C87D5C1D0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCreateBEClusterInquiryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCreateBEClusterInquiryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -109,7 +119,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             private String tradeAmount; 
 
             /**
-             * Currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -117,7 +130,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * <p>The amount of money.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.76</p>
              */
             public Builder tradeAmount(String tradeAmount) {
                 this.tradeAmount = tradeAmount;

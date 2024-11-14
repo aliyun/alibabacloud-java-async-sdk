@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBClusterResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -90,6 +94,12 @@ public class ModifyDBClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDBClusterResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
@@ -149,7 +159,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源一级ID的资源属性字段
+             * <p>代表资源一级ID的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-7213cjv****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;

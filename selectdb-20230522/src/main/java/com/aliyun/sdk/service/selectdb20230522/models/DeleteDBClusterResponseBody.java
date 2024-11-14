@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDBClusterResponseBody</p>
@@ -70,6 +71,12 @@ public class DeleteDBClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteDBClusterResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;

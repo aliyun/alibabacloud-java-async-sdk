@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterConfigChangeLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterConfigChangeLogsRequest</p>
@@ -129,7 +130,10 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         } 
 
         /**
-         * ConfigKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be.conf</p>
          */
         public Builder configKey(String configKey) {
             this.putQueryParameter("ConfigKey", configKey);
@@ -138,7 +142,10 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213c8yvv09-be</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -147,7 +154,10 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-jia3ma3b003</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -156,7 +166,11 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-08T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -165,7 +179,10 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +191,11 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-25T09:48:23Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

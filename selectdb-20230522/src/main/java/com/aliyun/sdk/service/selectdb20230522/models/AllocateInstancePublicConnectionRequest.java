@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateInstancePublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateInstancePublicConnectionRequest</p>
@@ -113,7 +114,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * <p>The prefix of the endpoint. Set the parameter to the prefix of the value of <strong>ConnectionString</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-h033cn****-pub-i3</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -122,7 +127,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -131,7 +140,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * NetType.
+         * <p>The network type of the endpoint to be applied for. Set the value to Public.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -140,7 +153,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

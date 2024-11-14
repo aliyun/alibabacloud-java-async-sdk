@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceRequest</p>
@@ -69,6 +70,10 @@ public class CreateDBInstanceRequest extends Request {
     private String securityIPList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsedTime")
     private Integer usedTime;
 
@@ -102,6 +107,7 @@ public class CreateDBInstanceRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityIPList = builder.securityIPList;
+        this.tag = builder.tag;
         this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -213,6 +219,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return usedTime
      */
     public Integer getUsedTime() {
@@ -254,6 +267,7 @@ public class CreateDBInstanceRequest extends Request {
         private String resourceGroupId; 
         private Long resourceOwnerId; 
         private String securityIPList; 
+        private java.util.List < Tag> tag; 
         private Integer usedTime; 
         private String vSwitchId; 
         private String vpcId; 
@@ -278,6 +292,7 @@ public class CreateDBInstanceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityIPList = request.securityIPList;
+            this.tag = request.tag;
             this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -285,7 +300,10 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * CacheSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200GB</p>
          */
         public Builder cacheSize(Integer cacheSize) {
             this.putQueryParameter("CacheSize", cacheSize);
@@ -294,7 +312,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -321,7 +342,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb.xlarge</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -339,7 +363,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>The type of the database. Default value: <strong>selectdb</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -348,7 +375,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -366,7 +396,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -375,7 +408,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * 代表资源组的资源属性字段
+         * <p>代表资源组的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzt2zaluvuvqa_fake</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -402,6 +438,16 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * UsedTime.
          */
         public Builder usedTime(Integer usedTime) {
@@ -411,7 +457,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1gzt31twhlo0sa5****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -420,7 +469,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VPC ID。
+         * <p>VPC ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp175iuvg8nxqraf2****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -429,7 +482,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -444,4 +500,71 @@ public class CreateDBInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBInstanceRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

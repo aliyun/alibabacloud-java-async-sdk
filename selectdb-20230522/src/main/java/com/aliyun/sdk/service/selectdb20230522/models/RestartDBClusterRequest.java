@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartDBClusterRequest} extends {@link RequestModel}
  *
  * <p>RestartDBClusterRequest</p>
@@ -112,7 +113,11 @@ public class RestartDBClusterRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213c8yvv09-be</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -121,7 +126,11 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putBodyParameter("DBInstanceId", DBInstanceId);
@@ -130,7 +139,11 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * 地域
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -139,7 +152,10 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * 资源组id
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

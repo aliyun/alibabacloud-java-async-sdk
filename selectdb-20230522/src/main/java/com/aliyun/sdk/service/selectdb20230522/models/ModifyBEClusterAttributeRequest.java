@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBEClusterAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyBEClusterAttributeRequest</p>
@@ -128,7 +129,10 @@ public class ModifyBEClusterAttributeRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-xxxb9f2w-be</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -137,7 +141,10 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -146,7 +153,20 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
-         * InstanceAttributeType.
+         * <p>The cluster parameter to be modified.</p>
+         * <ul>
+         * <li>Valid values:****</li>
+         * </ul>
+         * <!---->
+         * 
+         * <ul>
+         * <li>MaintainTime</li>
+         * <li>DBInstanceDescription</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBInstanceDescription</p>
          */
         public Builder instanceAttributeType(String instanceAttributeType) {
             this.putQueryParameter("InstanceAttributeType", instanceAttributeType);
@@ -155,7 +175,10 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +196,11 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>The modfied cluster name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

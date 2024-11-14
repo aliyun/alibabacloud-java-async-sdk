@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterConfigRequest</p>
@@ -127,7 +128,10 @@ public class ModifyDBClusterConfigRequest extends Request {
         } 
 
         /**
-         * ConfigKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be.conf</p>
          */
         public Builder configKey(String configKey) {
             this.putQueryParameter("ConfigKey", configKey);
@@ -136,7 +140,10 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213c8yvv09-be</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -145,7 +152,10 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-xxxd8a5h60y</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -154,7 +164,10 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;param1&quot;,&quot;value&quot;:&quot;1234577777&quot;},{&quot;name&quot;:&quot;param2&quot;,&quot;value&quot;:&quot;${yyyyMMdd}&quot;}]</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);

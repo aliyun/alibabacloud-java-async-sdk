@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDBInstanceResponse} extends {@link TeaModel}
+ * {@link DescribeAllDBInstanceClassResponse} extends {@link TeaModel}
  *
- * <p>CreateDBInstanceResponse</p>
+ * <p>DescribeAllDBInstanceClassResponse</p>
  */
-public class CreateDBInstanceResponse extends Response {
+public class DescribeAllDBInstanceClassResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CreateDBInstanceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateDBInstanceResponseBody body;
+    private DescribeAllDBInstanceClassResponseBody body;
 
-    private CreateDBInstanceResponse(BuilderImpl builder) {
+    private DescribeAllDBInstanceClassResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateDBInstanceResponse create() {
+    public static DescribeAllDBInstanceClassResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CreateDBInstanceResponse extends Response {
     /**
      * @return body
      */
-    public CreateDBInstanceResponseBody getBody() {
+    public DescribeAllDBInstanceClassResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateDBInstanceResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeAllDBInstanceClassResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateDBInstanceResponseBody body);
+        Builder body(DescribeAllDBInstanceClassResponseBody body);
 
         @Override
-        CreateDBInstanceResponse build();
+        DescribeAllDBInstanceClassResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateDBInstanceResponse, Builder>
+            extends Response.BuilderImpl<DescribeAllDBInstanceClassResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateDBInstanceResponseBody body; 
+        private DescribeAllDBInstanceClassResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateDBInstanceResponse response) {
+        private BuilderImpl(DescribeAllDBInstanceClassResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CreateDBInstanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateDBInstanceResponseBody body) {
+        public Builder body(DescribeAllDBInstanceClassResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateDBInstanceResponse build() {
-            return new CreateDBInstanceResponse(this);
+        public DescribeAllDBInstanceClassResponse build() {
+            return new DescribeAllDBInstanceClassResponse(this);
         } 
 
     } 
