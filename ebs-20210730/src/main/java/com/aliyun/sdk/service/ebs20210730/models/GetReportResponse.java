@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetDiskResponse} extends {@link TeaModel}
+ * 
+ * {@link GetReportResponse} extends {@link TeaModel}
  *
- * <p>GetDiskResponse</p>
+ * <p>GetReportResponse</p>
  */
-public class GetDiskResponse extends Response {
+public class GetReportResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class GetDiskResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetDiskResponseBody body;
+    private GetReportResponseBody body;
 
-    private GetDiskResponse(BuilderImpl builder) {
+    private GetReportResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetDiskResponse create() {
+    public static GetReportResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class GetDiskResponse extends Response {
     /**
      * @return body
      */
-    public GetDiskResponseBody getBody() {
+    public GetReportResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetDiskResponse, Builder> {
+    public interface Builder extends Response.Builder<GetReportResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetDiskResponseBody body);
+        Builder body(GetReportResponseBody body);
 
         @Override
-        GetDiskResponse build();
+        GetReportResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetDiskResponse, Builder>
+            extends Response.BuilderImpl<GetReportResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetDiskResponseBody body; 
+        private GetReportResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetDiskResponse response) {
+        private BuilderImpl(GetReportResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class GetDiskResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetDiskResponseBody body) {
+        public Builder body(GetReportResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetDiskResponse build() {
-            return new GetDiskResponse(this);
+        public GetReportResponse build() {
+            return new GetReportResponse(this);
         } 
 
     } 

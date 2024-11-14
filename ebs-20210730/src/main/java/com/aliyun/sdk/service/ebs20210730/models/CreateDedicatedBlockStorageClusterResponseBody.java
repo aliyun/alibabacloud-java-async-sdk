@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDedicatedBlockStorageClusterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDedicatedBlockStorageClusterResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the dedicated block storage cluster.
+         * <p>The ID of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsc-f8z4d3k4nsgg9okb****</p>
          */
         public Builder dbscId(String dbscId) {
             this.dbscId = dbscId;
@@ -69,7 +73,10 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50155660025****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -77,7 +84,10 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

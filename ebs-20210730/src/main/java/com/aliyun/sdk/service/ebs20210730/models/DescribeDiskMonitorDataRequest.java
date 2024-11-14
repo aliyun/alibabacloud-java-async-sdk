@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskMonitorDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiskMonitorDataRequest</p>
@@ -127,7 +128,11 @@ public class DescribeDiskMonitorDataRequest extends Request {
         } 
 
         /**
-         * The ID of the disk.
+         * <p>The ID of the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -136,7 +141,11 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The end of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The end of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-01T05:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -145,13 +154,15 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The interval at which the near real-time monitoring data is collected. Unit: seconds. Valid values:
-         * <p>
+         * <p>The interval at which the near real-time monitoring data is collected. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li>5</li>
+         * <li>60</li>
+         * </ul>
+         * <p>Default value: 5.</p>
          * 
-         * *   5
-         * *   60
-         * 
-         * Default value: 5.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -160,7 +171,11 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The region ID of the disk.
+         * <p>The region ID of the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +184,11 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The beginning of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-01T03:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -178,11 +197,14 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The type of the monitoring data. Valid values:
-         * <p>
+         * <p>The type of the monitoring data. Valid values:</p>
+         * <ul>
+         * <li>basic: baseline performance data.</li>
+         * <li>pro: burst performance data, such as burst I/O operations.</li>
+         * </ul>
          * 
-         * *   basic: baseline performance data.
-         * *   pro: burst performance data, such as burst I/O operations.
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

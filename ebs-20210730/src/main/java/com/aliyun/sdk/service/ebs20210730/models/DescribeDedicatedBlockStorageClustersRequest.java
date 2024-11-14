@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedBlockStorageClustersRequest} extends {@link RequestModel}
  *
  * <p>DescribeDedicatedBlockStorageClustersRequest</p>
@@ -208,7 +209,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         } 
 
         /**
-         * The zone ID of the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The zone ID of the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan-b</p>
          */
         public Builder azoneId(String azoneId) {
             this.putBodyParameter("AzoneId", azoneId);
@@ -217,10 +221,11 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The category of disks that can be created in the dedicated block storage cluster.
-         * <p>
+         * <p>The category of disks that can be created in the dedicated block storage cluster.</p>
+         * <p>Set the value to cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.</p>
          * 
-         * Set the value to cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("Category", category);
@@ -265,7 +270,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -274,7 +282,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -283,7 +294,11 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -292,7 +307,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the dedicated block storage cluster belongs.
+         * <p>The ID of the resource group to which the dedicated block storage cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvs4****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -301,15 +319,14 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The states of dedicated block storage clusters. Valid values:
-         * <p>
-         * 
-         * *   Preparing
-         * *   Running
-         * *   Expired
-         * *   Offline
-         * 
-         * Multiple states can be specified. Valid values of N: 1, 2, 3, and 4.
+         * <p>The states of dedicated block storage clusters. Valid values:</p>
+         * <ul>
+         * <li>Preparing</li>
+         * <li>Running</li>
+         * <li>Expired</li>
+         * <li>Offline</li>
+         * </ul>
+         * <p>Multiple states can be specified. Valid values of N: 1, 2, 3, and 4.</p>
          */
         public Builder status(java.util.List < String > status) {
             this.putBodyParameter("Status", status);
@@ -318,7 +335,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The tags. Up to 20 tags are supported.
+         * <p>The tags. Up to 20 tags are supported.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -333,6 +350,12 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedBlockStorageClustersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedBlockStorageClustersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -372,7 +395,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the dedicated block storage cluster.
+             * <p>The tag key of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -380,7 +406,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             }
 
             /**
-             * The tag value of the dedicated block storage cluster.
+             * <p>The tag value of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

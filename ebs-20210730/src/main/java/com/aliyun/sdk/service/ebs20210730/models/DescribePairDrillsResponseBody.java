@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePairDrillsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePairDrillsResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The information of disaster recovery drills that were performed on the replication pair.
+         * <p>The information of disaster recovery drills that were performed on the replication pair.</p>
          */
         public Builder drills(java.util.List < Drills> drills) {
             this.drills = drills;
@@ -105,7 +106,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,7 +117,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +128,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C46FF5A8-C5F0-4024-8262-B16B6392****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribePairDrillsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePairDrillsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePairDrillsResponseBody</p>
+     */
     public static class Drills extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DrillDiskId")
         private String drillDiskId;
@@ -249,7 +271,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * The ID of the drill disk.
+             * <p>The ID of the drill disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-xxx</p>
              */
             public Builder drillDiskId(String drillDiskId) {
                 this.drillDiskId = drillDiskId;
@@ -257,15 +282,19 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the drill disk. Valid values:
-             * <p>
+             * <p>The status of the drill disk. Valid values:</p>
+             * <ul>
+             * <li>created</li>
+             * <li>deleted</li>
+             * <li>creating</li>
+             * <li>deleting</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter can also display error code details if your drill disk fails to be created or deleted.</p>
+             * </blockquote>
              * 
-             * *   created
-             * *   deleted
-             * *   creating
-             * *   deleting
-             * 
-             * >  This parameter can also display error code details if your drill disk fails to be created or deleted.
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder drillDiskStatus(String drillDiskStatus) {
                 this.drillDiskStatus = drillDiskStatus;
@@ -273,7 +302,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the drill.
+             * <p>The ID of the drill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drill-xxx</p>
              */
             public Builder drillId(String drillId) {
                 this.drillId = drillId;
@@ -281,7 +313,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * The recovery point of the drill. The value of this parameter is a timestamp. Unit: seconds.
+             * <p>The recovery point of the drill. The value of this parameter is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1690855931</p>
              */
             public Builder recoverPoint(Long recoverPoint) {
                 this.recoverPoint = recoverPoint;
@@ -289,7 +324,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning time of the drill. The value of this parameter is a timestamp. Unit: seconds.
+             * <p>The beginning time of the drill. The value of this parameter is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1690855888</p>
              */
             public Builder startAt(Long startAt) {
                 this.startAt = startAt;
@@ -297,14 +335,17 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the drill. Valid values:
-             * <p>
+             * <p>The status of the drill. Valid values:</p>
+             * <ul>
+             * <li>execute_failed</li>
+             * <li>executed</li>
+             * <li>executing</li>
+             * <li>clear_failed</li>
+             * <li>clearing</li>
+             * </ul>
              * 
-             * *   execute_failed
-             * *   executed
-             * *   executing
-             * *   clear_failed
-             * *   clearing
+             * <strong>example:</strong>
+             * <p>executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -312,7 +353,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that was displayed if the drill failed to be executed.
+             * <p>The error message that was displayed if the drill failed to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAIR_SYNCPOINT_NOT_FOUND</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;

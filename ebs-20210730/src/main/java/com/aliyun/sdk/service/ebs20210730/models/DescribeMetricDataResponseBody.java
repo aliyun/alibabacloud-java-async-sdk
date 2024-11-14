@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetricDataResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The disk monitoring data.
+         * <p>The disk monitoring data.</p>
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -69,7 +70,10 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11B55F58-D3A4-4A9B-9596-342420D0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of data entries queried.
+         * <p>The total number of data entries queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeMetricDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricDataResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Datapoints")
         private Object datapoints;
@@ -129,7 +142,22 @@ public class DescribeMetricDataResponseBody extends TeaModel {
             private Object labels; 
 
             /**
-             * The datapoints that consist of consecutive timestamps in seconds and metric values that were recorded at these time points.
+             * <p>The datapoints that consist of consecutive timestamps in seconds and metric values that were recorded at these time points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;1699258861&quot;: 1,
+             *         &quot;1699259461&quot;: 0,
+             *         &quot;1699260061&quot;: 0,
+             *         &quot;1699260661&quot;: 0,
+             *         &quot;1699261261&quot;: 0,
+             *         &quot;1699261861&quot;: 0,
+             *         &quot;1699262461&quot;: 0,
+             *         &quot;1699263061&quot;: 0,
+             *         &quot;1699263661&quot;: 0,
+             *         &quot;1699264261&quot;: 0,
+             *         &quot;1699264861&quot;: 0
+             * }</p>
              */
             public Builder datapoints(Object datapoints) {
                 this.datapoints = datapoints;
@@ -137,7 +165,10 @@ public class DescribeMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;DiskId&quot;: &quot;d-1234&quot;}</p>
              */
             public Builder labels(Object labels) {
                 this.labels = labels;

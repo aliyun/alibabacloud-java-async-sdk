@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDedicatedBlockStorageClusterDiskThroughputStatusRequest} extends {@link RequestModel}
  *
  * <p>QueryDedicatedBlockStorageClusterDiskThroughputStatusRequest</p>
@@ -83,7 +84,10 @@ public class QueryDedicatedBlockStorageClusterDiskThroughputStatusRequest extend
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,7 +96,11 @@ public class QueryDedicatedBlockStorageClusterDiskThroughputStatusRequest extend
         }
 
         /**
-         * The ID of the request of SetDedicatedBlockStorageClusterDiskThroughput api.
+         * <p>The ID of the request of SetDedicatedBlockStorageClusterDiskThroughput api.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A37597B5-BB99-19B3-85EA-4C2B91F0****</p>
          */
         public Builder qosRequestId(String qosRequestId) {
             this.putBodyParameter("QosRequestId", qosRequestId);
@@ -101,7 +109,11 @@ public class QueryDedicatedBlockStorageClusterDiskThroughputStatusRequest extend
         }
 
         /**
-         * The region ID of the dedicated block storage cluster.
+         * <p>The region ID of the dedicated block storage cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

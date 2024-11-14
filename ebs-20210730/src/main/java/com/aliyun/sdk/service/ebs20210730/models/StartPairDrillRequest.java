@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartPairDrillRequest} extends {@link RequestModel}
  *
  * <p>StartPairDrillRequest</p>
@@ -83,7 +84,10 @@ public class StartPairDrillRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,7 +96,11 @@ public class StartPairDrillRequest extends Request {
         }
 
         /**
-         * The ID of the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~) operation to query a list of replication pairs, including replication pair IDs.
+         * <p>The ID of the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354206.html">DescribeDiskReplicaPairs</a> operation to query a list of replication pairs, including replication pair IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pair-xxxx</p>
          */
         public Builder pairId(String pairId) {
             this.putQueryParameter("PairId", pairId);
@@ -101,10 +109,14 @@ public class StartPairDrillRequest extends Request {
         }
 
         /**
-         * The region ID of the secondary disk in the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~) operation to query the region in which the secondary disk of the replication pair resides.
-         * <p>
+         * <p>The region ID of the secondary disk in the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354206.html">DescribeDiskReplicaPairs</a> operation to query the region in which the secondary disk of the replication pair resides.</p>
+         * <blockquote>
+         * <p> You must enable the disaster recovery drill feature in the region in which the secondary site resides.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must enable the disaster recovery drill feature in the region in which the secondary site resides.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

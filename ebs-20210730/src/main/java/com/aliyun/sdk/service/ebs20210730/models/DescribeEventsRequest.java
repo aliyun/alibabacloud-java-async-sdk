@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventsRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventsRequest</p>
@@ -167,7 +168,10 @@ public class DescribeEventsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-01T04:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -176,21 +180,24 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The name of the event. Valid values:
-         * <p>
+         * <p>The name of the event. Valid values:</p>
+         * <ul>
+         * <li>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</li>
+         * <li>BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.</li>
+         * <li>CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.</li>
+         * <li>DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.</li>
+         * <li>DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.</li>
+         * <li>DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.</li>
+         * <li>InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.</li>
+         * <li>InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.</li>
+         * <li>DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.</li>
+         * <li>DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.</li>
+         * <li>DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.</li>
+         * <li>DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.</li>
+         * </ul>
          * 
-         * *   NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.
-         * *   BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.
-         * *   CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.
-         * *   DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.
-         * *   DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.
-         * *   DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.
-         * *   InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.
-         * *   InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.
-         * *   DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.
-         * *   DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.
-         * *   DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.
-         * *   DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.
+         * <strong>example:</strong>
+         * <p>DiskIOHang</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -199,12 +206,12 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. If you specify MaxResults, `MaxResults` and `NextToken` are used for a paged query.
-         * <p>
+         * <p>The maximum number of entries per page. If you specify MaxResults, <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -213,7 +220,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -222,7 +232,11 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The region ID . You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions supported.
+         * <p>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +245,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -240,12 +257,14 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The type of resource. Valid values:
-         * <p>
+         * <p>The type of resource. Valid values:</p>
+         * <ul>
+         * <li>disk.</li>
+         * </ul>
+         * <p>Default value: disk.</p>
          * 
-         * *   disk.
-         * 
-         * Default value: disk.
+         * <strong>example:</strong>
+         * <p>disk</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -254,7 +273,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-01T03:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -263,15 +285,18 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The status of event. Valid values:
-         * <p>
+         * <p>The status of event. Valid values:</p>
+         * <ul>
+         * <li>WillExecute</li>
+         * <li>Executing</li>
+         * <li>Executed</li>
+         * <li>Ignore</li>
+         * <li>Expired</li>
+         * <li>Deleted</li>
+         * </ul>
          * 
-         * - WillExecute
-         * - Executing
-         * - Executed
-         * - Ignore
-         * - Expired
-         * - Deleted
+         * <strong>example:</strong>
+         * <p>WillExecute</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

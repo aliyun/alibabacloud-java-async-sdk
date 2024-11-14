@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReplicaGroupDrillsRequest} extends {@link RequestModel}
  *
  * <p>DescribeReplicaGroupDrillsRequest</p>
@@ -139,7 +140,10 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         } 
 
         /**
-         * The ID of the drill.
+         * <p>The ID of the drill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-drill-xxxx</p>
          */
         public Builder drillId(String drillId) {
             this.putQueryParameter("DrillId", drillId);
@@ -148,7 +152,11 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](~~426614~~) operation to query a list of async replication pair-consistent groups, including group IDs.
+         * <p>The ID of the replication pair-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/426614.html">DescribeDiskReplicaGroups</a> operation to query a list of async replication pair-consistent groups, including group IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-xxxx</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -157,12 +165,12 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to be returned. You can use this parameter together with NextToken.
-         * <p>
+         * <p>The maximum number of entries to be returned. You can use this parameter together with NextToken.</p>
+         * <p>Valid values: 1 to 500.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 500.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -171,7 +179,10 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. When you specify NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. When you specify NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -180,7 +191,10 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +203,10 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +215,11 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * The region ID of the primary or secondary disk in the async replication pair-consistent group. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
+         * <p>The region ID of the primary or secondary disk in the async replication pair-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskReplicaPairProgressResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiskReplicaPairProgressResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The replication progress of the replication pair.
+         * <p>The replication progress of the replication pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -69,7 +73,10 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates the last recovery point in time. The value is returned only after the replication pair works for replicating data.
+         * <p>The timestamp that indicates the last recovery point in time. The value is returned only after the replication pair works for replicating data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661917424</p>
          */
         public Builder recoverPoint(Long recoverPoint) {
             this.recoverPoint = recoverPoint;
@@ -77,7 +84,10 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAA478A0-BEE6-1D42-BEB6-A9CFEAD6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

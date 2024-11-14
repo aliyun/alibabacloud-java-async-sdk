@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskReplicaGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiskReplicaGroupsResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The query token returned in this call.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +109,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +120,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +131,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the replication pair-consistent groups.
+         * <p>The information about the replication pair-consistent groups.</p>
          */
         public Builder replicaGroups(java.util.List < ReplicaGroups> replicaGroups) {
             this.replicaGroups = replicaGroups;
@@ -129,7 +139,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAA478A0-BEE6-1D42-BEB6-A9CFEAD6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiskReplicaGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiskReplicaGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -189,7 +211,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the replication group.
+             * <p>The tag key of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -197,7 +222,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the replication group.
+             * <p>The tag value of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -211,6 +239,12 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDiskReplicaGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiskReplicaGroupsResponseBody</p>
+     */
     public static class ReplicaGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
@@ -466,7 +500,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The bandwidth value. Unit: Mbit/s. This parameter is unavailable and has a system-preset value.
+             * <p>The bandwidth value. Unit: Kbit/s. This parameter is not publicly available and has a system-preset value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -474,7 +511,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the replication pair-consistent group.
+             * <p>The description of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -482,7 +522,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the secondary site is deployed.
+             * <p>The ID of the region in which the secondary site is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder destinationRegionId(String destinationRegionId) {
                 this.destinationRegionId = destinationRegionId;
@@ -490,7 +533,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the secondary site is deployed.
+             * <p>The ID of the zone in which the secondary site is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-e</p>
              */
             public Builder destinationZoneId(String destinationZoneId) {
                 this.destinationZoneId = destinationZoneId;
@@ -498,7 +544,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the replication pair-consistent group.
+             * <p>The name of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myreplicagrouptest</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -506,7 +555,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when data was last replicated from the primary disks to the secondary disks in the replication pair-consistent group. The value of this parameter is a timestamp. Unit: seconds.
+             * <p>The time when data was last replicated from the primary disks to the secondary disks in the replication pair-consistent group. The value of this parameter is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637835114</p>
              */
             public Builder lastRecoverPoint(Long lastRecoverPoint) {
                 this.lastRecoverPoint = lastRecoverPoint;
@@ -514,7 +566,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the replications pairs that belong to the replication pair-consistent group.
+             * <p>The IDs of replication pairs that belong to the replication pair-consistent group.</p>
              */
             public Builder pairIds(java.util.List < byte[] > pairIds) {
                 this.pairIds = pairIds;
@@ -522,7 +574,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of replications pairs that belong to the replication pair-consistent group.
+             * <p>The number of replication pairs that belong to the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pairNumber(Long pairNumber) {
                 this.pairNumber = pairNumber;
@@ -530,7 +585,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The initial source region (primary region) of the replication pair-consistent group.
+             * <p>The initial source region (primary region) of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder primaryRegion(String primaryRegion) {
                 this.primaryRegion = primaryRegion;
@@ -538,7 +596,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The initial source zone (primary zone) of the replication pair-consistent group.
+             * <p>The initial source zone (primary zone) of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h</p>
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -546,7 +607,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds.
+             * <p>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder RPO(Long RPO) {
                 this.RPO = RPO;
@@ -554,7 +618,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the replication pair-consistent group.
+             * <p>The IDs of the replication pair-consistent groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-myreplica****</p>
              */
             public Builder replicaGroupId(String replicaGroupId) {
                 this.replicaGroupId = replicaGroupId;
@@ -562,7 +629,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the replication group belongs.
+             * <p>The ID of the resource group to which the replication pair-consistent group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2a*******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -570,11 +640,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the site from which the information of the replication pair and replication pair-consistent group is obtained. Valid values:
-             * <p>
+             * <p>The type of the site from which the information about the replication pairs and replication pair-consistent group was obtained. Valid values:</p>
+             * <ul>
+             * <li>production: primary site</li>
+             * <li>backup: secondary site</li>
+             * </ul>
              * 
-             * *   production: primary site
-             * *   backup: secondary site
+             * <strong>example:</strong>
+             * <p>production</p>
              */
             public Builder site(String site) {
                 this.site = site;
@@ -582,7 +655,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the primary site is deployed.
+             * <p>The ID of the region in which the primary site is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder sourceRegionId(String sourceRegionId) {
                 this.sourceRegionId = sourceRegionId;
@@ -590,7 +666,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the primary site is deployed.
+             * <p>The ID of the zone in which the primary site is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-f</p>
              */
             public Builder sourceZoneId(String sourceZoneId) {
                 this.sourceZoneId = sourceZoneId;
@@ -598,7 +677,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The initial destination region (secondary region) of the replication pair-consistent group.
+             * <p>The initial destination region (secondary region) of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder standbyRegion(String standbyRegion) {
                 this.standbyRegion = standbyRegion;
@@ -606,7 +688,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The initial destination zone (secondary zone) of the replication pair-consistent group.
+             * <p>The initial destination zone (secondary zone) of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-e</p>
              */
             public Builder standbyZone(String standbyZone) {
                 this.standbyZone = standbyZone;
@@ -614,27 +699,30 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the replication pair-consistent group. Valid values:
-             * <p>
+             * <p>The status of the replication pair-consistent group. Valid values:</p>
+             * <ul>
+             * <li>invalid: The replication pair-consistent group is invalid, which indicates that abnormal replication pairs are present in the replication pair-consistent group.</li>
+             * <li>creating: The replication pair-consistent group is being created.</li>
+             * <li>created: The replication pair-consistent group was created.</li>
+             * <li>create_failed: The replication pair-consistent group failed to be created.</li>
+             * <li>manual_syncing: Data was being manually synchronized between the disks in the replication pair-consistent group. When data was being manually synchronized for the first time, the replication pair is in this state.</li>
+             * <li>syncing: Data was being synchronized between the disks. When data is being asynchronously replicated from the primary disk to the secondary disk again in subsequent operations, the replication pair is in this state.</li>
+             * <li>normal: The replication pair was working as expected. When the system finishes replicating data from the primary disk to the secondary disk within the current replication cycle, the replication pair enters this state.</li>
+             * <li>stopping: The replication pair was being stopped.</li>
+             * <li>stopped: The replication pair was stopped.</li>
+             * <li>stop_failed: The replication pair failed to be stopped.</li>
+             * <li>failovering: A failover was being performed.</li>
+             * <li>failovered: A failover was performed.</li>
+             * <li>failover_failed: A failover failed to be performed.</li>
+             * <li>reprotecting: A reverse replication was being performed.</li>
+             * <li>reprotect_failed: A reverse replication failed to be performed.</li>
+             * <li>deleting: The replication pair was being deleted.</li>
+             * <li>delete_failed: The replication pair failed to be deleted.</li>
+             * <li>deleted: The replication pair was deleted.</li>
+             * </ul>
              * 
-             * *   invalid: The replication pair-consistent group is invalid, which indicates that abnormal replication pairs are present in the replication pair-consistent group.
-             * *   creating: The replication pair-consistent group is being created.
-             * *   created: The replication pair-consistent group is created.
-             * *   create_failed: The replication pair-consistent group cannot be created.
-             * *   manual_syncing: Data is being manually synchronized between the disks in the replication pair-consistent group. The first time data is being manually synchronized between the disks in a replication pair-consistent group, the replication pair-consistent group is in this state.
-             * *   syncing: Data is being synchronized between the disks in the replication pair-consistent group. While data is being asynchronously replicated from the primary disks to the secondary disks not for the first time, the replication pair-consistent group is in this state.
-             * *   normal: The replication pair-consistent group is working as expected. When the system finishes replicating data from the primary disks to the secondary disks within the current replication cycle, the replication pair-consistent group enters this state.
-             * *   stopping: The replication pair-consistent group is being stopped.
-             * *   stopped: The replication pair-consistent group is stopped.
-             * *   stop_failed: The replication pair-consistent group cannot be stopped.
-             * *   failovering: A failover is being performed.
-             * *   failovered: A failover is performed.
-             * *   failover_failed: A failover cannot be performed.
-             * *   reprotecting: A reverse replication is being performed.
-             * *   reprotect_failed: A reverse replication cannot be performed.
-             * *   deleting: The replication pair-consistent group is being deleted.
-             * *   delete_failed: The replication pair-consistent group cannot be deleted.
-             * *   deleted: The replication pair-consistent group is deleted.
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -642,7 +730,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the replication pair.
+             * <p>The tags of the replication pair-consistent group.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

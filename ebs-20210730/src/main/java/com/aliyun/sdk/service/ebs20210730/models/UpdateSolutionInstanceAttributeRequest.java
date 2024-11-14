@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSolutionInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateSolutionInstanceAttributeRequest</p>
@@ -111,7 +112,10 @@ public class UpdateSolutionInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -120,7 +124,10 @@ public class UpdateSolutionInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The description of the instance.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -129,7 +136,10 @@ public class UpdateSolutionInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -138,7 +148,11 @@ public class UpdateSolutionInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the dedicated block storage cluster resides. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region where the dedicated block storage cluster resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +161,11 @@ public class UpdateSolutionInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inst-***</p>
          */
         public Builder solutionInstanceId(String solutionInstanceId) {
             this.putQueryParameter("SolutionInstanceId", solutionInstanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDedicatedBlockStorageClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateDedicatedBlockStorageClusterRequest</p>
@@ -185,7 +186,11 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the zone in which to create the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The ID of the zone in which to create the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan-b</p>
          */
         public Builder azone(String azone) {
             this.putQueryParameter("Azone", azone);
@@ -194,10 +199,14 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The capacity of the dedicated block storage cluster. Valid values: 61440 to 2334720. Unit: GiB. 2,334,720 GiB is equal to 2,280 TiB. The capacity increases in a minimum increment of 12,288 GiB.
-         * <p>
+         * <p>The capacity of the dedicated block storage cluster. Valid values: 61440 to 2334720. Unit: GiB. 2,334,720 GiB is equal to 2,280 TiB. The capacity increases in a minimum increment of 12,288 GiB.</p>
+         * <blockquote>
+         * <p> If the capacity of a dedicated block storage cluster is less than 576 TiB, the maximum throughput per TiB cannot exceed 52 MB/s. If the capacity of a dedicated block storage cluster is greater than 576 TiB, the maximum throughput per TiB cannot exceed 26 MB/s.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If the capacity of a dedicated block storage cluster is less than 576 TiB, the maximum throughput per TiB cannot exceed 52 MB/s. If the capacity of a dedicated block storage cluster is greater than 576 TiB, the maximum throughput per TiB cannot exceed 26 MB/s.
+         * <strong>example:</strong>
+         * <p>61440</p>
          */
         public Builder capacity(Long capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -206,7 +215,10 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1233</p>
          */
         public Builder dbscId(String dbscId) {
             this.putQueryParameter("DbscId", dbscId);
@@ -215,7 +227,11 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The name of the dedicated block storage cluster.
+         * <p>The name of the dedicated block storage cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDBSCCluster</p>
          */
         public Builder dbscName(String dbscName) {
             this.putQueryParameter("DbscName", dbscName);
@@ -224,7 +240,10 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The subscription duration of the dedicated block storage cluster. Valid values: 6, 7, 8, 9, 10, 11, 12, 24, and 36.
+         * <p>The subscription duration of the dedicated block storage cluster. Valid values: 6, 7, 8, 9, 10, 11, 12, 24, and 36.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -233,7 +252,10 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration specified by `Period`. Set the value to Month.
+         * <p>The unit of the subscription duration specified by <code>Period</code>. Set the value to Month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -242,7 +264,11 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region in which to create the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -251,7 +277,10 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the dedicated block storage cluster.
+         * <p>The ID of the resource group to which to assign the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvs*******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -260,7 +289,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The tags to add to the dedicated block storage cluster. You can specify up to 20 tags.
+         * <p>The tags to add to the dedicated block storage cluster. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -269,15 +298,17 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The type of the dedicated block storage cluster. Valid values:
-         * <p>
+         * <p>The type of the dedicated block storage cluster. Valid values:</p>
+         * <ul>
+         * <li>Standard: basic dedicated block storage cluster. Enterprise SSDs (ESSDs) at performance level 0 (PL0 ESSDs) can be created in basic dedicated block storage clusters.</li>
+         * <li>Premium: performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.</li>
+         * </ul>
+         * <p>Default value: Premium.</p>
+         * <p>For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   Standard: basic dedicated block storage cluster. Enterprise SSDs (ESSDs) at performance level 0 (PL0 ESSDs) can be created in basic dedicated block storage clusters.
-         * *   Premium: performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.
-         * 
-         * Default value: Premium.
-         * 
-         * For more information about ESSDs, see [ESSDs](~~122389~~).
+         * <strong>example:</strong>
+         * <p>Premium</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -292,6 +323,12 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDedicatedBlockStorageClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDedicatedBlockStorageClusterRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -333,7 +370,11 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the dedicated block storage cluster.
+             * <p>The key of tag N to add to the dedicated block storage cluster.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -341,7 +382,11 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the dedicated block storage cluster.
+             * <p>The value of tag N to add to the dedicated block storage cluster.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

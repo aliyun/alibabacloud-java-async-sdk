@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventsResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -81,7 +85,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The events.
+         * <p>The events.</p>
          */
         public Builder resourceEvents(java.util.List < ResourceEvents> resourceEvents) {
             this.resourceEvents = resourceEvents;
@@ -97,7 +104,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +120,12 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventsResponseBody</p>
+     */
     public static class ResourceEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -257,7 +273,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The description of the event.
+             * <p>The description of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>need snapshot</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -265,7 +284,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
+             * <p>The end time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679538083000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -273,12 +295,15 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the event. Valid values:
-             * <p>
+             * <p>The level of the event. Valid values:</p>
+             * <ol>
+             * <li>INFO</li>
+             * <li>WARN</li>
+             * <li>CRITICAL</li>
+             * </ol>
              * 
-             * 1.  INFO
-             * 2.  WARN
-             * 3.  CRITICAL
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -286,21 +311,24 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event. Valid values:
-             * <p>
+             * <p>The name of the event. Valid values:</p>
+             * <ul>
+             * <li>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</li>
+             * <li>BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.</li>
+             * <li>CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.</li>
+             * <li>DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.</li>
+             * <li>DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.</li>
+             * <li>DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.</li>
+             * <li>InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.</li>
+             * <li>InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.</li>
+             * <li>DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.</li>
+             * <li>DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.</li>
+             * <li>DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.</li>
+             * <li>DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.</li>
+             * </ul>
              * 
-             * *   NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.
-             * *   BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.
-             * *   CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.
-             * *   DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.
-             * *   DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.
-             * *   DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.
-             * *   InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.
-             * *   InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.
-             * *   DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.
-             * *   DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.
-             * *   DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.
-             * *   DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.
+             * <strong>example:</strong>
+             * <p>DiskIOHang</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -308,12 +336,15 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. Valid values:
-             * <p>
+             * <p>The type of the event. Valid values:</p>
+             * <ol>
+             * <li>Notification</li>
+             * <li>SystemException</li>
+             * <li>Alert</li>
+             * </ol>
              * 
-             * 1.  Notification
-             * 2.  SystemException
-             * 3.  Alert
+             * <strong>example:</strong>
+             * <p>Alert</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -321,14 +352,17 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The recommended action after the event occurred. Valid values:
-             * <p>
+             * <p>The recommended action after the event occurred. Valid values:</p>
+             * <ul>
+             * <li>ModifyDiskSpec</li>
+             * <li>CreateSnapshot</li>
+             * <li>ResizeDisk</li>
+             * <li>AdjustProvision</li>
+             * <li>ModifyInstanceSpec</li>
+             * </ul>
              * 
-             * *   ModifyDiskSpec
-             * *   CreateSnapshot
-             * *   ResizeDisk
-             * *   AdjustProvision
-             * *   ModifyInstanceSpec
+             * <strong>example:</strong>
+             * <p>AdjustProvision</p>
              */
             public Builder recommendAction(String recommendAction) {
                 this.recommendAction = recommendAction;
@@ -336,7 +370,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The codes of the parameters for the recommended action after the event occurred.
+             * <p>The codes of the parameters for the recommended action after the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4296</p>
              */
             public Builder recommendParams(String recommendParams) {
                 this.recommendParams = recommendParams;
@@ -344,7 +381,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp67acfmxazb4p****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -352,7 +392,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -360,7 +403,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
+             * <p>The start time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684204822000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -368,15 +414,18 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. Valid values:
-             * <p>
+             * <p>The status of the event. Valid values:</p>
+             * <ol>
+             * <li>WillExecute</li>
+             * <li>Executing</li>
+             * <li>Executed</li>
+             * <li>Ignore</li>
+             * <li>Expired</li>
+             * <li>Deleted</li>
+             * </ol>
              * 
-             * 1.  WillExecute
-             * 2.  Executing
-             * 3.  Executed
-             * 4.  Ignore
-             * 5.  Expired
-             * 6.  Deleted
+             * <strong>example:</strong>
+             * <p>WillExecute</p>
              */
             public Builder status(String status) {
                 this.status = status;

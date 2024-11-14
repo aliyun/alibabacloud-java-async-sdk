@@ -7,18 +7,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribePairDrillsRequest} extends {@link RequestModel}
+ * {@link ListReportsRequest} extends {@link RequestModel}
  *
- * <p>DescribePairDrillsRequest</p>
+ * <p>ListReportsRequest</p>
  */
-public class DescribePairDrillsRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DrillId")
-    private String drillId;
+public class ListReportsRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String appName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
-    private Long maxResults;
+    private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -32,24 +33,17 @@ public class DescribePairDrillsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PairId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String pairId;
-
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private DescribePairDrillsRequest(Builder builder) {
+    private ListReportsRequest(Builder builder) {
         super(builder);
-        this.drillId = builder.drillId;
+        this.appName = builder.appName;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.pairId = builder.pairId;
         this.regionId = builder.regionId;
     }
 
@@ -57,7 +51,7 @@ public class DescribePairDrillsRequest extends Request {
         return new Builder();
     }
 
-    public static DescribePairDrillsRequest create() {
+    public static ListReportsRequest create() {
         return builder().build();
     }
 
@@ -67,16 +61,16 @@ public class DescribePairDrillsRequest extends Request {
     }
 
     /**
-     * @return drillId
+     * @return appName
      */
-    public String getDrillId() {
-        return this.drillId;
+    public String getAppName() {
+        return this.appName;
     }
 
     /**
      * @return maxResults
      */
-    public Long getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -102,74 +96,64 @@ public class DescribePairDrillsRequest extends Request {
     }
 
     /**
-     * @return pairId
-     */
-    public String getPairId() {
-        return this.pairId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribePairDrillsRequest, Builder> {
-        private String drillId; 
-        private Long maxResults; 
+    public static final class Builder extends Request.Builder<ListReportsRequest, Builder> {
+        private String appName; 
+        private Integer maxResults; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String pairId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribePairDrillsRequest request) {
+        private Builder(ListReportsRequest request) {
             super(request);
-            this.drillId = request.drillId;
+            this.appName = request.appName;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.pairId = request.pairId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The ID of the drill.</p>
+         * <p>App name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>drill-xxxx</p>
+         * <p>App1</p>
          */
-        public Builder drillId(String drillId) {
-            this.putQueryParameter("DrillId", drillId);
-            this.drillId = drillId;
+        public Builder appName(String appName) {
+            this.putBodyParameter("AppName", appName);
+            this.appName = appName;
             return this;
         }
 
         /**
-         * <p>The maximum number of entries to be returned. You can use this parameter together with NextToken.</p>
-         * <p>Valid values: 1 to 500.</p>
-         * <p>Default value: 10.</p>
+         * <p>Maximum number of items for Token-based pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
          */
-        public Builder maxResults(Long maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaPairs operation. Leave this parameter empty the first time you call this operation. When you specify NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.</p>
+         * <p>Query token (Token), the value is the NextToken parameter value returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
-         * <p>AAAAAdDWBF2****</p>
+         * <p>a6792e832ff0XXXXX</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -178,7 +162,7 @@ public class DescribePairDrillsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>Page number for paginated queries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,10 +174,10 @@ public class DescribePairDrillsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Number of rows per page when performing paginated queries.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,34 +186,20 @@ public class DescribePairDrillsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354206.html">DescribeDiskReplicaPairs</a> operation to query a list of asynchronous replication pairs, including replication pair IDs.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pair-xxxx</p>
-         */
-        public Builder pairId(String pairId) {
-            this.putQueryParameter("PairId", pairId);
-            this.pairId = pairId;
-            return this;
-        }
-
-        /**
-         * <p>The region ID of the primary or secondary disk in the async replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
-         * <p>This parameter is required.</p>
+         * <p>Region ID. You can call <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> to query the list of regions supported by Block Storage Data Insights.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
+            this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
 
         @Override
-        public DescribePairDrillsRequest build() {
-            return new DescribePairDrillsRequest(this);
+        public ListReportsRequest build() {
+            return new ListReportsRequest(this);
         } 
 
     } 

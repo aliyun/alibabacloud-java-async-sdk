@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -61,7 +62,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * The token used to start the next query.
+         * <p>The token used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The request ID is returned regardless of whether the call is successful.
+         * <p>The ID of the request. The request ID is returned regardless of whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>484256DA-D816-44D2-9D86-B6EE4D5B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.
+         * <p>Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.</p>
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -90,6 +97,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -153,7 +166,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pair-cn-c4d2t7f****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -161,12 +177,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid values:
-             * <p>
+             * <p>The type of the resource. Valid values:</p>
+             * <ul>
+             * <li>dedicatedblockstoragecluster: dedicated block storage cluster</li>
+             * <li>diskreplicapair: replication pair</li>
+             * <li>diskreplicagroup: replication pair-consistent group</li>
+             * </ul>
              * 
-             * *   dedicatedblockstoragecluster: dedicated block storage cluster
-             * *   diskreplicapair: replication pair
-             * *   diskreplicagroup: replication pair-consistent group
+             * <strong>example:</strong>
+             * <p>pair</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -174,7 +193,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the resource.
+             * <p>The tag key of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -182,7 +204,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the resource.
+             * <p>The tag value of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

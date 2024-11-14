@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDedicatedBlockStorageClusterDiskThroughputResponseBody} extends {@link TeaModel}
  *
  * <p>SetDedicatedBlockStorageClusterDiskThroughputResponseBody</p>
@@ -37,7 +38,10 @@ public class SetDedicatedBlockStorageClusterDiskThroughputResponseBody extends T
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17EE62D8-064E-5404-8B0D-72122478****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +109,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +120,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +131,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The returned snapshot policies.
+         * <p>The returned snapshot policies.</p>
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -129,7 +139,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CA35A83-8D8A-5B67-BAA0-2E124F194DA4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -189,7 +211,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private Integer retainDays; 
 
             /**
-             * The ID of the destination region.
+             * <p>The ID of the destination region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -197,7 +222,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of snapshot copies in the destination region. Unit: day.
+             * <p>The retention period of snapshot copies in the destination region. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder retainDays(Integer retainDays) {
                 this.retainDays = retainDays;
@@ -211,6 +239,12 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
+     */
     public static class CrossRegionCopyInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -250,7 +284,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private java.util.List < Regions> regions; 
 
             /**
-             * Indicates whether the cross-region replication feature is enabled.
+             * <p>Indicates whether the cross-region replication feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -258,7 +295,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The destination regions that store snapshot copies.
+             * <p>The destination regions that store snapshot copies.</p>
              */
             public Builder regions(java.util.List < Regions> regions) {
                 this.regions = regions;
@@ -272,6 +309,12 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
+     */
     public static class RetainRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
@@ -323,7 +366,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String timeUnit; 
 
             /**
-             * The maximum number of snapshots that can be retained.
+             * <p>The maximum number of snapshots that can be retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -331,7 +377,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the retention period of snapshots.
+             * <p>The value of the retention period of snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder timeInterval(Integer timeInterval) {
                 this.timeInterval = timeInterval;
@@ -339,7 +388,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the retention period of snapshots.
+             * <p>The unit of the retention period of snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAYS</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -353,6 +405,12 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
+     */
     public static class Schedule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
@@ -380,7 +438,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String cronExpression; 
 
             /**
-             * The cron expression of the enterprise-level snapshot policy.
+             * <p>The cron expression of the enterprise-level snapshot policy.</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -394,6 +452,12 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecialPeriodUnit")
         private String specialPeriodUnit;
@@ -445,7 +509,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String timeUnit; 
 
             /**
-             * The unit of the special retention period.
+             * <p>The unit of the special retention period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEEKS</p>
              */
             public Builder specialPeriodUnit(String specialPeriodUnit) {
                 this.specialPeriodUnit = specialPeriodUnit;
@@ -453,7 +520,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the retention period.
+             * <p>The value of the retention period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeInterval(Integer timeInterval) {
                 this.timeInterval = timeInterval;
@@ -461,7 +531,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the retention period.
+             * <p>The unit of the retention period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEEKS</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -475,6 +548,12 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
+     */
     public static class SpecialRetainRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -514,7 +593,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * Indicates whether the special retention period is enabled.
+             * <p>Indicates whether the special retention period is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -522,7 +604,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The special retention rules.
+             * <p>The special retention rules.</p>
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -536,6 +618,12 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
+     */
     public static class StorageRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableImmediateAccess")
         private Boolean enableImmediateAccess;
@@ -563,7 +651,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private Boolean enableImmediateAccess; 
 
             /**
-             * Indicates whether the instant access feature is enabled.
+             * <p>Indicates whether the instant access feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableImmediateAccess(Boolean enableImmediateAccess) {
                 this.enableImmediateAccess = enableImmediateAccess;
@@ -577,6 +668,12 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -616,7 +713,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag of the enterprise-level snapshot policy.
+             * <p>The key of the tag of the enterprise-level snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -624,7 +724,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag of the enterprise-level snapshot policy.
+             * <p>The value of the tag of the enterprise-level snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -638,6 +741,12 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -845,7 +954,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The time when the enterprise-level snapshot policy was created.
+             * <p>The time when the enterprise-level snapshot policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-24T06:03:35Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -853,7 +965,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The replication rule of snapshots in the enterprise-level snapshot policy.
+             * <p>The replication rule of snapshots in the enterprise-level snapshot policy.</p>
              */
             public Builder crossRegionCopyInfo(CrossRegionCopyInfo crossRegionCopyInfo) {
                 this.crossRegionCopyInfo = crossRegionCopyInfo;
@@ -861,7 +973,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the enterprise-level snapshot policy.
+             * <p>The description of the enterprise-level snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -869,7 +984,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The disks that are associated with the snapshot policy.
+             * <p>The disks that are associated with the snapshot policy.</p>
              */
             public Builder diskIds(java.util.List < String > diskIds) {
                 this.diskIds = diskIds;
@@ -877,7 +992,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether snapshots are managed.
+             * <p>Indicates whether snapshots are managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder managedForEcs(Boolean managedForEcs) {
                 this.managedForEcs = managedForEcs;
@@ -885,7 +1003,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the enterprise-level snapshot policy.
+             * <p>The name of the enterprise-level snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -893,7 +1014,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the enterprise-level snapshot policy.
+             * <p>The ID of the enterprise-level snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esp-xxx</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -901,7 +1025,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * the resource group
+             * <p>the resource group</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -909,7 +1036,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The retention rule of the enterprise-level snapshot policy.
+             * <p>The retention rule of the enterprise-level snapshot policy.</p>
              */
             public Builder retainRule(RetainRule retainRule) {
                 this.retainRule = retainRule;
@@ -917,7 +1044,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling rule of the enterprise-level snapshot policy.
+             * <p>The scheduling rule of the enterprise-level snapshot policy.</p>
              */
             public Builder schedule(Schedule schedule) {
                 this.schedule = schedule;
@@ -925,7 +1052,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The special retention rules of the enterprise-level snapshot policy.
+             * <p>The special retention rules of the enterprise-level snapshot policy.</p>
              */
             public Builder specialRetainRules(SpecialRetainRules specialRetainRules) {
                 this.specialRetainRules = specialRetainRules;
@@ -933,7 +1060,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the enterprise-level snapshot policy.
+             * <p>The status of the enterprise-level snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DISABLED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -941,7 +1071,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The storage rule of snapshots in the enterprise-level snapshot policy.
+             * <p>The storage rule of snapshots in the enterprise-level snapshot policy.</p>
              */
             public Builder storageRule(StorageRule storageRule) {
                 this.storageRule = storageRule;
@@ -949,7 +1079,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * the pair tags
+             * <p>the pair tags</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -957,7 +1087,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of objects that are associated with the enterprise-level snapshot policy.
+             * <p>The number of objects that are associated with the enterprise-level snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder targetCount(Integer targetCount) {
                 this.targetCount = targetCount;
@@ -965,7 +1098,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the enterprise-level snapshot policy.
+             * <p>The type of the enterprise-level snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DISK</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

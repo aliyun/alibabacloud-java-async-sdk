@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnterpriseSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateEnterpriseSnapshotPolicyRequest</p>
@@ -226,7 +227,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -235,7 +239,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * Snapshot replication destination information.
+         * <p>Snapshot replication destination information.</p>
          */
         public Builder crossRegionCopyInfo(CrossRegionCopyInfo crossRegionCopyInfo) {
             String crossRegionCopyInfoShrink = shrink(crossRegionCopyInfo, "CrossRegionCopyInfo", "json");
@@ -245,7 +249,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The description of the policy.
+         * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -254,7 +261,11 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -263,7 +274,11 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The region ID . You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which snapshot policy is supported.
+         * <p>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +287,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the snapshot policy.
+         * <p>The ID of the resource group to which to assign the snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -281,7 +299,8 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The snapshot retention rule.
+         * <p>The snapshot retention rule.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder retainRule(RetainRule retainRule) {
             String retainRuleShrink = shrink(retainRule, "RetainRule", "json");
@@ -291,7 +310,8 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The rule for scheduling.
+         * <p>The rule for scheduling.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder schedule(Schedule schedule) {
             String scheduleShrink = shrink(schedule, "Schedule", "json");
@@ -301,7 +321,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The special snapshot retention rules.
+         * <p>The special snapshot retention rules.</p>
          */
         public Builder specialRetainRules(SpecialRetainRules specialRetainRules) {
             String specialRetainRulesShrink = shrink(specialRetainRules, "SpecialRetainRules", "json");
@@ -311,12 +331,16 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The status of the policy. Valid values:
-         * <p>
+         * <p>The status of the policy. Valid values:</p>
+         * <ul>
+         * <li><p>ENABLED: Enable snapshot policy execution.</p>
+         * </li>
+         * <li><p>DISABLED: Disable snapshot policy execution.</p>
+         * </li>
+         * </ul>
          * 
-         * - ENABLED: Enable snapshot policy execution.
-         * 
-         * - DISABLED: Disable snapshot policy execution.
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -325,7 +349,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * Advanced snapshot features.
+         * <p>Advanced snapshot features.</p>
          */
         public Builder storageRule(StorageRule storageRule) {
             String storageRuleShrink = shrink(storageRule, "StorageRule", "json");
@@ -335,7 +359,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -344,10 +368,14 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * Binding target type, valid value:
-         * <p>
+         * <p>Binding target type, valid value:</p>
+         * <ul>
+         * <li>DISK</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - DISK
+         * <strong>example:</strong>
+         * <p>DISK</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -362,6 +390,12 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEnterpriseSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnterpriseSnapshotPolicyRequest</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -401,7 +435,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             private Integer retainDays; 
 
             /**
-             * The region ID of the destination. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+             * <p>The region ID of the destination. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -409,7 +446,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * Number of days to retain the destination snapshot. The range of values is greater than 1.
+             * <p>Number of days to retain the destination snapshot. The range of values is greater than 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder retainDays(Integer retainDays) {
                 this.retainDays = retainDays;
@@ -423,6 +463,12 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEnterpriseSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnterpriseSnapshotPolicyRequest</p>
+     */
     public static class CrossRegionCopyInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -462,12 +508,16 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             private java.util.List < Regions> regions; 
 
             /**
-             * Whether cross-region replication is enabled. The range of values:
-             * <p>
+             * <p>Whether cross-region replication is enabled. The range of values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * </li>
+             * <li><p>false</p>
+             * </li>
+             * </ul>
              * 
-             * - true
-             * 
-             * - false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -475,7 +525,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The list of destination regions.
+             * <p>The list of destination regions.</p>
              */
             public Builder regions(java.util.List < Regions> regions) {
                 this.regions = regions;
@@ -489,6 +539,12 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEnterpriseSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnterpriseSnapshotPolicyRequest</p>
+     */
     public static class RetainRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
@@ -540,7 +596,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             private String timeUnit; 
 
             /**
-             * Maximum number of retained snapshots.
+             * <p>Maximum number of retained snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -548,7 +607,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The time interval , valid value greater than 1.
+             * <p>The time interval , valid value greater than 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder timeInterval(Integer timeInterval) {
                 this.timeInterval = timeInterval;
@@ -556,12 +618,16 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The unit of time, valid values:
-             * <p>
+             * <p>The unit of time, valid values:</p>
+             * <ul>
+             * <li><p>DAYS</p>
+             * </li>
+             * <li><p>WEEKS</p>
+             * </li>
+             * </ul>
              * 
-             * - DAYS
-             * 
-             * - WEEKS
+             * <strong>example:</strong>
+             * <p>DAYS</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -575,6 +641,12 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEnterpriseSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnterpriseSnapshotPolicyRequest</p>
+     */
     public static class Schedule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CronExpression")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -603,10 +675,9 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             private String cronExpression; 
 
             /**
-             * The time when the policy will to be scheduled. Valid values: Set the parameter in a cron expression.
-             * <p>
-             * 
-             * For example, you can use 0 0 4 1/1 * ? to specify 04:00:00 (UTC+8) on the first day of each month.
+             * <p>The time when the policy will to be scheduled. Valid values: Set the parameter in a cron expression.</p>
+             * <p>For example, you can use 0 0 4 1/1 * ? to specify 04:00:00 (UTC+8) on the first day of each month.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -620,6 +691,12 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEnterpriseSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnterpriseSnapshotPolicyRequest</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecialPeriodUnit")
         private String specialPeriodUnit;
@@ -671,11 +748,15 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             private String timeUnit; 
 
             /**
-             * The periodic unit for specially retained snapshots. If configured to WEEKS, it provides special retention for the first snapshot of each week. The retention period is determined by TimeUnit and TimeInterval. The range of values are:
-             * <p>
-             * - WEEKS
-             * - MONTHS
-             * - YEARS
+             * <p>The periodic unit for specially retained snapshots. If configured to WEEKS, it provides special retention for the first snapshot of each week. The retention period is determined by TimeUnit and TimeInterval. The range of values are:</p>
+             * <ul>
+             * <li>WEEKS</li>
+             * <li>MONTHS</li>
+             * <li>YEARS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WEEKS</p>
              */
             public Builder specialPeriodUnit(String specialPeriodUnit) {
                 this.specialPeriodUnit = specialPeriodUnit;
@@ -683,7 +764,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * Retention Time Value. The range of values is greater than 1.
+             * <p>Retention Time Value. The range of values is greater than 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder timeInterval(Integer timeInterval) {
                 this.timeInterval = timeInterval;
@@ -691,12 +775,16 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * Retention time unit for special snapshots. The range of values:
-             * <p>
+             * <p>Retention time unit for special snapshots. The range of values:</p>
+             * <ul>
+             * <li><p>DAYS</p>
+             * </li>
+             * <li><p>WEEKS</p>
+             * </li>
+             * </ul>
              * 
-             * - DAYS
-             * 
-             * - WEEKS
+             * <strong>example:</strong>
+             * <p>WEEKS</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -710,6 +798,12 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEnterpriseSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnterpriseSnapshotPolicyRequest</p>
+     */
     public static class SpecialRetainRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -749,11 +843,14 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             private java.util.List < Rules> rules; 
 
             /**
-             * Indicates whether the special retention is enabled.
-             * <p>
+             * <p>Indicates whether the special retention is enabled.</p>
+             * <ul>
+             * <li>true: enable</li>
+             * <li>false: disable</li>
+             * </ul>
              * 
-             * *   true: enable
-             * *   false: disable
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -761,7 +858,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The special retention rules.
+             * <p>The special retention rules.</p>
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -775,6 +872,12 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEnterpriseSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnterpriseSnapshotPolicyRequest</p>
+     */
     public static class StorageRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableImmediateAccess")
         private Boolean enableImmediateAccess;
@@ -802,12 +905,16 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             private Boolean enableImmediateAccess; 
 
             /**
-             * Whether to enable the rapid availability of snapshots. The range of values:
-             * <p>
+             * <p>Whether to enable the rapid availability of snapshots. The range of values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * </li>
+             * <li><p>false</p>
+             * </li>
+             * </ul>
              * 
-             * - true
-             * 
-             * - false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableImmediateAccess(Boolean enableImmediateAccess) {
                 this.enableImmediateAccess = enableImmediateAccess;
@@ -821,6 +928,12 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEnterpriseSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnterpriseSnapshotPolicyRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -862,7 +975,11 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -870,12 +987,13 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>This parameter is required.</p>
              * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSolutionInstanceConfigurationRequest} extends {@link RequestModel}
  *
  * <p>DescribeSolutionInstanceConfigurationRequest</p>
@@ -97,7 +98,10 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -106,7 +110,7 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
         }
 
         /**
-         * The parameters.
+         * <p>The parameters.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -115,7 +119,11 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +132,11 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the solution.
+         * <p>The ID of the solution.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sln-xxxxx</p>
          */
         public Builder solutionId(String solutionId) {
             this.putQueryParameter("SolutionId", solutionId);
@@ -139,6 +151,12 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSolutionInstanceConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSolutionInstanceConfigurationRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -180,7 +198,11 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The key of the parameter.
+             * <p>The key of the parameter.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -188,10 +210,14 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
-             * <p>
+             * <p>The value of the parameter.</p>
+             * <blockquote>
+             * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

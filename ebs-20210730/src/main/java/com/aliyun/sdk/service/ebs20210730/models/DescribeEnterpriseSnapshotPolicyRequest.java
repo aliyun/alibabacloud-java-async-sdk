@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnterpriseSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnterpriseSnapshotPolicyRequest</p>
@@ -180,7 +181,10 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -189,7 +193,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The IDs of disks.
+         * <p>The IDs of disks.</p>
          */
         public Builder diskIds(java.util.List < String > diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -198,7 +202,10 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -207,7 +214,10 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -216,7 +226,10 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +238,10 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +250,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The IDs of enterprise-level snapshot policies.
+         * <p>The IDs of enterprise-level snapshot policies.</p>
          */
         public Builder policyIds(java.util.List < String > policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
@@ -243,7 +259,11 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,7 +272,10 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -261,7 +284,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The tags of the enterprise-level snapshot policies. Valid values of N: 1 to 20.
+         * <p>The tags of the enterprise-level snapshot policies. Valid values of N: 1 to 20.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -276,6 +299,12 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnterpriseSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeEnterpriseSnapshotPolicyRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -317,7 +346,11 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the enterprise-level snapshot policy.
+             * <p>The key of tag N of the enterprise-level snapshot policy.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -325,7 +358,11 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The value of tag N of the enterprise-level snapshot policy.
+             * <p>The value of tag N of the enterprise-level snapshot policy.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

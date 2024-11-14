@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedBlockStorageClustersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDedicatedBlockStorageClustersResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         private Long totalCount; 
 
         /**
-         * The queried dedicated block storage clusters.
+         * <p>Details about the dedicated block storage clusters.</p>
          */
         public Builder dedicatedBlockStorageClusters(java.util.List < DedicatedBlockStorageClusters> dedicatedBlockStorageClusters) {
             this.dedicatedBlockStorageClusters = dedicatedBlockStorageClusters;
@@ -105,7 +106,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,7 +117,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +128,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11B55F58-D3A4-4A9B-9596-342420D0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedBlockStorageClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedBlockStorageClustersResponseBody</p>
+     */
     public static class DedicatedBlockStorageClusterCapacity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableCapacity")
         private Long availableCapacity;
@@ -309,7 +331,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private Double usedSpaceCapacity; 
 
             /**
-             * The available capacity of the dedicated block storage cluster. Unit: GiB.
+             * <p>The available capacity of the dedicated block storage cluster. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61440</p>
              */
             public Builder availableCapacity(Long availableCapacity) {
                 this.availableCapacity = availableCapacity;
@@ -317,7 +342,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The total capacity of the dedicated block storage cluster that was delivered in disk creation orders. Unit: GB.
+             * <p>The total capacity of the dedicated block storage cluster that was delivered in disk creation orders. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61440</p>
              */
             public Builder availableDeviceCapacity(Long availableDeviceCapacity) {
                 this.availableDeviceCapacity = availableDeviceCapacity;
@@ -325,7 +353,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * This parameter is displayed only if Thin Provision is enabled.
+             * <p>This parameter is displayed only if Thin Provision is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40000.3</p>
              */
             public Builder availableSpaceCapacity(Double availableSpaceCapacity) {
                 this.availableSpaceCapacity = availableSpaceCapacity;
@@ -333,7 +364,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The capacity of the dedicated block storage cluster that was delivered in orders. Unit: GB.
+             * <p>The capacity of the dedicated block storage cluster that was delivered in orders. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61440</p>
              */
             public Builder clusterAvailableCapacity(Long clusterAvailableCapacity) {
                 this.clusterAvailableCapacity = clusterAvailableCapacity;
@@ -341,7 +375,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The capacity of the dedicated block storage cluster that is to be delivered in orders. Unit: GB.
+             * <p>The capacity of the dedicated block storage cluster that is to be delivered in orders. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder clusterDeliveryCapacity(Long clusterDeliveryCapacity) {
                 this.clusterDeliveryCapacity = clusterDeliveryCapacity;
@@ -349,7 +386,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The to-be-delivered capacity of the dedicated block storage cluster. Unit: GB.
+             * <p>The capacity to be delivered for the dedicated block storage cluster. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deliveryCapacity(Long deliveryCapacity) {
                 this.deliveryCapacity = deliveryCapacity;
@@ -357,7 +397,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The total capacity of the dedicated block storage cluster. Unit: GiB.
+             * <p>The total capacity of the dedicated block storage cluster. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61440</p>
              */
             public Builder totalCapacity(Long totalCapacity) {
                 this.totalCapacity = totalCapacity;
@@ -365,7 +408,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The total capacity of the dedicated block storage cluster that is to be delivered in disk creation orders. Unit: GB.
+             * <p>The total capacity of the dedicated block storage cluster that is to be delivered in disk creation orders. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61440</p>
              */
             public Builder totalDeviceCapacity(Long totalDeviceCapacity) {
                 this.totalDeviceCapacity = totalDeviceCapacity;
@@ -373,7 +419,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * This parameter is displayed only if Thin Provision is enabled.
+             * <p>This parameter is displayed only if Thin Provision is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73728</p>
              */
             public Builder totalSpaceCapacity(Long totalSpaceCapacity) {
                 this.totalSpaceCapacity = totalSpaceCapacity;
@@ -381,7 +430,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The used capacity of the dedicated block storage cluster. Unit: GB.
+             * <p>The used capacity of the dedicated block storage cluster. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1440</p>
              */
             public Builder usedCapacity(Long usedCapacity) {
                 this.usedCapacity = usedCapacity;
@@ -389,7 +441,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The capacity of the dedicated block storage cluster that was used to create disks. Unit: GB.
+             * <p>The capacity of the dedicated block storage cluster that was used to create disks. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32000</p>
              */
             public Builder usedDeviceCapacity(Long usedDeviceCapacity) {
                 this.usedDeviceCapacity = usedDeviceCapacity;
@@ -397,7 +452,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * This parameter is displayed only if Thin Provision is enabled.
+             * <p>This parameter is displayed only if Thin Provision is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33727.7</p>
              */
             public Builder usedSpaceCapacity(Double usedSpaceCapacity) {
                 this.usedSpaceCapacity = usedSpaceCapacity;
@@ -411,6 +469,12 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedBlockStorageClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedBlockStorageClustersResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -450,7 +514,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private String tagValue; 
 
             /**
-             * The tag key of the dedicated block storage cluster.
+             * <p>The tag key of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -458,7 +525,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The tag value of the dedicated block storage cluster.
+             * <p>The tag value of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -472,6 +542,12 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedBlockStorageClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedBlockStorageClustersResponseBody</p>
+     */
     public static class DedicatedBlockStorageClusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
@@ -715,7 +791,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private String zoneId; 
 
             /**
-             * The unique ID (UID) of the Alibaba Cloud account.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345601234560***</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -723,7 +802,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The category of disks that can be created in the dedicated block storage cluster.
+             * <p>The category of disks that can be created in the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -731,7 +813,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The time when the dedicated block storage cluster was created. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the dedicated block storage cluster was created. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657113211</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -739,7 +824,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The storage capacity of the dedicated block storage cluster.
+             * <p>Details about the storage capacity of the dedicated block storage cluster.</p>
              */
             public Builder dedicatedBlockStorageClusterCapacity(DedicatedBlockStorageClusterCapacity dedicatedBlockStorageClusterCapacity) {
                 this.dedicatedBlockStorageClusterCapacity = dedicatedBlockStorageClusterCapacity;
@@ -747,7 +832,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the dedicated block storage cluster.
+             * <p>The ID of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbsc-f8z4d3k4nsgg9okb****</p>
              */
             public Builder dedicatedBlockStorageClusterId(String dedicatedBlockStorageClusterId) {
                 this.dedicatedBlockStorageClusterId = dedicatedBlockStorageClusterId;
@@ -755,7 +843,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the dedicated block storage cluster.
+             * <p>The name of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myDBSCCluster</p>
              */
             public Builder dedicatedBlockStorageClusterName(String dedicatedBlockStorageClusterName) {
                 this.dedicatedBlockStorageClusterName = dedicatedBlockStorageClusterName;
@@ -763,7 +854,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The description of the dedicated block storage cluster.
+             * <p>The description of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -771,7 +865,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The dedicated block storage cluster enable thin provison.
+             * <p>Indicates whether Thin Provision is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableThinProvision(Boolean enableThinProvision) {
                 this.enableThinProvision = enableThinProvision;
@@ -779,7 +876,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The time when the dedicated block storage cluster expires. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the dedicated block storage cluster expires. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1673020800</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -787,15 +887,19 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The performance level of disks. Valid values:
-             * <p>
+             * <p>The performance level of disks. Valid values:</p>
+             * <ul>
+             * <li>PL0</li>
+             * <li>PL1</li>
+             * <li>PL2</li>
+             * <li>PL3</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is valid only when the SupportedCategory value is cloud_essd.</p>
+             * </blockquote>
              * 
-             * *   PL0
-             * *   PL1
-             * *   PL2
-             * *   PL3
-             * 
-             * >  This parameter takes effect only if Category is set to cloud_essd.
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -803,7 +907,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The region ID of the dedicated block storage cluster.
+             * <p>The region ID of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-heyuan</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -811,7 +918,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the resource group to which the dedicated block storage cluster belongs.
+             * <p>The ID of the resource group to which the dedicated block storage cluster belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzsoux****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -819,7 +929,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * Oversold ratio of cluster space capacity for creating disk.
+             * <p>The capacity oversold ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder sizeOverSoldRatio(Double sizeOverSoldRatio) {
                 this.sizeOverSoldRatio = sizeOverSoldRatio;
@@ -827,13 +940,16 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The state of the dedicated block storage cluster. Valid values:
-             * <p>
+             * <p>The state of the dedicated block storage cluster. Valid values:</p>
+             * <ul>
+             * <li>Preparing</li>
+             * <li>Running</li>
+             * <li>Expired</li>
+             * <li>Offline</li>
+             * </ul>
              * 
-             * *   Preparing
-             * *   Running
-             * *   Expired
-             * *   Offline
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -841,7 +957,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * StorageDomain.
+             * <p>StorageDomain</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StorageDomain</p>
              */
             public Builder storageDomain(String storageDomain) {
                 this.storageDomain = storageDomain;
@@ -849,7 +968,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * This parameter is not supported.
+             * <p>This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder supportedCategory(String supportedCategory) {
                 this.supportedCategory = supportedCategory;
@@ -857,7 +979,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The tags of the dedicated block storage cluster.
+             * <p>The tags of the dedicated block storage cluster.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -865,11 +987,14 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The type of the dedicated block storage cluster. Valid values:
-             * <p>
+             * <p>The type of the dedicated block storage cluster. Valid values:</p>
+             * <ul>
+             * <li>Standard: basic dedicated block storage cluster. ESSDs at performance level 0 (PL0 ESSDs) can be created in basic dedicated block storage clusters.</li>
+             * <li>Premium: performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.</li>
+             * </ul>
              * 
-             * *   Standard: basic dedicated block storage cluster. ESSDs at performance level 0 (PL0 ESSDs) can be created in basic dedicated block storage clusters.
-             * *   Premium: performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -877,7 +1002,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             }
 
             /**
-             * The zone ID of the dedicated block storage cluster.
+             * <p>The zone ID of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-heyuan-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

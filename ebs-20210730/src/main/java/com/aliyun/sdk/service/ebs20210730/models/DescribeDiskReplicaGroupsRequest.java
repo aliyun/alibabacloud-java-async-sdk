@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskReplicaGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiskReplicaGroupsRequest</p>
@@ -180,10 +181,11 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         } 
 
         /**
-         * The IDs of replication pair-consistent groups. You can specify the IDs of one or more replication pair-consistent groups. Separate the IDs with commas (,).
-         * <p>
+         * <p>The IDs of the replication pair-consistent groups. You can specify the IDs of one or more replication pair-consistent groups. Separate the IDs with commas (,).</p>
+         * <p>This parameter is empty by default, which indicates that all replication pair-consistent groups in the specified region are queried. You can specify up to the IDs of 100 replication pair-consistent groups.</p>
          * 
-         * This parameter is empty by default, which indicates that all replication pair-consistent groups in the specified region are queried.
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder groupIds(String groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -192,10 +194,12 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: 1 to 500.
-         * <p>
+         * <p>The maximum number of entries per page. You can use this parameter together with NextToken.</p>
+         * <p>Valid values: 1 to 500.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -204,7 +208,10 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the replication pair-consistent group. You can perform a fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-name***</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -213,7 +220,10 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaGroups operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -222,7 +232,10 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,10 +244,10 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
          * 
-         * Valid values: 1 to 100.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +256,11 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the replication pair-consistent group.
+         * <p>The ID of the region to which the replication pair-consistent group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,7 +269,10 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the replication group belongs.
+         * <p>The ID of the resource group to which the replication pair-consistent group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -261,15 +281,20 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * The type of the site from which the information of replication pair-consistent groups is retrieved. This parameter is used for scenarios where data is replicated across zones in replication pairs.
-         * <p>
+         * <p>The type of the site from which the information of replication pair-consistent groups is retrieved. This parameter is used for scenarios where data is replicated across zones in replication pairs.</p>
+         * <ul>
+         * <li><p>If this parameter is not specified, information such as the status of replication pair-consistent groups at the primary site is queried and returned.</p>
+         * </li>
+         * <li><p>Otherwise, information such as the state of replication pairs at the site specified by the Site parameter is queried and returned. Valid values:</p>
+         * <ul>
+         * <li>production: primary site</li>
+         * <li>backup: secondary site</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   If the Site parameter is not specified, information such as the state of replication pair-consistent groups at the primary site is queried and returned.
-         * 
-         * *   Otherwise, information such as the state of replication pair-consistent groups at the site specified by the Site parameter is queried and returned. Valid values:
-         * 
-         *     *   production: primary site
-         *     *   backup: secondary site
+         * <strong>example:</strong>
+         * <p>production</p>
          */
         public Builder site(String site) {
             this.putQueryParameter("Site", site);
@@ -278,7 +303,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * The resource tags. You can specify up to 20 tags.
+         * <p>The tags to add to the replication pair-consistent group. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -293,6 +318,12 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiskReplicaGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDiskReplicaGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -332,7 +363,10 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the replication group.
+             * <p>The key of tag N of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -340,7 +374,10 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the replication group.
+             * <p>The value of tag N of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

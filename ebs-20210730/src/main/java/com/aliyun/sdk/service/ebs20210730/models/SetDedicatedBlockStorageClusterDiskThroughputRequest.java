@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDedicatedBlockStorageClusterDiskThroughputRequest} extends {@link RequestModel}
  *
  * <p>SetDedicatedBlockStorageClusterDiskThroughputRequest</p>
@@ -98,7 +99,11 @@ public class SetDedicatedBlockStorageClusterDiskThroughputRequest extends Reques
         } 
 
         /**
-         * Target throughput.
+         * <p>Target throughput.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder bps(Integer bps) {
             this.putBodyParameter("Bps", bps);
@@ -107,7 +112,10 @@ public class SetDedicatedBlockStorageClusterDiskThroughputRequest extends Reques
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -116,7 +124,11 @@ public class SetDedicatedBlockStorageClusterDiskThroughputRequest extends Reques
         }
 
         /**
-         * The ID of the disk.
+         * <p>The ID of the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder diskId(String diskId) {
             this.putBodyParameter("DiskId", diskId);
@@ -125,7 +137,11 @@ public class SetDedicatedBlockStorageClusterDiskThroughputRequest extends Reques
         }
 
         /**
-         * The region ID of disk.
+         * <p>The region ID of disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

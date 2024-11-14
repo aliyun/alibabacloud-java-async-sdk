@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartReplicaGroupDrillResponseBody} extends {@link TeaModel}
  *
  * <p>StartReplicaGroupDrillResponseBody</p>
@@ -49,7 +50,10 @@ public class StartReplicaGroupDrillResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The drill ID.
+         * <p>The drill ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-drill-xxxx</p>
          */
         public Builder drillId(String drillId) {
             this.drillId = drillId;
@@ -57,7 +61,10 @@ public class StartReplicaGroupDrillResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C123F94F-4E38-19AE-942A-A8D6F44F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskMonitorDataListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiskMonitorDataListResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The near real-time monitoring data of the disks.
+         * <p>The near real-time monitoring data of the disks.</p>
          */
         public Builder monitorData(java.util.List < MonitorData> monitorData) {
             this.monitorData = monitorData;
@@ -81,7 +82,10 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e71d8a535bd9c****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +93,10 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +120,12 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiskMonitorDataListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiskMonitorDataListResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BurstIOCount")
         private Long burstIOCount;
@@ -161,7 +177,10 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The number of burst I/O operations.
+             * <p>The number of burst I/O operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder burstIOCount(Long burstIOCount) {
                 this.burstIOCount = burstIOCount;
@@ -169,7 +188,10 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disk.
+             * <p>The ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp67acfmxazb4p****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -177,7 +199,10 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range during which the performance of the disk bursts. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The beginning of the time range during which the performance of the disk bursts. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-01T08:00:00Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;

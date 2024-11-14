@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDedicatedBlockStorageClusterInventoryDataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDedicatedBlockStorageClusterInventoryDataResponseBody</p>
@@ -97,7 +98,7 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
         private Integer totalCount; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
         }
 
         /**
-         * The ID of the dedicated block storage cluster.
+         * <p>The ID of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsc-xxx</p>
          */
         public Builder dbscId(String dbscId) {
             this.dbscId = dbscId;
@@ -113,7 +117,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
         }
 
         /**
-         * The name of the dedicated block storage cluster.
+         * <p>The name of the dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDBSCCluster</p>
          */
         public Builder dbscName(String dbscName) {
             this.dbscName = dbscName;
@@ -121,10 +128,13 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
         }
 
         /**
-         * The type of the disk. Valid values:
-         * <p>
+         * <p>The type of the disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_essd: enhanced SSD (ESSD).</li>
+         * </ul>
          * 
-         * *   cloud_essd: enhanced SSD (ESSD).
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder diskCategory(String diskCategory) {
             this.diskCategory = diskCategory;
@@ -132,7 +142,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1A4258A-0C8C-5329-B495-BC5AD7AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +153,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -153,6 +169,12 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
 
     } 
 
+    /**
+     * 
+     * {@link QueryDedicatedBlockStorageClusterInventoryDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDedicatedBlockStorageClusterInventoryDataResponseBody</p>
+     */
     public static class MonitorItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableSize")
         private Long availableSize;
@@ -192,7 +214,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
             private Long totalSize; 
 
             /**
-             * Available capacity size of the dedicated block storage cluster.
+             * <p>Available capacity size of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61360</p>
              */
             public Builder availableSize(Long availableSize) {
                 this.availableSize = availableSize;
@@ -200,7 +225,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
             }
 
             /**
-             * Total capacity size of the dedicated block storage cluster.
+             * <p>Total capacity size of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61440</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -214,6 +242,12 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDedicatedBlockStorageClusterInventoryDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDedicatedBlockStorageClusterInventoryDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItems")
         private MonitorItems monitorItems;
@@ -265,7 +299,7 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
             private String timestamp; 
 
             /**
-             * The returned metrics.
+             * <p>The returned metrics.</p>
              */
             public Builder monitorItems(MonitorItems monitorItems) {
                 this.monitorItems = monitorItems;
@@ -273,7 +307,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
             }
 
             /**
-             * The ID list of the resource.
+             * <p>The ID list of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbsc-xxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -281,7 +318,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
             }
 
             /**
-             * The timestamp when the data is collected.
+             * <p>The timestamp when the data is collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1606403800</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;

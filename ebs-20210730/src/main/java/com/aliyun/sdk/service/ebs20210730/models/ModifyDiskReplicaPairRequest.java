@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDiskReplicaPairRequest} extends {@link RequestModel}
  *
  * <p>ModifyDiskReplicaPairRequest</p>
@@ -139,10 +140,13 @@ public class ModifyDiskReplicaPairRequest extends Request {
         } 
 
         /**
-         * The bandwidth value. Unit: Kbit/s.
-         * <p>
+         * <p>The bandwidth value. Unit: Kbit/s.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
-         * >  This parameter is not publicly available.
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -151,7 +155,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -160,7 +167,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The description of the replication pair.
+         * <p>The description of the replication pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -169,7 +179,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The name of the replication pair.
+         * <p>The name of the replication pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestReplicaPair</p>
          */
         public Builder pairName(String pairName) {
             this.putQueryParameter("PairName", pairName);
@@ -178,7 +191,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. Valid value: 900.
+         * <p>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. Valid value: 900.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder RPO(Long RPO) {
             this.putQueryParameter("RPO", RPO);
@@ -187,7 +203,11 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The region ID of the primary or secondary disk in the replication pair. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
+         * <p>The region ID of the primary or secondary disk in the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +216,11 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the replication pair.
+         * <p>The ID of the replication pair.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pair-cn-dsa****</p>
          */
         public Builder replicaPairId(String replicaPairId) {
             this.putQueryParameter("ReplicaPairId", replicaPairId);

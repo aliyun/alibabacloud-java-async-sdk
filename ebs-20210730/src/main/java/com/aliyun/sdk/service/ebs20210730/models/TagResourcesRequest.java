@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -113,7 +114,10 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -122,7 +126,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +139,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID list of the resources. You can specify up to 50 IDs in each request.
+         * <p>The ID list of the resources. You can specify up to 50 IDs in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disk-123</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -140,12 +152,16 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>dedicatedblockstoragecluster: dedicated block storage cluster</li>
+         * <li>diskreplicapair: replication pair</li>
+         * <li>diskreplicagroup: replication pair-consistent group</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   dedicatedblockstoragecluster: dedicated block storage cluster
-         * *   diskreplicapair: replication pair
-         * *   diskreplicagroup: replication pair-consistent group
+         * <strong>example:</strong>
+         * <p>diskreplicagroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -154,7 +170,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource tags. You can specify up to 20 tags.
+         * <p>The resource tags. You can specify up to 20 tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -169,6 +186,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -210,7 +233,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+             * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -218,7 +245,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.
+             * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

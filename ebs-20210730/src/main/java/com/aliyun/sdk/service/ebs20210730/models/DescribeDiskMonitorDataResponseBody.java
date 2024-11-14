@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiskMonitorDataResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The near real-time monitoring data of the disk.
+         * <p>The near real-time monitoring data of the disk.</p>
          */
         public Builder monitorData(java.util.List < MonitorData> monitorData) {
             this.monitorData = monitorData;
@@ -69,7 +70,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiskMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiskMonitorDataResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BPSPercent")
         private Long BPSPercent;
@@ -261,7 +274,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             private Long writeLatency; 
 
             /**
-             * The percentage of BPS.
+             * <p>The percentage of BPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80(%)</p>
              */
             public Builder BPSPercent(Long BPSPercent) {
                 this.BPSPercent = BPSPercent;
@@ -269,7 +285,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of burst I/O operations.
+             * <p>The number of burst I/O operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder burstIOCount(Long burstIOCount) {
                 this.burstIOCount = burstIOCount;
@@ -277,7 +296,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disk.
+             * <p>The ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp1bq5g3dxxo1x4o****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -285,7 +307,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of IOPS.
+             * <p>The percentage of IOPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80(%)</p>
              */
             public Builder IOPSPercent(Long IOPSPercent) {
                 this.IOPSPercent = IOPSPercent;
@@ -293,7 +318,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The read bandwidth of the disk. Unit: MByte/s.
+             * <p>The read bandwidth of the disk. Unit: MByte/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder readBPS(Long readBPS) {
                 this.readBPS = readBPS;
@@ -301,7 +329,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Read IO block size. Unit: Bytes
+             * <p>Read IO block size. Unit: Bytes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder readBlockSize(Long readBlockSize) {
                 this.readBlockSize = readBlockSize;
@@ -309,7 +340,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of read IOPS.
+             * <p>The maximum number of read IOPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder readIOPS(Long readIOPS) {
                 this.readIOPS = readIOPS;
@@ -317,7 +351,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Read IO latency. Unit:  microsecond
+             * <p>Read IO latency. Unit:  microsecond</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder readLatency(Long readLatency) {
                 this.readLatency = readLatency;
@@ -325,7 +362,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that is used to query the near real-time monitoring data of the disk. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The timestamp that is used to query the near real-time monitoring data of the disk. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-01T08:00:00Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -333,7 +373,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The write bandwidth of the disk. Unit: MByte/s.
+             * <p>The write bandwidth of the disk. Unit: MByte/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204</p>
              */
             public Builder writeBPS(Long writeBPS) {
                 this.writeBPS = writeBPS;
@@ -341,7 +384,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Write IO block size. Unit: Bytes
+             * <p>Write IO block size. Unit: Bytes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder writeBlockSize(Long writeBlockSize) {
                 this.writeBlockSize = writeBlockSize;
@@ -349,7 +395,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of write IOPS.
+             * <p>The maximum number of write IOPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder writeIOPS(Long writeIOPS) {
                 this.writeIOPS = writeIOPS;
@@ -357,7 +406,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Write IO latency. Unit: microsecond
+             * <p>Write IO latency. Unit: microsecond</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder writeLatency(Long writeLatency) {
                 this.writeLatency = writeLatency;

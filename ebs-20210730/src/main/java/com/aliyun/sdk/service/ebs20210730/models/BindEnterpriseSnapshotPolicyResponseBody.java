@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindEnterpriseSnapshotPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>BindEnterpriseSnapshotPolicyResponseBody</p>
@@ -37,7 +38,10 @@ public class BindEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF4CA176-3358-5B74-B317-B1908B4B1F7D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

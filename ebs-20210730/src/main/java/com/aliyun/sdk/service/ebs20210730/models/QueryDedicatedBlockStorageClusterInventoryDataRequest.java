@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDedicatedBlockStorageClusterInventoryDataRequest} extends {@link RequestModel}
  *
  * <p>QueryDedicatedBlockStorageClusterInventoryDataRequest</p>
@@ -128,10 +129,11 @@ public class QueryDedicatedBlockStorageClusterInventoryDataRequest extends Reque
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+         * <p>The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure idempotence </a>.</p>
          * 
-         * The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](~~25693~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,7 +142,11 @@ public class QueryDedicatedBlockStorageClusterInventoryDataRequest extends Reque
         }
 
         /**
-         * The ID of the dedicated block storage cluster.
+         * <p>The ID of the dedicated block storage cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsc-xxx</p>
          */
         public Builder dbscId(String dbscId) {
             this.putBodyParameter("DbscId", dbscId);
@@ -149,7 +155,11 @@ public class QueryDedicatedBlockStorageClusterInventoryDataRequest extends Reque
         }
 
         /**
-         * End timestamp of trend data.
+         * <p>End timestamp of trend data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1606403800</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -158,7 +168,11 @@ public class QueryDedicatedBlockStorageClusterInventoryDataRequest extends Reque
         }
 
         /**
-         * The time interval (seconds) between data retrieval points.
+         * <p>The time interval (seconds) between data retrieval points.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -167,7 +181,11 @@ public class QueryDedicatedBlockStorageClusterInventoryDataRequest extends Reque
         }
 
         /**
-         * The region ID of the dedicated block storage cluster.
+         * <p>The region ID of the dedicated block storage cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -176,7 +194,11 @@ public class QueryDedicatedBlockStorageClusterInventoryDataRequest extends Reque
         }
 
         /**
-         * Start timestamp of trend data.
+         * <p>Start timestamp of trend data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1606303800</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
