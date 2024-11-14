@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -113,7 +114,10 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the Message Queue for Apache RocketMQ instance which contains the resource to which you want to attach tags.
+         * <p>The ID of the Message Queue for Apache RocketMQ instance which contains the resource to which you want to attach tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -122,7 +126,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource is deployed.
+         * <p>The ID of the region in which the resource is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +139,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * <p>The resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -140,14 +152,19 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resources. The value is an enumerated value. Valid values:
-         * <p>
+         * <p>The type of the resources. The value is an enumerated value. Valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong></li>
+         * <li><strong>TOPIC</strong></li>
+         * <li><strong>CONSUMERGROUP</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> The value of this parameter is not case-sensitive.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **INSTANCE**
-         * *   **TOPIC**
-         * *   **CONSUMERGROUP**
-         * 
-         * >  The value of this parameter is not case-sensitive.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -156,7 +173,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that you want to add.
+         * <p>The tags that you want to add.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -171,6 +189,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -211,11 +235,15 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the resource tag.
-             * <p>
+             * <p>The key of the resource tag.</p>
+             * <ul>
+             * <li>You must specify this parameter.</li>
+             * <li>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   You must specify this parameter.
-             * *   The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -223,11 +251,14 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the resource tag.
-             * <p>
+             * <p>The value of the resource tag.</p>
+             * <ul>
+             * <li>You can leave this parameter empty.</li>
+             * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</li>
+             * </ul>
              * 
-             * *   You can leave this parameter empty.
-             * *   The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

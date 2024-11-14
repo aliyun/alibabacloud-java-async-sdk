@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMessageRequest} extends {@link RequestModel}
  *
  * <p>QueryMessageRequest</p>
@@ -141,7 +142,10 @@ public class QueryMessageRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
+         * <p>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672410180000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -150,7 +154,11 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-mp919o4v****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -159,7 +167,10 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * The consumer offset of the partition.
+         * <p>The consumer offset of the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder offset(String offset) {
             this.putQueryParameter("Offset", offset);
@@ -168,7 +179,10 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * The partition ID.
+         * <p>The partition ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder partition(String partition) {
             this.putQueryParameter("Partition", partition);
@@ -177,11 +191,15 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * The query type. Valid values:
-         * <p>
+         * <p>The query type. Valid values:</p>
+         * <ul>
+         * <li>byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.</li>
+         * <li>byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.
-         * *   byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.
+         * <strong>example:</strong>
+         * <p>byTimestamp</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -190,7 +208,11 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * The ID of the region where the resource resides.
+         * <p>The ID of the region where the resource resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +221,11 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * The topic name.
+         * <p>The topic name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkafka</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

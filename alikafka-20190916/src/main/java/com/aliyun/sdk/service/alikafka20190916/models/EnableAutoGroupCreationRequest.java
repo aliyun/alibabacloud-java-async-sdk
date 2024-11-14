@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableAutoGroupCreationRequest} extends {@link RequestModel}
  *
  * <p>EnableAutoGroupCreationRequest</p>
@@ -84,11 +85,15 @@ public class EnableAutoGroupCreationRequest extends Request {
         } 
 
         /**
-         * Specify whether to enable the flexible group creation feature. Valid values:
-         * <p>
+         * <p>Specify whether to enable the flexible group creation feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the flexible group creation feature.</li>
+         * <li><strong>false</strong>: disabled the flexible group creation feature.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: enables the flexible group creation feature.
-         * *   **false**: disabled the flexible group creation feature.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -97,10 +102,12 @@ public class EnableAutoGroupCreationRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> operation to query instances.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [GetInstanceList](~~437663~~) operation to query instances.
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-mp919o4v****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -109,7 +116,11 @@ public class EnableAutoGroupCreationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

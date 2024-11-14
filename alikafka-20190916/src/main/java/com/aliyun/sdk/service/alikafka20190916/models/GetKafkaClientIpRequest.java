@@ -7,15 +7,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateTopicConfigRequest} extends {@link RequestModel}
+ * {@link GetKafkaClientIpRequest} extends {@link RequestModel}
  *
- * <p>UpdateTopicConfigRequest</p>
+ * <p>GetKafkaClientIpRequest</p>
  */
-public class UpdateTopicConfigRequest extends Request {
+public class GetKafkaClientIpRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String config;
+    private Long endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Group")
+    private String group;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -28,29 +32,35 @@ public class UpdateTopicConfigRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
+    private Long startTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
     private String topic;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String value;
+    private String type;
 
-    private UpdateTopicConfigRequest(Builder builder) {
+    private GetKafkaClientIpRequest(Builder builder) {
         super(builder);
-        this.config = builder.config;
+        this.endTime = builder.endTime;
+        this.group = builder.group;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.startTime = builder.startTime;
         this.topic = builder.topic;
-        this.value = builder.value;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateTopicConfigRequest create() {
+    public static GetKafkaClientIpRequest create() {
         return builder().build();
     }
 
@@ -60,10 +70,17 @@ public class UpdateTopicConfigRequest extends Request {
     }
 
     /**
-     * @return config
+     * @return endTime
      */
-    public String getConfig() {
-        return this.config;
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return group
+     */
+    public String getGroup() {
+        return this.group;
     }
 
     /**
@@ -81,6 +98,13 @@ public class UpdateTopicConfigRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return topic
      */
     public String getTopic() {
@@ -88,53 +112,58 @@ public class UpdateTopicConfigRequest extends Request {
     }
 
     /**
-     * @return value
+     * @return type
      */
-    public String getValue() {
-        return this.value;
+    public String getType() {
+        return this.type;
     }
 
-    public static final class Builder extends Request.Builder<UpdateTopicConfigRequest, Builder> {
-        private String config; 
+    public static final class Builder extends Request.Builder<GetKafkaClientIpRequest, Builder> {
+        private Long endTime; 
+        private String group; 
         private String instanceId; 
         private String regionId; 
+        private Long startTime; 
         private String topic; 
-        private String value; 
+        private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateTopicConfigRequest request) {
+        private Builder(GetKafkaClientIpRequest request) {
             super(request);
-            this.config = request.config;
+            this.endTime = request.endTime;
+            this.group = request.group;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.startTime = request.startTime;
             this.topic = request.topic;
-            this.value = request.value;
+            this.type = request.type;
         } 
 
         /**
-         * <p>The key of the topic configuration.</p>
-         * <ul>
-         * <li>ApsaraMQ for Kafka V2 instances allow you to modify configurations only for topics that use local storage.</li>
-         * <li>ApsaraMQ for Kafka V3 instances allow you to modify configurations for all topics.</li>
-         * <li>The following keys are supported by <code>local topic</code> of ApsaraMQ for Kafka V2 instances: retention.ms, retention.bytes, and replications.</li>
-         * <li>The following keys are supported by ApsaraMQ for Kafka V3 instances: retention.hours and max.message.bytes.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>replications</p>
+         * <p>1716343502000</p>
          */
-        public Builder config(String config) {
-            this.putQueryParameter("Config", config);
-            this.config = config;
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
         /**
-         * <p>The instance ID.</p>
+         * Group.
+         */
+        public Builder group(String group) {
+            this.putQueryParameter("Group", group);
+            this.group = group;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +176,6 @@ public class UpdateTopicConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,11 +188,19 @@ public class UpdateTopicConfigRequest extends Request {
         }
 
         /**
-         * <p>The topic name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dqc_test2</p>
+         * <p>1716343501000</p>
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Topic.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
@@ -173,25 +209,20 @@ public class UpdateTopicConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration item that you want to update for the topic. The following configuration items are supported by ApsaraMQ for Kafka V3 instances:</p>
-         * <ul>
-         * <li><code>retention.hours</code> specifies the message retention period. Value type: string. Valid values: 24 to 8760.</li>
-         * <li><code>max.message.bytes</code> specifies the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>byInstance</p>
          */
-        public Builder value(String value) {
-            this.putQueryParameter("Value", value);
-            this.value = value;
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
         @Override
-        public UpdateTopicConfigRequest build() {
-            return new UpdateTopicConfigRequest(this);
+        public GetKafkaClientIpRequest build() {
+            return new GetKafkaClientIpRequest(this);
         } 
 
     } 

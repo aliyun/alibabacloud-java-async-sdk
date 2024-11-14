@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerListResponseBody} extends {@link TeaModel}
  *
  * <p>GetConsumerListResponseBody</p>
@@ -121,7 +122,10 @@ public class GetConsumerListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -129,7 +133,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The consumer groups.
+         * <p>The consumer groups.</p>
          */
         public Builder consumerList(ConsumerList consumerList) {
             this.consumerList = consumerList;
@@ -137,7 +141,10 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -145,7 +152,10 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +163,10 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -161,7 +174,10 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>808F042B-CB9A-4FBC-9009-00E7DDB6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +185,10 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -177,7 +196,10 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -190,6 +212,12 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConsumerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerListResponseBody</p>
+     */
     public static class TagVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -229,7 +257,10 @@ public class GetConsumerListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -237,7 +268,10 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -251,6 +285,12 @@ public class GetConsumerListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagVO")
         private java.util.List < TagVO> tagVO;
@@ -292,6 +332,12 @@ public class GetConsumerListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerListResponseBody</p>
+     */
     public static class ConsumerVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutomaticallyCreatedGroup")
         private Boolean automaticallyCreatedGroup;
@@ -379,7 +425,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * Indicates that the consumer group was automatically created by the system.
+             * <p>Indicates that the consumer group was automatically created by the system.</p>
              */
             public Builder automaticallyCreatedGroup(Boolean automaticallyCreatedGroup) {
                 this.automaticallyCreatedGroup = automaticallyCreatedGroup;
@@ -387,7 +433,10 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer group ID.
+             * <p>The consumer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kafka-test</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -395,7 +444,10 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alikafka_post-cn-v0h18sav****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -403,7 +455,10 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the instance resides.
+             * <p>The ID of the region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -411,7 +466,10 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance description.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -419,7 +477,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -433,6 +491,12 @@ public class GetConsumerListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerListResponseBody</p>
+     */
     public static class ConsumerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerVO")
         private java.util.List < ConsumerVO> consumerVO;

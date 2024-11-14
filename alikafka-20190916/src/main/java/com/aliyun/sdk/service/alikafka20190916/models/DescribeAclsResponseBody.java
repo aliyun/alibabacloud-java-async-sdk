@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAclsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAclsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeAclsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The access control lists (ACLs).
+         * <p>The access control lists (ACLs).</p>
          */
         public Builder kafkaAclList(KafkaAclList kafkaAclList) {
             this.kafkaAclList = kafkaAclList;
@@ -101,7 +105,10 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46496E38-881E-4719-A2F3-F3DA6AE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class DescribeAclsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAclsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAclsResponseBody</p>
+     */
     public static class KafkaAclVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclOperationType")
         private String aclOperationType;
@@ -229,16 +248,22 @@ public class DescribeAclsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The types of operations allowed by the ACL. Separate multiple operation types with commas (,).
-             * <p>
-             * - Valid values:
-             * - Write
-             * - Read
-             * - Describe: reads of transactional IDs.
-             * - IdempotentWrite: idempotent data writes to clusters.
-             * - IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
-             * - DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.
-             * > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+             * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
+             * <ul>
+             * <li>Valid values:</li>
+             * <li>Write</li>
+             * <li>Read</li>
+             * <li>Describe: reads of transactional IDs.</li>
+             * <li>IdempotentWrite: idempotent data writes to clusters.</li>
+             * <li>IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+             * <li>DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.<blockquote>
+             * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Write</p>
              */
             public Builder aclOperationType(String aclOperationType) {
                 this.aclOperationType = aclOperationType;
@@ -246,11 +271,17 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization method. Valid values:
-             * <p>
-             * - DENY
-             * - ALLOW
-             * > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+             * <p>The authorization method. Valid values:</p>
+             * <ul>
+             * <li>DENY</li>
+             * <li>ALLOW<blockquote>
+             * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DENY</p>
              */
             public Builder aclPermissionType(String aclPermissionType) {
                 this.aclPermissionType = aclPermissionType;
@@ -258,11 +289,14 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name.
-             * <p>
+             * <p>The resource name.</p>
+             * <ul>
+             * <li>The value can be the name of a topic or consumer group.</li>
+             * <li>You can use the asterisk (*) wildcard character to specify the names of all topics or consumer groups.</li>
+             * </ul>
              * 
-             * *   The value can be the name of a topic or consumer group.
-             * *   You can use the asterisk (\*) wildcard character to specify the names of all topics or consumer groups.
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder aclResourceName(String aclResourceName) {
                 this.aclResourceName = aclResourceName;
@@ -270,11 +304,14 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The matching mode. Valid values:
-             * <p>
+             * <p>The matching mode. Valid values:</p>
+             * <ul>
+             * <li><strong>LITERAL:</strong> full-name match</li>
+             * <li><strong>PREFIXED</strong>: prefix match</li>
+             * </ul>
              * 
-             * *   **LITERAL:** full-name match
-             * *   **PREFIXED**: prefix match
+             * <strong>example:</strong>
+             * <p>LITERAL</p>
              */
             public Builder aclResourcePatternType(String aclResourcePatternType) {
                 this.aclResourcePatternType = aclResourcePatternType;
@@ -282,11 +319,14 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type. Valid values:
-             * <p>
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li><strong>Topic</strong></li>
+             * <li><strong>Group</strong></li>
+             * </ul>
              * 
-             * *   **Topic**
-             * *   **Group**
+             * <strong>example:</strong>
+             * <p>Topic</p>
              */
             public Builder aclResourceType(String aclResourceType) {
                 this.aclResourceType = aclResourceType;
@@ -294,7 +334,10 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The host.
+             * <p>The host.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -302,7 +345,10 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test12***</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -316,6 +362,12 @@ public class DescribeAclsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAclsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAclsResponseBody</p>
+     */
     public static class KafkaAclList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KafkaAclVO")
         private java.util.List < KafkaAclVO> kafkaAclVO;

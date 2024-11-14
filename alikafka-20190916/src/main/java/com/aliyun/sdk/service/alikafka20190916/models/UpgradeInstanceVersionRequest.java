@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeInstanceVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeInstanceVersionRequest</p>
@@ -84,7 +85,11 @@ public class UpgradeInstanceVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +98,11 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides.
+         * <p>The ID of the region where the instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,13 +111,16 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * The major version to be upgraded to. Valid values:
-         * <p>
+         * <p>The major version to be upgraded to. Valid values:</p>
+         * <ul>
+         * <li><strong>0.10.2</strong></li>
+         * <li><strong>2.2.0</strong></li>
+         * </ul>
+         * <p>If you set this parameter to the current major version, the system upgrades the instance to the latest minor version.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0.10.2**
-         * *   **2.2.0**
-         * 
-         * If you set this parameter to the current major version, the system upgrades the instance to the latest minor version.
+         * <strong>example:</strong>
+         * <p>0.10.2</p>
          */
         public Builder targetVersion(String targetVersion) {
             this.putQueryParameter("TargetVersion", targetVersion);

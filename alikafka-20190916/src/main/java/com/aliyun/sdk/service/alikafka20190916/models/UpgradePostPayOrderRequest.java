@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradePostPayOrderRequest} extends {@link RequestModel}
  *
  * <p>UpgradePostPayOrderRequest</p>
@@ -195,13 +196,17 @@ public class UpgradePostPayOrderRequest extends Request {
         } 
 
         /**
-         * The disk size. Unit: GB.
-         * <p>
+         * <p>The disk size. Unit: GB.</p>
+         * <ul>
+         * <li>The disk size that you specify must be greater than or equal to the current disk size of the instance.</li>
+         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
-         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -210,15 +215,21 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The Internet traffic for the instance.
-         * <p>
+         * <p>The Internet traffic for the instance.</p>
+         * <ul>
+         * <li>The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.</li>
+         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you set <strong>EipModel</strong> to <strong>true</strong>, set <strong>EipMax</strong> to a value that is greater than 0.</li>
+         * <li>If you set <strong>EipModel</strong> to <strong>false</strong>, set <strong>EipMax</strong> to <strong>0</strong>.</li>
+         * <li>When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.
-         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * > -  If you set **EipModel** to **true**, set **EipMax** to a value that is greater than 0.
-         * >- If you set **EipModel** to **false**, set **EipMax** to **0**.
-         * >- When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -227,11 +238,14 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Internet access for the instance. Valid values:</p>
+         * <ul>
+         * <li>true: enables Internet access.</li>
+         * <li>false: disables Internet access.</li>
+         * </ul>
          * 
-         * *   true: enables Internet access.
-         * *   false: disables Internet access.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder eipModel(Boolean eipModel) {
             this.putQueryParameter("EipModel", eipModel);
@@ -240,7 +254,11 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-mp919o4v****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -249,14 +267,18 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The maximum traffic for the instance. We recommend that you do not configure this parameter.
-         * <p>
+         * <p>The maximum traffic for the instance. We recommend that you do not configure this parameter.</p>
+         * <ul>
+         * <li>The maximum traffic that you specify must be greater than or equal to the current maximum traffic of the instance.</li>
+         * <li>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</li>
+         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   The maximum traffic that you specify must be greater than or equal to the current maximum traffic of the instance.
-         * *   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.
-         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ioMax(Integer ioMax) {
             this.putQueryParameter("IoMax", ioMax);
@@ -265,14 +287,18 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The traffic specification of the instance. We recommend that you configure this parameter.
-         * <p>
+         * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+         * <ul>
+         * <li>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</li>
+         * <li>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</li>
+         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.
-         * *   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.
-         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>alikafka.hw.6xlarge</p>
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -281,14 +307,18 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The number of partitions. We recommend that you configure this parameter.
-         * <p>
+         * <p>The number of partitions. We recommend that you configure this parameter.</p>
+         * <ul>
+         * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</li>
+         * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
+         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.
-         * *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
-         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -297,7 +327,11 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -306,7 +340,7 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The parameters that are configured for the ApsaraMQ for Kafka serverless instance. When you create a serverless ApsaraMQ for Kafka instance, you must configure these parameters.
+         * <p>The parameters that are configured for the ApsaraMQ for Kafka serverless instance. When you create a serverless ApsaraMQ for Kafka instance, you must configure these parameters.</p>
          */
         public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
             String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
@@ -316,20 +350,21 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The instance edition.
-         * <p>
+         * <p>The instance edition.</p>
+         * <p>Valid values for this parameter if you set PaidType to 1:</p>
+         * <ul>
+         * <li>normal: Standard Edition (High Write)</li>
+         * <li>professional: Professional Edition (High Write)</li>
+         * <li>professionalForHighRead: Professional Edition (High Read)</li>
+         * </ul>
+         * <p>Valid values for this parameter if you set PaidType to 3:</p>
+         * <ul>
+         * <li>normal: Serverless Standard Edition</li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
          * 
-         * Valid values for this parameter if you set PaidType to 1:
-         * 
-         * *   normal: Standard Edition (High Write)
-         * *   professional: Professional Edition (High Write)
-         * *   professionalForHighRead: Professional Edition (High Read)
-         * 
-         * Valid values for this parameter if you set PaidType to 3:
-         * 
-         * *   normal: Serverless Standard Edition
-         * 
-         * For more information, see [Billing](~~84737~~).
+         * <strong>example:</strong>
+         * <p>professional</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -338,15 +373,19 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The number of topics. We recommend that you do not configure this parameter.
-         * <p>
+         * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+         * <ul>
+         * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</li>
+         * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
+         * <li>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.</li>
+         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.
-         * *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
-         * *   The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.
-         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder topicQuota(Integer topicQuota) {
             this.putQueryParameter("TopicQuota", topicQuota);
@@ -361,6 +400,12 @@ public class UpgradePostPayOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradePostPayOrderRequest} extends {@link TeaModel}
+     *
+     * <p>UpgradePostPayOrderRequest</p>
+     */
     public static class ServerlessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReservedPublishCapacity")
         private Long reservedPublishCapacity;
@@ -400,10 +445,13 @@ public class UpgradePostPayOrderRequest extends Request {
             private Long reservedSubscribeCapacity; 
 
             /**
-             * The reserved capacity for publishing messages. You can specify only integers for this parameter. Minimum value: 60.
-             * <p>
+             * <p>The reserved capacity for publishing messages. You can specify only integers for this parameter. Minimum value: 60.</p>
+             * <blockquote>
+             * <p> The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.</p>
+             * </blockquote>
              * 
-             * >  The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder reservedPublishCapacity(Long reservedPublishCapacity) {
                 this.reservedPublishCapacity = reservedPublishCapacity;
@@ -411,10 +459,13 @@ public class UpgradePostPayOrderRequest extends Request {
             }
 
             /**
-             * The reserved capacity for subscribing to messages. You can specify only integers for this parameter. Minimum value: 50.
-             * <p>
+             * <p>The reserved capacity for subscribing to messages. You can specify only integers for this parameter. Minimum value: 50.</p>
+             * <blockquote>
+             * <p> The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.</p>
+             * </blockquote>
              * 
-             * >  The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder reservedSubscribeCapacity(Long reservedSubscribeCapacity) {
                 this.reservedSubscribeCapacity = reservedSubscribeCapacity;

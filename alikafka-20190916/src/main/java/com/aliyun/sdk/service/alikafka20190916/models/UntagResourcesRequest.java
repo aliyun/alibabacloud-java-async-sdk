@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -112,7 +113,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to detach all tags from the resource. This parameter only takes effect when the TagKey.N parameter is not configured. Default value: **false**.
+         * <p>Specifies whether to detach all tags from the resource. This parameter only takes effect when the TagKey.N parameter is not configured. Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -121,7 +125,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource is deployed.
+         * <p>The ID of the region in which the resource is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +138,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the resources from which you want to detach tags.
+         * <p>The IDs of the resources from which you want to detach tags.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,14 +151,19 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resources. Valid values:
-         * <p>
+         * <p>The type of the resources. Valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong></li>
+         * <li><strong>TOPIC</strong></li>
+         * <li><strong>CONSUMERGROUP</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> The value of this parameter is not case-sensitive.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **INSTANCE**
-         * *   **TOPIC**
-         * *   **CONSUMERGROUP**
-         * 
-         * >  The value of this parameter is not case-sensitive.
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -155,7 +172,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The key of the resource tag.
+         * <p>The key of the resource tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

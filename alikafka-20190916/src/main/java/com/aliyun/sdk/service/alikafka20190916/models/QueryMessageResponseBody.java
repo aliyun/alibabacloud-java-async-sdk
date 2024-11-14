@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMessageResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMessageResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryMessageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned HTTP status code. If the request is successful, 200 is returned.
+         * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,7 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The messages.
+         * <p>The messages.</p>
          */
         public Builder messageList(java.util.List < MessageList> messageList) {
             this.messageList = messageList;
@@ -109,7 +116,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABA4A7FD-E10F-45C7-9774-A5236015****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class QueryMessageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMessageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMessageResponseBody</p>
+     */
     public static class MessageList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Checksum")
         private Long checksum;
@@ -317,7 +336,10 @@ public class QueryMessageResponseBody extends TeaModel {
             private Boolean valueTruncated; 
 
             /**
-             * The check value of the chaincode.
+             * <p>The check value of the chaincode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder checksum(Long checksum) {
                 this.checksum = checksum;
@@ -325,7 +347,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The message key.
+             * <p>The message key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -333,7 +358,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the key is truncated.
+             * <p>Indicates whether the key is truncated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder keyTruncated(Boolean keyTruncated) {
                 this.keyTruncated = keyTruncated;
@@ -341,7 +369,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer offset of the partition.
+             * <p>The consumer offset of the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder offset(Long offset) {
                 this.offset = offset;
@@ -349,7 +380,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The partition ID.
+             * <p>The partition ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder partition(Long partition) {
                 this.partition = partition;
@@ -357,7 +391,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the key after serialization. Unit: bytes.
+             * <p>The size of the key after serialization. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder serializedKeySize(Integer serializedKeySize) {
                 this.serializedKeySize = serializedKeySize;
@@ -365,7 +402,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the value after serialization. Unit: bytes.
+             * <p>The size of the value after serialization. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder serializedValueSize(Integer serializedValueSize) {
                 this.serializedValueSize = serializedValueSize;
@@ -373,7 +413,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the message was created. The value of this parameter is a UNIX timestamp in milliseconds.
+             * <p>The time when the message was created. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1705482172640</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -381,7 +424,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The time type.
+             * <p>The time type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateTime</p>
              */
             public Builder timestampType(String timestampType) {
                 this.timestampType = timestampType;
@@ -389,7 +435,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The topic name.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dqc_test2</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -397,10 +446,13 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The truncated size of the message key. Unit: bytes.
-             * <p>
+             * <p>The truncated size of the message key. Unit: bytes.</p>
+             * <blockquote>
+             * <p> A maximum of 1 KB of content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see <a href="https://help.aliyun.com/document_detail/113172.html">Query messages</a>.</p>
+             * </blockquote>
              * 
-             * >  A maximum of 1 KB of content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see [Query messages](~~113172~~).
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder truncatedKeySize(Integer truncatedKeySize) {
                 this.truncatedKeySize = truncatedKeySize;
@@ -408,10 +460,13 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The truncated size of the message value. Unit: bytes.
-             * <p>
+             * <p>The truncated size of the message value. Unit: bytes.</p>
+             * <blockquote>
+             * <p> A maximum of 1 KB of content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see <a href="https://help.aliyun.com/document_detail/113172.html">Query messages</a>.</p>
+             * </blockquote>
              * 
-             * >  A maximum of 1 KB of content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see [Query messages](~~113172~~).
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder truncatedValueSize(Integer truncatedValueSize) {
                 this.truncatedValueSize = truncatedValueSize;
@@ -419,7 +474,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The message value.
+             * <p>The message value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Welcome to Ali kafka</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -427,7 +485,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the value is truncated.
+             * <p>Indicates whether the value is truncated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder valueTruncated(Boolean valueTruncated) {
                 this.valueTruncated = valueTruncated;

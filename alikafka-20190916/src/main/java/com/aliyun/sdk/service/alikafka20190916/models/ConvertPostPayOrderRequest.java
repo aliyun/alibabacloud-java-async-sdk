@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConvertPostPayOrderRequest} extends {@link RequestModel}
  *
  * <p>ConvertPostPayOrderRequest</p>
@@ -83,12 +84,15 @@ public class ConvertPostPayOrderRequest extends Request {
         } 
 
         /**
-         * The subscription duration. Unit: months. Valid values:
-         * <p>
+         * <p>The subscription duration. Unit: months. Valid values:</p>
+         * <ul>
+         * <li><strong>1~12</strong></li>
+         * <li><strong>24</strong></li>
+         * <li><strong>36</strong></li>
+         * </ul>
          * 
-         * *   **1~12**
-         * *   **24**
-         * *   **36**
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -97,7 +101,11 @@ public class ConvertPostPayOrderRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -106,7 +114,11 @@ public class ConvertPostPayOrderRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

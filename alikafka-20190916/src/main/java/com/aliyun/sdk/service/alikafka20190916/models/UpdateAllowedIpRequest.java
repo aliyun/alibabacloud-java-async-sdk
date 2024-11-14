@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAllowedIpRequest} extends {@link RequestModel}
  *
  * <p>UpdateAllowedIpRequest</p>
@@ -143,12 +144,16 @@ public class UpdateAllowedIpRequest extends Request {
         } 
 
         /**
-         * The IP addresses that you want to manage. You can specify a CIDR block. Example: **192.168.0.0/16**.
-         * <p>
+         * <p>The IP addresses that you want to manage. You can specify a CIDR block. Example: <strong>192.168.0.0/16</strong>.</p>
+         * <ul>
+         * <li>If the <strong>UpdateType</strong> parameter is set to <strong>add</strong>, specify one or more IP addresses for this parameter. Separate multiple IP addresses with commas (,).</li>
+         * <li>If the <strong>UpdateType</strong> parameter is set to <strong>delete</strong>, specify only one IP address.</li>
+         * <li>Exercise caution when you delete IP addresses.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the **UpdateType** parameter is set to **add**, specify one or more IP addresses for this parameter. Separate multiple IP addresses with commas (,).
-         * *   If the **UpdateType** parameter is set to **delete**, specify only one IP address.
-         * *   Exercise caution when you delete IP addresses.
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         public Builder allowedListIp(String allowedListIp) {
             this.putQueryParameter("AllowedListIp", allowedListIp);
@@ -157,11 +162,15 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * The type of the whitelist. Valid values:
-         * <p>
+         * <p>The type of the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>vpc</strong>: a whitelist for access from a VPC.</li>
+         * <li><strong>internet</strong>: a whitelist for access from the Internet.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **vpc**: a whitelist for access from a VPC.
-         * *   **internet**: a whitelist for access from the Internet.
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder allowedListType(String allowedListType) {
             this.putQueryParameter("AllowedListType", allowedListType);
@@ -170,7 +179,10 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * The description of the whitelist.
+         * <p>The description of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-testAccEcsImageConfigBasic3549descriptionChange</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -179,7 +191,11 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-0pp1cng20***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -188,15 +204,18 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * The port range. Valid values:
-         * <p>
+         * <p>The port range. Valid values:</p>
+         * <ul>
+         * <li><strong>9092/9092</strong>: Messages are transmitted in a virtual private cloud (VPC) by using the PLAINTEXT protocol.</li>
+         * <li><strong>9093/9093</strong>: Messages are transmitted over the Internet by using the SASL_SSL protocol.</li>
+         * <li><strong>9094/9094</strong>: Messages are transmitted in a VPC by using the SASL_PLAINTEXT protocol.</li>
+         * <li><strong>9095/9095</strong>: Messages are transmitted in a VPC by using the SASL_SSL protocol.</li>
+         * </ul>
+         * <p>This parameter must correspond to <strong>AllowdedListType</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **9092/9092**: Messages are transmitted in a virtual private cloud (VPC) by using the PLAINTEXT protocol.
-         * *   **9093/9093**: Messages are transmitted over the Internet by using the SASL_SSL protocol.
-         * *   **9094/9094**: Messages are transmitted in a VPC by using the SASL_PLAINTEXT protocol.
-         * *   **9095/9095**: Messages are transmitted in a VPC by using the SASL_SSL protocol.
-         * 
-         * This parameter must correspond to **AllowdedListType**.
+         * <strong>example:</strong>
+         * <p>9092/9092</p>
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -205,7 +224,11 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides.
+         * <p>The ID of the region where the instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -214,11 +237,15 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * The type of configuration change. Valid values:
-         * <p>
+         * <p>The type of configuration change. Valid values:</p>
+         * <ul>
+         * <li><strong>add</strong></li>
+         * <li><strong>delete</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **add**
-         * *   **delete**
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         public Builder updateType(String updateType) {
             this.putQueryParameter("UpdateType", updateType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
  *
  * <p>GetConsumerProgressResponseBody</p>
@@ -85,7 +86,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned HTTP status code. If the request is successful, 200 is returned.
+         * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The consumer progress of the consumer group.
+         * <p>The consumer progress of the consumer group.</p>
          */
         public Builder consumerProgress(ConsumerProgress consumerProgress) {
             this.consumerProgress = consumerProgress;
@@ -101,7 +105,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>252820E1-A2E6-45F2-B4C9-1056B8CE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class RebalanceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Generation")
         private Long generation;
@@ -217,7 +236,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Long rebalanceTimeConsuming; 
 
             /**
-             * The number of rebalances.
+             * <p>The number of rebalances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder generation(Long generation) {
                 this.generation = generation;
@@ -225,7 +247,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The group ID of the subscriber.
+             * <p>The group ID of the subscriber.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>falcon-uat</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -233,7 +258,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last rebalance occurred. Unit: milliseconds.
+             * <p>The time when the last rebalance occurred. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709199270</p>
              */
             public Builder lastRebalanceTimestamp(Long lastRebalanceTimestamp) {
                 this.lastRebalanceTimestamp = lastRebalanceTimestamp;
@@ -241,7 +269,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the rebalance.
+             * <p>The cause of the rebalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>removing member consumer-1-cd14eb9c-379b-4b8e-9bbd-76f147f8536f on LeaveGroup</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -249,7 +280,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether new members are added to the consumer group in the rebalance.
+             * <p>Indicates whether new members are added to the consumer group in the rebalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder rebalanceSuccess(Boolean rebalanceSuccess) {
                 this.rebalanceSuccess = rebalanceSuccess;
@@ -257,7 +291,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the rebalance. Unit: milliseconds.
+             * <p>The duration of the rebalance. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rebalanceTimeConsuming(Long rebalanceTimeConsuming) {
                 this.rebalanceTimeConsuming = rebalanceTimeConsuming;
@@ -271,6 +308,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class ConsumerProgressRebalanceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RebalanceInfoList")
         private java.util.List < RebalanceInfoList> rebalanceInfoList;
@@ -312,6 +355,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class OffsetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BrokerOffset")
         private Long brokerOffset;
@@ -375,7 +424,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * The latest offset in the partition of the topic.
+             * <p>The latest offset in the partition of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder brokerOffset(Long brokerOffset) {
                 this.brokerOffset = brokerOffset;
@@ -383,7 +435,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer offset in the partition of the topic.
+             * <p>The consumer offset in the partition of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder consumerOffset(Long consumerOffset) {
                 this.consumerOffset = consumerOffset;
@@ -391,7 +446,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last consumed message in the partition was generated.
+             * <p>The time when the last consumed message in the partition was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566874931649</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -399,7 +457,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The partition ID.
+             * <p>The partition ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -413,6 +474,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class TopicListOffsetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OffsetList")
         private java.util.List < OffsetList> offsetList;
@@ -454,6 +521,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class TopicList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
@@ -517,7 +590,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Long totalDiff; 
 
             /**
-             * The time when the last consumed message in the topic was generated.
+             * <p>The time when the last consumed message in the topic was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566874931649</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -525,7 +601,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer offsets.
+             * <p>The consumer offsets.</p>
              */
             public Builder offsetList(TopicListOffsetList offsetList) {
                 this.offsetList = offsetList;
@@ -533,7 +609,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The topic name.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kafka-test</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -541,7 +620,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unconsumed messages in the topic to which the consumer group subscribes.
+             * <p>The number of unconsumed messages in the topic to which the consumer group subscribes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;
@@ -555,6 +637,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class ConsumerProgressTopicList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopicList")
         private java.util.List < TopicList> topicList;
@@ -596,6 +684,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class ConsumerProgress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
@@ -659,7 +753,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Long totalDiff; 
 
             /**
-             * The time when the last message consumed by the consumer group was generated.
+             * <p>The time when the last message consumed by the consumer group was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566874931671</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -667,7 +764,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The details of rebalances in the consumer group.
+             * <p>The details of rebalances in the consumer group.</p>
              */
             public Builder rebalanceInfoList(ConsumerProgressRebalanceInfoList rebalanceInfoList) {
                 this.rebalanceInfoList = rebalanceInfoList;
@@ -675,7 +772,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer progress of each topic to which the consumer group subscribes.
+             * <p>The consumer progress of each topic to which the consumer group subscribes.</p>
              */
             public Builder topicList(ConsumerProgressTopicList topicList) {
                 this.topicList = topicList;
@@ -683,7 +780,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unconsumed messages in all topics to which the consumer group subscribes.
+             * <p>The total number of unconsumed messages in all topics to which the consumer group subscribes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;

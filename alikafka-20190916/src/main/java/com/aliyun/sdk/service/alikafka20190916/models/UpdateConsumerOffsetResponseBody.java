@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConsumerOffsetResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateConsumerOffsetResponseBody</p>
@@ -73,7 +74,10 @@ public class UpdateConsumerOffsetResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned. The status code **200** indicates that the request is successful.
+         * <p>The HTTP status code that is returned. The status code <strong>200</strong> indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class UpdateConsumerOffsetResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class UpdateConsumerOffsetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56729737-C428-4E1B-AC68-7A8C2D5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class UpdateConsumerOffsetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

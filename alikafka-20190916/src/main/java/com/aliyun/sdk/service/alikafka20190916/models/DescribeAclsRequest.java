@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAclsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAclsRequest</p>
@@ -170,16 +171,22 @@ public class DescribeAclsRequest extends Request {
         } 
 
         /**
-         * The types of operations allowed by the ACL. Separate multiple operation types with commas (,).
-         * <p>
-         * - Valid values:
-         * - Write
-         * - Read
-         * - Describe: reads of transactional IDs.
-         * - IdempotentWrite: idempotent data writes to clusters.
-         * - IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
-         * - DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.
-         * > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+         * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
+         * <ul>
+         * <li>Valid values:</li>
+         * <li>Write</li>
+         * <li>Read</li>
+         * <li>Describe: reads of transactional IDs.</li>
+         * <li>IdempotentWrite: idempotent data writes to clusters.</li>
+         * <li>IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+         * <li>DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.<blockquote>
+         * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Write</p>
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -188,11 +195,17 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The authorization method. Valid values:
-         * <p>
-         * - DENY
-         * - ALLOW
-         * > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+         * <p>The authorization method. Valid values:</p>
+         * <ul>
+         * <li>DENY</li>
+         * <li>ALLOW<blockquote>
+         * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DENY</p>
          */
         public Builder aclPermissionType(String aclPermissionType) {
             this.putQueryParameter("AclPermissionType", aclPermissionType);
@@ -201,13 +214,18 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The resource name.
-         * <p>
+         * <p>The resource name.</p>
+         * <ul>
+         * <li>The value can be the name of a topic or consumer group.</li>
+         * <li>You can use an asterisk (*) to specify the names of all topics or consumer groups.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can query the resources on which permissions are granted only after you grant the user the required permissions on all resources.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   The value can be the name of a topic or consumer group.
-         * *   You can use an asterisk (\*) to specify the names of all topics or consumer groups.
-         * 
-         * > You can query the resources on which permissions are granted only after you grant the user the required permissions on all resources.
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder aclResourceName(String aclResourceName) {
             this.putQueryParameter("AclResourceName", aclResourceName);
@@ -216,11 +234,14 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The match mode. Valid values:
-         * <p>
+         * <p>The match mode. Valid values:</p>
+         * <ul>
+         * <li>LITERAL: full-name match</li>
+         * <li>PREFIXED: prefix match</li>
+         * </ul>
          * 
-         * *   LITERAL: full-name match
-         * *   PREFIXED: prefix match
+         * <strong>example:</strong>
+         * <p>LITERAL</p>
          */
         public Builder aclResourcePatternType(String aclResourcePatternType) {
             this.putQueryParameter("AclResourcePatternType", aclResourcePatternType);
@@ -229,11 +250,15 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>Topic</strong></li>
+         * <li><strong>Group</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Topic**
-         * *   **Group**
+         * <strong>example:</strong>
+         * <p>Topic</p>
          */
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);
@@ -242,10 +267,18 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The source IP address.
-         * <p>
-         * >-  You can specify only a specific IP address or use the asterisk (*) wildcard character to specify all IP addresses. CIDR blocks are not supported.
-         * > - This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+         * <p>The source IP address.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can specify only a specific IP address or use the asterisk (*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</li>
+         * <li>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -254,7 +287,11 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-v0h1cng****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -263,7 +300,11 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,12 +313,17 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The username.
-         * <p>
+         * <p>The username.</p>
+         * <ul>
+         * <li>You can use an asterisk (*) to specify all users.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can use an asterisk (*) to query the authorized users only after you grant the required permissions to all users.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   You can use an asterisk (\*) to specify all users.
-         * 
-         * > You can use an asterisk (\*) to query the authorized users only after you grant the required permissions to all users.
+         * <strong>example:</strong>
+         * <p>test12****</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyScheduledScalingRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyScheduledScalingRuleRequest</p>
@@ -99,13 +100,18 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the scheduled scaling rule. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the scheduled scaling rule. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If the scaling task is scheduled to execute only once and you want to enable the scheduled scaling rule, make sure that the value of this parameter is at least 30 minutes later than the current point in time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  If the scaling task is scheduled to execute only once and you want to enable the scheduled scaling rule, make sure that the value of this parameter is at least 30 minutes later than the current point in time.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -114,7 +120,11 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_serverless-cn-vxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +133,11 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides.
+         * <p>The ID of the region where the instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,7 +146,11 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * The name of the scheduled scaling rule.
+         * <p>The name of the scheduled scaling rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contact-id</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

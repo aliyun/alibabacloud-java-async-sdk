@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScheduledScalingRuleResponse} extends {@link TeaModel}
  *
  * <p>CreateScheduledScalingRuleResponse</p>

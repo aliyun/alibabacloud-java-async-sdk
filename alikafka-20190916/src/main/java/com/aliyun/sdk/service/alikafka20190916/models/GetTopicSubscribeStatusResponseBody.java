@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicSubscribeStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetTopicSubscribeStatusResponseBody</p>
@@ -85,7 +86,10 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         private TopicSubscribeStatus topicSubscribeStatus; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06084011-E093-46F3-A51F-4B19A8AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +130,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The subscription details.
+         * <p>The subscription details.</p>
          */
         public Builder topicSubscribeStatus(TopicSubscribeStatus topicSubscribeStatus) {
             this.topicSubscribeStatus = topicSubscribeStatus;
@@ -130,6 +143,12 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicSubscribeStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicSubscribeStatusResponseBody</p>
+     */
     public static class TopicSubscribeStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerGroups")
         private java.util.List < String > consumerGroups;
@@ -169,7 +188,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The groups that subscribe to the topic.
+             * <p>The groups that subscribe to the topic.</p>
              */
             public Builder consumerGroups(java.util.List < String > consumerGroups) {
                 this.consumerGroups = consumerGroups;
@@ -177,7 +196,10 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The topic name.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_api_1681624879908</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicSubscribeStatusRequest} extends {@link RequestModel}
  *
  * <p>GetTopicSubscribeStatusRequest</p>
@@ -84,10 +85,12 @@ public class GetTopicSubscribeStatusRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> operation to query the list of instances.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [GetInstanceList](~~437663~~) operation to query the list of instances.
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-v0h1cng0***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -96,7 +99,11 @@ public class GetTopicSubscribeStatusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,10 +112,12 @@ public class GetTopicSubscribeStatusRequest extends Request {
         }
 
         /**
-         * The topic name.
-         * <p>
+         * <p>The topic name.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/437677.html">GetTopicList</a> operation to query the list of topics.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [GetTopicList](~~437677~~) operation to query the list of topics.
+         * <strong>example:</strong>
+         * <p>topic_name</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

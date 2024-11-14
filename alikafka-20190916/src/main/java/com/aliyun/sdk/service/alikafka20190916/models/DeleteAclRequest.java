@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAclRequest} extends {@link RequestModel}
  *
  * <p>DeleteAclRequest</p>
@@ -186,15 +187,19 @@ public class DeleteAclRequest extends Request {
         } 
 
         /**
-         * The operation allowed by the access control list (ACL). Valid values:
-         * <p>
+         * <p>The operation allowed by the access control list (ACL). Valid values:</p>
+         * <ul>
+         * <li><strong>Write</strong></li>
+         * <li><strong>Read</strong></li>
+         * <li><strong>Describe</strong>: reads of transactional IDs</li>
+         * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters</li>
+         * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+         * <li><strong>DESCRIBE_CONFIGS</strong>: configuration queries. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Write**
-         * *   **Read**
-         * *   **Describe**: reads of transactional IDs
-         * *   **IdempotentWrite**: idempotent data writes to clusters
-         * *   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
-         * *   **DESCRIBE_CONFIGS**: configuration queries. This value is available only for ApsaraMQ for Kafka V3 instances.
+         * <strong>example:</strong>
+         * <p>Write</p>
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -203,19 +208,22 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The operations allowed by the ACL. Separate multiple operations with commas (,).
-         * <p>
+         * <p>The operations allowed by the ACL. Separate multiple operations with commas (,).</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>Write</strong>: data writes</li>
+         * <li><strong>Read</strong>: data reads</li>
+         * <li><strong>Describe</strong>: reads of transactional IDs</li>
+         * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters</li>
+         * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+         * <li><strong>DESCRIBE_CONFIGS</strong>: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   **Write**: data writes
-         * *   **Read**: data reads
-         * *   **Describe**: reads of transactional IDs
-         * *   **IdempotentWrite**: idempotent data writes to clusters
-         * *   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
-         * *   **DESCRIBE_CONFIGS**: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.
-         * 
-         * >  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+         * <strong>example:</strong>
+         * <p>Write,Read</p>
          */
         public Builder aclOperationTypes(String aclOperationTypes) {
             this.putQueryParameter("AclOperationTypes", aclOperationTypes);
@@ -224,13 +232,17 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The authorization method. Valid values:
-         * <p>
+         * <p>The authorization method. Valid values:</p>
+         * <ul>
+         * <li>Deny</li>
+         * <li>ALLOW</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+         * </blockquote>
          * 
-         * *   Deny
-         * *   ALLOW
-         * 
-         * >  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+         * <strong>example:</strong>
+         * <p>DENY</p>
          */
         public Builder aclPermissionType(String aclPermissionType) {
             this.putQueryParameter("AclPermissionType", aclPermissionType);
@@ -239,11 +251,15 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The name of the resource.
-         * <p>
+         * <p>The name of the resource.</p>
+         * <ul>
+         * <li>The value can be the name of a topic or consumer group.</li>
+         * <li>You can use an asterisk (*) to indicate the names of all topics or consumer groups.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The value can be the name of a topic or consumer group.
-         * *   You can use an asterisk (\*) to indicate the names of all topics or consumer groups.
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder aclResourceName(String aclResourceName) {
             this.putQueryParameter("AclResourceName", aclResourceName);
@@ -252,11 +268,15 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The mode that is used to match resources. Valid values:
-         * <p>
+         * <p>The mode that is used to match resources. Valid values:</p>
+         * <ul>
+         * <li><strong>LITERAL:</strong> full match</li>
+         * <li><strong>PREFIXED</strong>: prefix match</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **LITERAL:** full match
-         * *   **PREFIXED**: prefix match
+         * <strong>example:</strong>
+         * <p>LITERAL</p>
          */
         public Builder aclResourcePatternType(String aclResourcePatternType) {
             this.putQueryParameter("AclResourcePatternType", aclResourcePatternType);
@@ -265,13 +285,17 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>Topic</strong>: topic</li>
+         * <li><strong>Group</strong>: consumer group</li>
+         * <li><strong>Cluster</strong>: cluster</li>
+         * <li><strong>TransactionalId</strong>: transactional ID</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Topic**: topic
-         * *   **Group**: consumer group
-         * *   **Cluster**: cluster
-         * *   **TransactionalId**: transactional ID
+         * <strong>example:</strong>
+         * <p>Topic</p>
          */
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);
@@ -280,11 +304,18 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The IP address of the source.
-         * <p>
+         * <p>The IP address of the source.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can specify only a specific IP address or use the asterisk (*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</li>
+         * <li>This parameter is available only for serverless ApsaraMQ for Kafka V3 instances.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > - You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.
-         * >- This parameter is available only for serverless ApsaraMQ for Kafka V3 instances.
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -293,7 +324,11 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-v0h1cng0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -302,7 +337,11 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -311,7 +350,11 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The name of the user.
+         * <p>The name of the user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test12****</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

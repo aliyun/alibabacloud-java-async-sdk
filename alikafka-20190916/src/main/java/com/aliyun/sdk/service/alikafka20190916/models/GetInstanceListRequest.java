@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceListRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceListRequest</p>
@@ -124,7 +125,10 @@ public class GetInstanceListRequest extends Request {
         } 
 
         /**
-         * The IDs of instances.
+         * <p>The IDs of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-mp91gnw0p***</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,7 +137,10 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the order. You can obtain the order ID on the [Orders](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\&pageSize=20\&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa) page in Alibaba Cloud User Center.
+         * <p>The ID of the order. You can obtain the order ID on the <a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1&pageSize=20&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Orders</a> page in Alibaba Cloud User Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6072673****</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -142,7 +149,11 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides.
+         * <p>The ID of the region where the instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +162,10 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can obtain this ID on the Resource Group page in the Resource Management console.
+         * <p>The ID of the resource group. You can obtain this ID on the Resource Group page in the Resource Management console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ac***********7q</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -160,12 +174,15 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * The instance version. You can use instance versions to filter different versions of instances. Valid values:
-         * <p>
+         * <p>The instance version. You can use instance versions to filter different versions of instances. Valid values:</p>
+         * <ul>
+         * <li>v2</li>
+         * <li>v3</li>
+         * <li>confluent</li>
+         * </ul>
          * 
-         * *   v2
-         * *   v3
-         * *   confluent
+         * <strong>example:</strong>
+         * <p>v3</p>
          */
         public Builder series(String series) {
             this.putQueryParameter("Series", series);
@@ -174,7 +191,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -189,6 +206,12 @@ public class GetInstanceListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceListRequest} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -228,11 +251,14 @@ public class GetInstanceListRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <ul>
+             * <li>If you leave this parameter empty, the keys of all tags are matched.</li>
+             * <li>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
              * 
-             * *   If you leave this parameter empty, the keys of all tags are matched.
-             * *   The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -240,11 +266,14 @@ public class GetInstanceListRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <ul>
+             * <li>If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.</li>
+             * <li>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
              * 
-             * *   If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.
-             * *   The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

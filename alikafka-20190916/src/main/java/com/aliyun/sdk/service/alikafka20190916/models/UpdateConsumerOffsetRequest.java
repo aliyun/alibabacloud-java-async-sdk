@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConsumerOffsetRequest} extends {@link RequestModel}
  *
  * <p>UpdateConsumerOffsetRequest</p>
@@ -141,12 +142,16 @@ public class UpdateConsumerOffsetRequest extends Request {
         } 
 
         /**
-         * The name of the consumer group.
-         * <p>
+         * <p>The name of the consumer group.</p>
+         * <ul>
+         * <li>The name can contain letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must be <strong>3 to 64</strong> characters in length. If a name contains more than <strong>64</strong> characters, the name is automatically truncated.</li>
+         * <li>The name of a consumer group cannot be changed after the consumer group is created.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, hyphens (-), and underscores (\_).
-         * *   The name must be **3 to 64** characters in length. If a name contains more than **64** characters, the name is automatically truncated.
-         * *   The name of a consumer group cannot be changed after the consumer group is created.
+         * <strong>example:</strong>
+         * <p>kafka-test</p>
          */
         public Builder consumerId(String consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -155,7 +160,11 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-mp91inkw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -164,7 +173,7 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * If you set resetType to offset, you can use this parameter to reset the consumer offset of each partition of a specific topic in the consumer group.
+         * <p>If you set resetType to offset, you can use this parameter to reset the consumer offset of each partition of a specific topic in the consumer group.</p>
          */
         public Builder offsets(java.util.List < Offsets> offsets) {
             String offsetsShrink = shrink(offsets, "Offsets", "json");
@@ -174,7 +183,11 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * The region ID of the instance to which the consumer group belongs.
+         * <p>The region ID of the instance to which the consumer group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,11 +196,14 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * The method that is used to reset the consumer offsets of the subscribed topics of a consumer group. Valid values:
-         * <p>
+         * <p>The method that is used to reset the consumer offsets of the subscribed topics of a consumer group. Valid values:</p>
+         * <ul>
+         * <li><strong>timestamp</strong> (default)</li>
+         * <li><strong>offset</strong></li>
+         * </ul>
          * 
-         * *   **timestamp** (default)
-         * *   **offset**
+         * <strong>example:</strong>
+         * <p>timestamp</p>
          */
         public Builder resetType(String resetType) {
             this.putQueryParameter("ResetType", resetType);
@@ -196,11 +212,14 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * The point in time when message consumption starts. The value of this parameter is a UNIX timestamp in milliseconds. The value of this parameter must be **less than 0** or **within the retention period of the consumer offset**. This parameter takes effect only if you set resetType to timestamp.
-         * <p>
+         * <p>The point in time when message consumption starts. The value of this parameter is a UNIX timestamp in milliseconds. The value of this parameter must be <strong>less than 0</strong> or <strong>within the retention period of the consumer offset</strong>. This parameter takes effect only if you set resetType to timestamp.</p>
+         * <ul>
+         * <li>If you want to reset the consumer offset to the latest offset, set this parameter to -1.</li>
+         * <li>If you want to reset the consumer offset to the earliest offset, set this parameter to -2.</li>
+         * </ul>
          * 
-         * *   If you want to reset the consumer offset to the latest offset, set this parameter to -1.
-         * *   If you want to reset the consumer offset to the earliest offset, set this parameter to -2.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);
@@ -209,14 +228,17 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * The topic name.
-         * <p>
+         * <p>The topic name.</p>
+         * <ul>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must be <strong>3 to 64</strong> characters in length. If a name contains more than <strong>64</strong> characters, the name is automatically truncated.</li>
+         * <li>The name of a topic cannot be changed after the topic is created.</li>
+         * </ul>
+         * <p><strong>If you want to reset the consumer offsets of all topics to which the consumer subscribes, specify an empty string.</strong></p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must be **3 to 64** characters in length. If a name contains more than **64** characters, the name is automatically truncated.
-         * *   The name of a topic cannot be changed after the topic is created.
-         * 
-         * **If you want to reset the consumer offsets of all topics to which the consumer subscribes, specify an empty string.**
+         * <strong>example:</strong>
+         * <p>topic_name</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
@@ -231,6 +253,12 @@ public class UpdateConsumerOffsetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateConsumerOffsetRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateConsumerOffsetRequest</p>
+     */
     public static class Offsets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Offset")
         private Long offset;
@@ -270,7 +298,10 @@ public class UpdateConsumerOffsetRequest extends Request {
             private Integer partition; 
 
             /**
-             * The consumer offset of the partition.
+             * <p>The consumer offset of the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder offset(Long offset) {
                 this.offset = offset;
@@ -278,7 +309,10 @@ public class UpdateConsumerOffsetRequest extends Request {
             }
 
             /**
-             * The partition ID.
+             * <p>The partition ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;

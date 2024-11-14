@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceNameRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceNameRequest</p>
@@ -84,7 +85,11 @@ public class ModifyInstanceNameRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,11 +98,15 @@ public class ModifyInstanceNameRequest extends Request {
         }
 
         /**
-         * The instance name. Valid values:
-         * <p>
+         * <p>The instance name. Valid values:</p>
+         * <ul>
+         * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must be 3 to 64 characters in length. A name that contains more than 64 characters is automatically truncated.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain only letters, digits, hyphens (-), and underscores (\_).
-         * *   The name must be 3 to 64 characters in length. A name that contains more than 64 characters is automatically truncated.
+         * <strong>example:</strong>
+         * <p>dev-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -106,7 +115,11 @@ public class ModifyInstanceNameRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

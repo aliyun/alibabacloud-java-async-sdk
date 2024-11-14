@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -111,7 +112,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token that determines the start point of the next query.
+         * <p>The token that determines the start point of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -120,7 +124,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource is deployed.
+         * <p>The ID of the region in which the resource is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,16 +137,19 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource whose tags you want to query. The resource ID follows the following rules:
-         * <p>
+         * <p>The ID of the resource whose tags you want to query. The resource ID follows the following rules:</p>
+         * <ul>
+         * <li>Instance ID: instanceId</li>
+         * <li>Topic ID: Kafka_alikafka_instanceId_topic</li>
+         * <li>Group ID: Kafka_alikafka_instanceId_consumerGroup</li>
+         * </ul>
+         * <p>For example, if the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the topic name is test-topic, and the group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group, respectively.</p>
+         * <blockquote>
+         * <p> You must configure one of <strong>ResourceId</strong> and <strong>Tag</strong> to query the tags that are bound to a resource. Otherwise, the request fails.</p>
+         * </blockquote>
          * 
-         * *   Instance ID: instanceId
-         * *   Topic ID: Kafka_alikafka_instanceId_topic
-         * *   Group ID: Kafka_alikafka_instanceId_consumerGroup
-         * 
-         * For example, if the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the topic name is test-topic, and the group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group, respectively.
-         * 
-         * >  You must configure one of **ResourceId** and **Tag** to query the tags that are bound to a resource. Otherwise, the request fails.
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -147,12 +158,16 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource whose tags you want to query. The value is an enumerated value. Valid values:
-         * <p>
+         * <p>The type of the resource whose tags you want to query. The value is an enumerated value. Valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong></li>
+         * <li><strong>TOPIC</strong></li>
+         * <li><strong>CONSUMERGROUP</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **INSTANCE**
-         * *   **TOPIC**
-         * *   **CONSUMERGROUP**
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -161,7 +176,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -176,6 +191,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -215,11 +236,14 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the resource tag.
-             * <p>
+             * <p>The key of the resource tag.</p>
+             * <ul>
+             * <li>If you leave this parameter empty, the keys of all tags are matched.</li>
+             * <li>The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+             * </ul>
              * 
-             * *   If you leave this parameter empty, the keys of all tags are matched.
-             * *   The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,11 +251,14 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the resource tag.
-             * <p>
+             * <p>The value of the resource tag.</p>
+             * <ul>
+             * <li>If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.</li>
+             * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</li>
+             * </ul>
              * 
-             * *   If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.
-             * *   The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSaslUserRequest} extends {@link RequestModel}
  *
  * <p>DeleteSaslUserRequest</p>
@@ -112,7 +113,11 @@ public class DeleteSaslUserRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-v0h1cng0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -121,13 +126,17 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * The encryption method. Valid values:
-         * <p>
+         * <p>The encryption method. Valid values:</p>
+         * <ul>
+         * <li>SCRAM-SHA-512. This is the default value.</li>
+         * <li>SCRAM-SHA-256</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+         * </blockquote>
          * 
-         * *   SCRAM-SHA-512. This is the default value.
-         * *   SCRAM-SHA-256
-         * 
-         * >  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+         * <strong>example:</strong>
+         * <p>SCRAM-SHA-256</p>
          */
         public Builder mechanism(String mechanism) {
             this.putQueryParameter("Mechanism", mechanism);
@@ -136,7 +145,11 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,14 +158,16 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * The type of the Simple Authentication and Security Layer (SASL) user. Valid values:
-         * <p>
+         * <p>The type of the Simple Authentication and Security Layer (SASL) user. Valid values:</p>
+         * <ul>
+         * <li><strong>plain</strong>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</li>
+         * <li><strong>SCRAM</strong>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</li>
+         * <li><strong>LDAP</strong>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</li>
+         * </ul>
+         * <p>Default value: <strong>plain</strong>.</p>
          * 
-         * *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.
-         * *   **SCRAM**: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.
-         * *   **LDAP**: This value is available only for the SASL users of ApsaraMQ for Confluent instances.
-         * 
-         * Default value: **plain**.
+         * <strong>example:</strong>
+         * <p>scram</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -161,7 +176,11 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * The name of the user.
+         * <p>The name of the user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test***</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAllowedIpListResponseBody} extends {@link TeaModel}
  *
  * <p>GetAllowedIpListResponseBody</p>
@@ -85,7 +86,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The IP address whitelist.
+         * <p>The IP address whitelist.</p>
          */
         public Builder allowedList(AllowedList allowedList) {
             this.allowedList = allowedList;
@@ -93,7 +94,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +105,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A421CCD7-5BC5-4B32-8DD8-64668A8FCB56</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAllowedIpListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAllowedIpListResponseBody</p>
+     */
     public static class InternetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedIpGroup")
         private java.util.Map < String, String > allowedIpGroup;
@@ -181,7 +200,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             private String portRange; 
 
             /**
-             * The group to which the IP address whitelist belongs.
+             * <p>The group to which the IP address whitelist belongs.</p>
              */
             public Builder allowedIpGroup(java.util.Map < String, String > allowedIpGroup) {
                 this.allowedIpGroup = allowedIpGroup;
@@ -189,7 +208,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the IP address whitelist.
+             * <p>The information about the IP address whitelist.</p>
              */
             public Builder allowedIpList(java.util.List < String > allowedIpList) {
                 this.allowedIpList = allowedIpList;
@@ -197,10 +216,11 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The port range. Valid value:
-             * <p>
+             * <p>The port range. Valid value:</p>
+             * <p><strong>9093/9093</strong>.</p>
              * 
-             * **9093/9093**.
+             * <strong>example:</strong>
+             * <p>9093/9093</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -214,6 +234,12 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAllowedIpListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAllowedIpListResponseBody</p>
+     */
     public static class VpcList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedIpGroup")
         private java.util.Map < String, String > allowedIpGroup;
@@ -265,7 +291,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             private String portRange; 
 
             /**
-             * The group to which the IP address whitelist belongs.
+             * <p>The group to which the IP address whitelist belongs.</p>
              */
             public Builder allowedIpGroup(java.util.Map < String, String > allowedIpGroup) {
                 this.allowedIpGroup = allowedIpGroup;
@@ -273,7 +299,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the IP address whitelist.
+             * <p>The information about the IP address whitelist.</p>
              */
             public Builder allowedIpList(java.util.List < String > allowedIpList) {
                 this.allowedIpList = allowedIpList;
@@ -281,10 +307,11 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The port range. Valid value:
-             * <p>
+             * <p>The port range. Valid value:</p>
+             * <p><strong>9092/9092</strong>.</p>
              * 
-             * **9092/9092**.
+             * <strong>example:</strong>
+             * <p>9092/9092</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -298,6 +325,12 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAllowedIpListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAllowedIpListResponseBody</p>
+     */
     public static class AllowedList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeployType")
         private Integer deployType;
@@ -349,13 +382,17 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             private java.util.List < VpcList> vpcList; 
 
             /**
-             * The deployment mode of the instance. Valid values:
-             * <p>
+             * <p>The deployment mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>4</strong>: allows access from the Internet and a virtual private cloud (VPC).</li>
+             * <li><strong>5</strong>: allows access from a VPC.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only integrators need to concern themselves with the value of this parameter.</p>
+             * </blockquote>
              * 
-             * *   **4**: allows access from the Internet and a virtual private cloud (VPC).
-             * *   **5**: allows access from a VPC.
-             * 
-             * >  Only integrators need to concern themselves with the value of this parameter.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder deployType(Integer deployType) {
                 this.deployType = deployType;
@@ -363,7 +400,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist for access from the Internet.
+             * <p>The whitelist for access from the Internet.</p>
              */
             public Builder internetList(java.util.List < InternetList> internetList) {
                 this.internetList = internetList;
@@ -371,7 +408,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist for access from a virtual private cloud (VPC).
+             * <p>The whitelist for access from a virtual private cloud (VPC).</p>
              */
             public Builder vpcList(java.util.List < VpcList> vpcList) {
                 this.vpcList = vpcList;

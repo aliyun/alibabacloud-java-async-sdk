@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableAutoTopicCreationRequest} extends {@link RequestModel}
  *
  * <p>EnableAutoTopicCreationRequest</p>
@@ -98,7 +99,11 @@ public class EnableAutoTopicCreationRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -107,12 +112,16 @@ public class EnableAutoTopicCreationRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Valid values:
-         * <p>
+         * <p>The operation that you want to perform. Valid values:</p>
+         * <ul>
+         * <li>enable: enables the automatic topic creation feature.</li>
+         * <li>disable: disables the automatic topic creation feature.</li>
+         * <li>updatePartition: changes the number of partitions in topics that are automatically created.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   enable: enables the automatic topic creation feature.
-         * *   disable: disables the automatic topic creation feature.
-         * *   updatePartition: changes the number of partitions in topics that are automatically created.
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder operate(String operate) {
             this.putQueryParameter("Operate", operate);
@@ -121,10 +130,11 @@ public class EnableAutoTopicCreationRequest extends Request {
         }
 
         /**
-         * The changed number of partitions in topics that are automatically created.
-         * <p>
+         * <p>The changed number of partitions in topics that are automatically created.</p>
+         * <p>This parameter takes effect only if you set Operate to updatePartition.</p>
          * 
-         * This parameter takes effect only if you set Operate to updatePartition.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder partitionNum(Long partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -133,7 +143,11 @@ public class EnableAutoTopicCreationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

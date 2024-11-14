@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAllInstanceIdListRequest} extends {@link RequestModel}
  *
  * <p>GetAllInstanceIdListRequest</p>
@@ -53,7 +54,10 @@ public class GetAllInstanceIdListRequest extends Request {
         } 
 
         /**
-         * The region ID of the instance. This parameter is reserved.
+         * <p>The region ID of the instance. This parameter is reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

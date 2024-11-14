@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReleaseInstanceRequest</p>
@@ -83,11 +84,14 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to immediately release the physical resources of the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to immediately release the physical resources of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The physical resources of the instance are immediately released.</li>
+         * <li><strong>false</strong>: The physical resources of the instance are retained for a period of time before they are released.</li>
+         * </ul>
          * 
-         * *   **true**: The physical resources of the instance are immediately released.
-         * *   **false**: The physical resources of the instance are retained for a period of time before they are released.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDeleteInstance(Boolean forceDeleteInstance) {
             this.putQueryParameter("ForceDeleteInstance", forceDeleteInstance);
@@ -96,7 +100,11 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-mp919o4v****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +113,11 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

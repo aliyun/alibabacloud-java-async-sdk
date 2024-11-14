@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteScheduledScalingRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteScheduledScalingRuleRequest</p>
@@ -84,7 +85,11 @@ public class DeleteScheduledScalingRuleRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_serverless-cn-vxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +98,11 @@ public class DeleteScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides.
+         * <p>The ID of the region where the instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,10 +111,14 @@ public class DeleteScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * The name of the scheduled scaling rule.
-         * <p>
+         * <p>The name of the scheduled scaling rule.</p>
+         * <blockquote>
+         * <p> You can delete only rules that are disabled and rules that are scheduled only once and have been executed.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can delete only rules that are disabled and rules that are scheduled only once and have been executed.
+         * <strong>example:</strong>
+         * <p>rule-name-test</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

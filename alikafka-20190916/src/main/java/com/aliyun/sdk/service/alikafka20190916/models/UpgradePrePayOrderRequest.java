@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradePrePayOrderRequest} extends {@link RequestModel}
  *
  * <p>UpgradePrePayOrderRequest</p>
@@ -219,11 +220,14 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The size of the disk.
-         * <p>
+         * <p>The size of the disk.</p>
+         * <ul>
+         * <li>The disk size that you specify must be greater than or equal to the current disk size of the instance.</li>
+         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * </ul>
          * 
-         * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
-         * *   For more information about the valid values, see [Billing overview](~~84737~~).
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -232,13 +236,20 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The Internet traffic for the instance.
-         * <p>
+         * <p>The Internet traffic for the instance.</p>
+         * <ul>
+         * <li>The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.</li>
+         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.<blockquote>
+         * <ul>
+         * <li>If the <strong>EipModel</strong> parameter is set to <strong>true</strong>, set the <strong>EipMax</strong> parameter to a value that is greater than 0.</li>
+         * <li>If the <strong>EipModel</strong> parameter is set to <strong>false</strong>, set the <strong>EipMax</strong> parameter to <strong>0</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
-         * *   The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.
-         * *   For more information about the valid values, see [Billing overview](~~84737~~).
-         * > - If the **EipModel** parameter is set to **true**, set the **EipMax** parameter to a value that is greater than 0.
-         * > - If the **EipModel** parameter is set to **false**, set the **EipMax** parameter to **0**.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -247,11 +258,14 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Internet access for the instance. Valid values:</p>
+         * <ul>
+         * <li>true: enables Internet access.</li>
+         * <li>false: disables Internet access.</li>
+         * </ul>
          * 
-         * *   true: enables Internet access.
-         * *   false: disables Internet access.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder eipModel(Boolean eipModel) {
             this.putQueryParameter("EipModel", eipModel);
@@ -260,7 +274,11 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-mp919o4v****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -269,12 +287,15 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The maximum traffic for the instance. We recommend that you do not configure this parameter.
-         * <p>
+         * <p>The maximum traffic for the instance. We recommend that you do not configure this parameter.</p>
+         * <ul>
+         * <li>The maximum traffic volume that you specify must be greater than or equal to the current maximum traffic volume of the instance.</li>
+         * <li>You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</li>
+         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * </ul>
          * 
-         * *   The maximum traffic volume that you specify must be greater than or equal to the current maximum traffic volume of the instance.
-         * *   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.
-         * *   For more information about the valid values, see [Billing overview](~~84737~~).
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder ioMax(Integer ioMax) {
             this.putQueryParameter("IoMax", ioMax);
@@ -283,12 +304,15 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The traffic specification of the instance. We recommend that you configure this parameter.
-         * <p>
+         * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+         * <ul>
+         * <li>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</li>
+         * <li>You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</li>
+         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * </ul>
          * 
-         * *   The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.
-         * *   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.
-         * *   For more information about the valid values, see [Billing overview](~~84737~~).
+         * <strong>example:</strong>
+         * <p>alikafka.hw.2xlarge</p>
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -306,12 +330,15 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The number of partitions. We recommend that you configure this parameter.
-         * <p>
+         * <p>The number of partitions. We recommend that you configure this parameter.</p>
+         * <ul>
+         * <li>You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</li>
+         * <li>If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</li>
+         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * </ul>
          * 
-         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-         * *   For more information about the valid values, see [Billing overview](~~84737~~).
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -320,7 +347,11 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -329,14 +360,16 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The edition of the instance. Valid values:
-         * <p>
+         * <p>The edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>normal</strong>: Standard Edition (High Write)</li>
+         * <li><strong>professional</strong>: Professional Edition (High Write)</li>
+         * <li><strong>professionalForHighRead</strong>: Professional Edition (High Read)</li>
+         * </ul>
+         * <p>You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
          * 
-         * *   **normal**: Standard Edition (High Write)
-         * *   **professional**: Professional Edition (High Write)
-         * *   **professionalForHighRead**: Professional Edition (High Read)
-         * 
-         * You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see [Billing overview](~~84737~~).
+         * <strong>example:</strong>
+         * <p>professional</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -345,13 +378,16 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The number of topics. We recommend that you do not configure this parameter.
-         * <p>
+         * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+         * <ul>
+         * <li>You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</li>
+         * <li>If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</li>
+         * <li>The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.</li>
+         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+         * </ul>
          * 
-         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-         * *   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.
-         * *   For more information about the valid values, see [Billing overview](~~84737~~).
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder topicQuota(Integer topicQuota) {
             this.putQueryParameter("TopicQuota", topicQuota);
@@ -366,6 +402,12 @@ public class UpgradePrePayOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradePrePayOrderRequest} extends {@link TeaModel}
+     *
+     * <p>UpgradePrePayOrderRequest</p>
+     */
     public static class ConfluentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectCU")
         @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)

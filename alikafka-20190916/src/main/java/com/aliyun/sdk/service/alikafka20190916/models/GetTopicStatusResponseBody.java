@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetTopicStatusResponseBody</p>
@@ -85,7 +86,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
         private TopicStatus topicStatus; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E475C7E2-8C35-46EF-BE7D-5D2A9F5D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +130,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status information about messages in the topic.
+         * <p>The status information about messages in the topic.</p>
          */
         public Builder topicStatus(TopicStatus topicStatus) {
             this.topicStatus = topicStatus;
@@ -130,6 +143,12 @@ public class GetTopicStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicStatusResponseBody</p>
+     */
     public static class OffsetTable extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastUpdateTimestamp")
         private Long lastUpdateTimestamp;
@@ -205,7 +224,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The last time when the partition was modified.
+             * <p>The last time when the partition was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566470063547</p>
              */
             public Builder lastUpdateTimestamp(Long lastUpdateTimestamp) {
                 this.lastUpdateTimestamp = lastUpdateTimestamp;
@@ -213,7 +235,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The latest offset in the partition of the topic.
+             * <p>The latest offset in the partition of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>76</p>
              */
             public Builder maxOffset(Long maxOffset) {
                 this.maxOffset = maxOffset;
@@ -221,7 +246,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The earliest offset in the partition of the topic.
+             * <p>The earliest offset in the partition of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minOffset(Long minOffset) {
                 this.minOffset = minOffset;
@@ -229,7 +257,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the partition.
+             * <p>The ID of the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -237,7 +268,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic.
+             * <p>The name of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkafka</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -251,6 +285,12 @@ public class GetTopicStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicStatusResponseBody</p>
+     */
     public static class TopicStatusOffsetTable extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OffsetTable")
         private java.util.List < OffsetTable> offsetTable;
@@ -292,6 +332,12 @@ public class GetTopicStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicStatusResponseBody</p>
+     */
     public static class TopicStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastTimeStamp")
         private Long lastTimeStamp;
@@ -343,7 +389,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The time when the last consumed message was generated.
+             * <p>The time when the last consumed message was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566470063575</p>
              */
             public Builder lastTimeStamp(Long lastTimeStamp) {
                 this.lastTimeStamp = lastTimeStamp;
@@ -351,7 +400,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about offsets in the topic.
+             * <p>The information about offsets in the topic.</p>
              */
             public Builder offsetTable(TopicStatusOffsetTable offsetTable) {
                 this.offsetTable = offsetTable;
@@ -359,7 +408,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of messages in the topic.
+             * <p>The number of messages in the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

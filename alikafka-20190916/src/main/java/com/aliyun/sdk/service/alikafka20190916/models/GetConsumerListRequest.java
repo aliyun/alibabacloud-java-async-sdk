@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerListRequest} extends {@link RequestModel}
  *
  * <p>GetConsumerListRequest</p>
@@ -111,7 +112,10 @@ public class GetConsumerListRequest extends Request {
         } 
 
         /**
-         * The name of the consumer group. If you do not configure this parameter, all consumer groups are queried.
+         * <p>The name of the consumer group. If you do not configure this parameter, all consumer groups are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka-test</p>
          */
         public Builder consumerId(String consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -120,7 +124,10 @@ public class GetConsumerListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -129,7 +136,11 @@ public class GetConsumerListRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the consumer group belongs.
+         * <p>The ID of the instance to which the consumer group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h18sav****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -138,7 +149,10 @@ public class GetConsumerListRequest extends Request {
         }
 
         /**
-         * The number of entries to be returned per page.
+         * <p>The number of entries to be returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +161,11 @@ public class GetConsumerListRequest extends Request {
         }
 
         /**
-         * The region ID of the instance to which the consumer group belongs.
+         * <p>The region ID of the instance to which the consumer group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

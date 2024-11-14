@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePrePayOrderRequest} extends {@link RequestModel}
  *
  * <p>CreatePrePayOrderRequest</p>
@@ -250,10 +251,10 @@ public class CreatePrePayOrderRequest extends Request {
         } 
 
         /**
-         * The configurations of Confluent.
-         * <p>
-         * 
-         * >  When you create an ApsaraMQ for Confluent instance, you must configure this parameter.
+         * <p>The configurations of Confluent.</p>
+         * <blockquote>
+         * <p> When you create an ApsaraMQ for Confluent instance, you must configure this parameter.</p>
+         * </blockquote>
          */
         public Builder confluentConfig(ConfluentConfig confluentConfig) {
             String confluentConfigShrink = shrink(confluentConfig, "ConfluentConfig", "json");
@@ -263,13 +264,17 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The type of the network in which the instance is deployed. Valid values:
-         * <p>
+         * <p>The type of the network in which the instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>4</strong>: Internet and virtual private cloud (VPC)</li>
+         * <li><strong>5</strong>: VPC</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you create an ApsaraMQ for Confluent instance, set the value to 5. After the instance is created, you can specify whether to enable each component.</p>
+         * </blockquote>
          * 
-         * *   **4**: Internet and virtual private cloud (VPC)
-         * *   **5**: VPC
-         * 
-         * >  If you create an ApsaraMQ for Confluent instance, set the value to 5. After the instance is created, you can specify whether to enable each component.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder deployType(Integer deployType) {
             this.putQueryParameter("DeployType", deployType);
@@ -278,12 +283,14 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The disk size. Unit: GB
-         * <p>
+         * <p>The disk size. Unit: GB</p>
+         * <p>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * <blockquote>
+         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -292,13 +299,17 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The disk type. Valid values:
-         * <p>
+         * <p>The disk type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: ultra disk</li>
+         * <li><strong>1</strong>: standard SSD</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   **0**: ultra disk
-         * *   **1**: standard SSD
-         * 
-         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -307,10 +318,13 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The subscription duration. Unit: months. Default value: 1. Valid values:
-         * <p>
+         * <p>The subscription duration. Unit: months. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li><strong>1 to 12</strong></li>
+         * </ul>
          * 
-         * *   **1 to 12**
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -319,13 +333,17 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The maximum Internet traffic in the instance.
-         * <p>
+         * <p>The maximum Internet traffic in the instance.</p>
+         * <ul>
+         * <li>If you set <strong>DeployType</strong> to <strong>4</strong>, you must configure this parameter.</li>
+         * <li>For information about the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">Pay-as-you-go</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   If you set **DeployType** to **4**, you must configure this parameter.
-         * *   For information about the valid values, see [Pay-as-you-go](~~72142~~).
-         * 
-         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -334,13 +352,17 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The maximum traffic in the instance. We recommend that you do not configure this parameter.
-         * <p>
+         * <p>The maximum traffic in the instance. We recommend that you do not configure this parameter.</p>
+         * <ul>
+         * <li>You must set one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If both parameters are configured, the value of <strong>IoMaxSpec</strong> is used. We recommend that you configure only <strong>IoMaxSpec</strong>.</li>
+         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   You must set one of **IoMax** and **IoMaxSpec**. If both parameters are configured, the value of **IoMaxSpec** is used. We recommend that you configure only **IoMaxSpec**.
-         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder ioMax(Integer ioMax) {
             this.putQueryParameter("IoMax", ioMax);
@@ -349,13 +371,17 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The traffic specification of the instance. We recommend that you configure this parameter.
-         * <p>
+         * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+         * <ul>
+         * <li>You must configure one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If both parameters are configured, the value of <strong>IoMaxSpec</strong> is used. We recommend that you configure only <strong>IoMaxSpec</strong>.</li>
+         * <li>For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   You must configure one of **IoMax** and **IoMaxSpec**. If both parameters are configured, the value of **IoMaxSpec** is used. We recommend that you configure only **IoMaxSpec**.
-         * *   For more information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>alikafka.hw.2xlarge</p>
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -364,11 +390,14 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the subscription billing method</li>
+         * <li><strong>4</strong>: the subscription billing method for ApsaraMQ for Confluent instances</li>
+         * </ul>
          * 
-         * *   **0**: the subscription billing method
-         * *   **4**: the subscription billing method for ApsaraMQ for Confluent instances
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder paidType(Integer paidType) {
             this.putQueryParameter("PaidType", paidType);
@@ -377,14 +406,18 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The number of partitions. We recommend that you configure this parameter.
-         * <p>
+         * <p>The number of partitions. We recommend that you configure this parameter.</p>
+         * <ul>
+         * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</li>
+         * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
+         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.
-         * *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
-         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -393,7 +426,11 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -402,10 +439,11 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
-         * <p>
+         * <p>The ID of the resource group.</p>
+         * <p>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</p>
          * 
-         * If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.
+         * <strong>example:</strong>
+         * <p>rg-ac***********7q</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -414,16 +452,19 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The instance edition. Valid values:
-         * <p>
+         * <p>The instance edition. Valid values:</p>
+         * <ul>
+         * <li><strong>normal</strong>: Standard Edition (High Write)</li>
+         * <li><strong>professional</strong>: Professional Edition (High Write)</li>
+         * <li><strong>professionalForHighRead</strong>: Professional Edition (High Read)</li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+         * <blockquote>
+         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   **normal**: Standard Edition (High Write)
-         * *   **professional**: Professional Edition (High Write)
-         * *   **professionalForHighRead**: Professional Edition (High Read)
-         * 
-         * For more information, see [Billing](~~84737~~).
-         * 
-         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -432,7 +473,7 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -441,15 +482,19 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The number of topics. We recommend that you do not configure this parameter.
-         * <p>
+         * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+         * <ul>
+         * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</li>
+         * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
+         * <li>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you use exceeds the default value, you are charged additional fees.</li>
+         * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+         * </blockquote>
          * 
-         * *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.
-         * *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
-         * *   The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you use exceeds the default value, you are charged additional fees.
-         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
-         * 
-         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder topicQuota(Integer topicQuota) {
             this.putQueryParameter("TopicQuota", topicQuota);
@@ -464,6 +509,12 @@ public class CreatePrePayOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePrePayOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePrePayOrderRequest</p>
+     */
     public static class ConfluentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectCU")
         private Integer connectCU;
@@ -695,7 +746,10 @@ public class CreatePrePayOrderRequest extends Request {
             private Integer zooKeeperStorage; 
 
             /**
-             * The number of CPU cores of Connect.
+             * <p>The number of CPU cores of Connect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder connectCU(Integer connectCU) {
                 this.connectCU = connectCU;
@@ -703,7 +757,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of replicas of Connect.
+             * <p>The number of replicas of Connect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder connectReplica(Integer connectReplica) {
                 this.connectReplica = connectReplica;
@@ -711,7 +768,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of CPU cores of Control Center.
+             * <p>The number of CPU cores of Control Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder controlCenterCU(Integer controlCenterCU) {
                 this.controlCenterCU = controlCenterCU;
@@ -719,7 +779,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of replicas of Control Center.
+             * <p>The number of replicas of Control Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder controlCenterReplica(Integer controlCenterReplica) {
                 this.controlCenterReplica = controlCenterReplica;
@@ -727,7 +790,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The disk capacity of Control Center. Unit: GB
+             * <p>The disk capacity of Control Center. Unit: GB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder controlCenterStorage(Integer controlCenterStorage) {
                 this.controlCenterStorage = controlCenterStorage;
@@ -735,7 +801,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of CPU cores of the Kafka broker.
+             * <p>The number of CPU cores of the Kafka broker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder kafkaCU(Integer kafkaCU) {
                 this.kafkaCU = kafkaCU;
@@ -743,7 +812,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of replicas of the Kafka broker.
+             * <p>The number of replicas of the Kafka broker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder kafkaReplica(Integer kafkaReplica) {
                 this.kafkaReplica = kafkaReplica;
@@ -751,7 +823,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of CPU cores of Kafka Rest Proxy.
+             * <p>The number of CPU cores of Kafka Rest Proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder kafkaRestProxyCU(Integer kafkaRestProxyCU) {
                 this.kafkaRestProxyCU = kafkaRestProxyCU;
@@ -759,7 +834,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of replicas of Kafka Rest Proxy.
+             * <p>The number of replicas of Kafka Rest Proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder kafkaRestProxyReplica(Integer kafkaRestProxyReplica) {
                 this.kafkaRestProxyReplica = kafkaRestProxyReplica;
@@ -767,7 +845,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The disk capacity of the Kafka broker. Unit: GB
+             * <p>The disk capacity of the Kafka broker. Unit: GB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder kafkaStorage(Integer kafkaStorage) {
                 this.kafkaStorage = kafkaStorage;
@@ -775,7 +856,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of CPU cores of ksqIDB.
+             * <p>The number of CPU cores of ksqIDB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder ksqlCU(Integer ksqlCU) {
                 this.ksqlCU = ksqlCU;
@@ -783,7 +867,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of replicas of ksqlDB.
+             * <p>The number of replicas of ksqlDB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder ksqlReplica(Integer ksqlReplica) {
                 this.ksqlReplica = ksqlReplica;
@@ -791,7 +878,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The disk capacity of ksqlDB. Unit: GB
+             * <p>The disk capacity of ksqlDB. Unit: GB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ksqlStorage(Integer ksqlStorage) {
                 this.ksqlStorage = ksqlStorage;
@@ -799,7 +889,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of CPU cores of Schema Registry.
+             * <p>The number of CPU cores of Schema Registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder schemaRegistryCU(Integer schemaRegistryCU) {
                 this.schemaRegistryCU = schemaRegistryCU;
@@ -807,7 +900,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of replicas of Schema Registry.
+             * <p>The number of replicas of Schema Registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder schemaRegistryReplica(Integer schemaRegistryReplica) {
                 this.schemaRegistryReplica = schemaRegistryReplica;
@@ -815,7 +911,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of CPU cores of ZooKeeper.
+             * <p>The number of CPU cores of ZooKeeper.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder zooKeeperCU(Integer zooKeeperCU) {
                 this.zooKeeperCU = zooKeeperCU;
@@ -823,7 +922,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The number of replicas of ZooKeeper.
+             * <p>The number of replicas of ZooKeeper.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder zooKeeperReplica(Integer zooKeeperReplica) {
                 this.zooKeeperReplica = zooKeeperReplica;
@@ -831,7 +933,10 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The disk capacity of ZooKeeper. Unit: GB
+             * <p>The disk capacity of ZooKeeper. Unit: GB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder zooKeeperStorage(Integer zooKeeperStorage) {
                 this.zooKeeperStorage = zooKeeperStorage;
@@ -845,6 +950,12 @@ public class CreatePrePayOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePrePayOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePrePayOrderRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -885,12 +996,16 @@ public class CreatePrePayOrderRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
-             * <p>
+             * <p>The key of tag N.</p>
+             * <ul>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>If this parameter is left empty, the keys of all tags are matched.</li>
+             * <li>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   Valid values of N: 1 to 20.
-             * *   If this parameter is left empty, the keys of all tags are matched.
-             * *   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -898,12 +1013,15 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * The value of tag N.
-             * <p>
+             * <p>The value of tag N.</p>
+             * <ul>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>This parameter can be left empty.</li>
+             * <li>The tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+             * </ul>
              * 
-             * *   Valid values of N: 1 to 20.
-             * *   This parameter can be left empty.
-             * *   The tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
