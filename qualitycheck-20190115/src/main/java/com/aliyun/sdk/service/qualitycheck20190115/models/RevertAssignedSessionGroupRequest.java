@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevertAssignedSessionGroupRequest} extends {@link RequestModel}
  *
  * <p>RevertAssignedSessionGroupRequest</p>
@@ -67,7 +68,7 @@ public class RevertAssignedSessionGroupRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);

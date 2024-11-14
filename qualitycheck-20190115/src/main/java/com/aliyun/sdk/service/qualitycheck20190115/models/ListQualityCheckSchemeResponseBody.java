@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQualityCheckSchemeResponseBody} extends {@link TeaModel}
  *
  * <p>ListQualityCheckSchemeResponseBody</p>
@@ -210,6 +211,12 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListQualityCheckSchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQualityCheckSchemeResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
@@ -391,6 +398,12 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQualityCheckSchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQualityCheckSchemeResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
@@ -432,6 +445,12 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQualityCheckSchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQualityCheckSchemeResponseBody</p>
+     */
     public static class SchemeCheckTypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
@@ -553,6 +572,12 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQualityCheckSchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQualityCheckSchemeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

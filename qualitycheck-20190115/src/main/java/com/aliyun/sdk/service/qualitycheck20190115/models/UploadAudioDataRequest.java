@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadAudioDataRequest} extends {@link RequestModel}
  *
  * <p>UploadAudioDataRequest</p>
@@ -77,7 +78,10 @@ public class UploadAudioDataRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“callList”:“xxxxx”}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NextNodeSituations} extends {@link TeaModel}
  *
  * <p>NextNodeSituations</p>
@@ -70,6 +71,12 @@ public class NextNodeSituations extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link NextNodeSituations} extends {@link TeaModel}
+     *
+     * <p>NextNodeSituations</p>
+     */
     public static class ConditionGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < JudgeNodeMetaDesc > conditions;

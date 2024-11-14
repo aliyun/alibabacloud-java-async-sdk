@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListSchemeTaskConfigResponseBody</p>
@@ -290,6 +291,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class ListObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ListObject")
         private java.util.List < ? > listObject;
@@ -331,6 +338,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class AssignConfigContest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataType")
         private Integer dataType;
@@ -452,6 +465,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class AssignConfigContests extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignConfigContest")
         private java.util.List < AssignConfigContest> assignConfigContest;
@@ -493,6 +512,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class AssignConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignConfigContests")
         private AssignConfigContests assignConfigContests;
@@ -534,6 +559,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class AssignConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignConfig")
         private java.util.List < AssignConfig> assignConfig;
@@ -575,6 +606,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class DataConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignConfigs")
         private AssignConfigs assignConfigs;
@@ -676,6 +713,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class SchemeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeIdList")
         private java.util.List < Long > schemeIdList;
@@ -717,6 +760,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class SchemeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -778,6 +827,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class DataSchemeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeList")
         private java.util.List < SchemeList> schemeList;
@@ -819,6 +874,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class DataData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrTaskPriority")
         private Integer asrTaskPriority;
@@ -1360,6 +1421,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < DataData> data;
@@ -1401,6 +1468,12 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;

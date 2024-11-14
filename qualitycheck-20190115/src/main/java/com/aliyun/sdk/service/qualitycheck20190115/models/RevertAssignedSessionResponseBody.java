@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevertAssignedSessionResponseBody} extends {@link TeaModel}
  *
  * <p>RevertAssignedSessionResponseBody</p>
@@ -150,6 +151,12 @@ public class RevertAssignedSessionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RevertAssignedSessionResponseBody} extends {@link TeaModel}
+     *
+     * <p>RevertAssignedSessionResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;

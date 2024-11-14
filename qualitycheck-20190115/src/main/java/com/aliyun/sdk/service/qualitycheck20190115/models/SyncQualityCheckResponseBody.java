@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
  *
  * <p>SyncQualityCheckResponseBody</p>
@@ -130,6 +131,12 @@ public class SyncQualityCheckResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
     public static class HitKeyWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private Integer cid;
@@ -251,6 +258,12 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
     public static class Phrase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -432,6 +445,12 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
     public static class Hit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitKeyWords")
         private java.util.List < HitKeyWords> hitKeyWords;
@@ -493,6 +512,12 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hit")
         private java.util.List < Hit> hit;
@@ -574,6 +599,12 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
  *
  * <p>GetResultToReviewResponseBody</p>
@@ -130,6 +131,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class Dialogue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -351,6 +358,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class Dialogues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dialogue")
         private java.util.List < Dialogue> dialogue;
@@ -392,6 +405,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ComplainHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -513,6 +532,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class HitRuleReviewInfoComplainHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplainHistories")
         private java.util.List < ComplainHistories> complainHistories;
@@ -554,6 +579,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class Cid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private java.util.List < String > cid;
@@ -595,6 +626,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class KeyWord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
@@ -756,6 +793,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class KeyWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyWord")
         private java.util.List < KeyWord> keyWord;
@@ -797,6 +840,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class Phrase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -958,6 +1007,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ConditionHitInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private Cid cid;
@@ -1039,6 +1094,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ConditionHitInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionHitInfo")
         private java.util.List < ConditionHitInfo> conditionHitInfo;
@@ -1080,6 +1141,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ReviewInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitId")
         private String hitId;
@@ -1201,6 +1268,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class HitRuleReviewInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoReview")
         private Integer autoReview;
@@ -1442,6 +1515,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class HitRuleReviewInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitRuleReviewInfo")
         private java.util.List < HitRuleReviewInfo> hitRuleReviewInfo;
@@ -1483,6 +1562,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ComplainHistoriesComplainHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -1604,6 +1689,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ManualScoreInfoComplainHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplainHistories")
         private java.util.List < ComplainHistoriesComplainHistories> complainHistories;
@@ -1645,6 +1736,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ManualScoreInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplainHistories")
         private ManualScoreInfoComplainHistories complainHistories;
@@ -1786,6 +1883,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ManualScoreInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ManualScoreInfo")
         private java.util.List < ManualScoreInfo> manualScoreInfo;
@@ -1827,6 +1930,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ReviewRightRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("rid")
         private Long rid;
@@ -1888,6 +1997,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ReviewHistoryReviewRightRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewRightRule")
         private java.util.List < ReviewRightRule> reviewRightRule;
@@ -1929,6 +2044,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ReviewHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -2190,6 +2311,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ReviewHistoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewHistory")
         private java.util.List < ReviewHistory> reviewHistory;
@@ -2231,6 +2358,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ReviewKeyIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewKeyIdList")
         private java.util.List < Long > reviewKeyIdList;
@@ -2272,6 +2405,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ReviewTypeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewKeyIdList")
         private ReviewKeyIdList reviewKeyIdList;
@@ -2333,6 +2472,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class DataReviewTypeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewTypeIdList")
         private java.util.List < ReviewTypeIdList> reviewTypeIdList;
@@ -2374,6 +2519,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioScheme")
         private String audioScheme;

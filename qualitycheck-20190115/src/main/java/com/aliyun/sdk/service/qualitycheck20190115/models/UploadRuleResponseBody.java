@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UploadRuleResponseBody</p>
@@ -130,6 +131,12 @@ public class UploadRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UploadRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UploadRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RidInfo")
         private java.util.List < String > ridInfo;

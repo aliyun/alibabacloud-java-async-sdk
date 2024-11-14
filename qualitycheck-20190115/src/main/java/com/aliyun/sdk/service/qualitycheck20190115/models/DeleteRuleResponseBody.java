@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteRuleResponseBody</p>
@@ -150,6 +151,12 @@ public class DeleteRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteRuleResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;

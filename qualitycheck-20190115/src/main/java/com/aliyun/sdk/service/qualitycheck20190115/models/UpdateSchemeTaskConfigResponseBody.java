@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSchemeTaskConfigResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSchemeTaskConfigResponseBody</p>
@@ -150,6 +151,12 @@ public class UpdateSchemeTaskConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateSchemeTaskConfigResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;

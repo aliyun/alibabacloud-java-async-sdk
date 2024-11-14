@@ -6,21 +6,21 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InsertSubScoreForApiRequest} extends {@link RequestModel}
+ * 
+ * {@link DeleteCheckTypeToSchemeRequest} extends {@link RequestModel}
  *
- * <p>InsertSubScoreForApiRequest</p>
+ * <p>DeleteCheckTypeToSchemeRequest</p>
  */
-public class InsertSubScoreForApiRequest extends Request {
+public class DeleteCheckTypeToSchemeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JsonStr")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStr;
 
-    private InsertSubScoreForApiRequest(Builder builder) {
+    private DeleteCheckTypeToSchemeRequest(Builder builder) {
         super(builder);
         this.baseMeAgentId = builder.baseMeAgentId;
         this.jsonStr = builder.jsonStr;
@@ -30,7 +30,7 @@ public class InsertSubScoreForApiRequest extends Request {
         return new Builder();
     }
 
-    public static InsertSubScoreForApiRequest create() {
+    public static DeleteCheckTypeToSchemeRequest create() {
         return builder().build();
     }
 
@@ -53,7 +53,7 @@ public class InsertSubScoreForApiRequest extends Request {
         return this.jsonStr;
     }
 
-    public static final class Builder extends Request.Builder<InsertSubScoreForApiRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteCheckTypeToSchemeRequest, Builder> {
         private Long baseMeAgentId; 
         private String jsonStr; 
 
@@ -61,14 +61,14 @@ public class InsertSubScoreForApiRequest extends Request {
             super();
         } 
 
-        private Builder(InsertSubScoreForApiRequest request) {
+        private Builder(DeleteCheckTypeToSchemeRequest request) {
             super(request);
             this.baseMeAgentId = request.baseMeAgentId;
             this.jsonStr = request.jsonStr;
         } 
 
         /**
-         * baseMeAgentId
+         * BaseMeAgentId.
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -86,8 +86,8 @@ public class InsertSubScoreForApiRequest extends Request {
         }
 
         @Override
-        public InsertSubScoreForApiRequest build() {
-            return new InsertSubScoreForApiRequest(this);
+        public DeleteCheckTypeToSchemeRequest build() {
+            return new DeleteCheckTypeToSchemeRequest(this);
         } 
 
     } 

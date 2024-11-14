@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetResultResponseBody</p>
@@ -210,6 +211,12 @@ public class GetResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Agent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -291,6 +298,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class AsrResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -452,6 +465,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ResultInfoAsrResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrResult")
         private java.util.List < AsrResult> asrResult;
@@ -493,6 +512,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Anchor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
@@ -544,7 +569,7 @@ public class GetResultResponseBody extends TeaModel {
             private String location; 
 
             /**
-             * 条件ID
+             * <p>条件ID</p>
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -552,7 +577,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 命中次数
+             * <p>命中次数</p>
              */
             public Builder hitTime(Integer hitTime) {
                 this.hitTime = hitTime;
@@ -560,7 +585,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 位置
+             * <p>位置</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -574,6 +599,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Range extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
@@ -613,7 +644,7 @@ public class GetResultResponseBody extends TeaModel {
             private Integer to; 
 
             /**
-             * 对话开始索引
+             * <p>对话开始索引</p>
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -621,7 +652,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 对话结束索引
+             * <p>对话结束索引</p>
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -635,6 +666,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class TimeRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Long from;
@@ -674,7 +711,7 @@ public class GetResultResponseBody extends TeaModel {
             private Long to; 
 
             /**
-             * 对话开始索引
+             * <p>对话开始索引</p>
              */
             public Builder from(Long from) {
                 this.from = from;
@@ -682,7 +719,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 对话结束索引
+             * <p>对话结束索引</p>
              */
             public Builder to(Long to) {
                 this.to = to;
@@ -696,6 +733,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class CheckRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Absolute")
         private Boolean absolute;
@@ -795,7 +838,7 @@ public class GetResultResponseBody extends TeaModel {
             private TimeRange timeRange; 
 
             /**
-             * false: 相对位置; 会结合anchor以及角色来决定句子位置
+             * <p>false: 相对位置; 会结合anchor以及角色来决定句子位置</p>
              */
             public Builder absolute(Boolean absolute) {
                 this.absolute = absolute;
@@ -803,7 +846,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * true: 每句话都必须满足条件；
+             * <p>true: 每句话都必须满足条件；</p>
              */
             public Builder allSentencesSatisfy(Boolean allSentencesSatisfy) {
                 this.allSentencesSatisfy = allSentencesSatisfy;
@@ -811,7 +854,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 前置后置条件
+             * <p>前置后置条件</p>
              */
             public Builder anchor(Anchor anchor) {
                 this.anchor = anchor;
@@ -819,7 +862,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 相对范围
+             * <p>相对范围</p>
              */
             public Builder range(Range range) {
                 this.range = range;
@@ -827,7 +870,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 对应 RoleType.type
+             * <p>对应 RoleType.type</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -835,7 +878,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 对应 RoleType.id
+             * <p>对应 RoleType.id</p>
              */
             public Builder roleId(Integer roleId) {
                 this.roleId = roleId;
@@ -857,6 +900,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Excludes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Exclude")
         private java.util.List < String > exclude;
@@ -898,6 +947,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class FlowNodePrerequisiteParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
@@ -949,7 +1004,7 @@ public class GetResultResponseBody extends TeaModel {
             private String nodeName; 
 
             /**
-             * 节点id
+             * <p>节点id</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -957,7 +1012,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 节点匹配状态。
+             * <p>节点匹配状态。</p>
              */
             public Builder nodeMatchStatus(Integer nodeMatchStatus) {
                 this.nodeMatchStatus = nodeMatchStatus;
@@ -965,7 +1020,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 冗余的节点名称
+             * <p>冗余的节点名称</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -979,6 +1034,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Intent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -1018,7 +1079,7 @@ public class GetResultResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 意图模型ID
+             * <p>意图模型ID</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1026,7 +1087,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 意图模型名称
+             * <p>意图模型名称</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1040,6 +1101,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Intents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Intent")
         private java.util.List < Intent> intent;
@@ -1081,6 +1148,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class IntentModelCheckParm extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Intents")
         private Intents intents;
@@ -1120,7 +1193,7 @@ public class GetResultResponseBody extends TeaModel {
             private String modelScene; 
 
             /**
-             * 引用的意图模型
+             * <p>引用的意图模型</p>
              */
             public Builder intents(Intents intents) {
                 this.intents = intents;
@@ -1128,7 +1201,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 模型应用的场景 AGENT:客户场景、CUSTOMER:客服场景 (CUSTOMER: 客户场景, AGENT: 坐席场景)
+             * <p>模型应用的场景 AGENT:客户场景、CUSTOMER:客服场景 (CUSTOMER: 客户场景, AGENT: 坐席场景)</p>
              */
             public Builder modelScene(String modelScene) {
                 this.modelScene = modelScene;
@@ -1142,6 +1215,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Keywords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keyword")
         private java.util.List < String > keyword;
@@ -1183,6 +1262,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Average")
         private Boolean average;
@@ -1546,7 +1631,7 @@ public class GetResultResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * 语速检测，是否计算整个对话平均语速，默认false
+             * <p>语速检测，是否计算整个对话平均语速，默认false</p>
              */
             public Builder average(Boolean average) {
                 this.average = average;
@@ -1554,7 +1639,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 时长算子，时长计算开始类型，录音开始，还是某句对话开始
+             * <p>时长算子，时长计算开始类型，录音开始，还是某句对话开始</p>
              */
             public Builder beginType(String beginType) {
                 this.beginType = beginType;
@@ -1562,7 +1647,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 区分大小写
+             * <p>区分大小写</p>
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -1570,7 +1655,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 静音检测：要不要检测第一句话
+             * <p>静音检测：要不要检测第一句话</p>
              */
             public Builder checkFirstSentence(Boolean checkFirstSentence) {
                 this.checkFirstSentence = checkFirstSentence;
@@ -1578,7 +1663,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 检测方式，1 相邻句能量波动 2 最大能量跨度 默认1
+             * <p>检测方式，1 相邻句能量波动 2 最大能量跨度 默认1</p>
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -1586,7 +1671,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 大于，还是小于，gt/lt
+             * <p>大于，还是小于，gt/lt</p>
              */
             public Builder compareOperator(String compareOperator) {
                 this.compareOperator = compareOperator;
@@ -1594,7 +1679,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 是否单句话匹配；
+             * <p>是否单句话匹配；</p>
              */
             public Builder contextChatMatch(Boolean contextChatMatch) {
                 this.contextChatMatch = contextChatMatch;
@@ -1602,7 +1687,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 抢话算子 延时时长
+             * <p>抢话算子 延时时长</p>
              */
             public Builder delayTime(Integer delayTime) {
                 this.delayTime = delayTime;
@@ -1610,7 +1695,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 时长算子，时长计算结束类型，录音结束，还是某句对话结束
+             * <p>时长算子，时长计算结束类型，录音结束，还是某句对话结束</p>
              */
             public Builder endType(String endType) {
                 this.endType = endType;
@@ -1618,7 +1703,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 上下文重复算子：排除掉某些对话
+             * <p>上下文重复算子：排除掉某些对话</p>
              */
             public Builder excludes(Excludes excludes) {
                 this.excludes = excludes;
@@ -1626,7 +1711,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 流程节点前置条件参数
+             * <p>流程节点前置条件参数</p>
              */
             public Builder flowNodePrerequisiteParam(FlowNodePrerequisiteParam flowNodePrerequisiteParam) {
                 this.flowNodePrerequisiteParam = flowNodePrerequisiteParam;
@@ -1634,7 +1719,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句
+             * <p>上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句</p>
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -1642,7 +1727,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * from_end
+             * <p>from_end</p>
              */
             public Builder fromEnd(Boolean fromEnd) {
                 this.fromEnd = fromEnd;
@@ -1650,7 +1735,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 上下文重复算子：重复几次
+             * <p>上下文重复算子：重复几次</p>
              */
             public Builder hitTime(Integer hitTime) {
                 this.hitTime = hitTime;
@@ -1658,7 +1743,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 生效句子， true单个句子，false多个句子
+             * <p>生效句子， true单个句子，false多个句子</p>
              */
             public Builder inSentence(Boolean inSentence) {
                 this.inSentence = inSentence;
@@ -1666,7 +1751,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 意图模型检查参数
+             * <p>意图模型检查参数</p>
              */
             public Builder intentModelCheckParm(IntentModelCheckParm intentModelCheckParm) {
                 this.intentModelCheckParm = intentModelCheckParm;
@@ -1674,7 +1759,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * interval代表区间范围开始
+             * <p>interval代表区间范围开始</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -1682,7 +1767,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * intervalEnd 代表区间范围结束
+             * <p>intervalEnd 代表区间范围结束</p>
              */
             public Builder intervalEnd(Integer intervalEnd) {
                 this.intervalEnd = intervalEnd;
@@ -1690,7 +1775,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 关键字扩展
+             * <p>关键字扩展</p>
              */
             public Builder keywordExtension(Integer keywordExtension) {
                 this.keywordExtension = keywordExtension;
@@ -1698,7 +1783,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 匹配到的关键字数量
+             * <p>匹配到的关键字数量</p>
              */
             public Builder keywordMatchSize(Integer keywordMatchSize) {
                 this.keywordMatchSize = keywordMatchSize;
@@ -1706,7 +1791,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 关键词
+             * <p>关键词</p>
              */
             public Builder keywords(Keywords keywords) {
                 this.keywords = keywords;
@@ -1714,7 +1799,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 能量值变化，默认3, 1~9
+             * <p>能量值变化，默认3, 1~9</p>
              */
             public Builder maxEmotionChangeValue(Integer maxEmotionChangeValue) {
                 this.maxEmotionChangeValue = maxEmotionChangeValue;
@@ -1722,7 +1807,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 句子中最少字数，小于此字数的句子不检查
+             * <p>句子中最少字数，小于此字数的句子不检查</p>
              */
             public Builder minWordSize(Integer minWordSize) {
                 this.minWordSize = minWordSize;
@@ -1730,7 +1815,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * true表示取不同角色相邻的两句话，false表示取不同角色的第一句话比较响应时间（默认）
+             * <p>true表示取不同角色相邻的两句话，false表示取不同角色的第一句话比较响应时间（默认）</p>
              */
             public Builder nearDialogue(Boolean nearDialogue) {
                 this.nearDialogue = nearDialogue;
@@ -1738,7 +1823,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 排除的正则表达式
+             * <p>排除的正则表达式</p>
              */
             public Builder notRegex(String notRegex) {
                 this.notRegex = notRegex;
@@ -1746,7 +1831,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 语句
+             * <p>语句</p>
              */
             public Builder phrase(String phrase) {
                 this.phrase = phrase;
@@ -1754,7 +1839,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 正则表达式
+             * <p>正则表达式</p>
              */
             public Builder regex(String regex) {
                 this.regex = regex;
@@ -1762,7 +1847,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * target
+             * <p>target</p>
              */
             public Builder target(Integer target) {
                 this.target = target;
@@ -1770,7 +1855,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 阈值
+             * <p>阈值</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -1784,6 +1869,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Operator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -1859,7 +1950,7 @@ public class GetResultResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 主键id
+             * <p>主键id</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1867,7 +1958,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 算子名
+             * <p>算子名</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1875,7 +1966,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 可能是主键id，也可能是前端生成的id
+             * <p>可能是主键id，也可能是前端生成的id</p>
              */
             public Builder oid(String oid) {
                 this.oid = oid;
@@ -1883,7 +1974,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 算子参数
+             * <p>算子参数</p>
              */
             public Builder param(Param param) {
                 this.param = param;
@@ -1891,7 +1982,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 算子类别
+             * <p>算子类别</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1905,6 +1996,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Operators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Operator")
         private java.util.List < Operator> operator;
@@ -1946,6 +2043,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Check_range")
         private CheckRange checkRange;
@@ -2045,7 +2148,7 @@ public class GetResultResponseBody extends TeaModel {
             private String rid; 
 
             /**
-             * 检测范围
+             * <p>检测范围</p>
              */
             public Builder checkRange(CheckRange checkRange) {
                 this.checkRange = checkRange;
@@ -2053,7 +2156,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 条件id，可能是db中的主键，也可能是转换成的a, b, c
+             * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -2061,7 +2164,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 排除
+             * <p>排除</p>
              */
             public Builder exclusion(Integer exclusion) {
                 this.exclusion = exclusion;
@@ -2069,7 +2172,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 在db中的主键
+             * <p>在db中的主键</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2077,7 +2180,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Lambda表达式：例如:a&&b
+             * <p>Lambda表达式：例如:a&amp;&amp;b</p>
              */
             public Builder lambda(String lambda) {
                 this.lambda = lambda;
@@ -2085,7 +2188,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 算子列表
+             * <p>算子列表</p>
              */
             public Builder operators(Operators operators) {
                 this.operators = operators;
@@ -2093,7 +2196,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 条件所属的规则id
+             * <p>条件所属的规则id</p>
              */
             public Builder rid(String rid) {
                 this.rid = rid;
@@ -2107,6 +2210,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class HitResultConditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
@@ -2148,6 +2257,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Cid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private java.util.List < String > cid;
@@ -2175,7 +2290,7 @@ public class GetResultResponseBody extends TeaModel {
             private java.util.List < String > cid; 
 
             /**
-             * 条件id，可能是db中的主键，也可能是转换成的a, b, c
+             * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
              */
             public Builder cid(java.util.List < String > cid) {
                 this.cid = cid;
@@ -2189,6 +2304,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class KeyWord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
@@ -2252,7 +2373,7 @@ public class GetResultResponseBody extends TeaModel {
             private String val; 
 
             /**
-             * 条件id，可能是db中的主键，也可能是转换成的a, b, c
+             * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -2260,7 +2381,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句
+             * <p>上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句</p>
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -2268,7 +2389,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 对话结束索引
+             * <p>对话结束索引</p>
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -2290,6 +2411,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class KeyWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyWord")
         private java.util.List < KeyWord> keyWord;
@@ -2331,6 +2458,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Phrase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -2430,7 +2563,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 对应 RoleType.type
+             * <p>对应 RoleType.type</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -2452,6 +2585,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Hit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private Cid cid;
@@ -2503,7 +2642,7 @@ public class GetResultResponseBody extends TeaModel {
             private Phrase phrase; 
 
             /**
-             * 条件id，可能是db中的主键，也可能是转换成的a, b, c
+             * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
              */
             public Builder cid(Cid cid) {
                 this.cid = cid;
@@ -2519,7 +2658,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 语句
+             * <p>语句</p>
              */
             public Builder phrase(Phrase phrase) {
                 this.phrase = phrase;
@@ -2533,6 +2672,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Hits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hit")
         private java.util.List < Hit> hit;
@@ -2574,6 +2719,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class HitResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private HitResultConditions conditions;
@@ -2701,7 +2852,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 算子名
+             * <p>算子名</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2717,7 +2868,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 条件所属的规则id
+             * <p>条件所属的规则id</p>
              */
             public Builder rid(String rid) {
                 this.rid = rid;
@@ -2741,7 +2892,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 算子类别
+             * <p>算子类别</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2755,6 +2906,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ResultInfoHitResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitResult")
         private java.util.List < HitResult> hitResult;
@@ -2796,6 +2953,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class HitScore extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
@@ -2897,6 +3060,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ResultInfoHitScore extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitScore")
         private java.util.List < HitScore> hitScore;
@@ -2938,6 +3107,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Recording extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Business")
         private String business;
@@ -2956,6 +3131,9 @@ public class GetResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
+
+        @com.aliyun.core.annotation.NameInMap("CustomerName")
+        private String customerName;
 
         @com.aliyun.core.annotation.NameInMap("DataSetName")
         private String dataSetName;
@@ -3030,6 +3208,7 @@ public class GetResultResponseBody extends TeaModel {
             this.callType = builder.callType;
             this.callee = builder.callee;
             this.caller = builder.caller;
+            this.customerName = builder.customerName;
             this.dataSetName = builder.dataSetName;
             this.dialogueSize = builder.dialogueSize;
             this.duration = builder.duration;
@@ -3102,6 +3281,13 @@ public class GetResultResponseBody extends TeaModel {
          */
         public String getCaller() {
             return this.caller;
+        }
+
+        /**
+         * @return customerName
+         */
+        public String getCustomerName() {
+            return this.customerName;
         }
 
         /**
@@ -3265,6 +3451,7 @@ public class GetResultResponseBody extends TeaModel {
             private Integer callType; 
             private String callee; 
             private String caller; 
+            private String customerName; 
             private String dataSetName; 
             private Integer dialogueSize; 
             private Long duration; 
@@ -3337,6 +3524,14 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
+             * CustomerName.
+             */
+            public Builder customerName(String customerName) {
+                this.customerName = customerName;
+                return this;
+            }
+
+            /**
              * DataSetName.
              */
             public Builder dataSetName(String dataSetName) {
@@ -3361,7 +3556,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 在db中的主键
+             * <p>在db中的主键</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -3369,7 +3564,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 算子名
+             * <p>算子名</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3519,6 +3714,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ReviewRightRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("rid")
         private Long rid;
@@ -3580,6 +3781,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ReviewHistoryReviewRightRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewRightRule")
         private java.util.List < ReviewRightRule> reviewRightRule;
@@ -3621,6 +3828,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ReviewHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -3868,7 +4081,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * 算子类别
+             * <p>算子类别</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -3882,6 +4095,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ReviewHistoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewHistory")
         private java.util.List < ReviewHistory> reviewHistory;
@@ -3923,6 +4142,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ReviewKeyIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewKeyIdList")
         private java.util.List < Long > reviewKeyIdList;
@@ -3964,6 +4189,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ReviewTypeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewKeyIdList")
         private ReviewKeyIdList reviewKeyIdList;
@@ -4025,6 +4256,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ResultInfoReviewTypeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewTypeIdList")
         private java.util.List < ReviewTypeIdList> reviewTypeIdList;
@@ -4066,6 +4303,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class SchemeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeIdList")
         private java.util.List < Long > schemeIdList;
@@ -4107,6 +4350,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class SchemeNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeNameList")
         private java.util.List < String > schemeNameList;
@@ -4148,6 +4397,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class ResultInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Agent")
         private Agent agent;
@@ -4689,6 +4944,12 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultInfo")
         private java.util.List < ResultInfo> resultInfo;

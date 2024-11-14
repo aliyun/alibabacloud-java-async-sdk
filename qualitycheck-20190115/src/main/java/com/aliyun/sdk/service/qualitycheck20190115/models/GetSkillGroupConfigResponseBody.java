@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSkillGroupConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetSkillGroupConfigResponseBody</p>
@@ -130,6 +131,12 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSkillGroupConfigResponseBody</p>
+     */
     public static class RuleNameInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
@@ -191,6 +198,12 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSkillGroupConfigResponseBody</p>
+     */
     public static class AllRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleNameInfo")
         private java.util.List < RuleNameInfo> ruleNameInfo;
@@ -232,6 +245,12 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSkillGroupConfigResponseBody</p>
+     */
     public static class RuleListRuleNameInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
@@ -293,6 +312,12 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSkillGroupConfigResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleNameInfo")
         private java.util.List < RuleListRuleNameInfo> ruleNameInfo;
@@ -334,6 +359,12 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSkillGroupConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllContentQualityCheck")
         private Integer allContentQualityCheck;

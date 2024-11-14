@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTaskAssignRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateTaskAssignRuleRequest</p>
@@ -68,7 +69,7 @@ public class UpdateTaskAssignRuleRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -77,7 +78,7 @@ public class UpdateTaskAssignRuleRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>This parameter is required.</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrecisionTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrecisionTaskResponseBody</p>
@@ -190,6 +191,12 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrecisionTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrecisionTaskResponseBody</p>
+     */
     public static class Precision extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -331,6 +338,12 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPrecisionTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrecisionTaskResponseBody</p>
+     */
     public static class Precisions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Precision")
         private java.util.List < Precision> precision;
@@ -372,6 +385,12 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPrecisionTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrecisionTaskResponseBody</p>
+     */
     public static class PrecisionTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -653,6 +672,12 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPrecisionTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrecisionTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrecisionTask")
         private java.util.List < PrecisionTask> precisionTask;

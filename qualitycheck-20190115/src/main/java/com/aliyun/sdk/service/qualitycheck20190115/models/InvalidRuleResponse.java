@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvalidRuleResponse} extends {@link TeaModel}
  *
  * <p>InvalidRuleResponse</p>

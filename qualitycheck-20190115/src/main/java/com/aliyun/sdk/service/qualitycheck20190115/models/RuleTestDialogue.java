@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RuleTestDialogue} extends {@link TeaModel}
  *
  * <p>RuleTestDialogue</p>
@@ -110,6 +111,12 @@ public class RuleTestDialogue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RuleTestDialogue} extends {@link TeaModel}
+     *
+     * <p>RuleTestDialogue</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;

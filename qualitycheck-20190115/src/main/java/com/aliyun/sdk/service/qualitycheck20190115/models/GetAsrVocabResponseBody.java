@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsrVocabResponseBody} extends {@link TeaModel}
  *
  * <p>GetAsrVocabResponseBody</p>
@@ -130,6 +131,12 @@ public class GetAsrVocabResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsrVocabResponseBody</p>
+     */
     public static class Word extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
@@ -191,6 +198,12 @@ public class GetAsrVocabResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsrVocabResponseBody</p>
+     */
     public static class Words extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Word")
         private java.util.List < Word> word;
@@ -232,6 +245,12 @@ public class GetAsrVocabResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsrVocabResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetRuleResponseBody</p>
@@ -130,6 +131,12 @@ public class GetRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class BusinessCategoryNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessCategoryNameList")
         private java.util.List < String > businessCategoryNameList;
@@ -171,6 +178,12 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class RuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoReview")
         private Integer autoReview;
@@ -632,6 +645,12 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleInfo")
         private java.util.List < RuleInfo> ruleInfo;
@@ -673,6 +692,12 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;

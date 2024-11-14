@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TestRuleV4ResponseBody} extends {@link TeaModel}
  *
  * <p>TestRuleV4ResponseBody</p>
@@ -150,6 +151,12 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TestRuleV4ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestRuleV4ResponseBody</p>
+     */
     public static class BranchInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
@@ -311,6 +318,12 @@ public class TestRuleV4ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TestRuleV4ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestRuleV4ResponseBody</p>
+     */
     public static class KeyWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
@@ -552,6 +565,12 @@ public class TestRuleV4ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TestRuleV4ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestRuleV4ResponseBody</p>
+     */
     public static class Phrase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -913,6 +932,12 @@ public class TestRuleV4ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TestRuleV4ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestRuleV4ResponseBody</p>
+     */
     public static class ConditionHitInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private java.util.List < String > cid;
@@ -994,6 +1019,12 @@ public class TestRuleV4ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TestRuleV4ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestRuleV4ResponseBody</p>
+     */
     public static class HitRuleReviewInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BranchHitId")
         private Long branchHitId;
@@ -1275,6 +1306,12 @@ public class TestRuleV4ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TestRuleV4ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestRuleV4ResponseBody</p>
+     */
     public static class HitTaskFlowList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GraphFlow")
         private TaskGraphFlow graphFlow;
@@ -1356,6 +1393,12 @@ public class TestRuleV4ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TestRuleV4ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestRuleV4ResponseBody</p>
+     */
     public static class UnhitRuleReviewInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionInfoList")
         private java.util.List < ConditionBasicInfo > conditionInfoList;
@@ -1457,6 +1500,12 @@ public class TestRuleV4ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TestRuleV4ResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestRuleV4ResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitRuleReviewInfoList")
         private java.util.List < HitRuleReviewInfoList> hitRuleReviewInfoList;

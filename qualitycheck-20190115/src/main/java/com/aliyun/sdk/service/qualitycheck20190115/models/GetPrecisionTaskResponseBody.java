@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPrecisionTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetPrecisionTaskResponseBody</p>
@@ -130,6 +131,12 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPrecisionTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPrecisionTaskResponseBody</p>
+     */
     public static class Precision extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelId")
         private Long modelId;
@@ -251,6 +258,12 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPrecisionTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPrecisionTaskResponseBody</p>
+     */
     public static class Precisions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Precision")
         private java.util.List < Precision> precision;
@@ -292,6 +305,12 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPrecisionTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPrecisionTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSetId")
         private Long dataSetId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
  *
  * <p>GetNextResultToVerifyResponseBody</p>
@@ -130,6 +131,12 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNextResultToVerifyResponseBody</p>
+     */
     public static class Line extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < String > line;
@@ -171,6 +178,12 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNextResultToVerifyResponseBody</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private Line line;
@@ -232,6 +245,12 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNextResultToVerifyResponseBody</p>
+     */
     public static class TargetLine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < String > line;
@@ -273,6 +292,12 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNextResultToVerifyResponseBody</p>
+     */
     public static class Target extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private TargetLine line;
@@ -334,6 +359,12 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNextResultToVerifyResponseBody</p>
+     */
     public static class Delta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
@@ -415,6 +446,12 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNextResultToVerifyResponseBody</p>
+     */
     public static class Deltas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Delta")
         private java.util.List < Delta> delta;
@@ -456,6 +493,12 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNextResultToVerifyResponseBody</p>
+     */
     public static class Dialogue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -757,6 +800,12 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNextResultToVerifyResponseBody</p>
+     */
     public static class Dialogues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dialogue")
         private java.util.List < Dialogue> dialogue;
@@ -798,6 +847,12 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNextResultToVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNextResultToVerifyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioScheme")
         private String audioScheme;

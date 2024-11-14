@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskAssignRulesResponseBody</p>
@@ -190,6 +191,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Agent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
@@ -251,6 +258,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Agents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Agent")
         private java.util.List < Agent> agent;
@@ -292,6 +305,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Reviewer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewerId")
         private String reviewerId;
@@ -353,6 +372,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Reviewers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reviewer")
         private java.util.List < Reviewer> reviewer;
@@ -394,6 +419,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class RuleBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -455,6 +486,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleBasicInfo")
         private java.util.List < RuleBasicInfo> ruleBasicInfo;
@@ -496,6 +533,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SamplingModeAgent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
@@ -557,6 +600,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SamplingModeAgents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SamplingModeAgent")
         private java.util.List < SamplingModeAgent> samplingModeAgent;
@@ -598,6 +647,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SamplingMode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnyNumberOfDraws")
         private Integer anyNumberOfDraws;
@@ -779,6 +834,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SkillGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SkillId")
         private String skillId;
@@ -840,6 +901,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SkillGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SkillGroup")
         private java.util.List < SkillGroup> skillGroup;
@@ -881,6 +948,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class TaskAssignRuleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Agents")
         private Agents agents;
@@ -1282,6 +1355,12 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskAssignRuleInfo")
         private java.util.List < TaskAssignRuleInfo> taskAssignRuleInfo;

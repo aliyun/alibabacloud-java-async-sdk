@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCheckTypeToSchemeRequest} extends {@link RequestModel}
  *
  * <p>UpdateCheckTypeToSchemeRequest</p>
@@ -67,7 +68,7 @@ public class UpdateCheckTypeToSchemeRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);

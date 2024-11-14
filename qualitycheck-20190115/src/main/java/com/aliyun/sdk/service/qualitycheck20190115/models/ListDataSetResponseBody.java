@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSetResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataSetResponseBody</p>
@@ -250,6 +251,12 @@ public class ListDataSetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSetResponseBody</p>
+     */
     public static class DataData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoTranscoding")
         private Integer autoTranscoding;
@@ -731,6 +738,12 @@ public class ListDataSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSetResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < DataData> data;
@@ -772,6 +785,12 @@ public class ListDataSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSetResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;

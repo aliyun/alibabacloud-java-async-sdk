@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWarningStrategyConfigResponse} extends {@link TeaModel}
  *
  * <p>CreateWarningStrategyConfigResponse</p>

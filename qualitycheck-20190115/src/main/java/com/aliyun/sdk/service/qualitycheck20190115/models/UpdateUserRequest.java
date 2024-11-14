@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
@@ -68,7 +69,7 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -77,7 +78,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;aliUid&quot;:&quot;2951869706989****&quot;,&quot;roleName&quot;:&quot;ADMIN&quot;},{&quot;aliUid&quot;:&quot;2557461687048****&quot;,&quot;roleName&quot;:&quot;ADMIN&quot;}]</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

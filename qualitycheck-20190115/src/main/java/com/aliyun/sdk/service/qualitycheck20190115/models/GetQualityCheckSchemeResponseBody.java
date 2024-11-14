@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityCheckSchemeResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityCheckSchemeResponseBody</p>
@@ -170,6 +171,12 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityCheckSchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityCheckSchemeResponseBody</p>
+     */
     public static class SchemeCheckTypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
@@ -311,6 +318,12 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQualityCheckSchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityCheckSchemeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -323,6 +336,9 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("InitScore")
+        private String initScore;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -365,6 +381,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             this.createUserName = builder.createUserName;
             this.dataType = builder.dataType;
             this.description = builder.description;
+            this.initScore = builder.initScore;
             this.name = builder.name;
             this.ruleIds = builder.ruleIds;
             this.ruleList = builder.ruleList;
@@ -413,6 +430,13 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return initScore
+         */
+        public String getInitScore() {
+            return this.initScore;
         }
 
         /**
@@ -504,6 +528,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             private String createUserName; 
             private Integer dataType; 
             private String description; 
+            private String initScore; 
             private String name; 
             private java.util.List < String > ruleIds; 
             private java.util.List < RulesInfo > ruleList; 
@@ -546,6 +571,14 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * InitScore.
+             */
+            public Builder initScore(String initScore) {
+                this.initScore = initScore;
                 return this;
             }
 

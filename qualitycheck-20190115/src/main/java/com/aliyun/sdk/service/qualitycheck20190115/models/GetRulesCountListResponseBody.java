@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRulesCountListResponseBody} extends {@link TeaModel}
  *
  * <p>GetRulesCountListResponseBody</p>
@@ -290,6 +291,12 @@ public class GetRulesCountListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRulesCountListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRulesCountListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < String > data;
@@ -331,6 +338,12 @@ public class GetRulesCountListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRulesCountListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRulesCountListResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;

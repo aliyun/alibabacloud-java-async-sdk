@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCheckTypeToSchemeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateCheckTypeToSchemeResponseBody</p>
@@ -170,6 +171,12 @@ public class UpdateCheckTypeToSchemeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCheckTypeToSchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCheckTypeToSchemeResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;

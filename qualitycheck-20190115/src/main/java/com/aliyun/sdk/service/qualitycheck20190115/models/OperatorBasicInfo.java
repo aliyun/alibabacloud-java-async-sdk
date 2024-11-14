@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperatorBasicInfo} extends {@link TeaModel}
  *
  * <p>OperatorBasicInfo</p>
@@ -170,6 +171,12 @@ public class OperatorBasicInfo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OperatorBasicInfo} extends {@link TeaModel}
+     *
+     * <p>OperatorBasicInfo</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerThreshold")
         private String answerThreshold;

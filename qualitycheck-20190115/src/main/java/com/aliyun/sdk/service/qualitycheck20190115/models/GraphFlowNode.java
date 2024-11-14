@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GraphFlowNode} extends {@link TeaModel}
  *
  * <p>GraphFlowNode</p>
@@ -230,6 +231,12 @@ public class GraphFlowNode extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GraphFlowNode} extends {@link TeaModel}
+     *
+     * <p>GraphFlowNode</p>
+     */
     public static class NextNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
@@ -371,6 +378,12 @@ public class GraphFlowNode extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GraphFlowNode} extends {@link TeaModel}
+     *
+     * <p>GraphFlowNode</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoReview")
         private Integer autoReview;

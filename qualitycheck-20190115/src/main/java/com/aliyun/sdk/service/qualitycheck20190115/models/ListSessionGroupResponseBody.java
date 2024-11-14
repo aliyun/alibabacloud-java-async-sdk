@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListSessionGroupResponseBody</p>
@@ -290,6 +291,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CallerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallerList")
         private java.util.List < String > callerList;
@@ -331,6 +338,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CustomerIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerIdList")
         private java.util.List < String > customerIdList;
@@ -372,6 +385,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CustomerNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerNameList")
         private java.util.List < String > customerNameList;
@@ -413,6 +432,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CustomerServiceIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerServiceIdList")
         private java.util.List < String > customerServiceIdList;
@@ -454,6 +479,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CustomerServiceNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerServiceNameList")
         private java.util.List < String > customerServiceNameList;
@@ -495,6 +526,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class ReviewerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewerList")
         private java.util.List < String > reviewerList;
@@ -536,6 +573,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class SkillGroupNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SkillGroupNameList")
         private java.util.List < String > skillGroupNameList;
@@ -577,6 +620,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class DataData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignStatus")
         private Integer assignStatus;
@@ -958,6 +1007,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < DataData> data;
@@ -999,6 +1054,12 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;

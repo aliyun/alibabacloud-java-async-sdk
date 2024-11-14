@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSkillGroupConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListSkillGroupConfigResponseBody</p>
@@ -130,6 +131,12 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupConfigResponseBody</p>
+     */
     public static class RuleNameInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
@@ -191,6 +198,12 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupConfigResponseBody</p>
+     */
     public static class AllRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleNameInfo")
         private java.util.List < RuleNameInfo> ruleNameInfo;
@@ -232,6 +245,12 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupConfigResponseBody</p>
+     */
     public static class RuleListRuleNameInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
@@ -293,6 +312,12 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupConfigResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleNameInfo")
         private java.util.List < RuleListRuleNameInfo> ruleNameInfo;
@@ -334,6 +359,12 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupConfigResponseBody</p>
+     */
     public static class SkillGroupScreen extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataType")
         private Integer dataType;
@@ -435,6 +466,12 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupConfigResponseBody</p>
+     */
     public static class SkillGroupScreens extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SkillGroupScreen")
         private java.util.List < SkillGroupScreen> skillGroupScreen;
@@ -476,6 +513,12 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupConfigResponseBody</p>
+     */
     public static class SkillGroupConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllContentQualityCheck")
         private Integer allContentQualityCheck;
@@ -937,6 +980,12 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SkillGroupConfig")
         private java.util.List < SkillGroupConfig> skillGroupConfig;

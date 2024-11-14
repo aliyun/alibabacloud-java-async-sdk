@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListWarningConfigResponseBody</p>
@@ -130,6 +131,12 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class Channel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
@@ -191,6 +198,12 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class Channels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channel")
         private java.util.List < Channel> channel;
@@ -232,6 +245,12 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class RidList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RidList")
         private java.util.List < String > ridList;
@@ -273,6 +292,12 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class WarningRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
@@ -334,6 +359,12 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WarningRule")
         private java.util.List < WarningRule> warningRule;
@@ -375,6 +406,12 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class WarningConfigInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
         private Channels channels;
@@ -556,6 +593,12 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WarningConfigInfo")
         private java.util.List < WarningConfigInfo> warningConfigInfo;

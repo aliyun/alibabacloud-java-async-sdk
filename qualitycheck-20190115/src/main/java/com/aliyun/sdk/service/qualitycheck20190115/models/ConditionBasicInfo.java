@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConditionBasicInfo} extends {@link TeaModel}
  *
  * <p>ConditionBasicInfo</p>
@@ -210,6 +211,12 @@ public class ConditionBasicInfo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ConditionBasicInfo} extends {@link TeaModel}
+     *
+     * <p>ConditionBasicInfo</p>
+     */
     public static class Anchor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
@@ -291,6 +298,12 @@ public class ConditionBasicInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ConditionBasicInfo} extends {@link TeaModel}
+     *
+     * <p>ConditionBasicInfo</p>
+     */
     public static class Range extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
@@ -352,6 +365,12 @@ public class ConditionBasicInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ConditionBasicInfo} extends {@link TeaModel}
+     *
+     * <p>ConditionBasicInfo</p>
+     */
     public static class CheckRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Absolute")
         private Boolean absolute;

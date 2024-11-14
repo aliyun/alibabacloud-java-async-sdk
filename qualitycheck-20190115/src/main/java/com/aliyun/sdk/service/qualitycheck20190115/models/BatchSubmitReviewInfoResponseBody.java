@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSubmitReviewInfoResponseBody} extends {@link TeaModel}
  *
  * <p>BatchSubmitReviewInfoResponseBody</p>
@@ -150,6 +151,12 @@ public class BatchSubmitReviewInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchSubmitReviewInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchSubmitReviewInfoResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;

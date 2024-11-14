@@ -6,19 +6,23 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InsertScoreForApiResponseBody} extends {@link TeaModel}
+ * 
+ * {@link DeleteCheckTypeToSchemeResponseBody} extends {@link TeaModel}
  *
- * <p>InsertScoreForApiResponseBody</p>
+ * <p>DeleteCheckTypeToSchemeResponseBody</p>
  */
-public class InsertScoreForApiResponseBody extends TeaModel {
+public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
+    private String data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
+
+    @com.aliyun.core.annotation.NameInMap("Messages")
+    private java.util.List < String > messages;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -26,10 +30,11 @@ public class InsertScoreForApiResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private InsertScoreForApiResponseBody(Builder builder) {
+    private DeleteCheckTypeToSchemeResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
+        this.messages = builder.messages;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -38,7 +43,7 @@ public class InsertScoreForApiResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InsertScoreForApiResponseBody create() {
+    public static DeleteCheckTypeToSchemeResponseBody create() {
         return builder().build();
     }
 
@@ -52,7 +57,7 @@ public class InsertScoreForApiResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public String getData() {
         return this.data;
     }
 
@@ -61,6 +66,13 @@ public class InsertScoreForApiResponseBody extends TeaModel {
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return messages
+     */
+    public java.util.List < String > getMessages() {
+        return this.messages;
     }
 
     /**
@@ -79,8 +91,9 @@ public class InsertScoreForApiResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Data data; 
+        private String data; 
         private String message; 
+        private java.util.List < String > messages; 
         private String requestId; 
         private Boolean success; 
 
@@ -95,7 +108,7 @@ public class InsertScoreForApiResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(Data data) {
+        public Builder data(String data) {
             this.data = data;
             return this;
         }
@@ -105,6 +118,14 @@ public class InsertScoreForApiResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * Messages.
+         */
+        public Builder messages(java.util.List < String > messages) {
+            this.messages = messages;
             return this;
         }
 
@@ -124,71 +145,10 @@ public class InsertScoreForApiResponseBody extends TeaModel {
             return this;
         }
 
-        public InsertScoreForApiResponseBody build() {
-            return new InsertScoreForApiResponseBody(this);
+        public DeleteCheckTypeToSchemeResponseBody build() {
+            return new DeleteCheckTypeToSchemeResponseBody(this);
         } 
 
     } 
 
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ScoreId")
-        private Long scoreId;
-
-        @com.aliyun.core.annotation.NameInMap("ScoreName")
-        private String scoreName;
-
-        private Data(Builder builder) {
-            this.scoreId = builder.scoreId;
-            this.scoreName = builder.scoreName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return scoreId
-         */
-        public Long getScoreId() {
-            return this.scoreId;
-        }
-
-        /**
-         * @return scoreName
-         */
-        public String getScoreName() {
-            return this.scoreName;
-        }
-
-        public static final class Builder {
-            private Long scoreId; 
-            private String scoreName; 
-
-            /**
-             * ScoreId.
-             */
-            public Builder scoreId(Long scoreId) {
-                this.scoreId = scoreId;
-                return this;
-            }
-
-            /**
-             * ScoreName.
-             */
-            public Builder scoreName(String scoreName) {
-                this.scoreName = scoreName;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

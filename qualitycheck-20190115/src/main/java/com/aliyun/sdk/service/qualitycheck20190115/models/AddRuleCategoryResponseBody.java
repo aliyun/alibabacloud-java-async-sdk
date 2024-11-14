@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddRuleCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>AddRuleCategoryResponseBody</p>
@@ -130,6 +131,12 @@ public class AddRuleCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddRuleCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddRuleCategoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Select")
         private Boolean select;

@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteSubScoreForApiResponse} extends {@link TeaModel}
+ * 
+ * {@link DeleteCheckTypeToSchemeResponse} extends {@link TeaModel}
  *
- * <p>DeleteSubScoreForApiResponse</p>
+ * <p>DeleteCheckTypeToSchemeResponse</p>
  */
-public class DeleteSubScoreForApiResponse extends Response {
+public class DeleteCheckTypeToSchemeResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class DeleteSubScoreForApiResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteSubScoreForApiResponseBody body;
+    private DeleteCheckTypeToSchemeResponseBody body;
 
-    private DeleteSubScoreForApiResponse(BuilderImpl builder) {
+    private DeleteCheckTypeToSchemeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteSubScoreForApiResponse create() {
+    public static DeleteCheckTypeToSchemeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class DeleteSubScoreForApiResponse extends Response {
     /**
      * @return body
      */
-    public DeleteSubScoreForApiResponseBody getBody() {
+    public DeleteCheckTypeToSchemeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteSubScoreForApiResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteCheckTypeToSchemeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteSubScoreForApiResponseBody body);
+        Builder body(DeleteCheckTypeToSchemeResponseBody body);
 
         @Override
-        DeleteSubScoreForApiResponse build();
+        DeleteCheckTypeToSchemeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteSubScoreForApiResponse, Builder>
+            extends Response.BuilderImpl<DeleteCheckTypeToSchemeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteSubScoreForApiResponseBody body; 
+        private DeleteCheckTypeToSchemeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteSubScoreForApiResponse response) {
+        private BuilderImpl(DeleteCheckTypeToSchemeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class DeleteSubScoreForApiResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteSubScoreForApiResponseBody body) {
+        public Builder body(DeleteCheckTypeToSchemeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteSubScoreForApiResponse build() {
-            return new DeleteSubScoreForApiResponse(this);
+        public DeleteCheckTypeToSchemeResponse build() {
+            return new DeleteCheckTypeToSchemeResponse(this);
         } 
 
     } 

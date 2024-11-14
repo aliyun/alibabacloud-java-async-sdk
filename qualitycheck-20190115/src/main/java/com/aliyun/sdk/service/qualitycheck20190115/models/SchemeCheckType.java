@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SchemeCheckType} extends {@link TeaModel}
  *
  * <p>SchemeCheckType</p>
@@ -190,6 +191,12 @@ public class SchemeCheckType extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SchemeCheckType} extends {@link TeaModel}
+     *
+     * <p>SchemeCheckType</p>
+     */
     public static class SchemeScoreInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -371,6 +378,12 @@ public class SchemeCheckType extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SchemeCheckType} extends {@link TeaModel}
+     *
+     * <p>SchemeCheckType</p>
+     */
     public static class TaskFlowScoreInfoListSchemeScoreInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -552,6 +565,12 @@ public class SchemeCheckType extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SchemeCheckType} extends {@link TeaModel}
+     *
+     * <p>SchemeCheckType</p>
+     */
     public static class TaskFlowScoreInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeScoreInfoList")
         private java.util.List < TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList;

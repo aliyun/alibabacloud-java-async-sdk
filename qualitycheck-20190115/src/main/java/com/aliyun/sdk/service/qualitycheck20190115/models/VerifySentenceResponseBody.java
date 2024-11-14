@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifySentenceResponseBody} extends {@link TeaModel}
  *
  * <p>VerifySentenceResponseBody</p>
@@ -190,6 +191,12 @@ public class VerifySentenceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Line extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < String > line;
@@ -231,6 +238,12 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private Line line;
@@ -292,6 +305,12 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class TargetLine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < String > line;
@@ -333,6 +352,12 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Target extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private TargetLine line;
@@ -394,6 +419,12 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Delta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
@@ -475,6 +506,12 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Delta")
         private java.util.List < Delta> delta;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScoreInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetScoreInfoResponseBody</p>
@@ -130,6 +131,12 @@ public class GetScoreInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetScoreInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScoreInfoResponseBody</p>
+     */
     public static class ScoreParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScoreNum")
         private Integer scoreNum;
@@ -231,6 +238,12 @@ public class GetScoreInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScoreInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScoreInfoResponseBody</p>
+     */
     public static class ScoreInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScoreParam")
         private java.util.List < ScoreParam> scoreParam;
@@ -272,6 +285,12 @@ public class GetScoreInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScoreInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScoreInfoResponseBody</p>
+     */
     public static class ScorePo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScoreId")
         private Integer scoreId;
@@ -353,6 +372,12 @@ public class GetScoreInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScoreInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScoreInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScorePo")
         private java.util.List < ScorePo> scorePo;

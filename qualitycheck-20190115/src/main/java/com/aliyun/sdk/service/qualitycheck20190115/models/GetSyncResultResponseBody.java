@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSyncResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetSyncResultResponseBody</p>
@@ -210,6 +211,12 @@ public class GetSyncResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyncResultResponseBody</p>
+     */
     public static class Agent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -291,6 +298,12 @@ public class GetSyncResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyncResultResponseBody</p>
+     */
     public static class AsrResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -452,6 +465,12 @@ public class GetSyncResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyncResultResponseBody</p>
+     */
     public static class KeyWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
@@ -553,6 +572,12 @@ public class GetSyncResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyncResultResponseBody</p>
+     */
     public static class Phrase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -714,6 +739,12 @@ public class GetSyncResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyncResultResponseBody</p>
+     */
     public static class Hits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
         private java.util.List < String > cid;
@@ -795,6 +826,12 @@ public class GetSyncResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyncResultResponseBody</p>
+     */
     public static class HitResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hits")
         private java.util.List < Hits> hits;
@@ -916,6 +953,12 @@ public class GetSyncResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyncResultResponseBody</p>
+     */
     public static class Recording extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Business")
         private String business;
@@ -1257,6 +1300,12 @@ public class GetSyncResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyncResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Agent")
         private Agent agent;

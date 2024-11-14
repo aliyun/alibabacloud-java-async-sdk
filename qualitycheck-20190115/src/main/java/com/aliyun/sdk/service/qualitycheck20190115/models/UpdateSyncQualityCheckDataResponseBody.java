@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSyncQualityCheckDataResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSyncQualityCheckDataResponseBody</p>
@@ -130,6 +131,12 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSyncQualityCheckDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateSyncQualityCheckDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;

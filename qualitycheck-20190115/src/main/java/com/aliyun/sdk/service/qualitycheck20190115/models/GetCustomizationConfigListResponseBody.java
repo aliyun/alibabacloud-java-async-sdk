@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomizationConfigListResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomizationConfigListResponseBody</p>
@@ -130,6 +131,12 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomizationConfigListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomizationConfigListResponseBody</p>
+     */
     public static class ModelCustomizationDataSetPo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -271,6 +278,12 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCustomizationConfigListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomizationConfigListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelCustomizationDataSetPo")
         private java.util.List < ModelCustomizationDataSetPo> modelCustomizationDataSetPo;

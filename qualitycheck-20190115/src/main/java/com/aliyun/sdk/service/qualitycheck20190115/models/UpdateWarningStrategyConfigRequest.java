@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWarningStrategyConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateWarningStrategyConfigRequest</p>
@@ -77,7 +78,7 @@ public class UpdateWarningStrategyConfigRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>This parameter is required.</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

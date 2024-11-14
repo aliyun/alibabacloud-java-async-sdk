@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAsrVocabResponseBody} extends {@link TeaModel}
  *
  * <p>ListAsrVocabResponseBody</p>
@@ -130,6 +131,12 @@ public class ListAsrVocabResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAsrVocabResponseBody</p>
+     */
     public static class AsrVocab extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -251,6 +258,12 @@ public class ListAsrVocabResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAsrVocabResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrVocab")
         private java.util.List < AsrVocab> asrVocab;

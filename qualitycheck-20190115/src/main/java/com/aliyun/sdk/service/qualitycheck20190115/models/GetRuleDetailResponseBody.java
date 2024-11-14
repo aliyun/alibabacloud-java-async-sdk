@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetRuleDetailResponseBody</p>
@@ -130,6 +131,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Anchor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnchorCid")
         private String anchorCid;
@@ -211,6 +218,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Range extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
@@ -272,6 +285,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class CheckRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Absolute")
         private Boolean absolute;
@@ -373,6 +392,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class AntModelInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AntModelInfo")
         private java.util.List < String > antModelInfo;
@@ -414,6 +439,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Excludes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Excludes")
         private java.util.List < String > excludes;
@@ -455,6 +486,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class OperKeyWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperKeyWord")
         private java.util.List < String > operKeyWord;
@@ -496,6 +533,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Pvalues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pvalues")
         private java.util.List < String > pvalues;
@@ -537,6 +580,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class References extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reference")
         private java.util.List < String > reference;
@@ -578,6 +627,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class SimilarlySentences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SimilarlySentence")
         private java.util.List < String > similarlySentence;
@@ -619,6 +674,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AntModelInfo")
         private AntModelInfo antModelInfo;
@@ -1260,6 +1321,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class OperatorBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Oid")
         private String oid;
@@ -1361,6 +1428,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Operators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperatorBasicInfo")
         private java.util.List < OperatorBasicInfo> operatorBasicInfo;
@@ -1402,6 +1475,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class ConditionBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckRange")
         private CheckRange checkRange;
@@ -1503,6 +1582,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionBasicInfo")
         private java.util.List < ConditionBasicInfo> conditionBasicInfo;
@@ -1544,6 +1629,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class BusinessCategoryBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bid")
         private Integer bid;
@@ -1625,6 +1716,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class BusinessCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessCategoryBasicInfo")
         private java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo;
@@ -1666,6 +1763,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Triggers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Trigger")
         private java.util.List < String > trigger;
@@ -1707,6 +1810,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class RuleBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessCategories")
         private BusinessCategories businessCategories;
@@ -1808,6 +1917,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleBasicInfo")
         private java.util.List < RuleBasicInfo> ruleBasicInfo;
@@ -1849,6 +1964,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private Conditions conditions;

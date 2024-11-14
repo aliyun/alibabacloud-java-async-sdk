@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TestRuleV4Request} extends {@link RequestModel}
  *
  * <p>TestRuleV4Request</p>
@@ -77,7 +78,7 @@ public class TestRuleV4Request extends Request {
         }
 
         /**
-         * TestJson.
+         * <p>This parameter is required.</p>
          */
         public Builder testJson(String testJson) {
             this.putBodyParameter("TestJson", testJson);

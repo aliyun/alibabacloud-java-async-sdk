@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRulesResponseBody</p>
@@ -190,6 +191,12 @@ public class ListRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessCategoryNameList")
         private java.util.List < String > businessCategoryNameList;

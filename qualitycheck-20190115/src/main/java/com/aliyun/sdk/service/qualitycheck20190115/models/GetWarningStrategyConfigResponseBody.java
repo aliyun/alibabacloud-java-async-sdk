@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWarningStrategyConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetWarningStrategyConfigResponseBody</p>
@@ -130,6 +131,12 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWarningStrategyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWarningStrategyConfigResponseBody</p>
+     */
     public static class Range extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RangeNum")
         private Long rangeNum;
@@ -191,6 +198,12 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWarningStrategyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWarningStrategyConfigResponseBody</p>
+     */
     public static class WarningStrategyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -412,6 +425,12 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWarningStrategyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWarningStrategyConfigResponseBody</p>
+     */
     public static class DataWarningStrategyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("warningStrategyList")
         private java.util.List < WarningStrategyList> warningStrategyList;
@@ -453,6 +472,12 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWarningStrategyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWarningStrategyConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;

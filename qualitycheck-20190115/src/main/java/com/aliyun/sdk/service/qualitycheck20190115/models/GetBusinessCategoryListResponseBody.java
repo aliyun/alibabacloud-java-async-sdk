@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBusinessCategoryListResponseBody} extends {@link TeaModel}
  *
  * <p>GetBusinessCategoryListResponseBody</p>
@@ -130,6 +131,12 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBusinessCategoryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBusinessCategoryListResponseBody</p>
+     */
     public static class BusinessCategoryBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bid")
         private Integer bid;
@@ -211,6 +218,12 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBusinessCategoryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBusinessCategoryListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessCategoryBasicInfo")
         private java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo;
