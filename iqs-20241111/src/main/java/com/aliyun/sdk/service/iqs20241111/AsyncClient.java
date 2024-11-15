@@ -20,6 +20,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AiSearch  AiSearchRequest
+     * @return AiSearchResponse
+     */
+    CompletableFuture<AiSearchResponse> aiSearch(AiSearchRequest request);
+
+    ResponseIterable<AiSearchResponseBody> aiSearchWithResponseIterable(AiSearchRequest request);
+
+    /**
+     * @param request the request parameters of GenericAdvancedSearch  GenericAdvancedSearchRequest
+     * @return GenericAdvancedSearchResponse
+     */
+    CompletableFuture<GenericAdvancedSearchResponse> genericAdvancedSearch(GenericAdvancedSearchRequest request);
+
+    /**
      * @param request the request parameters of GenericSearch  GenericSearchRequest
      * @return GenericSearchResponse
      */

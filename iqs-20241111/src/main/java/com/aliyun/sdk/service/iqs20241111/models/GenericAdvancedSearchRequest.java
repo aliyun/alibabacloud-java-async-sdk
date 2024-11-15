@@ -7,19 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GenericSearchRequest} extends {@link RequestModel}
+ * {@link GenericAdvancedSearchRequest} extends {@link RequestModel}
  *
- * <p>GenericSearchRequest</p>
+ * <p>GenericAdvancedSearchRequest</p>
  */
-public class GenericSearchRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("industry")
-    private String industry;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("page")
-    private Integer page;
-
+public class GenericAdvancedSearchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("query")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -33,10 +25,8 @@ public class GenericSearchRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("timeRange")
     private String timeRange;
 
-    private GenericSearchRequest(Builder builder) {
+    private GenericAdvancedSearchRequest(Builder builder) {
         super(builder);
-        this.industry = builder.industry;
-        this.page = builder.page;
         this.query = builder.query;
         this.sessionId = builder.sessionId;
         this.timeRange = builder.timeRange;
@@ -46,27 +36,13 @@ public class GenericSearchRequest extends Request {
         return new Builder();
     }
 
-    public static GenericSearchRequest create() {
+    public static GenericAdvancedSearchRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return industry
-     */
-    public String getIndustry() {
-        return this.industry;
-    }
-
-    /**
-     * @return page
-     */
-    public Integer getPage() {
-        return this.page;
     }
 
     /**
@@ -90,9 +66,7 @@ public class GenericSearchRequest extends Request {
         return this.timeRange;
     }
 
-    public static final class Builder extends Request.Builder<GenericSearchRequest, Builder> {
-        private String industry; 
-        private Integer page; 
+    public static final class Builder extends Request.Builder<GenericAdvancedSearchRequest, Builder> {
         private String query; 
         private String sessionId; 
         private String timeRange; 
@@ -101,32 +75,12 @@ public class GenericSearchRequest extends Request {
             super();
         } 
 
-        private Builder(GenericSearchRequest request) {
+        private Builder(GenericAdvancedSearchRequest request) {
             super(request);
-            this.industry = request.industry;
-            this.page = request.page;
             this.query = request.query;
             this.sessionId = request.sessionId;
             this.timeRange = request.timeRange;
         } 
-
-        /**
-         * industry.
-         */
-        public Builder industry(String industry) {
-            this.putQueryParameter("industry", industry);
-            this.industry = industry;
-            return this;
-        }
-
-        /**
-         * page.
-         */
-        public Builder page(Integer page) {
-            this.putQueryParameter("page", page);
-            this.page = page;
-            return this;
-        }
 
         /**
          * <p>This parameter is required.</p>
@@ -156,8 +110,8 @@ public class GenericSearchRequest extends Request {
         }
 
         @Override
-        public GenericSearchRequest build() {
-            return new GenericSearchRequest(this);
+        public GenericAdvancedSearchRequest build() {
+            return new GenericAdvancedSearchRequest(this);
         } 
 
     } 

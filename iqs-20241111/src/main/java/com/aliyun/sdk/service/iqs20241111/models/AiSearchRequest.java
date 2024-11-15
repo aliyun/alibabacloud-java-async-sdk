@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GenericSearchRequest} extends {@link RequestModel}
+ * {@link AiSearchRequest} extends {@link RequestModel}
  *
- * <p>GenericSearchRequest</p>
+ * <p>AiSearchRequest</p>
  */
-public class GenericSearchRequest extends Request {
+public class AiSearchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("industry")
     private String industry;
@@ -33,7 +33,7 @@ public class GenericSearchRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("timeRange")
     private String timeRange;
 
-    private GenericSearchRequest(Builder builder) {
+    private AiSearchRequest(Builder builder) {
         super(builder);
         this.industry = builder.industry;
         this.page = builder.page;
@@ -46,7 +46,7 @@ public class GenericSearchRequest extends Request {
         return new Builder();
     }
 
-    public static GenericSearchRequest create() {
+    public static AiSearchRequest create() {
         return builder().build();
     }
 
@@ -90,7 +90,7 @@ public class GenericSearchRequest extends Request {
         return this.timeRange;
     }
 
-    public static final class Builder extends Request.Builder<GenericSearchRequest, Builder> {
+    public static final class Builder extends Request.Builder<AiSearchRequest, Builder> {
         private String industry; 
         private Integer page; 
         private String query; 
@@ -101,7 +101,7 @@ public class GenericSearchRequest extends Request {
             super();
         } 
 
-        private Builder(GenericSearchRequest request) {
+        private Builder(AiSearchRequest request) {
             super(request);
             this.industry = request.industry;
             this.page = request.page;
@@ -156,8 +156,8 @@ public class GenericSearchRequest extends Request {
         }
 
         @Override
-        public GenericSearchRequest build() {
-            return new GenericSearchRequest(this);
+        public AiSearchRequest build() {
+            return new AiSearchRequest(this);
         } 
 
     } 
