@@ -45,6 +45,9 @@ public class ChannelProperties extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("useHuaweiMessage")
     private String useHuaweiMessage;
 
+    @com.aliyun.core.annotation.NameInMap("useHuaweiPlainMessage")
+    private String useHuaweiPlainMessage;
+
     @com.aliyun.core.annotation.NameInMap("vivoAddBadge")
     private String vivoAddBadge;
 
@@ -69,6 +72,7 @@ public class ChannelProperties extends TeaModel {
         this.oppoChannelId = builder.oppoChannelId;
         this.oppoNotifyLevel = builder.oppoNotifyLevel;
         this.useHuaweiMessage = builder.useHuaweiMessage;
+        this.useHuaweiPlainMessage = builder.useHuaweiPlainMessage;
         this.vivoAddBadge = builder.vivoAddBadge;
         this.vivoCategory = builder.vivoCategory;
         this.vivoPushMode = builder.vivoPushMode;
@@ -154,6 +158,13 @@ public class ChannelProperties extends TeaModel {
     }
 
     /**
+     * @return useHuaweiPlainMessage
+     */
+    public String getUseHuaweiPlainMessage() {
+        return this.useHuaweiPlainMessage;
+    }
+
+    /**
      * @return vivoAddBadge
      */
     public String getVivoAddBadge() {
@@ -192,6 +203,7 @@ public class ChannelProperties extends TeaModel {
         private String oppoChannelId; 
         private String oppoNotifyLevel; 
         private String useHuaweiMessage; 
+        private String useHuaweiPlainMessage; 
         private String vivoAddBadge; 
         private String vivoCategory; 
         private String vivoPushMode; 
@@ -274,6 +286,14 @@ public class ChannelProperties extends TeaModel {
          */
         public Builder useHuaweiMessage(String useHuaweiMessage) {
             this.useHuaweiMessage = useHuaweiMessage;
+            return this;
+        }
+
+        /**
+         * useHuaweiPlainMessage.
+         */
+        public Builder useHuaweiPlainMessage(String useHuaweiPlainMessage) {
+            this.useHuaweiPlainMessage = useHuaweiPlainMessage;
             return this;
         }
 
