@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDeviceInfoResponse> describeDeviceInfo(DescribeDeviceInfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeFaceGuardRisk  DescribeFaceGuardRiskRequest
+     * @return DescribeFaceGuardRiskResponse
+     */
+    CompletableFuture<DescribeFaceGuardRiskResponse> describeFaceGuardRisk(DescribeFaceGuardRiskRequest request);
+
+    /**
      * @param request the request parameters of DescribeFaceVerify  DescribeFaceVerifyRequest
      * @return DescribeFaceVerifyResponse
      */
