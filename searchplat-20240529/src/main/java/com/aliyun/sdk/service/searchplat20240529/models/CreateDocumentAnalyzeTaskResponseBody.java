@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDocumentAnalyzeTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDocumentAnalyzeTaskResponseBody</p>
@@ -90,6 +91,12 @@ public class CreateDocumentAnalyzeTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDocumentAnalyzeTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDocumentAnalyzeTaskResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("task_id")
         private String taskId;

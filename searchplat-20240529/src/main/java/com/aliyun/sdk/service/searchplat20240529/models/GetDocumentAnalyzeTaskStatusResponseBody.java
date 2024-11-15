@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentAnalyzeTaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocumentAnalyzeTaskStatusResponseBody</p>
@@ -110,6 +111,12 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentAnalyzeTaskStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentAnalyzeTaskStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -191,6 +198,12 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentAnalyzeTaskStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentAnalyzeTaskStatusResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
         private Data data;
@@ -292,6 +305,12 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentAnalyzeTaskStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentAnalyzeTaskStatusResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image_count")
         private Long imageCount;

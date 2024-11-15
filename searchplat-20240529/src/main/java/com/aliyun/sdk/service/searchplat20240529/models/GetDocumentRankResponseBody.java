@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentRankResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocumentRankResponseBody</p>
@@ -110,6 +111,12 @@ public class GetDocumentRankResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentRankResponseBody</p>
+     */
     public static class Scores extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
@@ -171,6 +178,12 @@ public class GetDocumentRankResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentRankResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scores")
         private java.util.List < Scores> scores;
@@ -212,6 +225,12 @@ public class GetDocumentRankResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentRankResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("doc_count")
         private Long docCount;

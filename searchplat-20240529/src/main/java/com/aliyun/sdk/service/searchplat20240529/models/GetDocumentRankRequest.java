@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentRankRequest} extends {@link RequestModel}
  *
  * <p>GetDocumentRankRequest</p>
@@ -99,7 +100,7 @@ public class GetDocumentRankRequest extends Request {
         } 
 
         /**
-         * workspace_name.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -108,7 +109,7 @@ public class GetDocumentRankRequest extends Request {
         }
 
         /**
-         * service_id.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -117,7 +118,7 @@ public class GetDocumentRankRequest extends Request {
         }
 
         /**
-         * docs.
+         * <p>This parameter is required.</p>
          */
         public Builder docs(java.util.List < String > docs) {
             this.putBodyParameter("docs", docs);
@@ -126,7 +127,7 @@ public class GetDocumentRankRequest extends Request {
         }
 
         /**
-         * query.
+         * <p>This parameter is required.</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);

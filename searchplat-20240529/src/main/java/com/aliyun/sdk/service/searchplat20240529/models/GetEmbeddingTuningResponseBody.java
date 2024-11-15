@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTextGenerationResponseBody} extends {@link TeaModel}
+ * {@link GetEmbeddingTuningResponseBody} extends {@link TeaModel}
  *
- * <p>GetTextGenerationResponseBody</p>
+ * <p>GetEmbeddingTuningResponseBody</p>
  */
-public class GetTextGenerationResponseBody extends TeaModel {
+public class GetEmbeddingTuningResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("latency")
     private Integer latency;
 
@@ -24,7 +24,7 @@ public class GetTextGenerationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("usage")
     private Usage usage;
 
-    private GetTextGenerationResponseBody(Builder builder) {
+    private GetEmbeddingTuningResponseBody(Builder builder) {
         this.latency = builder.latency;
         this.requestId = builder.requestId;
         this.result = builder.result;
@@ -35,7 +35,7 @@ public class GetTextGenerationResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetTextGenerationResponseBody create() {
+    public static GetEmbeddingTuningResponseBody create() {
         return builder().build();
     }
 
@@ -105,24 +105,24 @@ public class GetTextGenerationResponseBody extends TeaModel {
             return this;
         }
 
-        public GetTextGenerationResponseBody build() {
-            return new GetTextGenerationResponseBody(this);
+        public GetEmbeddingTuningResponseBody build() {
+            return new GetEmbeddingTuningResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetTextGenerationResponseBody} extends {@link TeaModel}
+     * {@link GetEmbeddingTuningResponseBody} extends {@link TeaModel}
      *
-     * <p>GetTextGenerationResponseBody</p>
+     * <p>GetEmbeddingTuningResponseBody</p>
      */
     public static class Result extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("text")
-        private String text;
+        @com.aliyun.core.annotation.NameInMap("output")
+        private java.util.List < java.util.List < Float > > output;
 
         private Result(Builder builder) {
-            this.text = builder.text;
+            this.output = builder.output;
         }
 
         public static Builder builder() {
@@ -134,20 +134,20 @@ public class GetTextGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * @return text
+         * @return output
          */
-        public String getText() {
-            return this.text;
+        public java.util.List < java.util.List < Float > > getOutput() {
+            return this.output;
         }
 
         public static final class Builder {
-            private String text; 
+            private java.util.List < java.util.List < Float > > output; 
 
             /**
-             * text.
+             * output.
              */
-            public Builder text(String text) {
-                this.text = text;
+            public Builder output(java.util.List < java.util.List < Float > > output) {
+                this.output = output;
                 return this;
             }
 
@@ -160,24 +160,16 @@ public class GetTextGenerationResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetTextGenerationResponseBody} extends {@link TeaModel}
+     * {@link GetEmbeddingTuningResponseBody} extends {@link TeaModel}
      *
-     * <p>GetTextGenerationResponseBody</p>
+     * <p>GetEmbeddingTuningResponseBody</p>
      */
     public static class Usage extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("input_tokens")
-        private Long inputTokens;
-
-        @com.aliyun.core.annotation.NameInMap("output_tokens")
-        private Long outputTokens;
-
-        @com.aliyun.core.annotation.NameInMap("total_tokens")
-        private Long totalTokens;
+        @com.aliyun.core.annotation.NameInMap("doc_count")
+        private Integer docCount;
 
         private Usage(Builder builder) {
-            this.inputTokens = builder.inputTokens;
-            this.outputTokens = builder.outputTokens;
-            this.totalTokens = builder.totalTokens;
+            this.docCount = builder.docCount;
         }
 
         public static Builder builder() {
@@ -189,52 +181,20 @@ public class GetTextGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * @return inputTokens
+         * @return docCount
          */
-        public Long getInputTokens() {
-            return this.inputTokens;
-        }
-
-        /**
-         * @return outputTokens
-         */
-        public Long getOutputTokens() {
-            return this.outputTokens;
-        }
-
-        /**
-         * @return totalTokens
-         */
-        public Long getTotalTokens() {
-            return this.totalTokens;
+        public Integer getDocCount() {
+            return this.docCount;
         }
 
         public static final class Builder {
-            private Long inputTokens; 
-            private Long outputTokens; 
-            private Long totalTokens; 
+            private Integer docCount; 
 
             /**
-             * input_tokens.
+             * doc_count.
              */
-            public Builder inputTokens(Long inputTokens) {
-                this.inputTokens = inputTokens;
-                return this;
-            }
-
-            /**
-             * output_tokens.
-             */
-            public Builder outputTokens(Long outputTokens) {
-                this.outputTokens = outputTokens;
-                return this;
-            }
-
-            /**
-             * total_tokens.
-             */
-            public Builder totalTokens(Long totalTokens) {
-                this.totalTokens = totalTokens;
+            public Builder docCount(Integer docCount) {
+                this.docCount = docCount;
                 return this;
             }
 

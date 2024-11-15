@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryAnalysisResponseBody} extends {@link TeaModel}
  *
  * <p>GetQueryAnalysisResponseBody</p>
@@ -110,6 +111,12 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueryAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryAnalysisResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("intent")
         private String intent;
@@ -211,6 +218,12 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQueryAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryAnalysisResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("input_tokens")
         private Long inputTokens;

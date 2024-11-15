@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageAnalyzeTaskStatusRequest} extends {@link RequestModel}
  *
  * <p>GetImageAnalyzeTaskStatusRequest</p>
@@ -84,7 +85,7 @@ public class GetImageAnalyzeTaskStatusRequest extends Request {
         } 
 
         /**
-         * workspace_name.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -93,7 +94,7 @@ public class GetImageAnalyzeTaskStatusRequest extends Request {
         }
 
         /**
-         * service_id.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -102,7 +103,7 @@ public class GetImageAnalyzeTaskStatusRequest extends Request {
         }
 
         /**
-         * task_id.
+         * <p>This parameter is required.</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("task_id", taskId);

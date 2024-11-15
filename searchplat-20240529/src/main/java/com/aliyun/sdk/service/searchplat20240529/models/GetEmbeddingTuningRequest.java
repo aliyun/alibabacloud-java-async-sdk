@@ -7,48 +7,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTextSparseEmbeddingRequest} extends {@link RequestModel}
+ * {@link GetEmbeddingTuningRequest} extends {@link RequestModel}
  *
- * <p>GetTextSparseEmbeddingRequest</p>
+ * <p>GetEmbeddingTuningRequest</p>
  */
-public class GetTextSparseEmbeddingRequest extends Request {
+public class GetEmbeddingTuningRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspace_name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceName;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("service_id")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("input")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > input;
+    private java.util.List < java.util.List < Float > > input;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("input_type")
-    private String inputType;
+    @com.aliyun.core.annotation.NameInMap("parameters")
+    private java.util.Map < String, ? > parameters;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("return_token")
-    private Boolean returnToken;
-
-    private GetTextSparseEmbeddingRequest(Builder builder) {
+    private GetEmbeddingTuningRequest(Builder builder) {
         super(builder);
         this.workspaceName = builder.workspaceName;
         this.serviceId = builder.serviceId;
         this.input = builder.input;
-        this.inputType = builder.inputType;
-        this.returnToken = builder.returnToken;
+        this.parameters = builder.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetTextSparseEmbeddingRequest create() {
+    public static GetEmbeddingTuningRequest create() {
         return builder().build();
     }
 
@@ -74,46 +66,37 @@ public class GetTextSparseEmbeddingRequest extends Request {
     /**
      * @return input
      */
-    public java.util.List < String > getInput() {
+    public java.util.List < java.util.List < Float > > getInput() {
         return this.input;
     }
 
     /**
-     * @return inputType
+     * @return parameters
      */
-    public String getInputType() {
-        return this.inputType;
+    public java.util.Map < String, ? > getParameters() {
+        return this.parameters;
     }
 
-    /**
-     * @return returnToken
-     */
-    public Boolean getReturnToken() {
-        return this.returnToken;
-    }
-
-    public static final class Builder extends Request.Builder<GetTextSparseEmbeddingRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetEmbeddingTuningRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
-        private java.util.List < String > input; 
-        private String inputType; 
-        private Boolean returnToken; 
+        private java.util.List < java.util.List < Float > > input; 
+        private java.util.Map < String, ? > parameters; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetTextSparseEmbeddingRequest request) {
+        private Builder(GetEmbeddingTuningRequest request) {
             super(request);
             this.workspaceName = request.workspaceName;
             this.serviceId = request.serviceId;
             this.input = request.input;
-            this.inputType = request.inputType;
-            this.returnToken = request.returnToken;
+            this.parameters = request.parameters;
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * workspace_name.
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -122,7 +105,7 @@ public class GetTextSparseEmbeddingRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * service_id.
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -131,35 +114,26 @@ public class GetTextSparseEmbeddingRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * input.
          */
-        public Builder input(java.util.List < String > input) {
+        public Builder input(java.util.List < java.util.List < Float > > input) {
             this.putBodyParameter("input", input);
             this.input = input;
             return this;
         }
 
         /**
-         * input_type.
+         * parameters.
          */
-        public Builder inputType(String inputType) {
-            this.putBodyParameter("input_type", inputType);
-            this.inputType = inputType;
-            return this;
-        }
-
-        /**
-         * return_token.
-         */
-        public Builder returnToken(Boolean returnToken) {
-            this.putBodyParameter("return_token", returnToken);
-            this.returnToken = returnToken;
+        public Builder parameters(java.util.Map < String, ? > parameters) {
+            this.putBodyParameter("parameters", parameters);
+            this.parameters = parameters;
             return this;
         }
 
         @Override
-        public GetTextSparseEmbeddingRequest build() {
-            return new GetTextSparseEmbeddingRequest(this);
+        public GetEmbeddingTuningRequest build() {
+            return new GetEmbeddingTuningRequest(this);
         } 
 
     } 

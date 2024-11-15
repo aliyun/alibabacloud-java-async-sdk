@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTextGenerationRequest} extends {@link RequestModel}
  *
  * <p>GetTextGenerationRequest</p>
@@ -126,7 +127,7 @@ public class GetTextGenerationRequest extends Request {
         } 
 
         /**
-         * workspace_name.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -135,7 +136,7 @@ public class GetTextGenerationRequest extends Request {
         }
 
         /**
-         * service_id.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -153,7 +154,7 @@ public class GetTextGenerationRequest extends Request {
         }
 
         /**
-         * messages.
+         * <p>This parameter is required.</p>
          */
         public Builder messages(java.util.List < Messages> messages) {
             this.putBodyParameter("messages", messages);
@@ -186,6 +187,12 @@ public class GetTextGenerationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetTextGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>GetTextGenerationRequest</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTextEmbeddingResponseBody} extends {@link TeaModel}
  *
  * <p>GetTextEmbeddingResponseBody</p>
@@ -110,6 +111,12 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTextEmbeddingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextEmbeddingResponseBody</p>
+     */
     public static class Embeddings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("embedding")
         private java.util.List < Double > embedding;
@@ -171,6 +178,12 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTextEmbeddingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextEmbeddingResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("embeddings")
         private java.util.List < Embeddings> embeddings;
@@ -212,6 +225,12 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTextEmbeddingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextEmbeddingResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("token_count")
         private Long tokenCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDocumentAnalyzeTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateDocumentAnalyzeTaskRequest</p>
@@ -97,7 +98,7 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
         } 
 
         /**
-         * workspace_name.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -106,7 +107,7 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
         }
 
         /**
-         * service_id.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -139,6 +140,12 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDocumentAnalyzeTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDocumentAnalyzeTaskRequest</p>
+     */
     public static class Document extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -240,6 +247,12 @@ public class CreateDocumentAnalyzeTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDocumentAnalyzeTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDocumentAnalyzeTaskRequest</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("image_storage")
         private String imageStorage;

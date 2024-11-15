@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateDocumentAnalyzeTask  CreateDocumentAnalyzeTaskRequest
+     * @return CreateDocumentAnalyzeTaskResponse
+     */
     @Override
     public CompletableFuture<CreateDocumentAnalyzeTaskResponse> createDocumentAnalyzeTask(CreateDocumentAnalyzeTaskRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateImageAnalyzeTask  CreateImageAnalyzeTaskRequest
+     * @return CreateImageAnalyzeTaskResponse
+     */
     @Override
     public CompletableFuture<CreateImageAnalyzeTaskResponse> createImageAnalyzeTask(CreateImageAnalyzeTaskRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocumentAnalyzeTaskStatus  GetDocumentAnalyzeTaskStatusRequest
+     * @return GetDocumentAnalyzeTaskStatusResponse
+     */
     @Override
     public CompletableFuture<GetDocumentAnalyzeTaskStatusResponse> getDocumentAnalyzeTaskStatus(GetDocumentAnalyzeTaskStatusRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocumentRank  GetDocumentRankRequest
+     * @return GetDocumentRankResponse
+     */
     @Override
     public CompletableFuture<GetDocumentRankResponse> getDocumentRank(GetDocumentRankRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocumentSplit  GetDocumentSplitRequest
+     * @return GetDocumentSplitResponse
+     */
     @Override
     public CompletableFuture<GetDocumentSplitResponse> getDocumentSplit(GetDocumentSplitRequest request) {
         try {
@@ -109,6 +129,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEmbeddingTuning  GetEmbeddingTuningRequest
+     * @return GetEmbeddingTuningResponse
+     */
+    @Override
+    public CompletableFuture<GetEmbeddingTuningResponse> getEmbeddingTuning(GetEmbeddingTuningRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEmbeddingTuning").setMethod(HttpMethod.POST).setPathRegex("/v3/openapi/workspaces/{workspace_name}/embedding-tuning/{service_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEmbeddingTuningResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEmbeddingTuningResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetImageAnalyzeTaskStatus  GetImageAnalyzeTaskStatusRequest
+     * @return GetImageAnalyzeTaskStatusResponse
+     */
     @Override
     public CompletableFuture<GetImageAnalyzeTaskStatusResponse> getImageAnalyzeTaskStatus(GetImageAnalyzeTaskStatusRequest request) {
         try {
@@ -123,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQueryAnalysis  GetQueryAnalysisRequest
+     * @return GetQueryAnalysisResponse
+     */
     @Override
     public CompletableFuture<GetQueryAnalysisResponse> getQueryAnalysis(GetQueryAnalysisRequest request) {
         try {
@@ -137,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTextEmbedding  GetTextEmbeddingRequest
+     * @return GetTextEmbeddingResponse
+     */
     @Override
     public CompletableFuture<GetTextEmbeddingResponse> getTextEmbedding(GetTextEmbeddingRequest request) {
         try {
@@ -151,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTextGeneration  GetTextGenerationRequest
+     * @return GetTextGenerationResponse
+     */
     @Override
     public CompletableFuture<GetTextGenerationResponse> getTextGeneration(GetTextGenerationRequest request) {
         try {
@@ -165,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTextSparseEmbedding  GetTextSparseEmbeddingRequest
+     * @return GetTextSparseEmbeddingResponse
+     */
     @Override
     public CompletableFuture<GetTextSparseEmbeddingResponse> getTextSparseEmbedding(GetTextSparseEmbeddingRequest request) {
         try {

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentSplitResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocumentSplitResponseBody</p>
@@ -110,6 +111,12 @@ public class GetDocumentSplitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentSplitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentSplitResponseBody</p>
+     */
     public static class Chunks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -171,6 +178,12 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentSplitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentSplitResponseBody</p>
+     */
     public static class RichTexts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -232,6 +245,12 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentSplitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentSplitResponseBody</p>
+     */
     public static class Sentences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -293,6 +312,12 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentSplitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentSplitResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunks")
         private java.util.List < Chunks> chunks;
@@ -394,6 +419,12 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentSplitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentSplitResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("token_count")
         private Long tokenCount;

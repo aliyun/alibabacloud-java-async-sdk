@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentSplitRequest} extends {@link RequestModel}
  *
  * <p>GetDocumentSplitRequest</p>
@@ -98,7 +99,7 @@ public class GetDocumentSplitRequest extends Request {
         } 
 
         /**
-         * workspace_name.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -107,7 +108,7 @@ public class GetDocumentSplitRequest extends Request {
         }
 
         /**
-         * service_id.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -116,7 +117,7 @@ public class GetDocumentSplitRequest extends Request {
         }
 
         /**
-         * document.
+         * <p>This parameter is required.</p>
          */
         public Builder document(Document document) {
             this.putBodyParameter("document", document);
@@ -140,6 +141,12 @@ public class GetDocumentSplitRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentSplitRequest} extends {@link TeaModel}
+     *
+     * <p>GetDocumentSplitRequest</p>
+     */
     public static class Document extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -221,6 +228,12 @@ public class GetDocumentSplitRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentSplitRequest} extends {@link TeaModel}
+     *
+     * <p>GetDocumentSplitRequest</p>
+     */
     public static class Strategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("compute_type")
         private String computeType;

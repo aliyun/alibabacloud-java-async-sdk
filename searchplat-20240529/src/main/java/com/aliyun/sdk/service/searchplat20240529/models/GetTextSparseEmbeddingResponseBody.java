@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTextSparseEmbeddingResponseBody} extends {@link TeaModel}
  *
  * <p>GetTextSparseEmbeddingResponseBody</p>
@@ -110,6 +111,12 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTextSparseEmbeddingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextSparseEmbeddingResponseBody</p>
+     */
     public static class Embedding extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("token")
         private String token;
@@ -191,6 +198,12 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTextSparseEmbeddingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextSparseEmbeddingResponseBody</p>
+     */
     public static class SparseEmbeddings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("embedding")
         private java.util.List < Embedding> embedding;
@@ -252,6 +265,12 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTextSparseEmbeddingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextSparseEmbeddingResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sparse_embeddings")
         private java.util.List < SparseEmbeddings> sparseEmbeddings;
@@ -293,6 +312,12 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTextSparseEmbeddingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextSparseEmbeddingResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("token_count")
         private Long tokenCount;

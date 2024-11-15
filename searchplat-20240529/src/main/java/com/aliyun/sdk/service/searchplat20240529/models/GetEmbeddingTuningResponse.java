@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetImageAnalyzeTaskStatusResponse} extends {@link TeaModel}
+ * {@link GetEmbeddingTuningResponse} extends {@link TeaModel}
  *
- * <p>GetImageAnalyzeTaskStatusResponse</p>
+ * <p>GetEmbeddingTuningResponse</p>
  */
-public class GetImageAnalyzeTaskStatusResponse extends Response {
+public class GetEmbeddingTuningResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetImageAnalyzeTaskStatusResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetImageAnalyzeTaskStatusResponseBody body;
+    private GetEmbeddingTuningResponseBody body;
 
-    private GetImageAnalyzeTaskStatusResponse(BuilderImpl builder) {
+    private GetEmbeddingTuningResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetImageAnalyzeTaskStatusResponse create() {
+    public static GetEmbeddingTuningResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetImageAnalyzeTaskStatusResponse extends Response {
     /**
      * @return body
      */
-    public GetImageAnalyzeTaskStatusResponseBody getBody() {
+    public GetEmbeddingTuningResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetImageAnalyzeTaskStatusResponse, Builder> {
+    public interface Builder extends Response.Builder<GetEmbeddingTuningResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetImageAnalyzeTaskStatusResponseBody body);
+        Builder body(GetEmbeddingTuningResponseBody body);
 
         @Override
-        GetImageAnalyzeTaskStatusResponse build();
+        GetEmbeddingTuningResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetImageAnalyzeTaskStatusResponse, Builder>
+            extends Response.BuilderImpl<GetEmbeddingTuningResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetImageAnalyzeTaskStatusResponseBody body; 
+        private GetEmbeddingTuningResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetImageAnalyzeTaskStatusResponse response) {
+        private BuilderImpl(GetEmbeddingTuningResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetImageAnalyzeTaskStatusResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetImageAnalyzeTaskStatusResponseBody body) {
+        public Builder body(GetEmbeddingTuningResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetImageAnalyzeTaskStatusResponse build() {
-            return new GetImageAnalyzeTaskStatusResponse(this);
+        public GetEmbeddingTuningResponse build() {
+            return new GetEmbeddingTuningResponse(this);
         } 
 
     } 

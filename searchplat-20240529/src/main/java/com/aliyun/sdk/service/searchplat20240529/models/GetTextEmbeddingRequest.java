@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTextEmbeddingRequest} extends {@link RequestModel}
  *
  * <p>GetTextEmbeddingRequest</p>
@@ -98,7 +99,7 @@ public class GetTextEmbeddingRequest extends Request {
         } 
 
         /**
-         * workspace_name.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -107,7 +108,7 @@ public class GetTextEmbeddingRequest extends Request {
         }
 
         /**
-         * service_id.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -116,7 +117,7 @@ public class GetTextEmbeddingRequest extends Request {
         }
 
         /**
-         * input.
+         * <p>This parameter is required.</p>
          */
         public Builder input(java.util.List < String > input) {
             this.putBodyParameter("input", input);

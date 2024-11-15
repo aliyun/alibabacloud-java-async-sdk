@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryAnalysisRequest} extends {@link RequestModel}
  *
  * <p>GetQueryAnalysisRequest</p>
@@ -112,7 +113,7 @@ public class GetQueryAnalysisRequest extends Request {
         } 
 
         /**
-         * workspace_name.
+         * <p>This parameter is required.</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putPathParameter("workspace_name", workspaceName);
@@ -121,7 +122,7 @@ public class GetQueryAnalysisRequest extends Request {
         }
 
         /**
-         * service_id.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
@@ -148,7 +149,7 @@ public class GetQueryAnalysisRequest extends Request {
         }
 
         /**
-         * query.
+         * <p>This parameter is required.</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);
@@ -163,6 +164,12 @@ public class GetQueryAnalysisRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueryAnalysisRequest} extends {@link TeaModel}
+     *
+     * <p>GetQueryAnalysisRequest</p>
+     */
     public static class Functions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -224,6 +231,12 @@ public class GetQueryAnalysisRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQueryAnalysisRequest} extends {@link TeaModel}
+     *
+     * <p>GetQueryAnalysisRequest</p>
+     */
     public static class History extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
