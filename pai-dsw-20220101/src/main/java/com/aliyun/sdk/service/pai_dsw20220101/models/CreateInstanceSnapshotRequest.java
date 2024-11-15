@@ -23,6 +23,7 @@ public class CreateInstanceSnapshotRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageUrl;
 
     @com.aliyun.core.annotation.Body
@@ -39,6 +40,7 @@ public class CreateInstanceSnapshotRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SnapshotName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotName;
 
     private CreateInstanceSnapshotRequest(Builder builder) {
@@ -160,7 +162,10 @@ public class CreateInstanceSnapshotRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putBodyParameter("ImageUrl", imageUrl);
@@ -196,7 +201,10 @@ public class CreateInstanceSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>training_data_env</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putBodyParameter("SnapshotName", snapshotName);

@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ForwardInfo</p>
  */
 public class ForwardInfo extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessType")
+    private java.util.List < String > accessType;
+
     @com.aliyun.core.annotation.NameInMap("ContainerName")
     private String containerName;
 
@@ -21,21 +24,30 @@ public class ForwardInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
+    @com.aliyun.core.annotation.NameInMap("ExternalPort")
+    private String externalPort;
+
+    @com.aliyun.core.annotation.NameInMap("ForwardPort")
+    private String forwardPort;
+
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
-
-    @com.aliyun.core.annotation.NameInMap("Port")
-    private String port;
 
     @com.aliyun.core.annotation.NameInMap("SSHPublicKey")
     private String SSHPublicKey;
 
     private ForwardInfo(Builder builder) {
+        this.accessType = builder.accessType;
         this.containerName = builder.containerName;
         this.eipAllocationId = builder.eipAllocationId;
         this.enable = builder.enable;
+        this.externalPort = builder.externalPort;
+        this.forwardPort = builder.forwardPort;
+        this.name = builder.name;
         this.natGatewayId = builder.natGatewayId;
-        this.port = builder.port;
         this.SSHPublicKey = builder.SSHPublicKey;
     }
 
@@ -45,6 +57,13 @@ public class ForwardInfo extends TeaModel {
 
     public static ForwardInfo create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessType
+     */
+    public java.util.List < String > getAccessType() {
+        return this.accessType;
     }
 
     /**
@@ -69,17 +88,31 @@ public class ForwardInfo extends TeaModel {
     }
 
     /**
+     * @return externalPort
+     */
+    public String getExternalPort() {
+        return this.externalPort;
+    }
+
+    /**
+     * @return forwardPort
+     */
+    public String getForwardPort() {
+        return this.forwardPort;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return natGatewayId
      */
     public String getNatGatewayId() {
         return this.natGatewayId;
-    }
-
-    /**
-     * @return port
-     */
-    public String getPort() {
-        return this.port;
     }
 
     /**
@@ -90,12 +123,23 @@ public class ForwardInfo extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < String > accessType; 
         private String containerName; 
         private String eipAllocationId; 
         private Boolean enable; 
+        private String externalPort; 
+        private String forwardPort; 
+        private String name; 
         private String natGatewayId; 
-        private String port; 
         private String SSHPublicKey; 
+
+        /**
+         * AccessType.
+         */
+        public Builder accessType(java.util.List < String > accessType) {
+            this.accessType = accessType;
+            return this;
+        }
 
         /**
          * ContainerName.
@@ -122,18 +166,34 @@ public class ForwardInfo extends TeaModel {
         }
 
         /**
-         * NatGatewayId.
+         * ExternalPort.
          */
-        public Builder natGatewayId(String natGatewayId) {
-            this.natGatewayId = natGatewayId;
+        public Builder externalPort(String externalPort) {
+            this.externalPort = externalPort;
             return this;
         }
 
         /**
-         * Port.
+         * ForwardPort.
          */
-        public Builder port(String port) {
-            this.port = port;
+        public Builder forwardPort(String forwardPort) {
+            this.forwardPort = forwardPort;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * NatGatewayId.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.natGatewayId = natGatewayId;
             return this;
         }
 

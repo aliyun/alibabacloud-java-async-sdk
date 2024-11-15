@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ForwardInfoResponse</p>
  */
 public class ForwardInfoResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("AccessType")
+    private java.util.List < String > accessType;
+
     @com.aliyun.core.annotation.NameInMap("ConnectInfo")
     private ConnectInfo connectInfo;
 
@@ -24,23 +27,32 @@ public class ForwardInfoResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
+    @com.aliyun.core.annotation.NameInMap("ExternalPort")
+    private String externalPort;
+
+    @com.aliyun.core.annotation.NameInMap("ForwardPort")
+    private String forwardPort;
+
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
-
-    @com.aliyun.core.annotation.NameInMap("Port")
-    private String port;
 
     @com.aliyun.core.annotation.NameInMap("SSHPublicKey")
     private String SSHPublicKey;
 
     private ForwardInfoResponse(BuilderImpl builder) {
         super(builder);
+        this.accessType = builder.accessType;
         this.connectInfo = builder.connectInfo;
         this.containerName = builder.containerName;
         this.eipAllocationId = builder.eipAllocationId;
         this.enable = builder.enable;
+        this.externalPort = builder.externalPort;
+        this.forwardPort = builder.forwardPort;
+        this.name = builder.name;
         this.natGatewayId = builder.natGatewayId;
-        this.port = builder.port;
         this.SSHPublicKey = builder.SSHPublicKey;
     }
 
@@ -51,6 +63,13 @@ public class ForwardInfoResponse extends Response {
     @Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
+    }
+
+    /**
+     * @return accessType
+     */
+    public java.util.List < String > getAccessType() {
+        return this.accessType;
     }
 
     /**
@@ -82,17 +101,31 @@ public class ForwardInfoResponse extends Response {
     }
 
     /**
+     * @return externalPort
+     */
+    public String getExternalPort() {
+        return this.externalPort;
+    }
+
+    /**
+     * @return forwardPort
+     */
+    public String getForwardPort() {
+        return this.forwardPort;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return natGatewayId
      */
     public String getNatGatewayId() {
         return this.natGatewayId;
-    }
-
-    /**
-     * @return port
-     */
-    public String getPort() {
-        return this.port;
     }
 
     /**
@@ -104,6 +137,8 @@ public class ForwardInfoResponse extends Response {
 
     public interface Builder extends Response.Builder<ForwardInfoResponse, Builder> {
 
+        Builder accessType(java.util.List < String > accessType);
+
         Builder connectInfo(ConnectInfo connectInfo);
 
         Builder containerName(String containerName);
@@ -112,9 +147,13 @@ public class ForwardInfoResponse extends Response {
 
         Builder enable(Boolean enable);
 
-        Builder natGatewayId(String natGatewayId);
+        Builder externalPort(String externalPort);
 
-        Builder port(String port);
+        Builder forwardPort(String forwardPort);
+
+        Builder name(String name);
+
+        Builder natGatewayId(String natGatewayId);
 
         Builder SSHPublicKey(String SSHPublicKey);
 
@@ -126,12 +165,15 @@ public class ForwardInfoResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<ForwardInfoResponse, Builder>
             implements Builder {
+        private java.util.List < String > accessType; 
         private ConnectInfo connectInfo; 
         private String containerName; 
         private String eipAllocationId; 
         private Boolean enable; 
+        private String externalPort; 
+        private String forwardPort; 
+        private String name; 
         private String natGatewayId; 
-        private String port; 
         private String SSHPublicKey; 
 
         private BuilderImpl() {
@@ -140,14 +182,26 @@ public class ForwardInfoResponse extends Response {
 
         private BuilderImpl(ForwardInfoResponse response) {
             super(response);
+            this.accessType = response.accessType;
             this.connectInfo = response.connectInfo;
             this.containerName = response.containerName;
             this.eipAllocationId = response.eipAllocationId;
             this.enable = response.enable;
+            this.externalPort = response.externalPort;
+            this.forwardPort = response.forwardPort;
+            this.name = response.name;
             this.natGatewayId = response.natGatewayId;
-            this.port = response.port;
             this.SSHPublicKey = response.SSHPublicKey;
         } 
+
+        /**
+         * AccessType.
+         */
+        @Override
+        public Builder accessType(java.util.List < String > accessType) {
+            this.accessType = accessType;
+            return this;
+        }
 
         /**
          * ConnectInfo.
@@ -186,20 +240,38 @@ public class ForwardInfoResponse extends Response {
         }
 
         /**
+         * ExternalPort.
+         */
+        @Override
+        public Builder externalPort(String externalPort) {
+            this.externalPort = externalPort;
+            return this;
+        }
+
+        /**
+         * ForwardPort.
+         */
+        @Override
+        public Builder forwardPort(String forwardPort) {
+            this.forwardPort = forwardPort;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        @Override
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
          * NatGatewayId.
          */
         @Override
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
-            return this;
-        }
-
-        /**
-         * Port.
-         */
-        @Override
-        public Builder port(String port) {
-            this.port = port;
             return this;
         }
 
