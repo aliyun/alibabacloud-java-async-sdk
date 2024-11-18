@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableHiveAccessRequest} extends {@link RequestModel}
  *
  * <p>EnableHiveAccessRequest</p>
@@ -67,7 +68,10 @@ public class EnableHiveAccessRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-zpr3426vm002</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -76,7 +80,10 @@ public class EnableHiveAccessRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

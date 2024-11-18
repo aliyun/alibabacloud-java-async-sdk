@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWarehousesRequest} extends {@link RequestModel}
  *
  * <p>ListWarehousesRequest</p>
@@ -53,7 +54,10 @@ public class ListWarehousesRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-x0r382joi001</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

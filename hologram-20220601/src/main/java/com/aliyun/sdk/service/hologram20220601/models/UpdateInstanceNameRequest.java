@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceNameRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceNameRequest</p>
@@ -67,7 +68,10 @@ public class UpdateInstanceNameRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-zpr30pupt004</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -76,7 +80,10 @@ public class UpdateInstanceNameRequest extends Request {
         }
 
         /**
-         * The new name of the instance.
+         * <p>The new name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_name</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instanceName", instanceName);

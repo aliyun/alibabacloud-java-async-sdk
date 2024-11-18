@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartInstanceRequest} extends {@link RequestModel}
  *
  * <p>RestartInstanceRequest</p>
@@ -53,7 +54,10 @@ public class RestartInstanceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2ucpyu005</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
@@ -97,7 +98,10 @@ public class ListInstancesResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +109,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal server error.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +120,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of queried instances.
+         * <p>The list of queried instances.</p>
          */
         public Builder instanceList(java.util.List < InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -129,7 +139,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1303CD4-AA70-5998-8025-F55B22C50840</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -237,26 +259,26 @@ public class ListInstancesResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * Indicates whether the endpoint is enabled.
-             * <p>
+             * <p>Indicates whether the endpoint is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -264,7 +286,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgpostcn-cn-aaab9ad2d8fb-cn-hangzhou-internal.hologres.aliyuncs.com:80</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -272,62 +297,54 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The network type.
-             * <p>
+             * <p>The network type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>VPCSingleTunnel</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   VPCSingleTunnel
+             * <p>virtual private cloud (VPC)</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>Intranet</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>internal network</p>
+             * <!-- -->
+             * </li>
+             * <li><p>VPCAnyTunnel</p>
+             * <!-- -->
              * 
-             *     virtual private cloud (VPC)
+             * <p>: This value is not supported by new instances</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     .
+             * <p>.</p>
+             * </li>
+             * <li><p>Internet</p>
+             * <!-- -->
              * 
-             * *   Intranet
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>Internet</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>.</p>
+             * </li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     internal network
-             * 
-             *     <!-- -->
-             * 
-             * *   VPCAnyTunnel
-             * 
-             *     <!-- -->
-             * 
-             *     : This value is not supported by new instances
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   Internet
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Internet
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -335,7 +352,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-wz9oap28raidjevhuszg4</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -343,7 +363,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6mrahzyu7uorlqqpz5f</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -351,7 +374,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the instance belongs.
+             * <p>The ID of the VPC to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgpostcn-cn-wwo3665tx004-frontend-st</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -365,6 +391,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -404,7 +436,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -412,7 +447,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -426,6 +464,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -645,7 +689,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The commodity code, which is the same as that on the Billing Management page.
+             * <p>The commodity code, which is the same as that on the Billing Management page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hologram_postpay_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -653,7 +700,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-16T02:24:05Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -661,26 +711,26 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether lakehouse acceleration is enabled.
-             * <p>
+             * <p>Indicates whether lakehouse acceleration is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableHiveAccess(String enableHiveAccess) {
                 this.enableHiveAccess = enableHiveAccess;
@@ -688,7 +738,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of endpoints.
+             * <p>The list of endpoints.</p>
              */
             public Builder endpoints(java.util.List < Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -696,7 +746,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster expires.
+             * <p>The time when the cluster expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-04T16:00:00.000Z</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -704,38 +757,35 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance. Valid values:
-             * <p>
+             * <p>The billing method of the instance. Valid values:</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>PostPaid</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   PostPaid
+             * <p>pay-as-you-go</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>PrePaid</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>subscription</p>
+             * <!-- -->
              * 
-             *     pay-as-you-go
+             * <p>.</p>
+             * </li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   PrePaid
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     subscription
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -743,7 +793,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgpostcn-cn-aaab9ad2d8fb</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -751,7 +804,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_instance</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -759,42 +815,40 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance.
-             * <p>
+             * <p>The status of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Creating</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Creating
+             * <!-- -->
+             * </li>
+             * <li><p>Running</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Suspended</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Running
+             * <!-- -->
+             * </li>
+             * <li><p>Allocating</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Suspended
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Allocating
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -802,38 +856,35 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
-             * <p>
+             * <p>The type of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Follower</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   Follower
+             * <p>read-only secondary instance</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>Standard</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>normal instance</p>
+             * <!-- -->
              * 
-             *     read-only secondary instance
+             * <p>.</p>
+             * </li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   Standard
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     normal instance
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -841,7 +892,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary instance.
+             * <p>The ID of the primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgprecn-cn-2r42sqvxm006</p>
              */
             public Builder leaderInstanceId(String leaderInstanceId) {
                 this.leaderInstanceId = leaderInstanceId;
@@ -857,7 +911,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmvscak73zmby</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -865,7 +922,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the suspension.
+             * <p>The reason for the suspension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder suspendReason(String suspendReason) {
                 this.suspendReason = suspendReason;
@@ -873,7 +933,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the resource.
+             * <p>The tags that are added to the resource.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -881,7 +941,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the cluster.
+             * <p>The version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.3.37</p>
              */
             public Builder version(String version) {
                 this.version = version;

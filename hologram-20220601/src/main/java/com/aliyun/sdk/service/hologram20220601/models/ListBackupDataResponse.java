@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RestartHoloWarehouseResponse} extends {@link TeaModel}
+ * {@link ListBackupDataResponse} extends {@link TeaModel}
  *
- * <p>RestartHoloWarehouseResponse</p>
+ * <p>ListBackupDataResponse</p>
  */
-public class RestartHoloWarehouseResponse extends Response {
+public class ListBackupDataResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class RestartHoloWarehouseResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private RestartHoloWarehouseResponseBody body;
+    private ListBackupDataResponseBody body;
 
-    private RestartHoloWarehouseResponse(BuilderImpl builder) {
+    private ListBackupDataResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RestartHoloWarehouseResponse create() {
+    public static ListBackupDataResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class RestartHoloWarehouseResponse extends Response {
     /**
      * @return body
      */
-    public RestartHoloWarehouseResponseBody getBody() {
+    public ListBackupDataResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RestartHoloWarehouseResponse, Builder> {
+    public interface Builder extends Response.Builder<ListBackupDataResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RestartHoloWarehouseResponseBody body);
+        Builder body(ListBackupDataResponseBody body);
 
         @Override
-        RestartHoloWarehouseResponse build();
+        ListBackupDataResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RestartHoloWarehouseResponse, Builder>
+            extends Response.BuilderImpl<ListBackupDataResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private RestartHoloWarehouseResponseBody body; 
+        private ListBackupDataResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RestartHoloWarehouseResponse response) {
+        private BuilderImpl(ListBackupDataResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class RestartHoloWarehouseResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RestartHoloWarehouseResponseBody body) {
+        public Builder body(ListBackupDataResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RestartHoloWarehouseResponse build() {
-            return new RestartHoloWarehouseResponse(this);
+        public ListBackupDataResponse build() {
+            return new ListBackupDataResponse(this);
         } 
 
     } 

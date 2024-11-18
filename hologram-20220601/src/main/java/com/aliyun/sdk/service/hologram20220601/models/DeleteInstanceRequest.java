@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceRequest</p>
@@ -67,7 +68,10 @@ public class DeleteInstanceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-7mz2vmu30003</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -76,7 +80,10 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the Hologres instance resides.
+         * <p>The ID of the region in which the Hologres instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

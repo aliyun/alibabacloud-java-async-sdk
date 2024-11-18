@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancesRequest</p>
@@ -90,7 +91,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvscak73zmby</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -99,7 +103,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The tags to add to the resource.
+         * <p>The tags to add to the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putBodyParameter("tag", tag);
@@ -114,6 +118,12 @@ public class ListInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>ListInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -153,7 +163,10 @@ public class ListInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -161,7 +174,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

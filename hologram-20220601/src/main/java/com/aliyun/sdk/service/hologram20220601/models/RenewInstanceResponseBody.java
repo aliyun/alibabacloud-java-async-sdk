@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RenewInstanceResponseBody</p>
@@ -97,7 +98,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +139,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request result, which indicates whether the request was successful.
+         * <p>The request result, which indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class RenewInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RenewInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenewInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -213,7 +235,10 @@ public class RenewInstanceResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidChargeType.UnRenewable</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -221,7 +246,7 @@ public class RenewInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The error details.
+             * <p>The error details.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -229,7 +254,10 @@ public class RenewInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order.
+             * <p>The ID of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>221625608580893</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -237,11 +265,14 @@ public class RenewInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the renewal was successful.
-             * <p>
+             * <p>Indicates whether the renewal was successful.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

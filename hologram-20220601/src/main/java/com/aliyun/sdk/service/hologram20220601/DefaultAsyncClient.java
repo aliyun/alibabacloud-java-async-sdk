@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHoloWarehouse  CreateHoloWarehouseRequest
+     * @return CreateHoloWarehouseResponse
+     */
     @Override
     public CompletableFuture<CreateHoloWarehouseResponse> createHoloWarehouse(CreateHoloWarehouseRequest request) {
         try {
@@ -68,26 +76,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-      * *   For more information about the billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance).
-      * *   When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:
-      * <!---->
-      *     cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-      *        cn-shanghai: cn-shanghai-e, cn-shanghai-f
-      *        cn-beijing: cn-beijing-i, cn-beijing-g
-      *        cn-zhangjiakou: cn-zhangjiakou-b
-      *        cn-shenzhen: cn-shenzhen-e
-      *        cn-hongkong: cn-hongkong-b
-      *        cn-shanghai-finance-1: cn-shanghai-finance-1z
-      *        ap-northeast-1: ap-northeast-1a
-      *        ap-southeast-1: ap-southeast-1c
-      *        ap-southeast-3: ap-southeast-3b
-      *        ap-southeast-5: ap-southeast-5b
-      *        ap-south-1: ap-south-1b
-      *        eu-central-1: eu-central-1a
-      *        us-east-1: us-east-1a
-      *        us-west-1: us-west-1b
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * </blockquote>
+     * <ul>
+     * <li>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</li>
+     * <li>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
+     * cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
+     *    cn-shanghai: cn-shanghai-e, cn-shanghai-f
+     *    cn-beijing: cn-beijing-i, cn-beijing-g
+     *    cn-zhangjiakou: cn-zhangjiakou-b
+     *    cn-shenzhen: cn-shenzhen-e
+     *    cn-hongkong: cn-hongkong-b
+     *    cn-shanghai-finance-1: cn-shanghai-finance-1z
+     *    ap-northeast-1: ap-northeast-1a
+     *    ap-southeast-1: ap-southeast-1c
+     *    ap-southeast-3: ap-southeast-3b
+     *    ap-southeast-5: ap-southeast-5b
+     *    ap-south-1: ap-south-1b
+     *    eu-central-1: eu-central-1a
+     *    us-east-1: us-east-1a
+     *    us-west-1: us-west-1b</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
      */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
@@ -103,6 +117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHoloWarehouse  DeleteHoloWarehouseRequest
+     * @return DeleteHoloWarehouseResponse
+     */
     @Override
     public CompletableFuture<DeleteHoloWarehouseResponse> deleteHoloWarehouse(DeleteHoloWarehouseRequest request) {
         try {
@@ -118,11 +136,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.
-      * *   After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see [Billing overview](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0).
-      * *   You can delete only pay-as-you-go instances.
-      * *   If you want to unsubscribe from a subscription instance, submit a ticket.[](https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858)
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0">Billing overview</a>.</li>
+     * <li>You can delete only pay-as-you-go instances.</li>
+     * <li>If you want to unsubscribe from a subscription instance, submit a ticket.<a href="https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858"></a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
      */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
@@ -138,6 +163,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableHiveAccess  DisableHiveAccessRequest
+     * @return DisableHiveAccessResponse
+     */
     @Override
     public CompletableFuture<DisableHiveAccessResponse> disableHiveAccess(DisableHiveAccessRequest request) {
         try {
@@ -152,6 +181,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableHiveAccess  EnableHiveAccessRequest
+     * @return EnableHiveAccessResponse
+     */
     @Override
     public CompletableFuture<EnableHiveAccessResponse> enableHiveAccess(EnableHiveAccessRequest request) {
         try {
@@ -166,6 +199,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstance  GetInstanceRequest
+     * @return GetInstanceResponse
+     */
     @Override
     public CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request) {
         try {
@@ -180,6 +217,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWarehouseDetail  GetWarehouseDetailRequest
+     * @return GetWarehouseDetailResponse
+     */
     @Override
     public CompletableFuture<GetWarehouseDetailResponse> getWarehouseDetail(GetWarehouseDetailRequest request) {
         try {
@@ -194,6 +235,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListBackupData  ListBackupDataRequest
+     * @return ListBackupDataResponse
+     */
+    @Override
+    public CompletableFuture<ListBackupDataResponse> listBackupData(ListBackupDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListBackupData").setMethod(HttpMethod.GET).setPathRegex("/api/v1/backups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBackupDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBackupDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
     @Override
     public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
         try {
@@ -208,6 +271,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWarehouses  ListWarehousesRequest
+     * @return ListWarehousesResponse
+     */
     @Override
     public CompletableFuture<ListWarehousesResponse> listWarehouses(ListWarehousesRequest request) {
         try {
@@ -222,6 +289,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RebalanceHoloWarehouse  RebalanceHoloWarehouseRequest
+     * @return RebalanceHoloWarehouseResponse
+     */
     @Override
     public CompletableFuture<RebalanceHoloWarehouseResponse> rebalanceHoloWarehouse(RebalanceHoloWarehouseRequest request) {
         try {
@@ -236,6 +307,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenameHoloWarehouse  RenameHoloWarehouseRequest
+     * @return RenameHoloWarehouseResponse
+     */
     @Override
     public CompletableFuture<RenameHoloWarehouseResponse> renameHoloWarehouse(RenameHoloWarehouseRequest request) {
         try {
@@ -251,11 +326,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-      * *   For more information about billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview).
-      * *   For more information about how to renew a Hologres instance, see [Manage renewals](https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi).
-      * *   You can renew only subscription instances.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * </blockquote>
+     * <ul>
+     * <li>For more information about billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Pricing</a>.</li>
+     * <li>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi">Manage renewals</a>.</li>
+     * <li>You can renew only subscription instances.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RenewInstance  RenewInstanceRequest
+     * @return RenewInstanceResponse
      */
     @Override
     public CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request) {
@@ -271,6 +353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartHoloWarehouse  RestartHoloWarehouseRequest
+     * @return RestartHoloWarehouseResponse
+     */
     @Override
     public CompletableFuture<RestartHoloWarehouseResponse> restartHoloWarehouse(RestartHoloWarehouseRequest request) {
         try {
@@ -285,6 +371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartInstance  RestartInstanceRequest
+     * @return RestartInstanceResponse
+     */
     @Override
     public CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request) {
         try {
@@ -299,6 +389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResumeHoloWarehouse  ResumeHoloWarehouseRequest
+     * @return ResumeHoloWarehouseResponse
+     */
     @Override
     public CompletableFuture<ResumeHoloWarehouseResponse> resumeHoloWarehouse(ResumeHoloWarehouseRequest request) {
         try {
@@ -313,6 +407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResumeInstance  ResumeInstanceRequest
+     * @return ResumeInstanceResponse
+     */
     @Override
     public CompletableFuture<ResumeInstanceResponse> resumeInstance(ResumeInstanceRequest request) {
         try {
@@ -327,6 +425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ScaleHoloWarehouse  ScaleHoloWarehouseRequest
+     * @return ScaleHoloWarehouseResponse
+     */
     @Override
     public CompletableFuture<ScaleHoloWarehouseResponse> scaleHoloWarehouse(ScaleHoloWarehouseRequest request) {
         try {
@@ -342,10 +444,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-      * *   For more information about the billing of Hologres, see [Billing overview](https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview).
-      * *   During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see [Upgrade or downgrade instance specifications](https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications).
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * </blockquote>
+     * <ul>
+     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
+     * <li>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ScaleInstance  ScaleInstanceRequest
+     * @return ScaleInstanceResponse
      */
     @Override
     public CompletableFuture<ScaleInstanceResponse> scaleInstance(ScaleInstanceRequest request) {
@@ -361,6 +470,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopInstance  StopInstanceRequest
+     * @return StopInstanceResponse
+     */
     @Override
     public CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request) {
         try {
@@ -375,6 +488,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SuspendHoloWarehouse  SuspendHoloWarehouseRequest
+     * @return SuspendHoloWarehouseResponse
+     */
     @Override
     public CompletableFuture<SuspendHoloWarehouseResponse> suspendHoloWarehouse(SuspendHoloWarehouseRequest request) {
         try {
@@ -389,6 +506,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateInstanceName  UpdateInstanceNameRequest
+     * @return UpdateInstanceNameResponse
+     */
     @Override
     public CompletableFuture<UpdateInstanceNameResponse> updateInstanceName(UpdateInstanceNameRequest request) {
         try {
@@ -403,6 +524,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateInstanceNetworkType  UpdateInstanceNetworkTypeRequest
+     * @return UpdateInstanceNetworkTypeResponse
+     */
     @Override
     public CompletableFuture<UpdateInstanceNetworkTypeResponse> updateInstanceNetworkType(UpdateInstanceNetworkTypeRequest request) {
         try {

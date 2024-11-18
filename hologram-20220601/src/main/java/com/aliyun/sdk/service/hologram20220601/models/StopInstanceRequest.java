@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstanceRequest} extends {@link RequestModel}
  *
  * <p>StopInstanceRequest</p>
@@ -53,7 +54,10 @@ public class StopInstanceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-lbj33559x001</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

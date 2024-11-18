@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableHiveAccessResponseBody} extends {@link TeaModel}
  *
  * <p>DisableHiveAccessResponseBody</p>
@@ -97,7 +98,26 @@ public class DisableHiveAccessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -105,7 +125,10 @@ public class DisableHiveAccessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +136,10 @@ public class DisableHiveAccessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal server error.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +147,10 @@ public class DisableHiveAccessResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +158,10 @@ public class DisableHiveAccessResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82B7A554-4D00-50DF-95D9-B59E7B4D5489</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +169,26 @@ public class DisableHiveAccessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

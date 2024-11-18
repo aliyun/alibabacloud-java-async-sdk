@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWarehouseDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetWarehouseDetailResponseBody</p>
@@ -49,7 +50,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         private WarehouseDetail warehouseDetail; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The values returned.
+         * <p>The values returned.</p>
          */
         public Builder warehouseDetail(WarehouseDetail warehouseDetail) {
             this.warehouseDetail = warehouseDetail;
@@ -70,6 +74,12 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWarehouseDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWarehouseDetailResponseBody</p>
+     */
     public static class WarehouseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
@@ -193,7 +203,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of CPU cores.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -217,7 +230,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * <p>The ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -225,7 +241,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The memory capacity.
+             * <p>The memory capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder mem(Long mem) {
                 this.mem = mem;
@@ -233,7 +252,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the virtual warehouse instance.
+             * <p>The name of the virtual warehouse instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyWarehouse</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -241,7 +263,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of compute nodes.
+             * <p>The number of compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeCount(Long nodeCount) {
                 this.nodeCount = nodeCount;
@@ -257,50 +282,47 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
-             * <p>
+             * <p>The status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>kRunning</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   kRunning
+             * <!-- -->
+             * </li>
+             * <li><p>kSuspended</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>kInit</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   kSuspended
+             * <!-- -->
+             * </li>
+             * <li><p>kFailed</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>kAllocating</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   kInit
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   kFailed
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   kAllocating
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>kRunning</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -314,6 +336,12 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWarehouseDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWarehouseDetailResponseBody</p>
+     */
     public static class WarehouseDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemainingCpu")
         private String remainingCpu;
@@ -377,7 +405,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             private java.util.List < WarehouseList> warehouseList; 
 
             /**
-             * The remaining unallocated computing resources of the virtual warehouse instance.
+             * <p>The remaining unallocated computing resources of the virtual warehouse instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder remainingCpu(String remainingCpu) {
                 this.remainingCpu = remainingCpu;
@@ -385,7 +416,10 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved computing resources. The amount of computing resources in all running virtual warehouses in an instance cannot exceed the amount of reserved computing resources in the virtual warehouses.
+             * <p>The reserved computing resources. The amount of computing resources in all running virtual warehouses in an instance cannot exceed the amount of reserved computing resources in the virtual warehouses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder reservedCpu(String reservedCpu) {
                 this.reservedCpu = reservedCpu;
@@ -401,7 +435,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of virtual warehouses.
+             * <p>The list of virtual warehouses.</p>
              */
             public Builder warehouseList(java.util.List < WarehouseList> warehouseList) {
                 this.warehouseList = warehouseList;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteInstanceResponseBody</p>
@@ -97,26 +98,26 @@ public class DeleteInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned result, which indicates whether the request was successful.
-         * <p>
+         * <p>The returned result, which indicates whether the request was successful.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -124,7 +125,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -132,7 +136,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -140,7 +147,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status Code
+         * <p>The HTTP status Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -148,7 +158,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB13FFDD-2DF8-5396-A848-2D6A31245B6D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,7 +169,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

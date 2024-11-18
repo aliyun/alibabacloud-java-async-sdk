@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenameHoloWarehouseRequest} extends {@link RequestModel}
  *
  * <p>RenameHoloWarehouseRequest</p>
@@ -84,7 +85,11 @@ public class RenameHoloWarehouseRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2v08uu00a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class RenameHoloWarehouseRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The original name of the virtual warehouse.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_warehouse</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -102,7 +111,11 @@ public class RenameHoloWarehouseRequest extends Request {
         }
 
         /**
-         * newWarehouseName.
+         * <p>The new name of the virtual warehouse.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_name</p>
          */
         public Builder newWarehouseName(String newWarehouseName) {
             this.putBodyParameter("newWarehouseName", newWarehouseName);

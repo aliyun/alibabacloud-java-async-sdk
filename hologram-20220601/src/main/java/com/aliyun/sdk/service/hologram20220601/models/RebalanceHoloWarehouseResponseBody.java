@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebalanceHoloWarehouseResponseBody} extends {@link TeaModel}
  *
  * <p>RebalanceHoloWarehouseResponseBody</p>
@@ -49,7 +50,10 @@ public class RebalanceHoloWarehouseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class RebalanceHoloWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0EA5844-AB00-5653-8711-CD9FD1798412</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

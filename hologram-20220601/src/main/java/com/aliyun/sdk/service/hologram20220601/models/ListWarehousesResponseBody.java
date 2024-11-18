@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWarehousesResponseBody} extends {@link TeaModel}
  *
  * <p>ListWarehousesResponseBody</p>
@@ -49,7 +50,7 @@ public class ListWarehousesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of virtual warehouse instances.
+         * <p>The list of virtual warehouse instances.</p>
          */
         public Builder warehouseList(java.util.List < WarehouseList> warehouseList) {
             this.warehouseList = warehouseList;
@@ -57,7 +58,10 @@ public class ListWarehousesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListWarehousesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWarehousesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarehousesResponseBody</p>
+     */
     public static class WarehouseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
@@ -157,7 +167,10 @@ public class ListWarehousesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of CPU cores.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -165,7 +178,10 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * <p>The ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -173,7 +189,10 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory capacity.
+             * <p>The memory capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder mem(Long mem) {
                 this.mem = mem;
@@ -181,7 +200,10 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the virtual warehouse instance.
+             * <p>The name of the virtual warehouse instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyWarehouse</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -189,7 +211,10 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of compute nodes.
+             * <p>The number of compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeCount(Long nodeCount) {
                 this.nodeCount = nodeCount;
@@ -197,50 +222,47 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
-             * <p>
+             * <p>The status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>kRunning</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   kRunning
+             * <!-- -->
+             * </li>
+             * <li><p>kSuspended</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>kInit</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   kSuspended
+             * <!-- -->
+             * </li>
+             * <li><p>kFailed</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>kAllocating</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   kInit
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   kFailed
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   kAllocating
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>kRunning</p>
              */
             public Builder status(String status) {
                 this.status = status;

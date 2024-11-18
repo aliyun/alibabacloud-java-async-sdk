@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHoloWarehouseRequest} extends {@link RequestModel}
  *
  * <p>DeleteHoloWarehouseRequest</p>
@@ -69,7 +70,11 @@ public class DeleteHoloWarehouseRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2v08uu00a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +83,11 @@ public class DeleteHoloWarehouseRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the virtual warehouse.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_warehouse</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

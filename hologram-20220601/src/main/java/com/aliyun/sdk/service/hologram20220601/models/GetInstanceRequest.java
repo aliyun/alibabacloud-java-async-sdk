@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceRequest</p>
@@ -53,7 +54,10 @@ public class GetInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. This parameter is required.
+         * <p>The ID of the instance. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2v08uu00a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

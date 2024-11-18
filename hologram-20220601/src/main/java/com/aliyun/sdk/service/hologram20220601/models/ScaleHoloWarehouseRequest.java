@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleHoloWarehouseRequest} extends {@link RequestModel}
  *
  * <p>ScaleHoloWarehouseRequest</p>
@@ -84,7 +85,11 @@ public class ScaleHoloWarehouseRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2v08uu00a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class ScaleHoloWarehouseRequest extends Request {
         }
 
         /**
-         * cpu.
+         * <p>The specifications of the virtual warehouse. The number of vCPUs must be an integer multiple of 16.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder cpu(Long cpu) {
             this.putBodyParameter("cpu", cpu);
@@ -102,7 +111,11 @@ public class ScaleHoloWarehouseRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the virtual warehouse.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_warehouse</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

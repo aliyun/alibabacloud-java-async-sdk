@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleHoloWarehouseResponseBody} extends {@link TeaModel}
  *
  * <p>ScaleHoloWarehouseResponseBody</p>
@@ -49,7 +50,10 @@ public class ScaleHoloWarehouseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class ScaleHoloWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
