@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisassociateResourceShareRequest} extends {@link RequestModel}
  *
  * <p>DisassociateResourceShareRequest</p>
  */
 public class DisassociateResourceShareRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwner")
     private String resourceOwner;
 
-    @Query
-    @NameInMap("ResourceShareId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceShareId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceShareId;
 
-    @Query
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < Resources> resources;
 
-    @Query
-    @NameInMap("Targets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Targets")
     private java.util.List < String > targets;
 
     private DisassociateResourceShareRequest(Builder builder) {
@@ -111,7 +111,7 @@ public class DisassociateResourceShareRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -120,11 +120,14 @@ public class DisassociateResourceShareRequest extends Request {
         }
 
         /**
-         * The owner of the resource share. Valid values:
-         * <p>
+         * <p>The owner of the resource share. Valid values:</p>
+         * <ul>
+         * <li>Self: The resource share belongs to the current account. This is the default value. For resource sharing within a resource directory, if you are a resource owner and you want to disassociate resources or principals from a resource share, set this parameter to Self.</li>
+         * <li>OtherAccounts: The resource share belongs to another account. For resource sharing outside a resource directory, if you are a principal and you want to exit a resource share, set this parameter to OtherAccounts.</li>
+         * </ul>
          * 
-         * *   Self: The resource share belongs to the current account. This is the default value. If you are the management account or a member of a resource directory and you want to remove resources or principals from a resource share, set this parameter to Self.
-         * *   OtherAccounts: The resource share belongs to another account. If you are not the management account or a member of a resource directory and you want to exit a resource share, set this parameter to OtherAccounts.
+         * <strong>example:</strong>
+         * <p>Self</p>
          */
         public Builder resourceOwner(String resourceOwner) {
             this.putQueryParameter("ResourceOwner", resourceOwner);
@@ -133,7 +136,11 @@ public class DisassociateResourceShareRequest extends Request {
         }
 
         /**
-         * The ID of the resource share.
+         * <p>The ID of the resource share.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-6GRmdD3X****</p>
          */
         public Builder resourceShareId(String resourceShareId) {
             this.putQueryParameter("ResourceShareId", resourceShareId);
@@ -142,7 +149,7 @@ public class DisassociateResourceShareRequest extends Request {
         }
 
         /**
-         * The shared resource.
+         * <p>The information about the resources.</p>
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.putQueryParameter("Resources", resources);
@@ -151,7 +158,10 @@ public class DisassociateResourceShareRequest extends Request {
         }
 
         /**
-         * The ID of a principal.
+         * <p>The information about the principals.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172050525300****</p>
          */
         public Builder targets(java.util.List < String > targets) {
             this.putQueryParameter("Targets", targets);
@@ -166,11 +176,17 @@ public class DisassociateResourceShareRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DisassociateResourceShareRequest} extends {@link TeaModel}
+     *
+     * <p>DisassociateResourceShareRequest</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private Resources(Builder builder) {
@@ -205,12 +221,14 @@ public class DisassociateResourceShareRequest extends Request {
             private String resourceType; 
 
             /**
-             * The ID of a shared resource.
-             * <p>
+             * <p>The ID of the shared resource.</p>
+             * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
+             * <blockquote>
+             * <p> Resources.N.ResourceId and Resources.N.ResourceType must be used in pairs.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.
-             * 
-             * >  Resources.N.ResourceId and Resources.N.ResourceType must be used in pairs.
+             * <strong>example:</strong>
+             * <p>vsw-bp183p93qs667muql****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -218,14 +236,15 @@ public class DisassociateResourceShareRequest extends Request {
             }
 
             /**
-             * The type of a shared resource.
-             * <p>
+             * <p>The type of a shared resource.</p>
+             * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
+             * <p>For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</p>
+             * <blockquote>
+             * <p> Resources.N.ResourceId and Resources.N.ResourceType must be used in pairs.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.
-             * 
-             * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
-             * 
-             * >  Resources.N.ResourceId and Resources.N.ResourceType must be used in pairs.
+             * <strong>example:</strong>
+             * <p>VSwitch</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

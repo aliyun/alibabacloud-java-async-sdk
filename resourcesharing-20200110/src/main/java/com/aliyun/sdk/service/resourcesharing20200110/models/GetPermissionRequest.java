@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionRequest} extends {@link RequestModel}
  *
  * <p>GetPermissionRequest</p>
  */
 public class GetPermissionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("PermissionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String permissionName;
 
-    @Query
-    @NameInMap("PermissionVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionVersion")
     private String permissionVersion;
 
     private GetPermissionRequest(Builder builder) {
@@ -83,7 +83,7 @@ public class GetPermissionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +92,11 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * The name of the permission.
+         * <p>The name of the permission.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunRSDefaultPermissionVSwitch</p>
          */
         public Builder permissionName(String permissionName) {
             this.putQueryParameter("PermissionName", permissionName);
@@ -101,7 +105,10 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * The version of the permission.
+         * <p>The version of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder permissionVersion(String permissionVersion) {
             this.putQueryParameter("PermissionVersion", permissionVersion);

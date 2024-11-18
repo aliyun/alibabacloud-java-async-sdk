@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteResourceShareRequest} extends {@link RequestModel}
  *
  * <p>DeleteResourceShareRequest</p>
  */
 public class DeleteResourceShareRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceShareId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceShareId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceShareId;
 
     private DeleteResourceShareRequest(Builder builder) {
@@ -69,7 +69,7 @@ public class DeleteResourceShareRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -78,7 +78,11 @@ public class DeleteResourceShareRequest extends Request {
         }
 
         /**
-         * The ID of the resource share.
+         * <p>The ID of the resource share.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-qSkW1HBY****</p>
          */
         public Builder resourceShareId(String resourceShareId) {
             this.putQueryParameter("ResourceShareId", resourceShareId);

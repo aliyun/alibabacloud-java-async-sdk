@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionResponse} extends {@link TeaModel}
  *
  * <p>GetPermissionResponse</p>
  */
 public class GetPermissionResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private GetPermissionResponseBody body;
 
     private GetPermissionResponse(BuilderImpl builder) {

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSharedTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSharedTargetsResponseBody</p>
  */
 public class ListSharedTargetsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SharedTargets")
+    @com.aliyun.core.annotation.NameInMap("SharedTargets")
     private java.util.List < SharedTargets> sharedTargets;
 
     private ListSharedTargetsResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         private java.util.List < SharedTargets> sharedTargets; 
 
         /**
-         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,10 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04677DCA-7C33-464B-8811-1B1DA3C3D197</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the principals.
+         * <p>The information of the principals.</p>
          */
         public Builder sharedTargets(java.util.List < SharedTargets> sharedTargets) {
             this.sharedTargets = sharedTargets;
@@ -91,23 +97,29 @@ public class ListSharedTargetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSharedTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSharedTargetsResponseBody</p>
+     */
     public static class SharedTargets extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("External")
+        @com.aliyun.core.annotation.NameInMap("External")
         private Boolean external;
 
-        @NameInMap("ResourceShareId")
+        @com.aliyun.core.annotation.NameInMap("ResourceShareId")
         private String resourceShareId;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetProperty")
+        @com.aliyun.core.annotation.NameInMap("TargetProperty")
         private String targetProperty;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private SharedTargets(Builder builder) {
@@ -178,7 +190,10 @@ public class ListSharedTargetsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the principal was associated with the resource share.
+             * <p>The time when the principal was associated with the resource share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-07T09:16:59.905Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -186,11 +201,14 @@ public class ListSharedTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the principal is outside the resource directory. Valid values:
-             * <p>
+             * <p>Indicates whether the principal is outside the resource directory. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true: The principal is outside the resource directory.
-             * *   false: The principal is in the resource directory.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder external(Boolean external) {
                 this.external = external;
@@ -198,7 +216,10 @@ public class ListSharedTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource share.
+             * <p>The ID of the resource share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rs-6GRmdD3X****</p>
              */
             public Builder resourceShareId(String resourceShareId) {
                 this.resourceShareId = resourceShareId;
@@ -206,11 +227,14 @@ public class ListSharedTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the principal or resource owner.
-             * <p>
+             * <p>The ID of the principal or resource owner.</p>
+             * <ul>
+             * <li>If the value of <code>ResourceOwner</code> is <code>Self</code>, the value of this parameter is the ID of a principal.</li>
+             * <li>If the value of <code>ResourceOwner</code> is <code>OtherAccounts</code>, the value of this parameter is the ID of a resource owner.</li>
+             * </ul>
              * 
-             * *   If the value of `ResourceOwner` is `Self`, the value of this parameter is the ID of a principal.
-             * *   If the value of `ResourceOwner` is `OtherAccounts`, the value of this parameter is the ID of a resource owner.
+             * <strong>example:</strong>
+             * <p>114240524784****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -218,7 +242,20 @@ public class ListSharedTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetProperty.
+             * <p>The properties of the principal, such as the time range within which the resource is shared.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the principal is an Alibaba Cloud service.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;timeRange&quot;:{
+             *         &quot;timeRangeType&quot;:&quot;timeRange&quot;,
+             *         &quot;beginAtTime&quot;:&quot;00:00&quot;,
+             *         &quot;timezone&quot;:&quot;UTC+8&quot;,
+             *         &quot;endAtTime&quot;:&quot;19:59&quot;
+             *     }
+             * }</p>
              */
             public Builder targetProperty(String targetProperty) {
                 this.targetProperty = targetProperty;
@@ -226,7 +263,10 @@ public class ListSharedTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the association of the principal was updated.
+             * <p>The time when the association of the principal was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-07T09:16:59.905Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

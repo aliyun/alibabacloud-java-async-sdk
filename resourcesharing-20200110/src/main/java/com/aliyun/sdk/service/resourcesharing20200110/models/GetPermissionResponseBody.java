@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionResponseBody} extends {@link TeaModel}
  *
  * <p>GetPermissionResponseBody</p>
  */
 public class GetPermissionResponseBody extends TeaModel {
-    @NameInMap("Permission")
+    @com.aliyun.core.annotation.NameInMap("Permission")
     private Permission permission;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPermissionResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetPermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the permission.
+         * <p>The information about the permission.</p>
          */
         public Builder permission(Permission permission) {
             this.permission = permission;
@@ -58,7 +58,10 @@ public class GetPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F23CFB6-A721-4E90-AC1E-0E30FA8B45DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +74,35 @@ public class GetPermissionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPermissionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermissionResponseBody</p>
+     */
     public static class Permission extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DefaultPermission")
+        @com.aliyun.core.annotation.NameInMap("DefaultPermission")
         private Boolean defaultPermission;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private Boolean defaultVersion;
 
-        @NameInMap("Permission")
+        @com.aliyun.core.annotation.NameInMap("Permission")
         private String permission;
 
-        @NameInMap("PermissionName")
+        @com.aliyun.core.annotation.NameInMap("PermissionName")
         private String permissionName;
 
-        @NameInMap("PermissionVersion")
+        @com.aliyun.core.annotation.NameInMap("PermissionVersion")
         private String permissionVersion;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Permission(Builder builder) {
@@ -182,7 +191,10 @@ public class GetPermissionResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-07T07:39:01.818Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -190,11 +202,14 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the permission is the default permission. Valid values:
-             * <p>
+             * <p>Indicates whether the permission is the default permission. Valid values:</p>
+             * <ul>
+             * <li>false: The permission is not the default permission.</li>
+             * <li>true: The permission is the default permission.</li>
+             * </ul>
              * 
-             * *   false: The permission is not the default permission.
-             * *   true: The permission is the default permission.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultPermission(Boolean defaultPermission) {
                 this.defaultPermission = defaultPermission;
@@ -202,11 +217,14 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the version is the default version. Valid values:
-             * <p>
+             * <p>Indicates whether the version is the default version. Valid values:</p>
+             * <ul>
+             * <li>false: The version is not the default version.</li>
+             * <li>true: The version is the default version.</li>
+             * </ul>
              * 
-             * *   false: The version is not the default version.
-             * *   true: The version is the default version.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultVersion(Boolean defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -214,7 +232,10 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The document of the policy related to the permission.
+             * <p>The document of the policy related to the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Effect&quot;:&quot;Allow&quot;,&quot;Action&quot;:[&quot;vpc:DescribeVSwitches&quot;,&quot;vpc:DescribeVSwitchAttributes&quot;]}</p>
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -222,7 +243,10 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission.
+             * <p>The name of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunRSDefaultPermissionVSwitch</p>
              */
             public Builder permissionName(String permissionName) {
                 this.permissionName = permissionName;
@@ -230,7 +254,10 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the permission.
+             * <p>The version of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder permissionVersion(String permissionVersion) {
                 this.permissionVersion = permissionVersion;
@@ -238,10 +265,11 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the shared resources.
-             * <p>
+             * <p>The type of the shared resources.</p>
+             * <p>For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</p>
              * 
-             * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
+             * <strong>example:</strong>
+             * <p>VSwitch</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -249,7 +277,10 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-07T07:39:01.818Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceSharePermissionsRequest} extends {@link RequestModel}
  *
  * <p>ListResourceSharePermissionsRequest</p>
  */
 public class ListResourceSharePermissionsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceOwner")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwner")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceOwner;
 
-    @Query
-    @NameInMap("ResourceShareId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceShareId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceShareId;
 
     private ListResourceSharePermissionsRequest(Builder builder) {
@@ -112,7 +112,7 @@ public class ListResourceSharePermissionsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,10 +121,11 @@ public class ListResourceSharePermissionsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request.
-         * <p>
+         * <p>The maximum number of entries to return for a single request.</p>
+         * <p>Valid values: 1 to 100. Default value: 20.</p>
          * 
-         * Valid values: 1 to 100. Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +134,10 @@ public class ListResourceSharePermissionsRequest extends Request {
         }
 
         /**
-         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+         * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -142,11 +146,15 @@ public class ListResourceSharePermissionsRequest extends Request {
         }
 
         /**
-         * The owner of the resource share. Valid values:
-         * <p>
+         * <p>The owner of the resource share. Valid values:</p>
+         * <ul>
+         * <li>Self: the current account</li>
+         * <li>OtherAccounts: an account other than the current account</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Self: the current account
-         * *   OtherAccounts: an account other than the current account
+         * <strong>example:</strong>
+         * <p>Self</p>
          */
         public Builder resourceOwner(String resourceOwner) {
             this.putQueryParameter("ResourceOwner", resourceOwner);
@@ -155,7 +163,11 @@ public class ListResourceSharePermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the resource share.
+         * <p>The ID of the resource share.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-6GRmdD3X****</p>
          */
         public Builder resourceShareId(String resourceShareId) {
             this.putQueryParameter("ResourceShareId", resourceShareId);

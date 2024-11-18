@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPermissionsRequest} extends {@link RequestModel}
  *
  * <p>ListPermissionsRequest</p>
  */
 public class ListPermissionsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private ListPermissionsRequest(Builder builder) {
@@ -96,7 +96,7 @@ public class ListPermissionsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,10 +105,11 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request.
-         * <p>
+         * <p>The maximum number of entries to return for a single request.</p>
+         * <p>Valid values: 1 to 100. Default value: 20.</p>
          * 
-         * Valid values: 1 to 100. Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -117,7 +118,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+         * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -126,10 +130,11 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * The type of the shared resources.
-         * <p>
+         * <p>The type of the shared resources.</p>
+         * <p>For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</p>
          * 
-         * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
+         * <strong>example:</strong>
+         * <p>VSwitch</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

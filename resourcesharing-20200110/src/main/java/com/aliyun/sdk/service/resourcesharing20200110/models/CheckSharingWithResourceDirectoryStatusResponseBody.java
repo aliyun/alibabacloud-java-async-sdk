@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSharingWithResourceDirectoryStatusResponseBody} extends {@link TeaModel}
  *
  * <p>CheckSharingWithResourceDirectoryStatusResponseBody</p>
  */
 public class CheckSharingWithResourceDirectoryStatusResponseBody extends TeaModel {
-    @NameInMap("EnableSharingWithRd")
+    @com.aliyun.core.annotation.NameInMap("EnableSharingWithRd")
     private Boolean enableSharingWithRd;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckSharingWithResourceDirectoryStatusResponseBody(Builder builder) {
@@ -50,11 +50,14 @@ public class CheckSharingWithResourceDirectoryStatusResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * Indicates whether resource sharing within a resource directory is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether resource sharing within a resource directory is enabled. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
          * 
-         * *   false
-         * *   true
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSharingWithRd(Boolean enableSharingWithRd) {
             this.enableSharingWithRd = enableSharingWithRd;
@@ -62,7 +65,10 @@ public class CheckSharingWithResourceDirectoryStatusResponseBody extends TeaMode
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819545D0-C97A-5DB3-BD73-A1B17E9A4BC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

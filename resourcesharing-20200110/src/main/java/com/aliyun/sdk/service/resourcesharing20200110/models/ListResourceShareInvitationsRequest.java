@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceShareInvitationsRequest} extends {@link RequestModel}
  *
  * <p>ListResourceShareInvitationsRequest</p>
  */
 public class ListResourceShareInvitationsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceShareIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceShareIds")
     private java.util.List < String > resourceShareIds;
 
-    @Query
-    @NameInMap("ResourceShareInvitationIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceShareInvitationIds")
     private java.util.List < String > resourceShareInvitationIds;
 
     private ListResourceShareInvitationsRequest(Builder builder) {
@@ -110,7 +110,7 @@ public class ListResourceShareInvitationsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -119,10 +119,11 @@ public class ListResourceShareInvitationsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request.
-         * <p>
+         * <p>The maximum number of entries to return for a single request.</p>
+         * <p>Valid values: 1 to 100. Default value: 20.</p>
          * 
-         * Valid values: 1 to 100. Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -131,7 +132,10 @@ public class ListResourceShareInvitationsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -140,7 +144,7 @@ public class ListResourceShareInvitationsRequest extends Request {
         }
 
         /**
-         * The IDs of the resource shares.
+         * <p>The IDs of the resource shares.</p>
          */
         public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);
@@ -149,7 +153,7 @@ public class ListResourceShareInvitationsRequest extends Request {
         }
 
         /**
-         * The IDs of the resource sharing invitations.
+         * <p>The IDs of the resource sharing invitations.</p>
          */
         public Builder resourceShareInvitationIds(java.util.List < String > resourceShareInvitationIds) {
             this.putQueryParameter("ResourceShareInvitationIds", resourceShareInvitationIds);

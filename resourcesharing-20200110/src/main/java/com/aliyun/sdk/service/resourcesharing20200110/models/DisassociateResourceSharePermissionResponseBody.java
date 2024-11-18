@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisassociateResourceSharePermissionResponseBody} extends {@link TeaModel}
  *
  * <p>DisassociateResourceSharePermissionResponseBody</p>
  */
 public class DisassociateResourceSharePermissionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DisassociateResourceSharePermissionResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DisassociateResourceSharePermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111FB84A-60A9-403E-9067-E55D7EE95BD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

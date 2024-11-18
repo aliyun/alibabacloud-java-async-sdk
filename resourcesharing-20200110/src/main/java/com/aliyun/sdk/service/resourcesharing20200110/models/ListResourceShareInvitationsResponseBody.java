@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceShareInvitationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceShareInvitationsResponseBody</p>
  */
 public class ListResourceShareInvitationsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceShareInvitations")
+    @com.aliyun.core.annotation.NameInMap("ResourceShareInvitations")
     private java.util.List < ResourceShareInvitations> resourceShareInvitations;
 
     private ListResourceShareInvitationsResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         private java.util.List < ResourceShareInvitations> resourceShareInvitations; 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30EC8328-1BDE-51D5-BFAB-039508BD91A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resource sharing invitations.
+         * <p>The information about the resource sharing invitations.</p>
          */
         public Builder resourceShareInvitations(java.util.List < ResourceShareInvitations> resourceShareInvitations) {
             this.resourceShareInvitations = resourceShareInvitations;
@@ -91,29 +97,35 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceShareInvitationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceShareInvitationsResponseBody</p>
+     */
     public static class InvitationFailedDetails extends TeaModel {
-        @NameInMap("AssociateType")
+        @com.aliyun.core.annotation.NameInMap("AssociateType")
         private String associateType;
 
-        @NameInMap("FailureDescription")
+        @com.aliyun.core.annotation.NameInMap("FailureDescription")
         private String failureDescription;
 
-        @NameInMap("FailureReason")
+        @com.aliyun.core.annotation.NameInMap("FailureReason")
         private String failureReason;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
         private InvitationFailedDetails(Builder builder) {
@@ -202,11 +214,14 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * The type of the sharing operation. Valid values:
-             * <p>
+             * <p>The type of the sharing operation. Valid values:</p>
+             * <ul>
+             * <li>Associate</li>
+             * <li>Disassociate</li>
+             * </ul>
              * 
-             * *   Associate
-             * *   Disassociate
+             * <strong>example:</strong>
+             * <p>Associate</p>
              */
             public Builder associateType(String associateType) {
                 this.associateType = associateType;
@@ -238,7 +253,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the shared resource.
+             * <p>The ID of the shared resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-7xvh46nx5oqlre0wv***</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -246,10 +264,11 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the shared resource.
-             * <p>
+             * <p>The type of the shared resource.</p>
+             * <p>For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</p>
              * 
-             * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
+             * <strong>example:</strong>
+             * <p>Snapshot</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -257,14 +276,17 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The failure status. Valid values:
-             * <p>
+             * <p>The failure status. Valid values:</p>
+             * <ul>
+             * <li>Unavailable: The resource cannot be shared.</li>
+             * <li>LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</li>
+             * <li>ZonalResourceInaccessible: The resource is unavailable in this region.</li>
+             * <li>UnsupportedOperation: The operation is not allowed because another association exists.</li>
+             * <li>InternalError: An internal error occurred during the check.</li>
+             * </ul>
              * 
-             * *   Unavailable: The resource cannot be shared.
-             * *   LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.
-             * *   ZonalResourceInaccessible: The resource is unavailable in this region.
-             * *   UnsupportedOperation: The operation is not allowed because another association exists.
-             * *   InternalError: An internal error occurred during the check.
+             * <strong>example:</strong>
+             * <p>Unavailable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -272,7 +294,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The failure cause.
+             * <p>The failure cause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You cannot access the specified resource at this time.</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -286,29 +311,35 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceShareInvitationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceShareInvitationsResponseBody</p>
+     */
     public static class ResourceShareInvitations extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("InvitationFailedDetails")
+        @com.aliyun.core.annotation.NameInMap("InvitationFailedDetails")
         private java.util.List < InvitationFailedDetails> invitationFailedDetails;
 
-        @NameInMap("ReceiverAccountId")
+        @com.aliyun.core.annotation.NameInMap("ReceiverAccountId")
         private String receiverAccountId;
 
-        @NameInMap("ResourceShareId")
+        @com.aliyun.core.annotation.NameInMap("ResourceShareId")
         private String resourceShareId;
 
-        @NameInMap("ResourceShareInvitationId")
+        @com.aliyun.core.annotation.NameInMap("ResourceShareInvitationId")
         private String resourceShareInvitationId;
 
-        @NameInMap("ResourceShareName")
+        @com.aliyun.core.annotation.NameInMap("ResourceShareName")
         private String resourceShareName;
 
-        @NameInMap("SenderAccountId")
+        @com.aliyun.core.annotation.NameInMap("SenderAccountId")
         private String senderAccountId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceShareInvitations(Builder builder) {
@@ -397,7 +428,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the invitation was created. The time is displayed in UTC.
+             * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-18T05:36:45.024Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -405,7 +439,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the failure.
+             * <p>The information about the failure.</p>
              */
             public Builder invitationFailedDetails(java.util.List < InvitationFailedDetails> invitationFailedDetails) {
                 this.invitationFailedDetails = invitationFailedDetails;
@@ -413,7 +447,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID of the invitee.
+             * <p>The Alibaba Cloud account ID of the invitee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>134254031178****</p>
              */
             public Builder receiverAccountId(String receiverAccountId) {
                 this.receiverAccountId = receiverAccountId;
@@ -421,7 +458,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource share.
+             * <p>The ID of the resource share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rs-ysGRci9z****</p>
              */
             public Builder resourceShareId(String resourceShareId) {
                 this.resourceShareId = resourceShareId;
@@ -429,7 +469,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the invitation.
+             * <p>The ID of the invitation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-p6eRytrkjVvM****</p>
              */
             public Builder resourceShareInvitationId(String resourceShareInvitationId) {
                 this.resourceShareInvitationId = resourceShareInvitationId;
@@ -437,7 +480,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource share.
+             * <p>The name of the resource share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder resourceShareName(String resourceShareName) {
                 this.resourceShareName = resourceShareName;
@@ -445,7 +491,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID of the inviter.
+             * <p>The Alibaba Cloud account ID of the inviter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151266687691****</p>
              */
             public Builder senderAccountId(String senderAccountId) {
                 this.senderAccountId = senderAccountId;
@@ -453,15 +502,18 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the invitation. Valid values:
-             * <p>
+             * <p>The status of the invitation. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>Accepted</li>
+             * <li>Cancelled</li>
+             * <li>Rejected</li>
+             * <li>Expired</li>
+             * <li>AcceptFailed</li>
+             * </ul>
              * 
-             * *   Pending
-             * *   Accepted
-             * *   Cancelled
-             * *   Rejected
-             * *   Expired
-             * *   AcceptFailed
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
