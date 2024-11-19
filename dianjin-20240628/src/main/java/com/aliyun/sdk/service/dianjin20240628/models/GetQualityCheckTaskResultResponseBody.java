@@ -819,6 +819,9 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
      * <p>GetQualityCheckTaskResultResponseBody</p>
      */
     public static class QualityCheckList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bizType")
+        private String bizType;
+
         @com.aliyun.core.annotation.NameInMap("checkExplanation")
         private String checkExplanation;
 
@@ -852,7 +855,11 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ruleId")
         private String ruleId;
 
+        @com.aliyun.core.annotation.NameInMap("ruleType")
+        private String ruleType;
+
         private QualityCheckList(Builder builder) {
+            this.bizType = builder.bizType;
             this.checkExplanation = builder.checkExplanation;
             this.checkPassed = builder.checkPassed;
             this.checkProcess = builder.checkProcess;
@@ -864,6 +871,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             this.qualityGroupId = builder.qualityGroupId;
             this.ruleDescription = builder.ruleDescription;
             this.ruleId = builder.ruleId;
+            this.ruleType = builder.ruleType;
         }
 
         public static Builder builder() {
@@ -872,6 +880,13 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
 
         public static QualityCheckList create() {
             return builder().build();
+        }
+
+        /**
+         * @return bizType
+         */
+        public String getBizType() {
+            return this.bizType;
         }
 
         /**
@@ -951,7 +966,15 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             return this.ruleId;
         }
 
+        /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
         public static final class Builder {
+            private String bizType; 
             private String checkExplanation; 
             private String checkPassed; 
             private String checkProcess; 
@@ -963,6 +986,15 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             private String qualityGroupId; 
             private String ruleDescription; 
             private String ruleId; 
+            private String ruleType; 
+
+            /**
+             * bizType.
+             */
+            public Builder bizType(String bizType) {
+                this.bizType = bizType;
+                return this;
+            }
 
             /**
              * checkExplanation.
@@ -1049,6 +1081,14 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
+             * ruleType.
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
                 return this;
             }
 
