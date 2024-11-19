@@ -386,12 +386,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHttpDDoSAttackProtectionResponse> describeHttpDDoSAttackProtection(DescribeHttpDDoSAttackProtectionRequest request);
 
     /**
-     * @param request the request parameters of DescribeIPRangeList  DescribeIPRangeListRequest
-     * @return DescribeIPRangeListResponse
-     */
-    CompletableFuture<DescribeIPRangeListResponse> describeIPRangeList(DescribeIPRangeListRequest request);
-
-    /**
      * @param request the request parameters of DescribeKvAccountStatus  DescribeKvAccountStatusRequest
      * @return DescribeKvAccountStatusResponse
      */

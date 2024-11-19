@@ -26,7 +26,7 @@ public class ListRecordsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Proxied")
-    private String proxied;
+    private Boolean proxied;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordMatchType")
@@ -99,7 +99,7 @@ public class ListRecordsRequest extends Request {
     /**
      * @return proxied
      */
-    public String getProxied() {
+    public Boolean getProxied() {
         return this.proxied;
     }
 
@@ -142,7 +142,7 @@ public class ListRecordsRequest extends Request {
         private String bizName; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String proxied; 
+        private Boolean proxied; 
         private String recordMatchType; 
         private String recordName; 
         private Long siteId; 
@@ -196,7 +196,7 @@ public class ListRecordsRequest extends Request {
         /**
          * Proxied.
          */
-        public Builder proxied(String proxied) {
+        public Builder proxied(Boolean proxied) {
             this.putQueryParameter("Proxied", proxied);
             this.proxied = proxied;
             return this;

@@ -50,7 +50,10 @@ public class CreateEdgeContainerAppVersionResponseBody extends TeaModel {
         private String versionId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class CreateEdgeContainerAppVersionResponseBody extends TeaModel {
         }
 
         /**
-         * VersionId.
+         * <p>The ID of the created version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ver-87962637161651****</p>
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

@@ -83,7 +83,10 @@ public class ListClientCertificatesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -92,7 +95,10 @@ public class ListClientCertificatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -101,6 +107,7 @@ public class ListClientCertificatesRequest extends Request {
         }
 
         /**
+         * <p>The website ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
