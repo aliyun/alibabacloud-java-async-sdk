@@ -62,7 +62,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         private java.util.List < ResourceShareAssociations> resourceShareAssociations; 
 
         /**
-         * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+         * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cm****</p>
@@ -73,7 +73,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11BA57B5-7301-4E2F-BBA5-2AE4C2F4FCDB</p>
@@ -214,7 +214,10 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * AssociateType.
+             * <p>This parameter is deprecated. The OperationType parameter is used instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder associateType(String associateType) {
                 this.associateType = associateType;
@@ -222,7 +225,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * <p>The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
+             * <ul>
+             * <li>If the value of AssociationType is Resource, the value of this parameter is the ID of the principal.</li>
+             * <li>If the value of AssociationType is Target, the value of this parameter is the ID of the resource.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>172050525300****</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -230,7 +240,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>The type of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
+             * <ul>
+             * <li>If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For information about the types of resources that can be shared, see Services that work with Resource Sharing.</li>
+             * <li>If the value of AssociationType is Target, the value of this parameter is <code>ResourceDirectory</code>, <code>Folder</code>, <code>Account</code>, or <code>Service</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Account</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -238,7 +255,10 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * FailureDescription.
+             * <p>The failure description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You cannot access the specified resource at this time.</p>
              */
             public Builder failureDescription(String failureDescription) {
                 this.failureDescription = failureDescription;
@@ -246,7 +266,17 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * FailureReason.
+             * <p>The failure cause. Valid values:</p>
+             * <ul>
+             * <li>Unavailable: The resource does not exist.</li>
+             * <li>LimitExceeded: The number of principals for the resource exceeds the upper limit.</li>
+             * <li>ZonalResourceInaccessible: The resource is unavailable in this region.</li>
+             * <li>InternalError: An internal error occurred.</li>
+             * <li>UnsupportedOperation: You cannot perform this operation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Unavailable</p>
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -254,7 +284,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationType.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li>Associate</li>
+             * <li>Disassociate</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Associate</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -262,7 +299,10 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>This parameter is deprecated. The FailureReason parameter is used instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -270,7 +310,10 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMessage.
+             * <p>This parameter is deprecated. The FailureDescription parameter is used instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -449,7 +492,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AssociationFailedDetails.
+             * <p>The information about the failure.</p>
              */
             public Builder associationFailedDetails(java.util.List < AssociationFailedDetails> associationFailedDetails) {
                 this.associationFailedDetails = associationFailedDetails;
@@ -521,7 +564,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             /**
              * <p>The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
              * <ul>
-             * <li>If the value of <code>AssociationType</code> is <code>Resource</code>, the value of this parameter is the ID of the shared resource.</li>
+             * <li>If the value of <code>AssociationType</code> is <code>Resource</code>, the value of this parameter is the ID of the resource.</li>
              * <li>If the value of <code>AssociationType</code> is <code>Target</code>, the value of this parameter is the ID of the principal.</li>
              * </ul>
              * 
@@ -536,7 +579,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             /**
              * <p>The type of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
              * <ul>
-             * <li>If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</li>
+             * <li>If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</li>
              * <li>If the value of AssociationType is Target, the value of this parameter is <code>Account</code>.</li>
              * </ul>
              * 
@@ -551,8 +594,8 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the principal is outside the resource directory. Valid values:</p>
              * <ul>
-             * <li>true: The principal is outside the resource directory.</li>
-             * <li>false: The principal is in the resource directory.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -586,7 +629,24 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetProperty.
+             * <p>The properties of the principal, such as the time range within which the resource is shared. Valid values of <code>timeRangeType</code>:</p>
+             * <ul>
+             * <li>timeRange: a specific time range</li>
+             * <li>day: all day</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only if the principal is an Alibaba Cloud service.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;timeRange&quot;:{
+             *         &quot;timeRangeType&quot;:&quot;timeRange&quot;,
+             *         &quot;beginAtTime&quot;:&quot;00:00&quot;,
+             *         &quot;timezone&quot;:&quot;UTC+8&quot;,
+             *         &quot;endAtTime&quot;:&quot;19:59&quot;
+             *     }
+             * }</p>
              */
             public Builder targetProperty(String targetProperty) {
                 this.targetProperty = targetProperty;

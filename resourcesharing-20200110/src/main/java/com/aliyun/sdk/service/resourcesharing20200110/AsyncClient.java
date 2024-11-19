@@ -214,6 +214,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSharedTargetsResponse> listSharedTargets(ListSharedTargetsRequest request);
 
     /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to call the API operation to reject the resource sharing invitation <code>i-yyTWbkjHArYh****</code> in the <code>cn-hangzhou</code> region.</p>
      * 
@@ -221,6 +227,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RejectResourceShareInvitationResponse
      */
     CompletableFuture<RejectResourceShareInvitationResponse> rejectResourceShareInvitation(RejectResourceShareInvitationRequest request);
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
      * <b>description</b> :

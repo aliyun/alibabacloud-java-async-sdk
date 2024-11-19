@@ -214,11 +214,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * <p>The type of the sharing operation. Valid values:</p>
-             * <ul>
-             * <li>Associate</li>
-             * <li>Disassociate</li>
-             * </ul>
+             * <p>This parameter is deprecated. The OperationType parameter is used instead.</p>
              * 
              * <strong>example:</strong>
              * <p>Associate</p>
@@ -229,7 +225,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * FailureDescription.
+             * <p>The failure description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You cannot access the specified resource at this time.</p>
              */
             public Builder failureDescription(String failureDescription) {
                 this.failureDescription = failureDescription;
@@ -237,7 +236,17 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * FailureReason.
+             * <p>The failure cause. Valid values:</p>
+             * <ul>
+             * <li>Unavailable: The resource cannot be shared.</li>
+             * <li>LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</li>
+             * <li>ZonalResourceInaccessible: The resource is unavailable in this region.</li>
+             * <li>InternalError: An internal error occurred during the check.</li>
+             * <li>UnsupportedOperation: You cannot perform this operation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Unavailable</p>
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -245,7 +254,14 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationType.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li>Associate</li>
+             * <li>Disassociate</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Associate</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -276,14 +292,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The failure status. Valid values:</p>
-             * <ul>
-             * <li>Unavailable: The resource cannot be shared.</li>
-             * <li>LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</li>
-             * <li>ZonalResourceInaccessible: The resource is unavailable in this region.</li>
-             * <li>UnsupportedOperation: The operation is not allowed because another association exists.</li>
-             * <li>InternalError: An internal error occurred during the check.</li>
-             * </ul>
+             * <p>This parameter is deprecated. The FailureReason parameter is used instead.</p>
              * 
              * <strong>example:</strong>
              * <p>Unavailable</p>
@@ -294,7 +303,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The failure cause.</p>
+             * <p>This parameter is deprecated. The FailureDescription parameter is used instead.</p>
              * 
              * <strong>example:</strong>
              * <p>You cannot access the specified resource at this time.</p>
