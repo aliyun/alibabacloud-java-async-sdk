@@ -62,7 +62,16 @@ public class DescribeCdnFullDomainsBlockIPConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <p>The value of Code is not 0 in the following scenarios:</p>
+         * <ul>
+         * <li>The format of the IP address is invalid.</li>
+         * <li>The number of IP addresses exceeds the upper limit.</li>
+         * <li>Other abnormal scenarios.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +79,10 @@ public class DescribeCdnFullDomainsBlockIPConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned results. If the operation is successful, URLs of OSS objects are returned. If the operation fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx-api.oss-cn-hangzhou.aliyuncs.com/blocklist%2Fxxxxxxxxxxxx.txt?Expires=1682663947&OSSAccessKeyId=xxxxxxxxxx&Signature=xxxxxx">http://xxxx-api.oss-cn-hangzhou.aliyuncs.com/blocklist%2Fxxxxxxxxxxxx.txt?Expires=1682663947&amp;OSSAccessKeyId=xxxxxxxxxx&amp;Signature=xxxxxx</a></p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +90,10 @@ public class DescribeCdnFullDomainsBlockIPConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95994621-8382-464B-8762-C708E73568D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

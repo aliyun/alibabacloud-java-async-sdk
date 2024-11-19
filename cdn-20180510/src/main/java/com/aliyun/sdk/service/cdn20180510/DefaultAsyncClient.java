@@ -1041,6 +1041,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation,<a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>If you specify IP addresses or CIDR blocks, IP addresses that are effective and the corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.</li>
+     * <li>The results are written to OSS and returned as OSS URLs. The content in OSS objects is in the format of IP address-Corresponding expiration time. The expiration time is in the YYYY-MM-DD hh:mm:ss format.</li>
+     * <li>You can share OSS URLs with others. The shared URLs are valid for three days.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeCdnFullDomainsBlockIPConfig  DescribeCdnFullDomainsBlockIPConfigRequest
      * @return DescribeCdnFullDomainsBlockIPConfigResponse
      */
@@ -1059,6 +1069,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>For a specified IP addresses and time range, the time when the IP address was delivered to the edge and the corresponding result are returned.</li>
+     * <li>If a specified IP address or CIDR block has multiple blocking records in a specified time range, the records are sorted by delivery time in descending order.</li>
+     * <li>The maximum time range to query is 90 days.</li>
+     * <li>If no blocking record exists or delivery fails for the given IP address and time range, the delivery time is empty.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeCdnFullDomainsBlockIPHistory  DescribeCdnFullDomainsBlockIPHistoryRequest
      * @return DescribeCdnFullDomainsBlockIPHistoryResponse
      */
@@ -1568,6 +1589,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeCertificateInfoByIDResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCustomDomainSampleRate  DescribeCustomDomainSampleRateRequest
+     * @return DescribeCustomDomainSampleRateResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCustomDomainSampleRateResponse> describeCustomDomainSampleRate(DescribeCustomDomainSampleRateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCustomDomainSampleRate").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCustomDomainSampleRateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCustomDomainSampleRateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4062,6 +4101,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>\<em>\</em> \<em>\</em></p>
+     * 
+     * @param request the request parameters of ListRealtimeLogDelivery  ListRealtimeLogDeliveryRequest
+     * @return ListRealtimeLogDeliveryResponse
+     */
+    @Override
+    public CompletableFuture<ListRealtimeLogDeliveryResponse> listRealtimeLogDelivery(ListRealtimeLogDeliveryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRealtimeLogDelivery").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRealtimeLogDeliveryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRealtimeLogDeliveryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 100 times per second per account.</p>
      * </blockquote>
@@ -4237,6 +4297,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyCustomDomainSampleRate  ModifyCustomDomainSampleRateRequest
+     * @return ModifyCustomDomainSampleRateResponse
+     */
+    @Override
+    public CompletableFuture<ModifyCustomDomainSampleRateResponse> modifyCustomDomainSampleRate(ModifyCustomDomainSampleRateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyCustomDomainSampleRate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyCustomDomainSampleRateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyCustomDomainSampleRateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 100 times per second per account.</p>
@@ -4388,7 +4466,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<RefreshObjectCachesResponse> refreshObjectCaches(RefreshObjectCachesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshObjectCaches").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshObjectCaches").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshObjectCachesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -4515,6 +4593,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>This operation is suitable for blocking or unblocking a maximum of 1,000 IP addresses or CIDR blocks at a time.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SetCdnFullDomainsBlockIP  SetCdnFullDomainsBlockIPRequest
      * @return SetCdnFullDomainsBlockIPResponse
      */

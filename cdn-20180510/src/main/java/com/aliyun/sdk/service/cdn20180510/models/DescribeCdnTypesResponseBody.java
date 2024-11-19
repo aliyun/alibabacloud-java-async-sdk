@@ -50,7 +50,7 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CdnTypes.
+         * <p>The types of the domain names.</p>
          */
         public Builder cdnTypes(CdnTypes cdnTypes) {
             this.cdnTypes = cdnTypes;
@@ -58,7 +58,10 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDA62CE4-3477-439A-B52E-D2D7C829D7C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +119,10 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Desc.
+             * <p>The description of the domain name type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Download Acceleration</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -124,7 +130,10 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>download</p>
              */
             public Builder type(String type) {
                 this.type = type;

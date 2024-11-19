@@ -481,12 +481,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCdnDomainStagingConfigResponse> describeCdnDomainStagingConfig(DescribeCdnDomainStagingConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation,<a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>If you specify IP addresses or CIDR blocks, IP addresses that are effective and the corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.</li>
+     * <li>The results are written to OSS and returned as OSS URLs. The content in OSS objects is in the format of IP address-Corresponding expiration time. The expiration time is in the YYYY-MM-DD hh:mm:ss format.</li>
+     * <li>You can share OSS URLs with others. The shared URLs are valid for three days.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeCdnFullDomainsBlockIPConfig  DescribeCdnFullDomainsBlockIPConfigRequest
      * @return DescribeCdnFullDomainsBlockIPConfigResponse
      */
     CompletableFuture<DescribeCdnFullDomainsBlockIPConfigResponse> describeCdnFullDomainsBlockIPConfig(DescribeCdnFullDomainsBlockIPConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>For a specified IP addresses and time range, the time when the IP address was delivered to the edge and the corresponding result are returned.</li>
+     * <li>If a specified IP address or CIDR block has multiple blocking records in a specified time range, the records are sorted by delivery time in descending order.</li>
+     * <li>The maximum time range to query is 90 days.</li>
+     * <li>If no blocking record exists or delivery fails for the given IP address and time range, the delivery time is empty.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeCdnFullDomainsBlockIPHistory  DescribeCdnFullDomainsBlockIPHistoryRequest
      * @return DescribeCdnFullDomainsBlockIPHistoryResponse
      */
@@ -724,6 +745,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCertificateInfoByIDResponse
      */
     CompletableFuture<DescribeCertificateInfoByIDResponse> describeCertificateInfoByID(DescribeCertificateInfoByIDRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCustomDomainSampleRate  DescribeCustomDomainSampleRateRequest
+     * @return DescribeCustomDomainSampleRateResponse
+     */
+    CompletableFuture<DescribeCustomDomainSampleRateResponse> describeCustomDomainSampleRate(DescribeCustomDomainSampleRateRequest request);
 
     /**
      * <b>description</b> :
@@ -2314,6 +2341,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>\<em>\</em> \<em>\</em></p>
+     * 
+     * @param request the request parameters of ListRealtimeLogDelivery  ListRealtimeLogDeliveryRequest
+     * @return ListRealtimeLogDeliveryResponse
+     */
+    CompletableFuture<ListRealtimeLogDeliveryResponse> listRealtimeLogDelivery(ListRealtimeLogDeliveryRequest request);
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 100 times per second per account.</p>
      * </blockquote>
@@ -2391,6 +2427,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyCdnServiceResponse
      */
     CompletableFuture<ModifyCdnServiceResponse> modifyCdnService(ModifyCdnServiceRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCustomDomainSampleRate  ModifyCustomDomainSampleRateRequest
+     * @return ModifyCustomDomainSampleRateResponse
+     */
+    CompletableFuture<ModifyCustomDomainSampleRateResponse> modifyCustomDomainSampleRate(ModifyCustomDomainSampleRateRequest request);
 
     /**
      * <b>description</b> :
@@ -2539,6 +2581,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetCdnDomainStagingConfigResponse> setCdnDomainStagingConfig(SetCdnDomainStagingConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>This operation is suitable for blocking or unblocking a maximum of 1,000 IP addresses or CIDR blocks at a time.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SetCdnFullDomainsBlockIP  SetCdnFullDomainsBlockIPRequest
      * @return SetCdnFullDomainsBlockIPResponse
      */

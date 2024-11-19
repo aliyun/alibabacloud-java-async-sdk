@@ -86,7 +86,10 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enabled.
+         * <p>Indicates whetherAlibaba Cloud CDN is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -94,7 +97,14 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebt.
+         * <p>Indicates whether your account has overdue payments.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inDebt(Boolean inDebt) {
             this.inDebt = inDebt;
@@ -102,7 +112,10 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebtOverdue.
+         * <p>Indicates whether the grace period for your overdue payments expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inDebtOverdue(Boolean inDebtOverdue) {
             this.inDebtOverdue = inDebtOverdue;
@@ -110,7 +123,10 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * OnService.
+         * <p>Indicates whether the service is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onService(Boolean onService) {
             this.onService = onService;
@@ -118,7 +134,10 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39B1DC7F-9D25-5D54-8F02-6EE26A7F48CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
