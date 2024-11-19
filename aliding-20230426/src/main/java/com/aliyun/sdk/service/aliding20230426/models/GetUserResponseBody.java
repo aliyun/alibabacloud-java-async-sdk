@@ -105,6 +105,9 @@ public class GetUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("unionEmpExt")
     private UnionEmpExt unionEmpExt;
 
+    @com.aliyun.core.annotation.NameInMap("unionid")
+    private String unionid;
+
     @com.aliyun.core.annotation.NameInMap("userid")
     private String userid;
 
@@ -143,6 +146,7 @@ public class GetUserResponseBody extends TeaModel {
         this.telephone = builder.telephone;
         this.title = builder.title;
         this.unionEmpExt = builder.unionEmpExt;
+        this.unionid = builder.unionid;
         this.userid = builder.userid;
         this.workPlace = builder.workPlace;
     }
@@ -373,6 +377,13 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     /**
+     * @return unionid
+     */
+    public String getUnionid() {
+        return this.unionid;
+    }
+
+    /**
      * @return userid
      */
     public String getUserid() {
@@ -418,6 +429,7 @@ public class GetUserResponseBody extends TeaModel {
         private String telephone; 
         private String title; 
         private UnionEmpExt unionEmpExt; 
+        private String unionid; 
         private String userid; 
         private String workPlace; 
 
@@ -666,6 +678,14 @@ public class GetUserResponseBody extends TeaModel {
          */
         public Builder unionEmpExt(UnionEmpExt unionEmpExt) {
             this.unionEmpExt = unionEmpExt;
+            return this;
+        }
+
+        /**
+         * unionid.
+         */
+        public Builder unionid(String unionid) {
+            this.unionid = unionid;
             return this;
         }
 

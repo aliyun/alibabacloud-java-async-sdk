@@ -518,6 +518,9 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoomStatus")
         private Integer roomStatus;
 
+        @com.aliyun.core.annotation.NameInMap("RoomUnionId")
+        private String roomUnionId;
+
         private Result(Builder builder) {
             this.corpId = builder.corpId;
             this.deviceUnionIds = builder.deviceUnionIds;
@@ -533,6 +536,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
             this.roomPicture = builder.roomPicture;
             this.roomStaffId = builder.roomStaffId;
             this.roomStatus = builder.roomStatus;
+            this.roomUnionId = builder.roomUnionId;
         }
 
         public static Builder builder() {
@@ -641,6 +645,13 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
             return this.roomStatus;
         }
 
+        /**
+         * @return roomUnionId
+         */
+        public String getRoomUnionId() {
+            return this.roomUnionId;
+        }
+
         public static final class Builder {
             private String corpId; 
             private java.util.List < String > deviceUnionIds; 
@@ -656,6 +667,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
             private String roomPicture; 
             private String roomStaffId; 
             private Integer roomStatus; 
+            private String roomUnionId; 
 
             /**
              * CorpId.
@@ -766,6 +778,14 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
              */
             public Builder roomStatus(Integer roomStatus) {
                 this.roomStatus = roomStatus;
+                return this;
+            }
+
+            /**
+             * RoomUnionId.
+             */
+            public Builder roomUnionId(String roomUnionId) {
+                this.roomUnionId = roomUnionId;
                 return this;
             }
 

@@ -158,6 +158,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CommitFileResponse> commitFile(CommitFileRequest request);
 
     /**
+     * @param request the request parameters of CopyDentry  CopyDentryRequest
+     * @return CopyDentryResponse
+     */
+    CompletableFuture<CopyDentryResponse> copyDentry(CopyDentryRequest request);
+
+    /**
      * @param request the request parameters of CreateDeliveryPlan  CreateDeliveryPlanRequest
      * @return CreateDeliveryPlanResponse
      */
@@ -434,6 +440,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCorpTasksResponse> getCorpTasks(GetCorpTasksRequest request);
 
     /**
+     * @param request the request parameters of GetDeptNo  GetDeptNoRequest
+     * @return GetDeptNoResponse
+     */
+    CompletableFuture<GetDeptNoResponse> getDeptNo(GetDeptNoRequest request);
+
+    /**
      * @param request the request parameters of GetDocContent  GetDocContentRequest
      * @return GetDocContentResponse
      */
@@ -618,6 +630,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetOperationRecordsResponse
      */
     CompletableFuture<GetOperationRecordsResponse> getOperationRecords(GetOperationRecordsRequest request);
+
+    /**
+     * @param request the request parameters of GetOrgLiveList  GetOrgLiveListRequest
+     * @return GetOrgLiveListResponse
+     */
+    CompletableFuture<GetOrgLiveListResponse> getOrgLiveList(GetOrgLiveListRequest request);
 
     /**
      * @param request the request parameters of GetProcessDefinition  GetProcessDefinitionRequest
@@ -1134,6 +1152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetColumnsVisibilityResponse
      */
     CompletableFuture<SetColumnsVisibilityResponse> setColumnsVisibility(SetColumnsVisibilityRequest request);
+
+    /**
+     * @param request the request parameters of SetConferenceHosts  SetConferenceHostsRequest
+     * @return SetConferenceHostsResponse
+     */
+    CompletableFuture<SetConferenceHostsResponse> setConferenceHosts(SetConferenceHostsRequest request);
 
     /**
      * @param request the request parameters of SetRowsVisibility  SetRowsVisibilityRequest

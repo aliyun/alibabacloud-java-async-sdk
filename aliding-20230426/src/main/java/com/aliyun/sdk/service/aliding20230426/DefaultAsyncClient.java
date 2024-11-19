@@ -454,6 +454,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CopyDentry  CopyDentryRequest
+     * @return CopyDentryResponse
+     */
+    @Override
+    public CompletableFuture<CopyDentryResponse> copyDentry(CopyDentryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CopyDentry").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v2/documents/copyDentry").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CopyDentryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CopyDentryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDeliveryPlan  CreateDeliveryPlanRequest
      * @return CreateDeliveryPlanResponse
      */
@@ -1282,6 +1300,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDeptNo  GetDeptNoRequest
+     * @return GetDeptNoResponse
+     */
+    @Override
+    public CompletableFuture<GetDeptNoResponse> getDeptNo(GetDeptNoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDeptNo").setMethod(HttpMethod.POST).setPathRegex("/aliding/v1/dept/getDeptNo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDeptNoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDeptNoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDocContent  GetDocContentRequest
      * @return GetDocContentResponse
      */
@@ -1834,6 +1870,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetOperationRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetOrgLiveList  GetOrgLiveListRequest
+     * @return GetOrgLiveListResponse
+     */
+    @Override
+    public CompletableFuture<GetOrgLiveListResponse> getOrgLiveList(GetOrgLiveListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetOrgLiveList").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/getOrgLiveList").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetOrgLiveListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetOrgLiveListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3382,6 +3436,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetColumnsVisibilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetConferenceHosts  SetConferenceHostsRequest
+     * @return SetConferenceHostsResponse
+     */
+    @Override
+    public CompletableFuture<SetConferenceHostsResponse> setConferenceHosts(SetConferenceHostsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SetConferenceHosts").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/setConferenceHosts").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetConferenceHostsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetConferenceHostsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
