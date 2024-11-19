@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeEduPaperCutRequest} extends {@link RequestModel}
  *
  * <p>RecognizeEduPaperCutRequest</p>
@@ -126,7 +127,10 @@ public class RecognizeEduPaperCutRequest extends Request {
         } 
 
         /**
-         * CutType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>question：题目， answer：答案</p>
          */
         public Builder cutType(String cutType) {
             this.putQueryParameter("CutType", cutType);
@@ -135,7 +139,10 @@ public class RecognizeEduPaperCutRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan：扫描图， photo：实拍图</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);

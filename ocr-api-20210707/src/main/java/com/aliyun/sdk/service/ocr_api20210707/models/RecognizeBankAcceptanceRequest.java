@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeBankAcceptanceRequest} extends {@link RequestModel}
  *
  * <p>RecognizeBankAcceptanceRequest</p>

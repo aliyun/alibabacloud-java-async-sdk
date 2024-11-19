@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeEduPaperStructedRequest} extends {@link RequestModel}
  *
  * <p>RecognizeEduPaperStructedRequest</p>
@@ -14,6 +15,10 @@ public class RecognizeEduPaperStructedRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NeedRotate")
     private Boolean needRotate;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputOricoord")
+    private Boolean outputOricoord;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Subject")
@@ -31,6 +36,7 @@ public class RecognizeEduPaperStructedRequest extends Request {
     private RecognizeEduPaperStructedRequest(Builder builder) {
         super(builder);
         this.needRotate = builder.needRotate;
+        this.outputOricoord = builder.outputOricoord;
         this.subject = builder.subject;
         this.url = builder.url;
         this.body = builder.body;
@@ -57,6 +63,13 @@ public class RecognizeEduPaperStructedRequest extends Request {
     }
 
     /**
+     * @return outputOricoord
+     */
+    public Boolean getOutputOricoord() {
+        return this.outputOricoord;
+    }
+
+    /**
      * @return subject
      */
     public String getSubject() {
@@ -79,6 +92,7 @@ public class RecognizeEduPaperStructedRequest extends Request {
 
     public static final class Builder extends Request.Builder<RecognizeEduPaperStructedRequest, Builder> {
         private Boolean needRotate; 
+        private Boolean outputOricoord; 
         private String subject; 
         private String url; 
         private java.io.InputStream body; 
@@ -90,6 +104,7 @@ public class RecognizeEduPaperStructedRequest extends Request {
         private Builder(RecognizeEduPaperStructedRequest request) {
             super(request);
             this.needRotate = request.needRotate;
+            this.outputOricoord = request.outputOricoord;
             this.subject = request.subject;
             this.url = request.url;
             this.body = request.body;
@@ -101,6 +116,15 @@ public class RecognizeEduPaperStructedRequest extends Request {
         public Builder needRotate(Boolean needRotate) {
             this.putQueryParameter("NeedRotate", needRotate);
             this.needRotate = needRotate;
+            return this;
+        }
+
+        /**
+         * OutputOricoord.
+         */
+        public Builder outputOricoord(Boolean outputOricoord) {
+            this.putQueryParameter("OutputOricoord", outputOricoord);
+            this.outputOricoord = outputOricoord;
             return this;
         }
 

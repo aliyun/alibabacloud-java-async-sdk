@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeGeneralStructureResponseBody} extends {@link TeaModel}
  *
  * <p>RecognizeGeneralStructureResponseBody</p>
@@ -110,6 +111,12 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RecognizeGeneralStructureResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeGeneralStructureResponseBody</p>
+     */
     public static class KvInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Object data;
@@ -171,6 +178,12 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeGeneralStructureResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeGeneralStructureResponseBody</p>
+     */
     public static class SubImages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Angle")
         private Integer angle;
@@ -252,6 +265,12 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeGeneralStructureResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeGeneralStructureResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;

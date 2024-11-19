@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
  *
  * <p>RecognizeAllTextResponseBody</p>
@@ -110,6 +111,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class BarCodePoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -171,6 +178,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class BarCodeRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
@@ -272,6 +285,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class BarCodeDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BarCodeAngle")
         private Integer barCodeAngle;
@@ -393,6 +412,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class BarCodeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BarCodeCount")
         private Integer barCodeCount;
@@ -454,6 +479,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class BlockPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -515,6 +546,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class BlockRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
@@ -616,6 +653,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class CharPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -677,6 +720,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class CharRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
@@ -778,6 +827,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class CharInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CharConfidence")
         private Integer charConfidence;
@@ -899,6 +954,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class BlockDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockAngle")
         private Integer blockAngle;
@@ -1060,6 +1121,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class BlockInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockCount")
         private Integer blockCount;
@@ -1121,6 +1188,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class KvInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Object data;
@@ -1202,6 +1275,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class ParagraphDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockList")
         private java.util.List < Integer > blockList;
@@ -1283,6 +1362,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class ParagraphInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParagraphCount")
         private Integer paragraphCount;
@@ -1344,6 +1429,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class QrCodePoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -1405,6 +1496,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class QrCodeRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
@@ -1506,6 +1603,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class QrCodeDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Object data;
@@ -1607,6 +1710,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class QrCodeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QrCodeCount")
         private Integer qrCodeCount;
@@ -1668,6 +1777,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class QualityInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompletenessScore")
         private Float completenessScore;
@@ -1789,6 +1904,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class RowDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockList")
         private java.util.List < Integer > blockList;
@@ -1870,6 +1991,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class RowInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RowCount")
         private Integer rowCount;
@@ -1931,6 +2058,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class StampDetailsData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AntiFakeCode")
         private String antiFakeCode;
@@ -2092,6 +2225,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class StampPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -2153,6 +2292,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class StampRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
@@ -2254,6 +2399,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class StampDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private StampDetailsData data;
@@ -2355,6 +2506,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class StampInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StampCount")
         private Integer stampCount;
@@ -2416,6 +2573,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class SubImagePoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -2477,6 +2640,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class SubImageRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
@@ -2578,6 +2747,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class CellPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -2639,6 +2814,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class CellRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
@@ -2740,6 +2921,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class CellDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockList")
         private java.util.List < Integer > blockList;
@@ -2961,6 +3148,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class Footer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockId")
         private Integer blockId;
@@ -3022,6 +3215,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class TableDetailsHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockId")
         private Integer blockId;
@@ -3083,6 +3282,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class TablePoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -3144,6 +3349,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class TableRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
@@ -3245,6 +3456,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class TableDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CellCount")
         private Integer cellCount;
@@ -3446,6 +3663,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class TableInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableCount")
         private Integer tableCount;
@@ -3547,6 +3770,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class SubImages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Angle")
         private Integer angle;
@@ -3868,6 +4097,12 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlgoServer")
         private java.util.List < String > algoServer;

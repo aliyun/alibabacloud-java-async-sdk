@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeCosmeticProduceLicenseResponseBody} extends {@link TeaModel}
  *
  * <p>RecognizeCosmeticProduceLicenseResponseBody</p>

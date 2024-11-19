@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyBusinessLicenseRequest} extends {@link RequestModel}
  *
  * <p>VerifyBusinessLicenseRequest</p>
@@ -84,7 +85,7 @@ public class VerifyBusinessLicenseRequest extends Request {
         } 
 
         /**
-         * CompanyName.
+         * <p>This parameter is required.</p>
          */
         public Builder companyName(String companyName) {
             this.putQueryParameter("CompanyName", companyName);
@@ -93,7 +94,7 @@ public class VerifyBusinessLicenseRequest extends Request {
         }
 
         /**
-         * CreditCode.
+         * <p>This parameter is required.</p>
          */
         public Builder creditCode(String creditCode) {
             this.putQueryParameter("CreditCode", creditCode);
@@ -102,7 +103,7 @@ public class VerifyBusinessLicenseRequest extends Request {
         }
 
         /**
-         * LegalPerson.
+         * <p>This parameter is required.</p>
          */
         public Builder legalPerson(String legalPerson) {
             this.putQueryParameter("LegalPerson", legalPerson);

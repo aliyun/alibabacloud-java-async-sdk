@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeEnglishResponseBody} extends {@link TeaModel}
  *
  * <p>RecognizeEnglishResponseBody</p>

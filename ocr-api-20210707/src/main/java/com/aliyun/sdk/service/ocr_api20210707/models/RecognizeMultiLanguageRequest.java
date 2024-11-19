@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeMultiLanguageRequest} extends {@link RequestModel}
  *
  * <p>RecognizeMultiLanguageRequest</p>
@@ -138,7 +139,7 @@ public class RecognizeMultiLanguageRequest extends Request {
         } 
 
         /**
-         * Languages.
+         * <p>This parameter is required.</p>
          */
         public Builder languages(java.util.List < String > languages) {
             String languagesShrink = shrink(languages, "Languages", "simple");

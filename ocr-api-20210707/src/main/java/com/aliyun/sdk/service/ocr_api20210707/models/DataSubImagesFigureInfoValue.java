@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSubImagesFigureInfoValue} extends {@link TeaModel}
  *
  * <p>DataSubImagesFigureInfoValue</p>
@@ -70,6 +71,12 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DataSubImagesFigureInfoValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesFigureInfoValue</p>
+     */
     public static class FigurePoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -131,6 +138,12 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DataSubImagesFigureInfoValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesFigureInfoValue</p>
+     */
     public static class FigureRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
@@ -232,6 +245,12 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DataSubImagesFigureInfoValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesFigureInfoValue</p>
+     */
     public static class FigureDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;

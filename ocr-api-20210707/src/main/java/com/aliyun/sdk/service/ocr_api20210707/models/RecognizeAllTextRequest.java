@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeAllTextRequest} extends {@link RequestModel}
  *
  * <p>RecognizeAllTextRequest</p>
@@ -411,7 +412,10 @@ public class RecognizeAllTextRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Advanced</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -444,6 +448,12 @@ public class RecognizeAllTextRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RecognizeAllTextRequest} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextRequest</p>
+     */
     public static class AdvancedConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsHandWritingTable")
         private Boolean isHandWritingTable;
@@ -625,6 +635,12 @@ public class RecognizeAllTextRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextRequest} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextRequest</p>
+     */
     public static class IdCardConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputIdCardQuality")
         private Boolean outputIdCardQuality;
@@ -666,6 +682,12 @@ public class RecognizeAllTextRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextRequest} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextRequest</p>
+     */
     public static class InternationalBusinessLicenseConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
@@ -707,6 +729,12 @@ public class RecognizeAllTextRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextRequest} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextRequest</p>
+     */
     public static class InternationalIdCardConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
@@ -748,6 +776,12 @@ public class RecognizeAllTextRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextRequest} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextRequest</p>
+     */
     public static class MultiLanConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Languages")
         private String languages;
@@ -789,6 +823,12 @@ public class RecognizeAllTextRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeAllTextRequest} extends {@link TeaModel}
+     *
+     * <p>RecognizeAllTextRequest</p>
+     */
     public static class TableConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsHandWritingTable")
         private Boolean isHandWritingTable;

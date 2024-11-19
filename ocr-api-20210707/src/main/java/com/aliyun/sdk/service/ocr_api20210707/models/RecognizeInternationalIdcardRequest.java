@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeInternationalIdcardRequest} extends {@link RequestModel}
  *
  * <p>RecognizeInternationalIdcardRequest</p>
@@ -83,7 +84,10 @@ public class RecognizeInternationalIdcardRequest extends Request {
         } 
 
         /**
-         * Country.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vietnam</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);

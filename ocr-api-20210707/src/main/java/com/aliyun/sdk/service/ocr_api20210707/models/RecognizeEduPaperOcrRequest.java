@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeEduPaperOcrRequest} extends {@link RequestModel}
  *
  * <p>RecognizeEduPaperOcrRequest</p>
@@ -111,7 +112,10 @@ public class RecognizeEduPaperOcrRequest extends Request {
         } 
 
         /**
-         * ImageType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan：扫描图， photo：实拍图</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);

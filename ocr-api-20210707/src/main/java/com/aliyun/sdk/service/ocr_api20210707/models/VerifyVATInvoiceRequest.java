@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyVATInvoiceRequest} extends {@link RequestModel}
  *
  * <p>VerifyVATInvoiceRequest</p>
@@ -134,7 +135,7 @@ public class VerifyVATInvoiceRequest extends Request {
         }
 
         /**
-         * InvoiceDate.
+         * <p>This parameter is required.</p>
          */
         public Builder invoiceDate(String invoiceDate) {
             this.putQueryParameter("InvoiceDate", invoiceDate);
@@ -152,7 +153,7 @@ public class VerifyVATInvoiceRequest extends Request {
         }
 
         /**
-         * InvoiceNo.
+         * <p>This parameter is required.</p>
          */
         public Builder invoiceNo(String invoiceNo) {
             this.putQueryParameter("InvoiceNo", invoiceNo);

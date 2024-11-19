@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSubImagesKvInfoKvDetailsValue} extends {@link TeaModel}
  *
  * <p>DataSubImagesKvInfoKvDetailsValue</p>
@@ -170,6 +171,12 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DataSubImagesKvInfoKvDetailsValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesKvInfoKvDetailsValue</p>
+     */
     public static class ValuePoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
@@ -231,6 +238,12 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DataSubImagesKvInfoKvDetailsValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesKvInfoKvDetailsValue</p>
+     */
     public static class ValueRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;

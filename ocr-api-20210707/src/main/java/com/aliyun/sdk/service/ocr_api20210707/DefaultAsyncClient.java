@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of RecognizeAdvanced  RecognizeAdvancedRequest
+     * @return RecognizeAdvancedResponse
+     */
     @Override
     public CompletableFuture<RecognizeAdvancedResponse> recognizeAdvanced(RecognizeAdvancedRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeAirItinerary  RecognizeAirItineraryRequest
+     * @return RecognizeAirItineraryResponse
+     */
     @Override
     public CompletableFuture<RecognizeAirItineraryResponse> recognizeAirItinerary(RecognizeAirItineraryRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeAllText  RecognizeAllTextRequest
+     * @return RecognizeAllTextResponse
+     */
     @Override
     public CompletableFuture<RecognizeAllTextResponse> recognizeAllText(RecognizeAllTextRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeBankAcceptance  RecognizeBankAcceptanceRequest
+     * @return RecognizeBankAcceptanceResponse
+     */
     @Override
     public CompletableFuture<RecognizeBankAcceptanceResponse> recognizeBankAcceptance(RecognizeBankAcceptanceRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeBankAccountLicense  RecognizeBankAccountLicenseRequest
+     * @return RecognizeBankAccountLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeBankAccountLicenseResponse> recognizeBankAccountLicense(RecognizeBankAccountLicenseRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeBankCard  RecognizeBankCardRequest
+     * @return RecognizeBankCardResponse
+     */
     @Override
     public CompletableFuture<RecognizeBankCardResponse> recognizeBankCard(RecognizeBankCardRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeBasic  RecognizeBasicRequest
+     * @return RecognizeBasicResponse
+     */
     @Override
     public CompletableFuture<RecognizeBasicResponse> recognizeBasic(RecognizeBasicRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeBirthCertification  RecognizeBirthCertificationRequest
+     * @return RecognizeBirthCertificationResponse
+     */
     @Override
     public CompletableFuture<RecognizeBirthCertificationResponse> recognizeBirthCertification(RecognizeBirthCertificationRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeBusShipTicket  RecognizeBusShipTicketRequest
+     * @return RecognizeBusShipTicketResponse
+     */
     @Override
     public CompletableFuture<RecognizeBusShipTicketResponse> recognizeBusShipTicket(RecognizeBusShipTicketRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeBusinessLicense  RecognizeBusinessLicenseRequest
+     * @return RecognizeBusinessLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeBusinessLicenseResponse> recognizeBusinessLicense(RecognizeBusinessLicenseRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeCarInvoice  RecognizeCarInvoiceRequest
+     * @return RecognizeCarInvoiceResponse
+     */
     @Override
     public CompletableFuture<RecognizeCarInvoiceResponse> recognizeCarInvoice(RecognizeCarInvoiceRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeCarNumber  RecognizeCarNumberRequest
+     * @return RecognizeCarNumberResponse
+     */
     @Override
     public CompletableFuture<RecognizeCarNumberResponse> recognizeCarNumber(RecognizeCarNumberRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeCarVinCode  RecognizeCarVinCodeRequest
+     * @return RecognizeCarVinCodeResponse
+     */
     @Override
     public CompletableFuture<RecognizeCarVinCodeResponse> recognizeCarVinCode(RecognizeCarVinCodeRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeChinesePassport  RecognizeChinesePassportRequest
+     * @return RecognizeChinesePassportResponse
+     */
     @Override
     public CompletableFuture<RecognizeChinesePassportResponse> recognizeChinesePassport(RecognizeChinesePassportRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeCommonPrintedInvoice  RecognizeCommonPrintedInvoiceRequest
+     * @return RecognizeCommonPrintedInvoiceResponse
+     */
     @Override
     public CompletableFuture<RecognizeCommonPrintedInvoiceResponse> recognizeCommonPrintedInvoice(RecognizeCommonPrintedInvoiceRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeCosmeticProduceLicense  RecognizeCosmeticProduceLicenseRequest
+     * @return RecognizeCosmeticProduceLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeCosmeticProduceLicenseResponse> recognizeCosmeticProduceLicense(RecognizeCosmeticProduceLicenseRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeCovidTestReport  RecognizeCovidTestReportRequest
+     * @return RecognizeCovidTestReportResponse
+     */
     @Override
     public CompletableFuture<RecognizeCovidTestReportResponse> recognizeCovidTestReport(RecognizeCovidTestReportRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeCtwoMedicalDeviceManageLicense  RecognizeCtwoMedicalDeviceManageLicenseRequest
+     * @return RecognizeCtwoMedicalDeviceManageLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeCtwoMedicalDeviceManageLicenseResponse> recognizeCtwoMedicalDeviceManageLicense(RecognizeCtwoMedicalDeviceManageLicenseRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeDocumentStructure  RecognizeDocumentStructureRequest
+     * @return RecognizeDocumentStructureResponse
+     */
     @Override
     public CompletableFuture<RecognizeDocumentStructureResponse> recognizeDocumentStructure(RecognizeDocumentStructureRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeDrivingLicense  RecognizeDrivingLicenseRequest
+     * @return RecognizeDrivingLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeDrivingLicenseResponse> recognizeDrivingLicense(RecognizeDrivingLicenseRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeEduFormula  RecognizeEduFormulaRequest
+     * @return RecognizeEduFormulaResponse
+     */
     @Override
     public CompletableFuture<RecognizeEduFormulaResponse> recognizeEduFormula(RecognizeEduFormulaRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeEduOralCalculation  RecognizeEduOralCalculationRequest
+     * @return RecognizeEduOralCalculationResponse
+     */
     @Override
     public CompletableFuture<RecognizeEduOralCalculationResponse> recognizeEduOralCalculation(RecognizeEduOralCalculationRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeEduPaperCut  RecognizeEduPaperCutRequest
+     * @return RecognizeEduPaperCutResponse
+     */
     @Override
     public CompletableFuture<RecognizeEduPaperCutResponse> recognizeEduPaperCut(RecognizeEduPaperCutRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeEduPaperOcr  RecognizeEduPaperOcrRequest
+     * @return RecognizeEduPaperOcrResponse
+     */
     @Override
     public CompletableFuture<RecognizeEduPaperOcrResponse> recognizeEduPaperOcr(RecognizeEduPaperOcrRequest request) {
         try {
@@ -375,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeEduPaperStructed  RecognizeEduPaperStructedRequest
+     * @return RecognizeEduPaperStructedResponse
+     */
     @Override
     public CompletableFuture<RecognizeEduPaperStructedResponse> recognizeEduPaperStructed(RecognizeEduPaperStructedRequest request) {
         try {
@@ -389,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeEduQuestionOcr  RecognizeEduQuestionOcrRequest
+     * @return RecognizeEduQuestionOcrResponse
+     */
     @Override
     public CompletableFuture<RecognizeEduQuestionOcrResponse> recognizeEduQuestionOcr(RecognizeEduQuestionOcrRequest request) {
         try {
@@ -403,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeEnglish  RecognizeEnglishRequest
+     * @return RecognizeEnglishResponse
+     */
     @Override
     public CompletableFuture<RecognizeEnglishResponse> recognizeEnglish(RecognizeEnglishRequest request) {
         try {
@@ -417,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeEstateCertification  RecognizeEstateCertificationRequest
+     * @return RecognizeEstateCertificationResponse
+     */
     @Override
     public CompletableFuture<RecognizeEstateCertificationResponse> recognizeEstateCertification(RecognizeEstateCertificationRequest request) {
         try {
@@ -431,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeExitEntryPermitToHK  RecognizeExitEntryPermitToHKRequest
+     * @return RecognizeExitEntryPermitToHKResponse
+     */
     @Override
     public CompletableFuture<RecognizeExitEntryPermitToHKResponse> recognizeExitEntryPermitToHK(RecognizeExitEntryPermitToHKRequest request) {
         try {
@@ -445,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeExitEntryPermitToMainland  RecognizeExitEntryPermitToMainlandRequest
+     * @return RecognizeExitEntryPermitToMainlandResponse
+     */
     @Override
     public CompletableFuture<RecognizeExitEntryPermitToMainlandResponse> recognizeExitEntryPermitToMainland(RecognizeExitEntryPermitToMainlandRequest request) {
         try {
@@ -459,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeFoodManageLicense  RecognizeFoodManageLicenseRequest
+     * @return RecognizeFoodManageLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeFoodManageLicenseResponse> recognizeFoodManageLicense(RecognizeFoodManageLicenseRequest request) {
         try {
@@ -473,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeFoodProduceLicense  RecognizeFoodProduceLicenseRequest
+     * @return RecognizeFoodProduceLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeFoodProduceLicenseResponse> recognizeFoodProduceLicense(RecognizeFoodProduceLicenseRequest request) {
         try {
@@ -487,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeGeneral  RecognizeGeneralRequest
+     * @return RecognizeGeneralResponse
+     */
     @Override
     public CompletableFuture<RecognizeGeneralResponse> recognizeGeneral(RecognizeGeneralRequest request) {
         try {
@@ -501,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeGeneralStructure  RecognizeGeneralStructureRequest
+     * @return RecognizeGeneralStructureResponse
+     */
     @Override
     public CompletableFuture<RecognizeGeneralStructureResponse> recognizeGeneralStructure(RecognizeGeneralStructureRequest request) {
         try {
@@ -515,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeHKIdcard  RecognizeHKIdcardRequest
+     * @return RecognizeHKIdcardResponse
+     */
     @Override
     public CompletableFuture<RecognizeHKIdcardResponse> recognizeHKIdcard(RecognizeHKIdcardRequest request) {
         try {
@@ -529,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeHandwriting  RecognizeHandwritingRequest
+     * @return RecognizeHandwritingResponse
+     */
     @Override
     public CompletableFuture<RecognizeHandwritingResponse> recognizeHandwriting(RecognizeHandwritingRequest request) {
         try {
@@ -543,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeHealthCode  RecognizeHealthCodeRequest
+     * @return RecognizeHealthCodeResponse
+     */
     @Override
     public CompletableFuture<RecognizeHealthCodeResponse> recognizeHealthCode(RecognizeHealthCodeRequest request) {
         try {
@@ -557,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeHotelConsume  RecognizeHotelConsumeRequest
+     * @return RecognizeHotelConsumeResponse
+     */
     @Override
     public CompletableFuture<RecognizeHotelConsumeResponse> recognizeHotelConsume(RecognizeHotelConsumeRequest request) {
         try {
@@ -571,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeHousehold  RecognizeHouseholdRequest
+     * @return RecognizeHouseholdResponse
+     */
     @Override
     public CompletableFuture<RecognizeHouseholdResponse> recognizeHousehold(RecognizeHouseholdRequest request) {
         try {
@@ -585,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeIdcard  RecognizeIdcardRequest
+     * @return RecognizeIdcardResponse
+     */
     @Override
     public CompletableFuture<RecognizeIdcardResponse> recognizeIdcard(RecognizeIdcardRequest request) {
         try {
@@ -599,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeInternationalBusinessLicense  RecognizeInternationalBusinessLicenseRequest
+     * @return RecognizeInternationalBusinessLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeInternationalBusinessLicenseResponse> recognizeInternationalBusinessLicense(RecognizeInternationalBusinessLicenseRequest request) {
         try {
@@ -613,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeInternationalIdcard  RecognizeInternationalIdcardRequest
+     * @return RecognizeInternationalIdcardResponse
+     */
     @Override
     public CompletableFuture<RecognizeInternationalIdcardResponse> recognizeInternationalIdcard(RecognizeInternationalIdcardRequest request) {
         try {
@@ -627,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeInvoice  RecognizeInvoiceRequest
+     * @return RecognizeInvoiceResponse
+     */
     @Override
     public CompletableFuture<RecognizeInvoiceResponse> recognizeInvoice(RecognizeInvoiceRequest request) {
         try {
@@ -641,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeJanpanese  RecognizeJanpaneseRequest
+     * @return RecognizeJanpaneseResponse
+     */
     @Override
     public CompletableFuture<RecognizeJanpaneseResponse> recognizeJanpanese(RecognizeJanpaneseRequest request) {
         try {
@@ -655,6 +831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeKorean  RecognizeKoreanRequest
+     * @return RecognizeKoreanResponse
+     */
     @Override
     public CompletableFuture<RecognizeKoreanResponse> recognizeKorean(RecognizeKoreanRequest request) {
         try {
@@ -669,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeLatin  RecognizeLatinRequest
+     * @return RecognizeLatinResponse
+     */
     @Override
     public CompletableFuture<RecognizeLatinResponse> recognizeLatin(RecognizeLatinRequest request) {
         try {
@@ -683,6 +867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeMedicalDeviceManageLicense  RecognizeMedicalDeviceManageLicenseRequest
+     * @return RecognizeMedicalDeviceManageLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeMedicalDeviceManageLicenseResponse> recognizeMedicalDeviceManageLicense(RecognizeMedicalDeviceManageLicenseRequest request) {
         try {
@@ -697,6 +885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeMedicalDeviceProduceLicense  RecognizeMedicalDeviceProduceLicenseRequest
+     * @return RecognizeMedicalDeviceProduceLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeMedicalDeviceProduceLicenseResponse> recognizeMedicalDeviceProduceLicense(RecognizeMedicalDeviceProduceLicenseRequest request) {
         try {
@@ -711,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeMixedInvoices  RecognizeMixedInvoicesRequest
+     * @return RecognizeMixedInvoicesResponse
+     */
     @Override
     public CompletableFuture<RecognizeMixedInvoicesResponse> recognizeMixedInvoices(RecognizeMixedInvoicesRequest request) {
         try {
@@ -725,6 +921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeMultiLanguage  RecognizeMultiLanguageRequest
+     * @return RecognizeMultiLanguageResponse
+     */
     @Override
     public CompletableFuture<RecognizeMultiLanguageResponse> recognizeMultiLanguage(RecognizeMultiLanguageRequest request) {
         try {
@@ -739,6 +939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeNonTaxInvoice  RecognizeNonTaxInvoiceRequest
+     * @return RecognizeNonTaxInvoiceResponse
+     */
     @Override
     public CompletableFuture<RecognizeNonTaxInvoiceResponse> recognizeNonTaxInvoice(RecognizeNonTaxInvoiceRequest request) {
         try {
@@ -753,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizePassport  RecognizePassportRequest
+     * @return RecognizePassportResponse
+     */
     @Override
     public CompletableFuture<RecognizePassportResponse> recognizePassport(RecognizePassportRequest request) {
         try {
@@ -767,6 +975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizePaymentRecord  RecognizePaymentRecordRequest
+     * @return RecognizePaymentRecordResponse
+     */
     @Override
     public CompletableFuture<RecognizePaymentRecordResponse> recognizePaymentRecord(RecognizePaymentRecordRequest request) {
         try {
@@ -781,6 +993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizePurchaseRecord  RecognizePurchaseRecordRequest
+     * @return RecognizePurchaseRecordResponse
+     */
     @Override
     public CompletableFuture<RecognizePurchaseRecordResponse> recognizePurchaseRecord(RecognizePurchaseRecordRequest request) {
         try {
@@ -795,6 +1011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeQuotaInvoice  RecognizeQuotaInvoiceRequest
+     * @return RecognizeQuotaInvoiceResponse
+     */
     @Override
     public CompletableFuture<RecognizeQuotaInvoiceResponse> recognizeQuotaInvoice(RecognizeQuotaInvoiceRequest request) {
         try {
@@ -809,6 +1029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeRideHailingItinerary  RecognizeRideHailingItineraryRequest
+     * @return RecognizeRideHailingItineraryResponse
+     */
     @Override
     public CompletableFuture<RecognizeRideHailingItineraryResponse> recognizeRideHailingItinerary(RecognizeRideHailingItineraryRequest request) {
         try {
@@ -823,6 +1047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeRollTicket  RecognizeRollTicketRequest
+     * @return RecognizeRollTicketResponse
+     */
     @Override
     public CompletableFuture<RecognizeRollTicketResponse> recognizeRollTicket(RecognizeRollTicketRequest request) {
         try {
@@ -837,6 +1065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeRussian  RecognizeRussianRequest
+     * @return RecognizeRussianResponse
+     */
     @Override
     public CompletableFuture<RecognizeRussianResponse> recognizeRussian(RecognizeRussianRequest request) {
         try {
@@ -851,6 +1083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeShoppingReceipt  RecognizeShoppingReceiptRequest
+     * @return RecognizeShoppingReceiptResponse
+     */
     @Override
     public CompletableFuture<RecognizeShoppingReceiptResponse> recognizeShoppingReceipt(RecognizeShoppingReceiptRequest request) {
         try {
@@ -865,6 +1101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeSocialSecurityCard  RecognizeSocialSecurityCardRequest
+     * @return RecognizeSocialSecurityCardResponse
+     */
     @Override
     public CompletableFuture<RecognizeSocialSecurityCardResponse> recognizeSocialSecurityCard(RecognizeSocialSecurityCardRequest request) {
         try {
@@ -879,6 +1119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeSocialSecurityCardVersionII  RecognizeSocialSecurityCardVersionIIRequest
+     * @return RecognizeSocialSecurityCardVersionIIResponse
+     */
     @Override
     public CompletableFuture<RecognizeSocialSecurityCardVersionIIResponse> recognizeSocialSecurityCardVersionII(RecognizeSocialSecurityCardVersionIIRequest request) {
         try {
@@ -893,6 +1137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeTableOcr  RecognizeTableOcrRequest
+     * @return RecognizeTableOcrResponse
+     */
     @Override
     public CompletableFuture<RecognizeTableOcrResponse> recognizeTableOcr(RecognizeTableOcrRequest request) {
         try {
@@ -907,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeTaxClearanceCertificate  RecognizeTaxClearanceCertificateRequest
+     * @return RecognizeTaxClearanceCertificateResponse
+     */
     @Override
     public CompletableFuture<RecognizeTaxClearanceCertificateResponse> recognizeTaxClearanceCertificate(RecognizeTaxClearanceCertificateRequest request) {
         try {
@@ -921,6 +1173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeTaxiInvoice  RecognizeTaxiInvoiceRequest
+     * @return RecognizeTaxiInvoiceResponse
+     */
     @Override
     public CompletableFuture<RecognizeTaxiInvoiceResponse> recognizeTaxiInvoice(RecognizeTaxiInvoiceRequest request) {
         try {
@@ -935,6 +1191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeThai  RecognizeThaiRequest
+     * @return RecognizeThaiResponse
+     */
     @Override
     public CompletableFuture<RecognizeThaiResponse> recognizeThai(RecognizeThaiRequest request) {
         try {
@@ -949,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeTollInvoice  RecognizeTollInvoiceRequest
+     * @return RecognizeTollInvoiceResponse
+     */
     @Override
     public CompletableFuture<RecognizeTollInvoiceResponse> recognizeTollInvoice(RecognizeTollInvoiceRequest request) {
         try {
@@ -963,6 +1227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeTradeMarkCertification  RecognizeTradeMarkCertificationRequest
+     * @return RecognizeTradeMarkCertificationResponse
+     */
     @Override
     public CompletableFuture<RecognizeTradeMarkCertificationResponse> recognizeTradeMarkCertification(RecognizeTradeMarkCertificationRequest request) {
         try {
@@ -977,6 +1245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeTrainInvoice  RecognizeTrainInvoiceRequest
+     * @return RecognizeTrainInvoiceResponse
+     */
     @Override
     public CompletableFuture<RecognizeTrainInvoiceResponse> recognizeTrainInvoice(RecognizeTrainInvoiceRequest request) {
         try {
@@ -991,6 +1263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeUsedCarInvoice  RecognizeUsedCarInvoiceRequest
+     * @return RecognizeUsedCarInvoiceResponse
+     */
     @Override
     public CompletableFuture<RecognizeUsedCarInvoiceResponse> recognizeUsedCarInvoice(RecognizeUsedCarInvoiceRequest request) {
         try {
@@ -1005,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeVehicleCertification  RecognizeVehicleCertificationRequest
+     * @return RecognizeVehicleCertificationResponse
+     */
     @Override
     public CompletableFuture<RecognizeVehicleCertificationResponse> recognizeVehicleCertification(RecognizeVehicleCertificationRequest request) {
         try {
@@ -1019,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeVehicleLicense  RecognizeVehicleLicenseRequest
+     * @return RecognizeVehicleLicenseResponse
+     */
     @Override
     public CompletableFuture<RecognizeVehicleLicenseResponse> recognizeVehicleLicense(RecognizeVehicleLicenseRequest request) {
         try {
@@ -1033,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeVehicleRegistration  RecognizeVehicleRegistrationRequest
+     * @return RecognizeVehicleRegistrationResponse
+     */
     @Override
     public CompletableFuture<RecognizeVehicleRegistrationResponse> recognizeVehicleRegistration(RecognizeVehicleRegistrationRequest request) {
         try {
@@ -1047,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecognizeWaybill  RecognizeWaybillRequest
+     * @return RecognizeWaybillResponse
+     */
     @Override
     public CompletableFuture<RecognizeWaybillResponse> recognizeWaybill(RecognizeWaybillRequest request) {
         try {
@@ -1061,6 +1353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyBusinessLicense  VerifyBusinessLicenseRequest
+     * @return VerifyBusinessLicenseResponse
+     */
     @Override
     public CompletableFuture<VerifyBusinessLicenseResponse> verifyBusinessLicense(VerifyBusinessLicenseRequest request) {
         try {
@@ -1075,6 +1371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyVATInvoice  VerifyVATInvoiceRequest
+     * @return VerifyVATInvoiceResponse
+     */
     @Override
     public CompletableFuture<VerifyVATInvoiceResponse> verifyVATInvoice(VerifyVATInvoiceRequest request) {
         try {
