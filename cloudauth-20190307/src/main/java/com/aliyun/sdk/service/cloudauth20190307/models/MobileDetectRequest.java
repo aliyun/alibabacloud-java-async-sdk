@@ -16,11 +16,11 @@ public class MobileDetectRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Mobiles")
     private String mobiles;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ParamType")
     private String paramType;
 
@@ -94,7 +94,7 @@ public class MobileDetectRequest extends Request {
          * Mobiles.
          */
         public Builder mobiles(String mobiles) {
-            this.putQueryParameter("Mobiles", mobiles);
+            this.putBodyParameter("Mobiles", mobiles);
             this.mobiles = mobiles;
             return this;
         }
@@ -103,7 +103,7 @@ public class MobileDetectRequest extends Request {
          * ParamType.
          */
         public Builder paramType(String paramType) {
-            this.putQueryParameter("ParamType", paramType);
+            this.putBodyParameter("ParamType", paramType);
             this.paramType = paramType;
             return this;
         }

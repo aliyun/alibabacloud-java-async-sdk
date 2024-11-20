@@ -121,15 +121,19 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
      * <p>DescribeFaceGuardRiskResponseBody</p>
      */
     public static class ResultObject extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("RiakTags")
-        private String riakTags;
+        @com.aliyun.core.annotation.NameInMap("CertifyId")
+        private String certifyId;
 
         @com.aliyun.core.annotation.NameInMap("RiskExtends")
         private String riskExtends;
 
+        @com.aliyun.core.annotation.NameInMap("RiskTags")
+        private String riskTags;
+
         private ResultObject(Builder builder) {
-            this.riakTags = builder.riakTags;
+            this.certifyId = builder.certifyId;
             this.riskExtends = builder.riskExtends;
+            this.riskTags = builder.riskTags;
         }
 
         public static Builder builder() {
@@ -141,10 +145,10 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         }
 
         /**
-         * @return riakTags
+         * @return certifyId
          */
-        public String getRiakTags() {
-            return this.riakTags;
+        public String getCertifyId() {
+            return this.certifyId;
         }
 
         /**
@@ -154,15 +158,23 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
             return this.riskExtends;
         }
 
+        /**
+         * @return riskTags
+         */
+        public String getRiskTags() {
+            return this.riskTags;
+        }
+
         public static final class Builder {
-            private String riakTags; 
+            private String certifyId; 
             private String riskExtends; 
+            private String riskTags; 
 
             /**
-             * RiakTags.
+             * CertifyId.
              */
-            public Builder riakTags(String riakTags) {
-                this.riakTags = riakTags;
+            public Builder certifyId(String certifyId) {
+                this.certifyId = certifyId;
                 return this;
             }
 
@@ -171,6 +183,14 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
              */
             public Builder riskExtends(String riskExtends) {
                 this.riskExtends = riskExtends;
+                return this;
+            }
+
+            /**
+             * RiskTags.
+             */
+            public Builder riskTags(String riskTags) {
+                this.riskTags = riskTags;
                 return this;
             }
 

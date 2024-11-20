@@ -16,11 +16,11 @@ public class MobileOnlineTimeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ParamType")
     private String paramType;
 
@@ -94,7 +94,7 @@ public class MobileOnlineTimeRequest extends Request {
          * Mobile.
          */
         public Builder mobile(String mobile) {
-            this.putQueryParameter("Mobile", mobile);
+            this.putBodyParameter("Mobile", mobile);
             this.mobile = mobile;
             return this;
         }
@@ -103,7 +103,7 @@ public class MobileOnlineTimeRequest extends Request {
          * ParamType.
          */
         public Builder paramType(String paramType) {
-            this.putQueryParameter("ParamType", paramType);
+            this.putBodyParameter("ParamType", paramType);
             this.paramType = paramType;
             return this;
         }

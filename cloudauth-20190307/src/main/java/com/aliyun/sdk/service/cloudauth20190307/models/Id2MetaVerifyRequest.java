@@ -16,15 +16,15 @@ public class Id2MetaVerifyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IdentifyNum")
     private String identifyNum;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ParamType")
     private String paramType;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
@@ -108,7 +108,7 @@ public class Id2MetaVerifyRequest extends Request {
          * IdentifyNum.
          */
         public Builder identifyNum(String identifyNum) {
-            this.putQueryParameter("IdentifyNum", identifyNum);
+            this.putBodyParameter("IdentifyNum", identifyNum);
             this.identifyNum = identifyNum;
             return this;
         }
@@ -117,7 +117,7 @@ public class Id2MetaVerifyRequest extends Request {
          * ParamType.
          */
         public Builder paramType(String paramType) {
-            this.putQueryParameter("ParamType", paramType);
+            this.putBodyParameter("ParamType", paramType);
             this.paramType = paramType;
             return this;
         }
@@ -126,7 +126,7 @@ public class Id2MetaVerifyRequest extends Request {
          * UserName.
          */
         public Builder userName(String userName) {
-            this.putQueryParameter("UserName", userName);
+            this.putBodyParameter("UserName", userName);
             this.userName = userName;
             return this;
         }
