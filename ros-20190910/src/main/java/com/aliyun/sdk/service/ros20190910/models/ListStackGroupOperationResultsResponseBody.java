@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackGroupOperationResultsResponseBody} extends {@link TeaModel}
  *
  * <p>ListStackGroupOperationResultsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the results of the operation.
+         * <p>The details of the results of the operation.</p>
          */
         public Builder stackGroupOperationResults(java.util.List < StackGroupOperationResults> stackGroupOperationResults) {
             this.stackGroupOperationResults = stackGroupOperationResults;
@@ -117,7 +127,10 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of results.
+         * <p>The total number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListStackGroupOperationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStackGroupOperationResultsResponseBody</p>
+     */
     public static class StackGroupOperationResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -205,13 +224,17 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * The ID of the account to which the stack instance belongs.
-             * <p>
+             * <p>The ID of the account to which the stack instance belongs.</p>
+             * <ul>
+             * <li>If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.</li>
+             * <li>If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.</li>
+             * </ul>
+             * <blockquote>
+             * <p> For more information about the account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
+             * </blockquote>
              * 
-             * *   If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.
-             * *   If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.
-             * 
-             * >  For more information about the account, see [Overview](~~154578~~).
+             * <strong>example:</strong>
+             * <p>175458090349****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -219,10 +242,13 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The folder ID of the resource directory.
-             * <p>
+             * <p>The folder ID of the resource directory.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the stack group is granted service-managed permissions.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the stack group is granted service-managed permissions.
+             * <strong>example:</strong>
+             * <p>&quot;fd-4PvlVLOL8v&quot;</p>
              */
             public Builder rdFolderId(String rdFolderId) {
                 this.rdFolderId = rdFolderId;
@@ -230,7 +256,10 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the stack instance.
+             * <p>The region ID of the stack instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -238,16 +267,18 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the operation.
-             * <p>
+             * <p>The status of the operation.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RUNNING: The operation is being performed.</li>
+             * <li>SUCCEEDED: The operation succeeded.</li>
+             * <li>FAILED: The operation failed.</li>
+             * <li>STOPPING: The operation is being stopped.</li>
+             * <li>STOPPED: The operation is stopped.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   RUNNING: The operation is being performed.
-             * *   SUCCEEDED: The operation succeeded.
-             * *   FAILED: The operation failed.
-             * *   STOPPING: The operation is being stopped.
-             * *   STOPPED: The operation is stopped.
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -255,10 +286,13 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the operation is in a specific state.
-             * <p>
+             * <p>The reason why the operation is in a specific state.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when stack instances are in the OUTDATED state.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when stack instances are in the OUTDATED state.
+             * <strong>example:</strong>
+             * <p>User initiated operation</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

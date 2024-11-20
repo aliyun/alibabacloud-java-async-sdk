@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListStackGroupsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The stack groups.
+         * <p>The stack groups.</p>
          */
         public Builder stackGroups(java.util.List < StackGroups> stackGroups) {
             this.stackGroups = stackGroups;
@@ -117,7 +127,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of stack groups.
+         * <p>The total number of stack groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListStackGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStackGroupsResponseBody</p>
+     */
     public static class AutoDeployment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -169,13 +188,15 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private Boolean retainStacksOnAccountRemoval; 
 
             /**
-             * Indicates whether automatic deployment is enabled.
-             * <p>
+             * <p>Indicates whether automatic deployment is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: Automatic deployment is enabled. If you add a member to the folder to which the stack group belongs after automatic deployment is enabled, Resource Orchestration Service (ROS) automatically adds the stack instances in the stack group to the specified region of the member. If you delete the member from the folder, ROS automatically deletes the stack instances in the stack group from the specified region of the member.</li>
+             * <li>false: Automatic deployment is disabled. After you disable automatic deployment, the stack instances remain unchanged when you change the member in the folder.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   true: Automatic deployment is enabled. If you add a member to the folder to which the stack group belongs after automatic deployment is enabled, Resource Orchestration Service (ROS) automatically adds the stack instances in the stack group to the specified region of the member. If you delete the member from the folder, ROS automatically deletes the stack instances in the stack group from the specified region of the member.
-             * *   false: Automatic deployment is disabled. After you disable automatic deployment, the stack instances remain unchanged when you change the member in the folder.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -183,15 +204,18 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the stacks within a member are retained when you delete the member from the folder.
-             * <p>
+             * <p>Indicates whether the stacks within a member are retained when you delete the member from the folder.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only if Enabled is set to true.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   true
-             * *   false
-             * 
-             * > This parameter is returned only if Enabled is set to true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder retainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
                 this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
@@ -205,6 +229,12 @@ public class ListStackGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListStackGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStackGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -244,7 +274,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag that is added to the stack group.
+             * <p>The key of the tag that is added to the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usage1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -252,7 +285,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag that is added to the stack group.
+             * <p>The value of the tag that is added to the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -266,6 +302,12 @@ public class ListStackGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListStackGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStackGroupsResponseBody</p>
+     */
     public static class StackGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoDeployment")
         private AutoDeployment autoDeployment;
@@ -425,7 +467,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The information about automatic deployment settings.
+             * <p>The information about automatic deployment settings.</p>
              */
             public Builder autoDeployment(AutoDeployment autoDeployment) {
                 this.autoDeployment = autoDeployment;
@@ -441,7 +483,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the stack group.
+             * <p>The description of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My Stack Group</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -449,7 +494,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the most recent successful drift detection was performed on the stack group.
+             * <p>The time when the most recent successful drift detection was performed on the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-27T07:47:47</p>
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -457,15 +505,18 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The permission model of the stack group.
-             * <p>
+             * <p>The permission model of the stack group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SELF_MANAGED</li>
+             * <li>SERVICE_MANAGED</li>
+             * </ul>
+             * <blockquote>
+             * <p>For more information about the permission models of stack groups, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   SELF_MANAGED
-             * *   SERVICE_MANAGED
-             * 
-             * > For more information about the permission models of stack groups, see [Overview](~~154578~~).
+             * <strong>example:</strong>
+             * <p>SELF_MANAGED</p>
              */
             public Builder permissionModel(String permissionModel) {
                 this.permissionModel = permissionModel;
@@ -473,7 +524,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzawhxxcj****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -481,14 +535,16 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The drift state of the stack group on which the most recent successful drift detection was performed.
-             * <p>
+             * <p>The drift state of the stack group on which the most recent successful drift detection was performed.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DRIFTED: The stack group has drifted.</li>
+             * <li>NOT_CHECKED: No drift detection is performed on the stack group.</li>
+             * <li>IN_SYNC: No drifts are detected on the stack group.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   DRIFTED: The stack group has drifted.
-             * *   NOT_CHECKED: No drift detection is performed on the stack group.
-             * *   IN_SYNC: No drifts are detected on the stack group.
+             * <strong>example:</strong>
+             * <p>IN_SYNC</p>
              */
             public Builder stackGroupDriftStatus(String stackGroupDriftStatus) {
                 this.stackGroupDriftStatus = stackGroupDriftStatus;
@@ -496,7 +552,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack group.
+             * <p>The ID of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd0ddef9-9540-4b42-a464-94f77835****</p>
              */
             public Builder stackGroupId(String stackGroupId) {
                 this.stackGroupId = stackGroupId;
@@ -504,7 +563,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stack group.
+             * <p>The name of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyStackGroup</p>
              */
             public Builder stackGroupName(String stackGroupName) {
                 this.stackGroupName = stackGroupName;
@@ -512,13 +574,15 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stack group.
-             * <p>
+             * <p>The state of the stack group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ACTIVE</li>
+             * <li>DELETED</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   ACTIVE
-             * *   DELETED
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -526,7 +590,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the stack group.
+             * <p>The tags that are added to the stack group.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

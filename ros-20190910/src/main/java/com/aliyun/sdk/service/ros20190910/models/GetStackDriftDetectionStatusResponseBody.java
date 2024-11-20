@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackDriftDetectionStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetStackDriftDetectionStatusResponseBody</p>
@@ -121,7 +122,10 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * The ID of the drift detection operation.
+         * <p>The ID of the drift detection operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7044f0d-6f2e-4128-a307-4524ef88****</p>
          */
         public Builder driftDetectionId(String driftDetectionId) {
             this.driftDetectionId = driftDetectionId;
@@ -129,12 +133,15 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The drift detection status. Valid values:
-         * <p>
+         * <p>The drift detection status. Valid values:</p>
+         * <ul>
+         * <li>DETECTION_COMPLETE: The drift detection operation has been completed for all resources that support drift detection in the stack.</li>
+         * <li>DETECTION_FAILED: The stack drift detection operation has failed for at least one resource in the stack.</li>
+         * <li>DETECTION_IN_PROGRESS: The stack drift detection operation is in progress.</li>
+         * </ul>
          * 
-         * *   DETECTION_COMPLETE: The drift detection operation has been completed for all resources that support drift detection in the stack.
-         * *   DETECTION_FAILED: The stack drift detection operation has failed for at least one resource in the stack.
-         * *   DETECTION_IN_PROGRESS: The stack drift detection operation is in progress.
+         * <strong>example:</strong>
+         * <p>DETECTION_COMPLETE</p>
          */
         public Builder driftDetectionStatus(String driftDetectionStatus) {
             this.driftDetectionStatus = driftDetectionStatus;
@@ -142,7 +149,10 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The reason why the stack drift detection operation has its current status.
+         * <p>The reason why the stack drift detection operation has its current status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Detect stack drift successfully</p>
          */
         public Builder driftDetectionStatusReason(String driftDetectionStatusReason) {
             this.driftDetectionStatusReason = driftDetectionStatusReason;
@@ -150,7 +160,10 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the stack drift detection operation was initiated.
+         * <p>The time when the stack drift detection operation was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-27T07:47:47</p>
          */
         public Builder driftDetectionTime(String driftDetectionTime) {
             this.driftDetectionTime = driftDetectionTime;
@@ -158,7 +171,10 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of stack resources that have drifted.
+         * <p>The total number of stack resources that have drifted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driftedStackResourceCount(Integer driftedStackResourceCount) {
             this.driftedStackResourceCount = driftedStackResourceCount;
@@ -166,7 +182,10 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,12 +193,15 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The drift status of the stack. Valid values:
-         * <p>
+         * <p>The drift status of the stack. Valid values:</p>
+         * <ul>
+         * <li>DRIFTED: The actual configuration of the stack differs, or has drifted, from its expected template configuration. A stack is considered to have drifted if one or more of its resources have drifted.</li>
+         * <li>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</li>
+         * <li>IN_SYNC: The current configuration of each supported resource matches its expected template configuration. A stack with no resources that support drift detection also has a status of IN_SYNC.</li>
+         * </ul>
          * 
-         * *   DRIFTED: The actual configuration of the stack differs, or has drifted, from its expected template configuration. A stack is considered to have drifted if one or more of its resources have drifted.
-         * *   NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.
-         * *   IN_SYNC: The current configuration of each supported resource matches its expected template configuration. A stack with no resources that support drift detection also has a status of IN_SYNC.
+         * <strong>example:</strong>
+         * <p>DRIFTED</p>
          */
         public Builder stackDriftStatus(String stackDriftStatus) {
             this.stackDriftStatus = stackDriftStatus;
@@ -187,7 +209,10 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;

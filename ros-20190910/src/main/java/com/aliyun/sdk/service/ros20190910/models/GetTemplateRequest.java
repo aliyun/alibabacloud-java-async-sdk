@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetTemplateRequest</p>
@@ -165,10 +166,13 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the change set.
-         * <p>
+         * <p>The ID of the change set.</p>
+         * <blockquote>
+         * <p>You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
+         * </blockquote>
          * 
-         * > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+         * <strong>example:</strong>
+         * <p>1f6521a4-05af-4975-afe9-bc4b45ad****</p>
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -177,13 +181,17 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the shared information about the template. Valid values:
-         * <p>
+         * <p>Specifies whether to query the shared information about the template. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only the template owner can query the shared information of a template.</p>
+         * </blockquote>
          * 
-         * *   Enabled
-         * *   Disabled (default)
-         * 
-         * > Only the template owner can query the shared information of a template.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder includePermission(String includePermission) {
             this.putQueryParameter("IncludePermission", includePermission);
@@ -192,13 +200,17 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the information about tags. Valid values:
-         * <p>
+         * <p>Specifies whether to query the information about tags. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter takes effect only if you specify TemplateId.</p>
+         * </blockquote>
          * 
-         * *   Enabled
-         * *   Disabled (default)
-         * 
-         * > This parameter takes effect only if you specify TemplateId.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder includeTags(String includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -207,7 +219,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack or stack group that uses the template. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,10 +231,13 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The name of the stack group.
-         * <p>
+         * <p>The name of the stack group.</p>
+         * <blockquote>
+         * <p>You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
+         * </blockquote>
          * 
-         * > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -228,10 +246,13 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
-         * <p>
+         * <p>The ID of the stack.</p>
+         * <blockquote>
+         * <p>You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
+         * </blockquote>
          * 
-         * > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -240,12 +261,14 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the template.
-         * <p>
+         * <p>The ID of the template.</p>
+         * <p>This parameter applies to shared and private templates. If the template is a shared template, the value of TemplateId is the same as the value of TemplateARN. You can use the template ID to query a shared template.</p>
+         * <blockquote>
+         * <p>You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
+         * </blockquote>
          * 
-         * This parameter applies to shared and private templates. If the template is a shared template, the value of TemplateId is the same as the value of TemplateARN. You can use the template ID to query a shared template.
-         * 
-         * > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -254,13 +277,15 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The stage of the template. This parameter takes effect only if you specify StackId, ChangeSetId, or StackGroupName.
-         * <p>
+         * <p>The stage of the template. This parameter takes effect only if you specify StackId, ChangeSetId, or StackGroupName.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Processed (default): returns the processed template.</li>
+         * <li>Original: returns the original template.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Processed (default): returns the processed template.
-         * *   Original: returns the original template.
+         * <strong>example:</strong>
+         * <p>Processed</p>
          */
         public Builder templateStage(String templateStage) {
             this.putQueryParameter("TemplateStage", templateStage);
@@ -269,11 +294,11 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter takes effect only if you specify TemplateId.\
-         * <p>
-         * If the template is a shared template, you can specify this parameter only if VersionOption is set to AllVersions. For more information, see [SetTemplatePermission](~~194768~~).
+         * <p>The version of the template. This parameter takes effect only if you specify TemplateId.<br>If the template is a shared template, you can specify this parameter only if VersionOption is set to AllVersions. For more information, see <a href="https://help.aliyun.com/document_detail/194768.html">SetTemplatePermission</a>.</p>
+         * <p>Valid values: v1 to v100.</p>
          * 
-         * Valid values: v1 to v100.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

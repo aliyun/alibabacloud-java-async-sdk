@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteTemplateRequest</p>
@@ -54,7 +55,11 @@ public class DeleteTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the template. This parameter applies to only private templates.
+         * <p>The ID of the template. This parameter applies to only private templates.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

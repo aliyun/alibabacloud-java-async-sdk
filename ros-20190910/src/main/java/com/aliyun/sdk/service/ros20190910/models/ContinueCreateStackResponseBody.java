@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ContinueCreateStackResponseBody} extends {@link TeaModel}
  *
  * <p>ContinueCreateStackResponseBody</p>
@@ -61,7 +62,7 @@ public class ContinueCreateStackResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * The validation result.
+         * <p>The validation result.</p>
          */
         public Builder dryRunResult(DryRunResult dryRunResult) {
             this.dryRunResult = dryRunResult;
@@ -69,7 +70,10 @@ public class ContinueCreateStackResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class ContinueCreateStackResponseBody extends TeaModel {
         }
 
         /**
-         * The stack ID.
+         * <p>The stack ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -90,6 +97,12 @@ public class ContinueCreateStackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ContinueCreateStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>ContinueCreateStackResponseBody</p>
+     */
     public static class DryRunResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParametersAllowedToBeModified")
         private java.util.List < String > parametersAllowedToBeModified;
@@ -141,7 +154,7 @@ public class ContinueCreateStackResponseBody extends TeaModel {
             private java.util.List < String > parametersNotAllowedToBeModified; 
 
             /**
-             * The parameters that can be modified.
+             * <p>The parameters that can be modified.</p>
              */
             public Builder parametersAllowedToBeModified(java.util.List < String > parametersAllowedToBeModified) {
                 this.parametersAllowedToBeModified = parametersAllowedToBeModified;
@@ -149,7 +162,7 @@ public class ContinueCreateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that can be modified under specific conditions.
+             * <p>The parameters that can be modified under specific conditions.</p>
              */
             public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
                 this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
@@ -157,7 +170,7 @@ public class ContinueCreateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that cannot be modified.
+             * <p>The parameters that cannot be modified.</p>
              */
             public Builder parametersNotAllowedToBeModified(java.util.List < String > parametersNotAllowedToBeModified) {
                 this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;

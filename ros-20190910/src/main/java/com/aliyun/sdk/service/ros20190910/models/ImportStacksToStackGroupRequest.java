@@ -7,14 +7,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DetectStackGroupDriftRequest} extends {@link RequestModel}
+ * {@link ImportStacksToStackGroupRequest} extends {@link RequestModel}
  *
- * <p>DetectStackGroupDriftRequest</p>
+ * <p>ImportStacksToStackGroupRequest</p>
  */
-public class DetectStackGroupDriftRequest extends Request {
+public class ImportStacksToStackGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationDescription")
+    private String operationDescription;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationPreferences")
@@ -26,15 +30,27 @@ public class DetectStackGroupDriftRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryFolderIds")
+    private java.util.List < String > resourceDirectoryFolderIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackArns")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List < String > stackArns;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackGroupName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String stackGroupName;
 
-    private DetectStackGroupDriftRequest(Builder builder) {
+    private ImportStacksToStackGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.operationDescription = builder.operationDescription;
         this.operationPreferences = builder.operationPreferences;
         this.regionId = builder.regionId;
+        this.resourceDirectoryFolderIds = builder.resourceDirectoryFolderIds;
+        this.stackArns = builder.stackArns;
         this.stackGroupName = builder.stackGroupName;
     }
 
@@ -42,7 +58,7 @@ public class DetectStackGroupDriftRequest extends Request {
         return new Builder();
     }
 
-    public static DetectStackGroupDriftRequest create() {
+    public static ImportStacksToStackGroupRequest create() {
         return builder().build();
     }
 
@@ -56,6 +72,13 @@ public class DetectStackGroupDriftRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return operationDescription
+     */
+    public String getOperationDescription() {
+        return this.operationDescription;
     }
 
     /**
@@ -73,37 +96,52 @@ public class DetectStackGroupDriftRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryFolderIds
+     */
+    public java.util.List < String > getResourceDirectoryFolderIds() {
+        return this.resourceDirectoryFolderIds;
+    }
+
+    /**
+     * @return stackArns
+     */
+    public java.util.List < String > getStackArns() {
+        return this.stackArns;
+    }
+
+    /**
      * @return stackGroupName
      */
     public String getStackGroupName() {
         return this.stackGroupName;
     }
 
-    public static final class Builder extends Request.Builder<DetectStackGroupDriftRequest, Builder> {
+    public static final class Builder extends Request.Builder<ImportStacksToStackGroupRequest, Builder> {
         private String clientToken; 
+        private String operationDescription; 
         private java.util.Map < String, ? > operationPreferences; 
         private String regionId; 
+        private java.util.List < String > resourceDirectoryFolderIds; 
+        private java.util.List < String > stackArns; 
         private String stackGroupName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DetectStackGroupDriftRequest request) {
+        private Builder(ImportStacksToStackGroupRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.operationDescription = request.operationDescription;
             this.operationPreferences = request.operationPreferences;
             this.regionId = request.regionId;
+            this.resourceDirectoryFolderIds = request.resourceDirectoryFolderIds;
+            this.stackArns = request.stackArns;
             this.stackGroupName = request.stackGroupName;
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
-         * <p>The value can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123e4567-e89b-12d3-a456-42665544****</p>
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -112,34 +150,16 @@ public class DetectStackGroupDriftRequest extends Request {
         }
 
         /**
-         * <p>The operation settings, in JSON format. The following fields are supported:</p>
-         * <ul>
-         * <li>FailureToleranceCount</li>
-         * </ul>
-         * <p>The maximum number of stack group operation failures that can occur. In a stack group operation, if the total number of failures does not exceed the FailureToleranceCount value, the operation succeeds. Otherwise, the operation fails.</p>
-         * <p>If FailureToleranceCount is not specified, the default value 0 is used. You can specify one of FailureToleranceCount or FailureTolerancePercentage parameters, but you cannot specify both of them.</p>
-         * <p>Valid values: 0 to 20.</p>
-         * <ul>
-         * <li>FailureTolerancePercentage</li>
-         * </ul>
-         * <p>The percentage of stack group operation failures that can occur. In a stack group operation, if the percentage of failures does not exceed the FailureTolerancePercentage value, the operation succeeds. Otherwise, the operation fails.</p>
-         * <p>You can specify one of FailureToleranceCount or FailureTolerancePercentage parameters, but you cannot specify both of them.</p>
-         * <p>Valid values: 0 to 100.</p>
-         * <ul>
-         * <li>MaxConcurrentCount</li>
-         * </ul>
-         * <p>The maximum number of target accounts in which a drift detection operation can be performed at a time.</p>
-         * <p>You can specify one of MaxConcurrentCount or MaxConcurrentPercentage parameters, but you cannot specify both of them.</p>
-         * <p>Valid values: 1 to 20.</p>
-         * <ul>
-         * <li>MaxConcurrentPercentage</li>
-         * </ul>
-         * <p>The maximum percentage of target accounts in which a drift detection operation can be performed at a time.</p>
-         * <p>You can specify one of MaxConcurrentCount or MaxConcurrentPercentage parameters, but you cannot specify both of them.</p>
-         * <p>Valid values: 1 to 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;FailureToleranceCount&quot;: 1, &quot;MaxConcurrentCount&quot;: 2}</p>
+         * OperationDescription.
+         */
+        public Builder operationDescription(String operationDescription) {
+            this.putQueryParameter("OperationDescription", operationDescription);
+            this.operationDescription = operationDescription;
+            return this;
+        }
+
+        /**
+         * OperationPreferences.
          */
         public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
             String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
@@ -149,7 +169,6 @@ public class DetectStackGroupDriftRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the stack group. You can call the <a href="~~131035#doc-api-ROS-DescribeRegions~~" title="Queries the DescribeRegions list of a region.">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,8 +181,26 @@ public class DetectStackGroupDriftRequest extends Request {
         }
 
         /**
-         * <p>The name of the stack group. The name must be unique in a region.</p>
-         * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
+         * ResourceDirectoryFolderIds.
+         */
+        public Builder resourceDirectoryFolderIds(java.util.List < String > resourceDirectoryFolderIds) {
+            String resourceDirectoryFolderIdsShrink = shrink(resourceDirectoryFolderIds, "ResourceDirectoryFolderIds", "json");
+            this.putQueryParameter("ResourceDirectoryFolderIds", resourceDirectoryFolderIdsShrink);
+            this.resourceDirectoryFolderIds = resourceDirectoryFolderIds;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder stackArns(java.util.List < String > stackArns) {
+            String stackArnsShrink = shrink(stackArns, "StackArns", "json");
+            this.putQueryParameter("StackArns", stackArnsShrink);
+            this.stackArns = stackArns;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,8 +213,8 @@ public class DetectStackGroupDriftRequest extends Request {
         }
 
         @Override
-        public DetectStackGroupDriftRequest build() {
-            return new DetectStackGroupDriftRequest(this);
+        public ImportStacksToStackGroupRequest build() {
+            return new ImportStacksToStackGroupRequest(this);
         } 
 
     } 

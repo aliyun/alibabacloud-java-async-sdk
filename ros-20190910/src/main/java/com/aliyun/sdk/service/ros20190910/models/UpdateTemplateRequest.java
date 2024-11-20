@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateTemplateRequest</p>
@@ -152,7 +153,10 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * The description of the template. It can be up to 256 characters in length.
+         * <p>The description of the template. It can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>It is a demo.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -188,7 +192,11 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
+         * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -197,10 +205,11 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The name of the template.
-         * <p>
+         * <p>The name of the template.</p>
+         * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
          * 
-         * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -209,12 +218,14 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 524,288 bytes in length, and the URL can be up to 1,024 bytes in length.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 524,288 bytes in length, and the URL can be up to 1,024 bytes in length.</p>
+         * <blockquote>
+         * <p> If the region of the OSS bucket is not specified, the RegionId value is used.</p>
+         * </blockquote>
+         * <p>You can specify only one of the TemplateBody and TemplateURL parameters.</p>
          * 
-         * >  If the region of the OSS bucket is not specified, the RegionId value is used.
-         * 
-         * You can specify only one of the TemplateBody and TemplateURL parameters.
+         * <strong>example:</strong>
+         * <p>oss://ros/template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);

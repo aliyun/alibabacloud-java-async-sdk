@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypeVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListResourceTypeVersionsRequest</p>
@@ -54,7 +55,11 @@ public class ListResourceTypeVersionsRequest extends Request {
         } 
 
         /**
-         * The resource type.
+         * <p>The resource type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

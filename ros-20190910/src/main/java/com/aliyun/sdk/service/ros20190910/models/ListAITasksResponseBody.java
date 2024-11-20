@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAITasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListAITasksResponseBody</p>
@@ -114,7 +115,10 @@ public class ListAITasksResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U12WEI6Ro2ol3wA54rBNS3Cltv2VJyA+7hP4GqbIOhmWU5mWU9ZE3cXLgDaH4KSMRfIYcIVrvtHaAzCoyfo7VQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -151,6 +155,12 @@ public class ListAITasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAITasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAITasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

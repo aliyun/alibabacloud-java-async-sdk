@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateScratchesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTemplateScratchesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1C09606-C58B-558F-9B4E-5BF263D17D09</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         }
 
         /**
-         * The resource scenarios.
+         * <p>The resource scenarios.</p>
          */
         public Builder templateScratches(java.util.List < TemplateScratches> templateScratches) {
             this.templateScratches = templateScratches;
@@ -117,7 +127,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of scenarios.
+         * <p>The total number of scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplateScratchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateScratchesResponseBody</p>
+     */
     public static class PreferenceParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
@@ -169,7 +188,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The parameter name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DeletionPolicy</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -177,7 +199,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Retain</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -191,6 +216,12 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTemplateScratchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateScratchesResponseBody</p>
+     */
     public static class SourceResourceGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -230,7 +261,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private java.util.List < String > resourceTypeFilter; 
 
             /**
-             * The ID of the source resource group.
+             * <p>The ID of the source resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzawhxxc****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -238,7 +272,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types for filtering resources.
+             * <p>The resource types for filtering resources.</p>
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -252,6 +286,12 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTemplateScratchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateScratchesResponseBody</p>
+     */
     public static class SourceResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -291,7 +331,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m5eauuq80anx59v28****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -299,7 +342,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -313,6 +359,12 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTemplateScratchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateScratchesResponseBody</p>
+     */
     public static class SourceTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceTags")
         private java.util.Map < String, ? > resourceTags;
@@ -352,7 +404,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private java.util.List < String > resourceTypeFilter; 
 
             /**
-             * The source tags.
+             * <p>The source tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;: &quot;b&quot;}</p>
              */
             public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
                 this.resourceTags = resourceTags;
@@ -360,7 +415,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types for filtering resources.
+             * <p>The resource types for filtering resources.</p>
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -374,6 +429,12 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTemplateScratchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateScratchesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -413,7 +474,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the resource scenario.
+             * <p>The tag key of the resource scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usage1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -421,7 +485,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the resource scenario.
+             * <p>The tag value of the resource scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -435,6 +502,12 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTemplateScratchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateScratchesResponseBody</p>
+     */
     public static class TemplateScratches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -630,10 +703,11 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the resource scenario was created.
-             * <p>
+             * <p>The time when the resource scenario was created.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2021-12-07T08:06:44</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -641,7 +715,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the resource scenario.
+             * <p>The description of the resource scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the scenario.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -649,10 +726,13 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The status code of the resource scenario that failed to be generated.
-             * <p>
+             * <p>The status code of the resource scenario that failed to be generated.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of Status is GENERATE_FAILED.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the value of Status is GENERATE_FAILED.
+             * <strong>example:</strong>
+             * <p>InvalidZoneId</p>
              */
             public Builder failedCode(String failedCode) {
                 this.failedCode = failedCode;
@@ -660,12 +740,15 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The policy based on which the logical ID is generated. Valid values:
-             * <p>
+             * <p>The policy based on which the logical ID is generated. Valid values:</p>
+             * <ul>
+             * <li>LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</li>
+             * <li>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</li>
+             * <li>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</li>
+             * </ul>
              * 
-             * *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
-             * *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
-             * *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
+             * <strong>example:</strong>
+             * <p>LongTypePrefixAndIndexSuffix</p>
              */
             public Builder logicalIdStrategy(String logicalIdStrategy) {
                 this.logicalIdStrategy = logicalIdStrategy;
@@ -673,7 +756,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The preference parameters of the resource scenario.
+             * <p>The preference parameters of the resource scenario.</p>
              */
             public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
                 this.preferenceParameters = preferenceParameters;
@@ -681,7 +764,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm4nxcvht4pmi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -689,7 +775,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The source resource group.
+             * <p>The source resource group.</p>
              */
             public Builder sourceResourceGroup(SourceResourceGroup sourceResourceGroup) {
                 this.sourceResourceGroup = sourceResourceGroup;
@@ -697,7 +783,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The source resources.
+             * <p>The source resources.</p>
              */
             public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
                 this.sourceResources = sourceResources;
@@ -705,7 +791,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The source tag.
+             * <p>The source tag.</p>
              */
             public Builder sourceTag(SourceTag sourceTag) {
                 this.sourceTag = sourceTag;
@@ -713,7 +799,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the resource scenario.
+             * <p>The state of the resource scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GENERATE_COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -721,10 +810,13 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the resource scenario failed to be generated.
-             * <p>
+             * <p>The reason why the resource scenario failed to be generated.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of Status is GENERATE_FAILED.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the value of Status is GENERATE_FAILED.
+             * <strong>example:</strong>
+             * <p>Resource ALIYUN::ECS::VPC vpc-m5eauuq80anx59v28**** could not be found for template scratch.</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -732,7 +824,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the resource scenario.
+             * <p>The tags of the resource scenario.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -740,7 +832,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource scenario.
+             * <p>The ID of the resource scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ts-48ad85d66cca4620****</p>
              */
             public Builder templateScratchId(String templateScratchId) {
                 this.templateScratchId = templateScratchId;
@@ -748,11 +843,14 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource scenario. Valid values:
-             * <p>
+             * <p>The type of the resource scenario. Valid values:</p>
+             * <ul>
+             * <li>ResourceImport: resource management</li>
+             * <li>ArchitectureReplication: resource replication</li>
+             * </ul>
              * 
-             * *   ResourceImport: resource management
-             * *   ArchitectureReplication: resource replication
+             * <strong>example:</strong>
+             * <p>ResourceImport</p>
              */
             public Builder templateScratchType(String templateScratchType) {
                 this.templateScratchType = templateScratchType;
@@ -760,10 +858,11 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource scenario was updated.
-             * <p>
+             * <p>The time when the resource scenario was updated.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2021-12-07T08:06:44</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

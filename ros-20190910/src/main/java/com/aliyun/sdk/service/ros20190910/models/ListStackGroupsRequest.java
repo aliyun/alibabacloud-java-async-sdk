@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListStackGroupsRequest</p>
@@ -124,11 +125,14 @@ public class ListStackGroupsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
-         * *   Pages start from page 1.
-         * *   Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,11 +141,14 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 50.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 50.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,7 +157,11 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -159,10 +170,13 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.
-         * <p>
+         * <p>The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.</p>
+         * <blockquote>
+         * <p>To obtain the resource group ID, go to the <strong>Resource Group</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information about a resource group</a>.</p>
+         * </blockquote>
          * 
-         * > To obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View the basic information about a resource group](~~151181~~).
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxcj****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -171,13 +185,15 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * The state of the stack group. If you do not specify this parameter, the stack groups in all states in the specified region are queried.
-         * <p>
+         * <p>The state of the stack group. If you do not specify this parameter, the stack groups in all states in the specified region are queried.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ACTIVE</li>
+         * <li>DELETED</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   ACTIVE
-         * *   DELETED
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -186,7 +202,7 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * The tags that are added to the stack group.
+         * <p>The tags that are added to the stack group.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -201,6 +217,12 @@ public class ListStackGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListStackGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>ListStackGroupsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -241,10 +263,14 @@ public class ListStackGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is added to the stack group.
-             * <p>
+             * <p>The key of the tag that is added to the stack group.</p>
+             * <blockquote>
+             * <p>Tags is optional. If you specify Tags, you must specify Tags.N.Key.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > Tags is optional. If you specify Tags, you must specify Tags.N.Key.
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -252,7 +278,10 @@ public class ListStackGroupsRequest extends Request {
             }
 
             /**
-             * The value of the tag that is added to the stack group.
+             * <p>The value of the tag that is added to the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

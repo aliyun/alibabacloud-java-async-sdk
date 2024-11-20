@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiagnosticRequest} extends {@link RequestModel}
  *
  * <p>CreateDiagnosticRequest</p>
@@ -95,10 +96,11 @@ public class CreateDiagnosticRequest extends Request {
         } 
 
         /**
-         * The keyword in the diagnosis.
-         * <p>
+         * <p>The keyword in the diagnosis.</p>
+         * <p>You can specify the ID of the stack that you want to diagnose.</p>
          * 
-         * You can specify the ID of the stack that you want to diagnose.
+         * <strong>example:</strong>
+         * <p>37A5679B-8488-5A5D-8D5C-90E66A577A5D</p>
          */
         public Builder diagnosticKey(String diagnosticKey) {
             this.putQueryParameter("DiagnosticKey", diagnosticKey);
@@ -107,7 +109,10 @@ public class CreateDiagnosticRequest extends Request {
         }
 
         /**
-         * The type of the item that is diagnosed. Set the value to Stack, which specifies that the stack is diagnosed.
+         * <p>The type of the item that is diagnosed. Set the value to Stack, which specifies that the stack is diagnosed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stack</p>
          */
         public Builder diagnosticType(String diagnosticType) {
             this.putQueryParameter("DiagnosticType", diagnosticType);
@@ -116,13 +121,15 @@ public class CreateDiagnosticRequest extends Request {
         }
 
         /**
-         * The language of the diagnostic report to be generated. Only Chinese and English are supported.
-         * <p>
+         * <p>The language of the diagnostic report to be generated. Only Chinese and English are supported.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>zh-cn</li>
+         * <li>en</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   zh-cn
-         * *   en
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -131,7 +138,10 @@ public class CreateDiagnosticRequest extends Request {
         }
 
         /**
-         * The name of the product that is diagonosed.
+         * <p>The name of the product that is diagonosed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ros</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);

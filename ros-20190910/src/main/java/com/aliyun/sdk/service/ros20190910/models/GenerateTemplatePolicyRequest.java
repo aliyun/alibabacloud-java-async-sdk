@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateTemplatePolicyRequest} extends {@link RequestModel}
  *
  * <p>GenerateTemplatePolicyRequest</p>
@@ -109,22 +110,22 @@ public class GenerateTemplatePolicyRequest extends Request {
         } 
 
         /**
-         * The type of operation N for which you want to generate the policy information.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   CreateStack: creates a stack by calling the CreateStack operation.
-         * *   UpdateStack: updates a stack by calling the UpdateStack operation.
-         * *   DeleteStack: deletes a stack by calling the DeleteStack operation.
-         * *   DetectStackDrift: detects drifts on a stack by calling the DelectStackDrift operation.
-         * *   ListStackOperationRisks: lists the risks of a deletion operation on a stack by setting the OperationType parameter to DeleteStack in the ListStackOperationRisks operation.
-         * *   GetTemplateEstimateCost: queries the estimated prices of resources that you want to use in the template by calling the GetTemplateEstimateCost operation.
-         * *   GetTemplateParameterConstraints: queries the values of parameters in the template by calling the GetTemplateParameterConstraints operation.
-         * *   ImportResourcesToStack: imports resources to a stack by setting the ChangeSetType parameter to IMPORT in the CreateChangeSet operation.
-         * *   SignalResource: sends a signal to a stack.
-         * 
-         * >  The default value is the combination of all valid values.
+         * <p>The type of operation N for which you want to generate the policy information.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CreateStack: creates a stack by calling the CreateStack operation.</li>
+         * <li>UpdateStack: updates a stack by calling the UpdateStack operation.</li>
+         * <li>DeleteStack: deletes a stack by calling the DeleteStack operation.</li>
+         * <li>DetectStackDrift: detects drifts on a stack by calling the DelectStackDrift operation.</li>
+         * <li>ListStackOperationRisks: lists the risks of a deletion operation on a stack by setting the OperationType parameter to DeleteStack in the ListStackOperationRisks operation.</li>
+         * <li>GetTemplateEstimateCost: queries the estimated prices of resources that you want to use in the template by calling the GetTemplateEstimateCost operation.</li>
+         * <li>GetTemplateParameterConstraints: queries the values of parameters in the template by calling the GetTemplateParameterConstraints operation.</li>
+         * <li>ImportResourcesToStack: imports resources to a stack by setting the ChangeSetType parameter to IMPORT in the CreateChangeSet operation.</li>
+         * <li>SignalResource: sends a signal to a stack.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is the combination of all valid values.</p>
+         * </blockquote>
          */
         public Builder operationTypes(java.util.List < String > operationTypes) {
             this.putQueryParameter("OperationTypes", operationTypes);
@@ -133,12 +134,12 @@ public class GenerateTemplatePolicyRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.
-         * <p>
+         * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.</p>
+         * <p>If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
+         * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
          * 
-         * If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * 
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</p>
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -147,10 +148,11 @@ public class GenerateTemplatePolicyRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared templates and private templates.
-         * <p>
+         * <p>The ID of the template. This parameter applies to shared templates and private templates.</p>
+         * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
          * 
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -159,14 +161,15 @@ public class GenerateTemplatePolicyRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</p>
+         * <blockquote>
+         * <p> If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
+         * </blockquote>
+         * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+         * <p>The URL can be up to 1,024 bytes in length.</p>
          * 
-         * >  If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * 
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
-         * 
-         * The URL can be up to 1,024 bytes in length.
+         * <strong>example:</strong>
+         * <p>oss://ros/template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -175,7 +178,10 @@ public class GenerateTemplatePolicyRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter takes effect only when the TemplateId parameter is specified.
+         * <p>The version of the template. This parameter takes effect only when the TemplateId parameter is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

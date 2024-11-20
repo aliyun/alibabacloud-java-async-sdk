@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStackRequest} extends {@link RequestModel}
  *
  * <p>CreateStackRequest</p>
@@ -349,10 +350,11 @@ public class CreateStackRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
          * 
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -361,15 +363,19 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The creation option for the stack. Valid values:
-         * <p>
+         * <p>The creation option for the stack. Valid values:</p>
+         * <ul>
+         * <li>KeepStackOnCreationComplete (default): After the stack is created, the stack and its resources are retained. The quota for the maximum number of stacks that can be created in ROS is consumed.</li>
+         * <li>AbandonStackOnCreationComplete: After the stack is created, the stack is deleted, but its resources are retained. The quota for the maximum number of stacks that can be created in ROS is not consumed. If the stack fails to be created, the stack is retained.</li>
+         * <li>AbandonStackOnCreationRollbackComplete: When the resources of the stack are rolled back after the stack fails to be created, the stack is deleted. The quota for the maximum number of stacks that can be created in ROS is not consumed. In other rollback scenarios, the stack is retained.</li>
+         * <li>ManuallyPay: When you create the stack, you must manually pay for the subscription resources that are used. The following resource types support manual payment: <code>ALIYUN::ECS::InstanceGroup</code>, <code>ALIYUN::RDS::DBInstance</code>, <code>ALIYUN::SLB::LoadBalancer</code>, <code>ALIYUN::VPC::EIP</code>, and <code>ALIYUN::VPC::VpnGateway</code>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can specify only one of CreateOption and CreateOptions.</p>
+         * </blockquote>
          * 
-         * *   KeepStackOnCreationComplete (default): After the stack is created, the stack and its resources are retained. The quota for the maximum number of stacks that can be created in ROS is consumed.
-         * *   AbandonStackOnCreationComplete: After the stack is created, the stack is deleted, but its resources are retained. The quota for the maximum number of stacks that can be created in ROS is not consumed. If the stack fails to be created, the stack is retained.
-         * *   AbandonStackOnCreationRollbackComplete: When the resources of the stack are rolled back after the stack fails to be created, the stack is deleted. The quota for the maximum number of stacks that can be created in ROS is not consumed. In other rollback scenarios, the stack is retained.
-         * *   ManuallyPay: When you create the stack, you must manually pay for the subscription resources that are used. The following resource types support manual payment: `ALIYUN::ECS::InstanceGroup`, `ALIYUN::RDS::DBInstance`, `ALIYUN::SLB::LoadBalancer`, `ALIYUN::VPC::EIP`, and `ALIYUN::VPC::VpnGateway`.
-         * 
-         * >  You can specify only one of CreateOption and CreateOptions.
+         * <strong>example:</strong>
+         * <p>KeepStackOnCreationComplete</p>
          */
         public Builder createOption(String createOption) {
             this.putQueryParameter("CreateOption", createOption);
@@ -378,7 +384,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The creation options for the stack.
+         * <p>The creation options for the stack.</p>
          */
         public Builder createOptions(java.util.List < String > createOptions) {
             this.putQueryParameter("CreateOptions", createOptions);
@@ -387,13 +393,17 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable deletion protection for the stack. Valid values:
-         * <p>
+         * <p>Specifies whether to enable deletion protection for the stack. Valid values:</p>
+         * <ul>
+         * <li>Enabled.</li>
+         * <li>Disabled (default). If deletion protection is disabled, you can delete the stack by using the ROS console or by calling the DeleteStack operation.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The value of DeletionProtection that you specify for the root stack applies to its nested stacks.</p>
+         * </blockquote>
          * 
-         * *   Enabled.
-         * *   Disabled (default). If deletion protection is disabled, you can delete the stack by using the ROS console or by calling the DeleteStack operation.
-         * 
-         * > The value of DeletionProtection that you specify for the root stack applies to its nested stacks.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder deletionProtection(String deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -402,13 +412,15 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable rollback for the resources when the stack fails to be created.
-         * <p>
+         * <p>Specifies whether to disable rollback for the resources when the stack fails to be created.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.putQueryParameter("DisableRollback", disableRollback);
@@ -417,34 +429,35 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The callback URLs that are used to receive stack events. Valid values:
-         * <p>
+         * <p>The callback URLs that are used to receive stack events. Valid values:</p>
+         * <ul>
+         * <li>HTTP POST URL</li>
+         * </ul>
+         * <p>Each URL can be up to 1,024 bytes in length.</p>
+         * <ul>
+         * <li>eventbridge</li>
+         * </ul>
+         * <p>When the status of a stack changes, ROS sends notifications to the EventBridge service. You can view the event information in the <a href="https://eventbridge.console.aliyun.com">EventBridge</a> console.</p>
+         * <blockquote>
+         * <p>This feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Hong Kong), and China (Zhangjiakou) regions.</p>
+         * </blockquote>
+         * <p>Maximum value of N: 5. When the status of a stack changes, ROS sends a notification to the specified URL. When rollback is enabled for the stack, notifications are sent if the stack is in the CREATE_ROLLBACK or ROLLBACK state, but are not sent if the stack is in the CREATE_FAILED, UPDATE_FAILED, or IN_PROGRESS state.<br>ROS sends notifications regardless of whether you specify the Outputs section. The following sample code provides an example on the content of a notification:</p>
+         * <pre><code>{
+         *    &quot;Outputs&quot;: [
+         *        {
+         *            &quot;Description&quot;: &quot;No description given&quot;,
+         *            &quot;OutputKey&quot;: &quot;InstanceId&quot;,
+         *            &quot;OutputValue&quot;: &quot;i-xxx&quot;
+         *        }
+         *    ],
+         *    &quot;StackId&quot;: &quot;80bd6b6c-e888-4573-ae3b-93d29113****&quot;,
+         *    &quot;StackName&quot;: &quot;test-notification-url&quot;,
+         *    &quot;Status&quot;: &quot;CREATE_COMPLETE&quot;
+         * }
+         * </code></pre>
          * 
-         * *   HTTP POST URL
-         * 
-         * Each URL can be up to 1,024 bytes in length.
-         * 
-         * *   eventbridge
-         * 
-         * When the status of a stack changes, ROS sends notifications to the EventBridge service. You can view the event information in the [EventBridge](https://eventbridge.console.aliyun.com) console.
-         * 
-         * > This feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Hong Kong), and China (Zhangjiakou) regions.
-         * 
-         * Maximum value of N: 5. When the status of a stack changes, ROS sends a notification to the specified URL. When rollback is enabled for the stack, notifications are sent if the stack is in the CREATE_ROLLBACK or ROLLBACK state, but are not sent if the stack is in the CREATE_FAILED, UPDATE_FAILED, or IN_PROGRESS state.\
-         * ROS sends notifications regardless of whether you specify the Outputs section. The following sample code provides an example on the content of a notification:
-         * 
-         *     {
-         *        "Outputs": [
-         *            {
-         *                "Description": "No description given",
-         *                "OutputKey": "InstanceId",
-         *                "OutputValue": "i-xxx"
-         *            }
-         *        ],
-         *        "StackId": "80bd6b6c-e888-4573-ae3b-93d29113****",
-         *        "StackName": "test-notification-url",
-         *        "Status": "CREATE_COMPLETE"
-         *     }
+         * <strong>example:</strong>
+         * <p><a href="http://my-site.com/ros-event">http://my-site.com/ros-event</a></p>
          */
         public Builder notificationURLs(java.util.List < String > notificationURLs) {
             this.putQueryParameter("NotificationURLs", notificationURLs);
@@ -453,15 +466,17 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The maximum number of concurrent operations that can be performed on resources.
-         * <p>
+         * <p>The maximum number of concurrent operations that can be performed on resources.</p>
+         * <p>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</li>
+         * <li>If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.
-         * 
-         * 
-         * 
-         * > -  If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
-         * > -  If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parallelism(Long parallelism) {
             this.putQueryParameter("Parallelism", parallelism);
@@ -470,7 +485,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The parameters that are defined in the template.
+         * <p>The parameters that are defined in the template.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -479,13 +494,12 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The name of the RAM role. ROS assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
-         * <p>
-         * ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.
+         * <p>The name of the RAM role. ROS assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.<br>ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.</p>
+         * <p>If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.</p>
+         * <p>The RAM role name can be up to 64 characters in length.</p>
          * 
-         * If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.
-         * 
-         * The RAM role name can be up to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>test-role</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -494,7 +508,11 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -503,10 +521,11 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you leave this parameter empty, the stack is added to the default resource group.
-         * <p>
+         * <p>The ID of the resource group. If you leave this parameter empty, the stack is added to the default resource group.</p>
+         * <p>For more information about resource groups, see the &quot;Resource group&quot; section of the <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a> topic.</p>
          * 
-         * For more information about resource groups, see the "Resource group" section of the [What is Resource Management?](~~94475~~) topic.
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -515,9 +534,11 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The name of the stack.\
-         * <p>
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a letter.
+         * <p>The name of the stack.<br>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStack</p>
          */
         public Builder stackName(String stackName) {
             this.putQueryParameter("StackName", stackName);
@@ -526,10 +547,13 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The structure that contains the stack policy body. The policy body must be 1 to 16,384 bytes in length.
-         * <p>
+         * <p>The structure that contains the stack policy body. The policy body must be 1 to 16,384 bytes in length.</p>
+         * <blockquote>
+         * <p>You can specify only one of StackPolicyBody and StackPolicyURL.</p>
+         * </blockquote>
          * 
-         * > You can specify only one of StackPolicyBody and StackPolicyURL.
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;Update:<em>&quot;, &quot;Resource&quot;: &quot;</em>&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: &quot;*&quot;}]}</p>
          */
         public Builder stackPolicyBody(String stackPolicyBody) {
             this.putQueryParameter("StackPolicyBody", stackPolicyBody);
@@ -538,12 +562,14 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
-         * <p>
+         * <p>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+         * <blockquote>
+         * <p>You can specify only one of StackPolicyBody and StackPolicyURL.</p>
+         * </blockquote>
+         * <p>The URL can be up to 1,350 bytes in length.</p>
          * 
-         * > You can specify only one of StackPolicyBody and StackPolicyURL.
-         * 
-         * The URL can be up to 1,350 bytes in length.
+         * <strong>example:</strong>
+         * <p>oss://ros-stack-policy/demo</p>
          */
         public Builder stackPolicyURL(String stackPolicyURL) {
             this.putQueryParameter("StackPolicyURL", stackPolicyURL);
@@ -552,7 +578,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the stack.
+         * <p>The tags that you want to add to the stack.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -570,10 +596,13 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The template ID. This parameter applies to shared templates and private templates.
-         * <p>
+         * <p>The template ID. This parameter applies to shared templates and private templates.</p>
+         * <blockquote>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+         * </blockquote>
          * 
-         * > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -582,12 +611,14 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The scenario ID.
-         * <p>
+         * <p>The scenario ID.</p>
+         * <p>For more information about how to query the scenario ID, see <a href="https://help.aliyun.com/document_detail/363050.html">ListTemplateScratches</a>.</p>
+         * <blockquote>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+         * </blockquote>
          * 
-         * For more information about how to query the scenario ID, see [ListTemplateScratches](~~363050~~).
-         * 
-         * > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * <strong>example:</strong>
+         * <p>ts-aa9c62feab844a6b****</p>
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -596,10 +627,11 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The region ID of the scenario. The default value is the same as the value of RegionId.
-         * <p>
+         * <p>The region ID of the scenario. The default value is the same as the value of RegionId.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder templateScratchRegionId(String templateScratchRegionId) {
             this.putQueryParameter("TemplateScratchRegionId", templateScratchRegionId);
@@ -608,10 +640,13 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+         * <blockquote>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+         * </blockquote>
          * 
-         * > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * <strong>example:</strong>
+         * <p>oss://ros-template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -620,7 +655,10 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter takes effect only when TemplateId is specified.
+         * <p>The version of the template. This parameter takes effect only when TemplateId is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -629,12 +667,15 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The timeout period for creating the stack.
-         * <p>
+         * <p>The timeout period for creating the stack.</p>
+         * <ul>
+         * <li>Default value: 60.</li>
+         * <li>Unit: minutes.</li>
+         * <li>Valid values: 10 to 1440.</li>
+         * </ul>
          * 
-         * *   Default value: 60.
-         * *   Unit: minutes.
-         * *   Valid values: 10 to 1440.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder timeoutInMinutes(Long timeoutInMinutes) {
             this.putQueryParameter("TimeoutInMinutes", timeoutInMinutes);
@@ -649,6 +690,12 @@ public class CreateStackRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateStackRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStackRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -690,13 +737,15 @@ public class CreateStackRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The key of parameter N that is defined in the template. If you do not specify the name and value of a parameter, ROS uses the default name and value that are specified in the template.
-             * <p>
+             * <p>The key of parameter N that is defined in the template. If you do not specify the name and value of a parameter, ROS uses the default name and value that are specified in the template.</p>
+             * <p>Maximum value of N: 200.<br>The name must be 1 to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <blockquote>
+             * <p>The Parameters parameter is optional. If you specify Parameters, you must specify Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Maximum value of N: 200.\
-             * The name must be 1 to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-             * 
-             * > The Parameters parameter is optional. If you specify Parameters, you must specify Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * <strong>example:</strong>
+             * <p>InstanceId</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -704,13 +753,15 @@ public class CreateStackRequest extends Request {
             }
 
             /**
-             * The value of parameter N that is defined in the template.
-             * <p>
+             * <p>The value of parameter N that is defined in the template.</p>
+             * <p>Maximum value of N: 200.<br>The value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <blockquote>
+             * <p>The Parameters parameter is optional. If you specify Parameters, you must specify Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Maximum value of N: 200.\
-             * The value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-             * 
-             * > The Parameters parameter is optional. If you specify Parameters, you must specify Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -724,6 +775,12 @@ public class CreateStackRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateStackRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStackRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -764,13 +821,18 @@ public class CreateStackRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that you want to add to the stack.
-             * <p>
+             * <p>The key of tag N that you want to add to the stack.</p>
+             * <p>Valid values of N: 1 to 20.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.</li>
+             * <li>The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</li>
+             * </ul>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 20.
-             * 
-             * > - The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.
-             * > -  The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -778,12 +840,14 @@ public class CreateStackRequest extends Request {
             }
 
             /**
-             * The value of tag N that you want to add to the stack.
-             * <p>
+             * <p>The value of tag N that you want to add to the stack.</p>
+             * <p>Valid values of N: 1 to 20.</p>
+             * <blockquote>
+             * <p>The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 20.
-             * 
-             * > The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

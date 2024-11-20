@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypesRequest} extends {@link RequestModel}
  *
  * <p>ListResourceTypesRequest</p>
@@ -81,13 +82,16 @@ public class ListResourceTypesRequest extends Request {
         } 
 
         /**
-         * The entity type. Valid values:
-         * <p>
+         * <p>The entity type. Valid values:</p>
+         * <ul>
+         * <li>All: all types of resources.</li>
+         * <li>Resource (default): regular resources. For more information, see <a href="https://help.aliyun.com/document_detail/28863.html">Resources</a>.</li>
+         * <li>DataSource: DataSource resources. For more information, see <a href="https://help.aliyun.com/document_detail/404753.html">DataSource resources</a>.</li>
+         * <li>Module: modules.</li>
+         * </ul>
          * 
-         * *   All: all types of resources.
-         * *   Resource (default): regular resources. For more information, see [Resources](~~28863~~).
-         * *   DataSource: DataSource resources. For more information, see [DataSource resources](~~404753~~).
-         * *   Module: modules.
+         * <strong>example:</strong>
+         * <p>Resource</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -96,11 +100,14 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * The provider of the resource type. Valid values:
-         * <p>
+         * <p>The provider of the resource type. Valid values:</p>
+         * <ul>
+         * <li>ROS (default): The resource type is provided by Resource Orchestration Service (ROS).</li>
+         * <li>Self: The resource type is provided by you.</li>
+         * </ul>
          * 
-         * *   ROS (default): The resource type is provided by Resource Orchestration Service (ROS).
-         * *   Self: The resource type is provided by you.
+         * <strong>example:</strong>
+         * <p>ROS</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -109,7 +116,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.
+         * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (*). You can use an asterisk (*) to perform a fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAITaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetAITaskResponseBody</p>
@@ -218,7 +219,10 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GenerateTemplate</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetResourceTypeRequest} extends {@link RequestModel}
  *
  * <p>SetResourceTypeRequest</p>
@@ -96,10 +97,13 @@ public class SetResourceTypeRequest extends Request {
         } 
 
         /**
-         * The ID of the default version. You can use this parameter to specify the default version of the resource type.
-         * <p>
+         * <p>The ID of the default version. You can use this parameter to specify the default version of the resource type.</p>
+         * <blockquote>
+         * <p>You can specify only one of the VersionId and DefaultVersionId parameters.</p>
+         * </blockquote>
          * 
-         * > You can specify only one of the VersionId and DefaultVersionId parameters.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder defaultVersionId(String defaultVersionId) {
             this.putQueryParameter("DefaultVersionId", defaultVersionId);
@@ -108,7 +112,10 @@ public class SetResourceTypeRequest extends Request {
         }
 
         /**
-         * The description of the resource type or resource type version. The description can be up to 512 characters in length.
+         * <p>The description of the resource type or resource type version. The description can be up to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>It is a demo.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -117,7 +124,11 @@ public class SetResourceTypeRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * <p>The resource type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -126,10 +137,13 @@ public class SetResourceTypeRequest extends Request {
         }
 
         /**
-         * The version ID. If you want to modify a version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is modified.
-         * <p>
+         * <p>The version ID. If you want to modify a version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is modified.</p>
+         * <blockquote>
+         * <p>You can specify only one of the VersionId and DefaultVersionId parameters.</p>
+         * </blockquote>
          * 
-         * > You can specify only one of the VersionId and DefaultVersionId parameters.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

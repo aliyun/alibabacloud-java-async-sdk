@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDiagnosticResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDiagnosticResponseBody</p>
@@ -85,7 +86,10 @@ public class DeleteDiagnosticResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forbidden</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class DeleteDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,7 +108,10 @@ public class DeleteDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to complete this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class DeleteDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91EF0DC1-3BB5-555E-AAA1-4F5C640D15DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +130,14 @@ public class DeleteDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

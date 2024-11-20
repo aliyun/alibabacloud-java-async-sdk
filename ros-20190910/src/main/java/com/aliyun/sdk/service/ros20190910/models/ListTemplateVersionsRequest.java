@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListTemplateVersionsRequest</p>
@@ -83,12 +84,12 @@ public class ListTemplateVersionsRequest extends Request {
         } 
 
         /**
-         * The maximum number of results to be returned in a single call when NextToken is used for the query.
-         * <p>
+         * <p>The maximum number of results to be returned in a single call when NextToken is used for the query.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -97,7 +98,10 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -106,7 +110,11 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The template ID. This parameter applies to shared and private templates.
+         * <p>The template ID. This parameter applies to shared and private templates.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

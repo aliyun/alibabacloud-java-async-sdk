@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAITaskEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAITaskEventsResponseBody</p>
@@ -158,7 +159,10 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****w==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -211,6 +215,12 @@ public class ListAITaskEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAITaskEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAITaskEventsResponseBody</p>
+     */
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentType")
         private String agentType;

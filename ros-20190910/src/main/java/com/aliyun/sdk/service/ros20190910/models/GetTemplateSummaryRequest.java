@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetTemplateSummaryRequest</p>
@@ -179,10 +180,11 @@ public class GetTemplateSummaryRequest extends Request {
         } 
 
         /**
-         * The ID of the change set.
-         * <p>
+         * <p>The ID of the change set.</p>
+         * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
          * 
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
+         * <strong>example:</strong>
+         * <p>1f6521a4-05af-4975-afe9-bc4b45ad****</p>
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -191,10 +193,10 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-         * <p>
-         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).\
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.<br>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).<br>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -203,7 +205,7 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The parameters that are defined in the template.
+         * <p>The parameters that are defined in the template.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -212,10 +214,11 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
-         * <p>
+         * <p>The region ID of the stack or stack group that uses the template. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter takes effect only when one of the following parameters are specified: StackId, ChangeSetId, and StackGroupName.</p>
          * 
-         * This parameter takes effect only when one of the following parameters are specified: StackId, ChangeSetId, and StackGroupName.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -224,10 +227,11 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The name of the stack group.
-         * <p>
+         * <p>The name of the stack group.</p>
+         * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
          * 
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
+         * <strong>example:</strong>
+         * <p>my-stack-group</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -236,10 +240,11 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The stack ID.
-         * <p>
+         * <p>The stack ID.</p>
+         * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
          * 
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -248,10 +253,10 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\
-         * <p>
-         * If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.\
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
+         * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.<br>If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.<br>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</p>
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -260,10 +265,11 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The template ID. This parameter applies to shared and private templates.
-         * <p>
+         * <p>The template ID. This parameter applies to shared and private templates.</p>
+         * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
          * 
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -272,14 +278,15 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</p>
+         * <blockquote>
+         * <p>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+         * </blockquote>
+         * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
+         * <p>The URL can be up to 1,024 bytes in length.</p>
          * 
-         * > If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
-         * 
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
-         * 
-         * The URL can be up to 1,024 bytes in length.
+         * <strong>example:</strong>
+         * <p>oss://ros/template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -288,7 +295,10 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter takes effect when TemplateId is specified.
+         * <p>The version of the template. This parameter takes effect when TemplateId is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -303,6 +313,12 @@ public class GetTemplateSummaryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateSummaryRequest} extends {@link TeaModel}
+     *
+     * <p>GetTemplateSummaryRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
@@ -342,12 +358,14 @@ public class GetTemplateSummaryRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of parameter N that is defined in the template. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are defined in the template.
-             * <p>
+             * <p>The name of parameter N that is defined in the template. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are defined in the template.</p>
+             * <p>Maximum value of N: 200.</p>
+             * <blockquote>
+             * <p>The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+             * </blockquote>
              * 
-             * Maximum value of N: 200.
-             * 
-             * > The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * <strong>example:</strong>
+             * <p>InstanceId</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -355,12 +373,14 @@ public class GetTemplateSummaryRequest extends Request {
             }
 
             /**
-             * The value of parameter N that is defined in the template.
-             * <p>
+             * <p>The value of parameter N that is defined in the template.</p>
+             * <p>Maximum value of N: 200.</p>
+             * <blockquote>
+             * <p>The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+             * </blockquote>
              * 
-             * Maximum value of N: 200.
-             * 
-             * > The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * <strong>example:</strong>
+             * <p>i-rotp2e20whfrs2****</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

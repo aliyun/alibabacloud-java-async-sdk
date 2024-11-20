@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTemplateScratchRequest} extends {@link RequestModel}
  *
  * <p>DeleteTemplateScratchRequest</p>
@@ -69,10 +70,12 @@ public class DeleteTemplateScratchRequest extends Request {
         } 
 
         /**
-         * The region ID of the scenario.
-         * <p>
+         * <p>The region ID of the scenario.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -81,7 +84,11 @@ public class DeleteTemplateScratchRequest extends Request {
         }
 
         /**
-         * The ID of the scenario.
+         * <p>The ID of the scenario.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ts-4f83704400994409****</p>
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);

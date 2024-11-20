@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackOperationRisksRequest} extends {@link RequestModel}
  *
  * <p>ListStackOperationRisksRequest</p>
@@ -194,7 +195,10 @@ public class ListStackOperationRisksRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). For more information, see [How to ensure idempotence](~~134212~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -203,11 +207,14 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The type of the operation of which you want to detect risks. Valid values:
-         * <p>
+         * <p>The type of the operation of which you want to detect risks. Valid values:</p>
+         * <ul>
+         * <li>DeleteStack: detects high risks that may arise in resources when you delete a stack.</li>
+         * <li>CreateStack: detects the missing permissions when you fail to create a stack.</li>
+         * </ul>
          * 
-         * *   DeleteStack: detects high risks that may arise in resources when you delete a stack.
-         * *   CreateStack: detects the missing permissions when you fail to create a stack.
+         * <strong>example:</strong>
+         * <p>DeleteStack</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -216,13 +223,15 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The name of the RAM role.
-         * <p>
+         * <p>The name of the RAM role.</p>
+         * <ul>
+         * <li>If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.</li>
+         * <li>If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.</li>
+         * </ul>
+         * <p>The name of the RAM role can be up to 64 bytes in length.</p>
          * 
-         * *   If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.
-         * *   If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.
-         * 
-         * The name of the RAM role can be up to 64 bytes in length.
+         * <strong>example:</strong>
+         * <p>test-role</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -231,7 +240,11 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,13 +253,17 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain all resources in the stack. Valid values:
-         * <p>
+         * <p>Specifies whether to retain all resources in the stack. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter takes effect only if you set OperationType to DeleteStack.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false (default)
-         * 
-         * > This parameter takes effect only if you set OperationType to DeleteStack.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder retainAllResources(Boolean retainAllResources) {
             this.putQueryParameter("RetainAllResources", retainAllResources);
@@ -255,10 +272,13 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The list of resources to retain.
-         * <p>
+         * <p>The list of resources to retain.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only if you set OperationType to DeleteStack.</p>
+         * </blockquote>
          * 
-         * > This parameter takes effect only if you set OperationType to DeleteStack.
+         * <strong>example:</strong>
+         * <p>WebServer</p>
          */
         public Builder retainResources(java.util.List < String > retainResources) {
             this.putQueryParameter("RetainResources", retainResources);
@@ -267,7 +287,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -285,10 +308,13 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
-         * <p>
+         * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+         * <blockquote>
+         * <p>You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+         * </blockquote>
          * 
-         * > You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -297,10 +323,13 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify RegionId in the URL, the region ID of the stack is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify RegionId in the URL, the region ID of the stack is used.</p>
+         * <blockquote>
+         * <p>You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+         * </blockquote>
          * 
-         * > You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * <strong>example:</strong>
+         * <p>oss://ros-template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -309,10 +338,13 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The version of the template.
-         * <p>
+         * <p>The version of the template.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only if you specify TemplateId.</p>
+         * </blockquote>
          * 
-         * > This parameter takes effect only if you specify TemplateId.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

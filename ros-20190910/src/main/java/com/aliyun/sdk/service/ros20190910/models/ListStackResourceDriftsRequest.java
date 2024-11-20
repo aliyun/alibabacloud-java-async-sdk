@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackResourceDriftsRequest} extends {@link RequestModel}
  *
  * <p>ListStackResourceDriftsRequest</p>
@@ -111,7 +112,10 @@ public class ListStackResourceDriftsRequest extends Request {
         } 
 
         /**
-         * The time when the resource drift detection operation was initiated.
+         * <p>The time when the resource drift detection operation was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -120,7 +124,10 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****w==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -129,7 +136,11 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The physical ID of the resource.
+         * <p>The physical ID of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +149,10 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The resource properties as defined in the template, in JSON format.
+         * <p>The resource properties as defined in the template, in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODIFIED</p>
          */
         public Builder resourceDriftStatus(java.util.List < String > resourceDriftStatus) {
             this.putQueryParameter("ResourceDriftStatus", resourceDriftStatus);
@@ -147,7 +161,11 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

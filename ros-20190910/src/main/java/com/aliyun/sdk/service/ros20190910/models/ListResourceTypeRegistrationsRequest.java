@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypeRegistrationsRequest} extends {@link RequestModel}
  *
  * <p>ListResourceTypeRegistrationsRequest</p>
@@ -123,7 +124,10 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         } 
 
         /**
-         * The entity type. Set the value to Module.
+         * <p>The entity type. Set the value to Module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Module</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -132,7 +136,10 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -141,7 +148,10 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 50. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,7 +160,10 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * The ID of the registration record.
+         * <p>The ID of the registration record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder registrationId(String registrationId) {
             this.putQueryParameter("RegistrationId", registrationId);
@@ -159,7 +172,10 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.
+         * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (*). You can use an asterisk (*) to perform a fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -168,12 +184,15 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * The registration state. Valid values:
-         * <p>
+         * <p>The registration state. Valid values:</p>
+         * <ul>
+         * <li>IN_PROGRESS</li>
+         * <li>COMPLETE</li>
+         * <li>FAILED</li>
+         * </ul>
          * 
-         * *   IN_PROGRESS
-         * *   COMPLETE
-         * *   FAILED
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

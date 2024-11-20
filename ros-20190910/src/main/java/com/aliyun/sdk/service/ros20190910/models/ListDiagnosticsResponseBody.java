@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDiagnosticsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDiagnosticsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The items that are diagnosed.
+         * <p>The items that are diagnosed.</p>
          */
         public Builder diagnostics(java.util.List < Diagnostics> diagnostics) {
             this.diagnostics = diagnostics;
@@ -105,7 +106,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned. The value 200 indicates that the request was successful.
+         * <p>The HTTP status code returned. The value 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +117,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to complete this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f01****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -129,7 +139,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1983D1C4-88EA-5D7D-90AB-467D01867A5D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class ListDiagnosticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDiagnosticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDiagnosticsResponseBody</p>
+     */
     public static class Diagnostics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -229,7 +251,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the diagnostic report was generated.
+             * <p>The time when the diagnostic report was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01T02:23:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -237,7 +262,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword in the diagnosis.
+             * <p>The keyword in the diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>047D84D9-D3EB-5DA8-87F1-9A7DD5598A5D</p>
              */
             public Builder diagnosticKey(String diagnosticKey) {
                 this.diagnosticKey = diagnosticKey;
@@ -245,7 +273,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * The product that is diagnosed.
+             * <p>The product that is diagnosed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ros</p>
              */
             public Builder diagnosticProduct(String diagnosticProduct) {
                 this.diagnosticProduct = diagnosticProduct;
@@ -253,7 +284,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the diagnostic report.
+             * <p>The ID of the diagnostic report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dr-2963bfbcac834f1a****</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -261,7 +295,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnosis status.
+             * <p>The diagnosis status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

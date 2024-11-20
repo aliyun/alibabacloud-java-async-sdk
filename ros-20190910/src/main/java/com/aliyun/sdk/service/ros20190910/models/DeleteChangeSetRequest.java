@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteChangeSetRequest} extends {@link RequestModel}
  *
  * <p>DeleteChangeSetRequest</p>
@@ -69,7 +70,11 @@ public class DeleteChangeSetRequest extends Request {
         } 
 
         /**
-         * The ID of the change set.
+         * <p>The ID of the change set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f6521a4-05af-4975-afe9-bc4b45ad****</p>
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -78,7 +83,11 @@ public class DeleteChangeSetRequest extends Request {
         }
 
         /**
-         * The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the change set. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

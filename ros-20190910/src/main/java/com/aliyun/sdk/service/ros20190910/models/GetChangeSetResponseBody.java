@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChangeSetResponseBody} extends {@link TeaModel}
  *
  * <p>GetChangeSetResponseBody</p>
@@ -241,7 +242,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         private Integer timeoutInMinutes; 
 
         /**
-         * The ID of the change set.
+         * <p>The ID of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4c11658d-bd47-4dd0-ba64-727edc62****</p>
          */
         public Builder changeSetId(String changeSetId) {
             this.changeSetId = changeSetId;
@@ -249,7 +253,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the change set.
+         * <p>The name of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChangeSet_template</p>
          */
         public Builder changeSetName(String changeSetName) {
             this.changeSetName = changeSetName;
@@ -257,7 +264,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the change set.
+         * <p>The type of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPDATE</p>
          */
         public Builder changeSetType(String changeSetType) {
             this.changeSetType = changeSetType;
@@ -265,7 +275,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The changes of the change set.
+         * <p>The changes of the change set.</p>
          */
         public Builder changes(java.util.List < java.util.Map<String, ?>> changes) {
             this.changes = changes;
@@ -273,7 +283,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+         * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-01T02:20:56</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -281,7 +294,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the change set.
+         * <p>The description of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>It is a demo.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -289,7 +305,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether rollback was performed when the stack failed to be created or updated.
+         * <p>Indicates whether rollback was performed when the stack failed to be created or updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.disableRollback = disableRollback;
@@ -297,7 +316,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The execution status of the change set.
+         * <p>The execution status of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder executionStatus(String executionStatus) {
             this.executionStatus = executionStatus;
@@ -305,7 +327,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The output logs of the change set.
+         * <p>The output logs of the change set.</p>
          */
         public Builder log(Log log) {
             this.log = log;
@@ -313,7 +335,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The parameters of the stack.
+         * <p>The parameters of the stack.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -321,7 +343,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the change set.
+         * <p>The region ID of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -329,7 +354,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3766EE04-76DD-50F9-9C23-3AF136CD5708</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -337,7 +365,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stack with which the change set is associated.
+         * <p>The ID of the stack with which the change set is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a486fc19-ebb7-4ce9-a70b-554a7c3d****</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -345,7 +376,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the stack with which the change set is associated.
+         * <p>The name of the stack with which the change set is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stack_2021-10-13</p>
          */
         public Builder stackName(String stackName) {
             this.stackName = stackName;
@@ -353,7 +387,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the change set.
+         * <p>The status of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_COMPLETE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -361,7 +398,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The reason why the change set is in its current state.
+         * <p>The reason why the change set is in its current state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>too many changes.</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -369,10 +409,13 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The template body of the change set.
-         * <p>
+         * <p>The template body of the change set.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only if you set ShowTemplate to true.</p>
+         * </blockquote>
          * 
-         * > This parameter takes effect only if you set ShowTemplate to true.
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</p>
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;
@@ -380,7 +423,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period that is specified for the stack creation or update operation.
+         * <p>The timeout period that is specified for the stack creation or update operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
             this.timeoutInMinutes = timeoutInMinutes;
@@ -393,6 +439,12 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetChangeSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeSetResponseBody</p>
+     */
     public static class TerraformLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -444,15 +496,17 @@ public class GetChangeSetResponseBody extends TeaModel {
             private String stream; 
 
             /**
-             * The name of the Terraform command that is run. Valid values:
-             * <p>
+             * <p>The name of the Terraform command that is run. Valid values:</p>
+             * <ul>
+             * <li>apply</li>
+             * <li>plan</li>
+             * <li>destroy</li>
+             * <li>version</li>
+             * </ul>
+             * <p>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Command</a>.</p>
              * 
-             * *   apply
-             * *   plan
-             * *   destroy
-             * *   version
-             * 
-             * For more information about Terraform commands, see [Command](https://www.terraform.io/cli/commands).
+             * <strong>example:</strong>
+             * <p>apply</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -460,7 +514,10 @@ public class GetChangeSetResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the output stream that is returned after the command is run.
+             * <p>The content of the output stream that is returned after the command is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apply complete! Resources: 42 added, 0 changed, 0 destroyed.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -468,11 +525,14 @@ public class GetChangeSetResponseBody extends TeaModel {
             }
 
             /**
-             * The output stream. Valid values:
-             * <p>
+             * <p>The output stream. Valid values:</p>
+             * <ul>
+             * <li>stdout: standard output stream</li>
+             * <li>stderr: standard error stream</li>
+             * </ul>
              * 
-             * *   stdout: standard output stream
-             * *   stderr: standard error stream
+             * <strong>example:</strong>
+             * <p>stdout</p>
              */
             public Builder stream(String stream) {
                 this.stream = stream;
@@ -486,6 +546,12 @@ public class GetChangeSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeSetResponseBody</p>
+     */
     public static class Log extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TerraformLogs")
         private java.util.List < TerraformLogs> terraformLogs;
@@ -513,10 +579,10 @@ public class GetChangeSetResponseBody extends TeaModel {
             private java.util.List < TerraformLogs> terraformLogs; 
 
             /**
-             * The Terraform logs. This parameter is returned only for change sets of Terraform stacks.
-             * <p>
-             * 
-             * > This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.
+             * <p>The Terraform logs. This parameter is returned only for change sets of Terraform stacks.</p>
+             * <blockquote>
+             * <p>This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.</p>
+             * </blockquote>
              */
             public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
@@ -530,6 +596,12 @@ public class GetChangeSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChangeSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeSetResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
@@ -569,7 +641,10 @@ public class GetChangeSetResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The key of the parameter.
+             * <p>The key of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::Region</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -577,7 +652,10 @@ public class GetChangeSetResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateScratchesRequest} extends {@link RequestModel}
  *
  * <p>ListTemplateScratchesRequest</p>
@@ -152,12 +153,12 @@ public class ListTemplateScratchesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,12 +167,12 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,10 +181,12 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The region ID of the scenario.
-         * <p>
+         * <p>The region ID of the scenario.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +195,10 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -201,12 +207,15 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The status of the scenario. Valid values:
-         * <p>
+         * <p>The status of the scenario. Valid values:</p>
+         * <ul>
+         * <li>GENERATE_IN_PROGRESS: The scenario is being created.</li>
+         * <li>GENERATE_COMPLETE: The scenario is created.</li>
+         * <li>GENERATE_FAILED: The scenario fails to be created.</li>
+         * </ul>
          * 
-         * *   GENERATE_IN_PROGRESS: The scenario is being created.
-         * *   GENERATE_COMPLETE: The scenario is created.
-         * *   GENERATE_FAILED: The scenario fails to be created.
+         * <strong>example:</strong>
+         * <p>[&quot;GENERATE_COMPLETE&quot;]</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -215,7 +224,7 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The tags of the scenario.
+         * <p>The tags of the scenario.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -224,7 +233,10 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The ID of the scenario.
+         * <p>The ID of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ts-7f7a704cf71c49a6****</p>
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -233,13 +245,16 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The type of the resource scenario. Valid values:
-         * <p>
+         * <p>The type of the resource scenario. Valid values:</p>
+         * <ul>
+         * <li>ArchitectureReplication: resource replication</li>
+         * <li>ArchitectureDetection: resource detection</li>
+         * <li>ResourceImport: resource management</li>
+         * <li>ResourceMigration: resource migration</li>
+         * </ul>
          * 
-         * *   ArchitectureReplication: resource replication
-         * *   ArchitectureDetection: resource detection
-         * *   ResourceImport: resource management
-         * *   ResourceMigration: resource migration
+         * <strong>example:</strong>
+         * <p>ArchitectureReplication</p>
          */
         public Builder templateScratchType(String templateScratchType) {
             this.putQueryParameter("TemplateScratchType", templateScratchType);
@@ -254,6 +269,12 @@ public class ListTemplateScratchesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplateScratchesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTemplateScratchesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -294,10 +315,14 @@ public class ListTemplateScratchesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the scenario.
-             * <p>
+             * <p>The tag key of the scenario.</p>
+             * <blockquote>
+             * <p>Tags is optional. If you want to specify Tags, you must specify Key.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > Tags is optional. If you want to specify Tags, you must specify Key.
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -305,7 +330,10 @@ public class ListTemplateScratchesRequest extends Request {
             }
 
             /**
-             * The tag value of the scenario.
+             * <p>The tag value of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

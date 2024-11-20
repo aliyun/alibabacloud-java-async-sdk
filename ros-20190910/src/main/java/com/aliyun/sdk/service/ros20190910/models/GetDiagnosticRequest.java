@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDiagnosticRequest} extends {@link RequestModel}
  *
  * <p>GetDiagnosticRequest</p>
@@ -53,7 +54,10 @@ public class GetDiagnosticRequest extends Request {
         } 
 
         /**
-         * The ID of the diagnostic report.
+         * <p>The ID of the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-d540def087714890****</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTemplateVersionsResponseBody</p>
@@ -61,7 +62,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         private java.util.List < Versions> versions; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The versions.
+         * <p>The versions.</p>
          */
         public Builder versions(java.util.List < Versions> versions) {
             this.versions = versions;
@@ -90,6 +97,12 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplateVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateVersionsResponseBody</p>
+     */
     public static class Versions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -177,7 +190,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the version was created.
+             * <p>The time when the version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-27T07:47:47</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -185,7 +201,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the version.
+             * <p>The description of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -193,7 +212,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The template ID. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.
+             * <p>The template ID. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -201,7 +223,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The template name that corresponds to the specified version.
+             * <p>The template name that corresponds to the specified version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -209,12 +234,12 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
-             * <p>
+             * <p>The version number.</p>
+             * <p>For a shared template, this parameter is returned only if VersionOption is set to AllVersions.</p>
+             * <p>Valid values: v1 to v100.</p>
              * 
-             * For a shared template, this parameter is returned only if VersionOption is set to AllVersions.
-             * 
-             * Valid values: v1 to v100.
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -222,7 +247,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the version was last updated.
+             * <p>The time when the version was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-27T07:47:47</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

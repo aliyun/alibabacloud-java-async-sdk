@@ -7,18 +7,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateStackInstancesResponseBody} extends {@link TeaModel}
+ * {@link ImportStacksToStackGroupResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateStackInstancesResponseBody</p>
+ * <p>ImportStacksToStackGroupResponseBody</p>
  */
-public class UpdateStackInstancesResponseBody extends TeaModel {
+public class ImportStacksToStackGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateStackInstancesResponseBody(Builder builder) {
+    private ImportStacksToStackGroupResponseBody(Builder builder) {
         this.operationId = builder.operationId;
         this.requestId = builder.requestId;
     }
@@ -27,7 +27,7 @@ public class UpdateStackInstancesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateStackInstancesResponseBody create() {
+    public static ImportStacksToStackGroupResponseBody create() {
         return builder().build();
     }
 
@@ -50,10 +50,7 @@ public class UpdateStackInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6da106ca-1784-4a6f-a7e1-e723863d****</p>
+         * OperationId.
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -61,18 +58,15 @@ public class UpdateStackInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateStackInstancesResponseBody build() {
-            return new UpdateStackInstancesResponseBody(this);
+        public ImportStacksToStackGroupResponseBody build() {
+            return new ImportStacksToStackGroupResponseBody(this);
         } 
 
     } 

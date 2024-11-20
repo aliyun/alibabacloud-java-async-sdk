@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeregisterResourceTypeRequest} extends {@link RequestModel}
  *
  * <p>DeregisterResourceTypeRequest</p>
@@ -68,7 +69,11 @@ public class DeregisterResourceTypeRequest extends Request {
         } 
 
         /**
-         * The resource type.
+         * <p>The resource type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -77,7 +82,10 @@ public class DeregisterResourceTypeRequest extends Request {
         }
 
         /**
-         * The version ID. If you want to delete a version of the resource type, you must specify this parameter.
+         * <p>The version ID. If you want to delete a version of the resource type, you must specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

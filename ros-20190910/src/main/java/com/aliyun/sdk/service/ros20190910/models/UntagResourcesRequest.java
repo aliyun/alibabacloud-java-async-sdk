@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -112,11 +113,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resource. This parameter takes effect when TagKey is not specified in the request. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the resource. This parameter takes effect when TagKey is not specified in the request. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -125,7 +129,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the tag. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the tag. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -134,10 +142,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the resource.
-         * <p>
+         * <p>The IDs of the resource.</p>
+         * <blockquote>
+         * <p>If you set ResourceType to stackgroup, you must set ResourceId to the name of the stack group.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If you set ResourceType to stackgroup, you must set ResourceId to the name of the stack group.
+         * <strong>example:</strong>
+         * <p>46ec7b78-9d5e-4b21-aefd-448c90aa****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -146,13 +158,17 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>stack: stack</li>
+         * <li>stackgroup: stack group</li>
+         * <li>template: template</li>
+         * <li>templatescratch: scenario</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   stack: stack
-         * *   stackgroup: stack group
-         * *   template: template
-         * *   templatescratch: scenario
+         * <strong>example:</strong>
+         * <p>stack</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -161,7 +177,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys of the resource. You can specify up to 20 tag keys.
+         * <p>The tag keys of the resource. You can specify up to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

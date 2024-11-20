@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChangeSetsResponseBody} extends {@link TeaModel}
  *
  * <p>ListChangeSetsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The change sets.
+         * <p>The change sets.</p>
          */
         public Builder changeSets(java.util.List < ChangeSets> changeSets) {
             this.changeSets = changeSets;
@@ -93,7 +94,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of change sets returned.
+         * <p>The total number of change sets returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListChangeSetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListChangeSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChangeSetsResponseBody</p>
+     */
     public static class ChangeSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeSetId")
         private String changeSetId;
@@ -277,7 +296,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * The ID of the change set.
+             * <p>The ID of the change set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1f6521a4-05af-4975-afe9-bc4b45ad****</p>
              */
             public Builder changeSetId(String changeSetId) {
                 this.changeSetId = changeSetId;
@@ -285,7 +307,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the change set.
+             * <p>The name of the change set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyChangeSet</p>
              */
             public Builder changeSetName(String changeSetName) {
                 this.changeSetName = changeSetName;
@@ -293,7 +318,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the change set.
+             * <p>The type of the change set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPDATE</p>
              */
             public Builder changeSetType(String changeSetType) {
                 this.changeSetType = changeSetType;
@@ -301,7 +329,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-01T05:16:31</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -309,7 +340,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the change set.
+             * <p>The description of the change set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>It is a demo.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -317,7 +351,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution status of the change set.
+             * <p>The execution status of the change set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder executionStatus(String executionStatus) {
                 this.executionStatus = executionStatus;
@@ -325,7 +362,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the change set.
+             * <p>The region ID of the change set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -333,7 +373,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack with which the change set is associated.
+             * <p>The ID of the stack with which the change set is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -341,7 +384,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stack with which the change set is associated.
+             * <p>The name of the stack with which the change set is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyStack</p>
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -349,7 +395,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the change set.
+             * <p>The status of the change set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE_COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -357,7 +406,10 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the change set is in its current state.
+             * <p>The reason why the change set is in its current state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>too many changes</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

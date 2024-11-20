@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStackGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateStackGroupRequest</p>
@@ -53,6 +54,10 @@ public class CreateStackGroupRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackArn")
+    private String stackArn;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackGroupName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String stackGroupName;
@@ -89,6 +94,7 @@ public class CreateStackGroupRequest extends Request {
         this.permissionModel = builder.permissionModel;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.stackArn = builder.stackArn;
         this.stackGroupName = builder.stackGroupName;
         this.tags = builder.tags;
         this.templateBody = builder.templateBody;
@@ -181,6 +187,13 @@ public class CreateStackGroupRequest extends Request {
     }
 
     /**
+     * @return stackArn
+     */
+    public String getStackArn() {
+        return this.stackArn;
+    }
+
+    /**
      * @return stackGroupName
      */
     public String getStackGroupName() {
@@ -233,6 +246,7 @@ public class CreateStackGroupRequest extends Request {
         private String permissionModel; 
         private String regionId; 
         private String resourceGroupId; 
+        private String stackArn; 
         private String stackGroupName; 
         private java.util.List < Tags> tags; 
         private String templateBody; 
@@ -256,6 +270,7 @@ public class CreateStackGroupRequest extends Request {
             this.permissionModel = request.permissionModel;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.stackArn = request.stackArn;
             this.stackGroupName = request.stackGroupName;
             this.tags = request.tags;
             this.templateBody = request.templateBody;
@@ -265,10 +280,11 @@ public class CreateStackGroupRequest extends Request {
         } 
 
         /**
-         * The name of the RAM role that you specify for the administrator account when you create a self-managed stack group. ROS assumes the administrator role to perform operations. If you do not specify this parameter, AliyunROSStackGroupAdministrationRole is used as the default value. ROS uses the administrator role to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks in the stack group.
-         * <p>
+         * <p>The name of the RAM role that you specify for the administrator account when you create a self-managed stack group. ROS assumes the administrator role to perform operations. If you do not specify this parameter, AliyunROSStackGroupAdministrationRole is used as the default value. ROS uses the administrator role to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks in the stack group.</p>
+         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</p>
          * 
-         * The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>AliyunROSStackGroupAdministrationRole</p>
          */
         public Builder administrationRoleName(String administrationRoleName) {
             this.putQueryParameter("AdministrationRoleName", administrationRoleName);
@@ -277,10 +293,13 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The information about automatic deployment settings.
-         * <p>
+         * <p>The information about automatic deployment settings.</p>
+         * <blockquote>
+         * <p>You must specify this parameter if PermissionModel is set to SERVICE_MANAGED.</p>
+         * </blockquote>
          * 
-         * > You must specify this parameter if PermissionModel is set to SERVICE_MANAGED.
+         * <strong>example:</strong>
+         * <p>{&quot;Enabled&quot;: true, &quot;RetainStacksOnAccountRemoval&quot;: true}</p>
          */
         public Builder autoDeployment(AutoDeployment autoDeployment) {
             String autoDeploymentShrink = shrink(autoDeployment, "AutoDeployment", "json");
@@ -290,7 +309,7 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The options for the stack group. You can specify up to one option.
+         * <p>The options for the stack group. You can specify up to one option.</p>
          */
         public Builder capabilities(java.util.List < String > capabilities) {
             this.putQueryParameter("Capabilities", capabilities);
@@ -299,10 +318,10 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-         * <p>
-         * The token can contain letters, digits, underscores (\_), and hyphens (-) and cannot exceed 64 characters in length.\
-         * For more information, see [How to ensure idempotence](~~134212~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.<br>The token can contain letters, digits, underscores (_), and hyphens (-) and cannot exceed 64 characters in length.<br>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -311,9 +330,10 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The description of the stack group.\
-         * <p>
-         * The description must be 1 to 256 characters in length.
+         * <p>The description of the stack group.<br>The description must be 1 to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StackGroup Description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -322,10 +342,11 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The name of the RAM role that you specify for the execution account when you create a self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If you do not specify this parameter, AliyunROSStackGroupExecutionRole is used as the default value. ROS assumes the execution role to perform operations on the stacks in the stack group.
-         * <p>
+         * <p>The name of the RAM role that you specify for the execution account when you create a self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If you do not specify this parameter, AliyunROSStackGroupExecutionRole is used as the default value. ROS assumes the execution role to perform operations on the stacks in the stack group.</p>
+         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</p>
          * 
-         * The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>AliyunROSStackGroupExecutionRole</p>
          */
         public Builder executionRoleName(String executionRoleName) {
             this.putQueryParameter("ExecutionRoleName", executionRoleName);
@@ -334,7 +355,7 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The parameters of the stack group.
+         * <p>The parameters of the stack group.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -343,15 +364,18 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The permission model of the stack group.
-         * <p>
+         * <p>The permission model of the stack group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SELF_MANAGED (default): the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.</li>
+         * <li>SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see <a href="https://help.aliyun.com/document_detail/308253.html">Manage a delegated administrator account</a> and <a href="https://help.aliyun.com/document_detail/298229.html">Enable trusted access</a>.</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   SELF_MANAGED (default): the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.
-         * *   SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.
-         * 
-         * > If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Manage a delegated administrator account](~~308253~~) and [Enable trusted access](~~298229~~).
+         * <strong>example:</strong>
+         * <p>SELF_MANAGED</p>
          */
         public Builder permissionModel(String permissionModel) {
             this.putQueryParameter("PermissionModel", permissionModel);
@@ -360,7 +384,11 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -369,9 +397,10 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.\
-         * <p>
-         * For more information about resource groups, see [Resource groups](~~94475~~).
+         * <p>The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -380,9 +409,20 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The name of the stack group. The name must be unique within a region.\
-         * <p>
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
+         * StackArn.
+         */
+        public Builder stackArn(String stackArn) {
+            this.putQueryParameter("StackArn", stackArn);
+            this.stackArn = stackArn;
+            return this;
+        }
+
+        /**
+         * <p>The name of the stack group. The name must be unique within a region.<br>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -391,7 +431,7 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The tags of the stack group.
+         * <p>The tags of the stack group.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -409,10 +449,13 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
-         * <p>
+         * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+         * <blockquote>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+         * </blockquote>
          * 
-         * > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -421,10 +464,13 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+         * <blockquote>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+         * </blockquote>
          * 
-         * > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * <strong>example:</strong>
+         * <p>oss://ros-template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -433,10 +479,13 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * The version of the template. If you do not specify this parameter, the latest version is used.
-         * <p>
+         * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
+         * <blockquote>
+         * <p>TemplateVersion takes effect only if you specify TemplateId.</p>
+         * </blockquote>
          * 
-         * > TemplateVersion takes effect only if you specify TemplateId.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -451,6 +500,12 @@ public class CreateStackGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateStackGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStackGroupRequest</p>
+     */
     public static class AutoDeployment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -490,13 +545,15 @@ public class CreateStackGroupRequest extends Request {
             private Boolean retainStacksOnAccountRemoval; 
 
             /**
-             * Indicates whether automatic deployment is enabled.
-             * <p>
+             * <p>Indicates whether automatic deployment is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: Automatic deployment is enabled. If you add a member account to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the member account. If you remove a member account from the folder, ROS automatically deletes the stacks from the member account.</li>
+             * <li>false: Automatic deployment is disabled. After you disable automatic deployment, the stacks remain unchanged when you add member accounts to or remove member accounts from the folder.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   true: Automatic deployment is enabled. If you add a member account to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the member account. If you remove a member account from the folder, ROS automatically deletes the stacks from the member account.
-             * *   false: Automatic deployment is disabled. After you disable automatic deployment, the stacks remain unchanged when you add member accounts to or remove member accounts from the folder.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -504,15 +561,18 @@ public class CreateStackGroupRequest extends Request {
             }
 
             /**
-             * Indicates whether the stacks within a member account are retained when you remove the member account from the folder.
-             * <p>
+             * <p>Indicates whether the stacks within a member account are retained when you remove the member account from the folder.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p>You must specify RetainStacksOnAccountRemoval if Enabled is set to true.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   true
-             * *   false
-             * 
-             * > You must specify RetainStacksOnAccountRemoval if Enabled is set to true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder retainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
                 this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
@@ -526,6 +586,12 @@ public class CreateStackGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateStackGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStackGroupRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -567,12 +633,15 @@ public class CreateStackGroupRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The key of parameter N. If you do not specify the key and value of a parameter, ROS uses the default name and value that are defined in the template.
-             * <p>
+             * <p>The key of parameter N. If you do not specify the key and value of a parameter, ROS uses the default name and value that are defined in the template.</p>
+             * <p>Maximum value of N: 200.</p>
+             * <blockquote>
+             * <p>Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Maximum value of N: 200.
-             * 
-             * > Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.
+             * <strong>example:</strong>
+             * <p>Amount</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -580,12 +649,15 @@ public class CreateStackGroupRequest extends Request {
             }
 
             /**
-             * The value of parameter N.
-             * <p>
+             * <p>The value of parameter N.</p>
+             * <p>Maximum value of N: 200.</p>
+             * <blockquote>
+             * <p>Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Maximum value of N: 200.
-             * 
-             * > Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -599,6 +671,12 @@ public class CreateStackGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateStackGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStackGroupRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -639,10 +717,14 @@ public class CreateStackGroupRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the stack group.
-             * <p>
+             * <p>The tag key of the stack group.</p>
+             * <blockquote>
+             * <p>Tags is optional. If you want to specify Tags, you must also specify Tags.N.Key.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > Tags is optional. If you want to specify Tags, you must also specify Tags.N.Key.
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -650,7 +732,10 @@ public class CreateStackGroupRequest extends Request {
             }
 
             /**
-             * The tag value of the stack group.
+             * <p>The tag value of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

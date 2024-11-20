@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStackGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteStackGroupRequest</p>
@@ -69,7 +70,11 @@ public class DeleteStackGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the stack group belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The ID of the region to which the stack group belongs. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,10 +83,12 @@ public class DeleteStackGroupRequest extends Request {
         }
 
         /**
-         * The name of the stack group. The name must be unique in a region.
-         * <p>
+         * <p>The name of the stack group. The name must be unique in a region.</p>
+         * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or a letter.
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);

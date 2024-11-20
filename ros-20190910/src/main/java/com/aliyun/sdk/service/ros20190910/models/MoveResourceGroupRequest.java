@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>MoveResourceGroupRequest</p>
@@ -99,7 +100,11 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which you want to move the resource. For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
+         * <p>The ID of the resource group to which you want to move the resource. For more information about resource groups, see the &quot;Resource Group&quot; section of the <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a> topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3peow3k****</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -108,9 +113,11 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the resource.\
-         * <p>
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the resource.<br>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +126,11 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4e8611cb-251e-42b7-b9cb-3496362c****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -128,12 +139,16 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>stack: stack</li>
+         * <li>stackgroup: stack group</li>
+         * <li>template: template</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   stack: stack
-         * *   stackgroup: stack group
-         * *   template: template
+         * <strong>example:</strong>
+         * <p>stack</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

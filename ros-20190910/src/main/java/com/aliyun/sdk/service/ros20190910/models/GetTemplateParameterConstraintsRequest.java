@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateParameterConstraintsRequest} extends {@link RequestModel}
  *
  * <p>GetTemplateParameterConstraintsRequest</p>
@@ -180,12 +181,12 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * 
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -194,7 +195,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The name of parameter N in the template.
+         * <p>The name of parameter N in the template.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -203,7 +204,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The parameters whose values you want to query.
+         * <p>The parameters whose values you want to query.</p>
          */
         public Builder parametersKeyFilter(java.util.List < String > parametersKeyFilter) {
             String parametersKeyFilterShrink = shrink(parametersKeyFilter, "ParametersKeyFilter", "json");
@@ -213,10 +214,10 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The order in which associated parameters are arranged.
-         * <p>
-         * 
-         * >  By default, the order of the associated parameters specified in the `Metadata` section of the template is used.
+         * <p>The order in which associated parameters are arranged.</p>
+         * <blockquote>
+         * <p> By default, the order of the associated parameters specified in the <code>Metadata</code> section of the template is used.</p>
+         * </blockquote>
          */
         public Builder parametersOrder(java.util.List < String > parametersOrder) {
             String parametersOrderShrink = shrink(parametersOrder, "ParametersOrder", "json");
@@ -226,10 +227,12 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The region ID of the template.
-         * <p>
+         * <p>The region ID of the template.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +241,10 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c754d2a4-28f1-46df-b557-9586173a****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -256,10 +262,13 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
-         * <p>
+         * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+         * <blockquote>
+         * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+         * </blockquote>
          * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -268,10 +277,13 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
+         * <blockquote>
+         * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+         * </blockquote>
          * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * <strong>example:</strong>
+         * <p>oss://ros-template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -280,10 +292,13 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The version of the template. If you do not specify this parameter, the latest version is used.
-         * <p>
+         * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if the TemplateId parameter is specified.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only if the TemplateId parameter is specified.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -298,6 +313,12 @@ public class GetTemplateParameterConstraintsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateParameterConstraintsRequest} extends {@link TeaModel}
+     *
+     * <p>GetTemplateParameterConstraintsRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -339,10 +360,14 @@ public class GetTemplateParameterConstraintsRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of parameter N in the template.
-             * <p>
+             * <p>The name of parameter N in the template.</p>
+             * <blockquote>
+             * <p> The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.
+             * <strong>example:</strong>
+             * <p>ZoneInfo</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -350,10 +375,14 @@ public class GetTemplateParameterConstraintsRequest extends Request {
             }
 
             /**
-             * The value of parameter N in the template.
-             * <p>
+             * <p>The value of parameter N in the template.</p>
+             * <blockquote>
+             * <p> The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

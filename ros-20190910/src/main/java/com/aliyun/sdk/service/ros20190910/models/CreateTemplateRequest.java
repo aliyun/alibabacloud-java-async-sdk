@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateTemplateRequest</p>
@@ -138,7 +139,10 @@ public class CreateTemplateRequest extends Request {
         } 
 
         /**
-         * The description of the template. The description can be up to 256 characters in length.
+         * <p>The description of the template. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>It is a demo.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -147,9 +151,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.\
-         * <p>
-         * For more information about resource groups, see [Resource groups](~~94475~~).
+         * <p>The ID of the resource group.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -158,7 +163,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The tags of the template.
+         * <p>The tags of the template.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -176,9 +181,11 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The name of the template.\
-         * <p>
-         * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
+         * <p>The name of the template.<br>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -187,10 +194,13 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body must be 1 to 1,024 bytes in length. If you do not specify the region of the OSS bucket, the value of RegionId is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body must be 1 to 1,024 bytes in length. If you do not specify the region of the OSS bucket, the value of RegionId is used.</p>
+         * <blockquote>
+         * <p>You must specify TemplateBody or TemplateURL.</p>
+         * </blockquote>
          * 
-         * > You must specify TemplateBody or TemplateURL.
+         * <strong>example:</strong>
+         * <p>oss://ros/template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -214,6 +224,12 @@ public class CreateTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTemplateRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -254,10 +270,14 @@ public class CreateTemplateRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the template.
-             * <p>
+             * <p>The tag key of the template.</p>
+             * <blockquote>
+             * <p>Tags is optional. If you need to specify Tags, you must also specify Key.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > Tags is optional. If you need to specify Tags, you must also specify Key.
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -265,7 +285,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * The tag value of the template.
+             * <p>The tag value of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

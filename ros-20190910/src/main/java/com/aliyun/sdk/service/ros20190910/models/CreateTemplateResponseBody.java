@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C5D90E1-66B6-496C-9371-3807F8DA80A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the template.
+         * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

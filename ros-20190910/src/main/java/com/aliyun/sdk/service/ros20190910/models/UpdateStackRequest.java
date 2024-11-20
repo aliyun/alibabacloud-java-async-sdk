@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateStackRequest} extends {@link RequestModel}
  *
  * <p>UpdateStackRequest</p>
@@ -350,12 +351,12 @@ public class UpdateStackRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.</p>
+         * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
          * 
-         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * 
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -364,13 +365,15 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * Specifies whether to roll back the resources in the stack when the stack fails to be updated.
-         * <p>
+         * <p>Specifies whether to roll back the resources in the stack when the stack fails to be updated.</p>
+         * <p>Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Default value: false. Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.putQueryParameter("DisableRollback", disableRollback);
@@ -379,13 +382,17 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * Specifies whether only to validate the stack in the request. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether only to validate the stack in the request. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true: only validates the stack.</li>
+         * <li>false: validates and updates the stack.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When no changes are made during the update, the following rules apply: If you set the DryRun parameter to false, the NotSupported error code is returned. If you set the DryRun parameter to true, no error is reported.</p>
+         * </blockquote>
          * 
-         * *   true: only validates the stack.
-         * *   false: validates and updates the stack.
-         * 
-         * >  When no changes are made during the update, the following rules apply: If you set the DryRun parameter to false, the NotSupported error code is returned. If you set the DryRun parameter to true, no error is reported.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -394,10 +401,10 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The dry run option in the list format. You can specify only one dry run option.
-         * <p>
-         * 
-         * > This parameter takes effect only when DryRun is set to true.
+         * <p>The dry run option in the list format. You can specify only one dry run option.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when DryRun is set to true.</p>
+         * </blockquote>
          */
         public Builder dryRunOptions(java.util.List < String > dryRunOptions) {
             this.putQueryParameter("DryRunOptions", dryRunOptions);
@@ -406,15 +413,19 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The maximum number of concurrent operations that can be performed on resources.
-         * <p>
+         * <p>The maximum number of concurrent operations that can be performed on resources.</p>
+         * <p>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set this parameter to an integer that is greater than 0, the integer is used.</li>
+         * <li>If you set this parameter to 0, no limit is imposed on Resource Orchestration Service (ROS) stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</li>
+         * <li>If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</li>
+         * <li>If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.
-         * 
-         * > - If you set this parameter to an integer that is greater than 0, the integer is used.
-         * > -  If you set this parameter to 0, no limit is imposed on Resource Orchestration Service (ROS) stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
-         * > -  If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
-         * > - If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parallelism(Long parallelism) {
             this.putQueryParameter("Parallelism", parallelism);
@@ -423,7 +434,7 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The parameters.
+         * <p>The parameters.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -432,14 +443,13 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.
-         * <p>
+         * <p>The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.</p>
+         * <p>ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.</p>
+         * <p>If you do not specify this parameter, ROS assumes the existing RAM role that is associated with the stack. If no RAM roles are available, ROS uses a temporary credential that is generated from the credentials of your account.</p>
+         * <p>The name of the RAM role can be up to 64 bytes in length.</p>
          * 
-         * ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.
-         * 
-         * If you do not specify this parameter, ROS assumes the existing RAM role that is associated with the stack. If no RAM roles are available, ROS uses a temporary credential that is generated from the credentials of your account.
-         * 
-         * The name of the RAM role can be up to 64 bytes in length.
+         * <strong>example:</strong>
+         * <p>test-role</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -448,7 +458,11 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the stack is deployed. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The ID of the region in which the stack is deployed. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -457,15 +471,18 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the replacement update feature. If you cannot change resource properties, you can enable the replacement update feature to replace the resource properties. If the replacement update feature is used, the existing resource is deleted and a new resource is created. The physical ID of the new resource is different from the physical ID of the deleted resource.
-         * <p>
+         * <p>Specifies whether to enable the replacement update feature. If you cannot change resource properties, you can enable the replacement update feature to replace the resource properties. If the replacement update feature is used, the existing resource is deleted and a new resource is created. The physical ID of the new resource is different from the physical ID of the deleted resource.</p>
+         * <p>Default value: Disabled. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
+         * <blockquote>
+         * <p> Changes have higher priorities than replacement updates.</p>
+         * </blockquote>
          * 
-         * Default value: Disabled. Valid values:
-         * 
-         * *   Enabled
-         * *   Disabled
-         * 
-         * >  Changes have higher priorities than replacement updates.
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder replacementOption(String replacementOption) {
             this.putQueryParameter("ReplacementOption", replacementOption);
@@ -474,7 +491,10 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -483,7 +503,11 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -492,10 +516,13 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The structure that contains the stack policy body. The policy body must be 1 to 16,384 bytes in length.
-         * <p>
+         * <p>The structure that contains the stack policy body. The policy body must be 1 to 16,384 bytes in length.</p>
+         * <blockquote>
+         * <p> You can specify only one of the StackPolicyBody and StackPolicyURL parameters.</p>
+         * </blockquote>
          * 
-         * >  You can specify only one of the StackPolicyBody and StackPolicyURL parameters.
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;Update:<em>&quot;, &quot;Resource&quot;: &quot;</em>&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: &quot;*&quot;}]}</p>
          */
         public Builder stackPolicyBody(String stackPolicyBody) {
             this.putQueryParameter("StackPolicyBody", stackPolicyBody);
@@ -504,17 +531,18 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The structure that contains the body of the temporary overriding stack policy. The policy body must be 1 to 16,384 bytes in length.
-         * <p>
+         * <p>The structure that contains the body of the temporary overriding stack policy. The policy body must be 1 to 16,384 bytes in length.</p>
+         * <p>If you want to update protected resources, you must specify a temporary overriding stack policy during the update. If you do not specify a temporary overriding stack policy, the existing policy that is associated with the stack is used.</p>
+         * <p>This parameter takes effect only when the ChangeSetType parameter is set to UPDATE. You can specify only one of the following parameters:</p>
+         * <ul>
+         * <li>StackPolicyBody</li>
+         * <li>StackPolicyURL</li>
+         * <li>StackPolicyDuringUpdateBody</li>
+         * <li>StackPolicyDuringUpdateURL</li>
+         * </ul>
          * 
-         * If you want to update protected resources, you must specify a temporary overriding stack policy during the update. If you do not specify a temporary overriding stack policy, the existing policy that is associated with the stack is used.
-         * 
-         * This parameter takes effect only when the ChangeSetType parameter is set to UPDATE. You can specify only one of the following parameters:
-         * 
-         * *   StackPolicyBody
-         * *   StackPolicyURL
-         * *   StackPolicyDuringUpdateBody
-         * *   StackPolicyDuringUpdateURL
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;: [{&quot;Effect&quot;: &quot;Allow&quot;, &quot;Action&quot;: &quot;Update:<em>&quot;, &quot;Principal&quot;: &quot;</em>&quot;, &quot;Resource&quot;: &quot;*&quot;}]}</p>
          */
         public Builder stackPolicyDuringUpdateBody(String stackPolicyDuringUpdateBody) {
             this.putQueryParameter("StackPolicyDuringUpdateBody", stackPolicyDuringUpdateBody);
@@ -523,19 +551,21 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the temporary overriding stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length.
-         * <p>
+         * <p>The URL of the file that contains the temporary overriding stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length.</p>
+         * <blockquote>
+         * <p> If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
+         * </blockquote>
+         * <p>The URL can be up to 1,350 bytes in length.</p>
+         * <p>If you want to update protected resources, you must specify a temporary overriding stack policy during the update. If you do not specify a temporary overriding stack policy, the existing policy that is associated with the stack is used. This parameter takes effect only when the ChangeSetType parameter is set to UPDATE. You can specify only one of the following parameters:</p>
+         * <ul>
+         * <li>StackPolicyBody</li>
+         * <li>StackPolicyURL</li>
+         * <li>StackPolicyDuringUpdateBody</li>
+         * <li>StackPolicyDuringUpdateURL</li>
+         * </ul>
          * 
-         * >  If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * 
-         * The URL can be up to 1,350 bytes in length.
-         * 
-         * If you want to update protected resources, you must specify a temporary overriding stack policy during the update. If you do not specify a temporary overriding stack policy, the existing policy that is associated with the stack is used. This parameter takes effect only when the ChangeSetType parameter is set to UPDATE. You can specify only one of the following parameters:
-         * 
-         * *   StackPolicyBody
-         * *   StackPolicyURL
-         * *   StackPolicyDuringUpdateBody
-         * *   StackPolicyDuringUpdateURL
+         * <strong>example:</strong>
+         * <p>oss://ros-stack-policy/demo</p>
          */
         public Builder stackPolicyDuringUpdateURL(String stackPolicyDuringUpdateURL) {
             this.putQueryParameter("StackPolicyDuringUpdateURL", stackPolicyDuringUpdateURL);
@@ -544,12 +574,14 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * <p>
+         * <p>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
+         * <blockquote>
+         * <p> You can specify only one of the StackPolicyBody and StackPolicyURL parameters.</p>
+         * </blockquote>
+         * <p>The URL can be up to 1,350 bytes in length.</p>
          * 
-         * >  You can specify only one of the StackPolicyBody and StackPolicyURL parameters.
-         * 
-         * The URL can be up to 1,350 bytes in length.
+         * <strong>example:</strong>
+         * <p>oss://ros-stack-policy/demo</p>
          */
         public Builder stackPolicyURL(String stackPolicyURL) {
             this.putQueryParameter("StackPolicyURL", stackPolicyURL);
@@ -558,7 +590,7 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The value of tag N that you want to add to the template.
+         * <p>The value of tag N that you want to add to the template.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -576,10 +608,13 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared templates and private templates.
-         * <p>
+         * <p>The ID of the template. This parameter applies to shared templates and private templates.</p>
+         * <blockquote>
+         * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+         * </blockquote>
          * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -588,10 +623,13 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
+         * <blockquote>
+         * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+         * </blockquote>
          * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * <strong>example:</strong>
+         * <p>oss://ros-template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -600,7 +638,10 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter takes effect only when the TemplateId parameter is specified.
+         * <p>The version of the template. This parameter takes effect only when the TemplateId parameter is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -609,11 +650,14 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * The timeout period for the update operation on the stack.
-         * <p>
+         * <p>The timeout period for the update operation on the stack.</p>
+         * <ul>
+         * <li>Default value: 60.</li>
+         * <li>Unit: minutes.</li>
+         * </ul>
          * 
-         * *   Default value: 60.
-         * *   Unit: minutes.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder timeoutInMinutes(Long timeoutInMinutes) {
             this.putQueryParameter("TimeoutInMinutes", timeoutInMinutes);
@@ -622,13 +666,15 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the values specified in the previous request for the parameters that you do not specify in the current request.
-         * <p>
+         * <p>Specifies whether to use the values specified in the previous request for the parameters that you do not specify in the current request.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder usePreviousParameters(Boolean usePreviousParameters) {
             this.putQueryParameter("UsePreviousParameters", usePreviousParameters);
@@ -643,6 +689,12 @@ public class UpdateStackRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateStackRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateStackRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -684,12 +736,15 @@ public class UpdateStackRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of parameter N. If you do not specify the name and value of a parameter, ROS uses the default name and value in the template.
-             * <p>
+             * <p>The name of parameter N. If you do not specify the name and value of a parameter, ROS uses the default name and value in the template.</p>
+             * <p>Maximum value of N: 200.</p>
+             * <blockquote>
+             * <p> The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Maximum value of N: 200.
-             * 
-             * >  The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * <strong>example:</strong>
+             * <p>Amount</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -697,10 +752,14 @@ public class UpdateStackRequest extends Request {
             }
 
             /**
-             * The value of parameter N. Maximum value of N: 200.
-             * <p>
+             * <p>The value of parameter N. Maximum value of N: 200.</p>
+             * <blockquote>
+             * <p> The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -714,6 +773,12 @@ public class UpdateStackRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateStackRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateStackRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -754,13 +819,18 @@ public class UpdateStackRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that you want to add to the stack.
-             * <p>
+             * <p>The key of tag N that you want to add to the stack.</p>
+             * <p>Valid values of N: 1 to 20.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.</li>
+             * <li>The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</li>
+             * </ul>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 20.
-             * 
-             * > - The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.
-             * > - The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -768,12 +838,14 @@ public class UpdateStackRequest extends Request {
             }
 
             /**
-             * The value of tag N that you want to add to the stack.
-             * <p>
+             * <p>The value of tag N that you want to add to the stack.</p>
+             * <p>Valid values of N: 1 to 20.</p>
+             * <blockquote>
+             * <p> The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 20.
-             * 
-             * >  The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

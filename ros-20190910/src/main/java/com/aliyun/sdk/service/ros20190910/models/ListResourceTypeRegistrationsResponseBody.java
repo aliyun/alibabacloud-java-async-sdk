@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypeRegistrationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceTypeRegistrationsResponseBody</p>
@@ -73,7 +74,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -81,7 +85,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         }
 
         /**
-         * The registration records of the resource.
+         * <p>The registration records of the resource.</p>
          */
         public Builder registrations(java.util.List < Registrations> registrations) {
             this.registrations = registrations;
@@ -89,7 +93,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of registration records.
+         * <p>The total number of registration records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +120,12 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceTypeRegistrationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypeRegistrationsResponseBody</p>
+     */
     public static class Registrations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -209,7 +225,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
+             * <p>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-02T07:28:35</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -217,7 +236,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The entity type. Only Module may be returned.
+             * <p>The entity type. Only Module may be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Module</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -225,7 +247,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the registration record.
+             * <p>The ID of the registration record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
              */
             public Builder registrationId(String registrationId) {
                 this.registrationId = registrationId;
@@ -233,7 +258,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -241,12 +269,15 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The registration state. Valid values:
-             * <p>
+             * <p>The registration state. Valid values:</p>
+             * <ul>
+             * <li>IN_PROGRESS: The registration is in progress.</li>
+             * <li>COMPLETE: The registration is successful.</li>
+             * <li>FAILED: The registration failed.</li>
+             * </ul>
              * 
-             * *   IN_PROGRESS: The registration is in progress.
-             * *   COMPLETE: The registration is successful.
-             * *   FAILED: The registration failed.
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -254,7 +285,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the state.
+             * <p>The reason for the state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Module is created successfully</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -262,7 +296,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The version ID.
+             * <p>The version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

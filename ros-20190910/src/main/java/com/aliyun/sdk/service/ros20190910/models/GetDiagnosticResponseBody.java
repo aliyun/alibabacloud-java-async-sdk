@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDiagnosticResponseBody} extends {@link TeaModel}
  *
  * <p>GetDiagnosticResponseBody</p>
@@ -193,7 +194,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forbidden</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -201,7 +205,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The keyword in the diagnosis.
+         * <p>The keyword in the diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0938F60C-A2CA-5A2E-9983-03EB1E6D7AE2</p>
          */
         public Builder diagnosticKey(String diagnosticKey) {
             this.diagnosticKey = diagnosticKey;
@@ -209,7 +216,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the diagnostic item.
+         * <p>The name of the diagnostic item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ros</p>
          */
         public Builder diagnosticProduct(String diagnosticProduct) {
             this.diagnosticProduct = diagnosticProduct;
@@ -217,7 +227,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The diagnosis result.
+         * <p>The diagnosis result.</p>
          */
         public Builder diagnosticResult(DiagnosticResult diagnosticResult) {
             this.diagnosticResult = diagnosticResult;
@@ -225,7 +235,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the diagnosis was performed.
+         * <p>The time when the diagnosis was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-27T03:32:03Z</p>
          */
         public Builder diagnosticTime(String diagnosticTime) {
             this.diagnosticTime = diagnosticTime;
@@ -233,7 +246,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code
+         * <p>The HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -241,7 +257,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -249,7 +268,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter ReportId is invalid, Can not find diagnostic report dr-5f6135782f104b0f****.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -257,7 +279,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The suggestion for the diagnosis.
+         * <p>The suggestion for the diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RosActionMessages&quot;: {&quot;Reason&quot;: &quot;Fail to delete stack (fc966920-450a-456b-983c-deeaec8e****), as deletion protection is enabled.&quot;, &quot;Recommend&quot;: &quot;&quot;}}</p>
          */
         public Builder recommends(java.util.Map < String, ? > recommends) {
             this.recommends = recommends;
@@ -265,7 +290,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the diagnostic report.
+         * <p>The ID of the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-cc80afc48c8741e9****</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -273,7 +301,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96A24844-9603-5E79-BDF4-EFD412FC5D4C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -281,12 +312,15 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The diagnosis status. Valid values:
-         * <p>
+         * <p>The diagnosis status. Valid values:</p>
+         * <ul>
+         * <li>Running: The diagnosis is in progress.</li>
+         * <li>Complete: The diagnosis is complete.</li>
+         * <li>Failed: The diagnosis failed.</li>
+         * </ul>
          * 
-         * *   Running: The diagnosis is in progress.
-         * *   Complete: The diagnosis is complete.
-         * *   Failed: The diagnosis failed.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -294,7 +328,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * The reason for the diagnosis status.
+         * <p>The reason for the diagnosis status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -302,11 +339,14 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -319,6 +359,12 @@ public class GetDiagnosticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDiagnosticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDiagnosticResponseBody</p>
+     */
     public static class DiagnosticResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedResources")
         private java.util.Map < String, ? > failedResources;
@@ -370,7 +416,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             private java.util.Map < String, ? > stackMessages; 
 
             /**
-             * The resources that failed to be diagnosed.
+             * <p>The resources that failed to be diagnosed.</p>
              */
             public Builder failedResources(java.util.Map < String, ? > failedResources) {
                 this.failedResources = failedResources;
@@ -378,7 +424,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             }
 
             /**
-             * The information about Resource Orchestration Service (ROS) calling.
+             * <p>The information about Resource Orchestration Service (ROS) calling.</p>
              */
             public Builder rosActionMessages(java.util.Map < String, ? > rosActionMessages) {
                 this.rosActionMessages = rosActionMessages;
@@ -386,7 +432,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             }
 
             /**
-             * The stack information.
+             * <p>The stack information.</p>
              */
             public Builder stackMessages(java.util.Map < String, ? > stackMessages) {
                 this.stackMessages = stackMessages;

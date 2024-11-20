@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackGroupRequest} extends {@link RequestModel}
  *
  * <p>GetStackGroupRequest</p>
@@ -82,12 +83,15 @@ public class GetStackGroupRequest extends Request {
         } 
 
         /**
-         * The name of the stack group. The name must be unique within a region.
-         * <p>
+         * <p>The name of the stack group. The name must be unique within a region.</p>
+         * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
+         * <blockquote>
+         * <p> You must specify one of the StackGroupName and StackGroupId parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
-         * 
-         * >  You must specify one of the StackGroupName and StackGroupId parameters.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -96,7 +100,10 @@ public class GetStackGroupRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd0ddef9-9540-4b42-a464-94f77835****</p>
          */
         public Builder stackGroupId(String stackGroupId) {
             this.putQueryParameter("StackGroupId", stackGroupId);
@@ -105,10 +112,13 @@ public class GetStackGroupRequest extends Request {
         }
 
         /**
-         * The ID of the stack group.
-         * <p>
+         * <p>The ID of the stack group.</p>
+         * <blockquote>
+         * <p> You must specify one of the StackGroupName and StackGroupId parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify one of the StackGroupName and StackGroupId parameters.
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);

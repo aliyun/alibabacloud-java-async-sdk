@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetStackInstanceRequest</p>
@@ -113,13 +114,17 @@ public class GetStackInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the Outputs parameter. The Outputs parameter specifies the outputs of the stack. Valid values:
-         * <p>
+         * <p>Specifies whether to return the Outputs parameter. The Outputs parameter specifies the outputs of the stack. Valid values:</p>
+         * <ul>
+         * <li>Enabled: returns the Outputs parameter.</li>
+         * <li>Disabled (default): does not return the Outputs parameter.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The Outputs parameter requires a long period of time to calculate. If you do not require the outputs of the stack, we recommend that you set OutputOption to Disabled to improve the response speed of the API operation.</p>
+         * </blockquote>
          * 
-         * *   Enabled: returns the Outputs parameter.
-         * *   Disabled (default): does not return the Outputs parameter.
-         * 
-         * >  The Outputs parameter requires a long period of time to calculate. If you do not require the outputs of the stack, we recommend that you set OutputOption to Disabled to improve the response speed of the API operation.
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder outputOption(String outputOption) {
             this.putQueryParameter("OutputOption", outputOption);
@@ -128,7 +133,11 @@ public class GetStackInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -137,9 +146,11 @@ public class GetStackInstanceRequest extends Request {
         }
 
         /**
-         * The name of the stack group. The name must be unique within a region.\
-         * <p>
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
+         * <p>The name of the stack group. The name must be unique within a region.<br>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -148,13 +159,18 @@ public class GetStackInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the destination account to which the stack belongs.
-         * <p>
+         * <p>The ID of the destination account to which the stack belongs.</p>
+         * <ul>
+         * <li>If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.</li>
+         * <li>If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information about the destination account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.
-         * *   If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.
-         * 
-         * > For more information about the destination account, see [Overview](~~154578~~).
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         public Builder stackInstanceAccountId(String stackInstanceAccountId) {
             this.putQueryParameter("StackInstanceAccountId", stackInstanceAccountId);
@@ -163,7 +179,11 @@ public class GetStackInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the stack.
+         * <p>The region ID of the stack.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder stackInstanceRegionId(String stackInstanceRegionId) {
             this.putQueryParameter("StackInstanceRegionId", stackInstanceRegionId);

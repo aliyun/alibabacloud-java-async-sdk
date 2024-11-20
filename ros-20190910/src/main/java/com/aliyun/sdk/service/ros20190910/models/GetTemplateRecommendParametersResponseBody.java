@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateRecommendParametersResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateRecommendParametersResponseBody</p>
@@ -70,6 +71,12 @@ public class GetTemplateRecommendParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateRecommendParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateRecommendParametersResponseBody</p>
+     */
     public static class RecommendParameterValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;

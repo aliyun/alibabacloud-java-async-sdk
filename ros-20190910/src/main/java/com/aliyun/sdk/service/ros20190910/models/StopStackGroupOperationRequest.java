@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopStackGroupOperationRequest} extends {@link RequestModel}
  *
  * <p>StopStackGroupOperationRequest</p>
@@ -69,10 +70,12 @@ public class StopStackGroupOperationRequest extends Request {
         } 
 
         /**
-         * The ID of the operation.
-         * <p>
+         * <p>The ID of the operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/151342.html">ListStackGroupOperations</a> operation to obtain the operation ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListStackGroupOperations](~~151342~~) operation to obtain the operation ID.
+         * <strong>example:</strong>
+         * <p>6da106ca-1784-4a6f-a7e1-e723863d****</p>
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);
@@ -81,7 +84,11 @@ public class StopStackGroupOperationRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackGroupOperationResponseBody} extends {@link TeaModel}
  *
  * <p>GetStackGroupOperationResponseBody</p>
@@ -49,7 +50,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         private StackGroupOperation stackGroupOperation; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the stack group operation.
+         * <p>The information about the stack group operation.</p>
          */
         public Builder stackGroupOperation(StackGroupOperation stackGroupOperation) {
             this.stackGroupOperation = stackGroupOperation;
@@ -70,6 +74,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStackGroupOperationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackGroupOperationResponseBody</p>
+     */
     public static class DeploymentTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountIds")
         private java.util.List < String > accountIds;
@@ -109,10 +119,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             private java.util.List < String > rdFolderIds; 
 
             /**
-             * The IDs of the members in the resource directory.
-             * <p>
-             * 
-             * > This parameter is returned only if AccountIds is specified when the [UpdateStackInstances](~~151716~~) operation is called to update stack instances.
+             * <p>The IDs of the members in the resource directory.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if AccountIds is specified when the <a href="https://help.aliyun.com/document_detail/151716.html">UpdateStackInstances</a> operation is called to update stack instances.</p>
+             * </blockquote>
              */
             public Builder accountIds(java.util.List < String > accountIds) {
                 this.accountIds = accountIds;
@@ -120,7 +130,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the folders in the resource directory.
+             * <p>The IDs of the folders in the resource directory.</p>
              */
             public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;
@@ -134,6 +144,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStackGroupOperationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackGroupOperationResponseBody</p>
+     */
     public static class OperationPreferences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailureToleranceCount")
         private Integer failureToleranceCount;
@@ -209,12 +225,14 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             private java.util.List < String > regionIdsOrder; 
 
             /**
-             * The number of accounts within which stack operation failures are allowed to occur in each region. If the value of this parameter is exceeded in a region, Resource Orchestration Service (ROS) stops the operation in the region. If the operation is stopped in one region, the operation is no longer performed in other regions.
-             * <p>
+             * <p>The number of accounts within which stack operation failures are allowed to occur in each region. If the value of this parameter is exceeded in a region, Resource Orchestration Service (ROS) stops the operation in the region. If the operation is stopped in one region, the operation is no longer performed in other regions.</p>
+             * <p>Valid values: 0 to 20.</p>
+             * <blockquote>
+             * <p>Only one of FailureToleranceCount and FailureTolerancePercentage can be returned.</p>
+             * </blockquote>
              * 
-             * Valid values: 0 to 20.
-             * 
-             * > Only one of FailureToleranceCount and FailureTolerancePercentage can be returned.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failureToleranceCount(Integer failureToleranceCount) {
                 this.failureToleranceCount = failureToleranceCount;
@@ -222,12 +240,14 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the number of accounts within which stack operation failures are allowed to occur to the total number of accounts in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region.
-             * <p>
+             * <p>The percentage of the number of accounts within which stack operation failures are allowed to occur to the total number of accounts in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region.</p>
+             * <p>Valid values: 0 to 100.</p>
+             * <blockquote>
+             * <p>Only one of FailureToleranceCount and FailureTolerancePercentage can be returned.</p>
+             * </blockquote>
              * 
-             * Valid values: 0 to 100.
-             * 
-             * > Only one of FailureToleranceCount and FailureTolerancePercentage can be returned.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder failureTolerancePercentage(Integer failureTolerancePercentage) {
                 this.failureTolerancePercentage = failureTolerancePercentage;
@@ -235,12 +255,14 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of accounts within which stacks are deployed at the same time in each region.
-             * <p>
+             * <p>The maximum number of accounts within which stacks are deployed at the same time in each region.</p>
+             * <p>Valid values: 1 to 20.</p>
+             * <blockquote>
+             * <p>Only one of MaxConcurrentCount and MaxConcurrentPercentage can be returned.</p>
+             * </blockquote>
              * 
-             * Valid values: 1 to 20.
-             * 
-             * > Only one of MaxConcurrentCount and MaxConcurrentPercentage can be returned.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxConcurrentCount(Integer maxConcurrentCount) {
                 this.maxConcurrentCount = maxConcurrentCount;
@@ -248,12 +270,14 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the maximum number of accounts within which stacks are deployed at the same time to the total number of accounts in each region.
-             * <p>
+             * <p>The percentage of the maximum number of accounts within which stacks are deployed at the same time to the total number of accounts in each region.</p>
+             * <p>Valid values: 1 to 100.</p>
+             * <blockquote>
+             * <p>Only one of MaxConcurrentCount and MaxConcurrentPercentage can be returned.</p>
+             * </blockquote>
              * 
-             * Valid values: 1 to 100.
-             * 
-             * > Only one of MaxConcurrentCount and MaxConcurrentPercentage can be returned.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxConcurrentPercentage(Integer maxConcurrentPercentage) {
                 this.maxConcurrentPercentage = maxConcurrentPercentage;
@@ -261,7 +285,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The regions in the order of operation execution.
+             * <p>The regions in the order of operation execution.</p>
              */
             public Builder regionIdsOrder(java.util.List < String > regionIdsOrder) {
                 this.regionIdsOrder = regionIdsOrder;
@@ -275,6 +299,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStackGroupOperationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackGroupOperationResponseBody</p>
+     */
     public static class StackGroupDriftDetectionDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CancelledStackInstancesCount")
         private Integer cancelledStackInstancesCount;
@@ -398,7 +428,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             private Integer totalStackInstancesCount; 
 
             /**
-             * The number of stack instances for which drift detection was canceled.
+             * <p>The number of stack instances for which drift detection was canceled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cancelledStackInstancesCount(Integer cancelledStackInstancesCount) {
                 this.cancelledStackInstancesCount = cancelledStackInstancesCount;
@@ -406,16 +439,18 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The drift detection state.
-             * <p>
+             * <p>The drift detection state.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>COMPLETED: Drift detection is performed on the stack group and all stack instances passed the drift detection.</li>
+             * <li>FAILED: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection exceeds the specified threshold.</li>
+             * <li>PARTIAL_SUCCESS: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection does not exceed the specified threshold.</li>
+             * <li>IN_PROGRESS: Drift detection is being performed on the stack group.</li>
+             * <li>STOPPED: Drift detection is canceled for the stack group.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   COMPLETED: Drift detection is performed on the stack group and all stack instances passed the drift detection.
-             * *   FAILED: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection exceeds the specified threshold.
-             * *   PARTIAL_SUCCESS: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection does not exceed the specified threshold.
-             * *   IN_PROGRESS: Drift detection is being performed on the stack group.
-             * *   STOPPED: Drift detection is canceled for the stack group.
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder driftDetectionStatus(String driftDetectionStatus) {
                 this.driftDetectionStatus = driftDetectionStatus;
@@ -423,7 +458,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when drift detection was performed.
+             * <p>The time when drift detection was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-27T07:47:47</p>
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -431,7 +469,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stack instances that have drifted.
+             * <p>The number of stack instances that have drifted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder driftedStackInstancesCount(Integer driftedStackInstancesCount) {
                 this.driftedStackInstancesCount = driftedStackInstancesCount;
@@ -439,7 +480,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stack instances that failed drift detection.
+             * <p>The number of stack instances that failed drift detection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedStackInstancesCount(Integer failedStackInstancesCount) {
                 this.failedStackInstancesCount = failedStackInstancesCount;
@@ -447,7 +491,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stack instances on which drift detection was being performed.
+             * <p>The number of stack instances on which drift detection was being performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inProgressStackInstancesCount(Integer inProgressStackInstancesCount) {
                 this.inProgressStackInstancesCount = inProgressStackInstancesCount;
@@ -455,7 +502,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stack instances that were being synchronized.
+             * <p>The number of stack instances that were being synchronized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder inSyncStackInstancesCount(Integer inSyncStackInstancesCount) {
                 this.inSyncStackInstancesCount = inSyncStackInstancesCount;
@@ -463,14 +513,16 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The drift state of the stack group.
-             * <p>
+             * <p>The drift state of the stack group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DRIFTED: At least one stack instance in the stack group has drifted.</li>
+             * <li>NOT_CHECKED: No successful drift detection is performed in the stack group.</li>
+             * <li>IN_SYNC: All the stack instances in the stack group are being synchronized.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   DRIFTED: At least one stack instance in the stack group has drifted.
-             * *   NOT_CHECKED: No successful drift detection is performed in the stack group.
-             * *   IN_SYNC: All the stack instances in the stack group are being synchronized.
+             * <strong>example:</strong>
+             * <p>DRIFTED</p>
              */
             public Builder stackGroupDriftStatus(String stackGroupDriftStatus) {
                 this.stackGroupDriftStatus = stackGroupDriftStatus;
@@ -478,7 +530,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stack instances.
+             * <p>The number of stack instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalStackInstancesCount(Integer totalStackInstancesCount) {
                 this.totalStackInstancesCount = totalStackInstancesCount;
@@ -492,6 +547,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStackGroupOperationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackGroupOperationResponseBody</p>
+     */
     public static class StackGroupOperation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -675,15 +736,17 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The operation type.
-             * <p>
+             * <p>The operation type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CREATE</li>
+             * <li>UPDATE</li>
+             * <li>DELETE</li>
+             * <li>DETECT_DRIFT</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   CREATE
-             * *   UPDATE
-             * *   DELETE
-             * *   DETECT_DRIFT
+             * <strong>example:</strong>
+             * <p>DELETE</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -691,7 +754,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role that you specify for the administrator account when you create the self-managed stack group. ROS assumes the administrator role to perform operations. If this parameter is not specified, the default value AliyunROSStackGroupAdministrationRole is returned.
+             * <p>The name of the RAM role that you specify for the administrator account when you create the self-managed stack group. ROS assumes the administrator role to perform operations. If this parameter is not specified, the default value AliyunROSStackGroupAdministrationRole is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunROSStackGroupAdministrationRole</p>
              */
             public Builder administrationRoleName(String administrationRoleName) {
                 this.administrationRoleName = administrationRoleName;
@@ -699,7 +765,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was initiated.
+             * <p>The time when the operation was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-20T09:22:3</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -707,7 +776,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The destinations to deploy stack instances when the stack is granted service-managed permissions.
+             * <p>The destinations to deploy stack instances when the stack is granted service-managed permissions.</p>
              */
             public Builder deploymentTargets(DeploymentTargets deploymentTargets) {
                 this.deploymentTargets = deploymentTargets;
@@ -715,7 +784,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation ended.
+             * <p>The time when the operation ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-20T09:22:4</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -723,7 +795,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role that you specify for the execution account when you create the self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If this parameter is not specified, the default value AliyunROSStackGroupExecutionRole is returned.
+             * <p>The name of the RAM role that you specify for the execution account when you create the self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If this parameter is not specified, the default value AliyunROSStackGroupExecutionRole is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunROSStackGroupExecutionRole</p>
              */
             public Builder executionRoleName(String executionRoleName) {
                 this.executionRoleName = executionRoleName;
@@ -731,10 +806,13 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the operation.
-             * <p>
+             * <p>The description of the operation.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if OperationDescription is specified when the <a href="https://help.aliyun.com/document_detail/151338.html">CreateStackInstances</a> operation is called to create stack instances.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if OperationDescription is specified when the [CreateStackInstances](~~151338~~) operation is called to create stack instances.
+             * <strong>example:</strong>
+             * <p>Create stack instance in hangzhou</p>
              */
             public Builder operationDescription(String operationDescription) {
                 this.operationDescription = operationDescription;
@@ -742,7 +820,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The operation ID.
+             * <p>The operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6da106ca-1784-4a6f-a7e1-e723863d****</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -750,7 +831,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The operation settings.
+             * <p>The operation settings.</p>
              */
             public Builder operationPreferences(OperationPreferences operationPreferences) {
                 this.operationPreferences = operationPreferences;
@@ -758,15 +839,18 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether stacks are retained when the associated stack instances are deleted. When you delete a stack instance, you can choose to delete or retain the stack with which the stack instance is associated.
-             * <p>
+             * <p>Indicates whether stacks are retained when the associated stack instances are deleted. When you delete a stack instance, you can choose to delete or retain the stack with which the stack instance is associated.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: Stacks are retained when the associated stack instances are deleted.</li>
+             * <li>false: Stacks are deleted when the associated stack instances are deleted. Proceed with caution.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only if you delete stack instances.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   true: Stacks are retained when the associated stack instances are deleted.
-             * *   false: Stacks are deleted when the associated stack instances are deleted. Proceed with caution.
-             * 
-             * > This parameter is returned only if you delete stack instances.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder retainStacks(Boolean retainStacks) {
                 this.retainStacks = retainStacks;
@@ -774,10 +858,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about drift detection.
-             * <p>
-             * 
-             * > This parameter is returned only if drift detection is performed.
+             * <p>The information about drift detection.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if drift detection is performed.</p>
+             * </blockquote>
              */
             public Builder stackGroupDriftDetectionDetail(StackGroupDriftDetectionDetail stackGroupDriftDetectionDetail) {
                 this.stackGroupDriftDetectionDetail = stackGroupDriftDetectionDetail;
@@ -785,7 +869,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack group.
+             * <p>The ID of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd0ddef9-9540-4b42-a464-94f77835****</p>
              */
             public Builder stackGroupId(String stackGroupId) {
                 this.stackGroupId = stackGroupId;
@@ -793,7 +880,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stack group.
+             * <p>The name of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyStackGroup</p>
              */
             public Builder stackGroupName(String stackGroupName) {
                 this.stackGroupName = stackGroupName;
@@ -801,16 +891,18 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the operation.
-             * <p>
+             * <p>The state of the operation.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RUNNING</li>
+             * <li>SUCCEEDED</li>
+             * <li>FAILED</li>
+             * <li>STOPPING</li>
+             * <li>STOPPED</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   RUNNING
-             * *   SUCCEEDED
-             * *   FAILED
-             * *   STOPPING
-             * *   STOPPED
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;

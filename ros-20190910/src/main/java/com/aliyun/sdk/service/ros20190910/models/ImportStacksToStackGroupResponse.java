@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CancelUpdateStackResponse} extends {@link TeaModel}
+ * {@link ImportStacksToStackGroupResponse} extends {@link TeaModel}
  *
- * <p>CancelUpdateStackResponse</p>
+ * <p>ImportStacksToStackGroupResponse</p>
  */
-public class CancelUpdateStackResponse extends Response {
+public class ImportStacksToStackGroupResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CancelUpdateStackResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CancelUpdateStackResponseBody body;
+    private ImportStacksToStackGroupResponseBody body;
 
-    private CancelUpdateStackResponse(BuilderImpl builder) {
+    private ImportStacksToStackGroupResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CancelUpdateStackResponse create() {
+    public static ImportStacksToStackGroupResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CancelUpdateStackResponse extends Response {
     /**
      * @return body
      */
-    public CancelUpdateStackResponseBody getBody() {
+    public ImportStacksToStackGroupResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CancelUpdateStackResponse, Builder> {
+    public interface Builder extends Response.Builder<ImportStacksToStackGroupResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CancelUpdateStackResponseBody body);
+        Builder body(ImportStacksToStackGroupResponseBody body);
 
         @Override
-        CancelUpdateStackResponse build();
+        ImportStacksToStackGroupResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CancelUpdateStackResponse, Builder>
+            extends Response.BuilderImpl<ImportStacksToStackGroupResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CancelUpdateStackResponseBody body; 
+        private ImportStacksToStackGroupResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CancelUpdateStackResponse response) {
+        private BuilderImpl(ImportStacksToStackGroupResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CancelUpdateStackResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CancelUpdateStackResponseBody body) {
+        public Builder body(ImportStacksToStackGroupResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CancelUpdateStackResponse build() {
-            return new CancelUpdateStackResponse(this);
+        public ImportStacksToStackGroupResponse build() {
+            return new ImportStacksToStackGroupResponse(this);
         } 
 
     } 

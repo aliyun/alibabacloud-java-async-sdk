@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetStackPolicyResponseBody</p>
@@ -49,7 +50,10 @@ public class GetStackPolicyResponseBody extends TeaModel {
         private java.util.Map < String, ? > stackPolicyBody; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class GetStackPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
+         * <p>The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;Update:<em>&quot;, &quot;Effect&quot;: &quot;Allow&quot;,&quot;Principal&quot;: &quot;</em>&quot;,&quot;Resource&quot;: &quot;*&quot;}]}</p>
          */
         public Builder stackPolicyBody(java.util.Map < String, ? > stackPolicyBody) {
             this.stackPolicyBody = stackPolicyBody;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackGroupOperationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListStackGroupOperationsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * The stack group operations.
+         * <p>The stack group operations.</p>
          */
         public Builder stackGroupOperations(java.util.List < StackGroupOperations> stackGroupOperations) {
             this.stackGroupOperations = stackGroupOperations;
@@ -117,7 +127,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of stack group operations.
+         * <p>The total number of stack group operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListStackGroupOperationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStackGroupOperationsResponseBody</p>
+     */
     public static class StackGroupOperations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -241,15 +260,17 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The operation type.
-             * <p>
+             * <p>The operation type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CREATE</li>
+             * <li>UPDATE</li>
+             * <li>DELETE</li>
+             * <li>DETECT_DRIFT</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   CREATE
-             * *   UPDATE
-             * *   DELETE
-             * *   DETECT_DRIFT
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -257,7 +278,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was initiated.
+             * <p>The time when the operation was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-20T09:22:36.000000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -265,7 +289,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation ended.
+             * <p>The time when the operation ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-20T09:22:41.000000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -273,7 +300,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the operation.
+             * <p>The description of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create stack instance in hangzhou</p>
              */
             public Builder operationDescription(String operationDescription) {
                 this.operationDescription = operationDescription;
@@ -281,7 +311,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation ID.
+             * <p>The operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14A07460-EBE7-47CA-9757-12CC4761****</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -289,7 +322,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack group.
+             * <p>The ID of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd0ddef9-9540-4b42-a464-94f77835****</p>
              */
             public Builder stackGroupId(String stackGroupId) {
                 this.stackGroupId = stackGroupId;
@@ -297,7 +333,10 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stack group.
+             * <p>The name of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyStackGroup</p>
              */
             public Builder stackGroupName(String stackGroupName) {
                 this.stackGroupName = stackGroupName;
@@ -305,16 +344,18 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the operation.
-             * <p>
+             * <p>The state of the operation.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RUNNING</li>
+             * <li>SUCCEEDED</li>
+             * <li>FAILED</li>
+             * <li>STOPPING</li>
+             * <li>STOPPED</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   RUNNING
-             * *   SUCCEEDED
-             * *   FAILED
-             * *   STOPPING
-             * *   STOPPED
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;

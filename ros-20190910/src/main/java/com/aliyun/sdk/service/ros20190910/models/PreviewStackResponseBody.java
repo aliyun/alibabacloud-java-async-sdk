@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreviewStackResponseBody} extends {@link TeaModel}
  *
  * <p>PreviewStackResponseBody</p>
@@ -49,7 +50,10 @@ public class PreviewStackResponseBody extends TeaModel {
         private Stack stack; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class PreviewStackResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the stack that is previewed.
+         * <p>The information about the stack that is previewed.</p>
          */
         public Builder stack(Stack stack) {
             this.stack = stack;
@@ -70,6 +74,12 @@ public class PreviewStackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PreviewStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewStackResponseBody</p>
+     */
     public static class TerraformLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -121,15 +131,17 @@ public class PreviewStackResponseBody extends TeaModel {
             private String stream; 
 
             /**
-             * The name of the Terraform command that is run. Valid values:
-             * <p>
+             * <p>The name of the Terraform command that is run. Valid values:</p>
+             * <ul>
+             * <li>apply</li>
+             * <li>plan</li>
+             * <li>destroy</li>
+             * <li>version</li>
+             * </ul>
+             * <p>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Basic CLI Features</a>.</p>
              * 
-             * *   apply
-             * *   plan
-             * *   destroy
-             * *   version
-             * 
-             * For more information about Terraform commands, see [Basic CLI Features](https://www.terraform.io/cli/commands).
+             * <strong>example:</strong>
+             * <p>apply</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -137,7 +149,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the output stream that is returned after the command is run.
+             * <p>The content of the output stream that is returned after the command is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apply complete! Resources: 42 added, 0 changed, 0 destroyed.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -145,11 +160,14 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The output stream. Valid values:
-             * <p>
+             * <p>The output stream. Valid values:</p>
+             * <ul>
+             * <li>stdout: standard output stream</li>
+             * <li>stderr: standard error stream</li>
+             * </ul>
              * 
-             * *   stdout: standard output stream
-             * *   stderr: standard error stream
+             * <strong>example:</strong>
+             * <p>stdout</p>
              */
             public Builder stream(String stream) {
                 this.stream = stream;
@@ -163,6 +181,12 @@ public class PreviewStackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewStackResponseBody</p>
+     */
     public static class Log extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TerraformLogs")
         private java.util.List < TerraformLogs> terraformLogs;
@@ -190,10 +214,10 @@ public class PreviewStackResponseBody extends TeaModel {
             private java.util.List < TerraformLogs> terraformLogs; 
 
             /**
-             * The Terraform logs. This parameter is returned only if the stack is a Terraform stack.
-             * <p>
-             * 
-             * > This parameter contains the logs of previewing the stack.
+             * <p>The Terraform logs. This parameter is returned only if the stack is a Terraform stack.</p>
+             * <blockquote>
+             * <p>This parameter contains the logs of previewing the stack.</p>
+             * </blockquote>
              */
             public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
@@ -207,6 +231,12 @@ public class PreviewStackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewStackResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
@@ -246,7 +276,10 @@ public class PreviewStackResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::AccountId</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -254,7 +287,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151266687691****</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -268,6 +304,12 @@ public class PreviewStackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewStackResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcsResourceType")
         private String acsResourceType;
@@ -403,7 +445,10 @@ public class PreviewStackResponseBody extends TeaModel {
             private java.util.Map < String, ? > stack; 
 
             /**
-             * The resource type of an Alibaba Cloud service.
+             * <p>The resource type of an Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder acsResourceType(String acsResourceType) {
                 this.acsResourceType = acsResourceType;
@@ -411,13 +456,16 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The action that is performed on the resource. Valid values:
-             * <p>
+             * <p>The action that is performed on the resource. Valid values:</p>
+             * <ul>
+             * <li>Add</li>
+             * <li>Modify</li>
+             * <li>Remove</li>
+             * <li>None</li>
+             * </ul>
              * 
-             * *   Add
-             * *   Modify
-             * *   Remove
-             * *   None
+             * <strong>example:</strong>
+             * <p>Add</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -425,7 +473,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the resource.
+             * <p>The description of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS instance.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -433,7 +484,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The logical ID of the resource.
+             * <p>The logical ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebServer</p>
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -441,10 +495,11 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The physical ID of the resource.
-             * <p>
+             * <p>The physical ID of the resource.</p>
+             * <p>This parameter is returned only if Action is set to Modify or Remove.</p>
              * 
-             * This parameter is returned only if Action is set to Modify or Remove.
+             * <strong>example:</strong>
+             * <p>i-a1b2c3***</p>
              */
             public Builder physicalResourceId(String physicalResourceId) {
                 this.physicalResourceId = physicalResourceId;
@@ -452,7 +507,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The resource properties.
+             * <p>The resource properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{   &quot;DiskMappings&quot;: [     {       &quot;Category&quot;: &quot;cloud_ssd&quot;,       &quot;Size&quot;: &quot;20&quot;     }   ],   &quot;SystemDisk_Category&quot;: &quot;cloud_ssd&quot;,   &quot;InstanceChargeType&quot;: &quot;PostPaid&quot;,   &quot;AutoRenew&quot;: &quot;False&quot;,   &quot;WillReplace&quot;: true,   &quot;ImageId&quot;: &quot;centos_7&quot;,   &quot;InstanceType&quot;: &quot;ecs.g6.large&quot;,   &quot;AllocatePublicIP&quot;: true,   &quot;AutoRenewPeriod&quot;: 1,   &quot;IoOptimized&quot;: &quot;optimized&quot;,   &quot;ZoneId&quot;: &quot;cn-beijing-g&quot;,   &quot;VSwitchId&quot;: &quot;&quot;,   &quot;SecurityGroupId&quot;: &quot;&quot;,   &quot;Period&quot;: 1,   &quot;InternetChargeType&quot;: &quot;PayByTraffic&quot;,   &quot;SystemDiskCategory&quot;: &quot;cloud_efficiency&quot;,   &quot;InternetMaxBandwidthOut&quot;: 1,   &quot;VpcId&quot;: &quot;&quot;,   &quot;InternetMaxBandwidthIn&quot;: 200,   &quot;PeriodUnit&quot;: &quot;Month&quot; }</p>
              */
             public Builder properties(java.util.Map < String, ? > properties) {
                 this.properties = properties;
@@ -460,14 +518,18 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a replacement update is performed on the template. Valid values:
-             * <p>
+             * <p>Indicates whether a replacement update is performed on the template. Valid values:</p>
+             * <ul>
+             * <li>True: A replacement update is performed on the template.</li>
+             * <li>False: A change is made on the template.</li>
+             * <li>Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only if Action is set to Modify.</p>
+             * </blockquote>
              * 
-             * *   True: A replacement update is performed on the template.
-             * *   False: A change is made on the template.
-             * *   Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.
-             * 
-             * > This parameter is returned only if Action is set to Modify.
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -475,7 +537,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The resources on which the stack depends.
+             * <p>The resources on which the stack depends.</p>
              */
             public Builder requiredBy(java.util.List < String > requiredBy) {
                 this.requiredBy = requiredBy;
@@ -483,7 +545,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -491,7 +556,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the nested stack. The data structure of the value is the same as the data structure of the entire response.
+             * <p>The information about the nested stack. The data structure of the value is the same as the data structure of the entire response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder stack(java.util.Map < String, ? > stack) {
                 this.stack = stack;
@@ -505,6 +573,12 @@ public class PreviewStackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewStackResponseBody</p>
+     */
     public static class Stack extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -640,7 +714,10 @@ public class PreviewStackResponseBody extends TeaModel {
             private Integer timeoutInMinutes; 
 
             /**
-             * The description of the stack.
+             * <p>The description of the stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>One ECS instance.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -648,7 +725,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether rollback is disabled for the resources when the stack fails to be created.
+             * <p>Indicates whether rollback is disabled for the resources when the stack fails to be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disableRollback(Boolean disableRollback) {
                 this.disableRollback = disableRollback;
@@ -656,7 +736,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The log that is generated when the stack is run.
+             * <p>The log that is generated when the stack is run.</p>
              */
             public Builder log(Log log) {
                 this.log = log;
@@ -664,7 +744,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the stack.
+             * <p>The parameters of the stack.</p>
              */
             public Builder parameters(java.util.List < Parameters> parameters) {
                 this.parameters = parameters;
@@ -672,7 +752,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the stack resides.
+             * <p>The region where the stack resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -680,7 +763,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The resources in the stack.
+             * <p>The resources in the stack.</p>
              */
             public Builder resources(java.util.List < Resources> resources) {
                 this.resources = resources;
@@ -688,7 +771,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The stack name.
+             * <p>The stack name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyStack</p>
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -696,7 +782,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The structure that contains the stack policy body.
+             * <p>The structure that contains the stack policy body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{   &quot;Statement&quot;: [     {       &quot;Action&quot;: &quot;Update:<em>&quot;,       &quot;Resource&quot;: &quot;</em>&quot;,       &quot;Effect&quot;: &quot;Allow&quot;,       &quot;Principal&quot;: &quot;<em>&quot;     },     {       &quot;Action&quot;: &quot;Update:</em>&quot;,       &quot;Resource&quot;: &quot;LogicalResourceId/apple1&quot;,       &quot;Effect&quot;: &quot;Deny&quot;,       &quot;Principal&quot;: &quot;*&quot;     }   ] }</p>
              */
             public Builder stackPolicyBody(java.util.Map < String, ? > stackPolicyBody) {
                 this.stackPolicyBody = stackPolicyBody;
@@ -704,7 +793,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>One ECS instance.</p>
              */
             public Builder templateDescription(String templateDescription) {
                 this.templateDescription = templateDescription;
@@ -712,10 +804,11 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for creating the stack.
-             * <p>
+             * <p>The timeout period for creating the stack.</p>
+             * <p>Unit: minutes.</p>
              * 
-             * Unit: minutes.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder timeoutInMinutes(Integer timeoutInMinutes) {
                 this.timeoutInMinutes = timeoutInMinutes;

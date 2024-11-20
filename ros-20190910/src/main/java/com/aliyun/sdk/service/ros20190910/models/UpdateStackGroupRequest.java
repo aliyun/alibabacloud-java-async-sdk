@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateStackGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateStackGroupRequest</p>
@@ -307,10 +308,13 @@ public class UpdateStackGroupRequest extends Request {
         } 
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
+         * <blockquote>
+         * <p> You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.
+         * <strong>example:</strong>
+         * <p>[&quot;12****&quot;]</p>
          */
         public Builder accountIds(java.util.List < String > accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
@@ -320,12 +324,14 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The key of parameter N. If you do not specify the key and value of the parameter, ROS uses the default key and value in the template.
-         * <p>
+         * <p>The key of parameter N. If you do not specify the key and value of the parameter, ROS uses the default key and value in the template.</p>
+         * <p>Maximum value of N: 200.</p>
+         * <blockquote>
+         * <p> The Parameters parameter is optional. If you set the Parameters parameter, you must set the Parameters.N.ParameterKey parameter.</p>
+         * </blockquote>
          * 
-         * Maximum value of N: 200.
-         * 
-         * >  The Parameters parameter is optional. If you set the Parameters parameter, you must set the Parameters.N.ParameterKey parameter.
+         * <strong>example:</strong>
+         * <p>AliyunROSStackGroupAdministrationRole</p>
          */
         public Builder administrationRoleName(String administrationRoleName) {
             this.putQueryParameter("AdministrationRoleName", administrationRoleName);
@@ -334,12 +340,14 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the folders in the resource directory. You can specify up to five folder IDs.
-         * <p>
+         * <p>The IDs of the folders in the resource directory. You can specify up to five folder IDs.</p>
+         * <p>You can create stacks within all members in the specified folders. If you create stacks in the Root folder, the stacks are created within all members in the resource directory.</p>
+         * <blockquote>
+         * <p> To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information of a folder</a>.</p>
+         * </blockquote>
          * 
-         * You can create stacks within all members in the specified folders. If you create stacks in the Root folder, the stacks are created within all members in the resource directory.
-         * 
-         * >  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](~~111223~~).
+         * <strong>example:</strong>
+         * <p>{&quot;Enabled&quot;: true, &quot;RetainStacksOnAccountRemoval&quot;: true}</p>
          */
         public Builder autoDeployment(AutoDeployment autoDeployment) {
             String autoDeploymentShrink = shrink(autoDeployment, "AutoDeployment", "json");
@@ -349,7 +357,7 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The option for the stack group. You can specify up to one option.
+         * <p>The option for the stack group. You can specify up to one option.</p>
          */
         public Builder capabilities(java.util.List < String > capabilities) {
             this.putQueryParameter("Capabilities", capabilities);
@@ -358,10 +366,13 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
-         * <p>
+         * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+         * <blockquote>
+         * <p> You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -370,7 +381,10 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RdFolderIds&quot;: [&quot;fd-4PvlVLOL8v&quot;]}</p>
          */
         public Builder deploymentTargets(DeploymentTargets deploymentTargets) {
             String deploymentTargetsShrink = shrink(deploymentTargets, "DeploymentTargets", "json");
@@ -380,10 +394,13 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * <p>
+         * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
+         * <blockquote>
+         * <p> You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.
+         * <strong>example:</strong>
+         * <p>My Stack Group</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -392,12 +409,14 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The value of parameter N.
-         * <p>
+         * <p>The value of parameter N.</p>
+         * <p>Maximum value of N: 200.</p>
+         * <blockquote>
+         * <p> The Parameters parameter is optional. If you set the Parameters parameter, you must set the Parameters.N.ParameterValue parameter.</p>
+         * </blockquote>
          * 
-         * Maximum value of N: 200.
-         * 
-         * >  The Parameters parameter is optional. If you set the Parameters parameter, you must set the Parameters.N.ParameterValue parameter.
+         * <strong>example:</strong>
+         * <p>AliyunROSStackGroupExecutionRole</p>
          */
         public Builder executionRoleName(String executionRoleName) {
             this.putQueryParameter("ExecutionRoleName", executionRoleName);
@@ -406,10 +425,13 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The version of the template. If you do not specify a version, the latest version is used.
-         * <p>
+         * <p>The version of the template. If you do not specify a version, the latest version is used.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if the TemplateId parameter is set.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only if the TemplateId parameter is set.
+         * <strong>example:</strong>
+         * <p>Update stack instances in hangzhou</p>
          */
         public Builder operationDescription(String operationDescription) {
             this.putQueryParameter("OperationDescription", operationDescription);
@@ -418,7 +440,10 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The list of parameters.
+         * <p>The list of parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;FailureToleranceCount&quot;: 1,&quot;MaxConcurrentCount&quot;: 2}</p>
          */
         public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
             String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
@@ -428,13 +453,12 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic deployment.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   true: enables automatic deployment. If you add a member to the folder to which the stack group belongs after you enable automatic deployment, the stack group deploys its stack instances within the member. If you remove a member from the folder, the stack group deletes stack instances that are deployed within the member.
-         * *   false: disables automatic deployment. After you disable automatic deployment, the stack instances remain unchanged even if members in the folder change.
+         * <p>Specifies whether to enable automatic deployment.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: enables automatic deployment. If you add a member to the folder to which the stack group belongs after you enable automatic deployment, the stack group deploys its stack instances within the member. If you remove a member from the folder, the stack group deletes stack instances that are deployed within the member.</li>
+         * <li>false: disables automatic deployment. After you disable automatic deployment, the stack instances remain unchanged even if members in the folder change.</li>
+         * </ul>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -443,16 +467,19 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The folder IDs in the resource directory. You can specify a maximum of five folder IDs.
-         * <p>
+         * <p>The folder IDs in the resource directory. You can specify a maximum of five folder IDs.</p>
+         * <p>You must set at least one of the RdFolderIds and AccountIds parameters. The parameters are subject to the following items:</p>
+         * <ul>
+         * <li>If you set only the RdFolderIds parameter, stacks are deployed within all the members in the specified folders. If you specify the Root folder, ROS deploys the stacks within all the members in the resource directory.</li>
+         * <li>If you set only the AccountIds parameter, stacks are deployed within the specified members.</li>
+         * <li>If you set both parameters, the accounts specified by AccountIds must be contained in the folders specified by RdFolderIds.</li>
+         * </ul>
+         * <blockquote>
+         * <p> To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information of a folder</a>.</p>
+         * </blockquote>
          * 
-         * You must set at least one of the RdFolderIds and AccountIds parameters. The parameters are subject to the following items:
-         * 
-         * *   If you set only the RdFolderIds parameter, stacks are deployed within all the members in the specified folders. If you specify the Root folder, ROS deploys the stacks within all the members in the resource directory.
-         * *   If you set only the AccountIds parameter, stacks are deployed within the specified members.
-         * *   If you set both parameters, the accounts specified by AccountIds must be contained in the folders specified by RdFolderIds.
-         * 
-         * >  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](~~111223~~).
+         * <strong>example:</strong>
+         * <p>SELF_MANAGED</p>
          */
         public Builder permissionModel(String permissionModel) {
             this.putQueryParameter("PermissionModel", permissionModel);
@@ -461,7 +488,11 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The region IDs of stack instances. You can specify a maximum of 20 region IDs.
+         * <p>The region IDs of stack instances. You can specify a maximum of 20 region IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -470,7 +501,10 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The description of the operation to update the stack group.
+         * <p>The description of the operation to update the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cn-hangzhou&quot;, &quot;cn-beijing&quot;]</p>
          */
         public Builder regionIds(java.util.List < String > regionIds) {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
@@ -480,7 +514,11 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The region IDs of stack instances. You can specify a maximum of 20 region IDs.
+         * <p>The region IDs of stack instances. You can specify a maximum of 20 region IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -498,16 +536,21 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The permission model.
-         * <p>
+         * <p>The permission model.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SELF_MANAGED: the self-managed permission model. This is the default value. If you use the self-managed model for the stack group, you must create RAM roles for the administrator and execution accounts, and establish a trust relationship between the accounts to deploy stacks within the execution account.</li>
+         * <li>SERVICE_MANAGED: the service-managed permission model. If you use the service-managed model for the stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If stack instances have been created in the stack group, you cannot switch the permission mode of the stack group.</li>
+         * <li>If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see <a href="https://help.aliyun.com/document_detail/308253.html">Step 1: (Optional) Create a delegated administrator account</a> and <a href="https://help.aliyun.com/document_detail/298229.html">Step 2: Enable trusted access</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   SELF_MANAGED: the self-managed permission model. This is the default value. If you use the self-managed model for the stack group, you must create RAM roles for the administrator and execution accounts, and establish a trust relationship between the accounts to deploy stacks within the execution account.
-         * *   SERVICE_MANAGED: the service-managed permission model. If you use the service-managed model for the stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.
-         * 
-         * >- If stack instances have been created in the stack group, you cannot switch the permission mode of the stack group.
-         * >- If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -516,10 +559,11 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The name of the RAM role to be assumed by the administrator role AliyunROSStackGroupAdministrationRole. This parameter is required if you want to grant self-managed permissions to the stack group. If you do not specify a value for this parameter, the default value AliyunROSStackGroupExecutionRole is used. You can use this role in ROS to perform operations on the stacks that correspond to stack instances in the stack group.
-         * <p>
+         * <p>The name of the RAM role to be assumed by the administrator role AliyunROSStackGroupAdministrationRole. This parameter is required if you want to grant self-managed permissions to the stack group. If you do not specify a value for this parameter, the default value AliyunROSStackGroupExecutionRole is used. You can use this role in ROS to perform operations on the stacks that correspond to stack instances in the stack group.</p>
+         * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).</p>
          * 
-         * The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>oss://ros-template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -528,10 +572,13 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The information about automatic deployment settings.
-         * <p>
+         * <p>The information about automatic deployment settings.</p>
+         * <blockquote>
+         * <p> This parameter is required only if the PermissionModel parameter is set to SERVICE_MANAGED.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if the PermissionModel parameter is set to SERVICE_MANAGED.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -546,6 +593,12 @@ public class UpdateStackGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateStackGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateStackGroupRequest</p>
+     */
     public static class AutoDeployment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -585,10 +638,13 @@ public class UpdateStackGroupRequest extends Request {
             private Boolean retainStacksOnAccountRemoval; 
 
             /**
-             * The IDs of the members in the resource directory. You can specify a maximum of 20 member IDs.
-             * <p>
+             * <p>The IDs of the members in the resource directory. You can specify a maximum of 20 member IDs.</p>
+             * <blockquote>
+             * <p> To view the member IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111624.html">View the detailed information of a member</a>.</p>
+             * </blockquote>
              * 
-             * >  To view the member IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the detailed information of a member](~~111624~~).
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -596,10 +652,13 @@ public class UpdateStackGroupRequest extends Request {
             }
 
             /**
-             * The IDs of the members in the resource directory. You can specify a maximum of 20 member IDs.
-             * <p>
+             * <p>The IDs of the members in the resource directory. You can specify a maximum of 20 member IDs.</p>
+             * <blockquote>
+             * <p> To view the member IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111624.html">View the detailed information of a member</a>.</p>
+             * </blockquote>
              * 
-             * >  To view the member IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the detailed information of a member](~~111624~~).
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder retainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
                 this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
@@ -613,6 +672,12 @@ public class UpdateStackGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateStackGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateStackGroupRequest</p>
+     */
     public static class DeploymentTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountIds")
         private java.util.List < String > accountIds;
@@ -652,7 +717,7 @@ public class UpdateStackGroupRequest extends Request {
             private java.util.List < String > rdFolderIds; 
 
             /**
-             * The list of one or more Alibaba Cloud accounts with which you want to share or unshare the template.
+             * <p>The list of one or more Alibaba Cloud accounts with which you want to share or unshare the template.</p>
              */
             public Builder accountIds(java.util.List < String > accountIds) {
                 this.accountIds = accountIds;
@@ -660,7 +725,7 @@ public class UpdateStackGroupRequest extends Request {
             }
 
             /**
-             * The ID of the operation.
+             * <p>The ID of the operation.</p>
              */
             public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;
@@ -674,6 +739,12 @@ public class UpdateStackGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateStackGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateStackGroupRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -715,15 +786,19 @@ public class UpdateStackGroupRequest extends Request {
             private String parameterValue; 
 
             /**
-             * Specifies whether to retain stacks in a member when you remove the member from the folder.
-             * <p>
+             * <p>Specifies whether to retain stacks in a member when you remove the member from the folder.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: retains the stacks.</li>
+             * <li>false: deletes the stacks.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is required if the Enabled parameter is set to true.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values:
-             * 
-             * *   true: retains the stacks.
-             * *   false: deletes the stacks.
-             * 
-             * >  This parameter is required if the Enabled parameter is set to true.
+             * <strong>example:</strong>
+             * <p>Amount</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -731,7 +806,11 @@ public class UpdateStackGroupRequest extends Request {
             }
 
             /**
-             * The folders in which you want to use service-managed permissions to update stacks.
+             * <p>The folders in which you want to use service-managed permissions to update stacks.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
