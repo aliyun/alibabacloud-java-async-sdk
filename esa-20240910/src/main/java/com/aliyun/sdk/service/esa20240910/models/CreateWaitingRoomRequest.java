@@ -289,6 +289,7 @@ public class CreateWaitingRoomRequest extends Request {
         } 
 
         /**
+         * <p>The name of the custom cookie.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +302,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * CustomPageHtml.
+         * <p>The content of the custom waiting room page. You must specify this parameter if you set WaitingRoomType to custom. The content must be Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello%20world!</p>
          */
         public Builder customPageHtml(String customPageHtml) {
             this.putQueryParameter("CustomPageHtml", customPageHtml);
@@ -310,7 +314,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the waiting room.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -319,7 +323,14 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * DisableSessionRenewalEnable.
+         * <p>Specifies whether to disable session renewal. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder disableSessionRenewalEnable(String disableSessionRenewalEnable) {
             this.putQueryParameter("DisableSessionRenewalEnable", disableSessionRenewalEnable);
@@ -328,6 +339,11 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the waiting room. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,6 +356,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>The hostname and path.</p>
          * <p>This parameter is required.</p>
          */
         public Builder hostNameAndPath(java.util.List < HostNameAndPath> hostNameAndPath) {
@@ -350,7 +367,14 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * JsonResponseEnable.
+         * <p>Specifies whether to enable JSON response. If you set this parameter to on, a JSON body is returned for requests to the waiting room with the header Accept: application/json. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder jsonResponseEnable(String jsonResponseEnable) {
             this.putQueryParameter("JsonResponseEnable", jsonResponseEnable);
@@ -359,7 +383,15 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language of the waiting room page. You must specify this parameter if you set WaitingRoomType to default. Valid values:</p>
+         * <ul>
+         * <li>enus: English.</li>
+         * <li>zhcn: Simplified Chinese.</li>
+         * <li>zhhk: Traditional Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enus</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -368,6 +400,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>The name of the waiting room.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -380,6 +413,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of new users per minute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -392,7 +426,14 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * QueueAllEnable.
+         * <p>Specifies whether to queue all requests. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder queueAllEnable(String queueAllEnable) {
             this.putQueryParameter("QueueAllEnable", queueAllEnable);
@@ -401,6 +442,13 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>The queuing method. Valid values:</p>
+         * <ul>
+         * <li>random: Users gain access to the origin randomly, regardless of the arrival time.</li>
+         * <li>fifo: Users gain access to the origin in order of arrival.</li>
+         * <li>passthrough: Users pass through the waiting room and go straight to the origin.</li>
+         * <li>reject-all: Users are blocked from reaching the origin.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -413,6 +461,12 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
+         * <ul>
+         * <li>200</li>
+         * <li>202</li>
+         * <li>429</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -425,6 +479,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>The maximum duration for which a session remains valid after a user leaves the origin. Unit: minutes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,6 +492,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -449,6 +505,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of active users.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -461,6 +518,11 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
+         * <p>The type of the waiting room. Valid values:</p>
+         * <ul>
+         * <li>default</li>
+         * <li>custom</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -539,6 +601,7 @@ public class CreateWaitingRoomRequest extends Request {
             private String subdomain; 
 
             /**
+             * <p>The domain name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -550,6 +613,7 @@ public class CreateWaitingRoomRequest extends Request {
             }
 
             /**
+             * <p>The path.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -561,6 +625,7 @@ public class CreateWaitingRoomRequest extends Request {
             }
 
             /**
+             * <p>The subdomain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

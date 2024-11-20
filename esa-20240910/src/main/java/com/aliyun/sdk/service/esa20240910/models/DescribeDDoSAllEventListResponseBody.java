@@ -164,6 +164,9 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bps")
         private Long bps;
 
+        @com.aliyun.core.annotation.NameInMap("Coverage")
+        private String coverage;
+
         @com.aliyun.core.annotation.NameInMap("Cps")
         private Long cps;
 
@@ -172,6 +175,9 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
+
+        @com.aliyun.core.annotation.NameInMap("EventResult")
+        private String eventResult;
 
         @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
@@ -193,9 +199,11 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
 
         private DataList(Builder builder) {
             this.bps = builder.bps;
+            this.coverage = builder.coverage;
             this.cps = builder.cps;
             this.endTime = builder.endTime;
             this.eventId = builder.eventId;
+            this.eventResult = builder.eventResult;
             this.eventType = builder.eventType;
             this.pps = builder.pps;
             this.qps = builder.qps;
@@ -220,6 +228,13 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         }
 
         /**
+         * @return coverage
+         */
+        public String getCoverage() {
+            return this.coverage;
+        }
+
+        /**
          * @return cps
          */
         public Long getCps() {
@@ -238,6 +253,13 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
          */
         public String getEventId() {
             return this.eventId;
+        }
+
+        /**
+         * @return eventResult
+         */
+        public String getEventResult() {
+            return this.eventResult;
         }
 
         /**
@@ -284,9 +306,11 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long bps; 
+            private String coverage; 
             private Long cps; 
             private String endTime; 
             private String eventId; 
+            private String eventResult; 
             private String eventType; 
             private Long pps; 
             private Long qps; 
@@ -299,6 +323,14 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
              */
             public Builder bps(Long bps) {
                 this.bps = bps;
+                return this;
+            }
+
+            /**
+             * Coverage.
+             */
+            public Builder coverage(String coverage) {
+                this.coverage = coverage;
                 return this;
             }
 
@@ -323,6 +355,14 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
+                return this;
+            }
+
+            /**
+             * EventResult.
+             */
+            public Builder eventResult(String eventResult) {
+                this.eventResult = eventResult;
                 return this;
             }
 
