@@ -55,6 +55,7 @@ public class DeletePipelineRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the MPS queue.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

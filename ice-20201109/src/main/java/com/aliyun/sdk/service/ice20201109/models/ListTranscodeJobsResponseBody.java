@@ -62,7 +62,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Jobs.
+         * <p>The list of jobs.</p>
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -70,7 +70,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation for the first time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019daf5780f74831b0e1a767c9f1c178</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -78,7 +81,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,7 +154,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * InputUrl.
+             * <p>The URL of the media asset. This parameter is specified only when the media asset is transcoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder inputUrl(String inputUrl) {
                 this.inputUrl = inputUrl;
@@ -156,7 +165,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Media.
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
+             * <li>If Type is set to Media, the ID of a media asset is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -164,7 +180,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -235,7 +258,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The media object. If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported. If Type is set to Media, the ID of a media asset is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -243,7 +269,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The URL of the transcoded output stream. This parameter is required only when the output is a media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/{MediaId}/{JobId}.mp4</p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -251,7 +280,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -336,6 +372,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String videoIndex; 
 
             /**
+             * <p>The audio stream index.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -347,7 +384,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the input stream. The default value is the duration of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.0</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -355,7 +395,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * <p>The start time of the input stream. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder start(Double start) {
                 this.start = start;
@@ -363,6 +406,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The video stream index.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -437,7 +481,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String encryptType; 
 
             /**
-             * CipherText.
+             * <p>The ciphertext of HTTP Live Streaming (HLS) encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MTYi00NDU0LTg5O****</p>
              */
             public Builder cipherText(String cipherText) {
                 this.cipherText = cipherText;
@@ -445,7 +492,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DecryptKeyUri.
+             * <p>The endpoint of the decryption service for HLS encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://sample.com/path?CipherText=MTYi00NDU0LTg5O">https://sample.com/path?CipherText=MTYi00NDU0LTg5O</a>****</p>
              */
             public Builder decryptKeyUri(String decryptKeyUri) {
                 this.decryptKeyUri = decryptKeyUri;
@@ -453,7 +503,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptType.
+             * <p>The encryption type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateEncryption</p>
              */
             public Builder encryptType(String encryptType) {
                 this.encryptType = encryptType;
@@ -512,7 +565,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The media object. If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported. If Type is set to Media, the ID of a media asset is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -520,7 +576,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -579,7 +642,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * Duration.
+             * <p>The duration of the stream. Valid values: the number of seconds or &quot;ToEND&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ToEND</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -587,7 +653,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * <p>The beginning of the time range for which data was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:05</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -706,7 +775,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Dx.
+             * <p>The position of the watermark on the x-axis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dx(String dx) {
                 this.dx = dx;
@@ -714,7 +786,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Dy.
+             * <p>The position of the watermark on the y-axis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dy(String dy) {
                 this.dy = dy;
@@ -722,7 +797,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * File.
+             * <p>The watermark image file.</p>
              */
             public Builder file(File file) {
                 this.file = file;
@@ -730,7 +805,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -738,7 +816,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferPos.
+             * <p>The reference position of the watermark. Valid values: TopLeft, TopRight, BottomLeft, and BottomRight. Default value: TopLeft.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TopLeft</p>
              */
             public Builder referPos(String referPos) {
                 this.referPos = referPos;
@@ -746,7 +827,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Timeline.
+             * <p>The timeline settings.</p>
              */
             public Builder timeline(Timeline timeline) {
                 this.timeline = timeline;
@@ -754,7 +835,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -813,7 +897,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
             public Builder overwriteParams(OverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -821,7 +905,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -880,7 +967,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
+             * <li>If Type is set to Media, the ID of a media asset is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -888,7 +982,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -959,7 +1060,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String format; 
 
             /**
-             * CharEnc.
+             * <p>The file encoding format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTF-8</p>
              */
             public Builder charEnc(String charEnc) {
                 this.charEnc = charEnc;
@@ -967,7 +1071,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * File.
+             * <p>The subtitle file.</p>
              */
             public Builder file(OverwriteParamsFile file) {
                 this.file = file;
@@ -975,7 +1079,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The format of the subtitle file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtt</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -1034,7 +1141,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
             public Builder overwriteParams(SubtitlesOverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -1042,7 +1149,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1197,7 +1307,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String top; 
 
             /**
-             * Adaptive.
+             * <p>Indicates whether the text size was adjusted based on the output video dimensions. true / false, default: false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder adaptive(String adaptive) {
                 this.adaptive = adaptive;
@@ -1205,7 +1318,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * BorderColor.
+             * <p>The border color.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#006400</p>
              */
             public Builder borderColor(String borderColor) {
                 this.borderColor = borderColor;
@@ -1213,7 +1329,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * BorderWidth.
+             * <p>The border width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder borderWidth(Integer borderWidth) {
                 this.borderWidth = borderWidth;
@@ -1221,7 +1340,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The watermark text. Base64 encoding is not required. The string must be encoded in UTF-8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试水印</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1229,7 +1351,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FontAlpha.
+             * <p>The transparency of the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder fontAlpha(String fontAlpha) {
                 this.fontAlpha = fontAlpha;
@@ -1237,7 +1362,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FontColor.
+             * <p>The color of the text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#006400</p>
              */
             public Builder fontColor(String fontColor) {
                 this.fontColor = fontColor;
@@ -1245,7 +1373,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FontName.
+             * <p>The font of the text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SimSun</p>
              */
             public Builder fontName(String fontName) {
                 this.fontName = fontName;
@@ -1253,7 +1384,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FontSize.
+             * <p>The size of the text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -1261,7 +1395,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Left.
+             * <p>The distance of the watermark from the left edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder left(String left) {
                 this.left = left;
@@ -1269,7 +1406,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Top.
+             * <p>The distance of the watermark from the top edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder top(String top) {
                 this.top = top;
@@ -1328,7 +1468,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
             public Builder overwriteParams(TextWatermarksOverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -1336,7 +1476,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1419,7 +1562,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String truePeak; 
 
             /**
-             * IntegratedLoudnessTarget.
+             * <p>The output volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-6</p>
              */
             public Builder integratedLoudnessTarget(String integratedLoudnessTarget) {
                 this.integratedLoudnessTarget = integratedLoudnessTarget;
@@ -1427,7 +1573,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LoudnessRangeTarget.
+             * <p>The volume range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder loudnessRangeTarget(String loudnessRangeTarget) {
                 this.loudnessRangeTarget = loudnessRangeTarget;
@@ -1435,7 +1584,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>The volume adjustment method. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -1443,7 +1595,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TruePeak.
+             * <p>The peak volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder truePeak(String truePeak) {
                 this.truePeak = truePeak;
@@ -1562,7 +1717,15 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private Volume volume; 
 
             /**
-             * Bitrate.
+             * <p>The audio bitrate of the output file.</p>
+             * <ul>
+             * <li>Valid values: [8,1000].</li>
+             * <li>Unit: Kbit/s.</li>
+             * <li>Default value: 128.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1570,7 +1733,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * <p>The number of sound channels. Default value: 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -1578,7 +1744,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Codec.
+             * <p>The audio codec. Valid values: AAC, MP3, VORBIS, and FLAC. Default value: AAC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -1586,7 +1755,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The audio codec profile. If the Codec parameter is set to AAC, the valid values are aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac_low</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1594,7 +1766,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Remove.
+             * <p>Indicates whether the audio stream is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder remove(String remove) {
                 this.remove = remove;
@@ -1602,7 +1777,15 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Samplerate.
+             * <p>The sampling rate.</p>
+             * <ul>
+             * <li>Default value: 44100.</li>
+             * <li>Valid values: 22050, 32000, 44100, 48000, and 96000.</li>
+             * <li>Unit: Hz.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -1610,7 +1793,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>The volume configurations.</p>
              */
             public Builder volume(Volume volume) {
                 this.volume = volume;
@@ -1657,7 +1840,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String format; 
 
             /**
-             * Format.
+             * <p>The container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -1716,7 +1902,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String forceSegTime; 
 
             /**
-             * Duration.
+             * <p>The segment length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1724,7 +1913,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ForceSegTime.
+             * <p>The forced segmentation point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2,3</p>
              */
             public Builder forceSegTime(String forceSegTime) {
                 this.forceSegTime = forceSegTime;
@@ -1771,7 +1963,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private Segment segment; 
 
             /**
-             * Segment.
+             * <p>The segment settings.</p>
              */
             public Builder segment(Segment segment) {
                 this.segment = segment;
@@ -2022,7 +2214,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * AbrMax.
+             * <p>The maximum adaptive bitrate (ABR). This parameter takes effect only for Narrowband HD 1.0. Valid values: [10,50000]. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder abrMax(String abrMax) {
                 this.abrMax = abrMax;
@@ -2030,7 +2225,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * <p>The average bitrate of the video.</p>
+             * <ul>
+             * <li>Valid values: [10,50000].</li>
+             * <li>Unit: Kbit/s.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -2038,7 +2240,15 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Bufsize.
+             * <p>The buffer size.</p>
+             * <ul>
+             * <li>Valid values: [1000,128000].</li>
+             * <li>Default value: 6000.</li>
+             * <li>Unit: KB.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder bufsize(String bufsize) {
                 this.bufsize = bufsize;
@@ -2046,7 +2256,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Codec.
+             * <p>The encoding format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -2054,7 +2267,15 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Crf.
+             * <p>The constant rate factor.</p>
+             * <ul>
+             * <li>Valid values: [0,51].</li>
+             * <li>Default value: 23 if the encoding format is H.264, or 26 if the encoding format is H.265.</li>
+             * </ul>
+             * <p>If this parameter is set, the value of Bitrate becomes invalid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder crf(String crf) {
                 this.crf = crf;
@@ -2062,7 +2283,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Crop.
+             * <p>The method of video cropping. Valid values:</p>
+             * <ul>
+             * <li>border: automatically detects and removes black bars.</li>
+             * <li>A value in the width:height:left:top format: crops the videos based on the custom settings. Example: 1280:800:0:140.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1280:800:0:140</p>
              */
             public Builder crop(String crop) {
                 this.crop = crop;
@@ -2070,7 +2298,15 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate.</p>
+             * <ul>
+             * <li>Valid values: (0,60].</li>
+             * <li>The value is 60 if the frame rate of the input video exceeds 60.</li>
+             * <li>Default value: the frame rate of the input video.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -2078,7 +2314,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Gop.
+             * <p>The maximum number of frames between two keyframes.</p>
+             * <ul>
+             * <li>Valid values: [1,1080000].</li>
+             * <li>Default value: 250.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>250</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -2086,7 +2329,15 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the output video.</p>
+             * <ul>
+             * <li>Valid values: [128,4096].</li>
+             * <li>Unit: pixels.</li>
+             * <li>Default value: the height of the input video.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -2094,7 +2345,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LongShortMode.
+             * <p>Indicates whether the auto-rotate screen feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder longShortMode(String longShortMode) {
                 this.longShortMode = longShortMode;
@@ -2102,7 +2356,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Maxrate.
+             * <p>The maximum bitrate of the output video. Valid values: [10,50000]. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9000</p>
              */
             public Builder maxrate(String maxrate) {
                 this.maxrate = maxrate;
@@ -2110,7 +2367,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Pad.
+             * <p>The black bars added to the video.</p>
+             * <ul>
+             * <li>Format: width:height:left:top.</li>
+             * <li>Example: 1280:800:0:140.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1280:800:0:140</p>
              */
             public Builder pad(String pad) {
                 this.pad = pad;
@@ -2118,7 +2382,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * <p>The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -2126,7 +2393,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Preset.
+             * <p>The preset video algorithm. This parameter takes effect only if the encoding format is H.264. Valid values: veryfast, fast, medium, slow, and slower. Default value: medium.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder preset(String preset) {
                 this.preset = preset;
@@ -2134,7 +2404,16 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The encoding profile. Valid values: baseline, main, and high.</p>
+             * <ul>
+             * <li>baseline: applicable to mobile devices.</li>
+             * <li>main: applicable to standard-definition devices.</li>
+             * <li>high: applicable to high-definition devices.</li>
+             * </ul>
+             * <p>Default value: high.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Main</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -2142,7 +2421,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Remove.
+             * <p>Indicates whether the video was removed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder remove(String remove) {
                 this.remove = remove;
@@ -2150,7 +2432,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ScanMode.
+             * <p>The scan mode. Valid values: interlaced and progressive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>progressive</p>
              */
             public Builder scanMode(String scanMode) {
                 this.scanMode = scanMode;
@@ -2158,7 +2443,15 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the output video.</p>
+             * <ul>
+             * <li>Valid values: [128,4096].</li>
+             * <li>Unit: pixels.</li>
+             * <li>Default value: the width of the input video.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -2253,7 +2546,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private Video video; 
 
             /**
-             * Audio.
+             * <p>The audio settings.</p>
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -2261,7 +2554,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Container.
+             * <p>The encapsulation format settings.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -2269,7 +2562,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MuxConfig.
+             * <p>The encapsulation settings.</p>
              */
             public Builder muxConfig(MuxConfig muxConfig) {
                 this.muxConfig = muxConfig;
@@ -2285,7 +2578,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Video.
+             * <p>The video settings.</p>
              */
             public Builder video(Video video) {
                 this.video = video;
@@ -2344,7 +2637,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
             public Builder overwriteParams(TranscodeOverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -2352,7 +2645,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -2471,7 +2767,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private Transcode transcode; 
 
             /**
-             * CombineConfigs.
+             * <p>The multi-input stream merge configuration.</p>
              */
             public Builder combineConfigs(java.util.List < CombineConfigs> combineConfigs) {
                 this.combineConfigs = combineConfigs;
@@ -2479,7 +2775,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Encryption.
+             * <p>The encryption settings.</p>
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
@@ -2487,7 +2783,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageWatermarks.
+             * <p>The watermark configuration for an image.</p>
              */
             public Builder imageWatermarks(java.util.List < ImageWatermarks> imageWatermarks) {
                 this.imageWatermarks = imageWatermarks;
@@ -2495,7 +2791,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IsInheritTags.
+             * <p>Indicates whether the tags of the input stream are inherited in the output stream. This parameter does not take effect when the input is not a media asset. Default value: false.</p>
              */
             public Builder isInheritTags(Boolean isInheritTags) {
                 this.isInheritTags = isInheritTags;
@@ -2503,7 +2799,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Subtitles.
+             * <p>The subtitle configuration.</p>
              */
             public Builder subtitles(java.util.List < Subtitles> subtitles) {
                 this.subtitles = subtitles;
@@ -2511,7 +2807,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TextWatermarks.
+             * <p>The configurations of the text watermarks.</p>
              */
             public Builder textWatermarks(java.util.List < TextWatermarks> textWatermarks) {
                 this.textWatermarks = textWatermarks;
@@ -2519,7 +2815,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Transcode.
+             * <p>The transcoding configuration.</p>
              */
             public Builder transcode(Transcode transcode) {
                 this.transcode = transcode;
@@ -2578,7 +2874,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private ProcessConfig processConfig; 
 
             /**
-             * Output.
+             * <p>The output file configuration.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -2586,7 +2882,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessConfig.
+             * <p>The job processing configuration.</p>
              */
             public Builder processConfig(ProcessConfig processConfig) {
                 this.processConfig = processConfig;
@@ -2645,7 +2941,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private Integer priority; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e37ebee5d98b4781897f6086e89f9c56</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -2653,7 +2952,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -2856,7 +3158,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-12T08:49:41Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2864,7 +3169,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the job was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-12T08:49:41Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -2872,7 +3180,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InputGroup.
+             * <p>The input group of the job. An input of a single file indicates a transcoding job. An input of multiple files indicates an audio and video stream merge job.</p>
              */
             public Builder inputGroup(java.util.List < InputGroup> inputGroup) {
                 this.inputGroup = inputGroup;
@@ -2880,7 +3188,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobCount.
+             * <p>The number of subjobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder jobCount(Integer jobCount) {
                 this.jobCount = jobCount;
@@ -2888,7 +3199,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>transcode-job</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2896,7 +3210,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputGroup.
+             * <p>The output group of the job.</p>
              */
             public Builder outputGroup(java.util.List < OutputGroup> outputGroup) {
                 this.outputGroup = outputGroup;
@@ -2904,7 +3218,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentJobId.
+             * <p>The main job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8b2198504dd340b7b3c9842a74fc9baa</p>
              */
             public Builder parentJobId(String parentJobId) {
                 this.parentJobId = parentJobId;
@@ -2912,7 +3229,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * <p>The completion percentage of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -2920,7 +3240,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The ID of the request that submitted the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -2928,7 +3251,7 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleConfig.
+             * <p>The scheduling configuration of the job.</p>
              */
             public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
                 this.scheduleConfig = scheduleConfig;
@@ -2936,7 +3259,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the job.</p>
+             * <ul>
+             * <li>Success: At least one of the subjobs is successful.</li>
+             * <li>Fail: All subjobs failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2944,7 +3274,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * <p>The time when the job was submitted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-12T08:49:41Z</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -2952,7 +3285,15 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerSource.
+             * <p>The source of the job. Valid values:</p>
+             * <ul>
+             * <li>API</li>
+             * <li>WorkFlow</li>
+             * <li>Console</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder triggerSource(String triggerSource) {
                 this.triggerSource = triggerSource;
@@ -2960,7 +3301,10 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-data</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

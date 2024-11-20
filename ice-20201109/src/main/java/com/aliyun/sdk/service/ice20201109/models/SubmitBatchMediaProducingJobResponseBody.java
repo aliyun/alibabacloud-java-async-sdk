@@ -50,7 +50,10 @@ public class SubmitBatchMediaProducingJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * <p>The ID of the quick video production job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +61,10 @@ public class SubmitBatchMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

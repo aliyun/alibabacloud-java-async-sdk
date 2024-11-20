@@ -74,7 +74,10 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
         private String webVTTUrl; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +85,7 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotUrls.
+         * <p>The list of snapshot URLs.</p>
          */
         public Builder snapshotUrls(java.util.List < String > snapshotUrls) {
             this.snapshotUrls = snapshotUrls;
@@ -90,7 +93,10 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -98,7 +104,10 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * WebVTTUrl.
+         * <p>The URL of the WebVTT file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/ouoput.vtt">http://test-bucket.oss-cn-shanghai.aliyuncs.com/ouoput.vtt</a></p>
          */
         public Builder webVTTUrl(String webVTTUrl) {
             this.webVTTUrl = webVTTUrl;

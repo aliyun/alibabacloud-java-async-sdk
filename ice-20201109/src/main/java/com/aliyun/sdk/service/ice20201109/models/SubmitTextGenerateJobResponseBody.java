@@ -50,7 +50,10 @@ public class SubmitTextGenerateJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +61,7 @@ public class SubmitTextGenerateJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

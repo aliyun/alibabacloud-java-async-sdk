@@ -119,6 +119,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
 
+        @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
+        private Integer maxIdleTime;
+
         @com.aliyun.core.annotation.NameInMap("UseVoiceprint")
         private Boolean useVoiceprint;
 
@@ -137,6 +140,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Volume")
         private Long volume;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowOverrideParams")
+        private String workflowOverrideParams;
+
         private AvatarChat3D(Builder builder) {
             this.asrMaxSilence = builder.asrMaxSilence;
             this.avatarId = builder.avatarId;
@@ -145,12 +151,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.gracefulShutdown = builder.gracefulShutdown;
             this.greeting = builder.greeting;
+            this.maxIdleTime = builder.maxIdleTime;
             this.useVoiceprint = builder.useVoiceprint;
             this.userOfflineTimeout = builder.userOfflineTimeout;
             this.userOnlineTimeout = builder.userOnlineTimeout;
             this.voiceId = builder.voiceId;
             this.voiceprintId = builder.voiceprintId;
             this.volume = builder.volume;
+            this.workflowOverrideParams = builder.workflowOverrideParams;
         }
 
         public static Builder builder() {
@@ -211,6 +219,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return maxIdleTime
+         */
+        public Integer getMaxIdleTime() {
+            return this.maxIdleTime;
+        }
+
+        /**
          * @return useVoiceprint
          */
         public Boolean getUseVoiceprint() {
@@ -252,6 +267,13 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.volume;
         }
 
+        /**
+         * @return workflowOverrideParams
+         */
+        public String getWorkflowOverrideParams() {
+            return this.workflowOverrideParams;
+        }
+
         public static final class Builder {
             private Integer asrMaxSilence; 
             private String avatarId; 
@@ -260,12 +282,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
+            private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
             private Integer userOfflineTimeout; 
             private Integer userOnlineTimeout; 
             private String voiceId; 
             private String voiceprintId; 
             private Long volume; 
+            private String workflowOverrideParams; 
 
             /**
              * AsrMaxSilence.
@@ -324,6 +348,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
+             * MaxIdleTime.
+             */
+            public Builder maxIdleTime(Integer maxIdleTime) {
+                this.maxIdleTime = maxIdleTime;
+                return this;
+            }
+
+            /**
              * UseVoiceprint.
              */
             public Builder useVoiceprint(Boolean useVoiceprint) {
@@ -371,6 +403,14 @@ public class AIAgentTemplateConfig extends TeaModel {
                 return this;
             }
 
+            /**
+             * WorkflowOverrideParams.
+             */
+            public Builder workflowOverrideParams(String workflowOverrideParams) {
+                this.workflowOverrideParams = workflowOverrideParams;
+                return this;
+            }
+
             public AvatarChat3D build() {
                 return new AvatarChat3D(this);
             } 
@@ -406,6 +446,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
 
+        @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
+        private Integer maxIdleTime;
+
         @com.aliyun.core.annotation.NameInMap("UseVoiceprint")
         private Boolean useVoiceprint;
 
@@ -424,6 +467,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Volume")
         private Long volume;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowOverrideParams")
+        private String workflowOverrideParams;
+
         private VisionChat(Builder builder) {
             this.asrMaxSilence = builder.asrMaxSilence;
             this.bailianAppParams = builder.bailianAppParams;
@@ -432,12 +478,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.gracefulShutdown = builder.gracefulShutdown;
             this.greeting = builder.greeting;
+            this.maxIdleTime = builder.maxIdleTime;
             this.useVoiceprint = builder.useVoiceprint;
             this.userOfflineTimeout = builder.userOfflineTimeout;
             this.userOnlineTimeout = builder.userOnlineTimeout;
             this.voiceId = builder.voiceId;
             this.voiceprintId = builder.voiceprintId;
             this.volume = builder.volume;
+            this.workflowOverrideParams = builder.workflowOverrideParams;
         }
 
         public static Builder builder() {
@@ -498,6 +546,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return maxIdleTime
+         */
+        public Integer getMaxIdleTime() {
+            return this.maxIdleTime;
+        }
+
+        /**
          * @return useVoiceprint
          */
         public Boolean getUseVoiceprint() {
@@ -539,6 +594,13 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.volume;
         }
 
+        /**
+         * @return workflowOverrideParams
+         */
+        public String getWorkflowOverrideParams() {
+            return this.workflowOverrideParams;
+        }
+
         public static final class Builder {
             private Integer asrMaxSilence; 
             private String bailianAppParams; 
@@ -547,12 +609,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
+            private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
             private Integer userOfflineTimeout; 
             private Integer userOnlineTimeout; 
             private String voiceId; 
             private String voiceprintId; 
             private Long volume; 
+            private String workflowOverrideParams; 
 
             /**
              * AsrMaxSilence.
@@ -611,6 +675,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
+             * MaxIdleTime.
+             */
+            public Builder maxIdleTime(Integer maxIdleTime) {
+                this.maxIdleTime = maxIdleTime;
+                return this;
+            }
+
+            /**
              * UseVoiceprint.
              */
             public Builder useVoiceprint(Boolean useVoiceprint) {
@@ -658,6 +730,14 @@ public class AIAgentTemplateConfig extends TeaModel {
                 return this;
             }
 
+            /**
+             * WorkflowOverrideParams.
+             */
+            public Builder workflowOverrideParams(String workflowOverrideParams) {
+                this.workflowOverrideParams = workflowOverrideParams;
+                return this;
+            }
+
             public VisionChat build() {
                 return new VisionChat(this);
             } 
@@ -675,6 +755,12 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrMaxSilence")
         private Integer asrMaxSilence;
 
+        @com.aliyun.core.annotation.NameInMap("AvatarUrl")
+        private String avatarUrl;
+
+        @com.aliyun.core.annotation.NameInMap("AvatarUrlType")
+        private String avatarUrlType;
+
         @com.aliyun.core.annotation.NameInMap("BailianAppParams")
         private String bailianAppParams;
 
@@ -689,6 +775,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
+
+        @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
+        private Integer maxIdleTime;
 
         @com.aliyun.core.annotation.NameInMap("UseVoiceprint")
         private Boolean useVoiceprint;
@@ -708,19 +797,26 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Volume")
         private Long volume;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowOverrideParams")
+        private String workflowOverrideParams;
+
         private VoiceChat(Builder builder) {
             this.asrMaxSilence = builder.asrMaxSilence;
+            this.avatarUrl = builder.avatarUrl;
+            this.avatarUrlType = builder.avatarUrlType;
             this.bailianAppParams = builder.bailianAppParams;
             this.enablePushToTalk = builder.enablePushToTalk;
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.gracefulShutdown = builder.gracefulShutdown;
             this.greeting = builder.greeting;
+            this.maxIdleTime = builder.maxIdleTime;
             this.useVoiceprint = builder.useVoiceprint;
             this.userOfflineTimeout = builder.userOfflineTimeout;
             this.userOnlineTimeout = builder.userOnlineTimeout;
             this.voiceId = builder.voiceId;
             this.voiceprintId = builder.voiceprintId;
             this.volume = builder.volume;
+            this.workflowOverrideParams = builder.workflowOverrideParams;
         }
 
         public static Builder builder() {
@@ -736,6 +832,20 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public Integer getAsrMaxSilence() {
             return this.asrMaxSilence;
+        }
+
+        /**
+         * @return avatarUrl
+         */
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        /**
+         * @return avatarUrlType
+         */
+        public String getAvatarUrlType() {
+            return this.avatarUrlType;
         }
 
         /**
@@ -771,6 +881,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public String getGreeting() {
             return this.greeting;
+        }
+
+        /**
+         * @return maxIdleTime
+         */
+        public Integer getMaxIdleTime() {
+            return this.maxIdleTime;
         }
 
         /**
@@ -815,25 +932,52 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.volume;
         }
 
+        /**
+         * @return workflowOverrideParams
+         */
+        public String getWorkflowOverrideParams() {
+            return this.workflowOverrideParams;
+        }
+
         public static final class Builder {
             private Integer asrMaxSilence; 
+            private String avatarUrl; 
+            private String avatarUrlType; 
             private String bailianAppParams; 
             private Boolean enablePushToTalk; 
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
+            private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
             private Integer userOfflineTimeout; 
             private Integer userOnlineTimeout; 
             private String voiceId; 
             private String voiceprintId; 
             private Long volume; 
+            private String workflowOverrideParams; 
 
             /**
              * AsrMaxSilence.
              */
             public Builder asrMaxSilence(Integer asrMaxSilence) {
                 this.asrMaxSilence = asrMaxSilence;
+                return this;
+            }
+
+            /**
+             * AvatarUrl.
+             */
+            public Builder avatarUrl(String avatarUrl) {
+                this.avatarUrl = avatarUrl;
+                return this;
+            }
+
+            /**
+             * AvatarUrlType.
+             */
+            public Builder avatarUrlType(String avatarUrlType) {
+                this.avatarUrlType = avatarUrlType;
                 return this;
             }
 
@@ -874,6 +1018,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
+                return this;
+            }
+
+            /**
+             * MaxIdleTime.
+             */
+            public Builder maxIdleTime(Integer maxIdleTime) {
+                this.maxIdleTime = maxIdleTime;
                 return this;
             }
 
@@ -922,6 +1074,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder volume(Long volume) {
                 this.volume = volume;
+                return this;
+            }
+
+            /**
+             * WorkflowOverrideParams.
+             */
+            public Builder workflowOverrideParams(String workflowOverrideParams) {
+                this.workflowOverrideParams = workflowOverrideParams;
                 return this;
             }
 

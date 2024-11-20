@@ -62,7 +62,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * SystemTemplateList.
+         * <p>The queried templates.</p>
          */
         public Builder systemTemplateList(java.util.List < SystemTemplateList> systemTemplateList) {
             this.systemTemplateList = systemTemplateList;
@@ -78,7 +81,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -208,7 +214,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * Status.
+             * <p>The template state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -216,7 +225,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Subtype.
+             * <p>The subtype ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subtype(Integer subtype) {
                 this.subtype = subtype;
@@ -224,7 +236,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SubtypeName.
+             * <p>The subtype name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remux</p>
              */
             public Builder subtypeName(String subtypeName) {
                 this.subtypeName = subtypeName;
@@ -232,7 +247,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The template parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</p>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -240,7 +258,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S00000001-000000</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -248,7 +269,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FLV-COPY</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -256,7 +280,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -264,7 +291,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The type name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TranscodeTemplate</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

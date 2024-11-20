@@ -26,6 +26,10 @@ public class GenerateAIAgentCallRequest extends Request {
     private AIAgentTemplateConfig templateConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
+    private String userData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -34,6 +38,7 @@ public class GenerateAIAgentCallRequest extends Request {
         this.AIAgentId = builder.AIAgentId;
         this.expire = builder.expire;
         this.templateConfig = builder.templateConfig;
+        this.userData = builder.userData;
         this.userId = builder.userId;
     }
 
@@ -72,6 +77,13 @@ public class GenerateAIAgentCallRequest extends Request {
     }
 
     /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -82,6 +94,7 @@ public class GenerateAIAgentCallRequest extends Request {
         private String AIAgentId; 
         private Long expire; 
         private AIAgentTemplateConfig templateConfig; 
+        private String userData; 
         private String userId; 
 
         private Builder() {
@@ -93,6 +106,7 @@ public class GenerateAIAgentCallRequest extends Request {
             this.AIAgentId = request.AIAgentId;
             this.expire = request.expire;
             this.templateConfig = request.templateConfig;
+            this.userData = request.userData;
             this.userId = request.userId;
         } 
 
@@ -124,6 +138,15 @@ public class GenerateAIAgentCallRequest extends Request {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
             this.putQueryParameter("TemplateConfig", templateConfigShrink);
             this.templateConfig = templateConfig;
+            return this;
+        }
+
+        /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.putQueryParameter("UserData", userData);
+            this.userData = userData;
             return this;
         }
 

@@ -62,7 +62,7 @@ public class ListDNAFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileList.
+         * <p>The queried files.</p>
          */
         public Builder fileList(java.util.List < FileList> fileList) {
             this.fileList = fileList;
@@ -70,7 +70,10 @@ public class ListDNAFilesResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae0fd49c0840e14daf0d66a75b83****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -78,7 +81,10 @@ public class ListDNAFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE89FA5-E620-56C7-9B80-75D09757385A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,7 +154,10 @@ public class ListDNAFilesResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -156,7 +165,10 @@ public class ListDNAFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The OSS region in which the input file resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-beijing</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -164,7 +176,10 @@ public class ListDNAFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>The name of the OSS object that is used as the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-****.mp4</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -223,7 +238,7 @@ public class ListDNAFilesResponseBody extends TeaModel {
             private String primaryKey; 
 
             /**
-             * InputFile.
+             * <p>The Object Storage Service (OSS) information about the input file.</p>
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -231,7 +246,10 @@ public class ListDNAFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * <p>The primary key of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ae0fd49c0840e14daf0d66a75b83****</p>
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;

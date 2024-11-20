@@ -62,7 +62,7 @@ public class ListAvatarsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,10 @@ public class ListAvatarsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,14 @@ public class ListAvatarsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -196,7 +206,7 @@ public class ListAvatarsResponseBody extends TeaModel {
             private Boolean transparent; 
 
             /**
-             * AvatarDescription.
+             * <p>The description of the digital human.</p>
              */
             public Builder avatarDescription(String avatarDescription) {
                 this.avatarDescription = avatarDescription;
@@ -204,7 +214,10 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarId.
+             * <p>The ID of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Avatar-XXX</p>
              */
             public Builder avatarId(String avatarId) {
                 this.avatarId = avatarId;
@@ -212,7 +225,7 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarName.
+             * <p>The name of the digital human.</p>
              */
             public Builder avatarName(String avatarName) {
                 this.avatarName = avatarName;
@@ -220,7 +233,10 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarType.
+             * <p>The type of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2DAvatar</p>
              */
             public Builder avatarType(String avatarType) {
                 this.avatarType = avatarType;
@@ -228,7 +244,10 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * Portrait.
+             * <p>The media asset ID of the portrait image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
              */
             public Builder portrait(String portrait) {
                 this.portrait = portrait;
@@ -236,7 +255,10 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * Thumbnail.
+             * <p>The thumbnail URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
@@ -244,7 +266,10 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * Transparent.
+             * <p>Indicates whether the digital human image supports the alpha channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder transparent(Boolean transparent) {
                 this.transparent = transparent;
@@ -303,7 +328,7 @@ public class ListAvatarsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * AvatarList.
+             * <p>The queried digital humans.</p>
              */
             public Builder avatarList(java.util.List < AvatarList> avatarList) {
                 this.avatarList = avatarList;
@@ -311,7 +336,10 @@ public class ListAvatarsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

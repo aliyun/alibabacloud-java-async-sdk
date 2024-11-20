@@ -110,7 +110,10 @@ public class QueryDNAJobListRequest extends Request {
         } 
 
         /**
-         * JobIds.
+         * <p>The IDs of the media fingerprint analysis jobs that you want to query. We recommend that you query at most 10 jobs at a time. Separate multiple job IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e47098a5b665e2a12****</p>
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);

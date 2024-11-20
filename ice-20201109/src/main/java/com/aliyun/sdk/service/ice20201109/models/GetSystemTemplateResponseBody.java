@@ -50,7 +50,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
         private SystemTemplate systemTemplate; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetSystemTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * SystemTemplate.
+         * <p>The template information.</p>
          */
         public Builder systemTemplate(SystemTemplate systemTemplate) {
             this.systemTemplate = systemTemplate;
@@ -188,7 +191,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * Status.
+             * <p>The template state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -196,7 +202,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Subtype.
+             * <p>The subtype ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subtype(Integer subtype) {
                 this.subtype = subtype;
@@ -204,7 +213,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SubtypeName.
+             * <p>The subtype name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder subtypeName(String subtypeName) {
                 this.subtypeName = subtypeName;
@@ -212,7 +224,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The template parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;m3u8&quot;},&quot;TransConfig&quot;:{&quot;TransMode&quot;:&quot;onepass&quot;},&quot;Video&quot;:{&quot;Codec&quot;:&quot;H.264&quot;,&quot;Maxrate&quot;:8000,&quot;Preset&quot;:&quot;medium&quot;,&quot;PixFmt&quot;:&quot;yuv420p&quot;,&quot;Width&quot;:2048,&quot;Bitrate&quot;:3500},&quot;Audio&quot;:{&quot;Codec&quot;:&quot;aac&quot;,&quot;Bitrate&quot;:160,&quot;Samplerate&quot;:44100,&quot;Channels&quot;:2}}</p>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -220,7 +235,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S00000001-100060</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -228,7 +246,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>M3U8-2K</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -236,7 +257,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -244,7 +268,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The type name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TranscodeTemplate</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

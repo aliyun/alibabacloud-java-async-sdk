@@ -55,6 +55,7 @@ public class GetAvatarTrainingJobRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the digital human training job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

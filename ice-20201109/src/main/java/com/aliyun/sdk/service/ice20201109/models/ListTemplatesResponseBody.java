@@ -62,7 +62,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * <p>The queried templates.</p>
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -78,7 +81,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -268,7 +274,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>ClipsParam</p>
+             * <p>The clip parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Media1&quot;:&quot;mediaId&quot;,&quot;Text1&quot;:&quot;text&quot;}</p>
@@ -279,7 +285,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The template configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>参考Timeline模板配置详解</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -287,7 +296,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The thumbnail URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -295,7 +307,16 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateSource.
+             * <p>The source from which the template was created.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AliyunConsole</li>
+             * <li>WebSDK</li>
+             * <li>OpenAPI</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI</p>
              */
             public Builder createSource(String createSource) {
                 this.createSource = createSource;
@@ -303,7 +324,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -311,7 +335,16 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedSource.
+             * <p>The source from which the template was modified.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AliyunConsole</li>
+             * <li>WebSDK</li>
+             * <li>OpenAPI</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI</p>
              */
             public Builder modifiedSource(String modifiedSource) {
                 this.modifiedSource = modifiedSource;
@@ -319,7 +352,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the template was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -327,7 +363,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>视频添加水印模板</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -335,7 +374,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewMedia.
+             * <p>The preview media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder previewMedia(String previewMedia) {
                 this.previewMedia = previewMedia;
@@ -343,7 +385,17 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewMediaStatus.
+             * <p>The state of the preview media asset.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PrepareFail</li>
+             * <li>Init</li>
+             * <li>Normal</li>
+             * <li>Preparing</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder previewMediaStatus(String previewMediaStatus) {
                 this.previewMediaStatus = previewMediaStatus;
@@ -351,7 +403,19 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The template state.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>UploadFailed: Failed to upload the video.</li>
+             * <li>ProcessFailed: Failed to process the advanced template.</li>
+             * <li>Available: The template is available.</li>
+             * <li>Uploading: The video is being uploaded.</li>
+             * <li>Created: The template is created but not ready for use.</li>
+             * <li>Processing: The advanced template is being processed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +423,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -367,7 +434,15 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The template type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Timeline: regular template.</li>
+             * <li>VETemplate: advanced template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Timeline</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -62,7 +62,7 @@ public class UpdateAvatarTrainingJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,10 @@ public class UpdateAvatarTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,14 @@ public class UpdateAvatarTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -124,7 +134,10 @@ public class UpdateAvatarTrainingJobResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * JobId.
+             * <p>The ID of the digital human training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

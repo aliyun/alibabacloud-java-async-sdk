@@ -126,6 +126,7 @@ public class DeleteDNAFilesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the media fingerprint library from which you want to delete files.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +157,7 @@ public class DeleteDNAFilesRequest extends Request {
         }
 
         /**
+         * <p>The primary key values of the files that you want to delete. Separate multiple values with commas (,). You can delete up to 50 files at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

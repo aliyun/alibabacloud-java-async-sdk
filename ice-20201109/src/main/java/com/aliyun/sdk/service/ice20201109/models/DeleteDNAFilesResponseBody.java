@@ -38,7 +38,10 @@ public class DeleteDNAFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -161,7 +161,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * CoverUrl.
+         * <p>The URL of the template thumbnail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
          */
         public Builder coverUrl(String coverUrl) {
             this.putQueryParameter("CoverUrl", coverUrl);
@@ -170,7 +173,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the online editing template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>视频添加水印模板</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -179,7 +185,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * PreviewMedia.
+         * <p>The ID of the preview video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder previewMedia(String previewMedia) {
             this.putQueryParameter("PreviewMedia", previewMedia);
@@ -188,7 +197,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * RelatedMediaids.
+         * <p>The IDs of the materials associated with the template for use by the regular template editor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;video&quot;:[&quot;<strong><strong><strong>c04f1d4a06996144cc1a</strong></strong></strong>&quot;,&quot;<strong><strong><strong>cb7db64841b159b4f2ea</strong></strong></strong>&quot;],&quot;audio&quot;:[&quot;<strong><strong><strong>c04f1d4a06996144cc1a</strong></strong></strong>&quot;],&quot;image&quot;:[&quot;<strong><strong><strong>c04f1d4a06996144cc1a</strong></strong></strong>&quot;]}</p>
          */
         public Builder relatedMediaids(String relatedMediaids) {
             this.putQueryParameter("RelatedMediaids", relatedMediaids);
@@ -197,7 +209,15 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source from which the template is modified. Default value: OpenAPI. Valid values:</p>
+         * <ul>
+         * <li>AliyunConsole</li>
+         * <li>OpenAPI</li>
+         * <li>WebSDK</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -206,7 +226,21 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The template state. Valid values:</p>
+         * <ul>
+         * <li>Available: The template is available.</li>
+         * <li>Created: The template is created but not ready for use.</li>
+         * <li>Uploading: The video is being uploaded.</li>
+         * <li>Processing: The advanced template is being processed.</li>
+         * <li>UploadFailed: Failed to upload the video.</li>
+         * <li>ProcessFailed: Failed to process the advanced template.</li>
+         * </ul>
+         * <blockquote>
+         * <p> After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -215,7 +249,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the online editing template. You can obtain the template ID in the <a href="https://ice.console.aliyun.com/production/template/list/common">Intelligent Media Services (IMS) console</a> or the response parameters of the <a href="https://help.aliyun.com/document_detail/441161.html">AddTemplate</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

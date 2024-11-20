@@ -97,7 +97,10 @@ public class UpdatePipelineRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-pipeline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -106,6 +109,7 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
+         * <p>The ID of the MPS queue.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +122,10 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the MPS queue. Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -127,7 +134,15 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The state of the MPS queue.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Active</li>
+         * <li>Paused</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Paused</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

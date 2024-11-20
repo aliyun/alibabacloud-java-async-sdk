@@ -55,6 +55,7 @@ public class DeleteCustomTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the custom template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

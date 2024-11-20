@@ -111,6 +111,7 @@ public class CancelDNAJobRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the media fingerprint analysis job that you want to cancel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

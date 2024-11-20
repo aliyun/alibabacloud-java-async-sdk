@@ -55,6 +55,7 @@ public class GetPackageJobRequest extends Request {
         } 
 
         /**
+         * <p>The job ID. You can obtain the job ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/461964.html">SubmitPackageJob</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

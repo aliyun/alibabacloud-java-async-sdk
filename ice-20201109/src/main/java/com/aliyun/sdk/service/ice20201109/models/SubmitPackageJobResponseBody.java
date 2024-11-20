@@ -50,7 +50,10 @@ public class SubmitPackageJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2d705f385b704ee5b*******a36d93e0</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +61,10 @@ public class SubmitPackageJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -69,7 +69,10 @@ public class UpdateCustomizedVoiceRequest extends Request {
         } 
 
         /**
-         * DemoAudioMediaId.
+         * <p>The media asset ID of the sample audio file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>4d5e829d498aaf966b119348</strong></strong></p>
          */
         public Builder demoAudioMediaId(String demoAudioMediaId) {
             this.putQueryParameter("DemoAudioMediaId", demoAudioMediaId);
@@ -78,6 +81,7 @@ public class UpdateCustomizedVoiceRequest extends Request {
         }
 
         /**
+         * <p>The voice ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

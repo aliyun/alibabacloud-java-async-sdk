@@ -62,7 +62,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,10 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,14 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -148,7 +158,10 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             private String text; 
 
             /**
-             * AudioId.
+             * <p>The sequence number of the text, which corresponds to the AduioRecordId parameter to be passed during audio check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder audioId(Integer audioId) {
                 this.audioId = audioId;
@@ -156,7 +169,16 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             }
 
             /**
-             * DemoAudio.
+             * <p>The URL of the sample audio.</p>
+             * <ul>
+             * <li><p>The value is an Object Storage Service (OSS) URL.</p>
+             * <p>**</p>
+             * <p><strong>Note</strong>: The URL expires in 12 hours.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/1.wav">http://bucket.oss-cn-shanghai.aliyuncs.com/1.wav</a></p>
              */
             public Builder demoAudio(String demoAudio) {
                 this.demoAudio = demoAudio;
@@ -164,7 +186,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             }
 
             /**
-             * Text.
+             * <p>The text content to be read.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -211,7 +233,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             private java.util.List < DemonstrationList> demonstrationList; 
 
             /**
-             * DemonstrationList.
+             * <p>A list of 20 text entries to be read and the corresponding sample audio.</p>
              */
             public Builder demonstrationList(java.util.List < DemonstrationList> demonstrationList) {
                 this.demonstrationList = demonstrationList;

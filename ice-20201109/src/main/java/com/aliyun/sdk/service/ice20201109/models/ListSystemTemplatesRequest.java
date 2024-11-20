@@ -139,7 +139,10 @@ public class ListSystemTemplatesRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleTemplate</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,7 +151,10 @@ public class ListSystemTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -157,7 +163,10 @@ public class ListSystemTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20 Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,7 +175,10 @@ public class ListSystemTemplatesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The template state. Valid values: Normal, Invisible, and All.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -175,7 +187,10 @@ public class ListSystemTemplatesRequest extends Request {
         }
 
         /**
-         * Subtype.
+         * <p>The subtype ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subtype(String subtype) {
             this.putQueryParameter("Subtype", subtype);
@@ -184,7 +199,10 @@ public class ListSystemTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -193,6 +211,7 @@ public class ListSystemTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The template type. Separate multiple types with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -50,7 +50,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PipelineList.
+         * <p>The queried MPS queues.</p>
          */
         public Builder pipelineList(java.util.List < PipelineList> pipelineList) {
             this.pipelineList = pipelineList;
@@ -58,7 +58,10 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -176,7 +179,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -184,7 +190,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the template was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -192,7 +201,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pipeline</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -200,7 +212,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -208,7 +223,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -216,7 +234,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * <p>The type of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -224,7 +245,15 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the MPS queue.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Active</li>
+             * <li>Paused</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;

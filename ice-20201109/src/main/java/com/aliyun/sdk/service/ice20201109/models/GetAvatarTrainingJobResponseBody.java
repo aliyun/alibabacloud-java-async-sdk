@@ -62,7 +62,7 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned if the request was successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -268,7 +274,7 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             private String video; 
 
             /**
-             * AvatarDescription.
+             * <p>The description of the digital human.</p>
              */
             public Builder avatarDescription(String avatarDescription) {
                 this.avatarDescription = avatarDescription;
@@ -276,7 +282,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarId.
+             * <p>The ID of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Avatar-XXXX</p>
              */
             public Builder avatarId(String avatarId) {
                 this.avatarId = avatarId;
@@ -284,7 +293,7 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarName.
+             * <p>The name of the digital human.</p>
              */
             public Builder avatarName(String avatarName) {
                 this.avatarName = avatarName;
@@ -292,7 +301,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarType.
+             * <p>The type of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2DAvatar</p>
              */
             public Builder avatarType(String avatarType) {
                 this.avatarType = avatarType;
@@ -300,7 +312,13 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTrainingTime.
+             * <ul>
+             * <li>The time when the first training was initiated.</li>
+             * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-23T13:33:40Z</p>
              */
             public Builder firstTrainingTime(String firstTrainingTime) {
                 this.firstTrainingTime = firstTrainingTime;
@@ -308,7 +326,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the digital human training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>55d86f7f4587943ce7734d6b</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -316,7 +337,13 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * LastTrainingTime.
+             * <ul>
+             * <li>The time when the last training was initiated.</li>
+             * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-23T13:33:40Z</p>
              */
             public Builder lastTrainingTime(String lastTrainingTime) {
                 this.lastTrainingTime = lastTrainingTime;
@@ -324,7 +351,7 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The status description.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -332,7 +359,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Portrait.
+             * <p>The media asset ID of the portrait image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
              */
             public Builder portrait(String portrait) {
                 this.portrait = portrait;
@@ -340,7 +370,13 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <ul>
+             * <li>The state of the digital human training job.</li>
+             * <li>Valid values: Init, Queuing, Training, Success, and Fail.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -348,7 +384,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Thumbnail.
+             * <p>The thumbnail URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
@@ -356,7 +395,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Transparent.
+             * <p>Indicates whether the input video supports alpha channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder transparent(Boolean transparent) {
                 this.transparent = transparent;
@@ -364,7 +406,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Video.
+             * <p>The ID of the video used for training.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
              */
             public Builder video(String video) {
                 this.video = video;
@@ -411,7 +456,7 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             private AvatarTrainingJob avatarTrainingJob; 
 
             /**
-             * AvatarTrainingJob.
+             * <p>The information about the digital human training job.</p>
              */
             public Builder avatarTrainingJob(AvatarTrainingJob avatarTrainingJob) {
                 this.avatarTrainingJob = avatarTrainingJob;

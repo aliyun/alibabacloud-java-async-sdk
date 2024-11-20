@@ -54,7 +54,10 @@ public class GetTemplateParamsRequest extends Request {
         } 
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

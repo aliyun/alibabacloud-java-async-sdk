@@ -50,7 +50,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CustomTemplate.
+         * <p>The template information.</p>
          */
         public Builder customTemplate(CustomTemplate customTemplate) {
             this.customTemplate = customTemplate;
@@ -58,7 +58,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -212,7 +215,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * CreateTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-19T02:04:31Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -220,7 +226,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the template is the default template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -228,7 +237,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the template was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-19T02:04:31Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -236,7 +248,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The template state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -244,7 +259,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Subtype.
+             * <p>The subtype name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remux</p>
              */
             public Builder subtype(String subtype) {
                 this.subtype = subtype;
@@ -252,7 +270,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The template configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</p>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -260,7 +281,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -268,7 +292,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -276,7 +303,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -284,7 +314,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The type name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TranscodeTemplate</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

@@ -50,7 +50,7 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The usage statistics of IMS on AI processing of MPS.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Duration.
+             * <p>The usage duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>644</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -136,7 +142,10 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656950400</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -144,7 +153,7 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The AI type. Valid values:</p>
              */
             public Builder type(String type) {
                 this.type = type;

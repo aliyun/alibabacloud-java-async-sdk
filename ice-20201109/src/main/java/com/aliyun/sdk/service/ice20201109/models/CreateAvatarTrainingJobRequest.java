@@ -143,7 +143,10 @@ public class CreateAvatarTrainingJobRequest extends Request {
         } 
 
         /**
-         * AvatarDescription.
+         * <ul>
+         * <li>The description of the digital human.</li>
+         * <li>The description can be up to 1,000 characters in length.</li>
+         * </ul>
          */
         public Builder avatarDescription(String avatarDescription) {
             this.putQueryParameter("AvatarDescription", avatarDescription);
@@ -152,6 +155,10 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
+         * <ul>
+         * <li>The name of the digital human.</li>
+         * <li>The name can be up to seven characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder avatarName(String avatarName) {
@@ -161,7 +168,10 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * AvatarType.
+         * <p>The type of the digital human.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DAvatar</p>
          */
         public Builder avatarType(String avatarType) {
             this.putQueryParameter("AvatarType", avatarType);
@@ -170,7 +180,13 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * Portrait.
+         * <ul>
+         * <li>The media asset ID of the portrait image.</li>
+         * <li>The value must be 32 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
          */
         public Builder portrait(String portrait) {
             this.putQueryParameter("Portrait", portrait);
@@ -179,7 +195,15 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * Thumbnail.
+         * <ul>
+         * <li>The thumbnail URL.</li>
+         * <li>After the digital human is trained, the thumbnail is uploaded to this URL.</li>
+         * <li>The URL must be a valid public Object Storage Service (OSS) URL.</li>
+         * <li>The URL can be up to 512 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
          */
         public Builder thumbnail(String thumbnail) {
             this.putQueryParameter("Thumbnail", thumbnail);
@@ -188,7 +212,15 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * Transparent.
+         * <ul>
+         * <li><p>Specifies whether the training video supports alpha channels.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>: Make sure that the current settings are consistent with those of the submitted training video. Otherwise, the digital human may malfunction.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder transparent(Boolean transparent) {
             this.putQueryParameter("Transparent", transparent);
@@ -197,7 +229,16 @@ public class CreateAvatarTrainingJobRequest extends Request {
         }
 
         /**
-         * Video.
+         * <ul>
+         * <li>The ID of the video used for training.</li>
+         * <li>The value must be 32 characters in length.</li>
+         * <li>Supported formats: MP4, MOV, and WebM.</li>
+         * <li>The duration of the video must be 5 to 15 minutes.</li>
+         * <li>The resolution of the video must be 1920×1080 or 1080×1920.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
          */
         public Builder video(String video) {
             this.putQueryParameter("Video", video);

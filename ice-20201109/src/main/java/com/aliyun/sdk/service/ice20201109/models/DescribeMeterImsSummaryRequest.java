@@ -84,6 +84,7 @@ public class DescribeMeterImsSummaryRequest extends Request {
         } 
 
         /**
+         * <p>The end of the time range to query. The value is a 10-digit timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,7 +97,10 @@ public class DescribeMeterImsSummaryRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter does not take effect. By default, the usage data of all regions is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -105,6 +109,7 @@ public class DescribeMeterImsSummaryRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. The value is a 10-digit timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

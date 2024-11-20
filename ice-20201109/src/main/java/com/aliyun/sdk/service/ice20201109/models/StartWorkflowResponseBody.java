@@ -50,7 +50,10 @@ public class StartWorkflowResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>42-E8E1-4FBB-8E52-F4225C</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class StartWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the workflow task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>22dad741d086a50325f9</strong></strong></strong></p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

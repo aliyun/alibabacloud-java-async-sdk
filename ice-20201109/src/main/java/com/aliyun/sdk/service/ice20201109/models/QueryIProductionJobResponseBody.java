@@ -218,7 +218,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         private String userData; 
 
         /**
-         * CreateTime.
+         * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-07T07:16:11Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -226,7 +229,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * FinishTime.
+         * <p>The time when the job was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-26T14:50:25Z</p>
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -234,7 +240,16 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * FunctionName.
+         * <p>The name of the algorithm that you want to use for the job. Valid values:</p>
+         * <ul>
+         * <li><strong>Cover</strong>: This algorithm intelligently generates a thumbnail image for a video.</li>
+         * <li><strong>VideoClip</strong>: This algorithm intelligently generates a summary for a video.</li>
+         * <li><strong>VideoDelogo</strong>: This algorithm removes logos from a video.</li>
+         * <li><strong>VideoDetext</strong>: This algorithm removes captions from a video.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -242,7 +257,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * Input.
+         * <p>The input file.</p>
          */
         public Builder input(Input input) {
             this.input = input;
@@ -250,7 +265,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the intelligent production job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -258,7 +276,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobParams.
+         * <p>The algorithm-specific parameters. The parameters are specified as JSON objects and vary based on the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Model&quot;:&quot;gif&quot;}</p>
          */
         public Builder jobParams(String jobParams) {
             this.jobParams = jobParams;
@@ -266,7 +287,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the intelligent production job.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -274,7 +295,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * Output.
+         * <p>The output file.</p>
          */
         public Builder output(Output output) {
             this.output = output;
@@ -282,7 +303,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * OutputFiles.
+         * <p>The output files.</p>
          */
         public Builder outputFiles(java.util.List < String > outputFiles) {
             this.outputFiles = outputFiles;
@@ -290,7 +311,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * OutputUrls.
+         * <p>The URLs of the output files.</p>
          */
         public Builder outputUrls(java.util.List < String > outputUrls) {
             this.outputUrls = outputUrls;
@@ -298,7 +319,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -306,7 +327,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The output of the algorithm. The output is in JSON format and varies based on the algorithm. For more information, see the &quot;Parameters of Result&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -314,7 +338,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * ScheduleConfig.
+         * <p>The scheduling configuration.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
@@ -322,7 +346,16 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li>Queuing: The job is waiting in the queue.</li>
+         * <li>Analysing: The job is in progress.</li>
+         * <li>Fail: The job failed.</li>
+         * <li>Success: The job was successful.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -330,7 +363,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -338,7 +374,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data that is returned in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:1}</p>
          */
         public Builder userData(String userData) {
             this.userData = userData;
@@ -396,7 +435,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
+             * <ol>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object bucket in the path specifies an OSS bucket that resides in the same region as the intelligent production job. object in the path specifies the object path in OSS.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -404,7 +450,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The media type. Valid values:</p>
+             * <ol>
+             * <li>OSS: Object Storage Service (OSS) object</li>
+             * <li>Media: media asset</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -463,7 +516,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
+             * <ol>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object bucket in the path specifies an OSS bucket that resides in the same region as the intelligent production job. object in the path specifies the object path in OSS.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -471,7 +531,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The media type. Valid values:</p>
+             * <ul>
+             * <li>OSS: OSS object</li>
+             * <li>Media: media asset</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -530,7 +597,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             private Integer priority; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a54fdc9c9aab413caef0d1150f565e86</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -538,7 +608,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the job in the MPS queue to which the job is added.</p>
+             * <ul>
+             * <li>A value of 10 indicates the highest priority.</li>
+             * <li>Default value: <strong>6</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

@@ -83,7 +83,13 @@ public class ListAvatarTrainingJobsRequest extends Request {
         } 
 
         /**
-         * PageNo.
+         * <ul>
+         * <li>The page number.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -92,7 +98,14 @@ public class ListAvatarTrainingJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <ul>
+         * <li>The number of entries per page.</li>
+         * <li>Default value: 10.</li>
+         * <li>Valid values: 1 to 100.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -101,7 +114,13 @@ public class ListAvatarTrainingJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <ul>
+         * <li>The job state.</li>
+         * <li>Valid values: Init, Queuing, Training, Success, and Fail.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

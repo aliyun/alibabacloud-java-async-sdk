@@ -112,6 +112,7 @@ public class SubmitPackageJobRequest extends Request {
         } 
 
         /**
+         * <p>The input of the job.</p>
          * <p>This parameter is required.</p>
          */
         public Builder inputs(java.util.List < Inputs> inputs) {
@@ -122,7 +123,10 @@ public class SubmitPackageJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -131,6 +135,7 @@ public class SubmitPackageJobRequest extends Request {
         }
 
         /**
+         * <p>The output of the job.</p>
          * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
@@ -141,7 +146,7 @@ public class SubmitPackageJobRequest extends Request {
         }
 
         /**
-         * ScheduleConfig.
+         * <p>The scheduling settings.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -151,7 +156,10 @@ public class SubmitPackageJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;param&quot;: &quot;value&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -213,6 +221,11 @@ public class SubmitPackageJobRequest extends Request {
             private String type; 
 
             /**
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
+             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -224,6 +237,11 @@ public class SubmitPackageJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -275,6 +293,7 @@ public class SubmitPackageJobRequest extends Request {
             private Input input; 
 
             /**
+             * <p>The information about the input stream file.</p>
              * <p>This parameter is required.</p>
              */
             public Builder input(Input input) {
@@ -336,6 +355,7 @@ public class SubmitPackageJobRequest extends Request {
             private String type; 
 
             /**
+             * <p>The media object. If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported. If Type is set to Media, set this parameter to the ID of a media asset.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -347,6 +367,11 @@ public class SubmitPackageJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -409,7 +434,10 @@ public class SubmitPackageJobRequest extends Request {
             private Integer priority; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e37ebee5d98b4781897f6086e89f9c56</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -417,7 +445,10 @@ public class SubmitPackageJobRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

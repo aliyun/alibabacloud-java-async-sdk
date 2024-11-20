@@ -50,7 +50,7 @@ public class CreateDNADBResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInfo.
+         * <p>The details of the media fingerprint library.</p>
          */
         public Builder DBInfo(DBInfo DBInfo) {
             this.DBInfo = DBInfo;
@@ -58,7 +58,10 @@ public class CreateDNADBResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -152,7 +155,10 @@ public class CreateDNADBResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DBId.
+             * <p>The ID of the media fingerprint library. We recommend that you save this ID for subsequent calls of other operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88c6ca184c0e47098a5b665e2a12****</p>
              */
             public Builder DBId(String DBId) {
                 this.DBId = DBId;
@@ -160,7 +166,7 @@ public class CreateDNADBResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the media fingerprint library.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -168,7 +174,10 @@ public class CreateDNADBResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Video</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -176,7 +185,10 @@ public class CreateDNADBResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -184,7 +196,10 @@ public class CreateDNADBResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the media fingerprint library. After a media fingerprint library is created, it enters the offline state. After the media fingerprint library is processed at the backend, it enters the active state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>offline</p>
              */
             public Builder status(String status) {
                 this.status = status;

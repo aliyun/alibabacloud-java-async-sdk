@@ -54,7 +54,10 @@ public class GetMediaProducingJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the media editing and production job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

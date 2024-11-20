@@ -74,7 +74,10 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -82,7 +85,10 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>2bcbfcfa30fccb36f72dca22</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -90,7 +96,10 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +107,16 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The job state. Valid values:</p>
+         * <ul>
+         * <li>Created</li>
+         * <li>Executing</li>
+         * <li>Finished</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder state(String state) {
             this.state = state;

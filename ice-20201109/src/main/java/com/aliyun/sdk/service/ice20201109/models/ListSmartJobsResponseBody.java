@@ -86,7 +86,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned on a single page. The value is set to the maximum number of entries returned on each page except for the last page. Valid example: 10,10,5. Invalid example: 10,5,10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +97,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBB6BC61D08</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +108,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>9262E3DA-07FA-4862-FCBB6BC61D08</strong></strong>*</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +119,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
         }
 
         /**
-         * SmartJobList.
+         * <p>The queried intelligent jobs.</p>
          */
         public Builder smartJobList(java.util.List < SmartJobList> smartJobList) {
             this.smartJobList = smartJobList;
@@ -118,7 +127,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Optional. The total number of entries returned. By default, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -176,7 +188,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             private String keyword; 
 
             /**
-             * InputFile.
+             * <p>The information about the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
              */
             public Builder inputFile(String inputFile) {
                 this.inputFile = inputFile;
@@ -184,7 +199,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试关键词</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -243,7 +261,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * <p>OSS Bucket</p>
+             * <p>The Object Storage Service (OSS) bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>test-bucket</p>
@@ -254,7 +272,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Object</p>
+             * <p>The OSS object.</p>
              * 
              * <strong>example:</strong>
              * <p>test-object</p>
@@ -436,7 +454,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -444,7 +465,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The job description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -452,7 +476,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EditingConfig.
+             * <p>The editing configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AudioConfig&quot;:{},&quot;InputConfig&quot;:&quot;&quot;}</p>
              */
             public Builder editingConfig(String editingConfig) {
                 this.editingConfig = editingConfig;
@@ -460,7 +487,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InputConfig.
+             * <p>The input configurations.</p>
              */
             public Builder inputConfig(InputConfig inputConfig) {
                 this.inputConfig = inputConfig;
@@ -468,7 +495,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -476,7 +506,17 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobState.
+             * <p>The job state.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Finished: The job is complete.</li>
+             * <li>Failed: The job failed.</li>
+             * <li>Executing: The job is in progress.</li>
+             * <li>Created: The job is created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder jobState(String jobState) {
                 this.jobState = jobState;
@@ -484,7 +524,16 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The job type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ASR: ASR job.</li>
+             * <li>DynamicChart: dynamic chart job.</li>
+             * <li>TextToSpeech: intelligent audio production job.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASR</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -492,7 +541,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the job was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -500,7 +552,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputConfig.
+             * <p>The output configurations.</p>
              */
             public Builder outputConfig(OutputConfig outputConfig) {
                 this.outputConfig = outputConfig;
@@ -508,7 +560,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The job title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试标题</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -516,7 +571,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;user&quot;:&quot;data&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -524,7 +582,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1084506228******</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

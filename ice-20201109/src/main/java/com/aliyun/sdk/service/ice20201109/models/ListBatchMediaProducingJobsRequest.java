@@ -152,7 +152,10 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-05T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,7 +164,10 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the quick video production job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -170,7 +176,15 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * JobType.
+         * <p>The job type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Script: script-based editing job that mixes media assets.</li>
+         * <li>Smart_Mix: intelligent editing job that mixes media assets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Script</p>
          */
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -179,7 +193,10 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -188,7 +205,10 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mRZkKAovub0xWVfH14he4Q==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -197,7 +217,20 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting parameter. Valid values:</p>
+         * <ul>
+         * <li>desc (default): sorted by creation time in descending order.</li>
+         * <li>asc: sorted by creation time in ascending order.</li>
+         * </ul>
+         * <!---->
+         * 
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -206,7 +239,10 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -215,7 +251,17 @@ public class ListBatchMediaProducingJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The job state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Finished</li>
+         * <li>Init</li>
+         * <li>Failed</li>
+         * <li>Processing</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

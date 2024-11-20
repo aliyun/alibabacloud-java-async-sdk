@@ -119,7 +119,10 @@ public class SubmitSportsHighlightsJobRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>12e8864746a0a398</strong></strong></p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -128,7 +131,7 @@ public class SubmitSportsHighlightsJobRequest extends Request {
         }
 
         /**
-         * InputConfig.
+         * <p>The input configurations.</p>
          */
         public Builder inputConfig(String inputConfig) {
             this.putBodyParameter("InputConfig", inputConfig);
@@ -137,7 +140,15 @@ public class SubmitSportsHighlightsJobRequest extends Request {
         }
 
         /**
-         * OutputConfig.
+         * <p>The output configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
+         *   &quot;Count&quot;: 1,
+         *   &quot;Width&quot;: 1080,
+         *   &quot;Height&quot;: 1920
+         * }</p>
          */
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);
@@ -146,7 +157,7 @@ public class SubmitSportsHighlightsJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data.</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

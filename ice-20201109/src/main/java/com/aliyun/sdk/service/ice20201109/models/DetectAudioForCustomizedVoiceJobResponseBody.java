@@ -62,7 +62,7 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -136,7 +142,14 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * Pass.
+             * <p>Indicates whether the audio file passes the check. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder pass(Boolean pass) {
                 this.pass = pass;
@@ -144,7 +157,7 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason returned if the audio file failed to pass the check.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

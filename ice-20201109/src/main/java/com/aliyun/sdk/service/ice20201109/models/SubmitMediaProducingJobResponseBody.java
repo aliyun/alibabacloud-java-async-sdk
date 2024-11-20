@@ -86,7 +86,10 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
         private String vodMediaId; 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -94,7 +97,10 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
-         * MediaId.
+         * <p>The media asset ID of the output file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -102,7 +108,10 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>b4549d46c88681030f6e</strong></strong></p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -110,7 +119,10 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +130,10 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
-         * VodMediaId.
+         * <p>The media asset ID of the output file in ApsaraVideo VOD if the output file is stored in ApsaraVideo VOD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d8s4h75ci975745c14b</strong></strong></p>
          */
         public Builder vodMediaId(String vodMediaId) {
             this.vodMediaId = vodMediaId;

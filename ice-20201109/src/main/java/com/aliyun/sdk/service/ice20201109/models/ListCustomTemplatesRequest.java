@@ -139,7 +139,10 @@ public class ListCustomTemplatesRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-template</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,7 +151,14 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The order in which the entries are sorted. Valid values:</p>
+         * <ul>
+         * <li>CreateTimeDesc: sorted by creation time in descending order.</li>
+         * <li>CreateTimeAsc: sorted by creation time in ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTimeDesc</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -157,7 +167,10 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +179,10 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +191,41 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
-         * Subtype.
+         * <p>The subtype ID of the template.</p>
+         * <ul>
+         * <li><p>Valid values for transcoding templates:</p>
+         * <ul>
+         * <li>1 (Normal): regular template.</li>
+         * <li>2 (AudioTranscode): audio transcoding template.</li>
+         * <li>3 (Remux): container format conversion template.</li>
+         * <li>4 (NarrowBandV1): Narrowband HD 1.0 template.</li>
+         * <li>5 (NarrowBandV2): Narrowband HD 2.0 template.</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values for snapshot templates:</p>
+         * <ul>
+         * <li>1 (Normal): regular template.</li>
+         * <li>2 (Sprite): sprite template.</li>
+         * <li>3 (WebVtt): WebVTT template.</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values for AI-assisted content moderation templates:</p>
+         * <ul>
+         * <li>1 (Video): video moderation template.</li>
+         * <li>2 (Audio): audio moderation template.</li>
+         * <li>3 (Image): image moderation template.</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values for AI-assisted intelligent erasure templates:</p>
+         * <ul>
+         * <li>1 (VideoDelogo): logo erasure template.</li>
+         * <li>2 (VideoDetext): subtitle erasure template.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder subtype(String subtype) {
             this.putQueryParameter("Subtype", subtype);
@@ -184,7 +234,10 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -193,6 +246,18 @@ public class ListCustomTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The template type. Valid values:</p>
+         * <ul>
+         * <li>1: transcoding template.</li>
+         * <li>2: snapshot template.</li>
+         * <li>3: animated image template.</li>
+         * <li>4. image watermark template.</li>
+         * <li>5: text watermark template.</li>
+         * <li>6: subtitle template.</li>
+         * <li>7: AI-assisted content moderation template.</li>
+         * <li>8: AI-assisted intelligent thumbnail template.</li>
+         * <li>9: AI-assisted intelligent erasure template.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

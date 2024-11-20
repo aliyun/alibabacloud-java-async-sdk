@@ -74,7 +74,11 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned.</p>
+         * <p>Default value: 10. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +86,7 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * MediaProducingJobList.
+         * <p>The queried media editing and production jobs.</p>
          */
         public Builder mediaProducingJobList(java.util.List < MediaProducingJobList> mediaProducingJobList) {
             this.mediaProducingJobList = mediaProducingJobList;
@@ -90,7 +94,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8EqYpQbZ6Eh7+Zz8DxVYoQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +105,7 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -303,7 +310,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * ClipsParam.
+             * <p>The template material parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Text1&quot;:&quot;text&quot;,&quot;Text0&quot;:&quot;text&quot;,&quot;Media1&quot;:&quot;mediaId&quot;,&quot;Media0&quot;:&quot;mediaId&quot;}</p>
              */
             public Builder clipsParam(String clipsParam) {
                 this.clipsParam = clipsParam;
@@ -311,7 +321,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The response code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -319,7 +332,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * <p>The time when the job was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-21T16:40:30Z</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -327,7 +343,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-21T16:40:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -335,7 +354,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the output file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15.5</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -343,7 +365,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the online editing job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>8750b54e3c976a47da6f</strong></strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -351,7 +376,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID of the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0ce4ea70f52471edab61f7e7d6786302</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -359,7 +387,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaURL.
+             * <p>The URL of the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://your-bucket.oss-cn-shanghai.aliyuncs.com/your-video.mp4">http://your-bucket.oss-cn-shanghai.aliyuncs.com/your-video.mp4</a></p>
              */
             public Builder mediaURL(String mediaURL) {
                 this.mediaURL = mediaURL;
@@ -367,7 +398,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The returned message. Note: Pay attention to this parameter if the job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The resource operated InputFile is bad</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -375,7 +409,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the job was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-21T16:41:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -383,7 +420,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>faa3b542f5a6135217e3</strong></strong></strong></p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -391,7 +431,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sucess</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -399,7 +442,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the online editing template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cb786a39c5d44cecb23d8c864facffc1</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -407,7 +453,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;:&quot;value&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

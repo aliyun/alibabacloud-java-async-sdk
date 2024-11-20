@@ -50,7 +50,7 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The usage statistics of IMS on UHD transcoding of MPS.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * Duration.
+             * <p>The usage duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>308028</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -136,7 +142,10 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Specification.
+             * <p>The transcoding specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SuperResolution.Standard.1080P</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -144,7 +153,10 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656950400</p>
              */
             public Builder time(Long time) {
                 this.time = time;

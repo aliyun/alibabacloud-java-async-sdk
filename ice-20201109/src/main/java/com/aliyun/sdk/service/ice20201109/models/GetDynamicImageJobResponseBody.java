@@ -50,7 +50,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DynamicImageJob.
+         * <p>The information about the snapshot job.</p>
          */
         public Builder dynamicImageJob(DynamicImageJob dynamicImageJob) {
             this.dynamicImageJob = dynamicImageJob;
@@ -58,7 +58,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * <p>OSS Bucket</p>
+             * <p>The OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>test-bucket</p>
@@ -139,7 +142,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Location</p>
+             * <p>The OSS location.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai</p>
@@ -150,7 +153,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Object</p>
+             * <p>The OSS object.</p>
              * 
              * <strong>example:</strong>
              * <p>sample-input.mp4</p>
@@ -224,7 +227,15 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+             * <ol>
+             * <li>OSS://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+             * </ol>
+             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/sample-input.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -232,7 +243,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * OssFile.
+             * <p>The three key elements of OSS.</p>
              */
             public Builder ossFile(OssFile ossFile) {
                 this.ossFile = ossFile;
@@ -240,7 +251,14 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -311,7 +329,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * <p>OSS Bucket</p>
+             * <p>The OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>sample-bucket</p>
@@ -322,7 +340,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Location</p>
+             * <p>The OSS location.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai</p>
@@ -333,7 +351,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Object</p>
+             * <p>The OSS object.</p>
              * 
              * <strong>example:</strong>
              * <p>path/to/object</p>
@@ -407,7 +425,14 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+             * <ol>
+             * <li>OSS://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -415,7 +440,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * OssFile.
+             * <p>The three key elements of OSS.</p>
              */
             public Builder ossFile(OutputOssFile ossFile) {
                 this.ossFile = ossFile;
@@ -423,7 +448,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values: OSS: an OSS object. Media: a media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -662,7 +690,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Code.
+             * <p>Error codes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceNotFound</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -670,7 +701,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -678,7 +712,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the job was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:30:54Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -686,7 +723,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The input of the job.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -694,7 +731,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -702,7 +742,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified resource for &quot;CustomTemplate&quot; could not be found.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -710,7 +753,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the job was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:30:54Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -718,7 +764,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SampleJob</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -726,7 +775,7 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output of the job.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -734,7 +783,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The URL of the output animated image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/output.gif">http://test-bucket.oss-cn-shanghai.aliyuncs.com/output.gif</a></p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -742,7 +794,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -750,7 +805,16 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the job.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Init: The job is submitted.</li>
+             * <li>Success: The job is successful.</li>
+             * <li>Fail: The job failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -758,7 +822,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * <p>The time when the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -766,7 +833,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The animation template configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Format&quot;:&quot;gif&quot;,&quot;Fps&quot;:5,&quot;Height&quot;:1080,&quot;Width&quot;:1920}</p>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -774,7 +844,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -782,7 +855,16 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerSource.
+             * <p>The request trigger source.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Console</li>
+             * <li>Workflow</li>
+             * <li>API</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder triggerSource(String triggerSource) {
                 this.triggerSource = triggerSource;
@@ -790,7 +872,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;sampleParam&quot;: &quot;sampleValue&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

@@ -84,6 +84,7 @@ public class CreatePipelineRequest extends Request {
         } 
 
         /**
+         * <p>The name of the MPS queue.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,7 +97,10 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority. Default value: 6. Valid values: 1 to 10. A greater value specifies a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -105,6 +109,12 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
+         * <p>The type of the MPS queue. Valid values:</p>
+         * <ol>
+         * <li>Standard: standard MPS queue.</li>
+         * <li>Boost: MPS queue with transcoding speed boosted.</li>
+         * <li>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</li>
+         * </ol>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -54,7 +54,10 @@ public class GetTranscodeJobRequest extends Request {
         } 
 
         /**
-         * ParentJobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab4802364a2e49208c99efab82dfa8e8</p>
          */
         public Builder parentJobId(String parentJobId) {
             this.putQueryParameter("ParentJobId", parentJobId);

@@ -124,7 +124,10 @@ public class SubmitASRJobRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The job description, which can up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -133,7 +136,10 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The speech duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:10</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -142,7 +148,10 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * InputFile.
+         * <p>The input file. You can specify an Object Storage Service (OSS) URL or the ID of a media asset in the media asset library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 或 <strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder inputFile(String inputFile) {
             this.putQueryParameter("InputFile", inputFile);
@@ -151,7 +160,10 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the speech to recognize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -160,7 +172,10 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The job title, which can be up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试标题</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -169,7 +184,13 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data in the JSON format. You can specify your business information, such as the business environment and job information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;user&quot;: &quot;data&quot;,
+         *       &quot;env&quot;: &quot;prod&quot;
+         * }</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

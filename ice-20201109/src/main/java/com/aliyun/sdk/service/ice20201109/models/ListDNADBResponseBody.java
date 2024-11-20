@@ -50,7 +50,7 @@ public class ListDNADBResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBList.
+         * <p>The queried media fingerprint libraries.</p>
          */
         public Builder DBList(java.util.List < DBList> DBList) {
             this.DBList = DBList;
@@ -58,7 +58,10 @@ public class ListDNADBResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -152,7 +155,10 @@ public class ListDNADBResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DBId.
+             * <p>The ID of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88c6ca184c0e47098a5b665e2a12****</p>
              */
             public Builder DBId(String DBId) {
                 this.DBId = DBId;
@@ -160,7 +166,7 @@ public class ListDNADBResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the media fingerprint library.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -168,7 +174,16 @@ public class ListDNADBResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model of the media fingerprint library. Valid values:</p>
+             * <ul>
+             * <li><strong>Video</strong></li>
+             * <li><strong>Audio</strong></li>
+             * <li><strong>Image</strong></li>
+             * <li><strong>Text</strong> (supported only in the China (Shanghai) region)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Video</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -176,7 +191,10 @@ public class ListDNADBResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -184,7 +202,15 @@ public class ListDNADBResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the media fingerprint library. Default value: <strong>offline</strong>. ****Valid values:</p>
+             * <ul>
+             * <li><strong>offline</strong>: The media fingerprint library is offline.</li>
+             * <li><strong>active</strong>: The media fingerprint library is online.</li>
+             * <li><strong>deleted</strong>: The media fingerprint library is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

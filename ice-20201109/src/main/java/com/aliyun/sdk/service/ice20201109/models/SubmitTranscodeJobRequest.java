@@ -126,7 +126,10 @@ public class SubmitTranscodeJobRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>12e8864746a0a398</strong></strong></p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -135,7 +138,11 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
+         * <p>The input group of the job. An input of a single file indicates a transcoding job. An input of multiple files indicates an audio and video stream merge job.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-name</p>
          */
         public Builder inputGroup(java.util.List < InputGroup> inputGroup) {
             String inputGroupShrink = shrink(inputGroup, "InputGroup", "json");
@@ -145,7 +152,10 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -154,7 +164,11 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
+         * <p>The output group of the job.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-data</p>
          */
         public Builder outputGroup(java.util.List < OutputGroup> outputGroup) {
             String outputGroupShrink = shrink(outputGroup, "OutputGroup", "json");
@@ -164,7 +178,10 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * ScheduleConfig.
+         * <p>The scheduling information about the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-name</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -174,7 +191,10 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom settings. The value must be in the JSON format and can be up to 512 bytes in length. You can specify a <a href="https://help.aliyun.com/document_detail/451631.html">custom callback URL</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-data</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -248,7 +268,14 @@ public class SubmitTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * InputUrl.
+             * <p>The URL of the input stream.</p>
+             * <ul>
+             * <li>This parameter takes effect only when Type is set to Media. You can select a specific file within the media asset as an input.</li>
+             * <li>The system checks whether the input URL exists within the media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder inputUrl(String inputUrl) {
                 this.inputUrl = inputUrl;
@@ -256,6 +283,16 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/440592.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+             * </blockquote>
+             * <ul>
+             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -267,6 +304,11 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -343,6 +385,16 @@ public class SubmitTranscodeJobRequest extends Request {
             private String type; 
 
             /**
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/440592.html">Storage Management</a> page of the IMS console.</p>
+             * </blockquote>
+             * <ul>
+             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -354,7 +406,21 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * OutputUrl.
+             * <p>The URL of the output stream.<br>This parameter takes effect only when Type is set to Media. You can select a specific file within the media asset as an output.<br>Supported placeholders:</p>
+             * <ul>
+             * <li>{MediaId}: the ID of the media asset.</li>
+             * <li>{JobId}: the ID of the transcoding subjob.</li>
+             * <li>{MediaBucket}: the bucket to which the media asset belongs.</li>
+             * <li>{ExtName}: the file suffix, which uses the output format of the transcoding template.</li>
+             * <li>{DestMd5}: the MD5 value of the transcoded output file.<br>Notes:</li>
+             * </ul>
+             * <ol>
+             * <li>This parameter must contain the {MediaId} and {JobId} placeholders.</li>
+             * <li>The output bucket is the same as the bucket to which the media asset belongs.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/{MediaId}/{JobId}.mp4</p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -362,6 +428,11 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -450,6 +521,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private String videoIndex; 
 
             /**
+             * <p>The audio stream index.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -461,7 +533,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the input stream. The default value is the duration of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.0</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -469,7 +544,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Start.
+             * <p>The start time of the input stream. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder start(Double start) {
                 this.start = start;
@@ -477,6 +555,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The video stream index.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -563,7 +642,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String keyServiceType; 
 
             /**
-             * CipherText.
+             * <p>The ciphertext of HTTP Live Streaming (HLS) encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MTYi00NDU0LTg5O****</p>
              */
             public Builder cipherText(String cipherText) {
                 this.cipherText = cipherText;
@@ -571,7 +653,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * DecryptKeyUri.
+             * <p>The address of the decryption service for HLS encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://sample.com/path?CipherText=MTYi00NDU0LTg5O">https://sample.com/path?CipherText=MTYi00NDU0LTg5O</a>****</p>
              */
             public Builder decryptKeyUri(String decryptKeyUri) {
                 this.decryptKeyUri = decryptKeyUri;
@@ -579,7 +664,14 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * EncryptType.
+             * <p>Specifies the encryption type. Valid values:</p>
+             * <ul>
+             * <li>PrivateEncryption: Alibaba Cloud proprietary cryptography</li>
+             * <li>HLSEncryption: HTTP Live Streaming (HLS) encryption</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateEncryption</p>
              */
             public Builder encryptType(String encryptType) {
                 this.encryptType = encryptType;
@@ -587,7 +679,14 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * KeyServiceType.
+             * <p>The key service type for HLS encryption. Valid values:</p>
+             * <ul>
+             * <li>KMS</li>
+             * <li>Base64</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>KMS</p>
              */
             public Builder keyServiceType(String keyServiceType) {
                 this.keyServiceType = keyServiceType;
@@ -646,7 +745,11 @@ public class SubmitTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
+             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/path/to/video.mp4</p>
@@ -657,7 +760,11 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -719,7 +826,14 @@ public class SubmitTranscodeJobRequest extends Request {
             private String start; 
 
             /**
-             * Duration.
+             * <p>The time range in which the watermark is displayed.</p>
+             * <ul>
+             * <li>Valid values: integers and ToEND.</li>
+             * <li>Default value: ToEND.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ToEND</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -727,7 +841,15 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Start.
+             * <p>The beginning of the time range in which the watermark is displayed.</p>
+             * <ul>
+             * <li>Unit: seconds.</li>
+             * <li>Value values: integers.</li>
+             * <li>Default value: 0.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:05</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -846,7 +968,25 @@ public class SubmitTranscodeJobRequest extends Request {
             private String width; 
 
             /**
-             * Dx.
+             * <p>The horizontal offset of the watermark relative to the output video. Default value: 0.</p>
+             * <p>The following value types are supported:</p>
+             * <ul>
+             * <li><p>Integer: the pixel value of the horizontal offset.</p>
+             * <ul>
+             * <li>Valid values: [8,4096].</li>
+             * <li>Unit: pixels.</li>
+             * </ul>
+             * </li>
+             * <li><p>Decimal: the ratio of the horizontal offset to the width of the output video.</p>
+             * <ul>
+             * <li>Valid values: (0,1).</li>
+             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dx(String dx) {
                 this.dx = dx;
@@ -854,7 +994,25 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Dy.
+             * <p>The vertical offset of the watermark relative to the output video. Default value: 0.</p>
+             * <p>The following value types are supported:</p>
+             * <ul>
+             * <li><p>Integer: the pixel value of the horizontal offset.</p>
+             * <ul>
+             * <li>Valid values: [8,4096].</li>
+             * <li>Unit: pixels.</li>
+             * </ul>
+             * </li>
+             * <li><p>Decimal: the ratio of the vertical offset to the height of the output video.</p>
+             * <ul>
+             * <li>Valid values: (0,1).</li>
+             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dy(String dy) {
                 this.dy = dy;
@@ -862,7 +1020,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * File.
+             * <p>The watermark image file.</p>
              */
             public Builder file(File file) {
                 this.file = file;
@@ -870,7 +1028,24 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of the watermark image in the output video. The following value types are supported:</p>
+             * <ul>
+             * <li><p>Integer: the pixel value of the watermark height.</p>
+             * <ul>
+             * <li>Valid values: [8,4096].</li>
+             * <li>Unit: pixels.</li>
+             * </ul>
+             * </li>
+             * <li><p>Decimal: the ratio of the watermark height to the height of the output video.</p>
+             * <ul>
+             * <li>Valid values: (0,1).</li>
+             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -878,7 +1053,14 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * ReferPos.
+             * <p>The position of the watermark.</p>
+             * <ul>
+             * <li>Valid values: TopRight, TopLeft, BottomRight, and BottomLeft.</li>
+             * <li>Default value: TopRight.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TopLeft</p>
              */
             public Builder referPos(String referPos) {
                 this.referPos = referPos;
@@ -886,7 +1068,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Timeline.
+             * <p>The time settings of the dynamic watermark.</p>
              */
             public Builder timeline(Timeline timeline) {
                 this.timeline = timeline;
@@ -894,7 +1076,24 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the watermark in the output video. The following value types are supported:</p>
+             * <ul>
+             * <li><p>Integer: the pixel value of the watermark width.</p>
+             * <ul>
+             * <li>Valid values: [8,4096].</li>
+             * <li>Unit: pixels.</li>
+             * </ul>
+             * </li>
+             * <li><p>Decimal: the ratio of the watermark width to the width of the output video.</p>
+             * <ul>
+             * <li>Valid values: (0,1).</li>
+             * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -954,7 +1153,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
             public Builder overwriteParams(OverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -962,6 +1161,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1024,7 +1224,11 @@ public class SubmitTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
+             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/path/to/video.mp4</p>
@@ -1035,7 +1239,11 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -1109,7 +1317,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String format; 
 
             /**
-             * CharEnc.
+             * <p>The file encoding format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTF-8</p>
              */
             public Builder charEnc(String charEnc) {
                 this.charEnc = charEnc;
@@ -1117,7 +1328,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * File.
+             * <p>The subtitle file.</p>
              */
             public Builder file(OverwriteParamsFile file) {
                 this.file = file;
@@ -1125,7 +1336,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Format.
+             * <p>The format of the subtitle file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtt</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -1185,7 +1399,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
             public Builder overwriteParams(SubtitlesOverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -1193,6 +1407,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1351,7 +1566,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String top; 
 
             /**
-             * Adaptive.
+             * <p>Specifies whether to the font size based on the output video dimensions. true / false, default: false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder adaptive(String adaptive) {
                 this.adaptive = adaptive;
@@ -1359,7 +1577,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * BorderColor.
+             * <p>The outline color of the text watermark. Default value: black. For more information, see BorderColor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#006400</p>
              */
             public Builder borderColor(String borderColor) {
                 this.borderColor = borderColor;
@@ -1367,7 +1588,14 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * BorderWidth.
+             * <p>The outline width of the text watermark.</p>
+             * <ul>
+             * <li>Default value: 0.</li>
+             * <li>Valid values: (0,4096].</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder borderWidth(Integer borderWidth) {
                 this.borderWidth = borderWidth;
@@ -1375,7 +1603,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Content.
+             * <p>The watermark text. Base64 encoding is not required. The string must be encoded in UTF-8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试水印</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1383,7 +1614,14 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * FontAlpha.
+             * <p>The transparency of the text.</p>
+             * <ul>
+             * <li>Valid values: (0,1].</li>
+             * <li>Default value: 1.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder fontAlpha(String fontAlpha) {
                 this.fontAlpha = fontAlpha;
@@ -1391,7 +1629,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The color of the text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#006400</p>
              */
             public Builder fontColor(String fontColor) {
                 this.fontColor = fontColor;
@@ -1399,7 +1640,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * FontName.
+             * <p>The font of the text. Default value: SimSun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SimSun</p>
              */
             public Builder fontName(String fontName) {
                 this.fontName = fontName;
@@ -1407,7 +1651,14 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The size of the text.</p>
+             * <ul>
+             * <li>Default value: 16.</li>
+             * <li>Valid values: (4,120).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -1415,7 +1666,14 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Left.
+             * <p>The left margin of the text watermark.</p>
+             * <ul>
+             * <li>Default value: 0.</li>
+             * <li>Valid values: [0,4096].</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder left(String left) {
                 this.left = left;
@@ -1423,7 +1681,14 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Top.
+             * <p>The top margin of the text.</p>
+             * <ul>
+             * <li>Default value: 0.</li>
+             * <li>Valid values: [0,4096].</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder top(String top) {
                 this.top = top;
@@ -1483,7 +1748,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
             public Builder overwriteParams(TextWatermarksOverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -1491,6 +1756,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1577,7 +1843,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String truePeak; 
 
             /**
-             * IntegratedLoudnessTarget.
+             * <p>The output volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-6</p>
              */
             public Builder integratedLoudnessTarget(String integratedLoudnessTarget) {
                 this.integratedLoudnessTarget = integratedLoudnessTarget;
@@ -1585,7 +1854,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * LoudnessRangeTarget.
+             * <p>The volume range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder loudnessRangeTarget(String loudnessRangeTarget) {
                 this.loudnessRangeTarget = loudnessRangeTarget;
@@ -1593,7 +1865,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Method.
+             * <p>The volume adjustment method. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -1601,7 +1876,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * TruePeak.
+             * <p>The peak volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder truePeak(String truePeak) {
                 this.truePeak = truePeak;
@@ -1720,7 +1998,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private Volume volume; 
 
             /**
-             * Bitrate.
+             * <p>The audio bitrate of the output file. Valid values: [8,1000]. Unit: Kbit/s. Default value: 128.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1728,7 +2009,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Channels.
+             * <p>The number of sound channels. Default value: 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -1736,7 +2020,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Codec.
+             * <p>The audio codec. Valid values: AAC, MP3, VORBIS, and FLAC. Default value: AAC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -1744,7 +2031,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Profile.
+             * <p>The audio codec profile. If the Codec parameter is set to AAC, the valid values are aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac_low</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1752,7 +2042,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Remove.
+             * <p>Specifies whether to delete the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder remove(String remove) {
                 this.remove = remove;
@@ -1760,7 +2053,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Samplerate.
+             * <p>The sampling rate. Valid values: 22050, 32000, 44100, 48000, and 96000. Default value: 44100. Unit: Hz.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -1768,7 +2064,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Volume.
+             * <p>The volume configurations.</p>
              */
             public Builder volume(Volume volume) {
                 this.volume = volume;
@@ -1815,7 +2111,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String format; 
 
             /**
-             * Format.
+             * <p>The container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -1874,7 +2173,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String forceSegTime; 
 
             /**
-             * Duration.
+             * <p>The segment length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1882,7 +2184,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * ForceSegTime.
+             * <p>The forced segmentation point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2,3</p>
              */
             public Builder forceSegTime(String forceSegTime) {
                 this.forceSegTime = forceSegTime;
@@ -1929,7 +2234,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private Segment segment; 
 
             /**
-             * Segment.
+             * <p>The segment settings.</p>
              */
             public Builder segment(Segment segment) {
                 this.segment = segment;
@@ -2060,7 +2365,12 @@ public class SubmitTranscodeJobRequest extends Request {
             private String transMode; 
 
             /**
-             * AdjDarMethod.
+             * <p>The method that is used to adjust the resolution. This parameter takes effect only if both the Width and Height parameters are specified. You can use this parameter together with the LongShortMode parameter.</p>
+             * <p>Valid values: rescale, crop, pad, and none.</p>
+             * <p>Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder adjDarMethod(String adjDarMethod) {
                 this.adjDarMethod = adjDarMethod;
@@ -2068,7 +2378,19 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * IsCheckAudioBitrate.
+             * <p>Specifies whether to check the audio bitrate. You can specify only one of the IsCheckAudioBitrate and IsCheckAudioBitrateFail parameters. The priority of the IsCheckAudioBitrateFail parameter is higher. Valid values:</p>
+             * <ul>
+             * <li>true: checks the video resolution. If the bitrate of the input audio is less than that of the output audio, the bitrate of the input audio is used for transcoding.</li>
+             * <li>false: does not check the video resolution.</li>
+             * </ul>
+             * <p>Default value:</p>
+             * <ul>
+             * <li>If this parameter is not specified and the codec of the output audio is different from that of the input audio, the default value is false.</li>
+             * <li>If this parameter is not specified and the codec of the output audio is the same as that of the input audio, the default value is true.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCheckAudioBitrate(String isCheckAudioBitrate) {
                 this.isCheckAudioBitrate = isCheckAudioBitrate;
@@ -2076,7 +2398,15 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * IsCheckAudioBitrateFail.
+             * <p>Specifies whether to check the audio bitrate. You can specify only one of the IsCheckAudioBitrate and IsCheckAudioBitrateFail parameters. The priority of the IsCheckAudioBitrateFail parameter is higher. Valid values:</p>
+             * <ul>
+             * <li>true: checks the video resolution. If the bitrate of the input audio is less than that of the output audio, the transcoding job fails.</li>
+             * <li>false: does not check the video resolution.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
                 this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
@@ -2084,7 +2414,15 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * IsCheckReso.
+             * <p>Specifies whether to check the video resolution. You can specify only one of the IsCheckReso and IsCheckResoFail parameters. The priority of the IsCheckResoFail parameter is higher. Valid values:</p>
+             * <ul>
+             * <li>true: checks the video resolution. If the width or height of the input video is less than that of the output video, the resolution of the input video is used for transcoding.</li>
+             * <li>false: does not check the video resolution.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCheckReso(String isCheckReso) {
                 this.isCheckReso = isCheckReso;
@@ -2092,7 +2430,15 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * IsCheckResoFail.
+             * <p>Specifies whether to check the video resolution. You can specify only one of the IsCheckReso and IsCheckResoFail parameters. The priority of the IsCheckResoFail parameter is higher. Valid values:</p>
+             * <ul>
+             * <li>true: checks the video resolution. If the width or height of the input video is less than that of the output video, the transcoding job fails.</li>
+             * <li>false: does not check the video resolution.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCheckResoFail(String isCheckResoFail) {
                 this.isCheckResoFail = isCheckResoFail;
@@ -2100,7 +2446,15 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * IsCheckVideoBitrate.
+             * <p>Specifies whether to check the video bitrate. You can specify only one of the IsCheckVideoBitrate and IsCheckVideoBitrateFail parameters. The priority of the IsCheckVideoBitrateFail parameter is higher. Valid values:</p>
+             * <ul>
+             * <li>true: checks the video resolution. If the bitrate of the input video is less than that of the output video, the bitrate of the input video is used for transcoding.</li>
+             * <li>false: does not check the video resolution.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCheckVideoBitrate(String isCheckVideoBitrate) {
                 this.isCheckVideoBitrate = isCheckVideoBitrate;
@@ -2108,7 +2462,15 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * IsCheckVideoBitrateFail.
+             * <p>Specifies whether to check the video bitrate. You can specify only one of the IsCheckVideoBitrate and IsCheckVideoBitrateFail parameters. The priority of the IsCheckVideoBitrateFail parameter is higher. Valid values:</p>
+             * <ul>
+             * <li>true: checks the video resolution. If the bitrate of the input video is less than that of the output video, the transcoding job fails.</li>
+             * <li>false: does not check the video resolution.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
                 this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
@@ -2116,7 +2478,16 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * TransMode.
+             * <p>The video transcoding mode. Valid values:</p>
+             * <ul>
+             * <li>onepass: You can set this parameter to onepass if the Bitrate parameter is set to ABR. The encoding speed of this mode is faster than that of the twopass mode.</li>
+             * <li>twopass: You can set this parameter to twopass if the Bitrate parameter is set to VBR. The encoding speed of this mode is slower than that of the onepass mode.</li>
+             * <li>CBR: the constant bitrate mode.</li>
+             * </ul>
+             * <p>Default value: onepass.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>onepass</p>
              */
             public Builder transMode(String transMode) {
                 this.transMode = transMode;
@@ -2367,7 +2738,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private String width; 
 
             /**
-             * AbrMax.
+             * <p>The maximum adaptive bitrate (ABR). This parameter takes effect only for Narrowband HD 1.0. Valid values: [10,50000]. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder abrMax(String abrMax) {
                 this.abrMax = abrMax;
@@ -2375,7 +2749,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Bitrate.
+             * <p>The average video bitrate. Valid values: [10,50000]. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -2383,7 +2760,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Bufsize.
+             * <p>The buffer size. Valid values: [1000,128000]. Default value: 6000. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder bufsize(String bufsize) {
                 this.bufsize = bufsize;
@@ -2391,7 +2771,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Codec.
+             * <p>The encoding format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -2399,7 +2782,13 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Crf.
+             * <p>The constant rate factor (CRF). Valid values: [0,51]. Default value: 23 if the encoding format is H.264, or 26 if the encoding format is H.265.</p>
+             * <blockquote>
+             * <p> If this parameter is specified, the setting of the bitrate becomes invalid.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder crf(String crf) {
                 this.crf = crf;
@@ -2407,7 +2796,14 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Crop.
+             * <p>The method of video cropping. Valid values:</p>
+             * <ul>
+             * <li>border: automatically detects and removes black bars.</li>
+             * <li>A value in the width:height:left:top format: crops the videos based on the custom settings. Example: 1280:800:0:140.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1280:800:0:140</p>
              */
             public Builder crop(String crop) {
                 this.crop = crop;
@@ -2415,7 +2811,13 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate. Valid values:(0,60]. Default value: the frame rate of the input file.</p>
+             * <blockquote>
+             * <p> The value is 60 if the frame rate of the input file exceeds 60.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -2423,7 +2825,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Gop.
+             * <p>The maximum number of frames between keyframes. Valid values: [1,1080000]. Default value: 250.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -2431,7 +2836,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of the video. Valid values: [128,4096]. Unit: pixels. Default value: the original height of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -2439,7 +2847,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * LongShortMode.
+             * <p>Specifies whether to enable the auto-rotate screen feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder longShortMode(String longShortMode) {
                 this.longShortMode = longShortMode;
@@ -2447,7 +2858,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Maxrate.
+             * <p>The maximum bitrate of the video. Valid values: [10,50000]. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9000</p>
              */
             public Builder maxrate(String maxrate) {
                 this.maxrate = maxrate;
@@ -2455,7 +2869,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Pad.
+             * <p>The black bars added to the video. Format: width:height:left:top. Example: 1280:800:0:140.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280:800:0:140</p>
              */
             public Builder pad(String pad) {
                 this.pad = pad;
@@ -2463,7 +2880,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * PixFmt.
+             * <p>The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -2471,7 +2891,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Preset.
+             * <p>The preset video algorithm. This parameter takes effect only if the encoding format is H.264. Valid values: veryfast, fast, medium, slow, and slower. Default value: medium.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder preset(String preset) {
                 this.preset = preset;
@@ -2479,7 +2902,16 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Profile.
+             * <p>The encoding profile. Valid values: baseline, main, and high.</p>
+             * <ul>
+             * <li>baseline: applicable to mobile devices.</li>
+             * <li>main: applicable to standard-definition devices.</li>
+             * <li>high: applicable to high-definition devices.</li>
+             * </ul>
+             * <p>Default value: high.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Main</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -2487,7 +2919,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Remove.
+             * <p>Specifies whether to remove the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder remove(String remove) {
                 this.remove = remove;
@@ -2495,7 +2930,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * ScanMode.
+             * <p>The scan mode. Valid values: interlaced and progressive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>progressive</p>
              */
             public Builder scanMode(String scanMode) {
                 this.scanMode = scanMode;
@@ -2503,7 +2941,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the video. Valid values: [128,4096]. Unit: pixels. Default value: the original width of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -2598,7 +3039,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private Video video; 
 
             /**
-             * Audio.
+             * <p>The audio settings.</p>
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -2606,7 +3047,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Container.
+             * <p>The encapsulation format settings.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -2614,7 +3055,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * MuxConfig.
+             * <p>The encapsulation settings.</p>
              */
             public Builder muxConfig(MuxConfig muxConfig) {
                 this.muxConfig = muxConfig;
@@ -2622,7 +3063,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * TransConfig.
+             * <p>The conditional transcoding configurations.</p>
              */
             public Builder transConfig(TransConfig transConfig) {
                 this.transConfig = transConfig;
@@ -2630,7 +3071,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Video.
+             * <p>The video settings.</p>
              */
             public Builder video(Video video) {
                 this.video = video;
@@ -2690,7 +3131,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
             public Builder overwriteParams(TranscodeOverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -2698,6 +3139,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2809,7 +3251,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private Transcode transcode; 
 
             /**
-             * CombineConfigs.
+             * <p>The multi-input stream merge configuration.</p>
              */
             public Builder combineConfigs(java.util.List < CombineConfigs> combineConfigs) {
                 this.combineConfigs = combineConfigs;
@@ -2817,7 +3259,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Encryption.
+             * <p>The encryption settings.</p>
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
@@ -2825,7 +3267,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * ImageWatermarks.
+             * <p>The watermark configuration of an image.</p>
              */
             public Builder imageWatermarks(java.util.List < ImageWatermarks> imageWatermarks) {
                 this.imageWatermarks = imageWatermarks;
@@ -2833,7 +3275,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Subtitles.
+             * <p>The subtitle configuration.</p>
              */
             public Builder subtitles(java.util.List < Subtitles> subtitles) {
                 this.subtitles = subtitles;
@@ -2841,7 +3283,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * TextWatermarks.
+             * <p>The configurations of the text watermark.</p>
              */
             public Builder textWatermarks(java.util.List < TextWatermarks> textWatermarks) {
                 this.textWatermarks = textWatermarks;
@@ -2849,6 +3291,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The transcoding configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder transcode(Transcode transcode) {
@@ -2910,6 +3353,7 @@ public class SubmitTranscodeJobRequest extends Request {
             private ProcessConfig processConfig; 
 
             /**
+             * <p>The output file configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder output(Output output) {
@@ -2918,6 +3362,7 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The job processing configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder processConfig(ProcessConfig processConfig) {
@@ -2977,7 +3422,10 @@ public class SubmitTranscodeJobRequest extends Request {
             private Integer priority; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e37ebee5d98b4781897f6086e89f9c56</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -2985,7 +3433,10 @@ public class SubmitTranscodeJobRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

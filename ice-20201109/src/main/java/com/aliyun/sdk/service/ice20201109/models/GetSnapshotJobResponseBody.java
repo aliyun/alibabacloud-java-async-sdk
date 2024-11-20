@@ -50,7 +50,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         private SnapshotJob snapshotJob; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotJob.
+         * <p>The information about the snapshot job.</p>
          */
         public Builder snapshotJob(SnapshotJob snapshotJob) {
             this.snapshotJob = snapshotJob;
@@ -128,7 +131,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * <p>OSS Bucket</p>
+             * <p>The OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>test-bucket</p>
@@ -139,7 +142,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Location</p>
+             * <p>The OSS location.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai</p>
@@ -150,7 +153,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Object</p>
+             * <p>The OSS object.</p>
              * 
              * <strong>example:</strong>
              * <p>object.mp4</p>
@@ -224,7 +227,14 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+             * <ol>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/object.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -232,7 +242,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * OssFile.
+             * <p>The three key elements of OSS.</p>
              */
             public Builder ossFile(OssFile ossFile) {
                 this.ossFile = ossFile;
@@ -240,7 +250,14 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -311,7 +328,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * <p>OSS Bucket</p>
+             * <p>The OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>test-bucket</p>
@@ -322,7 +339,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Location</p>
+             * <p>The OSS location.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-shanghai</p>
@@ -333,7 +350,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Object</p>
+             * <p>The OSS object.</p>
              * 
              * <strong>example:</strong>
              * <p>output-{Count}.jpg</p>
@@ -407,7 +424,15 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+             * <ol>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+             * </ol>
+             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS. If multiple static snapshots were captured, the object must contain the &quot;{Count}&quot; placeholder. In the case of a sprite, the object must contain the &quot;{TileCount}&quot; placeholder. The suffix of the WebVTT snapshot objects must be &quot;.vtt&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-%7BCount%7D.jpg">http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-{Count}.jpg</a></p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -415,7 +440,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * OssFile.
+             * <p>The three key elements of OSS.</p>
              */
             public Builder ossFile(OutputOssFile ossFile) {
                 this.ossFile = ossFile;
@@ -423,7 +448,14 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the output file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -686,7 +718,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Async.
+             * <p>Indicates whether the snapshots were captured in asynchronous mode. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder async(Boolean async) {
                 this.async = async;
@@ -694,7 +729,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>Error codes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceNotFound</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -702,7 +740,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -710,7 +751,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -718,7 +762,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the job was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:30:54Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -726,7 +773,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The input of the job.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -734,7 +781,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -742,7 +792,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified resource for &quot;Pipeline&quot; could not be found.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -750,7 +803,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the job was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:30:54Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -758,7 +814,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the job.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -766,7 +822,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output of the job.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -774,7 +830,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -782,7 +841,16 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the job.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Init: The job is submitted.</li>
+             * <li>Success: The job is successful.</li>
+             * <li>Fail: The job failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -790,7 +858,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * <p>The time when the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -798,7 +869,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The snapshot template configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Type&quot;:&quot;Normal&quot;,&quot;FrameType&quot;:&quot;normal&quot;,&quot;Time&quot;:0,&quot;Count&quot;:10}</p>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -806,7 +880,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -814,7 +891,16 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerSource.
+             * <p>The request trigger source.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Console</li>
+             * <li>Workflow</li>
+             * <li>API</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder triggerSource(String triggerSource) {
                 this.triggerSource = triggerSource;
@@ -822,7 +908,16 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Snapshot types</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>WebVtt</li>
+             * <li>Sprite</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Sprite</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -830,7 +925,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test parameter&quot;: &quot;test value&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

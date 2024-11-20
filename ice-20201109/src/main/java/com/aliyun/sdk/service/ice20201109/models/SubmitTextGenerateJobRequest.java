@@ -110,7 +110,7 @@ public class SubmitTextGenerateJobRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The job description, which can be up to 1,024 bytes in length and must be encoded in UTF-8.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -119,7 +119,7 @@ public class SubmitTextGenerateJobRequest extends Request {
         }
 
         /**
-         * GenerateConfig.
+         * <p>The text generation configurations, including keywords and the requirements for the word count and number of output copies.</p>
          */
         public Builder generateConfig(String generateConfig) {
             this.putQueryParameter("GenerateConfig", generateConfig);
@@ -128,7 +128,9 @@ public class SubmitTextGenerateJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The job title.</p>
+         * <p>The job title can be up to 128 bytes in length.</p>
+         * <p>The value must be encoded in UTF-8.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -137,7 +139,15 @@ public class SubmitTextGenerateJobRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The job type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>MarketingCopy: the marketing copy.</li>
+         * <li>Title: the short video title.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MarketingCopy</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -146,7 +156,7 @@ public class SubmitTextGenerateJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

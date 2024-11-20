@@ -99,6 +99,7 @@ public class DescribeMeterImsEditUsageRequest extends Request {
         } 
 
         /**
+         * <p>The end of the time range to query. The value is a 10-digit timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +112,7 @@ public class DescribeMeterImsEditUsageRequest extends Request {
         }
 
         /**
+         * <p>The time granularity of the query. Valid values: 3600 (hour) and 86400 (day).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +125,10 @@ public class DescribeMeterImsEditUsageRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter does not take effect. By default, the usage data of all regions is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -132,6 +137,7 @@ public class DescribeMeterImsEditUsageRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. The value is a 10-digit timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

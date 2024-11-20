@@ -82,7 +82,13 @@ public class StartWorkflowRequest extends Request {
         } 
 
         /**
-         * TaskInput.
+         * <p>The workflow input. Only media assets are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;Type&quot;: &quot;Media&quot;,
+         *       &quot;Media&quot;: &quot;<strong><strong><strong>30706071edbfe290b488</strong></strong></strong>&quot;
+         * }</p>
          */
         public Builder taskInput(String taskInput) {
             this.putQueryParameter("TaskInput", taskInput);
@@ -91,7 +97,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data in the JSON format, which cannot be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.htm">Configure a callback upon editing completion</a>.</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -100,7 +106,10 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The ID of the workflow template. To view the template ID, log on to the <a href="https://ims.console.aliyun.com/settings/workflow/list">IMS console</a> and choose Configurations &gt; Workflow Template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>f0e54971ecbffd472190</strong></strong></strong></p>
          */
         public Builder workflowId(String workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

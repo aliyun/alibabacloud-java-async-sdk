@@ -50,7 +50,7 @@ public class GetPackageJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PackageJob.
+         * <p>The information about the packaging job.</p>
          */
         public Builder packageJob(PackageJob packageJob) {
             this.packageJob = packageJob;
@@ -58,7 +58,10 @@ public class GetPackageJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +119,14 @@ public class GetPackageJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
+             * <li>If Type is set to Media, the ID of a media asset is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -124,7 +134,14 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -171,7 +188,7 @@ public class GetPackageJobResponseBody extends TeaModel {
             private Input input; 
 
             /**
-             * Input.
+             * <p>The information about the input stream file.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -230,7 +247,14 @@ public class GetPackageJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
+             * <li>If Type is set to Media, the ID of a media asset is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.m3u8</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -238,7 +262,14 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the media object. Valid values:</p>
+             * <ul>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -465,7 +496,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Code.
+             * <p>The error code returned if the job fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -473,7 +507,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-08T11:34:05Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -481,7 +518,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the job was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-08T11:44:05Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -489,7 +529,7 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Inputs.
+             * <p>The input of the job.</p>
              */
             public Builder inputs(java.util.List < Inputs> inputs) {
                 this.inputs = inputs;
@@ -497,7 +537,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ab4802364a2e49208c99efab82dfa8e8</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -505,7 +548,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource content bad.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -513,7 +559,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the job was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-08T11:44:05Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -521,7 +570,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -529,7 +581,7 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output of the job.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -537,7 +589,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputUrl.
+             * <p>The URL of the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/output.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/output.m3u8</a></p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -545,7 +600,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36f3fee40aa047c0b067d0fb85edc12b</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -553,7 +611,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -561,7 +622,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Init</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -569,7 +633,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * <p>The time when the job was submitted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-08T11:34:05Z</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -577,7 +644,15 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerSource.
+             * <p>The source of the job. Valid values:</p>
+             * <ul>
+             * <li>API</li>
+             * <li>WorkFlow</li>
+             * <li>Console</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder triggerSource(String triggerSource) {
                 this.triggerSource = triggerSource;
@@ -585,7 +660,10 @@ public class GetPackageJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;param&quot;: &quot;value&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

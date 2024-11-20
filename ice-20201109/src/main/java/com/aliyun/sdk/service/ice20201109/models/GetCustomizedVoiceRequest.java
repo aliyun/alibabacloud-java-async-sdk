@@ -54,7 +54,10 @@ public class GetCustomizedVoiceRequest extends Request {
         } 
 
         /**
-         * VoiceId.
+         * <p>The voice ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
          */
         public Builder voiceId(String voiceId) {
             this.putQueryParameter("VoiceId", voiceId);

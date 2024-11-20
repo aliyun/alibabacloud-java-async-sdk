@@ -50,7 +50,7 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The usage statistics of IMS on VOD editing.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F3AE2C6-5CC6-5712-BAC5-5A735A157687</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * Duration.
+             * <p>The usage duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.23</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -136,7 +142,10 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The video profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080P</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -144,7 +153,10 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656950400</p>
              */
             public Builder time(Long time) {
                 this.time = time;

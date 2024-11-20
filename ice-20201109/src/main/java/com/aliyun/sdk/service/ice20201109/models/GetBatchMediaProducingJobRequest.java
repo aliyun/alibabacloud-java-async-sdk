@@ -54,7 +54,10 @@ public class GetBatchMediaProducingJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the quick video production job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>b4549d46c88681030f6e</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

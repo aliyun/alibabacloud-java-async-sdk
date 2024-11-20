@@ -68,7 +68,10 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * RelatedMediaidFlag.
+         * <p>Specifies whether to return the information about the associated materials. Default value: 0. Valid values: 0 and 1. A value of 1 specifies that the information about the associated materials is returned. This parameter is valid only for regular templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder relatedMediaidFlag(String relatedMediaidFlag) {
             this.putQueryParameter("RelatedMediaidFlag", relatedMediaidFlag);
@@ -77,7 +80,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

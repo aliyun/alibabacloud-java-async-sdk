@@ -69,7 +69,10 @@ public class GetTemplateMaterialsRequest extends Request {
         } 
 
         /**
-         * FileList.
+         * <p>The materials that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;music.mp3&quot;,&quot;config.json&quot;,&quot;assets/1.jpg&quot;]</p>
          */
         public Builder fileList(String fileList) {
             this.putQueryParameter("FileList", fileList);
@@ -78,6 +81,7 @@ public class GetTemplateMaterialsRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

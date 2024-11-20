@@ -197,7 +197,10 @@ public class SubmitDNAJobRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The configurations of the media fingerprint analysis job. The value is a JSON object. If you specify this parameter, the template parameters are overwritten.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -206,6 +209,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the media fingerprint library. If you do not specify this parameter, the default media fingerprint library is used. For more information about how to create a media fingerprint library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +222,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
+         * <p>The input file for media fingerprint analysis.</p>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -246,7 +251,10 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the media fingerprint analysis job is submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5246b8d12a62433ab77845074039****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -255,6 +263,7 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
+         * <p>The primary key of the video. You must make sure that each primary key is unique.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +294,10 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S00000101-100060</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -294,7 +306,10 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data. The data can be up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userData</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -356,6 +371,10 @@ public class SubmitDNAJobRequest extends Request {
             private String type; 
 
             /**
+             * <p>The input file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</p>
+             * <p>1. oss://bucket/object</p>
+             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+             * <p>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -367,6 +386,11 @@ public class SubmitDNAJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: Object Storage Service (OSS) object.</li>
+             * <li>Media: media asset.</li>
+             * </ol>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

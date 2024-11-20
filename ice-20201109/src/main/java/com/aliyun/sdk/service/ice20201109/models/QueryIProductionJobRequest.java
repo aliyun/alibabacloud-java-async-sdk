@@ -69,7 +69,7 @@ public class QueryIProductionJobRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -78,6 +78,7 @@ public class QueryIProductionJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the intelligent production job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

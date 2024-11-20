@@ -62,7 +62,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * ParamList.
+         * <p>The queried parameters.</p>
          */
         public Builder paramList(java.util.List < ParamList> paramList) {
             this.paramList = paramList;
@@ -70,7 +70,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
@@ -81,7 +81,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>419c8741c1b4325f035b</strong></strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -175,7 +178,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Content.
+             * <p>The original subtitle content.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -183,7 +186,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * CoverUrl.
+             * <p>The thumbnail URL of the original material.</p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -191,7 +194,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -199,7 +205,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaUrl.
+             * <p>The URL of the original material.</p>
              */
             public Builder mediaUrl(String mediaUrl) {
                 this.mediaUrl = mediaUrl;
@@ -207,7 +213,16 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The material type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Video</li>
+             * <li>Text</li>
+             * <li>Image</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder type(String type) {
                 this.type = type;

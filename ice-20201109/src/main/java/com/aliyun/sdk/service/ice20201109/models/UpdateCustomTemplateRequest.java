@@ -83,7 +83,10 @@ public class UpdateCustomTemplateRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-template</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -92,7 +95,10 @@ public class UpdateCustomTemplateRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The <a href="https://help.aliyun.com/document_detail/448291.html">template parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;param&quot;: &quot;sample&quot;}</p>
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -101,6 +107,7 @@ public class UpdateCustomTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

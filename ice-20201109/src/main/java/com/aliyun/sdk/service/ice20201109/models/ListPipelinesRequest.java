@@ -54,7 +54,16 @@ public class ListPipelinesRequest extends Request {
         } 
 
         /**
-         * Speed.
+         * <p>The type of the MPS queue.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Boost: MPS queue with transcoding speed boosted.</li>
+         * <li>Standard: standard MPS queue.</li>
+         * <li>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder speed(String speed) {
             this.putQueryParameter("Speed", speed);

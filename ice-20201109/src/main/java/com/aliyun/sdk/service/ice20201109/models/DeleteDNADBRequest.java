@@ -111,6 +111,7 @@ public class DeleteDNADBRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the media fingerprint library that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

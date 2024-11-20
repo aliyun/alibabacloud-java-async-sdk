@@ -232,6 +232,9 @@ public class StartRtcRobotInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("VoiceprintId")
         private String voiceprintId;
 
+        @com.aliyun.core.annotation.NameInMap("Volume")
+        private Long volume;
+
         private Config(Builder builder) {
             this.asrMaxSilence = builder.asrMaxSilence;
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
@@ -241,6 +244,7 @@ public class StartRtcRobotInstanceRequest extends Request {
             this.userOnlineTimeout = builder.userOnlineTimeout;
             this.voiceId = builder.voiceId;
             this.voiceprintId = builder.voiceprintId;
+            this.volume = builder.volume;
         }
 
         public static Builder builder() {
@@ -307,6 +311,13 @@ public class StartRtcRobotInstanceRequest extends Request {
             return this.voiceprintId;
         }
 
+        /**
+         * @return volume
+         */
+        public Long getVolume() {
+            return this.volume;
+        }
+
         public static final class Builder {
             private Integer asrMaxSilence; 
             private Boolean enableVoiceInterrupt; 
@@ -316,6 +327,7 @@ public class StartRtcRobotInstanceRequest extends Request {
             private Integer userOnlineTimeout; 
             private String voiceId; 
             private String voiceprintId; 
+            private Long volume; 
 
             /**
              * AsrMaxSilence.
@@ -378,6 +390,14 @@ public class StartRtcRobotInstanceRequest extends Request {
              */
             public Builder voiceprintId(String voiceprintId) {
                 this.voiceprintId = voiceprintId;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Long volume) {
+                this.volume = volume;
                 return this;
             }
 

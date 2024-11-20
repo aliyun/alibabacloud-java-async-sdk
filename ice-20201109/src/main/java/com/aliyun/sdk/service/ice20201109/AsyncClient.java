@@ -47,6 +47,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddMediaMarksResponse> addMediaMarks(AddMediaMarksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</p>
+     * <ul>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * <li>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddTemplate  AddTemplateRequest
      * @return AddTemplateResponse
      */
@@ -65,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetMediaInfosResponse> batchGetMediaInfos(BatchGetMediaInfosRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can cancel a media fingerprint analysis job only if the job is in the Queuing state.</p>
+     * <ul>
+     * <li>We recommend that you call the <strong>UpdatePipeline</strong> operation to set the status of the ApsaraVideo Media Processing (MPS) queue to Paused before you cancel a job. This suspends job scheduling in the MPS queue. After the job is canceled, you must set the status of the MPS queue back to Active so that the other jobs in the MPS queue can be scheduled.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CancelDNAJob  CancelDNAJobRequest
      * @return CancelDNAJobResponse
      */
@@ -101,6 +114,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomizedVoiceJobResponse> createCustomizedVoiceJob(CreateCustomizedVoiceJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can create up to five media fingerprint libraries within an account. To increase the quota, submit a ticket. You can call the DeleteDNADB operation to delete the fingerprint libraries that you no longer need.</p>
+     * 
      * @param request the request parameters of CreateDNADB  CreateDNADBRequest
      * @return CreateDNADBResponse
      */
@@ -314,6 +330,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSmartJobResponse> deleteSmartJob(DeleteSmartJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</p>
+     * <ul>
+     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
      * @return DeleteTemplateResponse
      */
@@ -437,6 +460,38 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetContentAnalyzeConfigResponse> getContentAnalyzeConfig(GetContentAnalyzeConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about a template with the ID specified by the TemplateId parameter. You can also query the information about the default template. If TemplateId is specified, other parameters are ignored and the template whose ID is specified is queried. If TemplateId is not specified, the default template is queried based on other parameters. In this case, Type is required.
+     * Template types:</p>
+     * <ol>
+     * <li>1: transcoding template.</li>
+     * <li>2: snapshot template.</li>
+     * <li>3: animated image template.</li>
+     * <li>4\. image watermark template.</li>
+     * <li>5: text watermark template.</li>
+     * <li>6: subtitle template.</li>
+     * <li>7: AI-assisted content moderation template.</li>
+     * <li>8: AI-assisted intelligent thumbnail template.</li>
+     * <li>9: AI-assisted intelligent erasure template.
+     * Subtypes of transcoding templates:</li>
+     * <li>1 (Normal): regular template.</li>
+     * <li>2 (AudioTranscode): audio transcoding template.</li>
+     * <li>3 (Remux): container format conversion template.</li>
+     * <li>4 (NarrowBandV1): Narrowband HD 1.0 template.</li>
+     * <li>5 (NarrowBandV2): Narrowband HD 2.0 template.
+     * Subtypes of snapshot templates:</li>
+     * <li>1 (Normal): regular template.</li>
+     * <li>2 (Sprite): sprite template.</li>
+     * <li>3 (WebVtt): WebVTT template.
+     * Subtypes of AI-assisted content moderation templates:</li>
+     * <li>1 (Video): video moderation template.</li>
+     * <li>2 (Audio): audio moderation template.</li>
+     * <li>3 (Image): image moderation template.
+     * Subtypes of AI-assisted intelligent erasure templates:</li>
+     * <li>1 (VideoDelogo): logo erasure template.</li>
+     * <li>2 (VideoDetext): subtitle erasure template.</li>
+     * </ol>
+     * 
      * @param request the request parameters of GetCustomTemplate  GetCustomTemplateRequest
      * @return GetCustomTemplateResponse
      */
@@ -623,6 +678,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSystemTemplateResponse> getSystemTemplate(GetSystemTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</p>
+     * <ul>
+     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetTemplate  GetTemplateRequest
      * @return GetTemplateResponse
      */
@@ -732,6 +794,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDNADBResponse> listDNADB(ListDNADBRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query files in a media fingerprint library based on the library ID. The queried results can be paginated.</p>
+     * 
      * @param request the request parameters of ListDNAFiles  ListDNAFilesRequest
      * @return ListDNAFilesResponse
      */
@@ -873,12 +938,50 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSnapshotJobsResponse> listSnapshotJobs(ListSnapshotJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Template types:</p>
+     * <ol>
+     * <li>1: transcoding template.</li>
+     * <li>2: snapshot template.</li>
+     * <li>3: animated image template.</li>
+     * <li>4\. image watermark template.</li>
+     * <li>5: text watermark template.</li>
+     * <li>6: subtitle template.</li>
+     * <li>7: AI-assisted content moderation template.</li>
+     * <li>8: AI-assisted intelligent thumbnail template.</li>
+     * <li>9: AI-assisted intelligent erasure template.
+     * Subtypes of transcoding templates:</li>
+     * <li>1 (Normal): regular template.</li>
+     * <li>2 (AudioTranscode): audio transcoding template.</li>
+     * <li>3 (Remux): container format conversion template.</li>
+     * <li>4 (NarrowBandV1): Narrowband HD 1.0 template.</li>
+     * <li>5 (NarrowBandV2): Narrowband HD 2.0 template.
+     * Subtypes of snapshot templates:</li>
+     * <li>1 (Normal): regular template.</li>
+     * <li>2 (Sprite): sprite template.</li>
+     * <li>3 (WebVtt): WebVTT template.
+     * Subtypes of AI-assisted content moderation templates:</li>
+     * <li>1 (Video): video moderation template.</li>
+     * <li>2 (Audio): audio moderation template.</li>
+     * <li>3 (Image): image moderation template.
+     * Subtypes of AI-assisted intelligent erasure templates:</li>
+     * <li>1 (VideoDelogo): logo erasure template.</li>
+     * <li>2 (VideoDetext): subtitle erasure template.</li>
+     * </ol>
+     * 
      * @param request the request parameters of ListSystemTemplates  ListSystemTemplatesRequest
      * @return ListSystemTemplatesResponse
      */
     CompletableFuture<ListSystemTemplatesResponse> listSystemTemplates(ListSystemTemplatesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</p>
+     * <ul>
+     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListTemplates  ListTemplatesRequest
      * @return ListTemplatesResponse
      */
@@ -903,12 +1006,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryIProductionJobResponse> queryIProductionJob(QueryIProductionJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>In the content moderation results, the moderation results of the video are sorted in ascending order by time into a timeline. If the video is long, the content moderation results are paginated, and the first page is returned. You can call this operation again to query the remaining moderation results of the video.</p>
+     * 
      * @param request the request parameters of QueryMediaCensorJobDetail  QueryMediaCensorJobDetailRequest
      * @return QueryMediaCensorJobDetailResponse
      */
     CompletableFuture<QueryMediaCensorJobDetailResponse> queryMediaCensorJobDetail(QueryMediaCensorJobDetailRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query only the content moderation jobs within the most recent three months.</p>
+     * 
      * @param request the request parameters of QueryMediaCensorJobList  QueryMediaCensorJobListRequest
      * @return QueryMediaCensorJobListResponse
      */
@@ -1095,6 +1204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartRtcRobotInstanceResponse> startRtcRobotInstance(StartRtcRobotInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Only media assets from Intelligent Media Services (IMS) or ApsaraVideo VOD can be used as the input of a workflow.</p>
+     * <ul>
+     * <li>When you submit a workflow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">IMS console</a> or use a preset workflow template.</li>
+     * </ul>
+     * 
      * @param request the request parameters of StartWorkflow  StartWorkflowRequest
      * @return StartWorkflowResponse
      */
@@ -1149,6 +1264,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitCustomizedVoiceJobResponse> submitCustomizedVoiceJob(SubmitCustomizedVoiceJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  SubmitDNAJob is an asynchronous operation. After a request is sent, the system returns a request ID and a job ID and runs the task in the background.</p>
+     * <ul>
+     * <li>You can call this operation only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</li>
+     * <li>You can submit a text fingerprint analysis job only in the China (Shanghai) region.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitDNAJob  SubmitDNAJobRequest
      * @return SubmitDNAJobResponse
      */
@@ -1173,6 +1295,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitIProductionJobResponse> submitIProductionJob(SubmitIProductionJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Live editing is supported for live streams that are recorded and stored in Object Storage Service (OSS) and ApsaraVideo VOD. If multiple live streams are involved in a single job, only those recorded within the same application are supported for mixed editing. The streams must all be recorded either in OSS or ApsaraVideo VOD.</p>
+     * 
      * @param request the request parameters of SubmitLiveEditingJob  SubmitLiveEditingJobRequest
      * @return SubmitLiveEditingJobResponse
      */
@@ -1203,18 +1328,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitMediaAiAnalysisJobResponse> submitMediaAiAnalysisJob(SubmitMediaAiAnalysisJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The job that you submit by calling this operation is run in asynchronous mode. The job is added to an ApsaraVideo Media Processing (MPS) queue to be scheduled and run. You can call the <a href="https://help.aliyun.com/document_detail/444847.html">QueryMediaCensorJobDetail</a> operation or configure an asynchronous notification to obtain the job results.</p>
+     * 
      * @param request the request parameters of SubmitMediaCensorJob  SubmitMediaCensorJobRequest
      * @return SubmitMediaCensorJobResponse
      */
     CompletableFuture<SubmitMediaCensorJobResponse> submitMediaCensorJob(SubmitMediaCensorJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to analyze an input media file by using a callback mechanism or initiating subsequent queries. This operation is suitable for scenarios in which real-time performance is less critical and high concurrency is expected.</p>
+     * 
      * @param request the request parameters of SubmitMediaInfoJob  SubmitMediaInfoJobRequest
      * @return SubmitMediaInfoJobResponse
      */
     CompletableFuture<SubmitMediaInfoJobResponse> submitMediaInfoJob(SubmitMediaInfoJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This operation returns only the submission result of a media editing and production job. When the submission result is returned, the job may still be in progress. After a media editing and production job is submitted, the job is queued in the background for asynchronous processing.</p>
+     * <ul>
+     * <li>The materials referenced in the timeline of an online editing project can be media assets in the media asset library or Object Storage Service (OSS) objects. External URLs or Alibaba Cloud Content Delivery Network (CDN) URLs are not supported. To use an OSS object as a material, you must set MediaUrl to an OSS URL, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.</li>
+     * <li>After the production is complete, the output file is automatically registered as a media asset. The media asset first needs to be analyzed. After the media asset is analyzed, you can query the duration and resolution information based on the media asset ID.</li>
+     * </ul>
+     * <h2><a href="#"></a>Limits</h2>
+     * <ul>
+     * <li>The throttling threshold of this operation is 30 queries per second (QPS).
+     * **
+     * <strong>Note</strong> If the threshold is exceeded, a &quot;Throttling.User&quot; error is returned when you submit an editing job. For more information about how to resolve this issue, see the <a href="https://help.aliyun.com/document_detail/453484.html">FAQ</a>.</li>
+     * <li>You can create up to 100 video tracks, 100 image tracks, and 100 subtitle tracks in a project.</li>
+     * <li>The total size of material files cannot exceed 1 TB.</li>
+     * <li>The OSS buckets in which the materials reside and where the output media assets are stored must be in the same region as the region in which Intelligent Media Services (IMS) is activated.</li>
+     * <li>An output video must meet the following requirements:<ul>
+     * <li>Both the width and height must be at least 128 pixels.</li>
+     * <li>Both the width and height cannot exceed 4,096 pixels.</li>
+     * <li>The shorter side of the video cannot exceed 2,160 pixels.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitMediaProducingJob  SubmitMediaProducingJobRequest
      * @return SubmitMediaProducingJobResponse
      */
@@ -1227,6 +1380,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitPackageJobResponse> submitPackageJob(SubmitPackageJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation to submit a smart tagging job, you must add a smart tagging template and specify the analysis types that you want to use in the template. For more information, see CreateCustomTemplate. You can use the smart tagging feature only in the China (Beijing), China (Shanghai), and China (Hangzhou) regions. By default, an ApsaraVideo Media Processing (MPS) queue can process a maximum of two concurrent smart tagging jobs. If you need to process more concurrent smart tagging jobs, submit a ticket to contact Alibaba Cloud Technical Support for evaluation and configuration.</p>
+     * 
      * @param request the request parameters of SubmitSmarttagJob  SubmitSmarttagJobRequest
      * @return SubmitSmarttagJobResponse
      */
@@ -1251,6 +1407,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitStandardCustomizedVoiceJobResponse> submitStandardCustomizedVoiceJob(SubmitStandardCustomizedVoiceJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to analyze an input media file in synchronous mode. This operation is suitable for scenarios that require high real-time performance and low concurrency. If it takes an extended period of time to obtain the media information about the input media file, the request may time out or the obtained information may be inaccurate. We recommend that you call the <a href="https://help.aliyun.com/document_detail/441222.html">SubmitMediaInfoJob</a> operation to obtain media information.</p>
+     * 
      * @param request the request parameters of SubmitSyncMediaInfoJob  SubmitSyncMediaInfoJobRequest
      * @return SubmitSyncMediaInfoJobResponse
      */
@@ -1374,6 +1533,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRtcRobotInstanceResponse> updateRtcRobotInstance(UpdateRtcRobotInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</p>
+     * <ul>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest
      * @return UpdateTemplateResponse
      */

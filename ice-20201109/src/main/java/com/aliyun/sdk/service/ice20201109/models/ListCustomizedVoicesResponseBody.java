@@ -62,7 +62,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,14 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -196,7 +206,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             private String voiceName; 
 
             /**
-             * DemoAudioMediaId.
+             * <p>The media asset ID of the sample audio file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>4d5e829d498aaf966b119348</strong></strong></p>
              */
             public Builder demoAudioMediaId(String demoAudioMediaId) {
                 this.demoAudioMediaId = demoAudioMediaId;
@@ -204,7 +217,14 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * Gender.
+             * <p>The gender. Valid values:</p>
+             * <ul>
+             * <li>female</li>
+             * <li>male</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>male</p>
              */
             public Builder gender(String gender) {
                 this.gender = gender;
@@ -212,7 +232,15 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * Scenario.
+             * <p>The scenario. Valid values:</p>
+             * <ul>
+             * <li>story</li>
+             * <li>interaction</li>
+             * <li>navigation</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>story</p>
              */
             public Builder scenario(String scenario) {
                 this.scenario = scenario;
@@ -220,7 +248,17 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <ul>
+             * <li><p>The voice type. Valid values:</p>
+             * <ul>
+             * <li>Basic</li>
+             * <li>Standard</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -228,7 +266,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceDesc.
+             * <p>The voice description.</p>
              */
             public Builder voiceDesc(String voiceDesc) {
                 this.voiceDesc = voiceDesc;
@@ -236,7 +274,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceId.
+             * <p>The voice ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaozhuan</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
@@ -244,7 +285,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceName.
+             * <p>The voice name.</p>
              */
             public Builder voiceName(String voiceName) {
                 this.voiceName = voiceName;
@@ -303,7 +344,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CustomizedVoiceList.
+             * <p>The queried personalized human voices.</p>
              */
             public Builder customizedVoiceList(java.util.List < CustomizedVoiceList> customizedVoiceList) {
                 this.customizedVoiceList = customizedVoiceList;
@@ -311,7 +352,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

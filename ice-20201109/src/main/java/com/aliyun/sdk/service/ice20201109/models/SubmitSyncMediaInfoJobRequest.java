@@ -97,6 +97,7 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         } 
 
         /**
+         * <p>The input of the job.</p>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -107,7 +108,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,7 +120,7 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         }
 
         /**
-         * ScheduleConfig.
+         * <p>The scheduling parameters. This parameter is optional.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -126,7 +130,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-data</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -188,6 +195,16 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             private String type; 
 
             /**
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/440592.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+             * </blockquote>
+             * <ul>
+             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -199,6 +216,11 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the media object.</p>
+             * <ul>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -261,7 +283,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             private Integer priority; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e37ebee5d98b4781897f6086e89f9c56</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -269,7 +294,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

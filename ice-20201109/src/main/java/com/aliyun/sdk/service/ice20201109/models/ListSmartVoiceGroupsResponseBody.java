@@ -50,7 +50,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         private java.util.List < VoiceGroups> voiceGroups; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>627B30EB-1D0A-5C6D-8467-431626E0FA10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * VoiceGroups.
+         * <p>The queried speaker groups.</p>
          */
         public Builder voiceGroups(java.util.List < VoiceGroups> voiceGroups) {
             this.voiceGroups = voiceGroups;
@@ -188,7 +191,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             private String voiceUrl; 
 
             /**
-             * Desc.
+             * <p>The speaker description.</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -196,7 +199,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The speaker name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +207,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The remarks of the speaker.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -220,7 +223,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The tag of the speaker type.</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -228,7 +231,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>The speaker ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhitian</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -236,7 +242,17 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceType.
+             * <p>The speaker type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Male</li>
+             * <li>Female</li>
+             * <li>Boy</li>
+             * <li>Girl</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Female</p>
              */
             public Builder voiceType(String voiceType) {
                 this.voiceType = voiceType;
@@ -244,7 +260,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceUrl.
+             * <p>The URL of the sample audio file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://***.com/zhiqing.mp3</p>
              */
             public Builder voiceUrl(String voiceUrl) {
                 this.voiceUrl = voiceUrl;
@@ -303,7 +322,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             private java.util.List < VoiceList> voiceList; 
 
             /**
-             * Type.
+             * <p>The name of the speaker group.</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -311,7 +330,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceList.
+             * <p>The speakers.</p>
              */
             public Builder voiceList(java.util.List < VoiceList> voiceList) {
                 this.voiceList = voiceList;

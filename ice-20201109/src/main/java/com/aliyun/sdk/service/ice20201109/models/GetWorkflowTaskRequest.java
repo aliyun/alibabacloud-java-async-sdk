@@ -54,7 +54,10 @@ public class GetWorkflowTaskRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>The ID of the workflow task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>4215e042b3966ca5441e</strong></strong></strong></p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
