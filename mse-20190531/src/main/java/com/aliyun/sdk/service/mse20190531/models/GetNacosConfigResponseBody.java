@@ -153,6 +153,113 @@ public class GetNacosConfigResponseBody extends TeaModel {
      *
      * <p>GetNacosConfigResponseBody</p>
      */
+    public static class GrayVersions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
+        @com.aliyun.core.annotation.NameInMap("Rule")
+        private String rule;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private GrayVersions(Builder builder) {
+            this.name = builder.name;
+            this.priority = builder.priority;
+            this.rule = builder.rule;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GrayVersions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
+         * @return rule
+         */
+        public String getRule() {
+            return this.rule;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private Integer priority; 
+            private String rule; 
+            private String type; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * Rule.
+             */
+            public Builder rule(String rule) {
+                this.rule = rule;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public GrayVersions build() {
+                return new GrayVersions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetNacosConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNacosConfigResponseBody</p>
+     */
     public static class Configuration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -171,6 +278,9 @@ public class GetNacosConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EncryptedDataKey")
         private String encryptedDataKey;
+
+        @com.aliyun.core.annotation.NameInMap("GrayVersions")
+        private java.util.List < GrayVersions> grayVersions;
 
         @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
@@ -191,6 +301,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             this.dataId = builder.dataId;
             this.desc = builder.desc;
             this.encryptedDataKey = builder.encryptedDataKey;
+            this.grayVersions = builder.grayVersions;
             this.group = builder.group;
             this.md5 = builder.md5;
             this.tags = builder.tags;
@@ -248,6 +359,13 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return grayVersions
+         */
+        public java.util.List < GrayVersions> getGrayVersions() {
+            return this.grayVersions;
+        }
+
+        /**
          * @return group
          */
         public String getGroup() {
@@ -282,6 +400,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             private String dataId; 
             private String desc; 
             private String encryptedDataKey; 
+            private java.util.List < GrayVersions> grayVersions; 
             private String group; 
             private String md5; 
             private String tags; 
@@ -350,6 +469,14 @@ public class GetNacosConfigResponseBody extends TeaModel {
              */
             public Builder encryptedDataKey(String encryptedDataKey) {
                 this.encryptedDataKey = encryptedDataKey;
+                return this;
+            }
+
+            /**
+             * GrayVersions.
+             */
+            public Builder grayVersions(java.util.List < GrayVersions> grayVersions) {
+                this.grayVersions = grayVersions;
                 return this;
             }
 

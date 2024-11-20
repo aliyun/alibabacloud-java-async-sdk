@@ -24,7 +24,7 @@ public class CreateNacosConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("BetaIps")
     private String betaIps;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
@@ -237,13 +237,10 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The content of the configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>asdf</p>
+         * Content.
          */
         public Builder content(String content) {
-            this.putQueryParameter("Content", content);
+            this.putBodyParameter("Content", content);
             this.content = content;
             return this;
         }

@@ -22,6 +22,10 @@ public class ListListenersByConfigRequest extends Request {
     private String dataId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtGrayRules")
+    private java.util.List < ExtGrayRules> extGrayRules;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Group")
     @com.aliyun.core.annotation.Validation(required = true)
     private String group;
@@ -43,6 +47,7 @@ public class ListListenersByConfigRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.dataId = builder.dataId;
+        this.extGrayRules = builder.extGrayRules;
         this.group = builder.group;
         this.instanceId = builder.instanceId;
         this.namespaceId = builder.namespaceId;
@@ -77,6 +82,13 @@ public class ListListenersByConfigRequest extends Request {
     }
 
     /**
+     * @return extGrayRules
+     */
+    public java.util.List < ExtGrayRules> getExtGrayRules() {
+        return this.extGrayRules;
+    }
+
+    /**
      * @return group
      */
     public String getGroup() {
@@ -107,6 +119,7 @@ public class ListListenersByConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ListListenersByConfigRequest, Builder> {
         private String acceptLanguage; 
         private String dataId; 
+        private java.util.List < ExtGrayRules> extGrayRules; 
         private String group; 
         private String instanceId; 
         private String namespaceId; 
@@ -120,6 +133,7 @@ public class ListListenersByConfigRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.dataId = request.dataId;
+            this.extGrayRules = request.extGrayRules;
             this.group = request.group;
             this.instanceId = request.instanceId;
             this.namespaceId = request.namespaceId;
@@ -152,6 +166,16 @@ public class ListListenersByConfigRequest extends Request {
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
             this.dataId = dataId;
+            return this;
+        }
+
+        /**
+         * ExtGrayRules.
+         */
+        public Builder extGrayRules(java.util.List < ExtGrayRules> extGrayRules) {
+            String extGrayRulesShrink = shrink(extGrayRules, "ExtGrayRules", "json");
+            this.putQueryParameter("ExtGrayRules", extGrayRulesShrink);
+            this.extGrayRules = extGrayRules;
             return this;
         }
 
@@ -212,4 +236,111 @@ public class ListListenersByConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListListenersByConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ListListenersByConfigRequest</p>
+     */
+    public static class ExtGrayRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GrayRule")
+        private String grayRule;
+
+        @com.aliyun.core.annotation.NameInMap("GrayRuleName")
+        private String grayRuleName;
+
+        @com.aliyun.core.annotation.NameInMap("GrayRulePriority")
+        private Integer grayRulePriority;
+
+        @com.aliyun.core.annotation.NameInMap("GrayRuleType")
+        private String grayRuleType;
+
+        private ExtGrayRules(Builder builder) {
+            this.grayRule = builder.grayRule;
+            this.grayRuleName = builder.grayRuleName;
+            this.grayRulePriority = builder.grayRulePriority;
+            this.grayRuleType = builder.grayRuleType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtGrayRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return grayRule
+         */
+        public String getGrayRule() {
+            return this.grayRule;
+        }
+
+        /**
+         * @return grayRuleName
+         */
+        public String getGrayRuleName() {
+            return this.grayRuleName;
+        }
+
+        /**
+         * @return grayRulePriority
+         */
+        public Integer getGrayRulePriority() {
+            return this.grayRulePriority;
+        }
+
+        /**
+         * @return grayRuleType
+         */
+        public String getGrayRuleType() {
+            return this.grayRuleType;
+        }
+
+        public static final class Builder {
+            private String grayRule; 
+            private String grayRuleName; 
+            private Integer grayRulePriority; 
+            private String grayRuleType; 
+
+            /**
+             * GrayRule.
+             */
+            public Builder grayRule(String grayRule) {
+                this.grayRule = grayRule;
+                return this;
+            }
+
+            /**
+             * GrayRuleName.
+             */
+            public Builder grayRuleName(String grayRuleName) {
+                this.grayRuleName = grayRuleName;
+                return this;
+            }
+
+            /**
+             * GrayRulePriority.
+             */
+            public Builder grayRulePriority(Integer grayRulePriority) {
+                this.grayRulePriority = grayRulePriority;
+                return this;
+            }
+
+            /**
+             * GrayRuleType.
+             */
+            public Builder grayRuleType(String grayRuleType) {
+                this.grayRuleType = grayRuleType;
+                return this;
+            }
+
+            public ExtGrayRules build() {
+                return new ExtGrayRules(this);
+            } 
+
+        } 
+
+    }
 }

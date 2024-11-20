@@ -24,7 +24,7 @@ public class UpdateNacosConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("BetaIps")
     private String betaIps;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
@@ -265,13 +265,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The content of the configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>attribute1=1221111\r\nattribute2=Chinese\r\nattribute3=abc11\r\nattribute4=1.00111</p>
+         * Content.
          */
         public Builder content(String content) {
-            this.putQueryParameter("Content", content);
+            this.putBodyParameter("Content", content);
             this.content = content;
             return this;
         }

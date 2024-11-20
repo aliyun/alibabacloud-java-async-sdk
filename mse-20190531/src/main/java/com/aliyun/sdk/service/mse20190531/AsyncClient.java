@@ -1423,6 +1423,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGatewayRouteWafStatusResponse> updateGatewayRouteWafStatus(UpdateGatewayRouteWafStatusRequest request);
 
     /**
+     * @param request the request parameters of UpdateGatewayService  UpdateGatewayServiceRequest
+     * @return UpdateGatewayServiceResponse
+     */
+    CompletableFuture<UpdateGatewayServiceResponse> updateGatewayService(UpdateGatewayServiceRequest request);
+
+    /**
      * @param request the request parameters of UpdateGatewayServiceCheck  UpdateGatewayServiceCheckRequest
      * @return UpdateGatewayServiceCheckResponse
      */

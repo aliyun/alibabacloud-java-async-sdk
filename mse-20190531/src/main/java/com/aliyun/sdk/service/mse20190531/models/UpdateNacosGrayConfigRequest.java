@@ -34,6 +34,14 @@ public class UpdateNacosGrayConfigRequest extends Request {
     private String grayRule;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrayRuleName")
+    private String grayRuleName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrayRulePriority")
+    private Integer grayRulePriority;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GrayType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String grayType;
@@ -52,12 +60,12 @@ public class UpdateNacosGrayConfigRequest extends Request {
     private String namespaceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
+    @com.aliyun.core.annotation.NameInMap("OpType")
+    private String opType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RequestPars")
-    private String requestPars;
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StopGray")
@@ -70,12 +78,14 @@ public class UpdateNacosGrayConfigRequest extends Request {
         this.content = builder.content;
         this.dataId = builder.dataId;
         this.grayRule = builder.grayRule;
+        this.grayRuleName = builder.grayRuleName;
+        this.grayRulePriority = builder.grayRulePriority;
         this.grayType = builder.grayType;
         this.group = builder.group;
         this.instanceId = builder.instanceId;
         this.namespaceId = builder.namespaceId;
+        this.opType = builder.opType;
         this.regionId = builder.regionId;
-        this.requestPars = builder.requestPars;
         this.stopGray = builder.stopGray;
     }
 
@@ -128,6 +138,20 @@ public class UpdateNacosGrayConfigRequest extends Request {
     }
 
     /**
+     * @return grayRuleName
+     */
+    public String getGrayRuleName() {
+        return this.grayRuleName;
+    }
+
+    /**
+     * @return grayRulePriority
+     */
+    public Integer getGrayRulePriority() {
+        return this.grayRulePriority;
+    }
+
+    /**
      * @return grayType
      */
     public String getGrayType() {
@@ -156,17 +180,17 @@ public class UpdateNacosGrayConfigRequest extends Request {
     }
 
     /**
+     * @return opType
+     */
+    public String getOpType() {
+        return this.opType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return requestPars
-     */
-    public String getRequestPars() {
-        return this.requestPars;
     }
 
     /**
@@ -182,12 +206,14 @@ public class UpdateNacosGrayConfigRequest extends Request {
         private String content; 
         private String dataId; 
         private String grayRule; 
+        private String grayRuleName; 
+        private Integer grayRulePriority; 
         private String grayType; 
         private String group; 
         private String instanceId; 
         private String namespaceId; 
+        private String opType; 
         private String regionId; 
-        private String requestPars; 
         private Boolean stopGray; 
 
         private Builder() {
@@ -201,12 +227,14 @@ public class UpdateNacosGrayConfigRequest extends Request {
             this.content = request.content;
             this.dataId = request.dataId;
             this.grayRule = request.grayRule;
+            this.grayRuleName = request.grayRuleName;
+            this.grayRulePriority = request.grayRulePriority;
             this.grayType = request.grayType;
             this.group = request.group;
             this.instanceId = request.instanceId;
             this.namespaceId = request.namespaceId;
+            this.opType = request.opType;
             this.regionId = request.regionId;
-            this.requestPars = request.requestPars;
             this.stopGray = request.stopGray;
         } 
 
@@ -259,6 +287,24 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
+         * GrayRuleName.
+         */
+        public Builder grayRuleName(String grayRuleName) {
+            this.putQueryParameter("GrayRuleName", grayRuleName);
+            this.grayRuleName = grayRuleName;
+            return this;
+        }
+
+        /**
+         * GrayRulePriority.
+         */
+        public Builder grayRulePriority(Integer grayRulePriority) {
+            this.putQueryParameter("GrayRulePriority", grayRulePriority);
+            this.grayRulePriority = grayRulePriority;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,20 +347,20 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
+         * OpType.
+         */
+        public Builder opType(String opType) {
+            this.putQueryParameter("OpType", opType);
+            this.opType = opType;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * RequestPars.
-         */
-        public Builder requestPars(String requestPars) {
-            this.putQueryParameter("RequestPars", requestPars);
-            this.requestPars = requestPars;
             return this;
         }
 

@@ -252,6 +252,12 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.Map < String, String > labels;
 
+        @com.aliyun.core.annotation.NameInMap("MatchRuleName")
+        private String matchRuleName;
+
+        @com.aliyun.core.annotation.NameInMap("MatchRuleType")
+        private String matchRuleType;
+
         @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
@@ -264,6 +270,8 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         private Listeners(Builder builder) {
             this.ip = builder.ip;
             this.labels = builder.labels;
+            this.matchRuleName = builder.matchRuleName;
+            this.matchRuleType = builder.matchRuleType;
             this.md5 = builder.md5;
             this.status = builder.status;
             this.version = builder.version;
@@ -292,6 +300,20 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return matchRuleName
+         */
+        public String getMatchRuleName() {
+            return this.matchRuleName;
+        }
+
+        /**
+         * @return matchRuleType
+         */
+        public String getMatchRuleType() {
+            return this.matchRuleType;
+        }
+
+        /**
          * @return md5
          */
         public String getMd5() {
@@ -315,6 +337,8 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String ip; 
             private java.util.Map < String, String > labels; 
+            private String matchRuleName; 
+            private String matchRuleType; 
             private String md5; 
             private String status; 
             private String version; 
@@ -335,6 +359,22 @@ public class ListListenersByConfigResponseBody extends TeaModel {
              */
             public Builder labels(java.util.Map < String, String > labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * MatchRuleName.
+             */
+            public Builder matchRuleName(String matchRuleName) {
+                this.matchRuleName = matchRuleName;
+                return this;
+            }
+
+            /**
+             * MatchRuleType.
+             */
+            public Builder matchRuleType(String matchRuleType) {
+                this.matchRuleType = matchRuleType;
                 return this;
             }
 
