@@ -134,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetectFaceAttributesResponse> detectFaceAttributes(DetectFaceAttributesRequest request);
 
     /**
+     * @param request the request parameters of Id2MetaStandardVerify  Id2MetaStandardVerifyRequest
+     * @return Id2MetaStandardVerifyResponse
+     */
+    CompletableFuture<Id2MetaStandardVerifyResponse> id2MetaStandardVerify(Id2MetaStandardVerifyRequest request);
+
+    /**
      * @param request the request parameters of Id2MetaVerify  Id2MetaVerifyRequest
      * @return Id2MetaVerifyResponse
      */
