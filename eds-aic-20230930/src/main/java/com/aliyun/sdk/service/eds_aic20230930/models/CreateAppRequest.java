@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateAppRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
     @com.aliyun.core.annotation.Query
@@ -153,7 +152,7 @@ public class CreateAppRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);

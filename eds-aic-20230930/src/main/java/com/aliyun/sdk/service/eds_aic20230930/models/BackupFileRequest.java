@@ -27,8 +27,11 @@ public class BackupFileRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceAppList")
+    private java.util.List < String > sourceAppList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceFilePathList")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > sourceFilePathList;
 
     @com.aliyun.core.annotation.Query
@@ -44,6 +47,7 @@ public class BackupFileRequest extends Request {
         this.androidInstanceIdList = builder.androidInstanceIdList;
         this.backupFilePath = builder.backupFilePath;
         this.description = builder.description;
+        this.sourceAppList = builder.sourceAppList;
         this.sourceFilePathList = builder.sourceFilePathList;
         this.uploadEndpoint = builder.uploadEndpoint;
         this.uploadType = builder.uploadType;
@@ -84,6 +88,13 @@ public class BackupFileRequest extends Request {
     }
 
     /**
+     * @return sourceAppList
+     */
+    public java.util.List < String > getSourceAppList() {
+        return this.sourceAppList;
+    }
+
+    /**
      * @return sourceFilePathList
      */
     public java.util.List < String > getSourceFilePathList() {
@@ -108,6 +119,7 @@ public class BackupFileRequest extends Request {
         private java.util.List < String > androidInstanceIdList; 
         private String backupFilePath; 
         private String description; 
+        private java.util.List < String > sourceAppList; 
         private java.util.List < String > sourceFilePathList; 
         private String uploadEndpoint; 
         private String uploadType; 
@@ -121,6 +133,7 @@ public class BackupFileRequest extends Request {
             this.androidInstanceIdList = request.androidInstanceIdList;
             this.backupFilePath = request.backupFilePath;
             this.description = request.description;
+            this.sourceAppList = request.sourceAppList;
             this.sourceFilePathList = request.sourceFilePathList;
             this.uploadEndpoint = request.uploadEndpoint;
             this.uploadType = request.uploadType;
@@ -154,7 +167,16 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * SourceAppList.
+         */
+        public Builder sourceAppList(java.util.List < String > sourceAppList) {
+            this.putQueryParameter("SourceAppList", sourceAppList);
+            this.sourceAppList = sourceAppList;
+            return this;
+        }
+
+        /**
+         * SourceFilePathList.
          */
         public Builder sourceFilePathList(java.util.List < String > sourceFilePathList) {
             this.putQueryParameter("SourceFilePathList", sourceFilePathList);

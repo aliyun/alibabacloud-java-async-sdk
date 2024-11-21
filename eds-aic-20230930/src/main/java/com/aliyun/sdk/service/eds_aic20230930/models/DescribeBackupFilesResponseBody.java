@@ -171,11 +171,20 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceGroupId")
         private String instanceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceAppInfoList")
+        private java.util.List < String > sourceAppInfoList;
+
         @com.aliyun.core.annotation.NameInMap("SourceFilePathList")
         private java.util.List < String > sourceFilePathList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
 
         @com.aliyun.core.annotation.NameInMap("UploadEndpoint")
         private String uploadEndpoint;
@@ -195,8 +204,11 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             this.gmtCreated = builder.gmtCreated;
             this.gmtModified = builder.gmtModified;
             this.instanceGroupId = builder.instanceGroupId;
+            this.regionId = builder.regionId;
+            this.sourceAppInfoList = builder.sourceAppInfoList;
             this.sourceFilePathList = builder.sourceFilePathList;
             this.status = builder.status;
+            this.taskId = builder.taskId;
             this.uploadEndpoint = builder.uploadEndpoint;
             this.uploadType = builder.uploadType;
         }
@@ -287,6 +299,20 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return sourceAppInfoList
+         */
+        public java.util.List < String > getSourceAppInfoList() {
+            return this.sourceAppInfoList;
+        }
+
+        /**
          * @return sourceFilePathList
          */
         public java.util.List < String > getSourceFilePathList() {
@@ -298,6 +324,13 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
         }
 
         /**
@@ -326,8 +359,11 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private String gmtCreated; 
             private String gmtModified; 
             private String instanceGroupId; 
+            private String regionId; 
+            private java.util.List < String > sourceAppInfoList; 
             private java.util.List < String > sourceFilePathList; 
             private String status; 
+            private String taskId; 
             private String uploadEndpoint; 
             private String uploadType; 
 
@@ -420,6 +456,22 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SourceAppInfoList.
+             */
+            public Builder sourceAppInfoList(java.util.List < String > sourceAppInfoList) {
+                this.sourceAppInfoList = sourceAppInfoList;
+                return this;
+            }
+
+            /**
              * SourceFilePathList.
              */
             public Builder sourceFilePathList(java.util.List < String > sourceFilePathList) {
@@ -432,6 +484,14 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 

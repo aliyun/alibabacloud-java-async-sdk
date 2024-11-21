@@ -57,6 +57,10 @@ public class DescribeBackupFilesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusList")
+    private java.util.List < String > statusList;
+
     private DescribeBackupFilesRequest(Builder builder) {
         super(builder);
         this.androidInstanceId = builder.androidInstanceId;
@@ -70,6 +74,7 @@ public class DescribeBackupFilesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.startTime = builder.startTime;
+        this.statusList = builder.statusList;
     }
 
     public static Builder builder() {
@@ -162,6 +167,13 @@ public class DescribeBackupFilesRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return statusList
+     */
+    public java.util.List < String > getStatusList() {
+        return this.statusList;
+    }
+
     public static final class Builder extends Request.Builder<DescribeBackupFilesRequest, Builder> {
         private String androidInstanceId; 
         private String androidInstanceName; 
@@ -174,6 +186,7 @@ public class DescribeBackupFilesRequest extends Request {
         private Long maxResults; 
         private String nextToken; 
         private String startTime; 
+        private java.util.List < String > statusList; 
 
         private Builder() {
             super();
@@ -192,6 +205,7 @@ public class DescribeBackupFilesRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.startTime = request.startTime;
+            this.statusList = request.statusList;
         } 
 
         /**
@@ -290,6 +304,15 @@ public class DescribeBackupFilesRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * StatusList.
+         */
+        public Builder statusList(java.util.List < String > statusList) {
+            this.putQueryParameter("StatusList", statusList);
+            this.statusList = statusList;
             return this;
         }
 

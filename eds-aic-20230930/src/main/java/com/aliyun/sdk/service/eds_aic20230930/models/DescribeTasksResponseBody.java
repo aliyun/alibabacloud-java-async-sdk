@@ -118,6 +118,12 @@ public class DescribeTasksResponseBody extends TeaModel {
      * <p>DescribeTasksResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+        private String errorMsg;
+
         @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
@@ -146,6 +152,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         private String taskType;
 
         private Data(Builder builder) {
+            this.errorCode = builder.errorCode;
+            this.errorMsg = builder.errorMsg;
             this.finishTime = builder.finishTime;
             this.invokeId = builder.invokeId;
             this.regionId = builder.regionId;
@@ -163,6 +171,20 @@ public class DescribeTasksResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         /**
@@ -229,6 +251,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String errorCode; 
+            private String errorMsg; 
             private String finishTime; 
             private String invokeId; 
             private String regionId; 
@@ -238,6 +262,22 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskStatus; 
             private String taskType; 
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorMsg.
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
+                return this;
+            }
 
             /**
              * FinishTime.

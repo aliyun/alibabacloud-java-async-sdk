@@ -284,11 +284,35 @@ public class ModifyPolicyGroupRequest extends Request {
      * <p>ModifyPolicyGroupRequest</p>
      */
     public static class NetRedirectPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomProxy")
+        private String customProxy;
+
+        @com.aliyun.core.annotation.NameInMap("HostAddr")
+        private String hostAddr;
+
         @com.aliyun.core.annotation.NameInMap("NetRedirect")
         private String netRedirect;
 
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private String port;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyPassword")
+        private String proxyPassword;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
+        private String proxyType;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyUserName")
+        private String proxyUserName;
+
         private NetRedirectPolicy(Builder builder) {
+            this.customProxy = builder.customProxy;
+            this.hostAddr = builder.hostAddr;
             this.netRedirect = builder.netRedirect;
+            this.port = builder.port;
+            this.proxyPassword = builder.proxyPassword;
+            this.proxyType = builder.proxyType;
+            this.proxyUserName = builder.proxyUserName;
         }
 
         public static Builder builder() {
@@ -300,20 +324,116 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
+         * @return customProxy
+         */
+        public String getCustomProxy() {
+            return this.customProxy;
+        }
+
+        /**
+         * @return hostAddr
+         */
+        public String getHostAddr() {
+            return this.hostAddr;
+        }
+
+        /**
          * @return netRedirect
          */
         public String getNetRedirect() {
             return this.netRedirect;
         }
 
+        /**
+         * @return port
+         */
+        public String getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return proxyPassword
+         */
+        public String getProxyPassword() {
+            return this.proxyPassword;
+        }
+
+        /**
+         * @return proxyType
+         */
+        public String getProxyType() {
+            return this.proxyType;
+        }
+
+        /**
+         * @return proxyUserName
+         */
+        public String getProxyUserName() {
+            return this.proxyUserName;
+        }
+
         public static final class Builder {
+            private String customProxy; 
+            private String hostAddr; 
             private String netRedirect; 
+            private String port; 
+            private String proxyPassword; 
+            private String proxyType; 
+            private String proxyUserName; 
+
+            /**
+             * CustomProxy.
+             */
+            public Builder customProxy(String customProxy) {
+                this.customProxy = customProxy;
+                return this;
+            }
+
+            /**
+             * HostAddr.
+             */
+            public Builder hostAddr(String hostAddr) {
+                this.hostAddr = hostAddr;
+                return this;
+            }
 
             /**
              * NetRedirect.
              */
             public Builder netRedirect(String netRedirect) {
                 this.netRedirect = netRedirect;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(String port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * ProxyPassword.
+             */
+            public Builder proxyPassword(String proxyPassword) {
+                this.proxyPassword = proxyPassword;
+                return this;
+            }
+
+            /**
+             * ProxyType.
+             */
+            public Builder proxyType(String proxyType) {
+                this.proxyType = proxyType;
+                return this;
+            }
+
+            /**
+             * ProxyUserName.
+             */
+            public Builder proxyUserName(String proxyUserName) {
+                this.proxyUserName = proxyUserName;
                 return this;
             }
 

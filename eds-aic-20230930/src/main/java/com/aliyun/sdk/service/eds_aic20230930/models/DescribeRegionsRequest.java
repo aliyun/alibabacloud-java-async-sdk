@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
     }
 
     public static Builder builder() {
@@ -29,7 +34,15 @@ public class DescribeRegionsRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
+        private String acceptLanguage; 
 
         private Builder() {
             super();
@@ -37,7 +50,17 @@ public class DescribeRegionsRequest extends Request {
 
         private Builder(DescribeRegionsRequest request) {
             super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         @Override
         public DescribeRegionsRequest build() {

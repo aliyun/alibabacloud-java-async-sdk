@@ -188,12 +188,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FetchFileResponse> fetchFile(FetchFileRequest request);
 
     /**
-     * @param request the request parameters of GetAdbSecure  GetAdbSecureRequest
-     * @return GetAdbSecureResponse
-     */
-    CompletableFuture<GetAdbSecureResponse> getAdbSecure(GetAdbSecureRequest request);
-
-    /**
      * @param request the request parameters of ImportKeyPair  ImportKeyPairRequest
      * @return ImportKeyPairResponse
      */
@@ -276,12 +270,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SendFileResponse
      */
     CompletableFuture<SendFileResponse> sendFile(SendFileRequest request);
-
-    /**
-     * @param request the request parameters of SetAdbSecure  SetAdbSecureRequest
-     * @return SetAdbSecureResponse
-     */
-    CompletableFuture<SetAdbSecureResponse> setAdbSecure(SetAdbSecureRequest request);
 
     /**
      * @param request the request parameters of StartAndroidInstance  StartAndroidInstanceRequest

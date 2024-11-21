@@ -81,8 +81,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("RegionName")
+        private String regionName;
+
         private RegionModels(Builder builder) {
             this.regionId = builder.regionId;
+            this.regionName = builder.regionName;
         }
 
         public static Builder builder() {
@@ -100,14 +104,30 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        /**
+         * @return regionName
+         */
+        public String getRegionName() {
+            return this.regionName;
+        }
+
         public static final class Builder {
             private String regionId; 
+            private String regionName; 
 
             /**
              * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RegionName.
+             */
+            public Builder regionName(String regionName) {
+                this.regionName = regionName;
                 return this;
             }
 
