@@ -13,9 +13,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CollectFlightLowestPriceRequest extends Request {
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("lowestPriceFlightList")
+    @com.aliyun.core.annotation.NameInMap("lowest_price_flight_info_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < LowestPriceFlightList> lowestPriceFlightList;
+    private java.util.List < LowestPriceFlightInfoList> lowestPriceFlightInfoList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
@@ -28,7 +28,7 @@ public class CollectFlightLowestPriceRequest extends Request {
 
     private CollectFlightLowestPriceRequest(Builder builder) {
         super(builder);
-        this.lowestPriceFlightList = builder.lowestPriceFlightList;
+        this.lowestPriceFlightInfoList = builder.lowestPriceFlightInfoList;
         this.xAcsAirticketAccessToken = builder.xAcsAirticketAccessToken;
         this.xAcsAirticketLanguage = builder.xAcsAirticketLanguage;
     }
@@ -47,10 +47,10 @@ public class CollectFlightLowestPriceRequest extends Request {
     }
 
     /**
-     * @return lowestPriceFlightList
+     * @return lowestPriceFlightInfoList
      */
-    public java.util.List < LowestPriceFlightList> getLowestPriceFlightList() {
-        return this.lowestPriceFlightList;
+    public java.util.List < LowestPriceFlightInfoList> getLowestPriceFlightInfoList() {
+        return this.lowestPriceFlightInfoList;
     }
 
     /**
@@ -68,7 +68,7 @@ public class CollectFlightLowestPriceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CollectFlightLowestPriceRequest, Builder> {
-        private java.util.List < LowestPriceFlightList> lowestPriceFlightList; 
+        private java.util.List < LowestPriceFlightInfoList> lowestPriceFlightInfoList; 
         private String xAcsAirticketAccessToken; 
         private String xAcsAirticketLanguage; 
 
@@ -78,7 +78,7 @@ public class CollectFlightLowestPriceRequest extends Request {
 
         private Builder(CollectFlightLowestPriceRequest request) {
             super(request);
-            this.lowestPriceFlightList = request.lowestPriceFlightList;
+            this.lowestPriceFlightInfoList = request.lowestPriceFlightInfoList;
             this.xAcsAirticketAccessToken = request.xAcsAirticketAccessToken;
             this.xAcsAirticketLanguage = request.xAcsAirticketLanguage;
         } 
@@ -86,10 +86,10 @@ public class CollectFlightLowestPriceRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder lowestPriceFlightList(java.util.List < LowestPriceFlightList> lowestPriceFlightList) {
-            String lowestPriceFlightListShrink = shrink(lowestPriceFlightList, "lowestPriceFlightList", "json");
-            this.putBodyParameter("lowestPriceFlightList", lowestPriceFlightListShrink);
-            this.lowestPriceFlightList = lowestPriceFlightList;
+        public Builder lowestPriceFlightInfoList(java.util.List < LowestPriceFlightInfoList> lowestPriceFlightInfoList) {
+            String lowestPriceFlightInfoListShrink = shrink(lowestPriceFlightInfoList, "lowest_price_flight_info_list", "json");
+            this.putBodyParameter("lowest_price_flight_info_list", lowestPriceFlightInfoListShrink);
+            this.lowestPriceFlightInfoList = lowestPriceFlightInfoList;
             return this;
         }
 
@@ -128,78 +128,7 @@ public class CollectFlightLowestPriceRequest extends Request {
      *
      * <p>CollectFlightLowestPriceRequest</p>
      */
-    public static class FlightNumberInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("departure_flight_number")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String departureFlightNumber;
-
-        @com.aliyun.core.annotation.NameInMap("return_flight_number")
-        private String returnFlightNumber;
-
-        private FlightNumberInfo(Builder builder) {
-            this.departureFlightNumber = builder.departureFlightNumber;
-            this.returnFlightNumber = builder.returnFlightNumber;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static FlightNumberInfo create() {
-            return builder().build();
-        }
-
-        /**
-         * @return departureFlightNumber
-         */
-        public String getDepartureFlightNumber() {
-            return this.departureFlightNumber;
-        }
-
-        /**
-         * @return returnFlightNumber
-         */
-        public String getReturnFlightNumber() {
-            return this.returnFlightNumber;
-        }
-
-        public static final class Builder {
-            private String departureFlightNumber; 
-            private String returnFlightNumber; 
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CA123,CA456</p>
-             */
-            public Builder departureFlightNumber(String departureFlightNumber) {
-                this.departureFlightNumber = departureFlightNumber;
-                return this;
-            }
-
-            /**
-             * return_flight_number.
-             */
-            public Builder returnFlightNumber(String returnFlightNumber) {
-                this.returnFlightNumber = returnFlightNumber;
-                return this;
-            }
-
-            public FlightNumberInfo build() {
-                return new FlightNumberInfo(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link CollectFlightLowestPriceRequest} extends {@link TeaModel}
-     *
-     * <p>CollectFlightLowestPriceRequest</p>
-     */
-    public static class LowestPriceFlightList extends TeaModel {
+    public static class LowestPriceFlightInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_city")
         @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalCity;
@@ -212,9 +141,9 @@ public class CollectFlightLowestPriceRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String departureDate;
 
-        @com.aliyun.core.annotation.NameInMap("flight_number_info")
+        @com.aliyun.core.annotation.NameInMap("departure_flight_number")
         @com.aliyun.core.annotation.Validation(required = true)
-        private FlightNumberInfo flightNumberInfo;
+        private String departureFlightNumber;
 
         @com.aliyun.core.annotation.NameInMap("market_total_price")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -226,6 +155,13 @@ public class CollectFlightLowestPriceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("return_date")
         private String returnDate;
 
+        @com.aliyun.core.annotation.NameInMap("return_flight_number")
+        private String returnFlightNumber;
+
+        @com.aliyun.core.annotation.NameInMap("solution_id")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String solutionId;
+
         @com.aliyun.core.annotation.NameInMap("suez_total_price")
         @com.aliyun.core.annotation.Validation(required = true)
         private Double suezTotalPrice;
@@ -234,14 +170,16 @@ public class CollectFlightLowestPriceRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer tripType;
 
-        private LowestPriceFlightList(Builder builder) {
+        private LowestPriceFlightInfoList(Builder builder) {
             this.arrivalCity = builder.arrivalCity;
             this.departureCity = builder.departureCity;
             this.departureDate = builder.departureDate;
-            this.flightNumberInfo = builder.flightNumberInfo;
+            this.departureFlightNumber = builder.departureFlightNumber;
             this.marketTotalPrice = builder.marketTotalPrice;
             this.requestId = builder.requestId;
             this.returnDate = builder.returnDate;
+            this.returnFlightNumber = builder.returnFlightNumber;
+            this.solutionId = builder.solutionId;
             this.suezTotalPrice = builder.suezTotalPrice;
             this.tripType = builder.tripType;
         }
@@ -250,7 +188,7 @@ public class CollectFlightLowestPriceRequest extends Request {
             return new Builder();
         }
 
-        public static LowestPriceFlightList create() {
+        public static LowestPriceFlightInfoList create() {
             return builder().build();
         }
 
@@ -276,10 +214,10 @@ public class CollectFlightLowestPriceRequest extends Request {
         }
 
         /**
-         * @return flightNumberInfo
+         * @return departureFlightNumber
          */
-        public FlightNumberInfo getFlightNumberInfo() {
-            return this.flightNumberInfo;
+        public String getDepartureFlightNumber() {
+            return this.departureFlightNumber;
         }
 
         /**
@@ -304,6 +242,20 @@ public class CollectFlightLowestPriceRequest extends Request {
         }
 
         /**
+         * @return returnFlightNumber
+         */
+        public String getReturnFlightNumber() {
+            return this.returnFlightNumber;
+        }
+
+        /**
+         * @return solutionId
+         */
+        public String getSolutionId() {
+            return this.solutionId;
+        }
+
+        /**
          * @return suezTotalPrice
          */
         public Double getSuezTotalPrice() {
@@ -321,10 +273,12 @@ public class CollectFlightLowestPriceRequest extends Request {
             private String arrivalCity; 
             private String departureCity; 
             private String departureDate; 
-            private FlightNumberInfo flightNumberInfo; 
+            private String departureFlightNumber; 
             private Double marketTotalPrice; 
             private String requestId; 
             private String returnDate; 
+            private String returnFlightNumber; 
+            private String solutionId; 
             private Double suezTotalPrice; 
             private Integer tripType; 
 
@@ -363,9 +317,12 @@ public class CollectFlightLowestPriceRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CA123,CA456</p>
              */
-            public Builder flightNumberInfo(FlightNumberInfo flightNumberInfo) {
-                this.flightNumberInfo = flightNumberInfo;
+            public Builder departureFlightNumber(String departureFlightNumber) {
+                this.departureFlightNumber = departureFlightNumber;
                 return this;
             }
 
@@ -397,6 +354,25 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
+             * return_flight_number.
+             */
+            public Builder returnFlightNumber(String returnFlightNumber) {
+                this.returnFlightNumber = returnFlightNumber;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
+             */
+            public Builder solutionId(String solutionId) {
+                this.solutionId = solutionId;
+                return this;
+            }
+
+            /**
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -418,8 +394,8 @@ public class CollectFlightLowestPriceRequest extends Request {
                 return this;
             }
 
-            public LowestPriceFlightList build() {
-                return new LowestPriceFlightList(this);
+            public LowestPriceFlightInfoList build() {
+                return new LowestPriceFlightInfoList(this);
             } 
 
         } 
