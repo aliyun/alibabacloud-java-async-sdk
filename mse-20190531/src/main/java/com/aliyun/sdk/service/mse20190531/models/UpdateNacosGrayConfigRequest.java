@@ -68,6 +68,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestPars")
+    private String requestPars;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StopGray")
     private Boolean stopGray;
 
@@ -86,6 +90,7 @@ public class UpdateNacosGrayConfigRequest extends Request {
         this.namespaceId = builder.namespaceId;
         this.opType = builder.opType;
         this.regionId = builder.regionId;
+        this.requestPars = builder.requestPars;
         this.stopGray = builder.stopGray;
     }
 
@@ -194,6 +199,13 @@ public class UpdateNacosGrayConfigRequest extends Request {
     }
 
     /**
+     * @return requestPars
+     */
+    public String getRequestPars() {
+        return this.requestPars;
+    }
+
+    /**
      * @return stopGray
      */
     public Boolean getStopGray() {
@@ -214,6 +226,7 @@ public class UpdateNacosGrayConfigRequest extends Request {
         private String namespaceId; 
         private String opType; 
         private String regionId; 
+        private String requestPars; 
         private Boolean stopGray; 
 
         private Builder() {
@@ -235,6 +248,7 @@ public class UpdateNacosGrayConfigRequest extends Request {
             this.namespaceId = request.namespaceId;
             this.opType = request.opType;
             this.regionId = request.regionId;
+            this.requestPars = request.requestPars;
             this.stopGray = request.stopGray;
         } 
 
@@ -361,6 +375,15 @@ public class UpdateNacosGrayConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RequestPars.
+         */
+        public Builder requestPars(String requestPars) {
+            this.putQueryParameter("RequestPars", requestPars);
+            this.requestPars = requestPars;
             return this;
         }
 
