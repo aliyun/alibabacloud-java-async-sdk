@@ -148,7 +148,10 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * DataQualityEvaluationTaskId.
+         * <p>The ID of the data quality monitoring task that is associated with the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder dataQualityEvaluationTaskId(Long dataQualityEvaluationTaskId) {
             this.putQueryParameter("DataQualityEvaluationTaskId", dataQualityEvaluationTaskId);
@@ -157,7 +160,10 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the rule. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unit_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -166,7 +172,10 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +184,10 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +196,10 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -193,7 +208,10 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * <p>The ID of the table that is limited by the rule in Data Map.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.unit_test.tb_unit_test</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

@@ -7,21 +7,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTaskInstanceRequest} extends {@link RequestModel}
+ * {@link GetAlertRuleRequest} extends {@link RequestModel}
  *
- * <p>GetTaskInstanceRequest</p>
+ * <p>GetAlertRuleRequest</p>
  */
-public class GetTaskInstanceRequest extends Request {
+public class GetAlertRuleRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long id;
+    private String id;
 
-    private GetTaskInstanceRequest(Builder builder) {
+    private GetAlertRuleRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.id = builder.id;
@@ -31,7 +30,7 @@ public class GetTaskInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static GetTaskInstanceRequest create() {
+    public static GetAlertRuleRequest create() {
         return builder().build();
     }
 
@@ -50,26 +49,26 @@ public class GetTaskInstanceRequest extends Request {
     /**
      * @return id
      */
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
-    public static final class Builder extends Request.Builder<GetTaskInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetAlertRuleRequest, Builder> {
         private String regionId; 
-        private Long id; 
+        private String id; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetTaskInstanceRequest request) {
+        private Builder(GetAlertRuleRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.id = request.id;
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -78,21 +77,17 @@ public class GetTaskInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234</p>
+         * Id.
          */
-        public Builder id(Long id) {
+        public Builder id(String id) {
             this.putQueryParameter("Id", id);
             this.id = id;
             return this;
         }
 
         @Override
-        public GetTaskInstanceRequest build() {
-            return new GetTaskInstanceRequest(this);
+        public GetAlertRuleRequest build() {
+            return new GetAlertRuleRequest(this);
         } 
 
     } 

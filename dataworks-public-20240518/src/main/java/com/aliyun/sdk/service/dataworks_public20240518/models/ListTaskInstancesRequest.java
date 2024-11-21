@@ -72,7 +72,15 @@ public class ListTaskInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskType")
-    private Integer taskType;
+    private String taskType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TriggerRecurrence")
+    private String triggerRecurrence;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TriggerType")
+    private String triggerType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkflowId")
@@ -103,6 +111,8 @@ public class ListTaskInstancesRequest extends Request {
         this.taskIds = builder.taskIds;
         this.taskName = builder.taskName;
         this.taskType = builder.taskType;
+        this.triggerRecurrence = builder.triggerRecurrence;
+        this.triggerType = builder.triggerType;
         this.workflowId = builder.workflowId;
         this.workflowInstanceId = builder.workflowInstanceId;
         this.workflowInstanceType = builder.workflowInstanceType;
@@ -222,8 +232,22 @@ public class ListTaskInstancesRequest extends Request {
     /**
      * @return taskType
      */
-    public Integer getTaskType() {
+    public String getTaskType() {
         return this.taskType;
+    }
+
+    /**
+     * @return triggerRecurrence
+     */
+    public String getTriggerRecurrence() {
+        return this.triggerRecurrence;
+    }
+
+    /**
+     * @return triggerType
+     */
+    public String getTriggerType() {
+        return this.triggerType;
     }
 
     /**
@@ -262,7 +286,9 @@ public class ListTaskInstancesRequest extends Request {
         private Long taskId; 
         private java.util.List < Long > taskIds; 
         private String taskName; 
-        private Integer taskType; 
+        private String taskType; 
+        private String triggerRecurrence; 
+        private String triggerType; 
         private Long workflowId; 
         private Long workflowInstanceId; 
         private String workflowInstanceType; 
@@ -288,6 +314,8 @@ public class ListTaskInstancesRequest extends Request {
             this.taskIds = request.taskIds;
             this.taskName = request.taskName;
             this.taskType = request.taskType;
+            this.triggerRecurrence = request.triggerRecurrence;
+            this.triggerType = request.triggerType;
             this.workflowId = request.workflowId;
             this.workflowInstanceId = request.workflowInstanceId;
             this.workflowInstanceType = request.workflowInstanceType;
@@ -430,9 +458,27 @@ public class ListTaskInstancesRequest extends Request {
         /**
          * TaskType.
          */
-        public Builder taskType(Integer taskType) {
+        public Builder taskType(String taskType) {
             this.putBodyParameter("TaskType", taskType);
             this.taskType = taskType;
+            return this;
+        }
+
+        /**
+         * TriggerRecurrence.
+         */
+        public Builder triggerRecurrence(String triggerRecurrence) {
+            this.putBodyParameter("TriggerRecurrence", triggerRecurrence);
+            this.triggerRecurrence = triggerRecurrence;
+            return this;
+        }
+
+        /**
+         * TriggerType.
+         */
+        public Builder triggerType(String triggerType) {
+            this.putBodyParameter("TriggerType", triggerType);
+            this.triggerType = triggerType;
             return this;
         }
 

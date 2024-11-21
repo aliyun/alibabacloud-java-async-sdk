@@ -134,7 +134,10 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -143,7 +146,10 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -152,6 +158,8 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +172,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * RoleCodes.
+         * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-listprojectroles?spm=a2c4g.11186623.0.0.43841daeywTtF3">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
          */
         public Builder roleCodes(java.util.List < String > roleCodes) {
             String roleCodesShrink = shrink(roleCodes, "RoleCodes", "json");
@@ -174,7 +182,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * UserIds.
+         * <p>The IDs of the accounts used by the members in the workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console?spm=a2c4g.11186623.0.0.7f96340a3HFgqS">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the IDs of the accounts used by the members in the workspace.</p>
          */
         public Builder userIds(java.util.List < String > userIds) {
             String userIdsShrink = shrink(userIds, "UserIds", "json");

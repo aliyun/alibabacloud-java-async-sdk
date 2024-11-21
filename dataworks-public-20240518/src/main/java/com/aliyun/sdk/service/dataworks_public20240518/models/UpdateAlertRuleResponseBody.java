@@ -7,23 +7,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GrantMemberProjectRolesResponseBody} extends {@link TeaModel}
+ * {@link UpdateAlertRuleResponseBody} extends {@link TeaModel}
  *
- * <p>GrantMemberProjectRolesResponseBody</p>
+ * <p>UpdateAlertRuleResponseBody</p>
  */
-public class GrantMemberProjectRolesResponseBody extends TeaModel {
+public class UpdateAlertRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GrantMemberProjectRolesResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    private UpdateAlertRuleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GrantMemberProjectRolesResponseBody create() {
+    public static UpdateAlertRuleResponseBody create() {
         return builder().build();
     }
 
@@ -34,22 +38,35 @@ public class GrantMemberProjectRolesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2d9ced66-38ef-4923-baf6-391dd3a7e656</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GrantMemberProjectRolesResponseBody build() {
-            return new GrantMemberProjectRolesResponseBody(this);
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public UpdateAlertRuleResponseBody build() {
+            return new UpdateAlertRuleResponseBody(this);
         } 
 
     } 

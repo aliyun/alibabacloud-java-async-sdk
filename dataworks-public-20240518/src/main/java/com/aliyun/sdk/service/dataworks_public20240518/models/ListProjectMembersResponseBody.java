@@ -50,7 +50,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FBBBB1F-DD5E-5D8E-8F50-37F77460F056</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Code.
+             * <p>The code of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_project_guest</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -136,7 +142,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the role.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -144,7 +150,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the role. Valid values:</p>
+             * <ul>
+             * <li>UserCustom: custom role</li>
+             * <li>System: built-in role</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -227,7 +240,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * ProjectId.
+             * <p>The ID of the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62136</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -235,7 +251,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>The roles that are assigned to the member.</p>
              */
             public Builder roles(java.util.List < Roles> roles) {
                 this.roles = roles;
@@ -243,7 +259,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the member. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Forbidden</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -251,7 +274,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the account used by the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123422344899</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -334,7 +360,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -342,7 +371,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -350,7 +382,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectMembers.
+             * <p>The members in the workspace.</p>
              */
             public Builder projectMembers(java.util.List < ProjectMembers> projectMembers) {
                 this.projectMembers = projectMembers;
@@ -358,7 +390,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

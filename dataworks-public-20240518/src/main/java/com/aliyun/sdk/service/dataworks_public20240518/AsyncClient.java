@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloneDataSourceResponse> cloneDataSource(CloneDataSourceRequest request);
 
     /**
+     * @param request the request parameters of CreateAlertRule  CreateAlertRuleRequest
+     * @return CreateAlertRuleResponse
+     */
+    CompletableFuture<CreateAlertRuleResponse> createAlertRule(CreateAlertRuleRequest request);
+
+    /**
      * @param request the request parameters of CreateDIAlarmRule  CreateDIAlarmRuleRequest
      * @return CreateDIAlarmRuleResponse
      */
@@ -145,6 +151,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateWorkflowDefinitionResponse
      */
     CompletableFuture<CreateWorkflowDefinitionResponse> createWorkflowDefinition(CreateWorkflowDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAlertRule  DeleteAlertRuleRequest
+     * @return DeleteAlertRuleResponse
+     */
+    CompletableFuture<DeleteAlertRuleResponse> deleteAlertRule(DeleteAlertRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteDIAlarmRule  DeleteDIAlarmRuleRequest
@@ -267,6 +279,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecDeploymentStageResponse
      */
     CompletableFuture<ExecDeploymentStageResponse> execDeploymentStage(ExecDeploymentStageRequest request);
+
+    /**
+     * @param request the request parameters of GetAlertRule  GetAlertRuleRequest
+     * @return GetAlertRuleResponse
+     */
+    CompletableFuture<GetAlertRuleResponse> getAlertRule(GetAlertRuleRequest request);
 
     /**
      * @param request the request parameters of GetDIJob  GetDIJobRequest
@@ -393,6 +411,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ImportWorkflowDefinitionResponse
      */
     CompletableFuture<ImportWorkflowDefinitionResponse> importWorkflowDefinition(ImportWorkflowDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of ListAlertRules  ListAlertRulesRequest
+     * @return ListAlertRulesResponse
+     */
+    CompletableFuture<ListAlertRulesResponse> listAlertRules(ListAlertRulesRequest request);
 
     /**
      * @param request the request parameters of ListDIAlarmRules  ListDIAlarmRulesRequest
@@ -687,6 +711,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TriggerSchedulerTaskInstanceResponse
      */
     CompletableFuture<TriggerSchedulerTaskInstanceResponse> triggerSchedulerTaskInstance(TriggerSchedulerTaskInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAlertRule  UpdateAlertRuleRequest
+     * @return UpdateAlertRuleResponse
+     */
+    CompletableFuture<UpdateAlertRuleResponse> updateAlertRule(UpdateAlertRuleRequest request);
 
     /**
      * @param request the request parameters of UpdateDIAlarmRule  UpdateDIAlarmRuleRequest

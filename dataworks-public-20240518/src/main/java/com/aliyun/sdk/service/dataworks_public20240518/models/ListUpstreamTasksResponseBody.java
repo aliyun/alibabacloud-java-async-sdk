@@ -377,6 +377,9 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceMode")
+        private String instanceMode;
+
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
@@ -410,6 +413,9 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuntimeResource")
         private RuntimeResource runtimeResource;
 
+        @com.aliyun.core.annotation.NameInMap("StepType")
+        private String stepType;
+
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
@@ -432,6 +438,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             this.dataSource = builder.dataSource;
             this.description = builder.description;
             this.id = builder.id;
+            this.instanceMode = builder.instanceMode;
             this.modifyTime = builder.modifyTime;
             this.modifyUser = builder.modifyUser;
             this.name = builder.name;
@@ -443,6 +450,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             this.rerunMode = builder.rerunMode;
             this.rerunTimes = builder.rerunTimes;
             this.runtimeResource = builder.runtimeResource;
+            this.stepType = builder.stepType;
             this.tenantId = builder.tenantId;
             this.timeout = builder.timeout;
             this.trigger = builder.trigger;
@@ -498,6 +506,13 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return instanceMode
+         */
+        public String getInstanceMode() {
+            return this.instanceMode;
         }
 
         /**
@@ -578,6 +593,13 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return stepType
+         */
+        public String getStepType() {
+            return this.stepType;
+        }
+
+        /**
          * @return tenantId
          */
         public Long getTenantId() {
@@ -619,6 +641,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private DataSource dataSource; 
             private String description; 
             private Long id; 
+            private String instanceMode; 
             private Long modifyTime; 
             private String modifyUser; 
             private String name; 
@@ -630,6 +653,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String rerunMode; 
             private Integer rerunTimes; 
             private RuntimeResource runtimeResource; 
+            private String stepType; 
             private Long tenantId; 
             private Integer timeout; 
             private Trigger trigger; 
@@ -681,6 +705,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * InstanceMode.
+             */
+            public Builder instanceMode(String instanceMode) {
+                this.instanceMode = instanceMode;
                 return this;
             }
 
@@ -769,6 +801,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
+                return this;
+            }
+
+            /**
+             * StepType.
+             */
+            public Builder stepType(String stepType) {
+                this.stepType = stepType;
                 return this;
             }
 

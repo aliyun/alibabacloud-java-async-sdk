@@ -134,7 +134,7 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the data quality monitoring task. Fuzzy match is supported.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -143,7 +143,10 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +155,10 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +167,10 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -170,7 +179,10 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * <p>The ID of the table in Data Map.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.unit_test.tb_unit_test</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

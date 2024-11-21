@@ -7,15 +7,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GrantMemberProjectRolesResponseBody} extends {@link TeaModel}
+ * {@link CreateAlertRuleResponseBody} extends {@link TeaModel}
  *
- * <p>GrantMemberProjectRolesResponseBody</p>
+ * <p>CreateAlertRuleResponseBody</p>
  */
-public class GrantMemberProjectRolesResponseBody extends TeaModel {
+public class CreateAlertRuleResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GrantMemberProjectRolesResponseBody(Builder builder) {
+    private CreateAlertRuleResponseBody(Builder builder) {
+        this.id = builder.id;
         this.requestId = builder.requestId;
     }
 
@@ -23,8 +27,15 @@ public class GrantMemberProjectRolesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GrantMemberProjectRolesResponseBody create() {
+    public static CreateAlertRuleResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
     }
 
     /**
@@ -35,21 +46,27 @@ public class GrantMemberProjectRolesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long id; 
         private String requestId; 
 
         /**
-         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2d9ced66-38ef-4923-baf6-391dd3a7e656</p>
+         * Id.
+         */
+        public Builder id(Long id) {
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GrantMemberProjectRolesResponseBody build() {
-            return new GrantMemberProjectRolesResponseBody(this);
+        public CreateAlertRuleResponseBody build() {
+            return new CreateAlertRuleResponseBody(this);
         } 
 
     } 

@@ -38,7 +38,10 @@ public class RevokeMemberProjectRolesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

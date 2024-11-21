@@ -50,7 +50,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         private TaskInstance taskInstance; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskInstance.
+         * <p>The details of the instance.</p>
          */
         public Builder taskInstance(TaskInstance taskInstance) {
             this.taskInstance = taskInstance;
@@ -104,7 +107,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -128,9 +134,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @com.aliyun.core.annotation.NameInMap("Scope")
-        private String scope;
-
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -139,7 +142,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         private Variables(Builder builder) {
             this.name = builder.name;
-            this.scope = builder.scope;
             this.type = builder.type;
             this.value = builder.value;
         }
@@ -160,13 +162,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return scope
-         */
-        public String getScope() {
-            return this.scope;
-        }
-
-        /**
          * @return type
          */
         public String getType() {
@@ -182,12 +177,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-            private String scope; 
             private String type; 
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -195,15 +192,16 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
-             */
-            public Builder scope(String scope) {
-                this.scope = scope;
-                return this;
-            }
-
-            /**
-             * Type.
+             * <p>The type. Valid values:</p>
+             * <ul>
+             * <li>Constant: constant</li>
+             * <li>PassThrough: node output</li>
+             * <li>System: variable</li>
+             * <li>NodeOutput: script output</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Constant</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -211,7 +209,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -258,7 +259,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private java.util.List < Variables> variables; 
 
             /**
-             * Variables.
+             * <p>The variables.</p>
              */
             public Builder variables(java.util.List < Variables> variables) {
                 this.variables = variables;
@@ -305,7 +306,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String output; 
 
             /**
-             * Output.
+             * <p>The output identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.odps_sql_demo_0</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -329,9 +333,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @com.aliyun.core.annotation.NameInMap("Scope")
-        private String scope;
-
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -340,7 +341,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         private OutputsVariables(Builder builder) {
             this.name = builder.name;
-            this.scope = builder.scope;
             this.type = builder.type;
             this.value = builder.value;
         }
@@ -361,13 +361,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return scope
-         */
-        public String getScope() {
-            return this.scope;
-        }
-
-        /**
          * @return type
          */
         public String getType() {
@@ -383,12 +376,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-            private String scope; 
             private String type; 
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -396,15 +391,16 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
-             */
-            public Builder scope(String scope) {
-                this.scope = scope;
-                return this;
-            }
-
-            /**
-             * Type.
+             * <p>The type. Valid values:</p>
+             * <ul>
+             * <li>Constant: constant</li>
+             * <li>PassThrough: node output</li>
+             * <li>System: variable</li>
+             * <li>NodeOutput: script output</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Constant</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -412,7 +408,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -471,7 +470,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private java.util.List < OutputsVariables> variables; 
 
             /**
-             * TaskOutputs.
+             * <p>The task outputs.</p>
              */
             public Builder taskOutputs(java.util.List < TaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
@@ -479,7 +478,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Variables.
+             * <p>The variables.</p>
              */
             public Builder variables(java.util.List < OutputsVariables> variables) {
                 this.variables = variables;
@@ -538,7 +537,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String processId; 
 
             /**
-             * Gateway.
+             * <p>The host for running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai.1.2</p>
              */
             public Builder gateway(String gateway) {
                 this.gateway = gateway;
@@ -546,7 +548,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The instance run ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T3_123</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -617,7 +622,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>The default number of CUs configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -625,7 +633,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -633,7 +644,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group for scheduling configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -692,7 +706,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String parameters; 
 
             /**
-             * Content.
+             * <p>The script content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo &quot;helloWorld&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -700,7 +717,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The script parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>para1=$bizdate</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -759,7 +779,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -767,7 +790,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -826,6 +852,9 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodNumber")
+        private Integer periodNumber;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
@@ -910,6 +939,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             this.modifyUser = builder.modifyUser;
             this.outputs = builder.outputs;
             this.owner = builder.owner;
+            this.periodNumber = builder.periodNumber;
             this.priority = builder.priority;
             this.projectEnv = builder.projectEnv;
             this.projectId = builder.projectId;
@@ -1032,6 +1062,13 @@ public class GetTaskInstanceResponseBody extends TeaModel {
          */
         public String getOwner() {
             return this.owner;
+        }
+
+        /**
+         * @return periodNumber
+         */
+        public Integer getPeriodNumber() {
+            return this.periodNumber;
         }
 
         /**
@@ -1209,6 +1246,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String modifyUser; 
             private Outputs outputs; 
             private String owner; 
+            private Integer periodNumber; 
             private Integer priority; 
             private String projectEnv; 
             private Long projectId; 
@@ -1234,7 +1272,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String workflowName; 
 
             /**
-             * BaselineId.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -1242,7 +1283,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Bizdate.
+             * <p>The data timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -1250,7 +1294,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1258,7 +1305,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -1266,7 +1316,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -1274,7 +1324,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1282,7 +1335,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTime.
+             * <p>The time when the instance finished running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder finishedTime(Long finishedTime) {
                 this.finishedTime = finishedTime;
@@ -1290,7 +1346,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1298,7 +1357,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Inputs.
+             * <p>The input information.</p>
              */
             public Builder inputs(Inputs inputs) {
                 this.inputs = inputs;
@@ -1306,7 +1365,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1314,7 +1376,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -1322,7 +1387,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Outputs.
+             * <p>The output information.</p>
              */
             public Builder outputs(Outputs outputs) {
                 this.outputs = outputs;
@@ -1330,7 +1395,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1338,7 +1406,18 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * PeriodNumber.
+             */
+            public Builder periodNumber(Integer periodNumber) {
+                this.periodNumber = periodNumber;
+                return this;
+            }
+
+            /**
+             * <p>The task priority. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1346,7 +1425,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectEnv.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder projectEnv(String projectEnv) {
                 this.projectEnv = projectEnv;
@@ -1354,7 +1440,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1362,7 +1451,15 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RerunMode.
+             * <p>The rerun mode. Valid values:</p>
+             * <ul>
+             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AllAllowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -1370,7 +1467,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RunNumber.
+             * <p>The number of times the instance is run. By default, the value starts from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runNumber(Integer runNumber) {
                 this.runNumber = runNumber;
@@ -1378,7 +1478,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Runtime.
+             * <p>The runtime information about the instance.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -1386,7 +1486,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimeResource.
+             * <p>The information about the resource group with which the instance is associated.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -1394,7 +1494,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Script.
+             * <p>The script information.</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -1402,7 +1502,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StartedTime.
+             * <p>The time when the instance started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder startedTime(Long startedTime) {
                 this.startedTime = startedTime;
@@ -1410,7 +1513,20 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>NotRun: The instance is not run.</li>
+             * <li>Running: The instance is running.</li>
+             * <li>WaitTime: The instance is waiting for the scheduling time to arrive.</li>
+             * <li>CheckingCondition: Branch conditions are being checked for the instance.</li>
+             * <li>WaitResource: The instance is waiting for resources.</li>
+             * <li>Failure: The instance fails to be run.</li>
+             * <li>Success: The instance is successfully run.</li>
+             * <li>Checking: Data quality is being checked for the instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1418,7 +1534,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the task.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1426,7 +1542,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task for which the instance is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -1434,7 +1553,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the task for which the instance is generated.</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1442,7 +1561,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The type of the task for which the instance is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -1450,7 +1572,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -1458,7 +1583,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of task running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1466,7 +1594,15 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerRecurrence.
+             * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
+             * <ul>
+             * <li>Pause</li>
+             * <li>Skip</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder triggerRecurrence(String triggerRecurrence) {
                 this.triggerRecurrence = triggerRecurrence;
@@ -1474,7 +1610,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerTime.
+             * <p>The scheduling time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder triggerTime(Long triggerTime) {
                 this.triggerTime = triggerTime;
@@ -1482,7 +1621,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>The method to trigger instance scheduling. The value of the Trigger.Type parameter in the response of the GetTask operation is used. Valid values:</p>
+             * <ul>
+             * <li>Scheduler</li>
+             * <li>Manual</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -1490,7 +1636,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The ID of the workflow to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -1498,7 +1647,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowInstanceId.
+             * <p>The workflow instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowInstanceId(Long workflowInstanceId) {
                 this.workflowInstanceId = workflowInstanceId;
@@ -1506,7 +1658,18 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowInstanceType.
+             * <p>The type of the workflow instance. Valid values:</p>
+             * <ul>
+             * <li>SmokeTest</li>
+             * <li>SupplementData</li>
+             * <li>Manual</li>
+             * <li>ManualWorkflow</li>
+             * <li>Normal</li>
+             * <li>ManualFlow</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder workflowInstanceType(String workflowInstanceType) {
                 this.workflowInstanceType = workflowInstanceType;
@@ -1514,7 +1677,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowName.
+             * <p>The name of the workflow to which the instance belongs.</p>
              */
             public Builder workflowName(String workflowName) {
                 this.workflowName = workflowName;

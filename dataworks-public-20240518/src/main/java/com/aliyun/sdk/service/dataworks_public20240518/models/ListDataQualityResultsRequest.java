@@ -204,7 +204,10 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * BizdateFrom.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-01</p>
          */
         public Builder bizdateFrom(String bizdateFrom) {
             this.putQueryParameter("BizdateFrom", bizdateFrom);
@@ -213,7 +216,10 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * BizdateTo.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-04</p>
          */
         public Builder bizdateTo(String bizdateTo) {
             this.putQueryParameter("BizdateTo", bizdateTo);

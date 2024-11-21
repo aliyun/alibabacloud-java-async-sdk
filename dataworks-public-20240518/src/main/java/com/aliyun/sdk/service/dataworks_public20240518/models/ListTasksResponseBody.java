@@ -357,6 +357,9 @@ public class ListTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceMode")
+        private String instanceMode;
+
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
@@ -412,6 +415,7 @@ public class ListTasksResponseBody extends TeaModel {
             this.dataSource = builder.dataSource;
             this.description = builder.description;
             this.id = builder.id;
+            this.instanceMode = builder.instanceMode;
             this.modifyTime = builder.modifyTime;
             this.modifyUser = builder.modifyUser;
             this.name = builder.name;
@@ -478,6 +482,13 @@ public class ListTasksResponseBody extends TeaModel {
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return instanceMode
+         */
+        public String getInstanceMode() {
+            return this.instanceMode;
         }
 
         /**
@@ -599,6 +610,7 @@ public class ListTasksResponseBody extends TeaModel {
             private DataSource dataSource; 
             private String description; 
             private Long id; 
+            private String instanceMode; 
             private Long modifyTime; 
             private String modifyUser; 
             private String name; 
@@ -661,6 +673,14 @@ public class ListTasksResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * InstanceMode.
+             */
+            public Builder instanceMode(String instanceMode) {
+                this.instanceMode = instanceMode;
                 return this;
             }
 

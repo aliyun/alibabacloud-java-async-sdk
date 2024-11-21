@@ -50,7 +50,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ProjectMember.
+         * <p>The details about the member in the workspace.</p>
          */
         public Builder projectMember(ProjectMember projectMember) {
             this.projectMember = projectMember;
@@ -58,7 +58,10 @@ public class GetProjectMemberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,22 @@ public class GetProjectMemberResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Code.
+             * <p>The code of the role. Valid values:</p>
+             * <ul>
+             * <li>role_project_admin: Workspace Administrator</li>
+             * <li>role_project_dev: Develop</li>
+             * <li>role_project_dg_admin: Data Governance Administrator</li>
+             * <li>role_project_guest: Visitor</li>
+             * <li>role_project_security: Security Administrator</li>
+             * <li>role_project_deploy: Deploy</li>
+             * <li>role_project_owner: Workspace Owner</li>
+             * <li>role_project_data_analyst: Data Analyst</li>
+             * <li>role_project_pe: O&amp;M</li>
+             * <li>role_project_erd: Model Designer</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>role_project_guest</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -136,7 +154,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the role.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -144,7 +162,14 @@ public class GetProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the role. Valid values:</p>
+             * <ul>
+             * <li>UserCustom: custom role</li>
+             * <li>System: built-in role</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -227,7 +252,10 @@ public class GetProjectMemberResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88757</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -235,7 +263,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>The roles that are assigned to the member in the workspace.</p>
              */
             public Builder roles(java.util.List < Roles> roles) {
                 this.roles = roles;
@@ -243,7 +271,14 @@ public class GetProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the member.</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Forbidden</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -251,7 +286,10 @@ public class GetProjectMemberResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the account used by the member in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123422344899</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

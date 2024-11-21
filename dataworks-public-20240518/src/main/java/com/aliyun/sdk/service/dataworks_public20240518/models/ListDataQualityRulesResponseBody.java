@@ -12,12 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataQualityRulesResponseBody</p>
  */
 public class ListDataQualityRulesResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Code")
-    private String code;
-
-    @com.aliyun.core.annotation.NameInMap("Message")
-    private String message;
-
     @com.aliyun.core.annotation.NameInMap("PagingInfo")
     private PagingInfo pagingInfo;
 
@@ -25,8 +19,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
     private String requestId;
 
     private ListDataQualityRulesResponseBody(Builder builder) {
-        this.code = builder.code;
-        this.message = builder.message;
         this.pagingInfo = builder.pagingInfo;
         this.requestId = builder.requestId;
     }
@@ -37,20 +29,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
     public static ListDataQualityRulesResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
     }
 
     /**
@@ -68,29 +46,11 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
-        private String message; 
         private PagingInfo pagingInfo; 
         private String requestId; 
 
         /**
-         * Code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -98,7 +58,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>691CA452-D37A-4ED0-9441</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,7 +119,19 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Operator.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li>&gt;</li>
+             * <li>&gt;=</li>
+             * <li>&lt;</li>
+             * <li>&lt;=</li>
+             * <li>!=</li>
+             * <li>=</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -164,7 +139,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -223,7 +201,19 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Operator.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li>&gt;</li>
+             * <li>&gt;=</li>
+             * <li>&lt;</li>
+             * <li>&lt;=</li>
+             * <li>!=</li>
+             * <li>=</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -231,7 +221,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -290,7 +283,19 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Operator.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li>&gt;</li>
+             * <li>&gt;=</li>
+             * <li>&lt;</li>
+             * <li>&lt;=</li>
+             * <li>!=</li>
+             * <li>=</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -298,7 +303,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -369,7 +377,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private Warned warned; 
 
             /**
-             * Critical.
+             * <p>The threshold settings for critical alerts.</p>
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -377,7 +385,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Expected.
+             * <p>The expected threshold setting.</p>
              */
             public Builder expected(Expected expected) {
                 this.expected = expected;
@@ -385,7 +393,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Warned.
+             * <p>The threshold settings for normal alerts.</p>
              */
             public Builder warned(Warned warned) {
                 this.warned = warned;
@@ -456,7 +464,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ReferencedSamplesFilter.
+             * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to indicate the query method of referenced samples.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
              */
             public Builder referencedSamplesFilter(String referencedSamplesFilter) {
                 this.referencedSamplesFilter = referencedSamplesFilter;
@@ -464,7 +475,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Thresholds.
+             * <p>The threshold settings.</p>
              */
             public Builder thresholds(Thresholds thresholds) {
                 this.thresholds = thresholds;
@@ -472,7 +483,18 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The threshold calculation method. Valid values:</p>
+             * <ul>
+             * <li>Fixed</li>
+             * <li>Fluctation</li>
+             * <li>FluctationDiscreate</li>
+             * <li>Auto</li>
+             * <li>Average</li>
+             * <li>Variance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Fixed</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -531,7 +553,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ErrorDataFilter.
+             * <p>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
              */
             public Builder errorDataFilter(String errorDataFilter) {
                 this.errorDataFilter = errorDataFilter;
@@ -539,7 +564,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the operation. Valid values:</p>
+             * <ul>
+             * <li>SaveErrorData</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SaveErrorData</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -622,7 +653,27 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private String settingConfig; 
 
             /**
-             * Metric.
+             * <p>The metrics used for sampling. Valid values:</p>
+             * <ul>
+             * <li>Count: the number of rows in the table.</li>
+             * <li>Min: the minimum value of the field.</li>
+             * <li>Max: the maximum value of the field.</li>
+             * <li>Avg: the average value of the field.</li>
+             * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
+             * <li>DistinctPercent: the percentage of the number of unique values of the field after deduplication to the number of rows in the table.</li>
+             * <li>DuplicatedCount: the number of duplicated values in the field.</li>
+             * <li>DuplicatedPercent: the percentage of the number of duplicated values of the field to the number of rows in the table.</li>
+             * <li>TableSize: the table size.</li>
+             * <li>NullValueCount: the number of rows in which the field is set to null.</li>
+             * <li>NullValuePercent: the percentage of the number of rows in which the field is set to null to the number of rows in the table.</li>
+             * <li>GroupCount: the field value and the number of rows for each field value.</li>
+             * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
+             * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
+             * <li>UserDefinedSql: indicates that the data is sampled by executing custom SQL statements.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Max</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -630,7 +681,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MetricParameters.
+             * <p>The parameters required for sampling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] , &quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
              */
             public Builder metricParameters(String metricParameters) {
                 this.metricParameters = metricParameters;
@@ -638,7 +692,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingFilter.
+             * <p>The statements that are used to filter unnecessary data during sampling. The statements can be up to 16,777,215 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id IS NULL</p>
              */
             public Builder samplingFilter(String samplingFilter) {
                 this.samplingFilter = samplingFilter;
@@ -646,7 +703,11 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SettingConfig.
+             * <p>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SET odps.sql.udf.timeout=600s; 
+             * SET odps.sql.python.version=cp27;</p>
              */
             public Builder settingConfig(String settingConfig) {
                 this.settingConfig = settingConfig;
@@ -729,7 +790,19 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DatabaseType.
+             * <p>The type of the database to which the table belongs. Valid values:</p>
+             * <ul>
+             * <li>maxcompute</li>
+             * <li>emr</li>
+             * <li>cdh</li>
+             * <li>hologres</li>
+             * <li>analyticdb_for_postgresql</li>
+             * <li>analyticdb_for_mysql</li>
+             * <li>starrocks</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute</p>
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
@@ -737,7 +810,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionSpec.
+             * <p>The configuration of the partitioned table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=$[yyyymmdd-1]</p>
              */
             public Builder partitionSpec(String partitionSpec) {
                 this.partitionSpec = partitionSpec;
@@ -745,7 +821,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * <p>The ID of the table that is limited by the rule in Data Map.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.unit_test.tb_unit_test</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -753,7 +832,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the monitored object. Valid values:</p>
+             * <ul>
+             * <li>Table</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -932,7 +1017,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * CheckingConfig.
+             * <p>The check settings for sample data.</p>
              */
             public Builder checkingConfig(CheckingConfig checkingConfig) {
                 this.checkingConfig = checkingConfig;
@@ -940,7 +1025,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the rule. The description can be up to 500 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a odps _sql task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -948,7 +1036,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -956,7 +1047,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorHandlers.
+             * <p>The operations that you can perform after the rule-based check fails.</p>
              */
             public Builder errorHandlers(java.util.List < ErrorHandlers> errorHandlers) {
                 this.errorHandlers = errorHandlers;
@@ -964,7 +1055,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22130</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -972,7 +1066,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The rule name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -980,7 +1074,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -988,7 +1085,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingConfig.
+             * <p>The settings for sampling.</p>
              */
             public Builder samplingConfig(SamplingConfig samplingConfig) {
                 this.samplingConfig = samplingConfig;
@@ -996,7 +1093,14 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The strength of the rule. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>High</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -1004,7 +1108,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The monitored object of the rule.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -1012,7 +1116,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * <p>The ID of the template used by the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system::user_defined</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -1020,7 +1127,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the DataWorks tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -1103,7 +1213,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * DataQualityRules.
+             * <p>The rules.</p>
              */
             public Builder dataQualityRules(java.util.List < DataQualityRules> dataQualityRules) {
                 this.dataQualityRules = dataQualityRules;
@@ -1111,7 +1221,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1119,7 +1232,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1127,7 +1243,10 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>294</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

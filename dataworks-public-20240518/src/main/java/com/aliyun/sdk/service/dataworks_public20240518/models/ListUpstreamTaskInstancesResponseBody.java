@@ -312,6 +312,9 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
+        @com.aliyun.core.annotation.NameInMap("PeriodNumber")
+        private Integer periodNumber;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
@@ -387,6 +390,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             this.modifyTime = builder.modifyTime;
             this.modifyUser = builder.modifyUser;
             this.owner = builder.owner;
+            this.periodNumber = builder.periodNumber;
             this.priority = builder.priority;
             this.projectEnv = builder.projectEnv;
             this.projectId = builder.projectId;
@@ -493,6 +497,13 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
          */
         public String getOwner() {
             return this.owner;
+        }
+
+        /**
+         * @return periodNumber
+         */
+        public Integer getPeriodNumber() {
+            return this.periodNumber;
         }
 
         /**
@@ -654,6 +665,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             private Long modifyTime; 
             private String modifyUser; 
             private String owner; 
+            private Integer periodNumber; 
             private Integer priority; 
             private String projectEnv; 
             private Long projectId; 
@@ -761,6 +773,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
              */
             public Builder owner(String owner) {
                 this.owner = owner;
+                return this;
+            }
+
+            /**
+             * PeriodNumber.
+             */
+            public Builder periodNumber(Integer periodNumber) {
+                this.periodNumber = periodNumber;
                 return this;
             }
 

@@ -128,12 +128,16 @@ public class GetTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @com.aliyun.core.annotation.NameInMap("Upstream")
-        private String upstream;
+        @com.aliyun.core.annotation.NameInMap("UpstreamOutput")
+        private String upstreamOutput;
+
+        @com.aliyun.core.annotation.NameInMap("UpstreamTaskId")
+        private String upstreamTaskId;
 
         private Dependencies(Builder builder) {
             this.type = builder.type;
-            this.upstream = builder.upstream;
+            this.upstreamOutput = builder.upstreamOutput;
+            this.upstreamTaskId = builder.upstreamTaskId;
         }
 
         public static Builder builder() {
@@ -152,15 +156,23 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * @return upstream
+         * @return upstreamOutput
          */
-        public String getUpstream() {
-            return this.upstream;
+        public String getUpstreamOutput() {
+            return this.upstreamOutput;
+        }
+
+        /**
+         * @return upstreamTaskId
+         */
+        public String getUpstreamTaskId() {
+            return this.upstreamTaskId;
         }
 
         public static final class Builder {
             private String type; 
-            private String upstream; 
+            private String upstreamOutput; 
+            private String upstreamTaskId; 
 
             /**
              * Type.
@@ -171,10 +183,18 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Upstream.
+             * UpstreamOutput.
              */
-            public Builder upstream(String upstream) {
-                this.upstream = upstream;
+            public Builder upstreamOutput(String upstreamOutput) {
+                this.upstreamOutput = upstreamOutput;
+                return this;
+            }
+
+            /**
+             * UpstreamTaskId.
+             */
+            public Builder upstreamTaskId(String upstreamTaskId) {
+                this.upstreamTaskId = upstreamTaskId;
                 return this;
             }
 
@@ -195,9 +215,6 @@ public class GetTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @com.aliyun.core.annotation.NameInMap("Scope")
-        private String scope;
-
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -206,7 +223,6 @@ public class GetTaskResponseBody extends TeaModel {
 
         private Variables(Builder builder) {
             this.name = builder.name;
-            this.scope = builder.scope;
             this.type = builder.type;
             this.value = builder.value;
         }
@@ -227,13 +243,6 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * @return scope
-         */
-        public String getScope() {
-            return this.scope;
-        }
-
-        /**
          * @return type
          */
         public String getType() {
@@ -249,7 +258,6 @@ public class GetTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-            private String scope; 
             private String type; 
             private String value; 
 
@@ -258,14 +266,6 @@ public class GetTaskResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
-                return this;
-            }
-
-            /**
-             * Scope.
-             */
-            public Builder scope(String scope) {
-                this.scope = scope;
                 return this;
             }
 
@@ -396,9 +396,6 @@ public class GetTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @com.aliyun.core.annotation.NameInMap("Scope")
-        private String scope;
-
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -407,7 +404,6 @@ public class GetTaskResponseBody extends TeaModel {
 
         private OutputsVariables(Builder builder) {
             this.name = builder.name;
-            this.scope = builder.scope;
             this.type = builder.type;
             this.value = builder.value;
         }
@@ -428,13 +424,6 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * @return scope
-         */
-        public String getScope() {
-            return this.scope;
-        }
-
-        /**
          * @return type
          */
         public String getType() {
@@ -450,7 +439,6 @@ public class GetTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-            private String scope; 
             private String type; 
             private String value; 
 
@@ -459,14 +447,6 @@ public class GetTaskResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
-                return this;
-            }
-
-            /**
-             * Scope.
-             */
-            public Builder scope(String scope) {
-                this.scope = scope;
                 return this;
             }
 
@@ -1734,6 +1714,9 @@ public class GetTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Inputs")
         private Inputs inputs;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceMode")
+        private String instanceMode;
+
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
@@ -1803,6 +1786,7 @@ public class GetTaskResponseBody extends TeaModel {
             this.description = builder.description;
             this.id = builder.id;
             this.inputs = builder.inputs;
+            this.instanceMode = builder.instanceMode;
             this.modifyTime = builder.modifyTime;
             this.modifyUser = builder.modifyUser;
             this.name = builder.name;
@@ -1887,6 +1871,13 @@ public class GetTaskResponseBody extends TeaModel {
          */
         public Inputs getInputs() {
             return this.inputs;
+        }
+
+        /**
+         * @return instanceMode
+         */
+        public String getInstanceMode() {
+            return this.instanceMode;
         }
 
         /**
@@ -2038,6 +2029,7 @@ public class GetTaskResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private Inputs inputs; 
+            private String instanceMode; 
             private Long modifyTime; 
             private String modifyUser; 
             private String name; 
@@ -2120,6 +2112,14 @@ public class GetTaskResponseBody extends TeaModel {
              */
             public Builder inputs(Inputs inputs) {
                 this.inputs = inputs;
+                return this;
+            }
+
+            /**
+             * InstanceMode.
+             */
+            public Builder instanceMode(String instanceMode) {
+                this.instanceMode = instanceMode;
                 return this;
             }
 
