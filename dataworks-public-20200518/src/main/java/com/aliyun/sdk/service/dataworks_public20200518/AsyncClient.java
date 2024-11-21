@@ -1165,6 +1165,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCalcEnginesResponse> listCalcEngines(ListCalcEnginesRequest request);
 
     /**
+     * @param request the request parameters of ListCheckProcesses  ListCheckProcessesRequest
+     * @return ListCheckProcessesResponse
+     */
+    CompletableFuture<ListCheckProcessesResponse> listCheckProcesses(ListCheckProcessesRequest request);
+
+    /**
      * @param request the request parameters of ListClusterConfigs  ListClusterConfigsRequest
      * @return ListClusterConfigsResponse
      */
