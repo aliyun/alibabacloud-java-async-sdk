@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudResourcesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The data returned for the request.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-123456789ABC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of certificate authority (CA) certificates per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -117,7 +127,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -130,6 +143,12 @@ public class ListCloudResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudResourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertEndTime")
         private String certEndTime;
@@ -397,7 +416,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * The end date of the certificate bound to the cloud resource. The value is a timestamp in seconds.
+             * <p>The end date of the certificate bound to the cloud resource. The value is a timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737795520000</p>
              */
             public Builder certEndTime(String certEndTime) {
                 this.certEndTime = certEndTime;
@@ -405,7 +427,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate bound to the cloud resource.
+             * <p>The ID of the certificate bound to the cloud resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12433121</p>
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -413,7 +438,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate bound to the cloud resource.
+             * <p>The name of the certificate bound to the cloud resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shop.amsaudio.cn</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -421,7 +449,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The start date of the certificate bound to the cloud resource. The value is a timestamp in seconds.
+             * <p>The start date of the certificate bound to the cloud resource. The value is a timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1706259520000</p>
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -429,10 +460,13 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey ID used to access cloud resources.
-             * <p>
+             * <p>The AccessKey ID that is used to access cloud resources.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when you deploy certificates to cloud services of third-party clouds.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required only when you deploy certificates to services of multiple clouds.
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder cloudAccessId(String cloudAccessId) {
                 this.cloudAccessId = cloudAccessId;
@@ -440,11 +474,17 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service provider of the cloud resource. Valid values:
-             * <p>
+             * <p>The cloud service provider.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Tencent</li>
+             * <li>Huawei</li>
+             * <li>Aws</li>
+             * <li>aliyun</li>
+             * </ul>
              * 
-             * *   **aliyun**: Alibaba Cloud
-             * *   **Tencent**: Tencent Cloud
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder cloudName(String cloudName) {
                 this.cloudName = cloudName;
@@ -452,7 +492,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service.
+             * <p>The cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALB</p>
              */
             public Builder cloudProduct(String cloudProduct) {
                 this.cloudProduct = cloudProduct;
@@ -460,7 +503,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the cloud service provider to which the cloud resource belongs.
+             * <p>The region ID of the cloud service provider to which the cloud resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder cloudRegion(String cloudRegion) {
                 this.cloudRegion = cloudRegion;
@@ -468,13 +514,17 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud resource is the default resource. Valid values:
-             * <p>
+             * <p>Indicates whether the cloud resource is the default resource. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * </blockquote>
              * 
-             * *   **1**: yes
-             * *   **0**: no
-             * 
-             * >  This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder defaultResource(Integer defaultResource) {
                 this.defaultResource = defaultResource;
@@ -482,7 +532,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name bound to the cloud resource.
+             * <p>The domain name bound to the cloud resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.tkgeo.ru">www.tkgeo.ru</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -490,11 +543,14 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTPS is enabled for the cloud resource. Valid values:
-             * <p>
+             * <p>Indicates whether HTTPS is enabled for the cloud resource. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes.</li>
+             * <li><strong>0</strong>: no.</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enableHttps(Integer enableHttps) {
                 this.enableHttps = enableHttps;
@@ -502,7 +558,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud resource was created. The time is a timestamp in seconds.
+             * <p>The time when the cloud resource was created. The time is a timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1673423339000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -510,7 +569,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud resource was last modified. The time is a timestamp in seconds.
+             * <p>The time when the cloud resource was last modified. The time is a timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1696911946000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -518,7 +580,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud resource.
+             * <p>The ID of the cloud resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2356</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -526,10 +591,13 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the cloud resource.
-             * <p>
+             * <p>The instance ID of the cloud resource.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.
+             * <strong>example:</strong>
+             * <p>nlb-rv05agjc97ovm14il5</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -537,10 +605,13 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The listener ID of the cloud resource.
-             * <p>
+             * <p>The listener ID of the cloud resource.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.
+             * <strong>example:</strong>
+             * <p>lsn-jiugof6t23et66lsnc@443</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -548,10 +619,13 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The listening port of the cloud resource.
-             * <p>
+             * <p>The listening port of the cloud resource.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.
+             * <strong>example:</strong>
+             * <p>8047</p>
              */
             public Builder listenerPort(String listenerPort) {
                 this.listenerPort = listenerPort;
@@ -559,7 +633,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the cloud resource.
+             * <p>The region ID of the cloud resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -567,7 +644,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud resource.
+             * <p>The status of the cloud resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -575,13 +655,17 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an Alibaba Cloud SSL certificate is used. Valid values:
-             * <p>
+             * <p>Indicates whether an Alibaba Cloud SSL certificate is used. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is required only when you deploy certificates to services of multiple clouds.</p>
+             * </blockquote>
              * 
-             * *   **1**: yes
-             * *   **0**: no
-             * 
-             * >  This parameter is required only when you deploy certificates to services of multiple clouds.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder useSsl(Integer useSsl) {
                 this.useSsl = useSsl;
@@ -589,7 +673,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1666884372152785</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

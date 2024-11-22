@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeploymentJobRequest} extends {@link RequestModel}
  *
  * <p>ListDeploymentJobRequest</p>
@@ -95,7 +96,10 @@ public class ListDeploymentJobRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -104,13 +108,15 @@ public class ListDeploymentJobRequest extends Request {
         }
 
         /**
-         * The type of the deployment task.
-         * <p>
+         * <p>The type of the deployment task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cloud: multi-cloud deployment task.</li>
+         * <li>user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   cloud: multi-cloud deployment task.
-         * *   user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -119,7 +125,10 @@ public class ListDeploymentJobRequest extends Request {
         }
 
         /**
-         * The number of certificates per page. Default value: **50**.
+         * <p>The number of certificates per page. Default value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -128,17 +137,19 @@ public class ListDeploymentJobRequest extends Request {
         }
 
         /**
-         * The status of the deployment task.
-         * <p>
+         * <p>The status of the deployment task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>success</li>
+         * <li>pending</li>
+         * <li>scheduling</li>
+         * <li>processing</li>
+         * <li>error</li>
+         * <li>editing</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   success
-         * *   pending
-         * *   scheduling
-         * *   processing
-         * *   error
-         * *   editing
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

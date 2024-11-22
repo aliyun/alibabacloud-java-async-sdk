@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeploymentJobResourceRequest} extends {@link RequestModel}
  *
  * <p>ListDeploymentJobResourceRequest</p>
@@ -54,7 +55,11 @@ public class ListDeploymentJobResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the deployment task.
+         * <p>The ID of the deployment task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);

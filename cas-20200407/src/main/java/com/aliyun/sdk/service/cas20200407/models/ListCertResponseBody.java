@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCertResponseBody} extends {@link TeaModel}
  *
  * <p>ListCertResponseBody</p>
@@ -85,7 +86,7 @@ public class ListCertResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the certificates.
+         * <p>An array that consists of the certificates.</p>
          */
         public Builder certList(java.util.List < CertList> certList) {
             this.certList = certList;
@@ -93,7 +94,10 @@ public class ListCertResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Default value: 1.
+         * <p>The page number of the returned page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +105,10 @@ public class ListCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class ListCertResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: 50.
+         * <p>The number of entries returned per page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder showSize(Long showSize) {
             this.showSize = showSize;
@@ -117,7 +127,10 @@ public class ListCertResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListCertResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCertResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCertResponseBody</p>
+     */
     public static class CertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
@@ -289,7 +308,10 @@ public class ListCertResponseBody extends TeaModel {
             private String whInstanceId; 
 
             /**
-             * The expiration time of the certificate. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The expiration time of the certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634283958000</p>
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
@@ -297,7 +319,10 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The issuance time of the certificate. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The issuance time of the certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665819958000</p>
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
@@ -305,11 +330,14 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * 证书的类型 。取值：
-             * <p>
+             * <p>证书的类型 。取值：</p>
+             * <ul>
+             * <li><strong>CA</strong>：表示CA证书。</li>
+             * <li><strong>CERT</strong>：表示签发的证书。</li>
+             * </ul>
              * 
-             * - **CA**：表示CA证书。
-             * - **CERT**：表示签发的证书。
+             * <strong>example:</strong>
+             * <p>CERT</p>
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -317,7 +345,10 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun.alibaba.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -325,11 +356,14 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate contains a private key. Valid values:
-             * <p>
+             * <p>Indicates whether the certificate contains a private key. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder existPrivateKey(Boolean existPrivateKey) {
                 this.existPrivateKey = existPrivateKey;
@@ -337,7 +371,10 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the certificate.
+             * <p>The unique identifier of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14dcc8afc7578e</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -345,7 +382,10 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The issuer of the certificate.
+             * <p>The issuer of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mySSL</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -353,7 +393,10 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names that are bound to the certificate. Multiple domain names are separated by commas.
+             * <p>The domain names that are bound to the certificate. Multiple domain names are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.alibaba.com,aliyun.alibaba.com</p>
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -361,11 +404,14 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the certificate. Valid values:
-             * <p>
+             * <p>The source of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>upload</strong>: uploaded certificate</li>
+             * <li><strong>aliyun</strong>: Alibaba Cloud certificate</li>
+             * </ul>
              * 
-             * *   **upload**: uploaded certificate
-             * *   **aliyun**: Alibaba Cloud certificate
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -373,11 +419,14 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate. Valid values:
-             * <p>
+             * <p>The status of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>ISSUE</strong>: issued</li>
+             * <li><strong>REVOKE</strong>: revoked</li>
+             * </ul>
              * 
-             * *   **ISSUE**: issued
-             * *   **REVOKE**: revoked
+             * <strong>example:</strong>
+             * <p>ISSUE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -385,7 +434,10 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate repository.
+             * <p>The ID of the certificate repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder whId(Long whId) {
                 this.whId = whId;
@@ -393,7 +445,10 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the certificate repository.
+             * <p>The instance ID of the certificate repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_whInstanceId</p>
              */
             public Builder whInstanceId(String whInstanceId) {
                 this.whInstanceId = whInstanceId;

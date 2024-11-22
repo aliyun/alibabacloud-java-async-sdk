@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecryptRequest} extends {@link RequestModel}
  *
  * <p>DecryptRequest</p>
@@ -98,12 +99,16 @@ public class DecryptRequest extends Request {
         } 
 
         /**
-         * The encryption algorithm. Valid values:
-         * <p>
+         * <p>The encryption algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>RSAES_OAEP_SHA_1</strong></li>
+         * <li><strong>RSAES_OAEP_SHA_256</strong></li>
+         * <li><strong>SM2PKE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RSAES_OAEP_SHA\_1**
-         * *   **RSAES_OAEP_SHA\_256**
-         * *   **SM2PKE**
+         * <strong>example:</strong>
+         * <p>RSAESOAEPSHA_1</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -112,11 +117,15 @@ public class DecryptRequest extends Request {
         }
 
         /**
-         * The unique identifier of the certificate. You can call the [ListCert](~~455806~~) operation to query the identifier.
-         * <p>
+         * <p>The unique identifier of the certificate. You can call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation to query the identifier.</p>
+         * <ul>
+         * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
+         * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.
-         * *   If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-12345678****</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -125,7 +134,11 @@ public class DecryptRequest extends Request {
         }
 
         /**
-         * The data that you want to decrypt. The value is encoded in Base64.
+         * <p>The data that you want to decrypt. The value is encoded in Base64.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</p>
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);
@@ -134,11 +147,14 @@ public class DecryptRequest extends Request {
         }
 
         /**
-         * The value type of the Message parameter. Valid values:
-         * <p>
+         * <p>The value type of the Message parameter. Valid values:</p>
+         * <ul>
+         * <li>RAW: The returned result is raw data encoded in UTF-8.</li>
+         * <li>Base64: The returned result is Base64-encoded data. This is the default value.</li>
+         * </ul>
          * 
-         * *   RAW: The returned result is raw data encoded in UTF-8.
-         * *   Base64: The returned result is Base64-encoded data. This is the default value.
+         * <strong>example:</strong>
+         * <p>Base64</p>
          */
         public Builder messageType(String messageType) {
             this.putQueryParameter("MessageType", messageType);

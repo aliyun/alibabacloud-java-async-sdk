@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListContactRequest} extends {@link RequestModel}
  *
  * <p>ListContactRequest</p>
@@ -81,7 +82,10 @@ public class ListContactRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -90,7 +94,10 @@ public class ListContactRequest extends Request {
         }
 
         /**
-         * The keyword used in the query. For example, you can specify a keyword in names, email addresses, and mobile phone numbers.
+         * <p>The keyword used in the query. For example, you can specify a keyword in names, email addresses, and mobile phone numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -99,7 +106,10 @@ public class ListContactRequest extends Request {
         }
 
         /**
-         * The number of contacts per page.
+         * <p>The number of contacts per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EncryptResponseBody} extends {@link TeaModel}
  *
  * <p>EncryptResponseBody</p>
@@ -61,7 +62,10 @@ public class EncryptResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The unique identifier of the certificate.
+         * <p>The unique identifier of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-12345678****</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -69,7 +73,10 @@ public class EncryptResponseBody extends TeaModel {
         }
 
         /**
-         * The data after encryption. The value is encoded in Base64.
+         * <p>The data after encryption. The value is encoded in Base64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</p>
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
@@ -77,7 +84,10 @@ public class EncryptResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5979d897-d69f-4fc9-87dd-f3bb73c40b80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

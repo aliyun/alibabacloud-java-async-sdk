@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadUserCertificateRequest} extends {@link RequestModel}
  *
  * <p>UploadUserCertificateRequest</p>
@@ -151,7 +152,10 @@ public class UploadUserCertificateRequest extends Request {
         } 
 
         /**
-         * The content of the certificate in the PEM format.
+         * <p>The content of the certificate in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</p>
          */
         public Builder cert(String cert) {
             this.putQueryParameter("Cert", cert);
@@ -160,7 +164,12 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * The content of the encryption certificate in PEM format.
+         * <p>The content of the encryption certificate in PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIICDzCCA***
+         * -----END CERTIFICATE-----</p>
          */
         public Builder encryptCert(String encryptCert) {
             this.putQueryParameter("EncryptCert", encryptCert);
@@ -169,7 +178,12 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * The private key of the encryption certificate in the PEM format.
+         * <p>The private key of the encryption certificate in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN EC PRIVATE KEY-----
+         * MHcCAQEEI****
+         * -----END EC PRIVATE KEY-----</p>
          */
         public Builder encryptPrivateKey(String encryptPrivateKey) {
             this.putQueryParameter("EncryptPrivateKey", encryptPrivateKey);
@@ -178,7 +192,12 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * The private key of the certificate in the PEM format.
+         * <p>The private key of the certificate in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIICDzCCAbagAw****
+         * -----END CERTIFICATE-----</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -187,10 +206,13 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (\_).
-         * <p>
+         * <p>The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (_).</p>
+         * <blockquote>
+         * <p> The name must be unique within an Alibaba Cloud account.</p>
+         * </blockquote>
          * 
-         * >  The name must be unique within an Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>cert-1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +221,10 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * the resource group id.
+         * <p>the resource group id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae****vty</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -208,7 +233,12 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * The content of the signing certificate in the PEM format.
+         * <p>The content of the signing certificate in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIICDzCCAbagAw****
+         * -----END CERTIFICATE-----</p>
          */
         public Builder signCert(String signCert) {
             this.putQueryParameter("SignCert", signCert);
@@ -217,7 +247,12 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * The private key of the signing certificate in the PEM format.
+         * <p>The private key of the signing certificate in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN EC PRIVATE KEY-----
+         * MHcCAQEEILR****
+         * -----END EC PRIVATE KEY-----</p>
          */
         public Builder signPrivateKey(String signPrivateKey) {
             this.putQueryParameter("SignPrivateKey", signPrivateKey);

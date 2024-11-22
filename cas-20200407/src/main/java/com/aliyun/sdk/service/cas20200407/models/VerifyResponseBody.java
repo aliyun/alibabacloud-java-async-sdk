@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyResponseBody</p>
@@ -49,7 +50,10 @@ public class VerifyResponseBody extends TeaModel {
         private Boolean signatureValid; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ed33293-2e48-6b14-861e-538e28e408eb</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class VerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the signature is valid. Valid values:
-         * <p>
+         * <p>Indicates whether the signature is valid. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder signatureValid(Boolean signatureValid) {
             this.signatureValid = signatureValid;

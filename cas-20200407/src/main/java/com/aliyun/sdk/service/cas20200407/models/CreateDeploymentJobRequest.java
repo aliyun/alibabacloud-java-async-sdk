@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeploymentJobRequest} extends {@link RequestModel}
  *
  * <p>CreateDeploymentJobRequest</p>
@@ -128,7 +129,11 @@ public class CreateDeploymentJobRequest extends Request {
         } 
 
         /**
-         * The certificate IDs.
+         * <p>The certificate IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12342649,12304338,12067351,9957285</p>
          */
         public Builder certIds(String certIds) {
             this.putQueryParameter("CertIds", certIds);
@@ -137,7 +142,11 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The contact IDs.
+         * <p>The contact IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -146,13 +155,16 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The type of the task.
-         * <p>
+         * <p>The type of the task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cloud</li>
+         * <li>user</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   cloud
-         * *   user
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -161,7 +173,11 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The name of the deployment task.
+         * <p>The name of the deployment task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -170,7 +186,11 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * <p>The resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6591316,6585549,6190248,5811894,5775176,5772504</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -179,7 +199,10 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The time when the task was scheduled.
+         * <p>The time when the task was scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706613560008</p>
          */
         public Builder scheduleTime(Long scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);

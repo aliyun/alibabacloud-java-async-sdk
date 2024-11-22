@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCsrResponseBody} extends {@link TeaModel}
  *
  * <p>ListCsrResponseBody</p>
@@ -85,7 +86,7 @@ public class ListCsrResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The CSRs.
+         * <p>The CSRs.</p>
          */
         public Builder csrList(java.util.List < CsrList> csrList) {
             this.csrList = csrList;
@@ -93,7 +94,10 @@ public class ListCsrResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +105,10 @@ public class ListCsrResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E865F6AD-0294-4A24-A58B-DAC6BE2BDD20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class ListCsrResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 50.
+         * <p>The number of entries per page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder showSize(Long showSize) {
             this.showSize = showSize;
@@ -117,7 +127,10 @@ public class ListCsrResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListCsrResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCsrResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCsrResponseBody</p>
+     */
     public static class CsrList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
@@ -301,7 +320,10 @@ public class ListCsrResponseBody extends TeaModel {
             private String sans; 
 
             /**
-             * The algorithm. Valid values: RSA, SM2, and ECC.
+             * <p>The algorithm. Valid values: RSA, SM2, and ECC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -309,7 +331,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The primary domain name, which is a common name.
+             * <p>The primary domain name, which is a common name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -317,7 +342,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the company.
+             * <p>The name of the company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>corp_name</p>
              */
             public Builder corpName(String corpName) {
                 this.corpName = corpName;
@@ -325,7 +353,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the country or region in which the organization is located. For example, you can use CN to indicate China and use US to indicate the United States. The default value is the code of the country or region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued. For more information about country codes, see the "Country codes" section of the [Manage company profiles](~~198289~~) topic.
+             * <p>The code of the country or region in which the organization is located. For example, you can use CN to indicate China and use US to indicate the United States. The default value is the code of the country or region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued. For more information about country codes, see the &quot;Country codes&quot; section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -333,7 +364,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CSR.
+             * <p>The ID of the CSR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3454</p>
              */
             public Builder csrId(Long csrId) {
                 this.csrId = csrId;
@@ -341,7 +375,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The department that uses the certificate.
+             * <p>The department that uses the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -349,7 +386,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate contains a private key.
+             * <p>Indicates whether the certificate contains a private key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPrivateKey(Boolean hasPrivateKey) {
                 this.hasPrivateKey = hasPrivateKey;
@@ -357,7 +397,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The public key that is calculated by using the SHA256 algorithm.
+             * <p>The public key that is calculated by using the SHA256 algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder keySha2(String keySha2) {
                 this.keySha2 = keySha2;
@@ -365,7 +408,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The key length that is used by the algorithm. The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits. The key length for ECC and SM2 algorithms can be 256 bits.
+             * <p>The key length that is used by the algorithm. The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits. The key length for ECC and SM2 algorithms can be 256 bits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder keySize(Integer keySize) {
                 this.keySize = keySize;
@@ -373,7 +419,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The city where the company is located.
+             * <p>The city where the company is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder locality(String locality) {
                 this.locality = locality;
@@ -381,7 +430,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CSR.
+             * <p>The name of the CSR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -389,7 +441,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The province or location.
+             * <p>The province or location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -397,7 +452,10 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary domain names. Separate multiple domain names with commas (,).
+             * <p>The secondary domain names. Separate multiple domain names with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com,www.aliyundoc.com">www.example.com,www.aliyundoc.com</a></p>
              */
             public Builder sans(String sans) {
                 this.sans = sans;

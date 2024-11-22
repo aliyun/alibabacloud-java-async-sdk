@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDeploymentJobStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateDeploymentJobStatusRequest</p>
@@ -69,7 +70,11 @@ public class UpdateDeploymentJobStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the deployment task.
+         * <p>The ID of the deployment task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -78,14 +83,17 @@ public class UpdateDeploymentJobStatusRequest extends Request {
         }
 
         /**
-         * The desired status.
-         * <p>
+         * <p>The desired status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>pending</li>
+         * <li>scheduling</li>
+         * <li>editing</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   pending
-         * *   scheduling
-         * *   editing
+         * <strong>example:</strong>
+         * <p>editing</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

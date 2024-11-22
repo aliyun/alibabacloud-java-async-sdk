@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeploymentJobResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeploymentJobResponseBody</p>
@@ -253,7 +254,7 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         private Long userId; 
 
         /**
-         * The information about the contact.
+         * <p>The information about the contact.</p>
          */
         public Builder casContacts(java.util.List < CasContacts> casContacts) {
             this.casContacts = casContacts;
@@ -261,7 +262,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The domain names bound to the certificate of the deployment task.
+         * <p>The domain names bound to the certificate of the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com,demo.aliyundoc.com</p>
          */
         public Builder certDomain(String certDomain) {
             this.certDomain = certDomain;
@@ -269,12 +273,15 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the certificate. Valid values:
-         * <p>
+         * <p>The type of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>upload</strong>: uploaded certificate</li>
+         * <li><strong>buy</strong>: purchased certificate</li>
+         * <li><strong>free</strong>: free certificate available only on the China site (aliyun.com)</li>
+         * </ul>
          * 
-         * *   **upload**: uploaded certificate
-         * *   **buy**: purchased certificate
-         * *   **free**: free certificate available only on the China site (aliyun.com)
+         * <strong>example:</strong>
+         * <p>buy</p>
          */
         public Builder certType(String certType) {
             this.certType = certType;
@@ -282,7 +289,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the deployment task.
+         * <p>The configurations of the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;shareCertIds&quot;:[],&quot;certIds&quot;:[12342649,12304338,12067351,9957285]}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -290,11 +300,14 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the deployment job was deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the deployment job was deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not deleted</li>
+         * <li><strong>1</strong>: deleted</li>
+         * </ul>
          * 
-         * *   **0**: not deleted
-         * *   **1**: deleted
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder del(Integer del) {
             this.del = del;
@@ -302,7 +315,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The end time of the deployment job. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The end time of the deployment job. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679541809000</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -310,7 +326,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the deployment job was created. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The time when the deployment job was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679541809000</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -318,7 +337,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the deployment job was last modified. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The time when the deployment job was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679541809000</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -326,7 +348,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the deployment job.
+         * <p>The ID of the deployment job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -334,7 +359,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID of the deployment task.
+         * <p>The instance ID of the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14dcc8afc7578e1f</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -342,12 +370,15 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the deployment job. Valid values:
-         * <p>
+         * <p>The type of the deployment job. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud</strong>: multi-cloud deployment job.</li>
+         * <li><strong>trustee</strong>: hosted deployment job available only on the China site (aliyun.com).</li>
+         * <li><strong>user</strong>: cloud service deployment job. The cloud server is not included.</li>
+         * </ul>
          * 
-         * *   **cloud**: multi-cloud deployment job.
-         * *   **trustee**: hosted deployment job available only on the China site (aliyun.com).
-         * *   **user**: cloud service deployment job. The cloud server is not included.
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -355,7 +386,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the deployment task.
+         * <p>The name of the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto-test-AXX</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -363,7 +397,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The cloud services included in the deployment task.
+         * <p>The cloud services included in the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDN</p>
          */
         public Builder productName(String productName) {
             this.productName = productName;
@@ -371,7 +408,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -379,11 +419,14 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the deployment job includes the rollback worker. For example, if a cloud service in a deployment job has been rolled back, **1** is returned. Valid values:
-         * <p>
+         * <p>Indicates whether the deployment job includes the rollback worker. For example, if a cloud service in a deployment job has been rolled back, <strong>1</strong> is returned. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The rollback worker is not included.</li>
+         * <li><strong>1</strong>: The rollback worker is included.</li>
+         * </ul>
          * 
-         * *   **0**: The rollback worker is not included.
-         * *   **1**: The rollback worker is included.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rollback(Integer rollback) {
             this.rollback = rollback;
@@ -391,7 +434,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the deployment job was scheduled. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The time when the deployment job was scheduled. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678083209335</p>
          */
         public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = scheduleTime;
@@ -399,7 +445,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the deployment job. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The start time of the deployment job. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679541809000</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -407,15 +456,18 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the deployment job. Valid values:
-         * <p>
+         * <p>The status of the deployment job. Valid values:</p>
+         * <ul>
+         * <li><strong>pending</strong></li>
+         * <li><strong>editing</strong></li>
+         * <li><strong>scheduling</strong></li>
+         * <li><strong>processing</strong></li>
+         * <li><strong>error</strong></li>
+         * <li><strong>success</strong></li>
+         * </ul>
          * 
-         * *   **pending**
-         * *   **editing**
-         * *   **scheduling**
-         * *   **processing**
-         * *   **error**
-         * *   **success**
+         * <strong>example:</strong>
+         * <p>editing</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -423,7 +475,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account in which the deployment job is created.
+         * <p>The ID of the Alibaba Cloud account in which the deployment job is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>166688437XXXX785</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;
@@ -436,6 +491,12 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeploymentJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeploymentJobResponseBody</p>
+     */
     public static class CasContacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
@@ -499,7 +560,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The email address of the contact.
+             * <p>The email address of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -507,7 +571,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the contact.
+             * <p>The ID of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3304</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -515,7 +582,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number of the contact.
+             * <p>The phone number of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139****0000</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -523,7 +593,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the contact.
+             * <p>The name of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCertRequest} extends {@link RequestModel}
  *
  * <p>ListCertRequest</p>
@@ -137,11 +138,14 @@ public class ListCertRequest extends Request {
         } 
 
         /**
-         * 证书的类型 。取值：
-         * <p>
+         * <p>证书的类型 。取值：</p>
+         * <ul>
+         * <li><strong>CA</strong>：表示CA证书。</li>
+         * <li><strong>CERT</strong>：表示签发的证书。</li>
+         * </ul>
          * 
-         * - **CA**：表示CA证书。
-         * - **CERT**：表示签发的证书。
+         * <strong>example:</strong>
+         * <p>CERT</p>
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -150,7 +154,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -159,7 +166,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.
+         * <p>The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -168,7 +178,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 50.
+         * <p>The number of entries to return on each page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder showSize(Long showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -177,11 +190,14 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * The source of the certificate. Valid values:
-         * <p>
+         * <p>The source of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>upload</strong>: uploaded certificate</li>
+         * <li><strong>aliyun</strong>: Alibaba Cloud certificate</li>
+         * </ul>
          * 
-         * *   **upload**: uploaded certificate
-         * *   **aliyun**: Alibaba Cloud certificate
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -190,11 +206,14 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * The status of the certificate. Valid values:
-         * <p>
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>ISSUE</strong>: issued</li>
+         * <li><strong>REVOKE</strong>: revoked</li>
+         * </ul>
          * 
-         * *   **ISSUE**: issued
-         * *   **REVOKE**: revoked
+         * <strong>example:</strong>
+         * <p>ISSUE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -203,7 +222,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * The ID of the certificate repository. You can call the ListCertWarehouse API operation to query the IDs of certificate repositories.
+         * <p>The ID of the certificate repository. You can call the ListCertWarehouse API operation to query the IDs of certificate repositories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder warehouseId(Long warehouseId) {
             this.putQueryParameter("WarehouseId", warehouseId);

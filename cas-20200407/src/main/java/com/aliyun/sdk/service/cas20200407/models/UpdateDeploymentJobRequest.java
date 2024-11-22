@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDeploymentJobRequest} extends {@link RequestModel}
  *
  * <p>UpdateDeploymentJobRequest</p>
@@ -124,7 +125,10 @@ public class UpdateDeploymentJobRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate. Separate multiple certificate IDs with commas (,). You can call the [ListUserCertificateOrder](~~455804~~) operation to obtain the ID of a certificate from the **CertificateId** parameter.
+         * <p>The ID of the certificate. Separate multiple certificate IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID of a certificate from the <strong>CertificateId</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9957285,12067351,12304338,12342649</p>
          */
         public Builder certIds(String certIds) {
             this.putQueryParameter("CertIds", certIds);
@@ -133,7 +137,10 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The ID of the contact. Separate multiple contact IDs with commas (,). You can call the [ListContact](~~2712221~~) operation to obtain the ID of a contact from the **ContactId** parameter.
+         * <p>The ID of the contact. Separate multiple contact IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2712221.html">ListContact</a> operation to obtain the ID of a contact from the <strong>ContactId</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9957285,12067351,12304338,12342649</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -142,7 +149,11 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The ID of the deployment task. You can call the [CreateDeploymentJob](~~2712234~~) operation to obtain the ID of a deployment task from the JobId parameter. You can also call the [ListDeploymentJob](~~2712223~~) operation to obtain the ID of a deployment task.
+         * <p>The ID of the deployment task. You can call the <a href="https://help.aliyun.com/document_detail/2712234.html">CreateDeploymentJob</a> operation to obtain the ID of a deployment task from the JobId parameter. You can also call the <a href="https://help.aliyun.com/document_detail/2712223.html">ListDeploymentJob</a> operation to obtain the ID of a deployment task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -151,7 +162,10 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The name of the deployment task.
+         * <p>The name of the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -160,7 +174,10 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The ID of the cloud resource. Separate multiple resource IDs with commas (,). You can call the [ListCloudResources](~~2712230~~) operation to obtain the ID of a cloud resource from the **Id** parameter.
+         * <p>The ID of the cloud resource. Separate multiple resource IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2712230.html">ListCloudResources</a> operation to obtain the ID of a cloud resource from the <strong>Id</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9957285,12067351,12304338,12342649</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -169,7 +186,10 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * The time when the task starts. The value is a UNIX timestamp. If you do not specify this parameter, the system immediately starts the task after it is created.
+         * <p>The time when the task starts. The value is a UNIX timestamp. If you do not specify this parameter, the system immediately starts the task after it is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1606482979000</p>
          */
         public Builder scheduleTime(Long scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);

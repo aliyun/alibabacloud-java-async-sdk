@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCertWarehouseResponseBody} extends {@link TeaModel}
  *
  * <p>ListCertWarehouseResponseBody</p>
@@ -85,7 +86,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The certificate application repositories.
+         * <p>The certificate application repositories.</p>
          */
         public Builder certWarehouseList(java.util.List < CertWarehouseList> certWarehouseList) {
             this.certWarehouseList = certWarehouseList;
@@ -93,7 +94,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Default value: 1.
+         * <p>The page number of the returned page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +105,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: 50.
+         * <p>The number of entries returned per page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder showSize(Long showSize) {
             this.showSize = showSize;
@@ -117,7 +127,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListCertWarehouseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCertWarehouseResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCertWarehouseResponseBody</p>
+     */
     public static class CertWarehouseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -241,7 +260,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             private Long whId; 
 
             /**
-             * The timestamp when the certificate application repository expires. Unit: milliseconds.
+             * <p>The timestamp when the certificate application repository expires. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665819958000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -249,7 +271,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the certificate application repository.
+             * <p>The instance ID of the certificate application repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14dcc8afc7578e1f</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -257,11 +282,14 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate application repository has expired. Valid values:
-             * <p>
+             * <p>Indicates whether the certificate application repository has expired. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isExpired(Boolean isExpired) {
                 this.isExpired = isExpired;
@@ -269,7 +297,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate application repository.
+             * <p>The name of the certificate application repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -277,7 +308,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the private CA.
+             * <p>The instance ID of the private CA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14dcc8afc7578e1f</p>
              */
             public Builder pcaInstanceId(String pcaInstanceId) {
                 this.pcaInstanceId = pcaInstanceId;
@@ -285,7 +319,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * The queries per second (QPS).
+             * <p>The queries per second (QPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder qps(Long qps) {
                 this.qps = qps;
@@ -293,14 +330,17 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate application repository. Valid values:
-             * <p>
+             * <p>The type of the certificate application repository. Valid values:</p>
+             * <ul>
+             * <li><strong>ssl</strong>: certificate application repository of SSL certificates</li>
+             * <li><strong>uploadPCA</strong>: certificate application repository of uploaded private certificates</li>
+             * <li><strong>free</strong>: certificate application repository of free certificates, available only on the China site (aliyun.com)</li>
+             * <li><strong>aliyunPCA</strong>: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)</li>
+             * <li><strong>disable</strong>: disabled certificate application repository</li>
+             * </ul>
              * 
-             * *   **ssl**: certificate application repository of SSL certificates
-             * *   **uploadPCA**: certificate application repository of uploaded private certificates
-             * *   **free**: certificate application repository of free certificates, available only on the China site (aliyun.com)
-             * *   **aliyunPCA**: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)
-             * *   **disable**: disabled certificate application repository
+             * <strong>example:</strong>
+             * <p>aliyunPCA</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -308,7 +348,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate application repository.
+             * <p>The ID of the certificate application repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder whId(Long whId) {
                 this.whId = whId;

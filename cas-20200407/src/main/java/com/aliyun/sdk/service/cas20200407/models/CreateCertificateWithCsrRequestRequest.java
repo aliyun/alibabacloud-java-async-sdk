@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCertificateWithCsrRequestRequest} extends {@link RequestModel}
  *
  * <p>CreateCertificateWithCsrRequestRequest</p>
@@ -128,12 +129,14 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         } 
 
         /**
-         * The content of the CSR file.\
-         * <p>
-         * The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [How do I create a CSR file?](~~42218~~)\
-         * A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.
+         * <p>The content of the CSR file.<br>The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a><br>A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.</p>
+         * <blockquote>
+         * <p> The <strong>CN</strong> field in the CSR file specifies the domain name that is bound to the certificate.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The **CN** field in the CSR file specifies the domain name that is bound to the certificate.
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -142,7 +145,11 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * The contact email address of the applicant.
+         * <p>The contact email address of the applicant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -151,7 +158,11 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * The phone number of the applicant.
+         * <p>The phone number of the applicant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);
@@ -160,16 +171,19 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * The specifications of the certificate that you want to apply for. Valid values:
-         * <p>
+         * <p>The specifications of the certificate that you want to apply for. Valid values:</p>
+         * <ul>
+         * <li><strong>digicert-free-1-free</strong> (default): DigiCert single-domain DV certificate in a three-month free trial, available only on the China site (aliyun.com).</li>
+         * <li><strong>symantec-free-1-free</strong>: DigiCert single-domain DV certificate in a one-year free trial, available only on the China site (aliyun.com).</li>
+         * <li><strong>symantec-dv-1-starter</strong>: DigiCert wildcard DV certificate.</li>
+         * <li><strong>geotrust-dv-1-starter</strong>: GeoTrust single-domain DV certificate.</li>
+         * <li><strong>geotrust-dv-w-starter</strong>: GeoTrust wildcard DV certificate.</li>
+         * <li><strong>globalsign-dv-1-personal</strong>: GlobalSign single-domain DV certificate.</li>
+         * <li><strong>globalsign-dv-w-advanced</strong>: GlobalSign wildcard DV certificate.</li>
+         * </ul>
          * 
-         * *   **digicert-free-1-free** (default): DigiCert single-domain DV certificate in a three-month free trial, available only on the China site (aliyun.com).
-         * *   **symantec-free-1-free**: DigiCert single-domain DV certificate in a one-year free trial, available only on the China site (aliyun.com).
-         * *   **symantec-dv-1-starter**: DigiCert wildcard DV certificate.
-         * *   **geotrust-dv-1-starter**: GeoTrust single-domain DV certificate.
-         * *   **geotrust-dv-w-starter**: GeoTrust wildcard DV certificate.
-         * *   **globalsign-dv-1-personal**: GlobalSign single-domain DV certificate.
-         * *   **globalsign-dv-w-advanced**: GlobalSign wildcard DV certificate.
+         * <strong>example:</strong>
+         * <p>symantec-free-1-free</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -178,7 +192,11 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * The name of the applicant.
+         * <p>The name of the applicant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tom</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -187,13 +205,16 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * The method to verify the ownership of a domain name. Valid values:
-         * <p>
+         * <p>The method to verify the ownership of a domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>DNS</strong>: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</li>
+         * <li><strong>FILE</strong>: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</li>
+         * </ul>
+         * <p>For more information about the verification methods, see <a href="https://help.aliyun.com/document_detail/48016.html">Verify the ownership of a domain name</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.
-         * *   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.
-         * 
-         * For more information about the verification methods, see [Verify the ownership of a domain name](~~48016~~).
+         * <strong>example:</strong>
+         * <p>DNS</p>
          */
         public Builder validateType(String validateType) {
             this.putQueryParameter("ValidateType", validateType);

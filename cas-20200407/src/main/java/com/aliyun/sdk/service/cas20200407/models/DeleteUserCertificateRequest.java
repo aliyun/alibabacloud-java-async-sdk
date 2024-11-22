@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserCertificateRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserCertificateRequest</p>
@@ -54,10 +55,14 @@ public class DeleteUserCertificateRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate.
-         * <p>
+         * <p>The ID of the certificate.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListUserCertificateOrder](~~455804~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>7562353</p>
          */
         public Builder certId(Long certId) {
             this.putQueryParameter("CertId", certId);

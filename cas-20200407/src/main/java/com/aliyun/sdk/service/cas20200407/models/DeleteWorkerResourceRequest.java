@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWorkerResourceRequest} extends {@link RequestModel}
  *
  * <p>DeleteWorkerResourceRequest</p>
@@ -69,7 +70,11 @@ public class DeleteWorkerResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the deployment task.
+         * <p>The ID of the deployment task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -78,7 +83,11 @@ public class DeleteWorkerResourceRequest extends Request {
         }
 
         /**
-         * The ID of the worker for the deployment task.
+         * <p>The ID of the worker for the deployment task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder workerId(Long workerId) {
             this.putQueryParameter("WorkerId", workerId);

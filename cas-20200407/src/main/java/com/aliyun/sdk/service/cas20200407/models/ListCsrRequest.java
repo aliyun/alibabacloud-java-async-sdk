@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCsrRequest} extends {@link RequestModel}
  *
  * <p>ListCsrRequest</p>
@@ -95,7 +96,10 @@ public class ListCsrRequest extends Request {
         } 
 
         /**
-         * The algorithm. Valid values: RSA, ECC, and SM2.
+         * <p>The algorithm. Valid values: RSA, ECC, and SM2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -104,7 +108,10 @@ public class ListCsrRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -113,7 +120,10 @@ public class ListCsrRequest extends Request {
         }
 
         /**
-         * The keyword.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -122,7 +132,10 @@ public class ListCsrRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 50.
+         * <p>The number of entries per page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder showSize(Long showSize) {
             this.putQueryParameter("ShowSize", showSize);

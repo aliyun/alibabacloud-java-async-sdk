@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeploymentJobCertResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeploymentJobCertResponseBody</p>
@@ -49,7 +50,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeploymentJobCertResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeploymentJobCertResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
@@ -253,7 +263,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             private String statusCode; 
 
             /**
-             * The algorithm of the certificate public key.
+             * <p>The algorithm of the certificate public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -261,7 +274,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11174100</p>
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -269,7 +285,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the certificate.
+             * <p>The instance ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cas-ivauto-2crxzi</p>
              */
             public Builder certInstanceId(String certInstanceId) {
                 this.certInstanceId = certInstanceId;
@@ -277,7 +296,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edkog.shop</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -285,12 +307,15 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate order. Valid values:
-             * <p>
+             * <p>The type of the certificate order. Valid values:</p>
+             * <ul>
+             * <li><strong>upload</strong>: uploaded certificate.</li>
+             * <li><strong>buy</strong>: purchased certificate.</li>
+             * <li><strong>free</strong>: free certificate. This value is available only on the China site (aliyun.com).</li>
+             * </ul>
              * 
-             * *   **upload**: uploaded certificate.
-             * *   **buy**: purchased certificate.
-             * *   **free**: free certificate. This value is available only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>buy</p>
              */
             public Builder certOrderType(String certOrderType) {
                 this.certOrderType = certOrderType;
@@ -298,7 +323,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate.
+             * <p>The type of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DV</p>
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -306,7 +334,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The common name of the certificate.
+             * <p>The common name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vaultwebhook.vault-webhook.svc</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -314,11 +345,14 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate is hosted. Valid values:
-             * <p>
+             * <p>Indicates whether the certificate is hosted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTrustee(Boolean isTrustee) {
                 this.isTrustee = isTrustee;
@@ -326,7 +360,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The month in which the certificate is applied for.
+             * <p>The month in which the certificate is applied for.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -334,7 +371,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the validity period of the certificate. The value is a timestamp in seconds.
+             * <p>The end time of the validity period of the certificate. The value is a timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683625266108</p>
              */
             public Builder notAfterTime(Long notAfterTime) {
                 this.notAfterTime = notAfterTime;
@@ -342,7 +382,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the validity period of the certificate. The value is a timestamp in seconds.
+             * <p>The start time of the validity period of the certificate. The value is a timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683625266108</p>
              */
             public Builder notBeforeTime(Long notBeforeTime) {
                 this.notBeforeTime = notBeforeTime;
@@ -350,10 +393,13 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate order.
-             * <p>
+             * <p>The ID of the certificate order.</p>
+             * <blockquote>
+             * <p> If CertId is returned, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * >  If CertId is returned, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>6127067</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -361,7 +407,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The subject alternative name (SAN) extensions of the certificate.
+             * <p>The subject alternative name (SAN) extensions of the certificate.</p>
              */
             public Builder sans(java.util.List < String > sans) {
                 this.sans = sans;
@@ -369,22 +415,25 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             }
 
             /**
-             * The status code of the certificate. Valid values:
-             * <p>
+             * <p>The status code of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>payed</strong>: paid and pending application</li>
+             * <li><strong>checking</strong>: being validated</li>
+             * <li><strong>checkedFail</strong>: validation failed</li>
+             * <li><strong>revoked</strong>: revoked</li>
+             * <li><strong>revokeChecking</strong>: revocation request being validated</li>
+             * <li><strong>issued</strong>: issued (excluding hosted certificates that are issued, certificates that are about to expire, expired certificates, and uploaded certificates)</li>
+             * <li><strong>trustee</strong>: hosted and issued</li>
+             * <li><strong>upload</strong>: uploaded (excluding certificates that are about to expire and expired certificates)</li>
+             * <li><strong>willExpired</strong>: about to expire (including certificates issued by using the Certificate Management Service console and uploaded certificates)</li>
+             * <li><strong>expired</strong>: expired (including certificates issued by using the Certificate Management Service console and uploaded certificates)</li>
+             * <li><strong>validity</strong>: valid (including certificates that are not expired or revoked)</li>
+             * <li><strong>refund</strong>: refunded</li>
+             * <li><strong>closed</strong>: closed</li>
+             * </ul>
              * 
-             * *   **payed**: paid and pending application
-             * *   **checking**: being validated
-             * *   **checkedFail**: validation failed
-             * *   **revoked**: revoked
-             * *   **revokeChecking**: revocation request being validated
-             * *   **issued**: issued (excluding hosted certificates that are issued, certificates that are about to expire, expired certificates, and uploaded certificates)
-             * *   **trustee**: hosted and issued
-             * *   **upload**: uploaded (excluding certificates that are about to expire and expired certificates)
-             * *   **willExpired**: about to expire (including certificates issued by using the Certificate Management Service console and uploaded certificates)
-             * *   **expired**: expired (including certificates issued by using the Certificate Management Service console and uploaded certificates)
-             * *   **validity**: valid (including certificates that are not expired or revoked)
-             * *   **refund**: refunded
-             * *   **closed**: closed
+             * <strong>example:</strong>
+             * <p>issued</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;

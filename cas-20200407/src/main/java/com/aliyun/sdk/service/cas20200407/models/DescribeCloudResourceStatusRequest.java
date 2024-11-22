@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudResourceStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudResourceStatusRequest</p>
@@ -53,10 +54,13 @@ public class DescribeCloudResourceStatusRequest extends Request {
         } 
 
         /**
-         * The AccessKey secret used to access cloud resources.
-         * <p>
+         * <p>The AccessKey secret used to access cloud resources.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2712219.html">ListCloudAccess</a> operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListCloudAccess](~~2712219~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>AKID9*******XX</p>
          */
         public Builder secretId(String secretId) {
             this.putQueryParameter("SecretId", secretId);

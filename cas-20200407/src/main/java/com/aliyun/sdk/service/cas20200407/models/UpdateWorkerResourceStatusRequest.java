@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkerResourceStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateWorkerResourceStatusRequest</p>
@@ -84,7 +85,11 @@ public class UpdateWorkerResourceStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the deployment task. You can call the [CreateDeploymentJob](~~2712234~~) operation to obtain the ID of a deployment task from the **JobId** parameter. You can also call the [ListDeploymentJob](~~2712223~~) operation to obtain the ID of a deployment task.
+         * <p>The ID of the deployment task. You can call the <a href="https://help.aliyun.com/document_detail/2712234.html">CreateDeploymentJob</a> operation to obtain the ID of a deployment task from the <strong>JobId</strong> parameter. You can also call the <a href="https://help.aliyun.com/document_detail/2712223.html">ListDeploymentJob</a> operation to obtain the ID of a deployment task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -93,12 +98,15 @@ public class UpdateWorkerResourceStatusRequest extends Request {
         }
 
         /**
-         * The desired status.
-         * <p>
+         * <p>The desired status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>rollback</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   rollback
+         * <strong>example:</strong>
+         * <p>rollback</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -107,7 +115,11 @@ public class UpdateWorkerResourceStatusRequest extends Request {
         }
 
         /**
-         * The ID of the worker task. You can call the [ListWorkerResource](~~2712224~~) operation to obtain the ID of a worker task.
+         * <p>The ID of the worker task. You can call the <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a> operation to obtain the ID of a worker task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workerId(Long workerId) {
             this.putQueryParameter("WorkerId", workerId);

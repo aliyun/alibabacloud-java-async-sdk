@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>MoveResourceGroupRequest</p>
@@ -98,7 +99,10 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * The region of the organization to which the owner of the certificate belongs. Valid values: ap-southeast-1 and cn-hangzhou.
+         * <p>The region of the organization to which the owner of the certificate belongs. Valid values: ap-southeast-1 and cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -107,7 +111,11 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmykgxu5d46ey</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -116,7 +124,11 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-cn-4591d3xa****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -125,14 +137,16 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource.\
-         * <p>
-         * Default value: **instance**
+         * <p>The type of the resource.<br>Default value: <strong>instance</strong></p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>instance: certificate order</li>
+         * <li>Certificate: certificate</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   instance: certificate order
-         * *   Certificate: certificate
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

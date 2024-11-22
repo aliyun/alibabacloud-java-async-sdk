@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeploymentJobStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeploymentJobStatusResponseBody</p>
@@ -193,7 +194,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         private Integer workerCount; 
 
         /**
-         * The total number of purchased resources.
+         * <p>The total number of purchased resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder buyCount(Integer buyCount) {
             this.buyCount = buyCount;
@@ -201,7 +205,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of certificates involved in the deployment task.
+         * <p>The number of certificates involved in the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder certCount(Integer certCount) {
             this.certCount = certCount;
@@ -209,7 +216,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of resources consumed by worker tasks.
+         * <p>The number of resources consumed by worker tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder costCount(Integer costCount) {
             this.costCount = costCount;
@@ -217,7 +227,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of failed worker tasks, excluding rollback tasks.
+         * <p>The number of failed worker tasks, excluding rollback tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -225,7 +238,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of worker tasks that match the certificate.
+         * <p>The total number of worker tasks that match the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder matchWorkerCount(Integer matchWorkerCount) {
             this.matchWorkerCount = matchWorkerCount;
@@ -233,7 +249,7 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of cloud resources to which certificates are deployed in the deployment task.
+         * <p>The number of cloud resources to which certificates are deployed in the deployment task.</p>
          */
         public Builder productWorkerCount(java.util.List < ProductWorkerCount> productWorkerCount) {
             this.productWorkerCount = productWorkerCount;
@@ -241,7 +257,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -249,7 +268,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of resources.
+         * <p>The total number of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4127</p>
          */
         public Builder resourceCount(Integer resourceCount) {
             this.resourceCount = resourceCount;
@@ -257,7 +279,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of worker tasks that are rolled backed.
+         * <p>The number of worker tasks that are rolled backed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder rollbackCount(Integer rollbackCount) {
             this.rollbackCount = rollbackCount;
@@ -265,7 +290,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of worker tasks that failed to be rolled back.
+         * <p>The number of worker tasks that failed to be rolled back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder rollbackFailedCount(Integer rollbackFailedCount) {
             this.rollbackFailedCount = rollbackFailedCount;
@@ -273,7 +301,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of worker tasks that are successfully rolled back.
+         * <p>The number of worker tasks that are successfully rolled back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder rollbackSuccessCount(Integer rollbackSuccessCount) {
             this.rollbackSuccessCount = rollbackSuccessCount;
@@ -281,7 +312,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of successful worker tasks, excluding rollback tasks.
+         * <p>The number of successful worker tasks, excluding rollback tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -289,7 +323,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of used resources.
+         * <p>The total number of used resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder useCount(Integer useCount) {
             this.useCount = useCount;
@@ -297,7 +334,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of resources to which certificate are deployed in the current cloud service. The value indicates the total number of worker tasks.
+         * <p>The total number of resources to which certificate are deployed in the current cloud service. The value indicates the total number of worker tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder workerCount(Integer workerCount) {
             this.workerCount = workerCount;
@@ -310,6 +350,12 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeploymentJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeploymentJobStatusResponseBody</p>
+     */
     public static class ProductWorkerCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -349,7 +395,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
             private String productName; 
 
             /**
-             * The total number of resources of a cloud service in the deployment task.
+             * <p>The total number of resources of a cloud service in the deployment task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -357,27 +406,30 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service. Valid values:
-             * <p>
+             * <p>The name of the cloud service. Valid values:</p>
+             * <ul>
+             * <li><strong>SLB</strong>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>LIVE</strong>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>webHosting</strong>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>VOD</strong>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>CR</strong>: Container Registry. This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>DCDN</strong>: Dynamic Content Delivery Network (DCDN).</li>
+             * <li><strong>DDOS</strong>: Anti-DDoS.</li>
+             * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN).</li>
+             * <li><strong>ALB</strong>: Application Load Balancer (ALB).</li>
+             * <li><strong>APIGateway</strong>: API Gateway.</li>
+             * <li><strong>FC</strong>: Function Compute.</li>
+             * <li><strong>GA</strong>: Global Accelerator (GA).</li>
+             * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
+             * <li><strong>NLB</strong>: Network Load Balancer (NLB).</li>
+             * <li><strong>OSS</strong>: Object Storage Service (OSS).</li>
+             * <li><strong>SAE</strong>: Serverless App Engine (SAE).</li>
+             * <li><strong>TencentCDN</strong>: Tencent Cloud Content Delivery Network (CDN).</li>
+             * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
+             * </ul>
              * 
-             * *   **SLB**: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).
-             * *   **LIVE**: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).
-             * *   **webHosting**: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).
-             * *   **VOD**: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).
-             * *   **CR**: Container Registry. This value is supported only at the China site (aliyun.com).
-             * *   **DCDN**: Dynamic Content Delivery Network (DCDN).
-             * *   **DDOS**: Anti-DDoS.
-             * *   **CDN**: Alibaba Cloud CDN (CDN).
-             * *   **ALB**: Application Load Balancer (ALB).
-             * *   **APIGateway**: API Gateway.
-             * *   **FC**: Function Compute.
-             * *   **GA**: Global Accelerator (GA).
-             * *   **MSE**: Microservices Engine (MSE).
-             * *   **NLB**: Network Load Balancer (NLB).
-             * *   **OSS**: Object Storage Service (OSS).
-             * *   **SAE**: Serverless App Engine (SAE).
-             * *   **TencentCDN**: Tencent Cloud Content Delivery Network (CDN).
-             * *   **WAF**: Web Application Firewall (WAF).
+             * <strong>example:</strong>
+             * <p>NLB</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;

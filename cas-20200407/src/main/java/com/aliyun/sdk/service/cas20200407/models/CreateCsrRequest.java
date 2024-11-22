@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCsrRequest} extends {@link RequestModel}
  *
  * <p>CreateCsrRequest</p>
@@ -185,7 +186,11 @@ public class CreateCsrRequest extends Request {
         } 
 
         /**
-         * The algorithm. Valid values: RSA, SM2, and ECC. For more information about algorithms, see [Select an SSL certificate](~~197871~~).
+         * <p>The algorithm. Valid values: RSA, SM2, and ECC. For more information about algorithms, see <a href="https://help.aliyun.com/document_detail/197871.html">Select an SSL certificate</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -194,7 +199,11 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * The primary domain name, which is a common name.
+         * <p>The primary domain name, which is a common name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123.com</p>
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -203,7 +212,10 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * The name of the company.
+         * <p>The name of the company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aly</p>
          */
         public Builder corpName(String corpName) {
             this.putQueryParameter("CorpName", corpName);
@@ -212,7 +224,11 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * The code of the country or region in which the organization is located. For example, you can use CN to indicate China and use US to indicate the United States.
+         * <p>The code of the country or region in which the organization is located. For example, you can use CN to indicate China and use US to indicate the United States.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -221,7 +237,10 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * The department that uses the certificate.
+         * <p>The department that uses the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -230,11 +249,15 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * The key length that is used by the algorithm.
-         * <p>
+         * <p>The key length that is used by the algorithm.</p>
+         * <ul>
+         * <li>The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits.</li>
+         * <li>The key length for ECC and SM2 algorithms can be 256 bits.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits.
-         * *   The key length for ECC and SM2 algorithms can be 256 bits.
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder keySize(Integer keySize) {
             this.putQueryParameter("KeySize", keySize);
@@ -243,7 +266,11 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * The city where the company is located.
+         * <p>The city where the company is located.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder locality(String locality) {
             this.putQueryParameter("Locality", locality);
@@ -252,7 +279,10 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * The name of the CSR. The name can be up to 50 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.).
+         * <p>The name of the CSR. The name can be up to 50 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>csr-123</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -261,7 +291,11 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * The province or location where the company is located.
+         * <p>The province or location where the company is located.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -270,7 +304,10 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * The secondary domain names. Separate multiple domain names with commas (,). You can use the CSR to apply for a certificate for both the primary and secondary domain names.
+         * <p>The secondary domain names. Separate multiple domain names with commas (,). You can use the CSR to apply for a certificate for both the primary and secondary domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com,www.aliyundoc.com">www.example.com,www.aliyundoc.com</a></p>
          */
         public Builder sans(String sans) {
             this.putQueryParameter("Sans", sans);

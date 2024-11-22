@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeploymentJobRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeploymentJobRequest</p>
@@ -54,7 +55,11 @@ public class DescribeDeploymentJobRequest extends Request {
         } 
 
         /**
-         * The ID of the deployment job. The **ID** of the job is returned after you call the [CreateDeploymentJob](~~2712234~~) operation. You can also call the [ListDeploymentJob](~~2712223~~) operation to obtain the ID.
+         * <p>The ID of the deployment job. The <strong>ID</strong> of the job is returned after you call the <a href="https://help.aliyun.com/document_detail/2712234.html">CreateDeploymentJob</a> operation. You can also call the <a href="https://help.aliyun.com/document_detail/2712223.html">ListDeploymentJob</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);

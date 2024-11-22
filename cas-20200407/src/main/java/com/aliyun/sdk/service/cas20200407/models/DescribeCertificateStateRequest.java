@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCertificateStateRequest} extends {@link RequestModel}
  *
  * <p>DescribeCertificateStateRequest</p>
@@ -54,10 +55,14 @@ public class DescribeCertificateStateRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate application order that you want to query.
-         * <p>
+         * <p>The ID of the certificate application order that you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListUserCertificateOrder](~~455804~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>123451222</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

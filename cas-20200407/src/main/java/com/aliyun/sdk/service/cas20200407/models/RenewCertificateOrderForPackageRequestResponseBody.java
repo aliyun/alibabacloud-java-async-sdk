@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewCertificateOrderForPackageRequestResponseBody} extends {@link TeaModel}
  *
  * <p>RenewCertificateOrderForPackageRequestResponseBody</p>
@@ -49,10 +50,13 @@ public class RenewCertificateOrderForPackageRequestResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The ID of the certificate application order that is renewed.
-         * <p>
+         * <p>The ID of the certificate application order that is renewed.</p>
+         * <blockquote>
+         * <p> You can use the ID to query the status of the certificate application order. For more information, see <a href="https://help.aliyun.com/document_detail/164111.html">DescribeCertificateState</a>.</p>
+         * </blockquote>
          * 
-         * >  You can use the ID to query the status of the certificate application order. For more information, see [DescribeCertificateState](~~164111~~).
+         * <strong>example:</strong>
+         * <p>323451222</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -60,7 +64,10 @@ public class RenewCertificateOrderForPackageRequestResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

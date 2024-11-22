@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserCertificateDetailRequest} extends {@link RequestModel}
  *
  * <p>GetUserCertificateDetailRequest</p>
@@ -68,7 +69,10 @@ public class GetUserCertificateDetailRequest extends Request {
         } 
 
         /**
-         * Specifies whether to filter return results. Valid values: true and false. Default value: false. **true** specifies that the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey parameters are not returned. **false** specifies that the parameters are returned.
+         * <p>Specifies whether to filter return results. Valid values: true and false. Default value: false. <strong>true</strong> specifies that the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey parameters are not returned. <strong>false</strong> specifies that the parameters are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder certFilter(Boolean certFilter) {
             this.putQueryParameter("CertFilter", certFilter);
@@ -77,10 +81,14 @@ public class GetUserCertificateDetailRequest extends Request {
         }
 
         /**
-         * The ID of the certificate.
-         * <p>
+         * <p>The ID of the certificate.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListUserCertificateOrder](~~455804~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>6055048</p>
          */
         public Builder certId(Long certId) {
             this.putQueryParameter("CertId", certId);

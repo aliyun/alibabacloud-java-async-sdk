@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserCertificateOrderRequest} extends {@link RequestModel}
  *
  * <p>ListUserCertificateOrderRequest</p>
@@ -123,7 +124,10 @@ public class ListUserCertificateOrderRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -132,7 +136,10 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * The domain name that is bound or the ID of the resource. Fuzzy match is supported.
+         * <p>The domain name that is bound or the ID of the resource. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-instanceId</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -141,13 +148,16 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * The type of the order. Default value: **CPACK**. Valid values:
-         * <p>
+         * <p>The type of the order. Default value: <strong>CPACK</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>CPACK</strong>: virtual resource order. If you set OrderType to CPACK, only the information about orders that are generated to consume the certificate quota is returned.</li>
+         * <li><strong>BUY</strong>: purchase order. If you set OrderType to BUY, only the information about purchase orders is returned. In most cases, this type of order can be ignored.</li>
+         * <li><strong>UPLOAD</strong>: uploaded certificate. If you set OrderType to UPLOAD, only uploaded certificates are returned.</li>
+         * <li><strong>CERT</strong>: certificate. If you set OrderType to CERT, both issued certificates and uploaded certificates are returned.</li>
+         * </ul>
          * 
-         * *   **CPACK**: virtual resource order. If you set OrderType to CPACK, only the information about orders that are generated to consume the certificate quota is returned.
-         * *   **BUY**: purchase order. If you set OrderType to BUY, only the information about purchase orders is returned. In most cases, this type of order can be ignored.
-         * *   **UPLOAD**: uploaded certificate. If you set OrderType to UPLOAD, only uploaded certificates are returned.
-         * *   **CERT**: certificate. If you set OrderType to CERT, both issued certificates and uploaded certificates are returned.
+         * <strong>example:</strong>
+         * <p>CPACK</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -156,7 +166,10 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [ListResources](~~2716559~~) operation to obtain the ID.
+         * <p>The ID of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******4wia</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -165,7 +178,10 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 50.
+         * <p>The number of entries to return on each page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder showSize(Long showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -174,19 +190,21 @@ public class ListUserCertificateOrderRequest extends Request {
         }
 
         /**
-         * The certificate status of the order. Valid values:
-         * <p>
+         * <p>The certificate status of the order. Valid values:</p>
+         * <ul>
+         * <li><strong>PAYED</strong>: pending application. You can set Status to PAYED only if you set OrderType to CPACK or BUY.</li>
+         * <li><strong>CHECKING</strong>: validating. You can set Status to CHECKING only if you set OrderType to CPACK or BUY.</li>
+         * <li><strong>CHECKED_FAIL</strong>: validation failed. You can set Status to CHECKED_FAIL only if you set OrderType to CPACK or BUY.</li>
+         * <li><strong>ISSUED</strong>: issued.</li>
+         * <li><strong>WILLEXPIRED</strong>: about to expire.</li>
+         * <li><strong>EXPIRED</strong>: expired.</li>
+         * <li><strong>NOTACTIVATED</strong>: not activated. You can set Status to NOTACTIVATED only if you set OrderType to CPACK or BUY.</li>
+         * <li><strong>REVOKED</strong>: revoked. You can set Status to REVOKED only if you set OrderType to CPACK or BUY.</li>
+         * </ul>
+         * <p>If you set OrderType to CERT or UPLOAD and Status is left empty, valid certificates are returned by default, including issued certificates and certificates that are about to expire. If you set OrderType to CPACK or BUY and Status is left empty, all orders are returned by default.</p>
          * 
-         * *   **PAYED**: pending application. You can set Status to PAYED only if you set OrderType to CPACK or BUY.
-         * *   **CHECKING**: validating. You can set Status to CHECKING only if you set OrderType to CPACK or BUY.
-         * *   **CHECKED_FAIL**: validation failed. You can set Status to CHECKED_FAIL only if you set OrderType to CPACK or BUY.
-         * *   **ISSUED**: issued.
-         * *   **WILLEXPIRED**: about to expire.
-         * *   **EXPIRED**: expired.
-         * *   **NOTACTIVATED**: not activated. You can set Status to NOTACTIVATED only if you set OrderType to CPACK or BUY.
-         * *   **REVOKED**: revoked. You can set Status to REVOKED only if you set OrderType to CPACK or BUY.
-         * 
-         * If you set OrderType to CERT or UPLOAD and Status is left empty, valid certificates are returned by default, including issued certificates and certificates that are about to expire. If you set OrderType to CPACK or BUY and Status is left empty, all orders are returned by default.
+         * <strong>example:</strong>
+         * <p>ISSUED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

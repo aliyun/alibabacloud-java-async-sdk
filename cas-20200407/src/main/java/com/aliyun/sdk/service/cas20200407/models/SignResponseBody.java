@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SignResponseBody} extends {@link TeaModel}
  *
  * <p>SignResponseBody</p>
@@ -49,7 +50,10 @@ public class SignResponseBody extends TeaModel {
         private String signature; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ed33293-2e48-6b14-861e-538e28e408eb</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class SignResponseBody extends TeaModel {
         }
 
         /**
-         * The signature.
+         * <p>The signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyaC0w3ROK5b3QcHmUtAhMY/sQjKu2t3uBfnf6J/gn7JfZtyxwcCUjzXbw5jmqJQRbj1te670Bshg9kUdanKhtHFhJjU5jX+ZMMBr6pH0gqQDJxR0K0yHXRc0Q5OQoUZ6BfpbI4Wt4jJvJSdCstz1vSg12CfEHS8Kd5qfhItK7Y=</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;

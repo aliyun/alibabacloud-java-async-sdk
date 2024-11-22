@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudAccessResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudAccessResponseBody</p>
@@ -85,7 +86,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of the AccessKey pairs.
+         * <p>The list of the AccessKey pairs.</p>
          */
         public Builder cloudAccessList(java.util.List < CloudAccessList> cloudAccessList) {
             this.cloudAccessList = cloudAccessList;
@@ -93,7 +94,10 @@ public class ListCloudAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +105,10 @@ public class ListCloudAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D3F1FA43-1C26-50A2-8F0F-7A03851DBB46</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class ListCloudAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The number of revoked certificates per page. Default value: **20**.
+         * <p>The number of revoked certificates per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -117,7 +127,10 @@ public class ListCloudAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListCloudAccessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudAccessResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudAccessResponseBody</p>
+     */
     public static class CloudAccessList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessId")
         private Long accessId;
@@ -193,7 +212,10 @@ public class ListCloudAccessResponseBody extends TeaModel {
             private String serviceStatus; 
 
             /**
-             * The AccessKey ID used to access the cloud service.
+             * <p>The AccessKey ID used to access the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>888</p>
              */
             public Builder accessId(Long accessId) {
                 this.accessId = accessId;
@@ -201,7 +223,10 @@ public class ListCloudAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service provider.
+             * <p>The cloud service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tencent</p>
              */
             public Builder cloudName(String cloudName) {
                 this.cloudName = cloudName;
@@ -209,7 +234,10 @@ public class ListCloudAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret used to access the cloud service.
+             * <p>The AccessKey secret used to access the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI4G5KAZCJQqdwPBAXXXX</p>
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;
@@ -217,7 +245,10 @@ public class ListCloudAccessResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the service.
+             * <p>The status of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadCsrRequest} extends {@link RequestModel}
  *
  * <p>UploadCsrRequest</p>
@@ -82,7 +83,11 @@ public class UploadCsrRequest extends Request {
         } 
 
         /**
-         * The content of the CSR.
+         * <p>The content of the CSR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -91,7 +96,10 @@ public class UploadCsrRequest extends Request {
         }
 
         /**
-         * The private key content of the certificate in the PEM format.
+         * <p>The private key content of the certificate in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -100,7 +108,10 @@ public class UploadCsrRequest extends Request {
         }
 
         /**
-         * The name of the CSR.
+         * <p>The name of the CSR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

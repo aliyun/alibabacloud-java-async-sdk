@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePackageStateRequest} extends {@link RequestModel}
  *
  * <p>DescribePackageStateRequest</p>
@@ -53,24 +54,27 @@ public class DescribePackageStateRequest extends Request {
         } 
 
         /**
-         * The specifications of the certificate resource plan. Valid values:
-         * <p>
+         * <p>The specifications of the certificate resource plan. Valid values:</p>
+         * <ul>
+         * <li><strong>digicert-free-1-free</strong> (default): DigiCert single-domain domain validated (DV) certificate in a three-month free trial, available only on the China site (aliyun.com).</li>
+         * <li><strong>symantec-free-1-free</strong>: DigiCert single-domain DV certificate in a one-year free trial, available only on the China site (aliyun.com).</li>
+         * <li><strong>symantec-dv-1-starter</strong>: DigiCert wildcard DV certificate.</li>
+         * <li><strong>symantec-ov-1-personal</strong>: DigiCert single-domain organization validated (OV) certificate.</li>
+         * <li><strong>symantec-ov-w-personal</strong>: DigiCert wildcard OV certificate.</li>
+         * <li><strong>geotrust-dv-1-starter</strong>: GeoTrust single-domain DV certificate.</li>
+         * <li><strong>geotrust-dv-w-starter</strong>: GeoTrust wildcard DV certificate.</li>
+         * <li><strong>geotrust-ov-1-personal</strong>: GeoTrust single-domain OV certificate.</li>
+         * <li><strong>geotrust-ov-w-personal</strong>: GeoTrust wildcard OV certificate.</li>
+         * <li><strong>globalsign-dv-1-personal</strong>: GlobalSign single-domain DV certificate.</li>
+         * <li><strong>globalsign-dv-w-advanced</strong>: GlobalSign wildcard DV certificate.</li>
+         * <li><strong>globalsign-ov-1-personal</strong>: GlobalSign single-domain OV certificate.</li>
+         * <li><strong>globalsign-ov-w-advanced</strong>: GlobalSign wildcard OV certificate.</li>
+         * <li><strong>cfca-ov-1-personal</strong>: China Financial Certification Authority (CFCA) single-domain OV certificate, available only on the China site (aliyun.com).</li>
+         * <li><strong>cfca-ev-w-advanced</strong>: CFCA wildcard OV certificate, available only on the China site (aliyun.com).</li>
+         * </ul>
          * 
-         * *   **digicert-free-1-free** (default): DigiCert single-domain domain validated (DV) certificate in a three-month free trial, available only on the China site (aliyun.com).
-         * *   **symantec-free-1-free**: DigiCert single-domain DV certificate in a one-year free trial, available only on the China site (aliyun.com).
-         * *   **symantec-dv-1-starter**: DigiCert wildcard DV certificate.
-         * *   **symantec-ov-1-personal**: DigiCert single-domain organization validated (OV) certificate.
-         * *   **symantec-ov-w-personal**: DigiCert wildcard OV certificate.
-         * *   **geotrust-dv-1-starter**: GeoTrust single-domain DV certificate.
-         * *   **geotrust-dv-w-starter**: GeoTrust wildcard DV certificate.
-         * *   **geotrust-ov-1-personal**: GeoTrust single-domain OV certificate.
-         * *   **geotrust-ov-w-personal**: GeoTrust wildcard OV certificate.
-         * *   **globalsign-dv-1-personal**: GlobalSign single-domain DV certificate.
-         * *   **globalsign-dv-w-advanced**: GlobalSign wildcard DV certificate.
-         * *   **globalsign-ov-1-personal**: GlobalSign single-domain OV certificate.
-         * *   **globalsign-ov-w-advanced**: GlobalSign wildcard OV certificate.
-         * *   **cfca-ov-1-personal**: China Financial Certification Authority (CFCA) single-domain OV certificate, available only on the China site (aliyun.com).
-         * *   **cfca-ev-w-advanced**: CFCA wildcard OV certificate, available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>symantec-free-1-free</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

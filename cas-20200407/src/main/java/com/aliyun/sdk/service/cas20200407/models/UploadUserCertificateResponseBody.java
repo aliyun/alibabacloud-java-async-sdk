@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadUserCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>UploadUserCertificateResponseBody</p>
@@ -49,7 +50,10 @@ public class UploadUserCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder certId(Long certId) {
             this.certId = certId;
@@ -57,7 +61,10 @@ public class UploadUserCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDB81BA2-E1F5-4D08-A2DD-4BE2BF44C90E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

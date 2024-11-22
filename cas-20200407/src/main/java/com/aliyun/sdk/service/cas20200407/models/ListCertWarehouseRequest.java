@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCertWarehouseRequest} extends {@link RequestModel}
  *
  * <p>ListCertWarehouseRequest</p>
@@ -109,7 +110,10 @@ public class ListCertWarehouseRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,7 +122,10 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * The instance ID of the certificate application repository.
+         * <p>The instance ID of the certificate application repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14dcc8afc7578e1f</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -127,7 +134,10 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * The name of the certificate application repository. Fuzzy match is supported.
+         * <p>The name of the certificate application repository. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -136,7 +146,10 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 50.
+         * <p>The number of entries to return on each page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder showSize(Long showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -145,14 +158,17 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * The type of the certificate application repository. Valid values:
-         * <p>
+         * <p>The type of the certificate application repository. Valid values:</p>
+         * <ul>
+         * <li><strong>ssl</strong>: certificate application repository of SSL certificates</li>
+         * <li><strong>uploadPCA</strong>: certificate application repository of uploaded private certificates</li>
+         * <li><strong>free</strong>: certificate application repository of free certificates, available only on the China site (aliyun.com)</li>
+         * <li><strong>aliyunPCA</strong>: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)</li>
+         * <li><strong>disable</strong>: disabled certificate application repository</li>
+         * </ul>
          * 
-         * *   **ssl**: certificate application repository of SSL certificates
-         * *   **uploadPCA**: certificate application repository of uploaded private certificates
-         * *   **free**: certificate application repository of free certificates, available only on the China site (aliyun.com)
-         * *   **aliyunPCA**: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)
-         * *   **disable**: disabled certificate application repository
+         * <strong>example:</strong>
+         * <p>aliyunPCA</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

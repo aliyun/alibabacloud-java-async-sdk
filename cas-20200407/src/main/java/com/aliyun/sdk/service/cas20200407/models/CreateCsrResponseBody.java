@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCsrResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCsrResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateCsrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the CSR.
+         * <p>The content of the CSR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -69,7 +73,10 @@ public class CreateCsrResponseBody extends TeaModel {
         }
 
         /**
-         * The unique identifier of the CSR. You can use this value to obtain the content of the CSR. For more information about the operation that you can call to obtain the content of a CSR, see [GetCsrDetail](~~2709720~~).
+         * <p>The unique identifier of the CSR. You can use this value to obtain the content of the CSR. For more information about the operation that you can call to obtain the content of a CSR, see <a href="https://help.aliyun.com/document_detail/2709720.html">GetCsrDetail</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3365</p>
          */
         public Builder csrId(Long csrId) {
             this.csrId = csrId;
@@ -77,7 +84,10 @@ public class CreateCsrResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-123456789ABC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

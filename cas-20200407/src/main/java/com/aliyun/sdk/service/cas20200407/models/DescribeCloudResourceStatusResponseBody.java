@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudResourceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudResourceStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09470F19-CEE8-5C63-BF2C-02B5E3F07A17</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudResourceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudResourceStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudName")
         private String cloudName;
@@ -121,7 +131,10 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The cloud service provider.
+             * <p>The cloud service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder cloudName(String cloudName) {
                 this.cloudName = cloudName;
@@ -129,7 +142,10 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service.
+             * <p>The cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder cloudProduct(String cloudProduct) {
                 this.cloudProduct = cloudProduct;
@@ -137,7 +153,10 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud resources on which certificates are deployed.
+             * <p>The total number of cloud resources on which certificates are deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

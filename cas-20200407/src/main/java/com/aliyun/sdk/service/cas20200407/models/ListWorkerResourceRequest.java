@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkerResourceRequest} extends {@link RequestModel}
  *
  * <p>ListWorkerResourceRequest</p>
@@ -110,7 +111,10 @@ public class ListWorkerResourceRequest extends Request {
         } 
 
         /**
-         * The cloud service in the deployment task.
+         * <p>The cloud service in the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NLB</p>
          */
         public Builder cloudProduct(String cloudProduct) {
             this.putQueryParameter("CloudProduct", cloudProduct);
@@ -119,7 +123,10 @@ public class ListWorkerResourceRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -128,7 +135,11 @@ public class ListWorkerResourceRequest extends Request {
         }
 
         /**
-         * The ID of the deployment task. You can call the [CreateDeploymentJob](~~2712234~~) operation to obtain the ID of a deployment task from the **ID** parameter. You can also call the [ListDeploymentJob](~~2712223~~) operation to obtain the ID of a deployment task.
+         * <p>The ID of the deployment task. You can call the <a href="https://help.aliyun.com/document_detail/2712234.html">CreateDeploymentJob</a> operation to obtain the ID of a deployment task from the <strong>ID</strong> parameter. You can also call the <a href="https://help.aliyun.com/document_detail/2712223.html">ListDeploymentJob</a> operation to obtain the ID of a deployment task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -137,7 +148,10 @@ public class ListWorkerResourceRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 50.
+         * <p>The number of entries per page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -146,20 +160,22 @@ public class ListWorkerResourceRequest extends Request {
         }
 
         /**
-         * The status of the worker task.
-         * <p>
+         * <p>The status of the worker task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>rollback</li>
+         * <li>rollback_error</li>
+         * <li>success</li>
+         * <li>rollback_success</li>
+         * <li>pending</li>
+         * <li>scheduling</li>
+         * <li>processing</li>
+         * <li>error</li>
+         * <li>editing</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   rollback
-         * *   rollback_error
-         * *   success
-         * *   rollback_success
-         * *   pending
-         * *   scheduling
-         * *   processing
-         * *   error
-         * *   editing
+         * <strong>example:</strong>
+         * <p>editing</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

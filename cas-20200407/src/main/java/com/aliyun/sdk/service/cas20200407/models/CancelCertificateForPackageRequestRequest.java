@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelCertificateForPackageRequestRequest} extends {@link RequestModel}
  *
  * <p>CancelCertificateForPackageRequestRequest</p>
@@ -54,10 +55,14 @@ public class CancelCertificateForPackageRequestRequest extends Request {
         } 
 
         /**
-         * The order ID.
-         * <p>
+         * <p>The order ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListUserCertificateOrder](~~455804~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>123451222</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

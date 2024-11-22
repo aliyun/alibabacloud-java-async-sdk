@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListContactResponseBody} extends {@link TeaModel}
  *
  * <p>ListContactResponseBody</p>
@@ -97,7 +98,7 @@ public class ListContactResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The contacts.
+         * <p>The contacts.</p>
          */
         public Builder contactList(java.util.List < ContactList> contactList) {
             this.contactList = contactList;
@@ -105,7 +106,10 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +117,10 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * The keyword used in the fuzzy search.
+         * <p>The keyword used in the fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186</p>
          */
         public Builder keyword(String keyword) {
             this.keyword = keyword;
@@ -121,7 +128,10 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * The number of certificates per page. Default value: **20**.
+         * <p>The number of certificates per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -137,7 +150,10 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class ListContactResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListContactResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListContactResponseBody</p>
+     */
     public static class ContactList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactId")
         private Long contactId;
@@ -249,7 +271,10 @@ public class ListContactResponseBody extends TeaModel {
             private String webhooks; 
 
             /**
-             * The ID of the contact.
+             * <p>The ID of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>519580</p>
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -257,7 +282,10 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the contact.
+             * <p>The email address of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -265,7 +293,10 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the email address passed the verification.
+             * <p>Indicates whether the email address passed the verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder emailStatus(Integer emailStatus) {
                 this.emailStatus = emailStatus;
@@ -273,7 +304,10 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139****8888</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -281,7 +315,10 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the phone number was verified.
+             * <p>Indicates whether the phone number was verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mobileStatus(Integer mobileStatus) {
                 this.mobileStatus = mobileStatus;
@@ -289,7 +326,10 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the contact.
+             * <p>The name of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ty-yaoyue.com</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -297,7 +337,10 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL of the chatbot.
+             * <p>The webhook URL of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/XXX%5C%22,%5C%22https://oapi.dingtalk.com/robot/send?access_token=XXX%5C%22,%5C%22https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXX%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/XXX\&quot;,\&quot;https://oapi.dingtalk.com/robot/send?access_token=XXX\&quot;,\&quot;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXX\&quot;]</a></p>
              */
             public Builder webhooks(String webhooks) {
                 this.webhooks = webhooks;

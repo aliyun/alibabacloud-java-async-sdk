@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCertWarehouseQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>GetCertWarehouseQuotaResponseBody</p>
@@ -61,7 +62,10 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         private Long useCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The total quota for certificate repositories, including the free quota and purchased quota.
+         * <p>The total quota for certificate repositories, including the free quota and purchased quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder totalQuota(Long totalQuota) {
             this.totalQuota = totalQuota;
@@ -77,7 +84,10 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The used quota.
+         * <p>The used quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder useCount(Long useCount) {
             this.useCount = useCount;

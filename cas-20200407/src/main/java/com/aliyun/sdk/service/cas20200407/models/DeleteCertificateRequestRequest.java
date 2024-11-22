@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCertificateRequestRequest} extends {@link RequestModel}
  *
  * <p>DeleteCertificateRequestRequest</p>
@@ -54,10 +55,14 @@ public class DeleteCertificateRequestRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate application order that you want to delete.
-         * <p>
+         * <p>The ID of the certificate application order that you want to delete.</p>
+         * <blockquote>
+         * <p> After you call the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a>, <a href="https://help.aliyun.com/document_detail/455292.html">CreateCertificateRequest</a>, or <a href="https://help.aliyun.com/document_detail/455801.html">CreateCertificateWithCsrRequest</a> operation to submit a certificate application, you can obtain the ID of the certificate application order from the <strong>OrderId</strong> response parameter. You can also call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the order ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  After you call the [CreateCertificateForPackageRequest](~~455296~~), [CreateCertificateRequest](~~455292~~), or [CreateCertificateWithCsrRequest](~~455801~~) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter. You can also call the [ListUserCertificateOrder](~~455804~~) operation to obtain the order ID.
+         * <strong>example:</strong>
+         * <p>123451222</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

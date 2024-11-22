@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudAccessRequest} extends {@link RequestModel}
  *
  * <p>ListCloudAccessRequest</p>
@@ -95,7 +96,10 @@ public class ListCloudAccessRequest extends Request {
         } 
 
         /**
-         * The cloud service provider.
+         * <p>The cloud service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tencent</p>
          */
         public Builder cloudName(String cloudName) {
             this.putQueryParameter("CloudName", cloudName);
@@ -104,7 +108,10 @@ public class ListCloudAccessRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -113,7 +120,10 @@ public class ListCloudAccessRequest extends Request {
         }
 
         /**
-         * The AccessKey secret used to access the cloud service.
+         * <p>The AccessKey secret used to access the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>276</p>
          */
         public Builder secretId(String secretId) {
             this.putQueryParameter("SecretId", secretId);
@@ -122,7 +132,10 @@ public class ListCloudAccessRequest extends Request {
         }
 
         /**
-         * The number of certificates per page. Default value: **20**.
+         * <p>The number of certificates per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

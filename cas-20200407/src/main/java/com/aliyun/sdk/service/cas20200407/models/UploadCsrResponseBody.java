@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadCsrResponseBody} extends {@link TeaModel}
  *
  * <p>UploadCsrResponseBody</p>
@@ -49,7 +50,10 @@ public class UploadCsrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the CSR.
+         * <p>The ID of the CSR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2271</p>
          */
         public Builder csrId(Long csrId) {
             this.csrId = csrId;
@@ -57,7 +61,10 @@ public class UploadCsrResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

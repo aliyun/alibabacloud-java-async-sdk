@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCsrRequest} extends {@link RequestModel}
  *
  * <p>DeleteCsrRequest</p>
@@ -54,7 +55,11 @@ public class DeleteCsrRequest extends Request {
         } 
 
         /**
-         * The ID of the CSR.
+         * <p>The ID of the CSR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3013</p>
          */
         public Builder csrId(Long csrId) {
             this.putQueryParameter("CsrId", csrId);

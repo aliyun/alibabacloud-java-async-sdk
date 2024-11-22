@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCertificateForPackageRequestResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCertificateForPackageRequestResponseBody</p>
@@ -49,10 +50,13 @@ public class CreateCertificateForPackageRequestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the certificate application order.
-         * <p>
+         * <p>The ID of the certificate application order.</p>
+         * <blockquote>
+         * <p> You can use the ID to query the status of the certificate application order. For more information, see <a href="https://help.aliyun.com/document_detail/164111.html">DescribeCertificateState</a>.</p>
+         * </blockquote>
          * 
-         * >  You can use the ID to query the status of the certificate application order. For more information, see [DescribeCertificateState](~~164111~~).
+         * <strong>example:</strong>
+         * <p>2021010</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -60,7 +64,10 @@ public class CreateCertificateForPackageRequestResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5890029B-938A-589E-98B9-3DEC7BA7C400</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

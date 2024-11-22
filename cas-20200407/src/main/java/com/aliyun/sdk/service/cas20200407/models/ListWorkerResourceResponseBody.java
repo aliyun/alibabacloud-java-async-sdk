@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkerResourceResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkerResourceResponseBody</p>
@@ -85,7 +86,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E50D480-9765-5CFD-9650-9BACCECA5135</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: **50**.
+         * <p>The number of entries per page. Default value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -117,7 +127,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -130,6 +143,12 @@ public class ListWorkerResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkerResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkerResourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertDomain")
         private String certDomain;
@@ -421,7 +440,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * The domain name bound to the certificate in the worker task.
+             * <p>The domain name bound to the certificate in the worker task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder certDomain(String certDomain) {
                 this.certDomain = certDomain;
@@ -429,7 +451,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate in the worker task.
+             * <p>The ID of the certificate in the worker task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12073663</p>
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -437,7 +462,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the certificate in the worker task.
+             * <p>The instance ID of the certificate in the worker task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsn-jzk2h0xz5dmynuphb8@1883</p>
              */
             public Builder certInstanceId(String certInstanceId) {
                 this.certInstanceId = certInstanceId;
@@ -445,7 +473,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate in the worker task.
+             * <p>The name of the certificate in the worker task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testCertName</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -453,10 +484,13 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service provider to which the cloud resource in the worker task belongs.
-             * <p>
+             * <p>The cloud service provider to which the cloud resource in the worker task belongs.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if you deploy certificates to Alibaba Cloud services.</p>
+             * </blockquote>
              * 
-             * >  This parameter is not returned if you deploy certificates to Alibaba Cloud services.
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder cloudName(String cloudName) {
                 this.cloudName = cloudName;
@@ -464,27 +498,30 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service to which the cloud resource in the worker task belongs. Valid values:
-             * <p>
+             * <p>The cloud service to which the cloud resource in the worker task belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN). This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>SLB</strong>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>DCDN</strong>: Dynamic Content Delivery Network (DCDN). This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>DDOS</strong>: Anti-DDoS. This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>LIVE</strong>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>webHosting</strong>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>VOD</strong>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>CR</strong>: Container Registry. This value is supported only at the China site (aliyun.com).</li>
+             * <li><strong>ALB</strong>: Application Load Balancer (ALB).</li>
+             * <li><strong>APIGateway</strong>: API Gateway.</li>
+             * <li><strong>FC</strong>: Function Compute.</li>
+             * <li><strong>GA</strong>: Global Accelerator (GA).</li>
+             * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
+             * <li><strong>NLB</strong>: Network Load Balancer (NLB).</li>
+             * <li><strong>OSS</strong>: Object Storage Service (OSS).</li>
+             * <li><strong>SAE</strong>: Serverless App Engine (SAE).</li>
+             * <li><strong>TencentCDN</strong>: Tencent Cloud Content Delivery Network (CDN).</li>
+             * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
+             * </ul>
              * 
-             * *   **CDN**: Alibaba Cloud CDN (CDN). This value is supported only at the China site (aliyun.com).
-             * *   **SLB**: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).
-             * *   **DCDN**: Dynamic Content Delivery Network (DCDN). This value is supported only at the China site (aliyun.com).
-             * *   **DDOS**: Anti-DDoS. This value is supported only at the China site (aliyun.com).
-             * *   **LIVE**: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).
-             * *   **webHosting**: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).
-             * *   **VOD**: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).
-             * *   **CR**: Container Registry. This value is supported only at the China site (aliyun.com).
-             * *   **ALB**: Application Load Balancer (ALB).
-             * *   **APIGateway**: API Gateway.
-             * *   **FC**: Function Compute.
-             * *   **GA**: Global Accelerator (GA).
-             * *   **MSE**: Microservices Engine (MSE).
-             * *   **NLB**: Network Load Balancer (NLB).
-             * *   **OSS**: Object Storage Service (OSS).
-             * *   **SAE**: Serverless App Engine (SAE).
-             * *   **TencentCDN**: Tencent Cloud Content Delivery Network (CDN).
-             * *   **WAF**: Web Application Firewall (WAF).
+             * <strong>example:</strong>
+             * <p>SLB</p>
              */
             public Builder cloudProduct(String cloudProduct) {
                 this.cloudProduct = cloudProduct;
@@ -492,7 +529,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The original region ID of the cloud resource in the worker task. The value is the region ID defined by the cloud service provider. This parameter is required only when you deploy certificates to services of multiple clouds.
+             * <p>The original region ID of the cloud resource in the worker task. The value is the region ID defined by the cloud service provider. This parameter is required only when you deploy certificates to services of multiple clouds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder cloudRegion(String cloudRegion) {
                 this.cloudRegion = cloudRegion;
@@ -500,13 +540,17 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud resource in the worker task is the default resource. Valid values:
-             * <p>
+             * <p>Indicates whether the cloud resource in the worker task is the default resource. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * >  This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder defaultResource(Boolean defaultResource) {
                 this.defaultResource = defaultResource;
@@ -514,7 +558,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the worker task was created. The time is a timestamp in seconds.
+             * <p>The time when the worker task was created. The time is a timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1680228896000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -522,7 +569,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the worker task was last modified. The time is a timestamp in seconds.
+             * <p>The time when the worker task was last modified. The time is a timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1681956830000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -530,7 +580,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the worker task.
+             * <p>The ID of the worker task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22487</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -538,10 +591,13 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud resource in the worker task.
-             * <p>
+             * <p>The ID of the cloud resource in the worker task.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.
+             * <strong>example:</strong>
+             * <p>cas-cn-0pp118nuu40b</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -549,7 +605,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the deployment task to which the worker task belongs.
+             * <p>The ID of the deployment task to which the worker task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8888</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -557,10 +616,13 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The listener ID of the cloud resource in the worker task.
-             * <p>
+             * <p>The listener ID of the cloud resource in the worker task.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.
+             * <strong>example:</strong>
+             * <p>lsn-lhl8y7s1e1ngc3m3zz@81</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -568,7 +630,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace in SAE. This parameter is returned only if you deploy certificates to SAE.
+             * <p>The ID of the namespace in SAE. This parameter is returned only if you deploy certificates to SAE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32fed52a-4bf7-44f6-955f-e82ada68ef18</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -576,10 +641,13 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The order ID of the worker task, which is the same as the order ID of the certificate.
-             * <p>
+             * <p>The order ID of the worker task, which is the same as the order ID of the certificate.</p>
+             * <blockquote>
+             * <p> If the CertId parameter is returned, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * >  If the CertId parameter is returned, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>9349278</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -587,10 +655,13 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The listening port of the cloud resource in the worker task.
-             * <p>
+             * <p>The listening port of the cloud resource in the worker task.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.
+             * <strong>example:</strong>
+             * <p>4431</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -598,7 +669,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the cloud resource in the worker task.
+             * <p>The region ID of the cloud resource in the worker task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -606,7 +680,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate that was originally bound to the cloud resource in the worker task.
+             * <p>The ID of the certificate that was originally bound to the cloud resource in the worker task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder resourceCertId(Long resourceCertId) {
                 this.resourceCertId = resourceCertId;
@@ -614,7 +691,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that was originally bound to the cloud resource in the worker task.
+             * <p>The domain name that was originally bound to the cloud resource in the worker task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder resourceDomain(String resourceDomain) {
                 this.resourceDomain = resourceDomain;
@@ -622,7 +702,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud resource in the worker task.
+             * <p>The ID of the cloud resource in the worker task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1286999</p>
              */
             public Builder resourceId(Long resourceId) {
                 this.resourceId = resourceId;
@@ -630,18 +713,21 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the worker task. Valid values:
-             * <p>
+             * <p>The status of the worker task. Valid values:</p>
+             * <ul>
+             * <li><strong>editing</strong></li>
+             * <li><strong>pending</strong></li>
+             * <li><strong>scheduling</strong></li>
+             * <li><strong>processing</strong></li>
+             * <li><strong>error</strong></li>
+             * <li><strong>success</strong></li>
+             * <li><strong>rollback</strong></li>
+             * <li><strong>rollback_success</strong></li>
+             * <li><strong>rollback_error</strong></li>
+             * </ul>
              * 
-             * *   **editing**
-             * *   **pending**
-             * *   **scheduling**
-             * *   **processing**
-             * *   **error**
-             * *   **success**
-             * *   **rollback**
-             * *   **rollback_success**
-             * *   **rollback_error**
+             * <strong>example:</strong>
+             * <p>editing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -649,7 +735,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the worker task belongs.
+             * <p>The ID of the Alibaba Cloud account to which the worker task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1666884372152785</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

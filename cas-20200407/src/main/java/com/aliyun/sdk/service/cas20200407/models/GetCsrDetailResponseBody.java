@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCsrDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetCsrDetailResponseBody</p>
@@ -61,7 +62,10 @@ public class GetCsrDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the CSR.
+         * <p>The content of the CSR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST-----   ...... -----END CERTIFICATE REQUEST-----</p>
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -69,7 +73,10 @@ public class GetCsrDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The private key. Specify a Base64-encoded string.
+         * <p>The private key. Specify a Base64-encoded string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN RSA PRIVATE KEY-----…… -----END RSA PRIVATE KEY-----</p>
          */
         public Builder privateKey(String privateKey) {
             this.privateKey = privateKey;
@@ -77,7 +84,10 @@ public class GetCsrDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08F45EA0-66A7-4504-9B31-3589F5CE308D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
