@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskInfoResponseBody</p>
@@ -110,6 +111,12 @@ public class GetTaskInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoChapters")
         private String autoChapters;
@@ -311,6 +318,12 @@ public class GetTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;

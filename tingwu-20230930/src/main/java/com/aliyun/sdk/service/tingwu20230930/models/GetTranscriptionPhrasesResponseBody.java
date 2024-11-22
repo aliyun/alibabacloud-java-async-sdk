@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTranscriptionPhrasesResponseBody} extends {@link TeaModel}
  *
  * <p>GetTranscriptionPhrasesResponseBody</p>
@@ -97,7 +98,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTranscriptionPhrasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTranscriptionPhrasesResponseBody</p>
+     */
     public static class Phrases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -211,6 +221,12 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTranscriptionPhrasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTranscriptionPhrasesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;

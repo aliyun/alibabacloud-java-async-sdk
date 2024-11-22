@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTranscriptionPhrasesResponse} extends {@link TeaModel}
  *
  * <p>DeleteTranscriptionPhrasesResponse</p>

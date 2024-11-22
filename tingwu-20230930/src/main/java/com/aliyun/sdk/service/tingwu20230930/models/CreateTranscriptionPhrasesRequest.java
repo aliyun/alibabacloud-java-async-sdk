@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTranscriptionPhrasesRequest} extends {@link RequestModel}
  *
  * <p>CreateTranscriptionPhrasesRequest</p>
@@ -93,7 +94,10 @@ public class CreateTranscriptionPhrasesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fruit_phrase</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -102,7 +106,10 @@ public class CreateTranscriptionPhrasesRequest extends Request {
         }
 
         /**
-         * WordWeights.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;苹果&quot;:3,&quot;西瓜&quot;:3}</p>
          */
         public Builder wordWeights(String wordWeights) {
             this.putBodyParameter("WordWeights", wordWeights);

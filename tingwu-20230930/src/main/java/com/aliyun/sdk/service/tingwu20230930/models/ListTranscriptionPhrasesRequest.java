@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTranscriptionPhrasesRequest} extends {@link RequestModel}
  *
  * <p>ListTranscriptionPhrasesRequest</p>

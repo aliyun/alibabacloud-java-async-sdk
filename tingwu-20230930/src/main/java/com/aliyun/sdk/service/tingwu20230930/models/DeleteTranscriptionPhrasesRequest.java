@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTranscriptionPhrasesRequest} extends {@link RequestModel}
  *
  * <p>DeleteTranscriptionPhrasesRequest</p>
@@ -54,7 +55,10 @@ public class DeleteTranscriptionPhrasesRequest extends Request {
         } 
 
         /**
-         * PhraseId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a93b91141c0f422fa114af203f8b****</p>
          */
         public Builder phraseId(String phraseId) {
             this.putPathParameter("PhraseId", phraseId);

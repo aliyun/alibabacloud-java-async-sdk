@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateTaskRequest</p>
@@ -146,7 +147,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>offline</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
@@ -161,7 +165,16 @@ public class CreateTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class Input extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AudioChannelMode")
+        private String audioChannelMode;
+
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
@@ -194,6 +207,7 @@ public class CreateTaskRequest extends Request {
         private String taskKey;
 
         private Input(Builder builder) {
+            this.audioChannelMode = builder.audioChannelMode;
             this.fileUrl = builder.fileUrl;
             this.format = builder.format;
             this.languageHints = builder.languageHints;
@@ -212,6 +226,13 @@ public class CreateTaskRequest extends Request {
 
         public static Input create() {
             return builder().build();
+        }
+
+        /**
+         * @return audioChannelMode
+         */
+        public String getAudioChannelMode() {
+            return this.audioChannelMode;
         }
 
         /**
@@ -285,6 +306,7 @@ public class CreateTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String audioChannelMode; 
             private String fileUrl; 
             private String format; 
             private java.util.List < String > languageHints; 
@@ -295,6 +317,14 @@ public class CreateTaskRequest extends Request {
             private String sourceLanguage; 
             private String taskId; 
             private String taskKey; 
+
+            /**
+             * AudioChannelMode.
+             */
+            public Builder audioChannelMode(String audioChannelMode) {
+                this.audioChannelMode = audioChannelMode;
+                return this;
+            }
 
             /**
              * FileUrl.
@@ -353,7 +383,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * SourceLanguage.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder sourceLanguage(String sourceLanguage) {
                 this.sourceLanguage = sourceLanguage;
@@ -383,6 +416,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class Contents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
@@ -456,7 +495,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -464,7 +503,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Prompt.
+             * <p>This parameter is required.</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -486,6 +525,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class CustomPrompt extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contents")
         private java.util.List < Contents> contents;
@@ -527,6 +572,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class ExtraParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainEducationEnabled")
         private Boolean domainEducationEnabled;
@@ -648,6 +699,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class MeetingAssistance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Types")
         private java.util.List < String > types;
@@ -689,6 +746,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class InspectionContents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -750,6 +813,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class ServiceInspection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InspectionContents")
         private java.util.List < InspectionContents> inspectionContents;
@@ -851,6 +920,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class Summarization extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Types")
         private java.util.List < String > types;
@@ -892,6 +967,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class Transcoding extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpectrumEnabled")
         private Boolean spectrumEnabled;
@@ -993,6 +1074,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class Diarization extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpeakerCount")
         private Integer speakerCount;
@@ -1034,6 +1121,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class Transcription extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdditionalStreamOutputLevel")
         private Integer additionalStreamOutputLevel;
@@ -1195,6 +1288,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class Translation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdditionalStreamOutputLevel")
         private Integer additionalStreamOutputLevel;
@@ -1276,6 +1375,12 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoChaptersEnabled")
         private Boolean autoChaptersEnabled;

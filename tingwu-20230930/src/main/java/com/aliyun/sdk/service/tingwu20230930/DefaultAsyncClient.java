@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateTask  CreateTaskRequest
+     * @return CreateTaskResponse
+     */
     @Override
     public CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTranscriptionPhrases  CreateTranscriptionPhrasesRequest
+     * @return CreateTranscriptionPhrasesResponse
+     */
     @Override
     public CompletableFuture<CreateTranscriptionPhrasesResponse> createTranscriptionPhrases(CreateTranscriptionPhrasesRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTranscriptionPhrases  DeleteTranscriptionPhrasesRequest
+     * @return DeleteTranscriptionPhrasesResponse
+     */
     @Override
     public CompletableFuture<DeleteTranscriptionPhrasesResponse> deleteTranscriptionPhrases(DeleteTranscriptionPhrasesRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTaskInfo  GetTaskInfoRequest
+     * @return GetTaskInfoResponse
+     */
     @Override
     public CompletableFuture<GetTaskInfoResponse> getTaskInfo(GetTaskInfoRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTranscriptionPhrases  GetTranscriptionPhrasesRequest
+     * @return GetTranscriptionPhrasesResponse
+     */
     @Override
     public CompletableFuture<GetTranscriptionPhrasesResponse> getTranscriptionPhrases(GetTranscriptionPhrasesRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTranscriptionPhrases  ListTranscriptionPhrasesRequest
+     * @return ListTranscriptionPhrasesResponse
+     */
     @Override
     public CompletableFuture<ListTranscriptionPhrasesResponse> listTranscriptionPhrases(ListTranscriptionPhrasesRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTranscriptionPhrases  UpdateTranscriptionPhrasesRequest
+     * @return UpdateTranscriptionPhrasesResponse
+     */
     @Override
     public CompletableFuture<UpdateTranscriptionPhrasesResponse> updateTranscriptionPhrases(UpdateTranscriptionPhrasesRequest request) {
         try {
