@@ -98,7 +98,7 @@ public class ListListsResponseBody extends TeaModel {
         private Long usage; 
 
         /**
-         * Lists.
+         * <p>The array that contains list information, including list data after paging.</p>
          */
         public Builder lists(java.util.List < Lists> lists) {
             this.lists = lists;
@@ -106,7 +106,10 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -133,7 +139,10 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of filtered lists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -141,7 +150,10 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * Usage.
+         * <p>The number of created lists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder usage(Long usage) {
             this.usage = usage;
@@ -248,7 +260,7 @@ public class ListListsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * <p>自定义响应页面描述</p>
+             * <p>The list description.</p>
              * 
              * <strong>example:</strong>
              * <p>a custom list</p>
@@ -259,7 +271,10 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the custom list.<a href="~~2850217~~"></a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>40000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -267,7 +282,10 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * <p>The list type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -275,7 +293,10 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * Length.
+             * <p>The length of the list information array, which indicates how many items the list contains.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder length(Long length) {
                 this.length = length;
@@ -283,7 +304,10 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The list name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,7 +315,10 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the list was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

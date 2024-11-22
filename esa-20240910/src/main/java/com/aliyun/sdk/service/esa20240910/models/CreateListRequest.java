@@ -97,7 +97,10 @@ public class CreateListRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the list that you want to create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a custom list</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -106,7 +109,10 @@ public class CreateListRequest extends Request {
         }
 
         /**
-         * Items.
+         * <p>The items in the list that you want to create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a custom list</p>
          */
         public Builder items(java.util.List < String > items) {
             String itemsShrink = shrink(items, "Items", "json");
@@ -116,7 +122,10 @@ public class CreateListRequest extends Request {
         }
 
         /**
-         * Kind.
+         * <p>The type of the list that you want to create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder kind(String kind) {
             this.putBodyParameter("Kind", kind);
@@ -125,6 +134,7 @@ public class CreateListRequest extends Request {
         }
 
         /**
+         * <p>The name of the list that you want to create.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

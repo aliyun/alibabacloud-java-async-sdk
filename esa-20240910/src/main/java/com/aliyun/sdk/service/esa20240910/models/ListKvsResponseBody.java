@@ -86,7 +86,7 @@ public class ListKvsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Keys.
+         * <p>The key-value pairs.</p>
          */
         public Builder keys(java.util.List < Keys> keys) {
             this.keys = keys;
@@ -94,7 +94,10 @@ public class ListKvsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class ListKvsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class ListKvsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class ListKvsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -176,7 +188,10 @@ public class ListKvsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Name.
+             * <p>The key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -184,7 +199,10 @@ public class ListKvsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the key was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-13T07:46:03Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

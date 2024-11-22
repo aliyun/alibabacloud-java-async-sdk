@@ -86,7 +86,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A123425345</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +119,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The tasks.</p>
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -118,7 +127,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -236,7 +248,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Content.
+             * <p>The purged content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://a.com/1.jpg?b=1">http://a.com/1.jpg?b=1</a></p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -244,7 +259,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-26T01:56:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -252,7 +270,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The error description returned when the purge task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -260,7 +281,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The progress of the task, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -268,7 +292,15 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * <ul>
+             * <li><strong>Complete</strong>: The task is complete.</li>
+             * <li><strong>Refreshing</strong>: The task is in progress.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -276,7 +308,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16346513304</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -284,7 +319,18 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the purge task. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong> (default): purges the cache by file.</li>
+             * <li><strong>cachetag</strong>: purges the cache by cache tag.</li>
+             * <li><strong>directory</strong>: purges the cache by directory.</li>
+             * <li><strong>ignoreParams</strong>: purges the cache by URL with specified parameters ignored.</li>
+             * <li><strong>hostname</strong>: purges the cache by hostname.</li>
+             * <li><strong>purgeall</strong>: purges all cache.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;

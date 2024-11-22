@@ -50,7 +50,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
         private java.util.List < WaitingRoomEvents> waitingRoomEvents; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID, which is used to trace a call.</p>
          * 
          * <strong>example:</strong>
          * <p>f3c3700a-4c0f-4a24-b576-fd7dbf9e7c55</p>
@@ -61,7 +61,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
         }
 
         /**
-         * WaitingRoomEvents.
+         * <p>The details of the waiting room events.</p>
          */
         public Builder waitingRoomEvents(java.util.List < WaitingRoomEvents> waitingRoomEvents) {
             this.waitingRoomEvents = waitingRoomEvents;
@@ -335,7 +335,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             private String waitingRoomType; 
 
             /**
-             * CustomPageHtml.
+             * <p>The content of the custom waiting room page. This parameter is returned when the waiting room type is set to custom. The content is URL-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>html-yets-maqi1111</p>
              */
             public Builder customPageHtml(String customPageHtml) {
                 this.customPageHtml = customPageHtml;
@@ -343,7 +346,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The event description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>terraform-example</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -351,7 +357,14 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DisableSessionRenewalEnable.
+             * <p>Indicates whether session renewal is disabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder disableSessionRenewalEnable(String disableSessionRenewalEnable) {
                 this.disableSessionRenewalEnable = disableSessionRenewalEnable;
@@ -359,7 +372,14 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The event status. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -367,7 +387,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the event. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719814497</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -375,7 +398,14 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * JsonResponseEnable.
+             * <p>Indicates whether JOSN response is enabled. If JSON response is enabled, a JSON body is returned for requests to the waiting room with the header Accept: application/json. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder jsonResponseEnable(String jsonResponseEnable) {
                 this.jsonResponseEnable = jsonResponseEnable;
@@ -383,7 +413,15 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The language of the waiting room page. This parameter is returned when the waiting room type is set to default. Valid values:</p>
+             * <ul>
+             * <li>enus: English.</li>
+             * <li>zhcn: Simplified Chinese.</li>
+             * <li>zhhk: Traditional Chinese.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zhcn</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -391,7 +429,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The custom event name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -399,7 +437,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * NewUsersPerMinute.
+             * <p>The maximum number of new users per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder newUsersPerMinute(String newUsersPerMinute) {
                 this.newUsersPerMinute = newUsersPerMinute;
@@ -407,7 +448,14 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PreQueueEnable.
+             * <p>Indicates whether pre-queuing is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder preQueueEnable(String preQueueEnable) {
                 this.preQueueEnable = preQueueEnable;
@@ -415,7 +463,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PreQueueStartTime.
+             * <p>The start time for pre-queuing. This value is a UNIX timestamp. This parameter is valid only when pre-queuing is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719814097</p>
              */
             public Builder preQueueStartTime(String preQueueStartTime) {
                 this.preQueueStartTime = preQueueStartTime;
@@ -423,7 +474,16 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * QueuingMethod.
+             * <p>The queuing method. Valid values:</p>
+             * <ul>
+             * <li>random: Users gain access to the origin randomly, regardless of the arrival time.</li>
+             * <li>fifo: Users gain access to the origin in order of arrival.</li>
+             * <li>passthrough: Users pass through the waiting room and go straight to the origin.</li>
+             * <li>reject-all: Users are blocked from reaching the origin.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fifo</p>
              */
             public Builder queuingMethod(String queuingMethod) {
                 this.queuingMethod = queuingMethod;
@@ -431,7 +491,15 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * QueuingStatusCode.
+             * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
+             * <ul>
+             * <li>200</li>
+             * <li>202</li>
+             * <li>429</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder queuingStatusCode(String queuingStatusCode) {
                 this.queuingStatusCode = queuingStatusCode;
@@ -439,7 +507,14 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RandomPreQueueEnable.
+             * <p>Indicates whether random queuing is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder randomPreQueueEnable(String randomPreQueueEnable) {
                 this.randomPreQueueEnable = randomPreQueueEnable;
@@ -447,7 +522,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionDuration.
+             * <p>The maximum duration for which a session remains valid after a user leaves the origin. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder sessionDuration(String sessionDuration) {
                 this.sessionDuration = sessionDuration;
@@ -455,7 +533,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the event. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719814398</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -463,7 +544,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalActiveUsers.
+             * <p>The maximum number of active users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder totalActiveUsers(String totalActiveUsers) {
                 this.totalActiveUsers = totalActiveUsers;
@@ -471,7 +555,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingRoomEventId.
+             * <p>The unique ID of the waiting room event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89677721098****</p>
              */
             public Builder waitingRoomEventId(Long waitingRoomEventId) {
                 this.waitingRoomEventId = waitingRoomEventId;
@@ -479,7 +566,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingRoomId.
+             * <p>The ID of the waiting room associated with the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5c938a045c9ca46607163d34966****</p>
              */
             public Builder waitingRoomId(String waitingRoomId) {
                 this.waitingRoomId = waitingRoomId;
@@ -487,7 +577,14 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingRoomType.
+             * <p>The type of the waiting room. Valid values:</p>
+             * <ul>
+             * <li>default</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder waitingRoomType(String waitingRoomType) {
                 this.waitingRoomType = waitingRoomType;

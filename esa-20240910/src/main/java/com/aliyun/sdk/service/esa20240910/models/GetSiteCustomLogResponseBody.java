@@ -86,7 +86,10 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
         private Long siteId; 
 
         /**
-         * ConfigId.
+         * <p>The ID of the custom log field configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6befa4aa-2a94-4f51-a245-295787192d2c</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -94,7 +97,10 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
         }
 
         /**
-         * IsExist.
+         * <p>Indicates whether the custom configuration exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isExist(Boolean isExist) {
             this.isExist = isExist;
@@ -102,7 +108,7 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
         }
 
         /**
-         * LogCustomField.
+         * <p>The custom fields.</p>
          */
         public Builder logCustomField(LogCustomField logCustomField) {
             this.logCustomField = logCustomField;
@@ -110,7 +116,7 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6befa4aa-2a94-4f51-a245-295787192d2c</p>
@@ -121,7 +127,10 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>167026711***</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -191,7 +200,7 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
             private java.util.List < String > responseHeaders; 
 
             /**
-             * Cookies.
+             * <p>The cookie fields.</p>
              */
             public Builder cookies(java.util.List < String > cookies) {
                 this.cookies = cookies;
@@ -199,7 +208,7 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHeaders.
+             * <p>The request header fields.</p>
              */
             public Builder requestHeaders(java.util.List < String > requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -207,7 +216,7 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseHeaders.
+             * <p>The response header fields.</p>
              */
             public Builder responseHeaders(java.util.List < String > responseHeaders) {
                 this.responseHeaders = responseHeaders;

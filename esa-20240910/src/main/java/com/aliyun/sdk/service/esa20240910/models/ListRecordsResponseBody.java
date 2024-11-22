@@ -86,7 +86,10 @@ public class ListRecordsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class ListRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,7 @@ public class ListRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * <p>The DNS record information. The format of this field varies based on the record type. For more information, see Add DNS records.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -110,7 +116,7 @@ public class ListRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -121,7 +127,10 @@ public class ListRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -215,7 +224,10 @@ public class ListRecordsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AccessKey.
+             * <p>The access key of the account to which the origin server belongs. This value is returned when the SourceType is OSS, and AuthType is private_cross_account, or when the SourceType is S3 and AuthType is private.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u0Nkg5gBK***QF5wvKMM504JUHt</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -223,7 +235,16 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthType.
+             * <p>The authentication type of the origin server. Different origins support different authentication types. The type of origin refers to the SourceType parameter in this operation. If the type of origin is OSS or S3, the authentication type of the origin must be specified. Valid values:</p>
+             * <ul>
+             * <li><strong>public</strong>: public read. This value is returned when the origin is a public OSS or S3 bucket.</li>
+             * <li><strong>private</strong>: private read. This value is returned when the origin is a private S3 bucket.</li>
+             * <li><strong>private_same_account</strong>: private read under the same account. This value is returned when the origin is a private OSS bucket in your Alibaba Cloud account.</li>
+             * <li><strong>private_cross_account</strong>: private read across accounts. This value is returned when the origin is a private OSS bucket in a different Alibaba Cloud account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -231,7 +252,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region of the origin. This parameter is returned if the origin type is S3. You can get the region information from the official website of Amazon S3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-east-1</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -239,7 +263,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SecretKey.
+             * <p>The secret access key of the account to which the origin server belongs. This value is returned when the SourceType is OSS, and AuthType is private_same_account, or when the SourceType is S3 and AuthType is private.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIxuvJSA2S03f***kp208dy5w7</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -247,7 +274,15 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the signature algorithm. This value is returned when the origin type is S3 and AuthType is private. Valid values:</p>
+             * <ul>
+             * <li><strong>v2</strong></li>
+             * <li><strong>v4</strong></li>
+             * </ul>
+             * <p>If this parameter is left empty, the default value v4 is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v4</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -450,7 +485,10 @@ public class ListRecordsResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Algorithm.
+             * <p>The encryption algorithm used for the record. Valid values: 0 to 255. Exclusive to CERT and SSHFP records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder algorithm(Integer algorithm) {
                 this.algorithm = algorithm;
@@ -458,7 +496,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Certificate.
+             * <p>The public key of the certificate. Exclusive to CERT, SMIMEA, and TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dGVzdGFkYWxrcw==</p>
              */
             public Builder certificate(String certificate) {
                 this.certificate = certificate;
@@ -466,7 +507,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprint.
+             * <p>The public key fingerprint of the record. Exclusive to SSHFP records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcdef1234567890</p>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -474,7 +518,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Flag.
+             * <p>The flag bit of the record. The Flag for a CAA record indicates its priority and how it is processed. Valid values: 0 to 255. Exclusive to CAA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder flag(Integer flag) {
                 this.flag = flag;
@@ -482,7 +529,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyTag.
+             * <p>The public key identification for the record. Valid values: 0 to 65535. Exclusive to CERT records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder keyTag(Integer keyTag) {
                 this.keyTag = keyTag;
@@ -490,7 +540,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchingType.
+             * <p>The algorithm policy used to match or validate the certificate. Valid values: 0 to 255. Exclusive to SMIMEA and TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder matchingType(Integer matchingType) {
                 this.matchingType = matchingType;
@@ -498,7 +551,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port of the record. Valid values: 0 to 65535. Exclusive to SRV records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -506,7 +562,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the record. Valid values: 0 to 65535. A smaller value indicates a higher priority. Exclusive to MX, SRV, and URI records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -514,7 +573,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Selector.
+             * <p>The type of certificate or public key. Valid values: 0 to 255. Exclusive to SMIMEA, and TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selector(Integer selector) {
                 this.selector = selector;
@@ -522,7 +584,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The tag of the record. The Tag of a CAA record indicate its specific type and usage. Exclusive to CAA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>issue</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -530,7 +595,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The certificate type of the record (in CERT records), or the public key type (in SSHFP records).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -538,7 +606,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The usage identifier of the record. Valid values: 0 to 255. Exclusive to SMIMEA, and TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usage(Integer usage) {
                 this.usage = usage;
@@ -546,7 +617,20 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Record value or part of the record content. This value is returned when the record is A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, or URI. It has different meanings based on types of records:</p>
+             * <ul>
+             * <li><strong>A/AAAA</strong>: the IP addresses. IP addresses are separated by commas (,). There is at least one IPv4 address.</li>
+             * <li><strong>CNAME</strong>: the pointed/mapped domain name.</li>
+             * <li><strong>NS</strong>: the nameservers for the domain name.</li>
+             * <li><strong>MX</strong>: a valid domain name of the mail server.</li>
+             * <li><strong>TXT</strong>: a valid text string.</li>
+             * <li><strong>CAA</strong>: a valid domain name of the certificate authority.</li>
+             * <li><strong>SRV</strong>: a valid domain name of the target host.</li>
+             * <li><strong>URI</strong>: a valid URI string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CNAME</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -554,7 +638,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * <p>The weight of the record. Valid values: 0 to 65535. Exclusive to SRV and URI records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -781,7 +868,7 @@ public class ListRecordsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AuthConf.
+             * <p>The origin authentication information of the CNAME record.</p>
              */
             public Builder authConf(AuthConf authConf) {
                 this.authConf = authConf;
@@ -789,7 +876,15 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * BizName.
+             * <p>The business scenario of the record for acceleration. Valid values:</p>
+             * <ul>
+             * <li><strong>image_video</strong>: video and image.</li>
+             * <li><strong>api</strong>: API.</li>
+             * <li><strong>web</strong>: web page.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder bizName(String bizName) {
                 this.bizName = bizName;
@@ -797,7 +892,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The comments of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a remark.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -805,7 +903,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-24T02:01:11Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -813,7 +914,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The DNS record information. Different types of records contain different information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;value&quot;:&quot;1.1.1.1&quot;}</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -821,7 +925,14 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HostPolicy.
+             * <p>The origin host policy. This policy takes effect when the record type is CNAME. Valid values:</p>
+             * <ul>
+             * <li>follow_hostname: matches the requested domain name.</li>
+             * <li>follow_origin_domain: matches the origin&quot;s domain name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>follow_origin_domain</p>
              */
             public Builder hostPolicy(String hostPolicy) {
                 this.hostPolicy = hostPolicy;
@@ -829,7 +940,14 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Proxied.
+             * <p>Indicates whether the record is proxied. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder proxied(Boolean proxied) {
                 this.proxied = proxied;
@@ -837,7 +955,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordCname.
+             * <p>The CNAME. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured then.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.example.com.cnamezone.com</p>
              */
             public Builder recordCname(String recordCname) {
                 this.recordCname = recordCname;
@@ -845,7 +966,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * <p>The record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123</p>
              */
             public Builder recordId(Long recordId) {
                 this.recordId = recordId;
@@ -853,7 +977,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordName.
+             * <p>The record name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.example.com</p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -861,7 +988,18 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordSourceType.
+             * <p>The origin type for the CNAME record. This parameter is returned when you add a CNAME record. Valid values:</p>
+             * <ul>
+             * <li><strong>OSS</strong>: OSS bucket.</li>
+             * <li><strong>S3</strong>: S3 bucket.</li>
+             * <li><strong>LB</strong>: load balancer.</li>
+             * <li><strong>OP</strong>: origin pool.</li>
+             * <li><strong>Domain</strong>: domain name.</li>
+             * </ul>
+             * <p>If you do not pass this parameter or if you leave its value empty, Domain is returned by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder recordSourceType(String recordSourceType) {
                 this.recordSourceType = recordSourceType;
@@ -869,7 +1007,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordType.
+             * <p>The DNS type of the record, such as <strong>A/AAAA, CNAME, and TXT</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A/AAAA</p>
              */
             public Builder recordType(String recordType) {
                 this.recordType = recordType;
@@ -877,7 +1018,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -885,7 +1029,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;
@@ -893,7 +1040,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * <p>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder ttl(Long ttl) {
                 this.ttl = ttl;
@@ -901,7 +1051,10 @@ public class ListRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the record was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-07T10:02:59Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

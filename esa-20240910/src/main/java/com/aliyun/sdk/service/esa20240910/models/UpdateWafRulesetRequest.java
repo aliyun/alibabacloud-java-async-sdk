@@ -97,6 +97,7 @@ public class UpdateWafRulesetRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class UpdateWafRulesetRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -118,7 +122,10 @@ public class UpdateWafRulesetRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);
@@ -127,7 +134,10 @@ public class UpdateWafRulesetRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status to which you want to change the ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

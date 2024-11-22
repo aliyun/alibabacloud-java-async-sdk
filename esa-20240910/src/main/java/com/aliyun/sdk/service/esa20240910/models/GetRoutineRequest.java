@@ -54,7 +54,10 @@ public class GetRoutineRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GetRoutine</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

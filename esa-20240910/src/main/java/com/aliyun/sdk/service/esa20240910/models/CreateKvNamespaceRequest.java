@@ -69,7 +69,10 @@ public class CreateKvNamespaceRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test namespace.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -78,6 +81,7 @@ public class CreateKvNamespaceRequest extends Request {
         }
 
         /**
+         * <p>The name of the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

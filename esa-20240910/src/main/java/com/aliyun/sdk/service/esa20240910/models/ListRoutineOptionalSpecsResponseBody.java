@@ -50,7 +50,10 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
         private java.util.List < Specs> specs; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890ABCDEF01234567890ABCDEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * Specs.
+         * <p>The available specifications.</p>
          */
         public Builder specs(java.util.List < Specs> specs) {
             this.specs = specs;
@@ -116,7 +119,14 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
             private String specName; 
 
             /**
-             * IsAvailable.
+             * <p>Indicates whether the specification is available. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAvailable(Boolean isAvailable) {
                 this.isAvailable = isAvailable;
@@ -124,7 +134,10 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * SpecName.
+             * <p>The specification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ms</p>
              */
             public Builder specName(String specName) {
                 this.specName = specName;

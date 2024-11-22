@@ -82,7 +82,10 @@ public class GetWafRulesetRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -91,7 +94,10 @@ public class GetWafRulesetRequest extends Request {
         }
 
         /**
-         * Phase.
+         * <p>The WAF rule category of rulesets to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_bot</p>
          */
         public Builder phase(String phase) {
             this.putQueryParameter("Phase", phase);
@@ -100,7 +106,10 @@ public class GetWafRulesetRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

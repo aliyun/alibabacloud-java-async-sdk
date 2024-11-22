@@ -38,7 +38,10 @@ public class DeleteKvNamespaceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

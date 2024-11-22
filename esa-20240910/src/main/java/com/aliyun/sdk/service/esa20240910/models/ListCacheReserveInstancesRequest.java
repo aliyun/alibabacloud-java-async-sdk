@@ -124,7 +124,10 @@ public class ListCacheReserveInstancesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the cache reserve instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-xcdn-96wblslz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,7 +136,10 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -142,7 +148,10 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +160,14 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The criterion by which you want to sort the queried instances. Valid values:</p>
+         * <ul>
+         * <li>ExpireTime: sorts the instances by the time when the instances expire.</li>
+         * <li>CreateTime: sorts the instances by the time when the instances were purchased.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ExpireTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -160,7 +176,14 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The order by which you want to sort the queried instances. Valid values:</p>
+         * <ul>
+         * <li>asc: in ascending order.</li>
+         * <li>desc: in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -169,7 +192,16 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the cache reserve instance. Valid values:</p>
+         * <ul>
+         * <li>online: The instance is in service.</li>
+         * <li>offline: The instance has expired within an allowable period. In this state, the plan is unavailable.</li>
+         * <li>disable: The instance is released.</li>
+         * <li>overdue: The instance is stopped due to overdue payments.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ListCacheReserveInstances</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

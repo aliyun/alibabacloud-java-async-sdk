@@ -111,7 +111,10 @@ public class ListEdgeContainerRecordsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -120,7 +123,10 @@ public class ListEdgeContainerRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,7 +135,16 @@ public class ListEdgeContainerRecordsRequest extends Request {
         }
 
         /**
-         * RecordMatchType.
+         * <p>The match mode to filter the record names:</p>
+         * <ul>
+         * <li><strong>fuzzy</strong></li>
+         * <li><strong>prefix</strong></li>
+         * <li><strong>suffix</strong></li>
+         * <li><strong>exact</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
          */
         public Builder recordMatchType(String recordMatchType) {
             this.putQueryParameter("RecordMatchType", recordMatchType);
@@ -138,7 +153,10 @@ public class ListEdgeContainerRecordsRequest extends Request {
         }
 
         /**
-         * RecordName.
+         * <p>The record name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a.example.com</p>
          */
         public Builder recordName(String recordName) {
             this.putQueryParameter("RecordName", recordName);
@@ -147,6 +165,7 @@ public class ListEdgeContainerRecordsRequest extends Request {
         }
 
         /**
+         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

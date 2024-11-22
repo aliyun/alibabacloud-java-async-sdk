@@ -74,7 +74,14 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * DataCenter.
+         * <p>The data center. Valid values:</p>
+         * <ul>
+         * <li>cn: the Chinese mainland.</li>
+         * <li>sg: outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder dataCenter(String dataCenter) {
             this.dataCenter = dataCenter;
@@ -82,7 +89,7 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2CCD40B1-3F20-5FF0-8A67-E3F34B87744F</p>
@@ -93,7 +100,10 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the delivery task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -101,7 +111,10 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the delivery task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-http</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

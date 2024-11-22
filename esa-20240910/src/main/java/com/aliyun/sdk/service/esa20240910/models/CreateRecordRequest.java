@@ -198,7 +198,7 @@ public class CreateRecordRequest extends Request {
         } 
 
         /**
-         * AuthConf.
+         * <p>The origin authentication information of the CNAME record.</p>
          */
         public Builder authConf(AuthConf authConf) {
             String authConfShrink = shrink(authConf, "AuthConf", "json");
@@ -208,7 +208,12 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * <p>业务场景</p>
+         * <p>The business scenario of the record for acceleration. Leave the parameter empty if your record is not proxied. Valid values:</p>
+         * <ul>
+         * <li><strong>image_video</strong>: video and image.</li>
+         * <li><strong>api</strong>: API.</li>
+         * <li><strong>web</strong>: web page.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>web</p>
@@ -220,7 +225,10 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The comment of the record. The maximum length is 100 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a remark.</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -229,6 +237,7 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
+         * <p>The DNS record information. The format of this field varies based on the record type. For more information, see <a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">References</a> .</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +253,14 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * HostPolicy.
+         * <p>The origin host policy. This policy takes effect when the record type is CNAME. You can set the policy in two modes:</p>
+         * <ul>
+         * <li><strong>follow_hostname</strong>: Follow the host record.</li>
+         * <li><strong>follow_origin_domain</strong>: match the origin&quot;s domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>follow_origin_domain</p>
          */
         public Builder hostPolicy(String hostPolicy) {
             this.putQueryParameter("HostPolicy", hostPolicy);
@@ -253,7 +269,11 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * <p>是否代理加速</p>
+         * <p>Specifies whether to proxy the record. Only CNAME and A/AAAA records can be proxied. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -265,7 +285,7 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * <p>记录名称</p>
+         * <p>The record name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -278,6 +298,7 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +311,18 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The origin type for the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
+         * <ul>
+         * <li><strong>OSS</strong>: OSS bucket.</li>
+         * <li><strong>S3</strong>: S3 bucket.</li>
+         * <li><strong>LB</strong>: load balancer.</li>
+         * <li><strong>OP</strong>: origin pool.</li>
+         * <li><strong>Domain</strong>: domain name.</li>
+         * </ul>
+         * <p>If you do not pass this parameter or if you leave its value empty, Domain is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -299,7 +331,10 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * <p>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -308,7 +343,7 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * <p>记录类型</p>
+         * <p>The type of the DNS record. For example, A/AAAA, TXT, MX, or CNAME.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -408,7 +443,10 @@ public class CreateRecordRequest extends Request {
             private String version; 
 
             /**
-             * AccessKey.
+             * <p>The access key of the account to which the origin server belongs. This parameter is required when the SourceType is OSS, and AuthType is private_cross_account, or when the SourceType is S3 and AuthType is private.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u0Nkg5gBK*******QF5wvKMM504JUHt</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -416,7 +454,16 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * AuthType.
+             * <p>The authentication type of the origin server. Different origins support different authentication types. The type of origin refers to the SourceType parameter in this operation. If the type of origin is OSS or S3, you must specify the authentication type of the origin. Valid values:</p>
+             * <ul>
+             * <li><strong>public</strong>: public read. Select this value when the origin type is OSS or S3 and the origin access is public read.</li>
+             * <li><strong>private</strong>: private read. Select this value when the origin type is S3 and the origin access is private read.</li>
+             * <li><strong>private_same_account</strong>: private read under the same account. Select this value when the origin type is OSS, the origins belong to the same Alibaba Cloud account, and the origins have private read access.</li>
+             * <li><strong>private_cross_account</strong>: private read cross accounts. Select this value when the origin type is OSS, the origins belong to different Alibaba Cloud accounts, and the origins have private read access.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -424,7 +471,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>The region of the origin. If the origin type is S3, you must specify this value. You can get the region information from the official website of S3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-east-1</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -432,7 +482,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * SecretKey.
+             * <p>The secret access key of the account to which the origin server belongs. This parameter is required when the SourceType is OSS, and AuthType is private_same_account, or when the SourceType is S3 and AuthType is private.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIxuvJSA2S03f******kp208dy5w7</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -440,7 +493,15 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of the signature algorithm. This parameter is required when the origin type is S3 and AuthType is private. The following two types are supported:</p>
+             * <ul>
+             * <li><strong>v2</strong></li>
+             * <li><strong>v4</strong></li>
+             * </ul>
+             * <p>If you leave this parameter empty, the default value v4 is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v4</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -643,7 +704,10 @@ public class CreateRecordRequest extends Request {
             private Integer weight; 
 
             /**
-             * Algorithm.
+             * <p>The encryption algorithm used for the record, specified within the range from 0 to 255. This parameter is required when you add CERT or SSHFP records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder algorithm(Integer algorithm) {
                 this.algorithm = algorithm;
@@ -651,7 +715,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Certificate.
+             * <p>The public key of the certificate. This parameter is required when you add CERT, SMIMEA, or TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dGVzdGFkYWxrcw==</p>
              */
             public Builder certificate(String certificate) {
                 this.certificate = certificate;
@@ -659,7 +726,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Fingerprint.
+             * <p>The public key fingerprint of the record. This parameter is required when you add a SSHFP record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcdef1234567890</p>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -667,7 +737,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Flag.
+             * <p>The flag bit of the record. The Flag for a CAA record indicates its priority and how it is processed, specified within the range of 0 to 255. This parameter is required when you add a CAA record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder flag(Integer flag) {
                 this.flag = flag;
@@ -675,7 +748,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * KeyTag.
+             * <p>The public key identification for the record, specified within the range of 0 to 65,535. This parameter is required when you add a CAA record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder keyTag(Integer keyTag) {
                 this.keyTag = keyTag;
@@ -683,7 +759,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * MatchingType.
+             * <p>The algorithm policy used to match or validate the certificate, specified within the range 0 to 255. This parameter is required when you add SMIMEA or TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchingType(Integer matchingType) {
                 this.matchingType = matchingType;
@@ -691,7 +770,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port of the record, specified within the range of 0 to 65,535. This parameter is required when you add an SRV record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -699,7 +781,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the record, specified within the range of 0 to 65,535. A smaller value indicates a higher priority. This parameter is required when you add MX, SRV, and URI records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -707,7 +792,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Selector.
+             * <p>The type of certificate or public key, specified within the range of 0 to 255. This parameter is required when you add SMIMEA or TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder selector(Integer selector) {
                 this.selector = selector;
@@ -715,7 +803,15 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Tag.
+             * <p>The label of the record. The Tag of a CAA record indicate its specific type and usage. This parameter is required when you add a CAA record. Valid values:</p>
+             * <ul>
+             * <li><strong>issue</strong>: indicates that a CA is authorized to issue a certificate for the domain name. This is usually followed by the domain name of the CA.</li>
+             * <li><strong>issuewild</strong>: indicates that a CA is authorized to issue a wildcard certificate (such as *.example.com) for the domain name.</li>
+             * <li><strong>iodef</strong>: specifies a URI to receive reports about CAA record violations.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>issue</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -723,11 +819,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * <p>记录类型</p>
-             * <p>This parameter is required.</p>
+             * <p>The certificate type of the record (in CERT records), or the public key type (in SSHFP records). This parameter is required when you add CERT or SSHFP records.</p>
              * 
              * <strong>example:</strong>
-             * <p>A/AAAA</p>
+             * <p>RSA</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -735,7 +830,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Usage.
+             * <p>The usage identifier of the record, specified within the range of 0 to 255. This parameter is required when you add SMIMEA or TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usage(Integer usage) {
                 this.usage = usage;
@@ -743,7 +841,20 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Record value or part of the record content. This parameter is required when you add A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI records. It has different meanings based on types of records:</p>
+             * <ul>
+             * <li><strong>A/AAAA</strong>: the IP address(es). Separate IP addresses with commas (,). You must have at least one IPv4 address.</li>
+             * <li><strong>CNAME</strong>: the target domain name.</li>
+             * <li><strong>NS</strong>: the name servers for the domain name.</li>
+             * <li><strong>MX</strong>: a valid domain name of the target mail server.</li>
+             * <li><strong>TXT</strong>: a valid text string.</li>
+             * <li><strong>CAA</strong>: a valid domain name of the certificate authority.</li>
+             * <li><strong>SRV</strong>: a valid domain name of the target host.</li>
+             * <li><strong>URI</strong>: a valid URI string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -751,7 +862,10 @@ public class CreateRecordRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The weight of the record, specified within the range of 0 to 65,535. This parameter is required when you add SRV or URI records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

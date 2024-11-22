@@ -62,7 +62,7 @@ public class GetCacheReserveSpecificationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CacheReserveCapacity.
+         * <p>The capacities of cache reserve instances that can be created.</p>
          */
         public Builder cacheReserveCapacity(java.util.List < String > cacheReserveCapacity) {
             this.cacheReserveCapacity = cacheReserveCapacity;
@@ -70,7 +70,7 @@ public class GetCacheReserveSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * CacheReserveRegion.
+         * <p>The regions in which cache reserve instances can be created.</p>
          */
         public Builder cacheReserveRegion(java.util.List < String > cacheReserveRegion) {
             this.cacheReserveRegion = cacheReserveRegion;
@@ -78,7 +78,10 @@ public class GetCacheReserveSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

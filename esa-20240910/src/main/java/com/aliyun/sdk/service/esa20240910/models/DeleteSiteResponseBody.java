@@ -38,7 +38,10 @@ public class DeleteSiteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

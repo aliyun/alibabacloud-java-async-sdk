@@ -69,7 +69,10 @@ public class GetSiteDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * SiteId.
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456***</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -78,6 +81,7 @@ public class GetSiteDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the delivery task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

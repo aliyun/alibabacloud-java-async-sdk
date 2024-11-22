@@ -50,7 +50,10 @@ public class CreateEdgeContainerAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppId.
+         * <p>The ID of the application that is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-880688675783794688</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -58,7 +61,10 @@ public class CreateEdgeContainerAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

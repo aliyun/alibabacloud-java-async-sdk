@@ -50,7 +50,7 @@ public class PreloadCachesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
@@ -61,7 +61,10 @@ public class PreloadCachesResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The prefetch task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16401427840</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

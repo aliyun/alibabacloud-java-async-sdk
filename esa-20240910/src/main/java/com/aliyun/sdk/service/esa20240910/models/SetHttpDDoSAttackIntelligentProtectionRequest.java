@@ -85,6 +85,11 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends Request {
         } 
 
         /**
+         * <p>The mode of smart HTTP DDoS protection. Valid values:</p>
+         * <ul>
+         * <li><strong>observe</strong>: alert.</li>
+         * <li><strong>defense</strong>: block.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,6 +102,13 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends Request {
         }
 
         /**
+         * <p>The level of smart HTTP DDoS protection. Valid values:</p>
+         * <ul>
+         * <li><strong>level0</strong>: very loose.</li>
+         * <li><strong>level30</strong>: loose.</li>
+         * <li><strong>level60</strong>: normal.</li>
+         * <li><strong>level90</strong>: strict.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,6 +121,7 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

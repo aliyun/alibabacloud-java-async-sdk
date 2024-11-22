@@ -167,7 +167,15 @@ public class ListRecordsRequest extends Request {
         } 
 
         /**
-         * BizName.
+         * <p>The business scenario of the record for acceleration. Valid values:</p>
+         * <ul>
+         * <li><strong>image_video</strong>: video and image.</li>
+         * <li><strong>api</strong>: API.</li>
+         * <li><strong>web</strong>: web page.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         public Builder bizName(String bizName) {
             this.putQueryParameter("BizName", bizName);
@@ -176,7 +184,10 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -185,7 +196,10 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +208,14 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * Proxied.
+         * <p>Filters by whether the record is proxied. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder proxied(Boolean proxied) {
             this.putQueryParameter("Proxied", proxied);
@@ -203,7 +224,16 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * RecordMatchType.
+         * <p>The match mode to search for the record name. Default value: exact. Valid values:</p>
+         * <ul>
+         * <li><strong>prefix</strong>: match by prefix.</li>
+         * <li><strong>suffix</strong>: match by suffix.</li>
+         * <li><strong>exact</strong>: exact match.</li>
+         * <li><strong>fuzzy</strong>: fuzzy match.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
          */
         public Builder recordMatchType(String recordMatchType) {
             this.putQueryParameter("RecordMatchType", recordMatchType);
@@ -212,7 +242,10 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * RecordName.
+         * <p>The record name. This parameter specifies a filter condition for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder recordName(String recordName) {
             this.putQueryParameter("RecordName", recordName);
@@ -221,6 +254,7 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +267,17 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The origin type of the record. Only CNAME records can be filtered by using this field. Valid values:</p>
+         * <ul>
+         * <li><strong>OSS</strong>: OSS bucket.</li>
+         * <li><strong>S3</strong>: S3 bucket.</li>
+         * <li><strong>LB</strong>: load balancer.</li>
+         * <li><strong>OP</strong>: origin pool.</li>
+         * <li><strong>Domain</strong>: domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -242,7 +286,10 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The DNS record type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNAME</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -82,7 +82,10 @@ public class CreateRoutineRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The routine description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the description of this routine</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -91,7 +94,10 @@ public class CreateRoutineRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The routine name, which must be unique in the same account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-routine1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -100,7 +106,10 @@ public class CreateRoutineRequest extends Request {
         }
 
         /**
-         * SpecName.
+         * <p>The specification of the routine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ms</p>
          */
         public Builder specName(String specName) {
             this.putBodyParameter("SpecName", specName);

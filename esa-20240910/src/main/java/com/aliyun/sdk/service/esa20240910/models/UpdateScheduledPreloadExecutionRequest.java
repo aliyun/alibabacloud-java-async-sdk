@@ -111,7 +111,10 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the prefetch plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-31T18:10:48.849+08:00</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -120,6 +123,7 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the prefetch plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,10 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time interval between each batch execution. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.putBodyParameter("Interval", interval);
@@ -141,7 +148,10 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         }
 
         /**
-         * SliceLen.
+         * <p>The number of URLs prefetched in each batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder sliceLen(Integer sliceLen) {
             this.putBodyParameter("SliceLen", sliceLen);
@@ -150,7 +160,10 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the prefetch plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-31T17:10:48.849+08:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

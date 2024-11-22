@@ -139,6 +139,7 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,15 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * OrderKey.
+         * <p>The sorting field. Valid values:</p>
+         * <ul>
+         * <li>Name: the version name.</li>
+         * <li>CreateTime: the time when the version was created.</li>
+         * <li>UpdateTime: the time when the version was last modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder orderKey(String orderKey) {
             this.putQueryParameter("OrderKey", orderKey);
@@ -160,7 +169,14 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The order in which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>ASC: in ascending order.</li>
+         * <li>DESC: in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -169,7 +185,10 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -178,7 +197,10 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -187,7 +209,10 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword used for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ver-100568263967926****</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -196,7 +221,10 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * SearchType.
+         * <p>The parameter used for fuzzy search. Valid values: VersionId and Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VersionId</p>
          */
         public Builder searchType(String searchType) {
             this.putQueryParameter("SearchType", searchType);

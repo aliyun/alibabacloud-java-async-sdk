@@ -55,6 +55,13 @@ public class GetUserLogDeliveryQuotaRequest extends Request {
         } 
 
         /**
+         * <p>The log category. Valid values:</p>
+         * <ul>
+         * <li>dcdn_log_access_l1 (default): access logs.</li>
+         * <li>dcdn_log_er: Edge Routine logs.</li>
+         * <li>dcdn_log_waf: firewall logs.</li>
+         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

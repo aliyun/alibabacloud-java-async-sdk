@@ -86,7 +86,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +119,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The managed rules.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -118,7 +127,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of filtered rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -212,7 +224,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Action.
+             * <p>The action that WAF performs on requests that match the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -220,7 +235,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -228,7 +246,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the managed rule.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -236,7 +254,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectionLevel.
+             * <p>The protection level of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder protectionLevel(Integer protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -244,7 +265,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;

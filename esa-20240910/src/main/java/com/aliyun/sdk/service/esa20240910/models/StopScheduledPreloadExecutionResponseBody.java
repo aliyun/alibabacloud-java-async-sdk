@@ -134,7 +134,10 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * AliUid.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15685865xxx14622</p>
          */
         public Builder aliUid(String aliUid) {
             this.aliUid = aliUid;
@@ -142,7 +145,10 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the prefetch plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-31T18:10:48.849+08:00</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -150,7 +156,10 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the prefetch plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66599bd7397885b43804901c</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -158,7 +167,10 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The time interval between each batch execution in the plan. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -166,7 +178,10 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the prefetch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>665d3af3621bccf3fe29e1a4</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -174,7 +189,10 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +200,10 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * SliceLen.
+         * <p>The number of URLs prefetched in each batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder sliceLen(Integer sliceLen) {
             this.sliceLen = sliceLen;
@@ -190,7 +211,10 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the prefetch plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-31T17:10:48.849+08:00</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -198,7 +222,17 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the prefetch plan. Valid values:</p>
+         * <ul>
+         * <li><strong>waiting</strong></li>
+         * <li><strong>running</strong></li>
+         * <li><strong>finished</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>stopped</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>stopped</p>
          */
         public Builder status(String status) {
             this.status = status;

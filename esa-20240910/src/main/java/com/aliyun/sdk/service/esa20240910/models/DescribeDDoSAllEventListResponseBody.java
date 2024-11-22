@@ -98,7 +98,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DataList.
+         * <p>The DDoS attack events.</p>
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -106,7 +106,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D73A4243-CFBD-5110-876F-09237E77ECBD</p>
@@ -133,7 +139,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7096621098****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -141,7 +150,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -319,7 +331,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             private String targetId; 
 
             /**
-             * Bps.
+             * <p>The peak of volumetric attacks. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder bps(Long bps) {
                 this.bps = bps;
@@ -335,7 +350,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Cps.
+             * <p>The peak of connection flood attacks. Unit: connections per seconds (CPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder cps(Long cps) {
                 this.cps = cps;
@@ -343,7 +361,11 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the DDoS attack ends.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-12T15:59:59Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -351,7 +373,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The attack event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web-cc_1</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -367,7 +392,15 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The type of DDoS attacks that was queried. Valid values:</p>
+             * <ul>
+             * <li><strong>web-cc</strong>: web resource exhaustion attacks.</li>
+             * <li><strong>cc</strong>: connection flood attacks.</li>
+             * <li><strong>traffic</strong>: volumetric attacks.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>web-cc</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -375,7 +408,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Pps.
+             * <p>The peak of volumetric attacks. Unit: packets per second (PPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12000</p>
              */
             public Builder pps(Long pps) {
                 this.pps = pps;
@@ -383,7 +419,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * <p>The peak QPS of web resource exhaustion attacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7692</p>
              */
             public Builder qps(Long qps) {
                 this.qps = qps;
@@ -391,7 +430,11 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the DDoS attack starts.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-12T15:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -399,7 +442,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The attack target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -407,7 +453,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * <p>The ID of the web resource exhaustion attack target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000000000155****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;

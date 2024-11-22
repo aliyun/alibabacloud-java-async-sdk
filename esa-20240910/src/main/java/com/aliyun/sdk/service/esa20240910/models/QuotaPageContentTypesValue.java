@@ -50,7 +50,7 @@ public class QuotaPageContentTypesValue extends TeaModel {
         private WafQuotaInteger contentLength; 
 
         /**
-         * Enable.
+         * <p>Indicates whether the custom error pages of the Content-Type are configured.</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -58,7 +58,7 @@ public class QuotaPageContentTypesValue extends TeaModel {
         }
 
         /**
-         * ContentLength.
+         * <p>The maximum length of the custom error pages of the Content-Type.</p>
          */
         public Builder contentLength(WafQuotaInteger contentLength) {
             this.contentLength = contentLength;

@@ -38,7 +38,10 @@ public class HttpDeliveryQueryParamValue extends TeaModel {
         private String staticValue; 
 
         /**
-         * StaticValue.
+         * <p>The static variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alicdn</p>
          */
         public Builder staticValue(String staticValue) {
             this.staticValue = staticValue;

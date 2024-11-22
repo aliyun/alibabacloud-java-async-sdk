@@ -50,7 +50,10 @@ public class DescribeKvAccountStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,14 @@ public class DescribeKvAccountStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether Edge KV is activated for the Alibaba Cloud account.</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;

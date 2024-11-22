@@ -62,7 +62,10 @@ public class SetHttpDDoSAttackProtectionResponseBody extends TeaModel {
         private Long siteId; 
 
         /**
-         * GlobalMode.
+         * <p>The level of HTTP DDoS attack protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder globalMode(String globalMode) {
             this.globalMode = globalMode;
@@ -70,7 +73,7 @@ public class SetHttpDDoSAttackProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
@@ -81,7 +84,10 @@ public class SetHttpDDoSAttackProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;

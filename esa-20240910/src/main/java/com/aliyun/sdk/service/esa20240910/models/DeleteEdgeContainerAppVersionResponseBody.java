@@ -38,7 +38,7 @@ public class DeleteEdgeContainerAppVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b021e538-9dde-46ed-a1f2-9469da8f3e77</p>

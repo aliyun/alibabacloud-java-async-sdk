@@ -69,6 +69,7 @@ public class DeleteWaitingRoomEventRequest extends Request {
         } 
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -81,7 +82,10 @@ public class DeleteWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * WaitingRoomEventId.
+         * <p>The ID of the waiting room event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>302909890***</p>
          */
         public Builder waitingRoomEventId(Long waitingRoomEventId) {
             this.putQueryParameter("WaitingRoomEventId", waitingRoomEventId);

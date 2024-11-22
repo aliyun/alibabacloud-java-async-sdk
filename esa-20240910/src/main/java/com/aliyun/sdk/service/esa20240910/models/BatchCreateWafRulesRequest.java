@@ -110,7 +110,7 @@ public class BatchCreateWafRulesRequest extends Request {
         } 
 
         /**
-         * Configs.
+         * <p>The configurations of the rules.</p>
          */
         public Builder configs(java.util.List < WafRuleConfig > configs) {
             String configsShrink = shrink(configs, "Configs", "json");
@@ -120,7 +120,10 @@ public class BatchCreateWafRulesRequest extends Request {
         }
 
         /**
-         * Phase.
+         * <p>The WAF rule category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_custom</p>
          */
         public Builder phase(String phase) {
             this.putBodyParameter("Phase", phase);
@@ -129,7 +132,7 @@ public class BatchCreateWafRulesRequest extends Request {
         }
 
         /**
-         * Shared.
+         * <p>The configurations shared by multiple rules.</p>
          */
         public Builder shared(WafBatchRuleShared shared) {
             String sharedShrink = shrink(shared, "Shared", "json");
@@ -139,7 +142,10 @@ public class BatchCreateWafRulesRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -148,7 +154,10 @@ public class BatchCreateWafRulesRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

@@ -97,7 +97,16 @@ public class ListSiteDeliveryTasksRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * <p>The log category. Valid values:</p>
+         * <ul>
+         * <li>dcdn_log_access_l1 (default): access logs.</li>
+         * <li>dcdn_log_er: Edge Routine logs.</li>
+         * <li>dcdn_log_waf: firewall logs.</li>
+         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -106,7 +115,10 @@ public class ListSiteDeliveryTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +127,10 @@ public class ListSiteDeliveryTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,6 +139,7 @@ public class ListSiteDeliveryTasksRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

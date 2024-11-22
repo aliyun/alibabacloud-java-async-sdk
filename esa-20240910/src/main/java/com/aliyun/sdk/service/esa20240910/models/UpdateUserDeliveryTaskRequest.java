@@ -98,7 +98,16 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * <p>The log category. Valid values:</p>
+         * <ul>
+         * <li>dcdn_log_access_l1 (default): access logs.</li>
+         * <li>dcdn_log_er: Edge Routine logs.</li>
+         * <li>dcdn_log_waf: firewall logs.</li>
+         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_log_er</p>
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("BusinessType", businessType);
@@ -107,7 +116,10 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * DiscardRate.
+         * <p>The discard rate. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder discardRate(Float discardRate) {
             this.putBodyParameter("DiscardRate", discardRate);
@@ -116,6 +128,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>The log fields that you want to include in logs to be delivered. Separate the log fields with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +141,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the delivery task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

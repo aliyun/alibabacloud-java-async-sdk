@@ -69,6 +69,7 @@ public class UpdateSiteVanityNSRequest extends Request {
         } 
 
         /**
+         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -81,7 +82,10 @@ public class UpdateSiteVanityNSRequest extends Request {
         }
 
         /**
-         * VanityNSList.
+         * <p>The custom nameserver names. You can specify two to five custom nameserver names. Separate multiple names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1.example.com,ns2.example.com</p>
          */
         public Builder vanityNSList(String vanityNSList) {
             this.putQueryParameter("VanityNSList", vanityNSList);

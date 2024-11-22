@@ -50,7 +50,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Phases.
+         * <p>The WAF rule categories.</p>
          */
         public Builder phases(java.util.List < Phases> phases) {
             this.phases = phases;
@@ -58,7 +58,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -143,7 +143,10 @@ public class ListWafPhasesResponseBody extends TeaModel {
             private WafBatchRuleShared shared; 
 
             /**
-             * Id.
+             * <p>The ID of the WAF ruleset.<a href="~~2850233~~"></a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -151,7 +154,10 @@ public class ListWafPhasesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the WAF ruleset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -159,7 +165,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The rule configurations in the WAF ruleset.</p>
              */
             public Builder rules(java.util.List < WafRuleConfig > rules) {
                 this.rules = rules;
@@ -167,7 +173,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
             }
 
             /**
-             * Shared.
+             * <p>The configurations shared by the rules in the WAF ruleset.</p>
              */
             public Builder shared(WafBatchRuleShared shared) {
                 this.shared = shared;
@@ -226,7 +232,10 @@ public class ListWafPhasesResponseBody extends TeaModel {
             private java.util.List < Rulesets> rulesets; 
 
             /**
-             * Phase.
+             * <p>The name of the WAF rule category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_custom</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -234,7 +243,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
             }
 
             /**
-             * Rulesets.
+             * <p>The WAF rulesets.</p>
              */
             public Builder rulesets(java.util.List < Rulesets> rulesets) {
                 this.rulesets = rulesets;

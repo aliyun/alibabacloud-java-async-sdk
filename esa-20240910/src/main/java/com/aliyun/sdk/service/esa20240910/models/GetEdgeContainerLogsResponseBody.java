@@ -50,7 +50,7 @@ public class GetEdgeContainerLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * <p>The logs.</p>
          */
         public Builder items(java.util.List < String > items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class GetEdgeContainerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>

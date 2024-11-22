@@ -54,7 +54,10 @@ public class DeleteRoutineRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-routine1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

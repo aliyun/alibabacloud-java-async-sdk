@@ -86,7 +86,10 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,7 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * <p>The records.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -121,7 +127,10 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -227,7 +236,10 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * <p>The time when the record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-24T02:01:11Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -235,7 +247,10 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordCname.
+             * <p>The CNAME. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.example.com.cnamezone.com</p>
              */
             public Builder recordCname(String recordCname) {
                 this.recordCname = recordCname;
@@ -243,7 +258,10 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordName.
+             * <p>The record name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.example.com</p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -251,7 +269,10 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -259,7 +280,10 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;
@@ -267,7 +291,10 @@ public class ListEdgeContainerRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the record was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-22T08:32:02Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

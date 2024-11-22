@@ -50,7 +50,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Filter.
+         * <p>The returned match conditions.</p>
          */
         public Builder filter(Filter filter) {
             this.filter = filter;
@@ -58,7 +58,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -143,7 +143,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             private WafQuotaInteger range; 
 
             /**
-             * ErrMsg.
+             * <p>The error message when the validation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enter a valid expression</p>
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -151,7 +154,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Length.
+             * <p>The length of the value.</p>
              */
             public Builder length(WafQuotaInteger length) {
                 this.length = length;
@@ -159,7 +162,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Pattern.
+             * <p>The regular expression pattern of the value, which is used to validate strings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^example$</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -167,7 +173,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Range.
+             * <p>The range of the value, which is used to validate numbers.</p>
              */
             public Builder range(WafQuotaInteger range) {
                 this.range = range;
@@ -298,7 +304,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             private Validator validator; 
 
             /**
-             * Attributes.
+             * <p>A custom attribute. For example, this parameter can specify whether the value is case-sensitive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attributes(Integer attributes) {
                 this.attributes = attributes;
@@ -306,7 +315,16 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * <p>The type of the value input box. Valid values:</p>
+             * <ul>
+             * <li>select:single</li>
+             * <li>select:multi</li>
+             * <li>input:single</li>
+             * <li>input:multi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>input:single</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -314,7 +332,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Negative.
+             * <p>Indicates whether the match result is inverted.</p>
              */
             public Builder negative(Boolean negative) {
                 this.negative = negative;
@@ -322,7 +340,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The displayed matching characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Does not equal</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -330,7 +351,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Symbol.
+             * <p>The matching characters in the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder symbol(String symbol) {
                 this.symbol = symbol;
@@ -338,7 +362,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Tip.
+             * <p>The tip on how to enter a valid value that is required by the rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e.g. image/jpeg</p>
              */
             public Builder tip(String tip) {
                 this.tip = tip;
@@ -346,7 +373,16 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the value. Valid values:</p>
+             * <ul>
+             * <li>integer</li>
+             * <li>integer_slice</li>
+             * <li>string</li>
+             * <li>string_slice</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -354,7 +390,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Validator.
+             * <p>The validator, which defines the validation rules for a value.</p>
              */
             public Builder validator(Validator validator) {
                 this.validator = validator;
@@ -413,7 +449,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Label.
+             * <p>The label of the data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -421,7 +460,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -480,7 +522,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             private String kind; 
 
             /**
-             * Data.
+             * <p>The data. This parameter is available only when the value of the Kind parameter is data.</p>
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -488,7 +530,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * <p>The type of selector. Valid values: data and others.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -595,7 +640,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             private String subTip; 
 
             /**
-             * Key.
+             * <p>The field for matched objects in the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http.request.headers</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -603,7 +651,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label of the matched object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -611,7 +662,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Logics.
+             * <p>The logical conditions.</p>
              */
             public Builder logics(java.util.List < Logics> logics) {
                 this.logics = logics;
@@ -619,7 +670,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Selector.
+             * <p>The selector, which defines how to select a matched object.</p>
              */
             public Builder selector(Selector selector) {
                 this.selector = selector;
@@ -627,7 +678,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Sub.
+             * <p>Indicates whether the matched object contains a subfield.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sub(Boolean sub) {
                 this.sub = sub;
@@ -635,7 +689,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * SubTip.
+             * <p>The tip on how to enter a subfield.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e.g. Content-Type</p>
              */
             public Builder subTip(String subTip) {
                 this.subTip = subTip;
@@ -718,7 +775,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Fields.
+             * <p>The matched objects and related properties.</p>
              */
             public Builder fields(java.util.List < Fields> fields) {
                 this.fields = fields;
@@ -726,7 +783,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The WAF rule category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_bot</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -734,7 +794,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The condition for matching incoming requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>characteristics</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -742,7 +805,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_custom_cc</p>
              */
             public Builder type(String type) {
                 this.type = type;

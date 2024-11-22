@@ -62,7 +62,7 @@ public class UpdateSiteDeliveryTaskStatusResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
@@ -73,7 +73,14 @@ public class UpdateSiteDeliveryTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the delivery task. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -81,7 +88,10 @@ public class UpdateSiteDeliveryTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the delivery task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdn-test-task</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

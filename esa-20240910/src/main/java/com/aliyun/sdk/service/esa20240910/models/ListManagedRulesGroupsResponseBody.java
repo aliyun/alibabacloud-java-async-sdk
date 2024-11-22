@@ -86,7 +86,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ManagedRulesGroups.
+         * <p>The information about the managed rule groups.</p>
          */
         public Builder managedRulesGroups(java.util.List < ManagedRulesGroups> managedRulesGroups) {
             this.managedRulesGroups = managedRulesGroups;
@@ -94,7 +94,10 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -121,7 +127,10 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of managed rule groups returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -179,7 +188,10 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
             private Long ruleCount; 
 
             /**
-             * Name.
+             * <p>The name of the managed rule group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -187,7 +199,10 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * <p>The number of rules in the managed rule group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder ruleCount(Long ruleCount) {
                 this.ruleCount = ruleCount;

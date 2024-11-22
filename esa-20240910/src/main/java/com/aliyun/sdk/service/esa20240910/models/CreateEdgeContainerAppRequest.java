@@ -240,7 +240,10 @@ public class CreateEdgeContainerAppRequest extends Request {
         } 
 
         /**
-         * HealthCheckFailTimes.
+         * <p>The number of consecutive failed health checks required for an application to be considered as unhealthy. Valid values: 1 to 10. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder healthCheckFailTimes(Integer healthCheckFailTimes) {
             this.putBodyParameter("HealthCheckFailTimes", healthCheckFailTimes);
@@ -249,7 +252,10 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * HealthCheckHost.
+         * <p>The domain name that is used for health checks. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder healthCheckHost(String healthCheckHost) {
             this.putBodyParameter("HealthCheckHost", healthCheckHost);
@@ -258,7 +264,14 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * HealthCheckHttpCode.
+         * <p>The HTTP status code returned for a successful health check. Valid values:</p>
+         * <ul>
+         * <li><strong>http_2xx</strong> (default)</li>
+         * <li><strong>http_3xx</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>http_2xx</p>
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.putBodyParameter("HealthCheckHttpCode", healthCheckHttpCode);
@@ -267,7 +280,10 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * HealthCheckInterval.
+         * <p>The interval between two consecutive health checks. Unit: seconds. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>5</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putBodyParameter("HealthCheckInterval", healthCheckInterval);
@@ -276,7 +292,14 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * HealthCheckMethod.
+         * <p>The HTTP request method for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>HEAD</strong> (default): requests the headers of the resource.</li>
+         * <li><strong>GET</strong>: requests the specified resource and returns both the headers and entity body.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HEAD</p>
          */
         public Builder healthCheckMethod(String healthCheckMethod) {
             this.putBodyParameter("HealthCheckMethod", healthCheckMethod);
@@ -285,7 +308,10 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * HealthCheckPort.
+         * <p>The port used for health checks. Valid values: 1 to 65535. Default value: 80.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder healthCheckPort(Integer healthCheckPort) {
             this.putBodyParameter("HealthCheckPort", healthCheckPort);
@@ -294,7 +320,10 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * HealthCheckSuccTimes.
+         * <p>The number of consecutive successful health checks required for an application to be considered as healthy. Valid values: 1 to 10. Default value: 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder healthCheckSuccTimes(Integer healthCheckSuccTimes) {
             this.putBodyParameter("HealthCheckSuccTimes", healthCheckSuccTimes);
@@ -303,7 +332,10 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * HealthCheckTimeout.
+         * <p>The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check. Unit: seconds.<br>Valid values: <strong>1</strong> to <strong>100</strong>.<br>Default value: <strong>3</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.putBodyParameter("HealthCheckTimeout", healthCheckTimeout);
@@ -312,7 +344,15 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * HealthCheckType.
+         * <p>The health check type. By default, this parameter is left empty.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>l4</strong>: Layer 4 health check.</li>
+         * <li><strong>l7</strong>: Layer 7 health check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>l7</p>
          */
         public Builder healthCheckType(String healthCheckType) {
             this.putBodyParameter("HealthCheckType", healthCheckType);
@@ -321,7 +361,10 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * HealthCheckURI.
+         * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length. Default value: &quot;/&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/health_check</p>
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.putBodyParameter("HealthCheckURI", healthCheckURI);
@@ -330,6 +373,7 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
+         * <p>The name of the application. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens (-). The name must be 6 to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +386,10 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
-         * Remarks.
+         * <p>The remarks. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test app</p>
          */
         public Builder remarks(String remarks) {
             this.putBodyParameter("Remarks", remarks);
@@ -351,6 +398,7 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
+         * <p>The server port. Valid values: 1 to 65535.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -363,6 +411,7 @@ public class CreateEdgeContainerAppRequest extends Request {
         }
 
         /**
+         * <p>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

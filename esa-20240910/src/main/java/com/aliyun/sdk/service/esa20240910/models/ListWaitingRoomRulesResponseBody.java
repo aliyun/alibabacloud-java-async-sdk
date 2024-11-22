@@ -50,7 +50,7 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
         private java.util.List < WaitingRoomRules> waitingRoomRules; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID, which is used to trace a call.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A123425345</p>
@@ -61,7 +61,7 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
         }
 
         /**
-         * WaitingRoomRules.
+         * <p>The waiting room bypass rules.</p>
          */
         public Builder waitingRoomRules(java.util.List < WaitingRoomRules> waitingRoomRules) {
             this.waitingRoomRules = waitingRoomRules;
@@ -143,7 +143,10 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
             private Long waitingRoomRuleId; 
 
             /**
-             * Rule.
+             * <p>The rule content, which is a policy or conditional expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -151,7 +154,14 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -159,7 +169,10 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -167,7 +180,10 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingRoomRuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37286782688****</p>
              */
             public Builder waitingRoomRuleId(Long waitingRoomRuleId) {
                 this.waitingRoomRuleId = waitingRoomRuleId;

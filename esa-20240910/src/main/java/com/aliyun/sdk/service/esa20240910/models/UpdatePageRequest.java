@@ -114,6 +114,7 @@ public class UpdatePageRequest extends Request {
         } 
 
         /**
+         * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,6 +127,11 @@ public class UpdatePageRequest extends Request {
         }
 
         /**
+         * <p>The Content-Type field in the HTTP header. Valid values:</p>
+         * <ul>
+         * <li>text/html</li>
+         * <li>application/json</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +144,10 @@ public class UpdatePageRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the custom error page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a custom deny page</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -147,6 +156,7 @@ public class UpdatePageRequest extends Request {
         }
 
         /**
+         * <p>The ID of the custom error page, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +169,7 @@ public class UpdatePageRequest extends Request {
         }
 
         /**
+         * <p>The name of the custom error page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

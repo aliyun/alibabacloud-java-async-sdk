@@ -82,7 +82,10 @@ public class ListWafTemplateRulesRequest extends Request {
         } 
 
         /**
-         * Phase.
+         * <p>The WAF rule category, which is used to filter template rules of a specific category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_anti_scan</p>
          */
         public Builder phase(String phase) {
             this.putQueryParameter("Phase", phase);
@@ -91,7 +94,10 @@ public class ListWafTemplateRulesRequest extends Request {
         }
 
         /**
-         * QueryArgs.
+         * <p>The query parameter, which is used to filter template rules based on criteria such as the rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_anti_scan</p>
          */
         public Builder queryArgs(QueryArgs queryArgs) {
             String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
@@ -101,7 +107,10 @@ public class ListWafTemplateRulesRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>站点ID，可通过调用<a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>接口获取。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -149,7 +158,10 @@ public class ListWafTemplateRulesRequest extends Request {
             private String type; 
 
             /**
-             * Type.
+             * <p>The rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_directory_traversal</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -134,7 +134,10 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Capacity.
+         * <p>The available capacity of the namespace. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1073741824</p>
          */
         public Builder capacity(Long capacity) {
             this.capacity = capacity;
@@ -142,7 +145,10 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * CapacityString.
+         * <p>The available capacity of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 GB</p>
          */
         public Builder capacityString(String capacityString) {
             this.capacityString = capacityString;
@@ -150,7 +156,10 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * CapacityUsed.
+         * <p>The used capacity of the namespace. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10048576</p>
          */
         public Builder capacityUsed(Long capacityUsed) {
             this.capacityUsed = capacityUsed;
@@ -158,7 +167,10 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * CapacityUsedString.
+         * <p>The used capacity of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100 MB</p>
          */
         public Builder capacityUsedString(String capacityUsedString) {
             this.capacityUsedString = capacityUsedString;
@@ -166,7 +178,10 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test namespace.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -174,7 +189,10 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_namespace</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -182,7 +200,10 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceId.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>643355322374688768</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
@@ -190,7 +211,10 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +222,16 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the namespace. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: working as expected.</li>
+         * <li><strong>delete</strong>: pending deletion.</li>
+         * <li><strong>deleting</strong>: being deleted.</li>
+         * <li><strong>deleted</strong>: deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;

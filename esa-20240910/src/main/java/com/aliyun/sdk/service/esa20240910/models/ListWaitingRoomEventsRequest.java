@@ -84,6 +84,7 @@ public class ListWaitingRoomEventsRequest extends Request {
         } 
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,7 +97,10 @@ public class ListWaitingRoomEventsRequest extends Request {
         }
 
         /**
-         * WaitingRoomEventId.
+         * <p>The ID of the waiting room event. This parameter is optional. You can specify this parameter to query a specific waiting room event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89677721098****</p>
          */
         public Builder waitingRoomEventId(Long waitingRoomEventId) {
             this.putQueryParameter("WaitingRoomEventId", waitingRoomEventId);
@@ -105,6 +109,7 @@ public class ListWaitingRoomEventsRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the waiting room, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

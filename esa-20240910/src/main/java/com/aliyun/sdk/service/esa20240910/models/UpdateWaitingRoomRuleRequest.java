@@ -114,6 +114,7 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         } 
 
         /**
+         * <p>The rule content, which is a policy or conditional expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,6 +127,11 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the rule. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +144,7 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,6 +157,7 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +170,10 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * WaitingRoomRuleId.
+         * <p>The ID of the waiting room bypass rule that you want to update. You can call <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8987739839****</p>
          */
         public Builder waitingRoomRuleId(Long waitingRoomRuleId) {
             this.putQueryParameter("WaitingRoomRuleId", waitingRoomRuleId);

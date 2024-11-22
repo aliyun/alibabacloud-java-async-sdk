@@ -86,7 +86,10 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,10 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +119,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The tasks.</p>
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -118,7 +127,10 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -224,7 +236,10 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * Content.
+             * <p>The prefetched content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://a.com/1.jpg?b=2">http://a.com/1.jpg?b=2</a></p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -232,7 +247,10 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-28 14:28:57</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -240,7 +258,15 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The error message returned upon a prefetch task failure. Valid values:</p>
+             * <ul>
+             * <li><strong>Internal Error</strong></li>
+             * <li><strong>Origin Timeout</strong></li>
+             * <li><strong>Origin Return StatusCode 5XX</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -248,7 +274,10 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The progress of the task, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -256,7 +285,15 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * <ul>
+             * <li><strong>Complete</strong>: The task is complete.</li>
+             * <li><strong>Refreshing</strong>: The task is in progress.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -264,7 +301,10 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the queried task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1597854579687428</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -50,7 +50,10 @@ public class GetKvResponseBody extends TeaModel {
         private String value; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class GetKvResponseBody extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_value</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -122,7 +122,7 @@ public class GetRoutineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CodeVersions.
+         * <p>The code versions.</p>
          */
         public Builder codeVersions(java.util.List < CodeVersions> codeVersions) {
             this.codeVersions = codeVersions;
@@ -130,7 +130,10 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the routine was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-11T01:23:21Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -138,7 +141,10 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultRelatedRecord.
+         * <p>The default record name to access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routine1.example.com</p>
          */
         public Builder defaultRelatedRecord(String defaultRelatedRecord) {
             this.defaultRelatedRecord = defaultRelatedRecord;
@@ -146,7 +152,10 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the routine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -154,7 +163,7 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * Envs.
+         * <p>The information about the environments.</p>
          */
         public Builder envs(java.util.List < Envs> envs) {
             this.envs = envs;
@@ -162,7 +171,7 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * RelatedRecords.
+         * <p>The records associated with the routine.</p>
          */
         public Builder relatedRecords(java.util.List < RelatedRecords> relatedRecords) {
             this.relatedRecords = relatedRecords;
@@ -170,7 +179,7 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * RelatedRoutes.
+         * <p>The routes associated with the routine.</p>
          */
         public Builder relatedRoutes(java.util.List < RelatedRoutes> relatedRoutes) {
             this.relatedRoutes = relatedRoutes;
@@ -178,7 +187,10 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +260,10 @@ public class GetRoutineResponseBody extends TeaModel {
             private String createTime; 
 
             /**
-             * CodeDescription.
+             * <p>The description of the code version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test ver code desc</p>
              */
             public Builder codeDescription(String codeDescription) {
                 this.codeDescription = codeDescription;
@@ -256,7 +271,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * CodeVersion.
+             * <p>The code version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710120201067203242</p>
              */
             public Builder codeVersion(String codeVersion) {
                 this.codeVersion = codeVersion;
@@ -264,7 +282,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the code version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-11T01:23:21Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -359,7 +380,7 @@ public class GetRoutineResponseBody extends TeaModel {
             private String specName; 
 
             /**
-             * CanaryAreaList.
+             * <p>The regions for canary release.</p>
              */
             public Builder canaryAreaList(java.util.List < String > canaryAreaList) {
                 this.canaryAreaList = canaryAreaList;
@@ -367,7 +388,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * CanaryCodeVersion.
+             * <p>The version number for canary release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710120201067577628</p>
              */
             public Builder canaryCodeVersion(String canaryCodeVersion) {
                 this.canaryCodeVersion = canaryCodeVersion;
@@ -375,7 +399,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * CodeVersion.
+             * <p>The version number of the code in the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710120201067577628</p>
              */
             public Builder codeVersion(String codeVersion) {
                 this.codeVersion = codeVersion;
@@ -383,7 +410,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -391,7 +421,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * SpecName.
+             * <p>The specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ms</p>
              */
             public Builder specName(String specName) {
                 this.specName = specName;
@@ -474,7 +507,10 @@ public class GetRoutineResponseBody extends TeaModel {
             private String siteName; 
 
             /**
-             * RecordId.
+             * <p>The record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>509348423011904</p>
              */
             public Builder recordId(Long recordId) {
                 this.recordId = recordId;
@@ -482,7 +518,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * RecordName.
+             * <p>The record name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-record-1.example.com</p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -490,7 +529,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54362329990032</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -498,7 +540,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;
@@ -581,7 +626,10 @@ public class GetRoutineResponseBody extends TeaModel {
             private String siteName; 
 
             /**
-             * Route.
+             * <p>The route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em>.example.com/path1</em></p>
              */
             public Builder route(String route) {
                 this.route = route;
@@ -589,7 +637,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * RouteId.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d501cb8a2c951f32922d260040780c06</p>
              */
             public Builder routeId(String routeId) {
                 this.routeId = routeId;
@@ -597,7 +648,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54362329990032</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -605,7 +659,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;

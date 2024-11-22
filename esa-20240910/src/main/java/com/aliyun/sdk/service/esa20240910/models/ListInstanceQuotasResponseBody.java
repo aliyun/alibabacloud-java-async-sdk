@@ -74,7 +74,10 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * InstanceId.
+         * <p>The plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-xcdn-96wblslz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -82,7 +85,7 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * Quotas.
+         * <p>The quotas in the plan.</p>
          */
         public Builder quotas(java.util.List < Quotas> quotas) {
             this.quotas = quotas;
@@ -90,7 +93,7 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>
@@ -101,7 +104,15 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The plan status. Valid values:</p>
+         * <ul>
+         * <li>online: The plan is in service.</li>
+         * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
+         * <li>disable: The plan is released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -171,7 +182,10 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
             private String quotaValueType; 
 
             /**
-             * QuotaName.
+             * <p>The quota name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customHttpCert</p>
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;
@@ -179,7 +193,10 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaValue.
+             * <p>The quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder quotaValue(String quotaValue) {
                 this.quotaValue = quotaValue;
@@ -187,7 +204,17 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaValueType.
+             * <p>The threshold type of the quota. Valid values:</p>
+             * <ul>
+             * <li>value: enumerates the values of the quota.</li>
+             * <li>bool: specifies whether the quota is available.</li>
+             * <li>num: the upper limit of the quota.</li>
+             * <li>range: the value range for the quota.</li>
+             * <li>custom: other types than the preceding four quota threshold types.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>bool</p>
              */
             public Builder quotaValueType(String quotaValueType) {
                 this.quotaValueType = quotaValueType;

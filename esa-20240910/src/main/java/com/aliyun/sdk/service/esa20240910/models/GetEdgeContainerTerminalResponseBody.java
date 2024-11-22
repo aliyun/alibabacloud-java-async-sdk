@@ -110,7 +110,10 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * Cluster.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c497b44c2a59f4ae0bd2826edc40a2c6e</p>
          */
         public Builder cluster(String cluster) {
             this.cluster = cluster;
@@ -118,7 +121,10 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         }
 
         /**
-         * Container.
+         * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker0</p>
          */
         public Builder container(String container) {
             this.container = container;
@@ -126,7 +132,10 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -134,7 +143,10 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         }
 
         /**
-         * Pod.
+         * <p>The name of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1775b9e0-8463-457e-89e8-fb7b6d125b2e</p>
          */
         public Builder pod(String pod) {
             this.pod = pod;
@@ -142,7 +154,7 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
@@ -153,7 +165,10 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af22f4xxxxxxxxxxxxxxxxxx</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -161,7 +176,10 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The information about the shared token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af22f4-xxxxx-xxxx-xxxx-xxxx</p>
          */
         public Builder token(String token) {
             this.token = token;

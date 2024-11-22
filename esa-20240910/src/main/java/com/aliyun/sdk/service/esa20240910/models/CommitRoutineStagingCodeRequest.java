@@ -68,7 +68,10 @@ public class CommitRoutineStagingCodeRequest extends Request {
         } 
 
         /**
-         * CodeDescription.
+         * <p>The description of the code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description of this code ver</p>
          */
         public Builder codeDescription(String codeDescription) {
             this.putBodyParameter("CodeDescription", codeDescription);
@@ -77,7 +80,10 @@ public class CommitRoutineStagingCodeRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CommitRoutineStagingCode</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

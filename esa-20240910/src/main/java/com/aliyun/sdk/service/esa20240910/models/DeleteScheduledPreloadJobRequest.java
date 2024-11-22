@@ -55,6 +55,7 @@ public class DeleteScheduledPreloadJobRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the scheduled prefetch task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

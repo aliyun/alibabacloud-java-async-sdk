@@ -98,7 +98,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         private Integer totalPage; 
 
         /**
-         * InstanceInfo.
+         * <p>The cache reserve instances.</p>
          */
         public Builder instanceInfo(java.util.List < InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -106,7 +106,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1 to 500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65C66B7B-671A-8297-9187-2R5477247B76</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -256,7 +271,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CacheReserveCapacity.
+             * <p>The capacity of the cache reserve instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512000</p>
              */
             public Builder cacheReserveCapacity(String cacheReserveCapacity) {
                 this.cacheReserveCapacity = cacheReserveCapacity;
@@ -264,7 +282,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CacheReserveRegion.
+             * <p>The region in which the cache reserve instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HK</p>
              */
             public Builder cacheReserveRegion(String cacheReserveRegion) {
                 this.cacheReserveRegion = cacheReserveRegion;
@@ -272,7 +293,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the cache reserve instance was purchased.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-12T05:41:51Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -280,7 +304,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The subscription period of the cache reserve instance. Unit: months.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -288,7 +315,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The time when the cache reserve instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-05T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -296,7 +326,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the cache reserve instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-xcdn-96wblslz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -304,7 +337,16 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the cache reserve instance. Valid values:</p>
+             * <ul>
+             * <li>online: The instance is in service.</li>
+             * <li>offline: The instance has expired within an allowable period. In this state, the plan is unavailable.</li>
+             * <li>disable: The instance is released.</li>
+             * <li>overdue: The service was stopped due to overdue payments.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;

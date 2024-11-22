@@ -50,7 +50,10 @@ public class FieldContentValue extends TeaModel {
         private java.util.List < FieldList> fieldList; 
 
         /**
-         * SortOrder.
+         * <p>The sequence number of the fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sortOrder(Long sortOrder) {
             this.sortOrder = sortOrder;
@@ -58,7 +61,7 @@ public class FieldContentValue extends TeaModel {
         }
 
         /**
-         * FieldList.
+         * <p>The fields.</p>
          */
         public Builder fieldList(java.util.List < FieldList> fieldList) {
             this.fieldList = fieldList;
@@ -176,7 +179,10 @@ public class FieldContentValue extends TeaModel {
             private Boolean isDefault; 
 
             /**
-             * FieldName.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClientIp</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -184,7 +190,10 @@ public class FieldContentValue extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the field in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IP address of the client.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -192,7 +201,7 @@ public class FieldContentValue extends TeaModel {
             }
 
             /**
-             * DescriptionCn.
+             * <p>The description of the field in Chinese.</p>
              */
             public Builder descriptionCn(String descriptionCn) {
                 this.descriptionCn = descriptionCn;
@@ -200,7 +209,10 @@ public class FieldContentValue extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The category of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Client</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -208,7 +220,10 @@ public class FieldContentValue extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The data type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -216,7 +231,10 @@ public class FieldContentValue extends TeaModel {
             }
 
             /**
-             * SortOrder.
+             * <p>The sequence number of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sortOrder(Long sortOrder) {
                 this.sortOrder = sortOrder;
@@ -224,7 +242,10 @@ public class FieldContentValue extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the field is available by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;

@@ -96,7 +96,7 @@ public class CreateSiteCustomLogRequest extends Request {
         } 
 
         /**
-         * Cookies.
+         * <p>The cookie fields.</p>
          */
         public Builder cookies(java.util.List < String > cookies) {
             String cookiesShrink = shrink(cookies, "Cookies", "json");
@@ -106,7 +106,7 @@ public class CreateSiteCustomLogRequest extends Request {
         }
 
         /**
-         * RequestHeaders.
+         * <p>The request header fields.</p>
          */
         public Builder requestHeaders(java.util.List < String > requestHeaders) {
             String requestHeadersShrink = shrink(requestHeaders, "RequestHeaders", "json");
@@ -116,7 +116,7 @@ public class CreateSiteCustomLogRequest extends Request {
         }
 
         /**
-         * ResponseHeaders.
+         * <p>The response header fields.</p>
          */
         public Builder responseHeaders(java.util.List < String > responseHeaders) {
             String responseHeadersShrink = shrink(responseHeaders, "ResponseHeaders", "json");
@@ -126,7 +126,10 @@ public class CreateSiteCustomLogRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11223</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);

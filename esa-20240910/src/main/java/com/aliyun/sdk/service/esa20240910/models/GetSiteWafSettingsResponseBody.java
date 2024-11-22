@@ -50,7 +50,10 @@ public class GetSiteWafSettingsResponseBody extends TeaModel {
         private WafSiteSettings settings; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetSiteWafSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Settings.
+         * <p>The WAF configurations of the website.</p>
          */
         public Builder settings(WafSiteSettings settings) {
             this.settings = settings;

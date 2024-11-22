@@ -68,7 +68,10 @@ public class DeleteRoutineCodeVersionRequest extends Request {
         } 
 
         /**
-         * CodeVersion.
+         * <p>The code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710120201067203242</p>
          */
         public Builder codeVersion(String codeVersion) {
             this.putBodyParameter("CodeVersion", codeVersion);
@@ -77,7 +80,10 @@ public class DeleteRoutineCodeVersionRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-routine1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

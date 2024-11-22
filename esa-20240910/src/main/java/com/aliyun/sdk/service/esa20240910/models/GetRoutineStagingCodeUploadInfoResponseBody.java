@@ -62,7 +62,10 @@ public class GetRoutineStagingCodeUploadInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CodeVersion.
+         * <p>The code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710120201067203242</p>
          */
         public Builder codeVersion(String codeVersion) {
             this.codeVersion = codeVersion;
@@ -70,7 +73,18 @@ public class GetRoutineStagingCodeUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OssPostConfig.
+         * <p>The configuration information that can be used to upload to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *             &quot;Url&quot;: &quot;<a href="http://oss_fake_bucket_url">http://oss_fake_bucket_url</a>&quot;,
+         *             &quot;OSSAccessKeyId&quot;: &quot;xxx&quot;,
+         *             &quot;key&quot;: &quot;site_er_js/hello.1418586423220543.unstable.js&quot;,
+         *             &quot;callback&quot;: &quot;xxx==&quot;,
+         *             &quot;x:codeDescription&quot;: &quot;xxx=&quot;,
+         *             &quot;policy&quot;: &quot;xxx&quot;,
+         *             &quot;Signature&quot;: &quot;xxx=&quot;
+         * }</p>
          */
         public Builder ossPostConfig(java.util.Map < String, ? > ossPostConfig) {
             this.ossPostConfig = ossPostConfig;
@@ -78,7 +92,10 @@ public class GetRoutineStagingCodeUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

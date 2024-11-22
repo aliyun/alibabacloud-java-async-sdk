@@ -70,6 +70,11 @@ public class UpdateSiteAccessTypeRequest extends Request {
         } 
 
         /**
+         * <p>The new DNS setup of the website. Valid values:</p>
+         * <ul>
+         * <li><strong>NS</strong></li>
+         * <li><strong>CNAME</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,6 +87,7 @@ public class UpdateSiteAccessTypeRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

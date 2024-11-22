@@ -74,7 +74,14 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * DataCenter.
+         * <p>The data center. Valid values:</p>
+         * <ul>
+         * <li>cn: the Chinese mainland.</li>
+         * <li>oversea: outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder dataCenter(String dataCenter) {
             this.dataCenter = dataCenter;
@@ -82,7 +89,7 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9358E852-992D-5BC7-8BD7-975CA02773A8</p>
@@ -93,7 +100,10 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.<a href="~~2850189~~"></a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(String siteId) {
             this.siteId = siteId;
@@ -101,7 +111,10 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the delivery task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>er-oss</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

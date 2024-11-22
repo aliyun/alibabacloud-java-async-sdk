@@ -98,7 +98,10 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         private Integer totalPage; 
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +109,10 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +120,7 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         }
 
         /**
-         * PlanInfo.
+         * <p>The plans.</p>
          */
         public Builder planInfo(java.util.List < PlanInfo> planInfo) {
             this.planInfo = planInfo;
@@ -122,7 +128,7 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -133,7 +139,10 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -141,7 +150,10 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -247,7 +259,14 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
             private String planName; 
 
             /**
-             * BillingMode.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PREPAY: subscription.</li>
+             * <li>POSTPAY: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder billingMode(String billingMode) {
                 this.billingMode = billingMode;
@@ -255,7 +274,10 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
             }
 
             /**
-             * ErRoutineCodeVersionQuota.
+             * <p>The maximum number of versions that each routine supports.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder erRoutineCodeVersionQuota(String erRoutineCodeVersionQuota) {
                 this.erRoutineCodeVersionQuota = erRoutineCodeVersionQuota;
@@ -263,7 +285,10 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
             }
 
             /**
-             * ErRoutineQuota.
+             * <p>The maximum of routines that can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder erRoutineQuota(String erRoutineQuota) {
                 this.erRoutineQuota = erRoutineQuota;
@@ -271,7 +296,10 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
             }
 
             /**
-             * ErRoutineRouteSiteCountQuota.
+             * <p>The maximum number of websites with which each routine can be associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder erRoutineRouteSiteCountQuota(String erRoutineRouteSiteCountQuota) {
                 this.erRoutineRouteSiteCountQuota = erRoutineRouteSiteCountQuota;
@@ -279,7 +307,14 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentMethod.
+             * <p>The payment method. Valid values:</p>
+             * <ul>
+             * <li>er_free</li>
+             * <li>er_pay</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>er_free</p>
              */
             public Builder paymentMethod(String paymentMethod) {
                 this.paymentMethod = paymentMethod;
@@ -287,7 +322,10 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
             }
 
             /**
-             * PlanName.
+             * <p>The plan name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_plan</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;

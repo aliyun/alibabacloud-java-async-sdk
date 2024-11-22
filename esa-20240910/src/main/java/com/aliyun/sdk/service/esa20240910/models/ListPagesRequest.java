@@ -68,7 +68,10 @@ public class ListPagesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Valid values: <strong>1 to 100000</strong>. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -77,7 +80,10 @@ public class ListPagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

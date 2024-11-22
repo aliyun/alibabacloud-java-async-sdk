@@ -112,7 +112,10 @@ public class ListScheduledPreloadJobsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time for querying the task creation time range. Specify the timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717225277000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -121,7 +124,10 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -130,7 +136,10 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -139,6 +148,7 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
+         * <p>The website ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +161,10 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the task creation time range to query. Specify the timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717225276000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -96,7 +96,7 @@ public class UpdateSiteCustomLogRequest extends Request {
         } 
 
         /**
-         * Cookies.
+         * <p>The cookie fields.</p>
          */
         public Builder cookies(java.util.List < String > cookies) {
             String cookiesShrink = shrink(cookies, "Cookies", "json");
@@ -106,7 +106,7 @@ public class UpdateSiteCustomLogRequest extends Request {
         }
 
         /**
-         * RequestHeaders.
+         * <p>The request header fields.</p>
          */
         public Builder requestHeaders(java.util.List < String > requestHeaders) {
             String requestHeadersShrink = shrink(requestHeaders, "RequestHeaders", "json");
@@ -116,7 +116,7 @@ public class UpdateSiteCustomLogRequest extends Request {
         }
 
         /**
-         * ResponseHeaders.
+         * <p>The response header fields.</p>
          */
         public Builder responseHeaders(java.util.List < String > responseHeaders) {
             String responseHeadersShrink = shrink(responseHeaders, "ResponseHeaders", "json");

@@ -50,7 +50,10 @@ public class EnableCustomScenePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PolicyId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder policyId(Long policyId) {
             this.policyId = policyId;
@@ -58,7 +61,7 @@ public class EnableCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>65C66B7B-671A-8297-9187-2R5477247B76</p>

@@ -83,6 +83,7 @@ public class DescribeCustomScenePoliciesRequest extends Request {
         } 
 
         /**
+         * <p>The page number. Valid values: 1 to 100000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -95,7 +96,10 @@ public class DescribeCustomScenePoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Valid values: 5, 10, and 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -104,7 +108,10 @@ public class DescribeCustomScenePoliciesRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the policy, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);

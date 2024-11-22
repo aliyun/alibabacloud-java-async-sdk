@@ -50,7 +50,7 @@ public class GetSiteResponseBody extends TeaModel {
         private SiteModel siteModel; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
@@ -61,7 +61,7 @@ public class GetSiteResponseBody extends TeaModel {
         }
 
         /**
-         * SiteModel.
+         * <p>The queried website information.</p>
          */
         public Builder siteModel(SiteModel siteModel) {
             this.siteModel = siteModel;
@@ -299,7 +299,14 @@ public class GetSiteResponseBody extends TeaModel {
             private Boolean versionManagement; 
 
             /**
-             * AccessType.
+             * <p>The DNS setup option for the website. Valid values:</p>
+             * <ul>
+             * <li><strong>NS</strong></li>
+             * <li><strong>CNAME</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NS</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -307,7 +314,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * CnameZone.
+             * <p>The CNAME of the website domain. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured then.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.cname.com</p>
              */
             public Builder cnameZone(String cnameZone) {
                 this.cnameZone = cnameZone;
@@ -315,7 +325,15 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * Coverage.
+             * <p>The service location. Valid values:</p>
+             * <ul>
+             * <li><strong>domestic</strong>: the Chinese mainland.</li>
+             * <li><strong>global</strong>: global.</li>
+             * <li><strong>overseas</strong>: outside the Chinese mainland.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>domestic</p>
              */
             public Builder coverage(String coverage) {
                 this.coverage = coverage;
@@ -323,7 +341,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the WEBsite was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-24T02:01:11Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -331,7 +352,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cas-merge-q6h0bv</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -339,7 +363,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * NameServerList.
+             * <p>The nameservers assigned to the website domain. They are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>male1-1.ialicdn.com,female1-1.ialicdn.com</p>
              */
             public Builder nameServerList(String nameServerList) {
                 this.nameServerList = nameServerList;
@@ -347,7 +374,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * PlanName.
+             * <p>The plan name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plan-168777532****</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -355,7 +385,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * PlanSpecName.
+             * <p>The specification of the plan associated with the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder planSpecName(String planSpecName) {
                 this.planSpecName = planSpecName;
@@ -363,7 +396,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of your Alibaba Cloud resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek26g6i6se****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -371,7 +407,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -379,7 +418,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;
@@ -387,7 +429,16 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The website status. Valid values:</p>
+             * <ul>
+             * <li><strong>pending</strong>: The website is to be configured.</li>
+             * <li><strong>active</strong>: The website is active.</li>
+             * <li><strong>offline</strong>: The website is suspended.</li>
+             * <li><strong>moved</strong>: The website has been added and verified by another Alibaba Cloud account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -395,7 +446,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;tag1&quot;:&quot;value1&quot;}</p>
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -403,7 +457,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the WEBsite was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-24T02:01:11Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -411,7 +468,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * VanityNSList.
+             * <p>The information about custom nameservers of the website domain. The key is a custom nameserver name, and the value is the IP address of the custom nameserver. Multiple IP addresses are separated by commas (,).</p>
              */
             public Builder vanityNSList(java.util.Map < String, String > vanityNSList) {
                 this.vanityNSList = vanityNSList;
@@ -419,7 +476,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyCode.
+             * <p>The code that is used to verify the website domain ownership. As part of the verification TXT record, this parameter is returned for websites that use CNAME setup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>verify_d516cb3740f81f0cef77d162edd1****</p>
              */
             public Builder verifyCode(String verifyCode) {
                 this.verifyCode = verifyCode;
@@ -427,7 +487,10 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * VersionManagement.
+             * <p>The status of version management. If true is returned, version management is enabled for the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder versionManagement(Boolean versionManagement) {
                 this.versionManagement = versionManagement;

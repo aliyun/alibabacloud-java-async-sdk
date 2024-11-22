@@ -98,7 +98,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * FailedExecutions.
+         * <p>The information about prefetch plans that failed to be created.</p>
          */
         public Builder failedExecutions(java.util.List < FailedExecutions> failedExecutions) {
             this.failedExecutions = failedExecutions;
@@ -106,7 +106,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * FailedMessages.
+         * <p>The information about plan failures.</p>
          */
         public Builder failedMessages(java.util.List < String > failedMessages) {
             this.failedMessages = failedMessages;
@@ -114,7 +114,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +125,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * <p>The number of prefetch plans that are created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -130,7 +136,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessExecutions.
+         * <p>The information about created prefetch plans.</p>
          */
         public Builder successExecutions(java.util.List < SuccessExecutions> successExecutions) {
             this.successExecutions = successExecutions;
@@ -138,7 +144,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of new plans requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -268,7 +277,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15685865xxx14622</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -276,7 +288,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the prefetch plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-03T02:43:35Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -284,7 +299,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the prefetch plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66599bd7397885b43804901c</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -292,7 +310,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The time interval between each batch execution. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -300,7 +321,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the prefetch task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>665d3af3621bccf3fe29e1a4</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -308,7 +332,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * SliceLen.
+             * <p>The number of URLs prefetched in each batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sliceLen(Integer sliceLen) {
                 this.sliceLen = sliceLen;
@@ -316,7 +343,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the prefetch plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-02T02:43:35Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -324,7 +354,17 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the prefetch plan. Valid values:</p>
+             * <ul>
+             * <li><strong>waiting</strong></li>
+             * <li><strong>running</strong></li>
+             * <li><strong>finished</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>stopped</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -455,7 +495,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15685865xxx14622</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -463,7 +506,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the prefetch plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-03T02:43:35Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -471,7 +517,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the prefetch plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66599bd7397885b43804901c</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -479,7 +528,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The time interval between each batch execution. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -487,7 +539,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the prefetch task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>665d3af3621bccf3fe29e1a4</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -495,7 +550,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * SliceLen.
+             * <p>The number of URLs prefetched in each batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sliceLen(Integer sliceLen) {
                 this.sliceLen = sliceLen;
@@ -503,7 +561,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the prefetch plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-02T02:43:35Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -511,7 +572,17 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the prefetch plan. Valid values:</p>
+             * <ul>
+             * <li><strong>waiting</strong></li>
+             * <li><strong>running</strong></li>
+             * <li><strong>finished</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>stopped</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>failed</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -98,7 +98,7 @@ public class CreateWafRuleRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The configuration of the rule that you want to create.</p>
          */
         public Builder config(WafRuleConfig config) {
             String configShrink = shrink(config, "Config", "json");
@@ -108,6 +108,7 @@ public class CreateWafRuleRequest extends Request {
         }
 
         /**
+         * <p>The WAF rule category.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,6 +121,7 @@ public class CreateWafRuleRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +134,10 @@ public class CreateWafRuleRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

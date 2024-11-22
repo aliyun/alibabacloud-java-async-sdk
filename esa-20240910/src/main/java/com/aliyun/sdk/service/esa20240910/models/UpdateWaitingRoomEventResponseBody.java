@@ -38,7 +38,10 @@ public class UpdateWaitingRoomEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0195619f-eab3-4a66-ac00-ed53d913e72e</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

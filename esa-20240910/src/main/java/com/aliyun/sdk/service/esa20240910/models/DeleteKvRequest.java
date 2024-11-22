@@ -70,6 +70,7 @@ public class DeleteKvRequest extends Request {
         } 
 
         /**
+         * <p>The name of the key that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,6 +83,7 @@ public class DeleteKvRequest extends Request {
         }
 
         /**
+         * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

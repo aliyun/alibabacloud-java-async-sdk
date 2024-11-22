@@ -155,6 +155,19 @@ public class ListWafManagedRulesRequest extends Request {
         } 
 
         /**
+         * <p>The attack type. Valid values:</p>
+         * <ul>
+         * <li>SQL injection</li>
+         * <li>Cross-site scripting</li>
+         * <li>Code execution</li>
+         * <li>CRLF</li>
+         * <li>Local file inclusion</li>
+         * <li>Remote file inclusion</li>
+         * <li>webshell</li>
+         * <li>Cross-site request forgery</li>
+         * <li>Others</li>
+         * <li>SEMA</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +180,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF rule, which can be obtained by calling the <a href="~~ListWafRules~~">ListWafRules</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +193,14 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -188,7 +209,10 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -197,7 +221,10 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +242,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * QueryArgs.
+         * <p>The query conditions.</p>
          */
         public Builder queryArgs(QueryArgs queryArgs) {
             String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
@@ -225,6 +252,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,7 +340,10 @@ public class ListWafManagedRulesRequest extends Request {
             private String status; 
 
             /**
-             * Action.
+             * <p>The action that you want WAF to perform on requests that match the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -320,7 +351,10 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * IdNameLike.
+             * <p>The rule ID or name for fuzzy search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder idNameLike(String idNameLike) {
                 this.idNameLike = idNameLike;
@@ -328,7 +362,7 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * ProtectionLevels.
+             * <p>The protection levels of the rules.</p>
              */
             public Builder protectionLevels(java.util.List < Integer > protectionLevels) {
                 this.protectionLevels = protectionLevels;
@@ -336,7 +370,10 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;

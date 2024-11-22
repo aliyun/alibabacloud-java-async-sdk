@@ -127,7 +127,12 @@ public class DescribeDDoSAllEventListRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The maximum time range is 31 days.</p>
+         * <p>If you do not configure this parameter, the current time is used as the end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-22T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -136,7 +141,16 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
-         * EventType.
+         * <p>The type of DDoS attacks to query. Valid values:</p>
+         * <ul>
+         * <li><strong>web-cc</strong>: web resource exhaustion attacks.</li>
+         * <li><strong>cc</strong>: connection flood attacks.</li>
+         * <li><strong>traffic</strong>: volumetric attacks.</li>
+         * </ul>
+         * <p>Default value: web-cc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web-cc</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -145,6 +159,7 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
+         * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +172,10 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: 5, 10, and 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,6 +184,7 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +197,8 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
-         * <p>A short description of struct</p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

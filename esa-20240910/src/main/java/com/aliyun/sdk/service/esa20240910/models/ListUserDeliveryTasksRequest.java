@@ -82,7 +82,16 @@ public class ListUserDeliveryTasksRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * <p>The log category. Valid values:</p>
+         * <ol>
+         * <li>dcdn_log_access_l1 (default): access logs.</li>
+         * <li>dcdn_log_er: Edge Routine logs.</li>
+         * <li>dcdn_log_waf: firewall logs.</li>
+         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -91,7 +100,10 @@ public class ListUserDeliveryTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -100,7 +112,10 @@ public class ListUserDeliveryTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

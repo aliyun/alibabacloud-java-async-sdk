@@ -84,6 +84,7 @@ public class CreateEdgeContainerAppRecordRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +97,7 @@ public class CreateEdgeContainerAppRecordRequest extends Request {
         }
 
         /**
+         * <p>The associated domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,7 +110,10 @@ public class CreateEdgeContainerAppRecordRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5407498413****</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);

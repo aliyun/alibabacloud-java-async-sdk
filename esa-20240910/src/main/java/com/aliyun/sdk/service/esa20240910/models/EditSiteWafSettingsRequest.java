@@ -82,7 +82,7 @@ public class EditSiteWafSettingsRequest extends Request {
         } 
 
         /**
-         * Settings.
+         * <p>The WAF configuration of the website in the JSON format.</p>
          */
         public Builder settings(WafSiteSettings settings) {
             String settingsShrink = shrink(settings, "Settings", "json");
@@ -92,7 +92,10 @@ public class EditSiteWafSettingsRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -101,7 +104,10 @@ public class EditSiteWafSettingsRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

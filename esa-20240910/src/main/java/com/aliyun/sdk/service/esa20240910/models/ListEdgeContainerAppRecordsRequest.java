@@ -125,6 +125,7 @@ public class ListEdgeContainerAppRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,14 @@ public class ListEdgeContainerAppRecordsRequest extends Request {
         }
 
         /**
-         * OrderKey.
+         * <p>The sorting field. Valid values:</p>
+         * <ul>
+         * <li>CreateTime: the time when the domain name was associated.</li>
+         * <li>CreateTime: the time when the domain name was last modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder orderKey(String orderKey) {
             this.putQueryParameter("OrderKey", orderKey);
@@ -146,7 +154,14 @@ public class ListEdgeContainerAppRecordsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The order in which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>ASC: in ascending order.</li>
+         * <li>DESC: in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -155,7 +170,10 @@ public class ListEdgeContainerAppRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -164,7 +182,10 @@ public class ListEdgeContainerAppRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -173,7 +194,10 @@ public class ListEdgeContainerAppRecordsRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword that is used for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ver-1006157458290860032</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);

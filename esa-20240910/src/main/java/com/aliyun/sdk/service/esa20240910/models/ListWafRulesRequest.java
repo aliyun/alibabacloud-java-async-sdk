@@ -125,7 +125,10 @@ public class ListWafRulesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_custom</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -134,7 +137,10 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,7 +149,10 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * Phase.
+         * <p>The WAF rule category. You can filter rules of a specific category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder phase(String phase) {
             this.putQueryParameter("Phase", phase);
@@ -152,7 +161,10 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * QueryArgs.
+         * <p>The filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_custom</p>
          */
         public Builder queryArgs(QueryArgs queryArgs) {
             String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
@@ -162,6 +174,7 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +187,10 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);
@@ -294,7 +310,10 @@ public class ListWafRulesRequest extends Request {
             private String status; 
 
             /**
-             * Desc.
+             * <p>Specifies whether to sort the returned data in descending order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder desc(Boolean desc) {
                 this.desc = desc;
@@ -302,7 +321,10 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The ID of a WAF rule for exact search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -310,7 +332,10 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * IdNameLike.
+             * <p>The ID or name of a WAF rule for fuzzy search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder idNameLike(String idNameLike) {
                 this.idNameLike = idNameLike;
@@ -318,7 +343,10 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * NameLike.
+             * <p>The name of a WAF rule for fuzzy search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder nameLike(String nameLike) {
                 this.nameLike = nameLike;
@@ -326,7 +354,10 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * OrderBy.
+             * <p>The column by which you want to sort the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>position</p>
              */
             public Builder orderBy(String orderBy) {
                 this.orderBy = orderBy;
@@ -334,7 +365,10 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * RulesetId.
+             * <p>The ID of a WAF ruleset for exact search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder rulesetId(Long rulesetId) {
                 this.rulesetId = rulesetId;
@@ -342,7 +376,10 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The status of a WAF rule for exact search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -96,7 +96,10 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DeleteRoutineRelatedRecord</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -105,7 +108,10 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * <p>The record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder recordId(Long recordId) {
             this.putBodyParameter("RecordId", recordId);
@@ -114,7 +120,10 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
         }
 
         /**
-         * RecordName.
+         * <p>The record name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-xxx.example.com</p>
          */
         public Builder recordName(String recordName) {
             this.putBodyParameter("RecordName", recordName);
@@ -123,7 +132,10 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

@@ -50,7 +50,10 @@ public class CreateRoutineRelatedRouteResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class CreateRoutineRelatedRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.status = status;

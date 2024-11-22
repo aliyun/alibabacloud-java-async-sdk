@@ -129,6 +129,8 @@ public class UpdateCustomScenePolicyRequest extends Request {
         } 
 
         /**
+         * <p>The time when the policy expires.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +143,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
+         * <p>The policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +156,10 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * Objects.
+         * <p>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder objects(String objects) {
             this.putQueryParameter("Objects", objects);
@@ -162,6 +168,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
+         * <p>The policy ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850508.html">DescribeCustomScenePolicies</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +181,8 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
+         * <p>The time when the policy takes effect.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +195,10 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
+         * <p>The name of the policy template. Valid value:</p>
+         * <ul>
+         * <li><strong>promotion</strong>: major events.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

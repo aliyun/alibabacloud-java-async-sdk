@@ -50,7 +50,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         private java.util.List < Rules> rules; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -61,7 +61,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The returned template rules.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -155,7 +155,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Config.
+             * <p>The configuration of the rule.</p>
              */
             public Builder config(WafRuleConfig config) {
                 this.config = config;
@@ -163,7 +163,10 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP Directory Traversal Rule [Template]</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -171,7 +174,10 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The WAF rule category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_anti_scan</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -179,7 +185,10 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -187,7 +196,10 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_directory_traversal</p>
              */
             public Builder type(String type) {
                 this.type = type;

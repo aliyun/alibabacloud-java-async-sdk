@@ -194,7 +194,14 @@ public class ListSitesRequest extends Request {
         } 
 
         /**
-         * AccessType.
+         * <p>The DNS setup. Valid values:</p>
+         * <ul>
+         * <li><strong>NS</strong></li>
+         * <li><strong>CNAME</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NS</p>
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -203,7 +210,15 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * Coverage.
+         * <p>The service location. Valid values:</p>
+         * <ul>
+         * <li><strong>domestic</strong>: the Chinese mainland</li>
+         * <li><strong>global</strong>: global</li>
+         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -212,7 +227,10 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * OnlyEnterprise.
+         * <p>Specifies whether to query only websites on Enterprise plans. Valid values: <strong>true and false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyEnterprise(Boolean onlyEnterprise) {
             this.putQueryParameter("OnlyEnterprise", onlyEnterprise);
@@ -221,7 +239,10 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -230,7 +251,10 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -239,7 +263,16 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * PlanSubscribeType.
+         * <p>The plan type. Valid values:</p>
+         * <ul>
+         * <li><strong>basicplan</strong>: Entrance (coming soon)</li>
+         * <li><strong>standardplan</strong>: Pro</li>
+         * <li><strong>advancedplan</strong>: Premium</li>
+         * <li><strong>enterpriseplan</strong>: Enterprise</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basicplan</p>
          */
         public Builder planSubscribeType(String planSubscribeType) {
             this.putQueryParameter("PlanSubscribeType", planSubscribeType);
@@ -248,7 +281,10 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group. This parameter specifies a filter condition for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzd3styujvyei</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -257,7 +293,10 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * SiteName.
+         * <p>The website name. This parameter specifies a filter condition for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.putQueryParameter("SiteName", siteName);
@@ -266,7 +305,16 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * SiteSearchType.
+         * <p>The match mode to search for the website name. Default value: exact. Valid values:</p>
+         * <ul>
+         * <li><strong>prefix</strong>: match by prefix.</li>
+         * <li><strong>suffix</strong>: match by suffix.</li>
+         * <li><strong>exact</strong>: exact match.</li>
+         * <li><strong>fuzzy</strong>: fuzzy match.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
          */
         public Builder siteSearchType(String siteSearchType) {
             this.putQueryParameter("SiteSearchType", siteSearchType);
@@ -275,7 +323,10 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The website status. This parameter specifies a filter condition for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -284,7 +335,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * TagFilter.
+         * <p>The tag filtering rule.</p>
          */
         public Builder tagFilter(java.util.List < TagFilter> tagFilter) {
             String tagFilterShrink = shrink(tagFilter, "TagFilter", "json");
@@ -345,7 +396,10 @@ public class ListSitesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. This parameter specifies a filter condition for the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -353,7 +407,10 @@ public class ListSitesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. This parameter specifies a filter condition for the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder value(String value) {
                 this.value = value;

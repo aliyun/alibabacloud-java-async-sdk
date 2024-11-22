@@ -50,7 +50,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppStatus.
+         * <p>The status of the application.</p>
          */
         public Builder appStatus(AppStatus appStatus) {
             this.appStatus = appStatus;
@@ -58,7 +58,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -319,7 +322,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             private String unDeployTime; 
 
             /**
-             * BaseLineVersion.
+             * <p>The base version of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ver-123123123123****</p>
              */
             public Builder baseLineVersion(String baseLineVersion) {
                 this.baseLineVersion = baseLineVersion;
@@ -327,7 +333,16 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeployStatus.
+             * <p>The deployment status of the application.</p>
+             * <ul>
+             * <li><strong>undeploy</strong>: The application is not deployed.</li>
+             * <li><strong>deploying</strong>: The application is being deployed.</li>
+             * <li><strong>deployed</strong>: The application is deployed.</li>
+             * <li><strong>undeploying</strong>: The deployment is being canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>undeploy</p>
              */
             public Builder deployStatus(String deployStatus) {
                 this.deployStatus = deployStatus;
@@ -335,7 +350,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeployTime.
+             * <p>The time when the application was deployed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-25T05:58:05Z</p>
              */
             public Builder deployTime(String deployTime) {
                 this.deployTime = deployTime;
@@ -343,7 +361,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeployedVersion.
+             * <p>The release version of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ver-123123123123****</p>
              */
             public Builder deployedVersion(String deployedVersion) {
                 this.deployedVersion = deployedVersion;
@@ -351,7 +372,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectPercentage.
+             * <p>The expected release percentage of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50%</p>
              */
             public Builder expectPercentage(Integer expectPercentage) {
                 this.expectPercentage = expectPercentage;
@@ -359,7 +383,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FullRelease.
+             * <p>Specifies whether to fully release the version. This parameter takes effect only when PublishType is set to region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullRelease(Boolean fullRelease) {
                 this.fullRelease = fullRelease;
@@ -367,7 +394,14 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PublishEnv.
+             * <p>The environment to which the application was released. Valid values:</p>
+             * <ul>
+             * <li><strong>prod</strong>: the production environment.</li>
+             * <li><strong>staging</strong>: the staging environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder publishEnv(String publishEnv) {
                 this.publishEnv = publishEnv;
@@ -375,7 +409,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PublishPercentage.
+             * <p>The release percentage of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50%</p>
              */
             public Builder publishPercentage(Integer publishPercentage) {
                 this.publishPercentage = publishPercentage;
@@ -383,7 +420,16 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStatus.
+             * <p>The release status of the application. Valid values:</p>
+             * <ul>
+             * <li><strong>publishing</strong></li>
+             * <li><strong>published</strong></li>
+             * <li><strong>rollbacking</strong></li>
+             * <li><strong>rollbacked</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pubishing</p>
              */
             public Builder publishStatus(String publishStatus) {
                 this.publishStatus = publishStatus;
@@ -391,7 +437,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * <p>The time when the application was released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-25T05:58:05Z</p>
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -399,7 +448,15 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PublishType.
+             * <p>Specifies how the version is released. Valid values:</p>
+             * <ul>
+             * <li>percentage: releases the version by percentage.</li>
+             * <li>region: releases the version by region.</li>
+             * </ul>
+             * <p>If you do not specify this parameter, the version is released by percentage by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>percentage</p>
              */
             public Builder publishType(String publishType) {
                 this.publishType = publishType;
@@ -407,7 +464,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PublishingVersion.
+             * <p>The release version of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ver-123123123123****</p>
              */
             public Builder publishingVersion(String publishingVersion) {
                 this.publishingVersion = publishingVersion;
@@ -415,7 +475,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Regions.
+             * <p>The regions to which the version is released.</p>
              */
             public Builder regions(Regions regions) {
                 this.regions = regions;
@@ -423,7 +483,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RollbackTime.
+             * <p>The time when the last rollback was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-25T05:58:05Z</p>
              */
             public Builder rollbackTime(String rollbackTime) {
                 this.rollbackTime = rollbackTime;
@@ -431,7 +494,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UnDeployTime.
+             * <p>The time when the application deployment was canceled. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-25T05:58:05Z</p>
              */
             public Builder unDeployTime(String unDeployTime) {
                 this.unDeployTime = unDeployTime;

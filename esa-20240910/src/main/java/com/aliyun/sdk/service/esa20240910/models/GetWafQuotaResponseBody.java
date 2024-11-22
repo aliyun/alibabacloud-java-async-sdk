@@ -50,7 +50,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Quota.
+         * <p>The quota information returned.</p>
          */
         public Builder quota(Quota quota) {
             this.quota = quota;
@@ -58,7 +58,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -155,7 +155,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             private WafQuotaInteger numberTotal; 
 
             /**
-             * Enable.
+             * <p>Indicates whether custom lists are enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -163,7 +163,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>The quota information about all item types in the custom lists.</p>
              */
             public Builder items(java.util.Map < String, QuotaListItemsValue > items) {
                 this.items = items;
@@ -171,7 +171,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * NumberItemsPerList.
+             * <p>The maximum number of items in each custom list.</p>
              */
             public Builder numberItemsPerList(WafQuotaInteger numberItemsPerList) {
                 this.numberItemsPerList = numberItemsPerList;
@@ -179,7 +179,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * NumberItemsTotal.
+             * <p>The maximum number of items in all custom lists.</p>
              */
             public Builder numberItemsTotal(WafQuotaInteger numberItemsTotal) {
                 this.numberItemsTotal = numberItemsTotal;
@@ -187,7 +187,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * NumberTotal.
+             * <p>The maximum number of custom lists.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -246,7 +246,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             private WafQuotaInteger numberTotal; 
 
             /**
-             * Enable.
+             * <p>Indicates whether the WAF managed rule group is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -254,7 +254,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * NumberTotal.
+             * <p>The maximum number of WAF managed rule groups.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -325,7 +325,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             private WafQuotaInteger numberTotal; 
 
             /**
-             * ContentTypes.
+             * <p>The quota information about custom error pages of all Content-Types.</p>
              */
             public Builder contentTypes(java.util.Map < String, QuotaPageContentTypesValue > contentTypes) {
                 this.contentTypes = contentTypes;
@@ -333,7 +333,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether custom error pages are enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -341,7 +341,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * NumberTotal.
+             * <p>The maximum number of custom error pages.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -400,7 +400,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             private WafQuotaInteger numberTotal; 
 
             /**
-             * Enable.
+             * <p>Indicates whether scenario-specific policies are enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -408,7 +408,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * NumberTotal.
+             * <p>The maximum number of scenario-specific policies.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -491,7 +491,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             private ScenePolicy scenePolicy; 
 
             /**
-             * List.
+             * <p>The quota information about custom lists.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -499,7 +499,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ManagedRulesGroup.
+             * <p>The quota information about WAF managed rule groups.</p>
              */
             public Builder managedRulesGroup(ManagedRulesGroup managedRulesGroup) {
                 this.managedRulesGroup = managedRulesGroup;
@@ -507,7 +507,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>The quota information about custom error pages.</p>
              */
             public Builder page(Page page) {
                 this.page = page;
@@ -515,7 +515,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ScenePolicy.
+             * <p>The quota information about scenario-specific policies.</p>
              */
             public Builder scenePolicy(ScenePolicy scenePolicy) {
                 this.scenePolicy = scenePolicy;

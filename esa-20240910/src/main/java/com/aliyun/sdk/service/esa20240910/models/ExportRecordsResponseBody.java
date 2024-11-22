@@ -50,7 +50,10 @@ public class ExportRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * <p>The exported DNS records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>;; site:example.com.\n;; Exported:2024-01-24 15:54:35\n\n;; A Records\na1.example.com. 30 IN A 1.1.1.1 direct\na2.example.com. 30 IN A 1.1.1.1 direct\na3.example.com. 30 IN A 1.1.1.1 direct\n</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +61,7 @@ public class ExportRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C69B5894-D1BA-592C-95D0-DADBE7AEAC63</p>

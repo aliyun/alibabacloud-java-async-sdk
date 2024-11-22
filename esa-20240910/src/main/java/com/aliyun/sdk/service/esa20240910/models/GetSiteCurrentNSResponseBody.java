@@ -50,7 +50,7 @@ public class GetSiteCurrentNSResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NSList.
+         * <p>The nameservers of the website.</p>
          */
         public Builder NSList(java.util.List < String > NSList) {
             this.NSList = NSList;
@@ -58,7 +58,10 @@ public class GetSiteCurrentNSResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2430E05E-1340-5773-B5E1-B743929F46F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

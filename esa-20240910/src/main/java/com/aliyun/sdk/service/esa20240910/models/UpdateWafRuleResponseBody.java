@@ -50,7 +50,10 @@ public class UpdateWafRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the WAF rule.<a href="~~2850237~~"></a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000001</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -58,7 +61,10 @@ public class UpdateWafRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

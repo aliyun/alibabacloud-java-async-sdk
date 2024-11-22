@@ -55,6 +55,7 @@ public class DeleteListRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the custom list, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

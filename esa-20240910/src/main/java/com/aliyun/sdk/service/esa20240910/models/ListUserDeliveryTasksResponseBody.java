@@ -86,7 +86,10 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1f94c47f-3a1a-4f69-8d6c-bfeee1b49aab</p>
@@ -113,7 +119,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The delivery tasks.</p>
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -121,7 +127,10 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of delivery tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -215,7 +224,10 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * BusinessType.
+             * <p>The log category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dcdn_log_er</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -223,7 +235,14 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DataCenter.
+             * <p>The data center. Valid values:</p>
+             * <ol>
+             * <li>cn: the Chinese mainland.</li>
+             * <li>sg: outside the Chinese mainland.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder dataCenter(String dataCenter) {
                 this.dataCenter = dataCenter;
@@ -231,7 +250,10 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryType.
+             * <p>The delivery destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder deliveryType(String deliveryType) {
                 this.deliveryType = deliveryType;
@@ -239,7 +261,10 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the delivery task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -247,7 +272,10 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the delivery task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testoss11</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

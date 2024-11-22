@@ -70,6 +70,7 @@ public class BatchDeleteKvRequest extends Request {
         } 
 
         /**
+         * <p>The keys that you want to delete. You can delete a maximum of 10,000 key-value pairs at a time.</p>
          * <p>This parameter is required.</p>
          */
         public Builder keys(java.util.List < String > keys) {
@@ -80,6 +81,7 @@ public class BatchDeleteKvRequest extends Request {
         }
 
         /**
+         * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

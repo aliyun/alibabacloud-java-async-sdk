@@ -50,7 +50,7 @@ public class GetRealtimeDeliveryFieldResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FieldContent.
+         * <p>The fields returned.</p>
          */
         public Builder fieldContent(java.util.Map < String, FieldContentValue > fieldContent) {
             this.fieldContent = fieldContent;
@@ -58,7 +58,7 @@ public class GetRealtimeDeliveryFieldResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>

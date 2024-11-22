@@ -321,7 +321,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         } 
 
         /**
-         * CustomPageHtml.
+         * <p>The content of the custom waiting room page. You must specify this parameter if you set WaitingRoomType to custom. The content must be Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>html-yets-maqi1111</p>
          */
         public Builder customPageHtml(String customPageHtml) {
             this.putQueryParameter("CustomPageHtml", customPageHtml);
@@ -330,7 +333,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the waiting room.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://yywyyw.com">http://yywyyw.com</a></p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -339,7 +345,14 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * DisableSessionRenewalEnable.
+         * <p>Specifies whether to disable session renewal. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder disableSessionRenewalEnable(String disableSessionRenewalEnable) {
             this.putQueryParameter("DisableSessionRenewalEnable", disableSessionRenewalEnable);
@@ -348,7 +361,14 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable the waiting room event. Valid values:</p>
+         * <ul>
+         * <li><code>on</code></li>
+         * <li><code>off</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -357,7 +377,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the event. This value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719849600</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -366,7 +389,14 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * JsonResponseEnable.
+         * <p>Specifies whether to enable JSON response. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder jsonResponseEnable(String jsonResponseEnable) {
             this.putQueryParameter("JsonResponseEnable", jsonResponseEnable);
@@ -375,7 +405,15 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The default language. Valid values:</p>
+         * <ul>
+         * <li><code>enus</code>: English.</li>
+         * <li><code>zhcn</code>: Simplified Chinese.</li>
+         * <li><code>zhhk</code>: Traditional Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enus</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -384,7 +422,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the waiting room event.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -393,7 +431,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * NewUsersPerMinute.
+         * <p>The maximum number of new users per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder newUsersPerMinute(String newUsersPerMinute) {
             this.putQueryParameter("NewUsersPerMinute", newUsersPerMinute);
@@ -402,7 +443,14 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * PreQueueEnable.
+         * <p>Specifies whether to enable pre-queuing.</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder preQueueEnable(String preQueueEnable) {
             this.putQueryParameter("PreQueueEnable", preQueueEnable);
@@ -411,7 +459,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * PreQueueStartTime.
+         * <p>The start time for pre-queuing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719763200</p>
          */
         public Builder preQueueStartTime(String preQueueStartTime) {
             this.putQueryParameter("PreQueueStartTime", preQueueStartTime);
@@ -420,7 +471,16 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * QueuingMethod.
+         * <p>The queuing method. Valid values:</p>
+         * <ul>
+         * <li>random: Users gain access to the origin randomly, regardless of the arrival time.</li>
+         * <li>fifo: Users gain access to the origin in order of arrival.</li>
+         * <li>passthrough: Users pass through the waiting room and go straight to the origin.</li>
+         * <li>reject-all: All requests are blocked from accessing the origin.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fifo</p>
          */
         public Builder queuingMethod(String queuingMethod) {
             this.putQueryParameter("QueuingMethod", queuingMethod);
@@ -429,7 +489,15 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * QueuingStatusCode.
+         * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
+         * <ul>
+         * <li>200</li>
+         * <li>202</li>
+         * <li>429</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder queuingStatusCode(String queuingStatusCode) {
             this.putQueryParameter("QueuingStatusCode", queuingStatusCode);
@@ -438,7 +506,14 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * RandomPreQueueEnable.
+         * <p>Specifies whether to enable random queuing.</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder randomPreQueueEnable(String randomPreQueueEnable) {
             this.putQueryParameter("RandomPreQueueEnable", randomPreQueueEnable);
@@ -447,7 +522,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * SessionDuration.
+         * <p>The maximum duration for which a session remains valid after a user leaves the origin. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder sessionDuration(String sessionDuration) {
             this.putQueryParameter("SessionDuration", sessionDuration);
@@ -456,6 +534,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -468,7 +547,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the event. This value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719763200</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -477,7 +559,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * TotalActiveUsers.
+         * <p>The maximum number of active users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalActiveUsers(String totalActiveUsers) {
             this.putQueryParameter("TotalActiveUsers", totalActiveUsers);
@@ -486,7 +571,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * WaitingRoomEventId.
+         * <p>The ID of the waiting room event, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomEvents</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89677721098****</p>
          */
         public Builder waitingRoomEventId(Long waitingRoomEventId) {
             this.putQueryParameter("WaitingRoomEventId", waitingRoomEventId);
@@ -495,7 +583,14 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * WaitingRoomType.
+         * <p>The type of the waiting room. Valid values:</p>
+         * <ul>
+         * <li>default</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder waitingRoomType(String waitingRoomType) {
             this.putQueryParameter("WaitingRoomType", waitingRoomType);

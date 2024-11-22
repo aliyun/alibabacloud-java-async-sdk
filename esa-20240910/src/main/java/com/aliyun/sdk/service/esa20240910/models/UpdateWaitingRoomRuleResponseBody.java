@@ -38,7 +38,10 @@ public class UpdateWaitingRoomRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to trace a call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9bfe9d95-7bf6-469d-a628-ed7bc9f25073</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

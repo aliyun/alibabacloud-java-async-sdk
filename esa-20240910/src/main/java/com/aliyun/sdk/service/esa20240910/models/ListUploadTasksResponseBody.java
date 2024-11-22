@@ -50,7 +50,7 @@ public class ListUploadTasksResponseBody extends TeaModel {
         private java.util.List < Tasks> tasks; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CB1A380B-09F0-41BB-A198-72F8FD6D****</p>
@@ -61,7 +61,7 @@ public class ListUploadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The file upload tasks.</p>
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -179,7 +179,10 @@ public class ListUploadTasksResponseBody extends TeaModel {
             private String uploadTaskName; 
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-26T01:56:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -187,7 +190,10 @@ public class ListUploadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The error message returned when the file upload task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>invalid url</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -195,7 +201,16 @@ public class ListUploadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code. Multiple error codes are separated by commas (,).</p>
+             * <ul>
+             * <li><strong>InvalidUrl</strong>: The URL format is incorrect.</li>
+             * <li><strong>InvalidDomain</strong>: The domain ownership fails to be verified.</li>
+             * <li><strong>QuotaExcess</strong>: The quota limit has been reached.</li>
+             * <li><strong>OtherErrors</strong>: Other errors.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidUrl,InvalidDomain</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -203,7 +218,15 @@ public class ListUploadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * <ul>
+             * <li><strong>Complete</strong>: The task is complete.</li>
+             * <li><strong>Refreshing</strong>: The task is in progress.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -211,7 +234,16 @@ public class ListUploadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: purges the cache by file URL.</li>
+             * <li><strong>preload</strong>: prefetches files.</li>
+             * <li><strong>directory</strong>: purges the cache by directory.</li>
+             * <li><strong>ignoreparams</strong>: purges the cache by URL with specified parameters ignored.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -219,7 +251,10 @@ public class ListUploadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UploadId.
+             * <p>The ID of the file upload task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>159253299357****</p>
              */
             public Builder uploadId(String uploadId) {
                 this.uploadId = uploadId;
@@ -227,7 +262,10 @@ public class ListUploadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UploadTaskName.
+             * <p>The name of the file upload task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>purge_file_task</p>
              */
             public Builder uploadTaskName(String uploadTaskName) {
                 this.uploadTaskName = uploadTaskName;

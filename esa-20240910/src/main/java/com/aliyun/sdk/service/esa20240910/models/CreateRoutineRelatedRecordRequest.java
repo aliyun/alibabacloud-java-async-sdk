@@ -82,7 +82,10 @@ public class CreateRoutineRelatedRecordRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateRoutineRelatedRecord</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -91,7 +94,10 @@ public class CreateRoutineRelatedRecordRequest extends Request {
         }
 
         /**
-         * RecordName.
+         * <p>The record name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-record-1.example.com</p>
          */
         public Builder recordName(String recordName) {
             this.putBodyParameter("RecordName", recordName);
@@ -100,7 +106,10 @@ public class CreateRoutineRelatedRecordRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54362329990032</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);

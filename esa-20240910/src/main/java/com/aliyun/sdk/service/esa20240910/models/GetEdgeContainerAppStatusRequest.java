@@ -69,6 +69,7 @@ public class GetEdgeContainerAppStatusRequest extends Request {
         } 
 
         /**
+         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -81,7 +82,10 @@ public class GetEdgeContainerAppStatusRequest extends Request {
         }
 
         /**
-         * PublishEnv.
+         * <p>The release environment. Valid values: prod and staging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
          */
         public Builder publishEnv(String publishEnv) {
             this.putQueryParameter("PublishEnv", publishEnv);

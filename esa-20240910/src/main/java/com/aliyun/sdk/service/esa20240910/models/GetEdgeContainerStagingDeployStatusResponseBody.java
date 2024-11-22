@@ -134,7 +134,14 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         private java.util.List < String > VIPs; 
 
         /**
-         * ContainersReady.
+         * <p>Indicates whether the container is ready.</p>
+         * <ul>
+         * <li>ok</li>
+         * <li>unready</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder containersReady(String containersReady) {
             this.containersReady = containersReady;
@@ -142,7 +149,10 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTimestamp.
+         * <p>The time when the container was created. The value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-24T06:46:35Z</p>
          */
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
@@ -150,7 +160,14 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Initialized.
+         * <p>The initialization status of the container.</p>
+         * <ul>
+         * <li>ok</li>
+         * <li>unready</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder initialized(String initialized) {
             this.initialized = initialized;
@@ -158,7 +175,15 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Phase.
+         * <p>The status of the container in the staging environment.</p>
+         * <ul>
+         * <li>NoContainer: created.</li>
+         * <li>Running: running.</li>
+         * <li>Failed: abnormal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder phase(String phase) {
             this.phase = phase;
@@ -166,7 +191,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PodRestartState.
+         * <p>The details of container restart.</p>
          */
         public Builder podRestartState(PodRestartState podRestartState) {
             this.podRestartState = podRestartState;
@@ -174,7 +199,14 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Ready.
+         * <p>Indicates whether domain names are associated with the container.</p>
+         * <ul>
+         * <li>ok</li>
+         * <li>unready</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder ready(String ready) {
             this.ready = ready;
@@ -182,7 +214,10 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F2C992B-3FE2-5EBB-A61F-F9DD4EB257DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +225,14 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Scheduled.
+         * <p>The scheduling status of the container.</p>
+         * <ul>
+         * <li>ok</li>
+         * <li>unready</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder scheduled(String scheduled) {
             this.scheduled = scheduled;
@@ -198,7 +240,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * VIPs.
+         * <p>The virtual IP addresses.</p>
          */
         public Builder VIPs(java.util.List < String > VIPs) {
             this.VIPs = VIPs;
@@ -256,7 +298,10 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
             private Integer restartCount; 
 
             /**
-             * LastTerminatedReason.
+             * <p>The reason for the last restart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OOMKilled</p>
              */
             public Builder lastTerminatedReason(String lastTerminatedReason) {
                 this.lastTerminatedReason = lastTerminatedReason;
@@ -264,7 +309,10 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RestartCount.
+             * <p>The number of times that the container restarted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder restartCount(Integer restartCount) {
                 this.restartCount = restartCount;

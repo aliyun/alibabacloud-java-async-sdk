@@ -55,6 +55,7 @@ public class CheckUserProjectNameRequest extends Request {
         } 
 
         /**
+         * <p>The name of the real-time log delivery task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

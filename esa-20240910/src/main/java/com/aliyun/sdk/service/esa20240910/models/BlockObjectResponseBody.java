@@ -50,7 +50,10 @@ public class BlockObjectResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class BlockObjectResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The blocking task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15940956620</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

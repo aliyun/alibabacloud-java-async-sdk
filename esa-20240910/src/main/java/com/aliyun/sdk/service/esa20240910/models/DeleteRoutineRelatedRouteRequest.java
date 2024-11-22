@@ -96,7 +96,10 @@ public class DeleteRoutineRelatedRouteRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DeleteRoutineRelatedRoute</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -105,7 +108,10 @@ public class DeleteRoutineRelatedRouteRequest extends Request {
         }
 
         /**
-         * Route.
+         * <p>The route URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em>.example.com/path1</em></p>
          */
         public Builder route(String route) {
             this.putBodyParameter("Route", route);
@@ -114,7 +120,10 @@ public class DeleteRoutineRelatedRouteRequest extends Request {
         }
 
         /**
-         * RouteId.
+         * <p>The route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c3b82a3d1524e9f750da11d0cc0be0a</p>
          */
         public Builder routeId(String routeId) {
             this.putBodyParameter("RouteId", routeId);
@@ -123,7 +132,10 @@ public class DeleteRoutineRelatedRouteRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54362329990032</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);

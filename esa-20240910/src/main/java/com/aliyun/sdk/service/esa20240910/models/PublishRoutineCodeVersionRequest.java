@@ -110,7 +110,7 @@ public class PublishRoutineCodeVersionRequest extends Request {
         } 
 
         /**
-         * CanaryAreaList.
+         * <p>The regions for canary release.</p>
          */
         public Builder canaryAreaList(java.util.List < String > canaryAreaList) {
             String canaryAreaListShrink = shrink(canaryAreaList, "CanaryAreaList", "json");
@@ -120,7 +120,10 @@ public class PublishRoutineCodeVersionRequest extends Request {
         }
 
         /**
-         * CanaryCodeVersion.
+         * <p>The version number for canary release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710120201067203242</p>
          */
         public Builder canaryCodeVersion(String canaryCodeVersion) {
             this.putBodyParameter("CanaryCodeVersion", canaryCodeVersion);
@@ -129,7 +132,10 @@ public class PublishRoutineCodeVersionRequest extends Request {
         }
 
         /**
-         * CodeVersion.
+         * <p>The code version to be released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710120201067203242</p>
          */
         public Builder codeVersion(String codeVersion) {
             this.putBodyParameter("CodeVersion", codeVersion);
@@ -138,7 +144,10 @@ public class PublishRoutineCodeVersionRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>production</p>
          */
         public Builder env(String env) {
             this.putBodyParameter("Env", env);
@@ -147,7 +156,10 @@ public class PublishRoutineCodeVersionRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PublishRoutineCodeVersion</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

@@ -86,7 +86,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Apps.
+         * <p>The queried applications.</p>
          */
         public Builder apps(java.util.List < Apps> apps) {
             this.apps = apps;
@@ -94,7 +94,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2430E05E-1340-5773-B5E1-B743929F46F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -272,7 +284,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * FailTimes.
+             * <p>The number of consecutive failed health checks for an application to be considered unhealthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder failTimes(Integer failTimes) {
                 this.failTimes = failTimes;
@@ -280,7 +295,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The domain name that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -288,7 +306,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpCode.
+             * <p>The range of health check status codes that indicate successful health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_2XX</p>
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -296,7 +317,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The interval between health checks. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -304,7 +328,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>The HTTP method used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -312,7 +339,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The health check port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -320,7 +350,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccTimes.
+             * <p>The number of consecutive successful health checks for an application to be considered healthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder succTimes(Integer succTimes) {
                 this.succTimes = succTimes;
@@ -328,7 +361,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of health checks. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -336,7 +372,14 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of health checks. Valid values:</p>
+             * <ul>
+             * <li>l7</li>
+             * <li>l4</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>l7</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -344,7 +387,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * <p>The health check URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/health_check</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -547,7 +593,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             private Integer versionCount; 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-88068867578379****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -555,7 +604,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-01T16:16:27.418298794+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -563,7 +615,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name associated with the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -571,7 +626,14 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayType.
+             * <p>The type of the gateway. Valid values:</p>
+             * <ul>
+             * <li>l7: Layer 7 gateway.</li>
+             * <li>l4: Layer 4 gateway.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>l7</p>
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -579,7 +641,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheck.
+             * <p>The information about health checks.</p>
              */
             public Builder healthCheck(HealthCheck healthCheck) {
                 this.healthCheck = healthCheck;
@@ -587,7 +649,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -595,7 +660,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * <p>The progress of the application creation task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -603,7 +671,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * QuicCid.
+             * <p>Indicates whether QUIC is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder quicCid(String quicCid) {
                 this.quicCid = quicCid;
@@ -611,7 +682,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test app</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -619,7 +693,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePort.
+             * <p>The server port. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -627,7 +704,15 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the application. Valid values:</p>
+             * <ul>
+             * <li>creating: The application is being created.</li>
+             * <li>failed: The application failed to be created.</li>
+             * <li>created: The application is created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -635,7 +720,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPort.
+             * <p>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -643,7 +731,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the application was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-15T12:11:02Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -651,7 +742,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionCount.
+             * <p>The number of versions of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder versionCount(Integer versionCount) {
                 this.versionCount = versionCount;

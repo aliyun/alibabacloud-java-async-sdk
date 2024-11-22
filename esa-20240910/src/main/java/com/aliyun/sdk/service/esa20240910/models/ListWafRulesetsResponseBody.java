@@ -110,7 +110,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * InstanceUsage.
+         * <p>The number of WAF rulesets that are used by the instance in the WAF rule category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder instanceUsage(Long instanceUsage) {
             this.instanceUsage = instanceUsage;
@@ -118,7 +121,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -126,7 +132,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -134,7 +143,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -145,7 +154,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * Rulesets.
+         * <p>The details of the rulesets.</p>
          */
         public Builder rulesets(java.util.List < Rulesets> rulesets) {
             this.rulesets = rulesets;
@@ -153,7 +162,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * SiteUsage.
+         * <p>The number of WAF rulesets that are used by the website in the WAF rule category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder siteUsage(Long siteUsage) {
             this.siteUsage = siteUsage;
@@ -161,7 +173,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of filtered rulesets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -291,7 +306,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Fields.
+             * <p>The matched objects.</p>
              */
             public Builder fields(java.util.List < String > fields) {
                 this.fields = fields;
@@ -299,7 +314,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the WAF ruleset.<a href="~~2850233~~"></a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -307,7 +325,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The ruleset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -315,7 +336,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The WAF rule category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_bot</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -323,7 +347,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The ruleset status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -331,7 +358,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The type of the protection target in the http_bot rule category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -339,7 +369,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Types.
+             * <p>The types of rules.</p>
              */
             public Builder types(java.util.List < String > types) {
                 this.types = types;
@@ -347,7 +377,10 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the ruleset was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

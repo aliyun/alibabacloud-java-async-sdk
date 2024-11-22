@@ -124,7 +124,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * <p>自定义响应页面ID</p>
+         * <p>The ruleset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -135,7 +135,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>自定义响应页面名称</p>
+         * <p>The ruleset name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>自定义响应页面内容类型</p>
+         * <p>The WAF rule category of the ruleset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -170,7 +170,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The rule configurations in the ruleset.</p>
          */
         public Builder rules(java.util.List < WafRuleConfig > rules) {
             this.rules = rules;
@@ -178,7 +178,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * Shared.
+         * <p>The configurations shared by the rules in the ruleset.</p>
          */
         public Builder shared(WafBatchRuleShared shared) {
             this.shared = shared;
@@ -186,7 +186,10 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The ruleset status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -194,7 +197,10 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the ruleset was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

@@ -98,7 +98,10 @@ public class ListPagesResponseBody extends TeaModel {
         private Long usage; 
 
         /**
-         * PageNumber.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +109,10 @@ public class ListPagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +120,7 @@ public class ListPagesResponseBody extends TeaModel {
         }
 
         /**
-         * Pages.
+         * <p>The custom error pages. Each element in the array contains error page-specific information.</p>
          */
         public Builder pages(java.util.List < Pages> pages) {
             this.pages = pages;
@@ -122,7 +128,7 @@ public class ListPagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -133,7 +139,10 @@ public class ListPagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of custom error pages after filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -141,7 +150,10 @@ public class ListPagesResponseBody extends TeaModel {
         }
 
         /**
-         * Usage.
+         * <p>The number of custom error pages that you created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder usage(Long usage) {
             this.usage = usage;
@@ -262,7 +274,7 @@ public class ListPagesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * <p>自定义响应页面内容BASE64编码</p>
+             * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -274,7 +286,7 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自定义响应页面内容类型</p>
+             * <p>The Content-Type field in the HTTP header.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -286,7 +298,7 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自定义响应页面描述</p>
+             * <p>The description of the custom error page.</p>
              * 
              * <strong>example:</strong>
              * <p>a custom deny page</p>
@@ -297,7 +309,10 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the custom error page.<a href="~~2850223~~"></a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -305,7 +320,10 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * <p>The type of the custom error page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -313,7 +331,10 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the custom error page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -321,7 +342,10 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the custom error page was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

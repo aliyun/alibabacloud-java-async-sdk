@@ -138,7 +138,14 @@ public class ListUserRatePlanInstancesRequest extends Request {
         } 
 
         /**
-         * CheckRemainingSiteQuota.
+         * <p>Specifies whether to query only the plans that have remaining quota for associating websites. Valid values:</p>
+         * <ul>
+         * <li>true: queries only the plans that have remaining quota for associating websites.</li>
+         * <li>false: queries all plans in your account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkRemainingSiteQuota(String checkRemainingSiteQuota) {
             this.putQueryParameter("CheckRemainingSiteQuota", checkRemainingSiteQuota);
@@ -147,7 +154,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The plan ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-xcdn-96wblslz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +166,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,7 +178,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +190,14 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting field. By default, the queried plans are sorted by purchase time. Valid values:</p>
+         * <ul>
+         * <li>CreateTime: the time when the plans were purchased.</li>
+         * <li>ExpireTime: the time when the plans expire.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -183,7 +206,14 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The order in which you want to sort the query results. Default value: desc. Valid values:</p>
+         * <ul>
+         * <li>asc: in ascending order.</li>
+         * <li>desc: in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -192,7 +222,16 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The plan status. Valid values:</p>
+         * <ul>
+         * <li>online: The plan is in service.</li>
+         * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
+         * <li>disable: The plan is released.</li>
+         * <li>overdue: The plan is stopped due to overdue payments.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

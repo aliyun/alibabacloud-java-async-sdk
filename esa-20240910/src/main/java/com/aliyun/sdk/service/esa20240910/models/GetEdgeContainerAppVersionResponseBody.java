@@ -50,7 +50,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         private Version version; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The information about the version.</p>
          */
         public Builder version(Version version) {
             this.version = version;
@@ -200,7 +203,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             private String tagUrl; 
 
             /**
-             * Domain.
+             * <p>The domain name of the Container Registry image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.mooc.seewo.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -208,7 +214,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the Container Registry instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xcdn-9ak2thl14z5s</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -216,7 +225,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * IsEnterpriseRegistry.
+             * <p>Indicates whether the image is an enterprise-level image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isEnterpriseRegistry(Boolean isEnterpriseRegistry) {
                 this.isEnterpriseRegistry = isEnterpriseRegistry;
@@ -224,7 +236,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -232,7 +247,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-zeu0xyk28alyxozh</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -240,7 +258,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_1</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -248,7 +269,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * <p>The namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wpy1</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -256,7 +280,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-healthy-100-soa-1710987653</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -264,7 +291,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * TagUrl.
+             * <p>The URL of the Container Registry image tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-shenzhen.aliyuncs.com/lihetech/easywits_server_exam:3.40.2</p>
              */
             public Builder tagUrl(String tagUrl) {
                 this.tagUrl = tagUrl;
@@ -431,7 +461,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             private Integer timeoutSeconds; 
 
             /**
-             * Command.
+             * <p>The probe command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sh test.sh</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -439,7 +472,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * FailureThreshold.
+             * <p>The number of consecutive failed health checks required for a container to be considered as unhealthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder failureThreshold(Integer failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -447,7 +483,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The domain name that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -455,7 +494,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * HttpHeaders.
+             * <p>The request headers that are included in the container health check request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Content-Type&quot;:&quot;application/json</p>
              */
             public Builder httpHeaders(String httpHeaders) {
                 this.httpHeaders = httpHeaders;
@@ -463,7 +505,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * InitialDelaySeconds.
+             * <p>The latency for container probe initialization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder initialDelaySeconds(Integer initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -471,7 +516,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The path of the container health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/health_check</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -479,7 +527,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodSeconds.
+             * <p>The interval between container health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder periodSeconds(Integer periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -487,7 +538,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port of the container health check. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -495,7 +549,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Scheme.
+             * <p>The protocol that the container health check request uses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -503,7 +560,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessThreshold.
+             * <p>The number of consecutive successful health checks required for a container to be considered as healthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successThreshold(Integer successThreshold) {
                 this.successThreshold = successThreshold;
@@ -511,7 +571,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutSeconds.
+             * <p>The timeout period of the container health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -702,7 +765,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             private String storage; 
 
             /**
-             * ACRImageInfo.
+             * <p>The information about the Container Registry image.</p>
              */
             public Builder ACRImageInfo(ACRImageInfo ACRImageInfo) {
                 this.ACRImageInfo = ACRImageInfo;
@@ -710,7 +773,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Args.
+             * <p>The arguments that are passed to the container startup command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-c /path/config.toml</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -718,7 +784,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * <p>The command that is used to start the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sh abc.sh 1 2 3</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -726,7 +795,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * EnvVariables.
+             * <p>The environment variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENV=prod</p>
              */
             public Builder envVariables(String envVariables) {
                 this.envVariables = envVariables;
@@ -734,7 +806,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The image address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx:1.14.0</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -742,7 +817,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * IsACRImage.
+             * <p>Indicates whether the image is a Container Registry image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isACRImage(Boolean isACRImage) {
                 this.isACRImage = isACRImage;
@@ -750,7 +828,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -758,7 +839,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * PostStart.
+             * <p>The command that is run before the container is started. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\]}}</code>. If you want to cancel this configuration, set the parameter value to <code>&quot;&quot;</code> or <code>{}</code>. If you do not specify this parameter, this configuration is ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;touch&quot;,&quot;/home/admin/checkpoststartV1&quot;]}}</p>
              */
             public Builder postStart(String postStart) {
                 this.postStart = postStart;
@@ -766,7 +850,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * PreStop.
+             * <p>The command that is run before the container is stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sh prestop.sh &quot;echo hello world&quot;</p>
              */
             public Builder preStop(String preStop) {
                 this.preStop = preStop;
@@ -774,7 +861,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ProbeContent.
+             * <p>The probe content.</p>
              */
             public Builder probeContent(ProbeContent probeContent) {
                 this.probeContent = probeContent;
@@ -782,7 +869,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ProbeType.
+             * <p>The probe type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>httpGet</p>
              */
             public Builder probeType(String probeType) {
                 this.probeType = probeType;
@@ -790,7 +880,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The compute specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1C2G</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -798,7 +891,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Storage.
+             * <p>The storage capacity of the container. Valid values: 0.5G, 10G, 20G, and 30G.</p>
              */
             public Builder storage(String storage) {
                 this.storage = storage;
@@ -953,7 +1046,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-88068867578379****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -961,7 +1057,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Containers.
+             * <p>The container images deployed for this version.</p>
              */
             public Builder containers(java.util.List < Containers> containers) {
                 this.containers = containers;
@@ -969,7 +1065,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the version was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-01T09:32:33Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -977,7 +1076,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * LastPublishTime.
+             * <p>The time when the version was last released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-25T04:58:05Z</p>
              */
             public Builder lastPublishTime(String lastPublishTime) {
                 this.lastPublishTime = lastPublishTime;
@@ -985,7 +1087,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -993,7 +1098,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * <p>The time when the version was released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-14T02:04:03Z</p>
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -1001,7 +1109,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -1009,7 +1120,15 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the current version. Valid values:</p>
+             * <ul>
+             * <li>created: The version is created.</li>
+             * <li>failed: The version failed to be created.</li>
+             * <li>creating: The version is being created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1017,7 +1136,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the version was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-03T10:52:52Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1025,7 +1147,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>The ID of the created version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ver-87962637161651****</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

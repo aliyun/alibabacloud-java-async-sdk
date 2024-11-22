@@ -214,6 +214,13 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         } 
 
         /**
+         * <p>The log category. Valid values:</p>
+         * <ul>
+         * <li><strong>dcdn_log_access_l1</strong> (default): access logs.</li>
+         * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
+         * <li><strong>dcdn_log_waf</strong>: firewall logs.</li>
+         * <li><strong>dcdn_log_ipa</strong>: TCP/UDP proxy logs.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +233,11 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>The data center. Valid values:</p>
+         * <ul>
+         * <li>cn: the Chinese mainland.</li>
+         * <li>oversea: outside the Chinese mainland.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,6 +250,15 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>The destination of the delivery. Valid values:</p>
+         * <ul>
+         * <li>sls: Alibaba Cloud Simple Log Service (SLS).</li>
+         * <li>http: HTTP server.</li>
+         * <li>aws3: Amazon Simple Storage Service (S3).</li>
+         * <li>oss: Alibaba Cloud Object Storage Service (OSS).</li>
+         * <li>kafka: Kafka.</li>
+         * <li>aws3cmpt: S3-compatible storage service.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +271,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * DiscardRate.
+         * <p>The discard rate. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder discardRate(Float discardRate) {
             this.putBodyParameter("DiscardRate", discardRate);
@@ -259,6 +283,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>The log fields, which are separated by commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,7 +296,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * HttpDelivery.
+         * <p>The configurations for delivery to an HTTP server.</p>
          */
         public Builder httpDelivery(HttpDelivery httpDelivery) {
             String httpDeliveryShrink = shrink(httpDelivery, "HttpDelivery", "json");
@@ -281,7 +306,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * KafkaDelivery.
+         * <p>The configurations for delivery to Kafka.</p>
          */
         public Builder kafkaDelivery(KafkaDelivery kafkaDelivery) {
             String kafkaDeliveryShrink = shrink(kafkaDelivery, "KafkaDelivery", "json");
@@ -291,7 +316,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * OssDelivery.
+         * <p>The configurations for delivery to OSS.</p>
          */
         public Builder ossDelivery(OssDelivery ossDelivery) {
             String ossDeliveryShrink = shrink(ossDelivery, "OssDelivery", "json");
@@ -301,7 +326,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * S3Delivery.
+         * <p>The configurations for delivery to Amazon S3 or an S3-compatible service.</p>
          */
         public Builder s3Delivery(S3Delivery s3Delivery) {
             String s3DeliveryShrink = shrink(s3Delivery, "S3Delivery", "json");
@@ -311,6 +336,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +349,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * SlsDelivery.
+         * <p>The configurations for delivery to SLS.</p>
          */
         public Builder slsDelivery(SlsDelivery slsDelivery) {
             String slsDeliveryShrink = shrink(slsDelivery, "SlsDelivery", "json");
@@ -333,6 +359,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the delivery task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -408,7 +435,13 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private String urlPath; 
 
             /**
-             * ExpiredTime.
+             * <p>The validity period of the signature.</p>
+             * <blockquote>
+             * <p> The value must be greater than 0. We recommend that you specify a value that is greater than 300.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder expiredTime(Integer expiredTime) {
                 this.expiredTime = expiredTime;
@@ -416,7 +449,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * PrivateKey.
+             * <p>The private key.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder privateKey(String privateKey) {
                 this.privateKey = privateKey;
@@ -424,7 +460,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * UrlPath.
+             * <p>The URI path for server authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1/log/upload</p>
              */
             public Builder urlPath(String urlPath) {
                 this.urlPath = urlPath;
@@ -603,7 +642,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private Long transformTimeout; 
 
             /**
-             * Compress.
+             * <p>The compression method. By default, data is not compressed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gzip</p>
              */
             public Builder compress(String compress) {
                 this.compress = compress;
@@ -611,7 +653,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * DestUrl.
+             * <p>The address of the HTTP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.aliyun.com/v1/log/upload">http://xxx.aliyun.com/v1/log/upload</a></p>
              */
             public Builder destUrl(String destUrl) {
                 this.destUrl = destUrl;
@@ -619,7 +664,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * HeaderParam.
+             * <p>The custom headers.</p>
              */
             public Builder headerParam(java.util.Map < String, HttpDeliveryHeaderParamValue > headerParam) {
                 this.headerParam = headerParam;
@@ -627,7 +672,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * LogBodyPrefix.
+             * <p>The prefix of the log delivery package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdnVersion:1.0</p>
              */
             public Builder logBodyPrefix(String logBodyPrefix) {
                 this.logBodyPrefix = logBodyPrefix;
@@ -635,7 +683,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * LogBodySuffix.
+             * <p>The suffix of the log delivery package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdnVersion:1.0</p>
              */
             public Builder logBodySuffix(String logBodySuffix) {
                 this.logBodySuffix = logBodySuffix;
@@ -643,7 +694,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * MaxBatchMB.
+             * <p>The maximum size of data for each delivery. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxBatchMB(Long maxBatchMB) {
                 this.maxBatchMB = maxBatchMB;
@@ -651,7 +705,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * MaxBatchSize.
+             * <p>The maximum number of entries for each delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxBatchSize(Long maxBatchSize) {
                 this.maxBatchSize = maxBatchSize;
@@ -659,7 +716,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * MaxRetry.
+             * <p>The maximum number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxRetry(Long maxRetry) {
                 this.maxRetry = maxRetry;
@@ -667,7 +727,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * QueryParam.
+             * <p>The custom query parameters.</p>
              */
             public Builder queryParam(java.util.Map < String, HttpDeliveryQueryParamValue > queryParam) {
                 this.queryParam = queryParam;
@@ -675,7 +735,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * StandardAuthOn.
+             * <p>Specifies whether to use server authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder standardAuthOn(Boolean standardAuthOn) {
                 this.standardAuthOn = standardAuthOn;
@@ -683,7 +746,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * StandardAuthParam.
+             * <p>The authentication configurations.</p>
              */
             public Builder standardAuthParam(StandardAuthParam standardAuthParam) {
                 this.standardAuthParam = standardAuthParam;
@@ -691,7 +754,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * TransformTimeout.
+             * <p>The timeout period. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder transformTimeout(Long transformTimeout) {
                 this.transformTimeout = transformTimeout;
@@ -822,7 +888,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private String userName; 
 
             /**
-             * Balancer.
+             * <p>The load balancing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kafka.LeastBytes</p>
              */
             public Builder balancer(String balancer) {
                 this.balancer = balancer;
@@ -830,7 +899,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * Brokers.
+             * <p>The brokers.</p>
              */
             public Builder brokers(java.util.List < String > brokers) {
                 this.brokers = brokers;
@@ -838,7 +907,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * Compress.
+             * <p>The compression method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gzip</p>
              */
             public Builder compress(String compress) {
                 this.compress = compress;
@@ -846,7 +918,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * MachanismType.
+             * <p>The encryption method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plain</p>
              */
             public Builder machanismType(String machanismType) {
                 this.machanismType = machanismType;
@@ -854,7 +929,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -862,7 +940,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * Topic.
+             * <p>The topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dqc_test2</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -870,7 +951,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * UserAuth.
+             * <p>Specifies whether to enable authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder userAuth(Boolean userAuth) {
                 this.userAuth = userAuth;
@@ -878,7 +962,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -961,7 +1048,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private String region; 
 
             /**
-             * Aliuid.
+             * <p>The ID of your Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234***</p>
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -969,7 +1059,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * BucketName.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_rlog</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -977,7 +1070,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * PrefixPath.
+             * <p>The prefix of the path in which you want to store logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logriver-test/log</p>
              */
             public Builder prefixPath(String prefixPath) {
                 this.prefixPath = prefixPath;
@@ -985,7 +1081,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>The region in which the bucket is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1128,7 +1227,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private String vertifyType; 
 
             /**
-             * AccessKey.
+             * <p>The access key ID of your Amazon S3 account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAIKh***</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -1136,7 +1238,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * BucketPath.
+             * <p>The directory in the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logriver-test/log</p>
              */
             public Builder bucketPath(String bucketPath) {
                 this.bucketPath = bucketPath;
@@ -1144,7 +1249,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint. This parameter is required when the S3Cmpt parameter is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://s3.oss-cn-hangzhou.aliyuncs.com">https://s3.oss-cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -1152,7 +1260,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * PrefixPath.
+             * <p>The prefix of the path in which you want to store logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logriver-test/log</p>
              */
             public Builder prefixPath(String prefixPath) {
                 this.prefixPath = prefixPath;
@@ -1160,7 +1271,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>The region ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1168,7 +1282,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * S3Cmpt.
+             * <p>Specifies whether the service is compatible with Amazon S3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder s3Cmpt(Boolean s3Cmpt) {
                 this.s3Cmpt = s3Cmpt;
@@ -1176,7 +1293,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * SecretKey.
+             * <p>The secret access key of your Amazon S3 account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LDSIKh***</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -1263,7 +1383,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private String SLSRegion; 
 
             /**
-             * SLSLogStore.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accesslog-test</p>
              */
             public Builder SLSLogStore(String SLSLogStore) {
                 this.SLSLogStore = SLSLogStore;
@@ -1271,7 +1394,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * SLSProject.
+             * <p>The name of the SLS project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dcdn-test20240417</p>
              */
             public Builder SLSProject(String SLSProject) {
                 this.SLSProject = SLSProject;
@@ -1279,7 +1405,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
-             * SLSRegion.
+             * <p>The region in which the SLS project resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder SLSRegion(String SLSRegion) {
                 this.SLSRegion = SLSRegion;

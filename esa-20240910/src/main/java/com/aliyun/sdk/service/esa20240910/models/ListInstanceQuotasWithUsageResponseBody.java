@@ -74,7 +74,10 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * InstanceId.
+         * <p>The plan ID.<a href="~~2850189~~"></a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-xcdn-96wblslz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -82,7 +85,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Quotas.
+         * <p>The quotas and their actual usage in the plan.</p>
          */
         public Builder quotas(java.util.List < Quotas> quotas) {
             this.quotas = quotas;
@@ -90,7 +93,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>85H66C7B-671A-4297-9187-2C4477247A74</p>
@@ -101,7 +104,15 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The plan status. Valid values:</p>
+         * <ul>
+         * <li>online: The plan is in service.</li>
+         * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
+         * <li>disable: The plan is released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -171,7 +182,10 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             private String siteUsage; 
 
             /**
-             * SiteId.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34818329392****</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -179,7 +193,10 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.top</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;
@@ -187,7 +204,10 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             }
 
             /**
-             * SiteUsage.
+             * <p>The quota usage of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteUsage(String siteUsage) {
                 this.siteUsage = siteUsage;
@@ -270,7 +290,10 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * QuotaName.
+             * <p>The quota name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redirect_rules|rule_quota</p>
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;
@@ -278,7 +301,10 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaValue.
+             * <p>The quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder quotaValue(String quotaValue) {
                 this.quotaValue = quotaValue;
@@ -286,7 +312,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             }
 
             /**
-             * SiteUsage.
+             * <p>The usage of the quota in each website associated with the plan.</p>
              */
             public Builder siteUsage(java.util.List < SiteUsage> siteUsage) {
                 this.siteUsage = siteUsage;
@@ -294,7 +320,10 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The quota usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;

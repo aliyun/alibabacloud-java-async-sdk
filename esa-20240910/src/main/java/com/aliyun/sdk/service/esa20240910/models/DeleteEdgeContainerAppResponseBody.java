@@ -50,7 +50,7 @@ public class DeleteEdgeContainerAppResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -61,7 +61,10 @@ public class DeleteEdgeContainerAppResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>Specifies whether the deletion is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder state(String state) {
             this.state = state;

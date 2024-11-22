@@ -97,7 +97,10 @@ public class UpdateListRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The new description of the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a custom list</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -106,6 +109,7 @@ public class UpdateListRequest extends Request {
         }
 
         /**
+         * <p>The ID of the custom list, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +122,10 @@ public class UpdateListRequest extends Request {
         }
 
         /**
-         * Items.
+         * <p>The items in the updated list. The value is a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a custom list</p>
          */
         public Builder items(java.util.List < String > items) {
             String itemsShrink = shrink(items, "Items", "json");
@@ -128,7 +135,10 @@ public class UpdateListRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new name of the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

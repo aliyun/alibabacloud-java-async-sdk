@@ -50,7 +50,10 @@ public class CreatePageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the custom error page.<a href="~~2850223~~"></a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000001</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -58,7 +61,7 @@ public class CreatePageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>

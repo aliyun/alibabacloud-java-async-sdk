@@ -140,7 +140,10 @@ public class DescribePreloadTasksRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The content to prefetch. Exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://a.com/1.jpg?b=2">http://a.com/1.jpg?b=2</a></p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -149,7 +152,13 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-23T06:23:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -158,7 +167,10 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +179,10 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +191,10 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -185,7 +203,10 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-22T17:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -194,7 +215,15 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>Complete</strong>: The task is complete.</li>
+         * <li><strong>Refreshing</strong>: The task is running.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -206,7 +206,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         private Integer urlSubmitted; 
 
         /**
-         * AliUid.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15685865xxx14622</p>
          */
         public Builder aliUid(String aliUid) {
             this.aliUid = aliUid;
@@ -214,7 +217,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedAt.
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-05T10:04:20+0800</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -222,7 +228,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * Domains.
+         * <p>The domain names to be prefetched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testurl.com</p>
          */
         public Builder domains(String domains) {
             this.domains = domains;
@@ -230,7 +239,16 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorInfo.
+         * <p>The error message. Multiple error messages are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>InvalidUrl</strong>: The URL format is invalid.</li>
+         * <li><strong>InvalidDomain</strong>: The domain name fails the domain ownership verification.</li>
+         * <li><strong>QuotaExcess</strong>: the quota limit has been reached.</li>
+         * <li><strong>OtherErrors</strong>: other errors.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidDomain</p>
          */
         public Builder errorInfo(String errorInfo) {
             this.errorInfo = errorInfo;
@@ -238,7 +256,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * FailedFileOss.
+         * <p>The URL of the OSS object that stores a list of URLs that failed the conditional check for prefetching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
          */
         public Builder failedFileOss(String failedFileOss) {
             this.failedFileOss = failedFileOss;
@@ -246,7 +267,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * FileId.
+         * <p>The ID of the URL list file, which can be used during downloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>665d3b48621bccf3fe29e1a7</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
@@ -254,7 +278,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the scheduled prefetch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>665d3af3621bccf3fe29e1a4</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -262,7 +289,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * InsertWay.
+         * <p>The method to submit the URLs to be prefetched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder insertWay(String insertWay) {
             this.insertWay = insertWay;
@@ -270,7 +300,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -278,7 +311,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247B78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -286,7 +322,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>190007158391808</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -294,7 +333,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * TaskSubmitted.
+         * <p>The number of submitted prefetch tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskSubmitted(Integer taskSubmitted) {
             this.taskSubmitted = taskSubmitted;
@@ -302,7 +344,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The task type (refresh or preload).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>preload</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -310,7 +355,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * UrlCount.
+         * <p>The total number of URLs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder urlCount(Integer urlCount) {
             this.urlCount = urlCount;
@@ -318,7 +366,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * UrlSubmitted.
+         * <p>The number of submitted URLs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder urlSubmitted(Integer urlSubmitted) {
             this.urlSubmitted = urlSubmitted;

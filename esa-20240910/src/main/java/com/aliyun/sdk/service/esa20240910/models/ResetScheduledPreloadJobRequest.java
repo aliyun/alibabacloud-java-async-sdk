@@ -54,7 +54,10 @@ public class ResetScheduledPreloadJobRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the scheduled prefetch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResetScheduledPreloadJob</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

@@ -141,7 +141,12 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>是否全部删除，只针对TagKey.N为空时有效</p>
+         * <p>Specifies whether to remove all tags. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -162,7 +167,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>要创建并绑定标签的资源所在的地域ID。</p>
+         * <p>The ID of the region where the resources reside. Set the value to <strong>cn-hangzhou</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +180,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>资源ID,最多 50个子项</p>
+         * <p>The ID of resource N. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
@@ -185,6 +190,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +212,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The key of tag N to remove from the resource. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

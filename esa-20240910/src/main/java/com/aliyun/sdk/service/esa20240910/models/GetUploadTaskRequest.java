@@ -68,7 +68,10 @@ public class GetUploadTaskRequest extends Request {
         } 
 
         /**
-         * SiteId.
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -77,7 +80,10 @@ public class GetUploadTaskRequest extends Request {
         }
 
         /**
-         * UploadId.
+         * <p>The ID of the file upload task. This field is assigned after you call the <a href="https://help.aliyun.com/document_detail/435925.html">UploadFile</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>159253299357****</p>
          */
         public Builder uploadId(Long uploadId) {
             this.putQueryParameter("UploadId", uploadId);

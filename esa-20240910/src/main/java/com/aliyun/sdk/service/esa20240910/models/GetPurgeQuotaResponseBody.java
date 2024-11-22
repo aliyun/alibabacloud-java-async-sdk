@@ -62,7 +62,10 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
         private String usage; 
 
         /**
-         * Quota.
+         * <p>The total quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder quota(String quota) {
             this.quota = quota;
@@ -70,7 +73,7 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -81,7 +84,10 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Usage.
+         * <p>The quota usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder usage(String usage) {
             this.usage = usage;

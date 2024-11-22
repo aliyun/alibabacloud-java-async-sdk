@@ -70,6 +70,7 @@ public class BatchCreateRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The list of DNS records to be created.</p>
          * <p>This parameter is required.</p>
          */
         public Builder recordList(java.util.List < RecordList> recordList) {
@@ -80,6 +81,7 @@ public class BatchCreateRecordsRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -414,7 +416,10 @@ public class BatchCreateRecordsRequest extends Request {
             private Integer weight; 
 
             /**
-             * Algorithm.
+             * <p>The encryption algorithm used for the record. Valid values: 0 to 255. Applicable to CERT and SSHFP records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder algorithm(Integer algorithm) {
                 this.algorithm = algorithm;
@@ -422,7 +427,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Certificate.
+             * <p>The public key of the certificate. Applicable to CERT, SMIMEA, and TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dGVzdGFkYWxrcw==</p>
              */
             public Builder certificate(String certificate) {
                 this.certificate = certificate;
@@ -430,7 +438,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Fingerprint.
+             * <p>The public key fingerprint of the record. Applicable to SSHFP records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcdef1234567890</p>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -438,7 +449,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Flag.
+             * <p>The Flag for a CAA record indicates its priority and how it is processed. Valid values: 0 to 255.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder flag(Integer flag) {
                 this.flag = flag;
@@ -446,7 +460,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * KeyTag.
+             * <p>The public key identification for the record. Valid values: 0 to 65535. Applicable to CERT records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder keyTag(Integer keyTag) {
                 this.keyTag = keyTag;
@@ -454,7 +471,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * MatchingType.
+             * <p>The algorithm policy used to match or validate the certificate. Valid values: 0 to 255. Applicable to SMIMEA, and TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder matchingType(Integer matchingType) {
                 this.matchingType = matchingType;
@@ -462,7 +482,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port of the record. Valid values: 0 to 65535. Exclusive to SRV records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -470,7 +493,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the record. Valid values: 0 to 65535. A smaller value indicates a higher priority. This parameter is required when you add MX, SRV, and URI records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -478,7 +504,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Selector.
+             * <p>The type of certificate or public key. Valid values: 0 to 255. Applicable to SMIMEA and TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selector(Integer selector) {
                 this.selector = selector;
@@ -486,7 +515,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Tag.
+             * <p>The tag of a CAA record, which indicates its specific type and purpose, such as issue, issuewild, and iodef.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>issue</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -494,7 +526,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The certificate type of the record (in CERT records), or the public key type (in SSHFP records).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -502,7 +537,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Usage.
+             * <p>The usage identifier of the record. Valid values: 0 to 255. Applicable to SMIMEA and TLSA records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usage(Integer usage) {
                 this.usage = usage;
@@ -510,7 +548,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The record value or part of the record content. A/AAAA: the IP address being pointed to. CNAME: the target domain name being pointed to. MX: valid target mail server domain name. TXT: valid text string. CAA: valid certificate authority domain name. SRV: valid target host domain name. URI: valid URI string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -518,7 +559,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The weight of the record. Valid values: 0 to 65,535. Applicable to SRV and URI records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -662,7 +706,15 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * BizName.
+             * <p>The business scenario of the record for acceleration. Valid values:</p>
+             * <ul>
+             * <li><strong>image_video</strong></li>
+             * <li><strong>api</strong></li>
+             * <li><strong>web</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder bizName(String bizName) {
                 this.bizName = bizName;
@@ -670,6 +722,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
+             * <p>The DNS information of the record. Enter fields based on the record type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -683,6 +736,11 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to proxy the record. Only CNAME and A/AAAA records can be proxied. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -694,6 +752,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
+             * <p>The record name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -705,7 +764,18 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * <p>The origin type for the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
+             * <ul>
+             * <li><strong>OSS</strong>: OSS bucket.</li>
+             * <li><strong>S3</strong>: S3 bucket.</li>
+             * <li><strong>LB</strong>: load balancer.</li>
+             * <li><strong>OP</strong>: origin pool.</li>
+             * <li><strong>Domain</strong>: domain name.</li>
+             * </ul>
+             * <p>If you do not pass this parameter or if you leave its value empty, Domain is used by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -713,6 +783,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
+             * <p>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -724,6 +795,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
+             * <p>The DNS type of the record.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

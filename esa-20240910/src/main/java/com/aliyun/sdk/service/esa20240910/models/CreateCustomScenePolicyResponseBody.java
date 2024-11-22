@@ -110,7 +110,11 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         private String template; 
 
         /**
-         * EndTime.
+         * <p>The time when the policy expires.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-07T18:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -118,7 +122,10 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -126,7 +133,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Objects.
+         * <p>The IDs of websites associated.</p>
          */
         public Builder objects(java.util.List < String > objects) {
             this.objects = objects;
@@ -134,7 +141,10 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder policyId(Long policyId) {
             this.policyId = policyId;
@@ -142,7 +152,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -153,7 +163,11 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the policy takes effect.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-07T17:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -161,7 +175,10 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Template.
+         * <p>The name of the policy template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>promotion</p>
          */
         public Builder template(String template) {
             this.template = template;

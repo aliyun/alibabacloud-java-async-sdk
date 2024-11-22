@@ -82,7 +82,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
         } 
 
         /**
-         * Expressions.
+         * <p>The regular expressions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_bot</p>
          */
         public Builder expressions(java.util.List < Expressions> expressions) {
             String expressionsShrink = shrink(expressions, "Expressions", "json");
@@ -92,7 +95,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
-         * Phase.
+         * <p>The WAF rule category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_bot</p>
          */
         public Builder phase(String phase) {
             this.putBodyParameter("Phase", phase);
@@ -101,7 +107,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -161,7 +170,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
             private Long id; 
 
             /**
-             * Expression.
+             * <p>The content of the regular expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip.src eq 1.1.1.1</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -169,7 +181,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The ID of the regular expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;

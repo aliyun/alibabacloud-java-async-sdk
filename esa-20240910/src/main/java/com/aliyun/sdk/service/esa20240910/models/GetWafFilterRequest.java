@@ -96,7 +96,10 @@ public class GetWafFilterRequest extends Request {
         } 
 
         /**
-         * Phase.
+         * <p>The WAF rule category to which the filter conditions to query belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_bot</p>
          */
         public Builder phase(String phase) {
             this.putQueryParameter("Phase", phase);
@@ -105,7 +108,10 @@ public class GetWafFilterRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -114,7 +120,10 @@ public class GetWafFilterRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>The condition for matching incoming requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>characteristics</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -123,7 +132,10 @@ public class GetWafFilterRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_custom_cc</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

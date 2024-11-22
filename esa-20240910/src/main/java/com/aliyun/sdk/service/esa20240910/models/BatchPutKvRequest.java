@@ -70,6 +70,7 @@ public class BatchPutKvRequest extends Request {
         } 
 
         /**
+         * <p>The key-value pairs that you want to configure at a time. The total size can be up to 2 MB (2 × 1000 × 1000).</p>
          * <p>This parameter is required.</p>
          */
         public Builder kvList(java.util.List < KvList> kvList) {
@@ -80,6 +81,7 @@ public class BatchPutKvRequest extends Request {
         }
 
         /**
+         * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,10 @@ public class BatchPutKvRequest extends Request {
             private String value; 
 
             /**
-             * Expiration.
+             * <p>The time when the key-value pair expires, which cannot be earlier than the current time. The value is a timestamp in seconds. If you specify both Expiration and ExpirationTtl, only ExpirationTtl takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1690081381</p>
              */
             public Builder expiration(Long expiration) {
                 this.expiration = expiration;
@@ -177,7 +182,10 @@ public class BatchPutKvRequest extends Request {
             }
 
             /**
-             * ExpirationTtl.
+             * <p>The relative expiration time. Unit: seconds. If you specify both Expiration and ExpirationTtl, only ExpirationTtl takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder expirationTtl(Long expirationTtl) {
                 this.expirationTtl = expirationTtl;
@@ -185,6 +193,7 @@ public class BatchPutKvRequest extends Request {
             }
 
             /**
+             * <p>The key name. The name can be up to 512 characters in length and cannot contain spaces or backslashes (\).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -196,6 +205,7 @@ public class BatchPutKvRequest extends Request {
             }
 
             /**
+             * <p>The key content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

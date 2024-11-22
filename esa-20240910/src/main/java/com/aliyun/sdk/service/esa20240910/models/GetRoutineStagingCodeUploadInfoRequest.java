@@ -68,7 +68,10 @@ public class GetRoutineStagingCodeUploadInfoRequest extends Request {
         } 
 
         /**
-         * CodeDescription.
+         * <p>The code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the description of code</p>
          */
         public Builder codeDescription(String codeDescription) {
             this.putBodyParameter("CodeDescription", codeDescription);
@@ -77,7 +80,10 @@ public class GetRoutineStagingCodeUploadInfoRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GetRoutineStagingCodeUploadInfo</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

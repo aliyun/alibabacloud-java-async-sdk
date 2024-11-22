@@ -54,7 +54,10 @@ public class GetEdgeContainerTerminalRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-88068867578379****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

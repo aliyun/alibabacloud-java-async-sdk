@@ -86,7 +86,10 @@ public class UpdateKvNamespaceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Description.
+         * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test ns.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -94,7 +97,10 @@ public class UpdateKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * <p>The updated name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_ns1</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -102,7 +108,10 @@ public class UpdateKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceId.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>643355322374688768</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
@@ -110,7 +119,10 @@ public class UpdateKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +130,16 @@ public class UpdateKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the namespace. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: normal.</li>
+         * <li><strong>delete</strong>: pending deletion.</li>
+         * <li><strong>deleting</strong>: being deleted.</li>
+         * <li><strong>deleted</strong>: deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;

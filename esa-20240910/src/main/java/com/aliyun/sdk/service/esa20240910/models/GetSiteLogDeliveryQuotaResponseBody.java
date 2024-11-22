@@ -74,7 +74,16 @@ public class GetSiteLogDeliveryQuotaResponseBody extends TeaModel {
         private Long siteId; 
 
         /**
-         * BusinessType.
+         * <p>The log category. Valid values:</p>
+         * <ol>
+         * <li>dcdn_log_access_l1 (default): access logs.</li>
+         * <li>dcdn_log_er: Edge Routine logs.</li>
+         * <li>dcdn_log_waf: firewall logs.</li>
+         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.businessType = businessType;
@@ -82,7 +91,10 @@ public class GetSiteLogDeliveryQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * FreeQuota.
+         * <p>The remaining quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder freeQuota(Long freeQuota) {
             this.freeQuota = freeQuota;
@@ -90,7 +102,7 @@ public class GetSiteLogDeliveryQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4C14840EF0EAAB6D97CDE0C5F6554ACE</p>
@@ -101,7 +113,10 @@ public class GetSiteLogDeliveryQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;

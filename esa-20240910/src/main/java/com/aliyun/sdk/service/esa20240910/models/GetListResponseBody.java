@@ -112,7 +112,7 @@ public class GetListResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * <p>自定义响应页面描述</p>
+         * <p>The description of the custom list.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom list</p>
@@ -123,7 +123,7 @@ public class GetListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>自定义响应页面ID</p>
+         * <p>The ID of the custom list.<a href="~~2850217~~"></a></p>
          * 
          * <strong>example:</strong>
          * <p>40000001</p>
@@ -134,7 +134,7 @@ public class GetListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The items in the custom list, which are displayed as an array.</p>
          */
         public Builder items(java.util.List < String > items) {
             this.items = items;
@@ -142,7 +142,10 @@ public class GetListResponseBody extends TeaModel {
         }
 
         /**
-         * Kind.
+         * <p>The type of the custom list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder kind(String kind) {
             this.kind = kind;
@@ -150,7 +153,7 @@ public class GetListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>自定义响应页面名称</p>
+         * <p>The name of the custom list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +165,7 @@ public class GetListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -173,7 +176,10 @@ public class GetListResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the custom list was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

@@ -171,6 +171,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +184,10 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * FullRelease.
+         * <p>Specifies whether to fully release the version. This parameter takes effect only when PublishType is set to region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fullRelease(Boolean fullRelease) {
             this.putQueryParameter("FullRelease", fullRelease);
@@ -192,7 +196,10 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * Percentage.
+         * <p>The release percentage. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder percentage(Integer percentage) {
             this.putBodyParameter("Percentage", percentage);
@@ -201,6 +208,11 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
+         * <p>The environment to which you want to release the version. Valid values:</p>
+         * <ul>
+         * <li>prod: the production environment.</li>
+         * <li>staging: the staging environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +225,15 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * PublishType.
+         * <p>Specifies how the version is released. Valid values:</p>
+         * <ul>
+         * <li>percentage: releases the version by percentage.</li>
+         * <li>region: releases the version by region.</li>
+         * </ul>
+         * <p>If you do not specify this parameter, the version is released by percentage by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>percentage</p>
          */
         public Builder publishType(String publishType) {
             this.putQueryParameter("PublishType", publishType);
@@ -222,7 +242,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * Regions.
+         * <p>The regions to which the version is released.</p>
          */
         public Builder regions(java.util.List < String > regions) {
             String regionsShrink = shrink(regions, "Regions", "json");
@@ -232,7 +252,10 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * Remarks.
+         * <p>The remarks. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test publish app</p>
          */
         public Builder remarks(String remarks) {
             this.putBodyParameter("Remarks", remarks);
@@ -241,7 +264,11 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the application version starts to be released. If you do not specify this parameter, the current time is used by default.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-05T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -250,6 +277,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
+         * <p>The version ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

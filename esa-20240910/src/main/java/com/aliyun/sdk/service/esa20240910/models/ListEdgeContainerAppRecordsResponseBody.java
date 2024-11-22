@@ -86,7 +86,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,7 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * <p>The details about the associated domain names.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -110,7 +116,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of domain names that are associated with the specified application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -260,7 +272,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-88068867578379****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -268,7 +283,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Cname.
+             * <p>The CNAME of the associated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kdxceo****.yun****.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -276,7 +294,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID of the associated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27522948436****</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -284,7 +305,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the domain name was added. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-24T02:01:11Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -292,7 +316,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * <p>The record ID of the associated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>266****</p>
              */
             public Builder recordId(Long recordId) {
                 this.recordId = recordId;
@@ -300,7 +327,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordName.
+             * <p>The associated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.example.com</p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -308,7 +338,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SchemdId.
+             * <p>The scheduling domain ID of the associated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder schemdId(Integer schemdId) {
                 this.schemdId = schemdId;
@@ -316,7 +349,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The website ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5407498413****</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -324,7 +360,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the scheduling domain ID or CNAME was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-22T08:32:02Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

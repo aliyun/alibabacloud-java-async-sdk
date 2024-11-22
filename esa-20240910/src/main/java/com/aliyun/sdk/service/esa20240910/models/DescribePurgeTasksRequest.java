@@ -154,7 +154,10 @@ public class DescribePurgeTasksRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The content to purge. Exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://a.com/1.jpg?b=1">http://a.com/1.jpg?b=1</a></p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -163,7 +166,13 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-18T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -172,7 +181,10 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Valid values: 1 to 100000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -181,7 +193,10 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,7 +205,10 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -199,7 +217,10 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-16T05:33:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -208,7 +229,15 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>Complete</strong>: The task is complete.</li>
+         * <li><strong>Refreshing</strong>: The task is in progress.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -217,7 +246,18 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><strong>file</strong> (default): purges the cache by file.</li>
+         * <li><strong>cachetag</strong>: purges the cache by cache tag.</li>
+         * <li><strong>directory</strong>: purges the cache by directory.</li>
+         * <li><strong>ignoreParams</strong>: purges the cache by URL with specified parameters ignored.</li>
+         * <li><strong>hostname</strong>: purges the cache by hostname.</li>
+         * <li><strong>purgeall</strong>: purges all cache.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -70,6 +70,7 @@ public class UpdateUserDeliveryTaskStatusRequest extends Request {
         } 
 
         /**
+         * <p>Enables or disables the delivery task. Valid values: online and offline.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,6 +83,7 @@ public class UpdateUserDeliveryTaskStatusRequest extends Request {
         }
 
         /**
+         * <p>The name of the delivery task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

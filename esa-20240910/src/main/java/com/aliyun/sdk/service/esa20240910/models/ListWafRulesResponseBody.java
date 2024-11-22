@@ -110,7 +110,10 @@ public class ListWafRulesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * InstanceUsage.
+         * <p>The rule usage of the instance that corresponds to the website in the WAF rule category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder instanceUsage(Long instanceUsage) {
             this.instanceUsage = instanceUsage;
@@ -118,7 +121,10 @@ public class ListWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -126,7 +132,10 @@ public class ListWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -134,7 +143,10 @@ public class ListWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +154,7 @@ public class ListWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The rules returned.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -150,7 +162,10 @@ public class ListWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * SiteUsage.
+         * <p>The rule usage of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder siteUsage(Long siteUsage) {
             this.siteUsage = siteUsage;
@@ -158,7 +173,10 @@ public class ListWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of filtered rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -372,7 +390,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Action.
+             * <p>The action triggered when requests match conditions defined in the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -380,7 +401,7 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CharacteristicsFields.
+             * <p>The fields in rate limiting rules.</p>
              */
             public Builder characteristicsFields(java.util.List < String > characteristicsFields) {
                 this.characteristicsFields = characteristicsFields;
@@ -388,7 +409,7 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The configuration of the rule.</p>
              */
             public Builder config(WafRuleConfig config) {
                 this.config = config;
@@ -396,7 +417,7 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Fields.
+             * <p>The fields in the rule.</p>
              */
             public Builder fields(java.util.List < String > fields) {
                 this.fields = fields;
@@ -404,7 +425,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -412,7 +436,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -420,7 +447,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The WAF rule category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_custom</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -428,7 +458,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * <p>The position of the rule in the ruleset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder position(Long position) {
                 this.position = position;
@@ -436,7 +469,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RulesetId.
+             * <p>The ruleset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder rulesetId(Long rulesetId) {
                 this.rulesetId = rulesetId;
@@ -444,7 +480,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Skip.
+             * <p>The skip scope applied when requests match conditions defined in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>part</p>
              */
             public Builder skip(String skip) {
                 this.skip = skip;
@@ -452,7 +491,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -460,7 +502,7 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The skipped WAF rule categories when requests match conditions defined in the whitelist rule.</p>
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;
@@ -468,7 +510,7 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Timer.
+             * <p>The time when the rule takes effect.</p>
              */
             public Builder timer(WafTimer timer) {
                 this.timer = timer;
@@ -476,7 +518,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The WAF rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_custom</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -484,7 +529,10 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the rule was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

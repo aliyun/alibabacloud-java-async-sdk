@@ -98,7 +98,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DataModule.
+         * <p>The scenario-specific policies.</p>
          */
         public Builder dataModule(java.util.List < DataModule> dataModule) {
             this.dataModule = dataModule;
@@ -106,7 +106,10 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Quota.
+         * <p>The policy quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder quota(Integer quota) {
             this.quota = quota;
@@ -130,7 +139,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>85H66C7B-671A-4297-9187-2C4477247A74</p>
@@ -141,7 +150,10 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -259,7 +271,11 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             private String template; 
 
             /**
-             * EndTime.
+             * <p>The time when the policy expires.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-06T16:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -267,7 +283,10 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the scenario-specific policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -275,7 +294,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Objects.
+             * <p>The IDs of websites that are associated with the policy.</p>
              */
             public Builder objects(java.util.List < String > objects) {
                 this.objects = objects;
@@ -283,7 +302,10 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234****</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -291,7 +313,11 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the policy takes effect.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-04T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -299,7 +325,16 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Disabled</strong></li>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Expired</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Expired</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -307,7 +342,13 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * <p>The name of the policy template. Valid value:</p>
+             * <ul>
+             * <li><strong>promotion</strong>: major events.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>promotion</p>
              */
             public Builder template(String template) {
                 this.template = template;

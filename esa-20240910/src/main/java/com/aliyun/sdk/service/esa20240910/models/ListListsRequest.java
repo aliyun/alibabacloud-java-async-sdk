@@ -82,7 +82,10 @@ public class ListListsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -91,7 +94,10 @@ public class ListListsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,7 +106,10 @@ public class ListListsRequest extends Request {
         }
 
         /**
-         * QueryArgs.
+         * <p>The query arguments in the JSON format, which contain filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ListLists</p>
          */
         public Builder queryArgs(QueryArgs queryArgs) {
             String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
@@ -233,7 +242,10 @@ public class ListListsRequest extends Request {
             private String orderBy; 
 
             /**
-             * Desc.
+             * <p>Specifies whether to sort the returned data in descending order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder desc(Boolean desc) {
                 this.desc = desc;
@@ -241,7 +253,10 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * DescriptionLike.
+             * <p>The list description for fuzzy search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a custom list</p>
              */
             public Builder descriptionLike(String descriptionLike) {
                 this.descriptionLike = descriptionLike;
@@ -249,7 +264,10 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * IdLike.
+             * <p>The list ID for fuzzy search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40000001</p>
              */
             public Builder idLike(String idLike) {
                 this.idLike = idLike;
@@ -257,7 +275,10 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * ItemLike.
+             * <p>The list content for fuzzy search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.1.1.1</p>
              */
             public Builder itemLike(String itemLike) {
                 this.itemLike = itemLike;
@@ -273,7 +294,10 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * NameItemLike.
+             * <p>The list name and content for fuzzy search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.1.1.1</p>
              */
             public Builder nameItemLike(String nameItemLike) {
                 this.nameItemLike = nameItemLike;
@@ -281,7 +305,10 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * NameLike.
+             * <p>The list name for fuzzy search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder nameLike(String nameLike) {
                 this.nameLike = nameLike;
@@ -289,7 +316,10 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * OrderBy.
+             * <p>The column by which you want to sort the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder orderBy(String orderBy) {
                 this.orderBy = orderBy;

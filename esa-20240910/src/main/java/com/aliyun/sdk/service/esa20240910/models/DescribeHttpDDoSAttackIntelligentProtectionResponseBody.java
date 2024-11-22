@@ -74,7 +74,14 @@ public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody extends Tea
         private Long siteId; 
 
         /**
-         * AiMode.
+         * <p>The mode of smart HTTP DDoS protection. Valid values:</p>
+         * <ul>
+         * <li><strong>observe</strong>: alert.</li>
+         * <li><strong>defense</strong>: block.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>defense</p>
          */
         public Builder aiMode(String aiMode) {
             this.aiMode = aiMode;
@@ -82,7 +89,16 @@ public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody extends Tea
         }
 
         /**
-         * AiTemplate.
+         * <p>The level of smart HTTP DDoS protection. Valid values:</p>
+         * <ul>
+         * <li><strong>level0</strong>: very loose.</li>
+         * <li><strong>level30</strong>: loose.</li>
+         * <li><strong>level60</strong>: normal.</li>
+         * <li><strong>level90</strong>: strict.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>level60</p>
          */
         public Builder aiTemplate(String aiTemplate) {
             this.aiTemplate = aiTemplate;
@@ -90,7 +106,7 @@ public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody extends Tea
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CB1A380B-09F0-41BB-3C82-72F8FD6DA2FE</p>
@@ -101,7 +117,10 @@ public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody extends Tea
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;

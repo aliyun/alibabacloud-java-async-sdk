@@ -113,6 +113,12 @@ public class CreateScheduledPreloadJobRequest extends Request {
         } 
 
         /**
+         * <p>The method to submit URLs to be prefetched.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>textBox</strong></li>
+         * <li><strong>oss</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +131,11 @@ public class CreateScheduledPreloadJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the scheduled prefetch task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -134,7 +144,10 @@ public class CreateScheduledPreloadJobRequest extends Request {
         }
 
         /**
-         * OssUrl.
+         * <p>The URL of the OSS object that stores the URLs to be prefetched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
          */
         public Builder ossUrl(String ossUrl) {
             this.putBodyParameter("OssUrl", ossUrl);
@@ -143,7 +156,11 @@ public class CreateScheduledPreloadJobRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>190007158391808</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);
@@ -152,7 +169,11 @@ public class CreateScheduledPreloadJobRequest extends Request {
         }
 
         /**
-         * UrlList.
+         * <p>The URLs to be prefetched. This parameter is required if you set InsertWay to textBox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://testurl.com/a.txt">http://testurl.com/a.txt</a>
+         * <a href="http://testurl.com/b.txt">http://testurl.com/b.txt</a></p>
          */
         public Builder urlList(String urlList) {
             this.putBodyParameter("UrlList", urlList);

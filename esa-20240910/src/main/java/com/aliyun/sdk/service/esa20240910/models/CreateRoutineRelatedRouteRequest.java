@@ -82,7 +82,10 @@ public class CreateRoutineRelatedRouteRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The routine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateRoutineRelatedRoute</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -91,7 +94,10 @@ public class CreateRoutineRelatedRouteRequest extends Request {
         }
 
         /**
-         * Route.
+         * <p>The route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em>.example.com/path1</em></p>
          */
         public Builder route(String route) {
             this.putBodyParameter("Route", route);
@@ -100,7 +106,10 @@ public class CreateRoutineRelatedRouteRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54362329990032</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);

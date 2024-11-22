@@ -50,7 +50,10 @@ public class PublishRoutineCodeVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CodeVersion.
+         * <p>The code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710120201067203242</p>
          */
         public Builder codeVersion(String codeVersion) {
             this.codeVersion = codeVersion;
@@ -58,7 +61,10 @@ public class PublishRoutineCodeVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
