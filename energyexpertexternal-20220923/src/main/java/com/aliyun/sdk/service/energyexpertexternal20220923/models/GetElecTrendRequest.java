@@ -71,6 +71,7 @@ public class GetElecTrendRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>C-20240115-3</p>
@@ -83,6 +84,7 @@ public class GetElecTrendRequest extends Request {
 
         /**
          * <p>List of years.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder yearList(java.util.List < Integer > yearList) {
             this.putBodyParameter("yearList", yearList);

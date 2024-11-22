@@ -131,6 +131,7 @@ public class GetInventoryListRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>C-20080808-1</p>
@@ -146,6 +147,7 @@ public class GetInventoryListRequest extends Request {
          * <blockquote>
          * <p> Valid values: footprint | emission. Meaning: footprint: all inventories are involved in the calculation; emission: only inventories with positive and zero emissions are involved in the calculation, and negative numbers are not involved in the calculation.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>footprint</p>
@@ -161,6 +163,7 @@ public class GetInventoryListRequest extends Request {
          * <blockquote>
          * <p> Valid values: resource | process | resourceType | processType. Meaning: resource: aggregation by inventory group, process: aggregation by operation group, resourceType: aggregation by inventory type, processType: aggregation by phase group</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>resource</p>
@@ -173,7 +176,8 @@ public class GetInventoryListRequest extends Request {
 
         /**
          * <p>The type of the obtained environmental impact: gwp indicates the carbon footprint of climate change. 
-         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/energy-expert/developer-reference/enumerated-values-of-energy-expert#RhGn7">For more information, see the environment impact category enumeration.</a></props></p>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/energy-expert/developer-reference/enumerated-values-of-energy-expert#RhGn7">For more information, see the environment impact category enumeration.</a></p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gwp</p>
@@ -186,6 +190,7 @@ public class GetInventoryListRequest extends Request {
 
         /**
          * <p>The product id.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -198,6 +203,7 @@ public class GetInventoryListRequest extends Request {
 
         /**
          * <p>Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

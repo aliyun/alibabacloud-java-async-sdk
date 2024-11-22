@@ -56,6 +56,7 @@ public class GetDeviceListRequest extends Request {
 
         /**
          * <p>The ID of the site.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pn_95</p>

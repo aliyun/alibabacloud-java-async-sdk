@@ -92,7 +92,7 @@ public class SendDocumentAskQuestionRequest extends Request {
         }
 
         /**
-         * prompt.
+         * <p>This parameter is required.</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("prompt", prompt);

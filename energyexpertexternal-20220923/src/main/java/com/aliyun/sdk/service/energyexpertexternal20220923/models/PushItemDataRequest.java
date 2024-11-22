@@ -86,6 +86,7 @@ public class PushItemDataRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>C-20210223-01</p>
@@ -98,6 +99,7 @@ public class PushItemDataRequest extends Request {
 
         /**
          * <p>List of data to be pushed.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder items(Items items) {
             this.putBodyParameter("items", items);
@@ -107,6 +109,7 @@ public class PushItemDataRequest extends Request {
 
         /**
          * <p>The year of the data created.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2024</p>
@@ -184,7 +187,8 @@ public class PushItemDataRequest extends Request {
             private Double value; 
 
             /**
-             * <p>API data identification.&lt;props=&quot;intl&quot;&gt;For details: <a href="https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist">GetDataItemList </a></props></p>
+             * <p>API data identification.&lt;props=&quot;intl&quot;&gt;For details: <a href="https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist">GetDataItemList </a></p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>demo_api_code</p>
@@ -196,6 +200,7 @@ public class PushItemDataRequest extends Request {
 
             /**
              * <p>The month.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -207,6 +212,7 @@ public class PushItemDataRequest extends Request {
 
             /**
              * <p>The value of the data item.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1.11</p>

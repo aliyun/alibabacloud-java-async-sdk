@@ -100,6 +100,7 @@ public class GetEmissionSourceConstituteRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>C-20240119-1</p>
@@ -124,6 +125,7 @@ public class GetEmissionSourceConstituteRequest extends Request {
 
         /**
          * <p>Module type.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -136,6 +138,7 @@ public class GetEmissionSourceConstituteRequest extends Request {
 
         /**
          * <p>Year of inventory.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2024</p>

@@ -71,6 +71,7 @@ public class RecalculateCarbonEmissionRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>C-20240202-01</p>
@@ -83,6 +84,7 @@ public class RecalculateCarbonEmissionRequest extends Request {
 
         /**
          * <p>Year of inventory.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2024</p>

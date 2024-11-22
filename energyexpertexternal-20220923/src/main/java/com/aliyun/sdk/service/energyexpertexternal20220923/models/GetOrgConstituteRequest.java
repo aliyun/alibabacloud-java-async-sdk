@@ -100,6 +100,7 @@ public class GetOrgConstituteRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Z-20240115-2</p>
@@ -124,6 +125,7 @@ public class GetOrgConstituteRequest extends Request {
 
         /**
          * <p>Module type.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -136,6 +138,7 @@ public class GetOrgConstituteRequest extends Request {
 
         /**
          * <p>Year.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2024</p>

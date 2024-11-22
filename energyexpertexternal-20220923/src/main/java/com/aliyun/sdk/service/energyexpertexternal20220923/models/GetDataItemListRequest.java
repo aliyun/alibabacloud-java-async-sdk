@@ -56,6 +56,7 @@ public class GetDataItemListRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>C-202302-01</p>

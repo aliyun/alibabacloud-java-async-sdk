@@ -101,6 +101,7 @@ public class GetFootprintListRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>C-20080808-1</p>
@@ -113,6 +114,7 @@ public class GetFootprintListRequest extends Request {
 
         /**
          * <p>The pagination parameter. The number of the page that starts from 1.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,6 +127,7 @@ public class GetFootprintListRequest extends Request {
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -137,6 +140,7 @@ public class GetFootprintListRequest extends Request {
 
         /**
          * <p>Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

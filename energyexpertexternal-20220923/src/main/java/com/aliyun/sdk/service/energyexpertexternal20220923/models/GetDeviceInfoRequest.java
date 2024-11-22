@@ -86,6 +86,7 @@ public class GetDeviceInfoRequest extends Request {
 
         /**
          * <p>The ID of the device.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pn_69873</p>
@@ -98,6 +99,7 @@ public class GetDeviceInfoRequest extends Request {
 
         /**
          * <p>The time string in the YYYY-mm-dd format.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-26</p>
@@ -110,6 +112,7 @@ public class GetDeviceInfoRequest extends Request {
 
         /**
          * <p>The ID of the site.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pn_95</p>

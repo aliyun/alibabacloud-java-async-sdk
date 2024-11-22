@@ -71,6 +71,7 @@ public class PushDeviceDataRequest extends Request {
 
         /**
          * <p>The type of the device. <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/Deviceappendixes-en.pdf">View device type definitions</a></p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -83,6 +84,7 @@ public class PushDeviceDataRequest extends Request {
 
         /**
          * <p>List of devices to which data is pushed.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder devices(java.util.List < Devices> devices) {
             this.putBodyParameter("devices", devices);
@@ -158,6 +160,7 @@ public class PushDeviceDataRequest extends Request {
 
             /**
              * <p>Measuring point information To avoid accuracy problems, the measurement point data is uniformly transmitted to the string. The function of missing required fields cannot be used normally. Some functions may be affected due to the lack of recommend fields. For details, please refer to the notes of equipment measuring points in the appendix. <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/Deviceappendixes-en.pdf">Reference Point Definition</a></p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -192,6 +195,7 @@ public class PushDeviceDataRequest extends Request {
 
             /**
              * <p>If the deviceType parameter is set to 12, 13, or 17, you must set the system_id parameter. The field name is still device_id. If the deviceType parameter is set to 15 or 16, no Other situations will be transmitted.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>device_code_xxx</p>
@@ -203,6 +207,7 @@ public class PushDeviceDataRequest extends Request {
 
             /**
              * <p>Data generation time of measuring point.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-09-08 18:40:00</p>

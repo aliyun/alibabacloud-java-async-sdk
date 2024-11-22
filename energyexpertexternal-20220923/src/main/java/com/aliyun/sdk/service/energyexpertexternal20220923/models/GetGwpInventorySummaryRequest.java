@@ -86,6 +86,7 @@ public class GetGwpInventorySummaryRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>C-20080808-1</p>
@@ -98,6 +99,7 @@ public class GetGwpInventorySummaryRequest extends Request {
 
         /**
          * <p>The product id.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -110,6 +112,7 @@ public class GetGwpInventorySummaryRequest extends Request {
 
         /**
          * <p>Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

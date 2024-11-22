@@ -114,6 +114,7 @@ public class GetCarbonEmissionTrendRequest extends Request {
 
         /**
          * <p>The enterprise code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>C-20240119-1</p>
@@ -150,6 +151,7 @@ public class GetCarbonEmissionTrendRequest extends Request {
 
         /**
          * <p>Trend Type.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -162,6 +164,7 @@ public class GetCarbonEmissionTrendRequest extends Request {
 
         /**
          * <p>The list of inventory year.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder yearList(java.util.List < Integer > yearList) {
             this.putBodyParameter("yearList", yearList);

@@ -55,7 +55,10 @@ public class GetDocumentAnalyzeResultRequest extends Request {
         } 
 
         /**
-         * jobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bfce2248-1546-4298-8bcf-70ac26e69646</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("jobId", jobId);
