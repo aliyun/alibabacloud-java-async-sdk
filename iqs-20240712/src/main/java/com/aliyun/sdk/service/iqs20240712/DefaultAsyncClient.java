@@ -40,24 +40,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of BicyclingDirection  BicyclingDirectionRequest
-     * @return BicyclingDirectionResponse
-     */
-    @Override
-    public CompletableFuture<BicyclingDirectionResponse> bicyclingDirection(BicyclingDirectionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BicyclingDirection").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/direction/bicycling").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BicyclingDirectionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<BicyclingDirectionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of BicyclingDirectionNova  BicyclingDirectionNovaRequest
      * @return BicyclingDirectionNovaResponse
      */
@@ -76,24 +58,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CircleTrafficStatus  CircleTrafficStatusRequest
-     * @return CircleTrafficStatusResponse
-     */
-    @Override
-    public CompletableFuture<CircleTrafficStatusResponse> circleTrafficStatus(CircleTrafficStatusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CircleTrafficStatus").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/traffic/status/circle").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CircleTrafficStatusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CircleTrafficStatusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of CommonQueryByScene  CommonQueryBySceneRequest
      * @return CommonQueryBySceneResponse
      */
@@ -106,24 +70,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CommonQueryBySceneResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of DrivingDirection  DrivingDirectionRequest
-     * @return DrivingDirectionResponse
-     */
-    @Override
-    public CompletableFuture<DrivingDirectionResponse> drivingDirection(DrivingDirectionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DrivingDirection").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/direction/driving").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DrivingDirectionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DrivingDirectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -202,24 +148,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of NearbySearch  NearbySearchRequest
-     * @return NearbySearchResponse
-     */
-    @Override
-    public CompletableFuture<NearbySearchResponse> nearbySearch(NearbySearchRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("NearbySearch").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/pois/nearby").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(NearbySearchResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<NearbySearchResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of NearbySearchNova  NearbySearchNovaRequest
      * @return NearbySearchNovaResponse
      */
@@ -232,24 +160,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<NearbySearchNovaResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of PlaceSearch  PlaceSearchRequest
-     * @return PlaceSearchResponse
-     */
-    @Override
-    public CompletableFuture<PlaceSearchResponse> placeSearch(PlaceSearchRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PlaceSearch").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/pois/place").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PlaceSearchResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<PlaceSearchResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -274,78 +184,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of QueryAttractions  QueryAttractionsRequest
-     * @return QueryAttractionsResponse
-     */
-    @Override
-    public CompletableFuture<QueryAttractionsResponse> queryAttractions(QueryAttractionsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryAttractions").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v1/nl/attractions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAttractionsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<QueryAttractionsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of QueryHotels  QueryHotelsRequest
-     * @return QueryHotelsResponse
-     */
-    @Override
-    public CompletableFuture<QueryHotelsResponse> queryHotels(QueryHotelsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryHotels").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v1/nl/hotels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryHotelsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<QueryHotelsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of QueryRestaurants  QueryRestaurantsRequest
-     * @return QueryRestaurantsResponse
-     */
-    @Override
-    public CompletableFuture<QueryRestaurantsResponse> queryRestaurants(QueryRestaurantsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRestaurants").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v1/nl/restaurants").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRestaurantsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<QueryRestaurantsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of RectangleTrafficStatus  RectangleTrafficStatusRequest
-     * @return RectangleTrafficStatusResponse
-     */
-    @Override
-    public CompletableFuture<RectangleTrafficStatusResponse> rectangleTrafficStatus(RectangleTrafficStatusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RectangleTrafficStatus").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/traffic/status/rectangle").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RectangleTrafficStatusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RectangleTrafficStatusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of RgeoCode  RgeoCodeRequest
      * @return RgeoCodeResponse
      */
@@ -364,24 +202,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of RoadTrafficStatus  RoadTrafficStatusRequest
-     * @return RoadTrafficStatusResponse
-     */
-    @Override
-    public CompletableFuture<RoadTrafficStatusResponse> roadTrafficStatus(RoadTrafficStatusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RoadTrafficStatus").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/traffic/status/road").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RoadTrafficStatusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RoadTrafficStatusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of TransitIntegratedDirection  TransitIntegratedDirectionRequest
      * @return TransitIntegratedDirectionResponse
      */
@@ -394,42 +214,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TransitIntegratedDirectionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of TransitIntegratedDirectionOld  TransitIntegratedDirectionOldRequest
-     * @return TransitIntegratedDirectionOldResponse
-     */
-    @Override
-    public CompletableFuture<TransitIntegratedDirectionOldResponse> transitIntegratedDirectionOld(TransitIntegratedDirectionOldRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TransitIntegratedDirectionOld").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/direction/transit/integrated").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransitIntegratedDirectionOldResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<TransitIntegratedDirectionOldResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of WalkingDirection  WalkingDirectionRequest
-     * @return WalkingDirectionResponse
-     */
-    @Override
-    public CompletableFuture<WalkingDirectionResponse> walkingDirection(WalkingDirectionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("WalkingDirection").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/direction/walking").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(WalkingDirectionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<WalkingDirectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
