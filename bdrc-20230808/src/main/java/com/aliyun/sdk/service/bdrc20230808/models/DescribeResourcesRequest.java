@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataRedundancyType")
+    private String dataRedundancyType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FailedRuleTemplate")
     private String failedRuleTemplate;
 
@@ -41,8 +45,13 @@ public class DescribeResourcesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageClass")
+    private String storageClass;
+
     private DescribeResourcesRequest(Builder builder) {
         super(builder);
+        this.dataRedundancyType = builder.dataRedundancyType;
         this.failedRuleTemplate = builder.failedRuleTemplate;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -50,6 +59,7 @@ public class DescribeResourcesRequest extends Request {
         this.resourceType = builder.resourceType;
         this.sortBy = builder.sortBy;
         this.sortOrder = builder.sortOrder;
+        this.storageClass = builder.storageClass;
     }
 
     public static Builder builder() {
@@ -63,6 +73,13 @@ public class DescribeResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dataRedundancyType
+     */
+    public String getDataRedundancyType() {
+        return this.dataRedundancyType;
     }
 
     /**
@@ -114,7 +131,15 @@ public class DescribeResourcesRequest extends Request {
         return this.sortOrder;
     }
 
+    /**
+     * @return storageClass
+     */
+    public String getStorageClass() {
+        return this.storageClass;
+    }
+
     public static final class Builder extends Request.Builder<DescribeResourcesRequest, Builder> {
+        private String dataRedundancyType; 
         private String failedRuleTemplate; 
         private Integer maxResults; 
         private String nextToken; 
@@ -122,6 +147,7 @@ public class DescribeResourcesRequest extends Request {
         private String resourceType; 
         private String sortBy; 
         private String sortOrder; 
+        private String storageClass; 
 
         private Builder() {
             super();
@@ -129,6 +155,7 @@ public class DescribeResourcesRequest extends Request {
 
         private Builder(DescribeResourcesRequest request) {
             super(request);
+            this.dataRedundancyType = request.dataRedundancyType;
             this.failedRuleTemplate = request.failedRuleTemplate;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -136,7 +163,17 @@ public class DescribeResourcesRequest extends Request {
             this.resourceType = request.resourceType;
             this.sortBy = request.sortBy;
             this.sortOrder = request.sortOrder;
+            this.storageClass = request.storageClass;
         } 
+
+        /**
+         * DataRedundancyType.
+         */
+        public Builder dataRedundancyType(String dataRedundancyType) {
+            this.putQueryParameter("DataRedundancyType", dataRedundancyType);
+            this.dataRedundancyType = dataRedundancyType;
+            return this;
+        }
 
         /**
          * FailedRuleTemplate.
@@ -198,6 +235,15 @@ public class DescribeResourcesRequest extends Request {
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
             this.sortOrder = sortOrder;
+            return this;
+        }
+
+        /**
+         * StorageClass.
+         */
+        public Builder storageClass(String storageClass) {
+            this.putQueryParameter("StorageClass", storageClass);
+            this.storageClass = storageClass;
             return this;
         }
 

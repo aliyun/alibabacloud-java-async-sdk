@@ -90,6 +90,9 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DataRedundancyType")
+        private String dataRedundancyType;
+
         @com.aliyun.core.annotation.NameInMap("EnableCheck")
         private Boolean enableCheck;
 
@@ -129,6 +132,9 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
+        private String storageClass;
+
         @com.aliyun.core.annotation.NameInMap("TotalDataSize")
         private Long totalDataSize;
 
@@ -146,6 +152,7 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
             this.checkFailedCount = builder.checkFailedCount;
             this.coldArchiveDataSize = builder.coldArchiveDataSize;
             this.createTime = builder.createTime;
+            this.dataRedundancyType = builder.dataRedundancyType;
             this.enableCheck = builder.enableCheck;
             this.iaDataSize = builder.iaDataSize;
             this.productType = builder.productType;
@@ -159,6 +166,7 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
             this.riskCount = builder.riskCount;
             this.standardDataSize = builder.standardDataSize;
             this.status = builder.status;
+            this.storageClass = builder.storageClass;
             this.totalDataSize = builder.totalDataSize;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -199,6 +207,13 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return dataRedundancyType
+         */
+        public String getDataRedundancyType() {
+            return this.dataRedundancyType;
         }
 
         /**
@@ -293,6 +308,13 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
+        }
+
+        /**
          * @return totalDataSize
          */
         public Long getTotalDataSize() {
@@ -325,6 +347,7 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
             private Long checkFailedCount; 
             private Long coldArchiveDataSize; 
             private Long createTime; 
+            private String dataRedundancyType; 
             private Boolean enableCheck; 
             private Long iaDataSize; 
             private String productType; 
@@ -338,6 +361,7 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
             private Long riskCount; 
             private Long standardDataSize; 
             private String status; 
+            private String storageClass; 
             private Long totalDataSize; 
             private String vSwitchId; 
             private String vpcId; 
@@ -372,6 +396,14 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DataRedundancyType.
+             */
+            public Builder dataRedundancyType(String dataRedundancyType) {
+                this.dataRedundancyType = dataRedundancyType;
                 return this;
             }
 
@@ -476,6 +508,14 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
                 return this;
             }
 
