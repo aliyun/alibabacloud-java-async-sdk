@@ -65,6 +65,10 @@ public class GetConnectionTicketRequest extends Request {
     private String sessionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
@@ -86,6 +90,7 @@ public class GetConnectionTicketRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sessionId = builder.sessionId;
+        this.tag = builder.tag;
         this.taskId = builder.taskId;
         this.uuid = builder.uuid;
     }
@@ -188,6 +193,13 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -214,6 +226,7 @@ public class GetConnectionTicketRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String sessionId; 
+        private java.util.List < Tag> tag; 
         private String taskId; 
         private String uuid; 
 
@@ -235,6 +248,7 @@ public class GetConnectionTicketRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sessionId = request.sessionId;
+            this.tag = request.tag;
             this.taskId = request.taskId;
             this.uuid = request.uuid;
         } 
@@ -357,6 +371,15 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * TaskId.
          */
         public Builder taskId(String taskId) {
@@ -381,4 +404,71 @@ public class GetConnectionTicketRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetConnectionTicketRequest} extends {@link TeaModel}
+     *
+     * <p>GetConnectionTicketRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
