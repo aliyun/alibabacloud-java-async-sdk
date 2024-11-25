@@ -82,7 +82,7 @@ public class GrantRoleToUsersRequest extends Request {
         } 
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:emr::w-975bcfda9625****:role/Owner</p>
@@ -94,7 +94,7 @@ public class GrantRoleToUsersRequest extends Request {
         }
 
         /**
-         * userArns.
+         * <p>The user ARNs.</p>
          */
         public Builder userArns(java.util.List < String > userArns) {
             this.putBodyParameter("userArns", userArns);

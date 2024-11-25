@@ -16,12 +16,18 @@ public class Artifact extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
+    @com.aliyun.core.annotation.NameInMap("catagoryBizId")
+    private String catagoryBizId;
+
     @com.aliyun.core.annotation.NameInMap("creator")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long creator;
 
     @com.aliyun.core.annotation.NameInMap("credential")
     private Credential credential;
+
+    @com.aliyun.core.annotation.NameInMap("fullPath")
+    private java.util.List < String > fullPath;
 
     @com.aliyun.core.annotation.NameInMap("gmtCreated")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -45,8 +51,10 @@ public class Artifact extends TeaModel {
 
     private Artifact(Builder builder) {
         this.bizId = builder.bizId;
+        this.catagoryBizId = builder.catagoryBizId;
         this.creator = builder.creator;
         this.credential = builder.credential;
+        this.fullPath = builder.fullPath;
         this.gmtCreated = builder.gmtCreated;
         this.gmtModified = builder.gmtModified;
         this.location = builder.location;
@@ -70,6 +78,13 @@ public class Artifact extends TeaModel {
     }
 
     /**
+     * @return catagoryBizId
+     */
+    public String getCatagoryBizId() {
+        return this.catagoryBizId;
+    }
+
+    /**
      * @return creator
      */
     public Long getCreator() {
@@ -81,6 +96,13 @@ public class Artifact extends TeaModel {
      */
     public Credential getCredential() {
         return this.credential;
+    }
+
+    /**
+     * @return fullPath
+     */
+    public java.util.List < String > getFullPath() {
+        return this.fullPath;
     }
 
     /**
@@ -120,8 +142,10 @@ public class Artifact extends TeaModel {
 
     public static final class Builder {
         private String bizId; 
+        private String catagoryBizId; 
         private Long creator; 
         private Credential credential; 
+        private java.util.List < String > fullPath; 
         private String gmtCreated; 
         private String gmtModified; 
         private String location; 
@@ -133,6 +157,14 @@ public class Artifact extends TeaModel {
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * catagoryBizId.
+         */
+        public Builder catagoryBizId(String catagoryBizId) {
+            this.catagoryBizId = catagoryBizId;
             return this;
         }
 
@@ -149,6 +181,14 @@ public class Artifact extends TeaModel {
          */
         public Builder credential(Credential credential) {
             this.credential = credential;
+            return this;
+        }
+
+        /**
+         * fullPath.
+         */
+        public Builder fullPath(java.util.List < String > fullPath) {
+            this.fullPath = fullPath;
             return this;
         }
 

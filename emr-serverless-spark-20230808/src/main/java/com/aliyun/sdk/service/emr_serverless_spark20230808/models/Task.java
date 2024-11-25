@@ -32,6 +32,9 @@ public class Task extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long creator;
 
+    @com.aliyun.core.annotation.NameInMap("credential")
+    private Credential credential;
+
     @com.aliyun.core.annotation.NameInMap("defaultCatalogId")
     private String defaultCatalogId;
 
@@ -46,6 +49,9 @@ public class Task extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("deploymentId")
     private String deploymentId;
+
+    @com.aliyun.core.annotation.NameInMap("environmentId")
+    private String environmentId;
 
     @com.aliyun.core.annotation.NameInMap("extraArtifactIds")
     private java.util.List < String > extraArtifactIds;
@@ -151,11 +157,13 @@ public class Task extends TeaModel {
         this.categoryBizId = builder.categoryBizId;
         this.content = builder.content;
         this.creator = builder.creator;
+        this.credential = builder.credential;
         this.defaultCatalogId = builder.defaultCatalogId;
         this.defaultDatabase = builder.defaultDatabase;
         this.defaultResourceQueueId = builder.defaultResourceQueueId;
         this.defaultSqlComputeId = builder.defaultSqlComputeId;
         this.deploymentId = builder.deploymentId;
+        this.environmentId = builder.environmentId;
         this.extraArtifactIds = builder.extraArtifactIds;
         this.extraSparkSubmitParams = builder.extraSparkSubmitParams;
         this.files = builder.files;
@@ -237,6 +245,13 @@ public class Task extends TeaModel {
     }
 
     /**
+     * @return credential
+     */
+    public Credential getCredential() {
+        return this.credential;
+    }
+
+    /**
      * @return defaultCatalogId
      */
     public String getDefaultCatalogId() {
@@ -269,6 +284,13 @@ public class Task extends TeaModel {
      */
     public String getDeploymentId() {
         return this.deploymentId;
+    }
+
+    /**
+     * @return environmentId
+     */
+    public String getEnvironmentId() {
+        return this.environmentId;
     }
 
     /**
@@ -474,11 +496,13 @@ public class Task extends TeaModel {
         private String categoryBizId; 
         private String content; 
         private Long creator; 
+        private Credential credential; 
         private String defaultCatalogId; 
         private String defaultDatabase; 
         private String defaultResourceQueueId; 
         private String defaultSqlComputeId; 
         private String deploymentId; 
+        private String environmentId; 
         private java.util.List < String > extraArtifactIds; 
         private String extraSparkSubmitParams; 
         private java.util.List < String > files; 
@@ -557,6 +581,14 @@ public class Task extends TeaModel {
         }
 
         /**
+         * credential.
+         */
+        public Builder credential(Credential credential) {
+            this.credential = credential;
+            return this;
+        }
+
+        /**
          * defaultCatalogId.
          */
         public Builder defaultCatalogId(String defaultCatalogId) {
@@ -593,6 +625,14 @@ public class Task extends TeaModel {
          */
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = deploymentId;
+            return this;
+        }
+
+        /**
+         * environmentId.
+         */
+        public Builder environmentId(String environmentId) {
+            this.environmentId = environmentId;
             return this;
         }
 
@@ -826,4 +866,191 @@ public class Task extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Task} extends {@link TeaModel}
+     *
+     * <p>Task</p>
+     */
+    public static class Credential extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessId")
+        private String accessId;
+
+        @com.aliyun.core.annotation.NameInMap("accessUrl")
+        private String accessUrl;
+
+        @com.aliyun.core.annotation.NameInMap("expire")
+        private Long expire;
+
+        @com.aliyun.core.annotation.NameInMap("host")
+        private String host;
+
+        @com.aliyun.core.annotation.NameInMap("path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("policy")
+        private String policy;
+
+        @com.aliyun.core.annotation.NameInMap("securityToken")
+        private String securityToken;
+
+        @com.aliyun.core.annotation.NameInMap("signature")
+        private String signature;
+
+        private Credential(Builder builder) {
+            this.accessId = builder.accessId;
+            this.accessUrl = builder.accessUrl;
+            this.expire = builder.expire;
+            this.host = builder.host;
+            this.path = builder.path;
+            this.policy = builder.policy;
+            this.securityToken = builder.securityToken;
+            this.signature = builder.signature;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Credential create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessId
+         */
+        public String getAccessId() {
+            return this.accessId;
+        }
+
+        /**
+         * @return accessUrl
+         */
+        public String getAccessUrl() {
+            return this.accessUrl;
+        }
+
+        /**
+         * @return expire
+         */
+        public Long getExpire() {
+            return this.expire;
+        }
+
+        /**
+         * @return host
+         */
+        public String getHost() {
+            return this.host;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        /**
+         * @return securityToken
+         */
+        public String getSecurityToken() {
+            return this.securityToken;
+        }
+
+        /**
+         * @return signature
+         */
+        public String getSignature() {
+            return this.signature;
+        }
+
+        public static final class Builder {
+            private String accessId; 
+            private String accessUrl; 
+            private Long expire; 
+            private String host; 
+            private String path; 
+            private String policy; 
+            private String securityToken; 
+            private String signature; 
+
+            /**
+             * accessId.
+             */
+            public Builder accessId(String accessId) {
+                this.accessId = accessId;
+                return this;
+            }
+
+            /**
+             * accessUrl.
+             */
+            public Builder accessUrl(String accessUrl) {
+                this.accessUrl = accessUrl;
+                return this;
+            }
+
+            /**
+             * expire.
+             */
+            public Builder expire(Long expire) {
+                this.expire = expire;
+                return this;
+            }
+
+            /**
+             * host.
+             */
+            public Builder host(String host) {
+                this.host = host;
+                return this;
+            }
+
+            /**
+             * path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            /**
+             * securityToken.
+             */
+            public Builder securityToken(String securityToken) {
+                this.securityToken = securityToken;
+                return this;
+            }
+
+            /**
+             * signature.
+             */
+            public Builder signature(String signature) {
+                this.signature = signature;
+                return this;
+            }
+
+            public Credential build() {
+                return new Credential(this);
+            } 
+
+        } 
+
+    }
 }

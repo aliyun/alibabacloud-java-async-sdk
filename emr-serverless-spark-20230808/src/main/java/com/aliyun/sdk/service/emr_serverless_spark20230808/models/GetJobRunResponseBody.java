@@ -213,6 +213,9 @@ public class GetJobRunResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
+        @com.aliyun.core.annotation.NameInMap("environmentId")
+        private String environmentId;
+
         @com.aliyun.core.annotation.NameInMap("executionTimeoutSeconds")
         private Integer executionTimeoutSeconds;
 
@@ -263,6 +266,7 @@ public class GetJobRunResponseBody extends TeaModel {
             this.configurationOverrides = builder.configurationOverrides;
             this.displayReleaseVersion = builder.displayReleaseVersion;
             this.endTime = builder.endTime;
+            this.environmentId = builder.environmentId;
             this.executionTimeoutSeconds = builder.executionTimeoutSeconds;
             this.fusion = builder.fusion;
             this.jobDriver = builder.jobDriver;
@@ -314,6 +318,13 @@ public class GetJobRunResponseBody extends TeaModel {
          */
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return environmentId
+         */
+        public String getEnvironmentId() {
+            return this.environmentId;
         }
 
         /**
@@ -426,6 +437,7 @@ public class GetJobRunResponseBody extends TeaModel {
             private ConfigurationOverrides configurationOverrides; 
             private String displayReleaseVersion; 
             private Long endTime; 
+            private String environmentId; 
             private Integer executionTimeoutSeconds; 
             private Boolean fusion; 
             private JobDriver jobDriver; 
@@ -482,6 +494,14 @@ public class GetJobRunResponseBody extends TeaModel {
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * environmentId.
+             */
+            public Builder environmentId(String environmentId) {
+                this.environmentId = environmentId;
                 return this;
             }
 

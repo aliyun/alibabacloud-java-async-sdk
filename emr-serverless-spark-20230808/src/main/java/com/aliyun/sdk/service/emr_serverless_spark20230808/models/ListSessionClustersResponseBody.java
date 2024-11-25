@@ -211,7 +211,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the configuration item.</p>
+             * <p>The key of the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>spark.app.name</p>
@@ -222,7 +222,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the configuration item.</p>
+             * <p>The configuration value.</p>
              * 
              * <strong>example:</strong>
              * <p>test_application</p>
@@ -457,11 +457,17 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
+        @com.aliyun.core.annotation.NameInMap("domainInner")
+        private String domainInner;
+
         @com.aliyun.core.annotation.NameInMap("draftId")
         private String draftId;
 
         @com.aliyun.core.annotation.NameInMap("fusion")
         private Boolean fusion;
+
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
+        private Long gmtCreate;
 
         @com.aliyun.core.annotation.NameInMap("kind")
         private String kind;
@@ -477,6 +483,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("sessionClusterId")
         private String sessionClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("startTime")
+        private Long startTime;
 
         @com.aliyun.core.annotation.NameInMap("state")
         private String state;
@@ -502,13 +511,16 @@ public class ListSessionClustersResponseBody extends TeaModel {
             this.autoStopConfiguration = builder.autoStopConfiguration;
             this.displayReleaseVersion = builder.displayReleaseVersion;
             this.domain = builder.domain;
+            this.domainInner = builder.domainInner;
             this.draftId = builder.draftId;
             this.fusion = builder.fusion;
+            this.gmtCreate = builder.gmtCreate;
             this.kind = builder.kind;
             this.name = builder.name;
             this.queueName = builder.queueName;
             this.releaseVersion = builder.releaseVersion;
             this.sessionClusterId = builder.sessionClusterId;
+            this.startTime = builder.startTime;
             this.state = builder.state;
             this.stateChangeReason = builder.stateChangeReason;
             this.userId = builder.userId;
@@ -561,6 +573,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return domainInner
+         */
+        public String getDomainInner() {
+            return this.domainInner;
+        }
+
+        /**
          * @return draftId
          */
         public String getDraftId() {
@@ -572,6 +591,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
          */
         public Boolean getFusion() {
             return this.fusion;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public Long getGmtCreate() {
+            return this.gmtCreate;
         }
 
         /**
@@ -607,6 +633,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
          */
         public String getSessionClusterId() {
             return this.sessionClusterId;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
         }
 
         /**
@@ -657,13 +690,16 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private AutoStopConfiguration autoStopConfiguration; 
             private String displayReleaseVersion; 
             private String domain; 
+            private String domainInner; 
             private String draftId; 
             private Boolean fusion; 
+            private Long gmtCreate; 
             private String kind; 
             private String name; 
             private String queueName; 
             private String releaseVersion; 
             private String sessionClusterId; 
+            private Long startTime; 
             private String state; 
             private StateChangeReason stateChangeReason; 
             private String userId; 
@@ -712,6 +748,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
+             * domainInner.
+             */
+            public Builder domainInner(String domainInner) {
+                this.domainInner = domainInner;
+                return this;
+            }
+
+            /**
              * <p>The ID of the job that is associated with the session.</p>
              * 
              * <strong>example:</strong>
@@ -730,6 +774,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
              */
             public Builder fusion(Boolean fusion) {
                 this.fusion = fusion;
+                return this;
+            }
+
+            /**
+             * gmtCreate.
+             */
+            public Builder gmtCreate(Long gmtCreate) {
+                this.gmtCreate = gmtCreate;
                 return this;
             }
 
@@ -795,6 +847,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
+             * startTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
              * <p>The status of the session.</p>
              * 
              * <strong>example:</strong>
@@ -825,7 +885,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>test_user</p>
