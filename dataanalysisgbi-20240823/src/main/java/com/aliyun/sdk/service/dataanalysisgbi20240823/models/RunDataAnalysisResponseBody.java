@@ -12,11 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunDataAnalysisResponseBody</p>
  */
 public class RunDataAnalysisResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
+    private Long httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
     private RunDataAnalysisResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.message = builder.message;
     }
 
     public static Builder builder() {
@@ -28,20 +40,68 @@ public class RunDataAnalysisResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public Data getData() {
         return this.data;
     }
 
+    /**
+     * @return httpStatusCode
+     */
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
     public static final class Builder {
+        private String code; 
         private Data data; 
+        private Long httpStatusCode; 
+        private String message; 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * data.
          */
         public Builder data(Data data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * httpStatusCode.
+         */
+        public Builder httpStatusCode(Long httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
@@ -288,6 +348,9 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("evidence")
         private String evidence;
 
+        @com.aliyun.core.annotation.NameInMap("httpStatusCode")
+        private Long httpStatusCode;
+
         @com.aliyun.core.annotation.NameInMap("requestId")
         private String requestId;
 
@@ -316,6 +379,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             this.errorMessage = builder.errorMessage;
             this.event = builder.event;
             this.evidence = builder.evidence;
+            this.httpStatusCode = builder.httpStatusCode;
             this.requestId = builder.requestId;
             this.rewrite = builder.rewrite;
             this.selector = builder.selector;
@@ -353,6 +417,13 @@ public class RunDataAnalysisResponseBody extends TeaModel {
          */
         public String getEvidence() {
             return this.evidence;
+        }
+
+        /**
+         * @return httpStatusCode
+         */
+        public Long getHttpStatusCode() {
+            return this.httpStatusCode;
         }
 
         /**
@@ -415,6 +486,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             private String errorMessage; 
             private String event; 
             private String evidence; 
+            private Long httpStatusCode; 
             private String requestId; 
             private String rewrite; 
             private java.util.List < String > selector; 
@@ -445,6 +517,14 @@ public class RunDataAnalysisResponseBody extends TeaModel {
              */
             public Builder evidence(String evidence) {
                 this.evidence = evidence;
+                return this;
+            }
+
+            /**
+             * httpStatusCode.
+             */
+            public Builder httpStatusCode(Long httpStatusCode) {
+                this.httpStatusCode = httpStatusCode;
                 return this;
             }
 
