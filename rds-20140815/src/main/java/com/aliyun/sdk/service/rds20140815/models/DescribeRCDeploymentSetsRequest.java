@@ -37,6 +37,10 @@ public class DescribeRCDeploymentSetsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Strategy")
     private String strategy;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private String tag;
+
     private DescribeRCDeploymentSetsRequest(Builder builder) {
         super(builder);
         this.deploymentSetIds = builder.deploymentSetIds;
@@ -45,6 +49,7 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.strategy = builder.strategy;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -102,6 +107,13 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         return this.strategy;
     }
 
+    /**
+     * @return tag
+     */
+    public String getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRCDeploymentSetsRequest, Builder> {
         private String deploymentSetIds; 
         private String deploymentSetName; 
@@ -109,6 +121,7 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private String strategy; 
+        private String tag; 
 
         private Builder() {
             super();
@@ -122,6 +135,7 @@ public class DescribeRCDeploymentSetsRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.strategy = request.strategy;
+            this.tag = request.tag;
         } 
 
         /**
@@ -203,6 +217,15 @@ public class DescribeRCDeploymentSetsRequest extends Request {
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);
             this.strategy = strategy;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(String tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 

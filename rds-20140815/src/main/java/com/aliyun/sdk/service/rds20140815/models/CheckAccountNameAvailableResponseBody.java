@@ -15,8 +15,12 @@ public class CheckAccountNameAvailableResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private CheckAccountNameAvailableResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -34,8 +38,16 @@ public class CheckAccountNameAvailableResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private String resourceGroupId; 
 
         /**
          * <p>The request ID.</p>
@@ -45,6 +57,17 @@ public class CheckAccountNameAvailableResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

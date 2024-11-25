@@ -26,6 +26,10 @@ public class DescribeDBProxyPerformanceRequest extends Request {
     private String DBProxyInstanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimension")
+    private String dimension;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
@@ -62,6 +66,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceType = builder.DBProxyInstanceType;
+        this.dimension = builder.dimension;
         this.endTime = builder.endTime;
         this.metricsName = builder.metricsName;
         this.ownerId = builder.ownerId;
@@ -103,6 +108,13 @@ public class DescribeDBProxyPerformanceRequest extends Request {
      */
     public String getDBProxyInstanceType() {
         return this.DBProxyInstanceType;
+    }
+
+    /**
+     * @return dimension
+     */
+    public String getDimension() {
+        return this.dimension;
     }
 
     /**
@@ -158,6 +170,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         private String DBInstanceId; 
         private String DBProxyEngineType; 
         private String DBProxyInstanceType; 
+        private String dimension; 
         private String endTime; 
         private String metricsName; 
         private Long ownerId; 
@@ -175,6 +188,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyInstanceType = request.DBProxyInstanceType;
+            this.dimension = request.dimension;
             this.endTime = request.endTime;
             this.metricsName = request.metricsName;
             this.ownerId = request.ownerId;
@@ -222,6 +236,15 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         public Builder DBProxyInstanceType(String DBProxyInstanceType) {
             this.putQueryParameter("DBProxyInstanceType", DBProxyInstanceType);
             this.DBProxyInstanceType = DBProxyInstanceType;
+            return this;
+        }
+
+        /**
+         * Dimension.
+         */
+        public Builder dimension(String dimension) {
+            this.putQueryParameter("Dimension", dimension);
+            this.dimension = dimension;
             return this;
         }
 

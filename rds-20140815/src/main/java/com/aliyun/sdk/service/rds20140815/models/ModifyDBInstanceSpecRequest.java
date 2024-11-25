@@ -83,6 +83,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private String payType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceClass")
     private String readOnlyDBInstanceClass;
 
@@ -149,6 +153,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
+        this.promotionCode = builder.promotionCode;
         this.readOnlyDBInstanceClass = builder.readOnlyDBInstanceClass;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -296,6 +301,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return readOnlyDBInstanceClass
      */
     public String getReadOnlyDBInstanceClass() {
@@ -397,6 +409,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String payType; 
+        private String promotionCode; 
         private String readOnlyDBInstanceClass; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -433,6 +446,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
+            this.promotionCode = request.promotionCode;
             this.readOnlyDBInstanceClass = request.readOnlyDBInstanceClass;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -738,7 +752,19 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * ReadOnlyDBInstanceClass.
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
+            return this;
+        }
+
+        /**
+         * <p>Target specifications for read-only instances when changing a MySQL high-availability local disk instance to a cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysqlro.n2.large.c</p>
          */
         public Builder readOnlyDBInstanceClass(String readOnlyDBInstanceClass) {
             this.putQueryParameter("ReadOnlyDBInstanceClass", readOnlyDBInstanceClass);

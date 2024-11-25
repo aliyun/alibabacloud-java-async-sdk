@@ -25,6 +25,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     private String autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BpeEnabled")
     private String bpeEnabled;
 
@@ -118,6 +122,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     private String privateIpAddress;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -168,6 +176,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         this.autoCreateProxy = builder.autoCreateProxy;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.bpeEnabled = builder.bpeEnabled;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
@@ -190,6 +199,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         this.period = builder.period;
         this.port = builder.port;
         this.privateIpAddress = builder.privateIpAddress;
+        this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -235,6 +245,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
      */
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -392,6 +409,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -472,6 +496,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         private Boolean autoCreateProxy; 
         private Boolean autoPay; 
         private String autoRenew; 
+        private Boolean autoUseCoupon; 
         private String bpeEnabled; 
         private Boolean burstingEnabled; 
         private String category; 
@@ -494,6 +519,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         private String period; 
         private String port; 
         private String privateIpAddress; 
+        private String promotionCode; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -515,6 +541,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
             this.autoCreateProxy = request.autoCreateProxy;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.bpeEnabled = request.bpeEnabled;
             this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
@@ -537,6 +564,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
             this.period = request.period;
             this.port = request.port;
             this.privateIpAddress = request.privateIpAddress;
+            this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -553,8 +581,8 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         /**
          * <p>Specifies whether to automatically create database proxies. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the feature. By default, general-purpose database proxies are created.</li>
-         * <li><strong>false</strong>: disables the feature. No database proxies are created.</li>
+         * <li><strong>true</strong>: automatically creates database proxies. By default, general-purpose database proxies are created.</li>
+         * <li><strong>false</strong>: does not automatically create database proxies.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -567,13 +595,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
+         * <p>Specifies whether to automatically complete the payment. Valid values:</p>
          * <ol>
-         * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient.</li>
-         * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
+         * <li><strong>true</strong>: automatically completes the payment. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
          * </ol>
          * <blockquote>
-         * <p> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+         * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -604,6 +632,15 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
             return this;
         }
 
@@ -811,7 +848,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
          * </ul>
          * <p>Default value: VPC. If you set this parameter to VPC, you must also specify the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
          * <blockquote>
-         * <p>The network type of the read-only instance can be different from the network type of the primary instance.</p>
+         * <p> The network type of the read-only instance can be different from the network type of the primary instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -920,6 +957,15 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 
@@ -1053,6 +1099,11 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
 
         /**
          * <p>The zone ID. You can call the DescribeRegions operation to query the zone ID.</p>
+         * <ul>
+         * <li>If you use the single-zone deployment method, set this parameter to the ID of one zone. Example: <code>cn-hangzhou-b</code>.</li>
+         * <li>If you use the multi-zone deployment method, set this parameter to the IDs of multiple zones and separate the IDs with colons (:). Example: <code>cn-hangzhou-b:cn-hangzhou-c</code>.</li>
+         * <li>The number of zone IDs that you specify must be less than or equal to the number of nodes created for the read-only instance. If you create a read-only instance that runs RDS Basic Edition, only one node is provisioned. If you create a read-only instance that runs RDS High-availability Edition, one primary node and one secondary node are provisioned.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

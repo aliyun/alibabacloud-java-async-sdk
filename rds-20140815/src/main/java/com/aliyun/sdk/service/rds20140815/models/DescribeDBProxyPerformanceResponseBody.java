@@ -296,6 +296,9 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
+        @com.aliyun.core.annotation.NameInMap("Service")
+        private String service;
+
         @com.aliyun.core.annotation.NameInMap("ValueFormat")
         private String valueFormat;
 
@@ -304,6 +307,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
         private PerformanceKey(Builder builder) {
             this.key = builder.key;
+            this.service = builder.service;
             this.valueFormat = builder.valueFormat;
             this.values = builder.values;
         }
@@ -324,6 +328,13 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return service
+         */
+        public String getService() {
+            return this.service;
+        }
+
+        /**
          * @return valueFormat
          */
         public String getValueFormat() {
@@ -339,6 +350,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String key; 
+            private String service; 
             private String valueFormat; 
             private Values values; 
 
@@ -350,6 +362,14 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
              */
             public Builder key(String key) {
                 this.key = key;
+                return this;
+            }
+
+            /**
+             * Service.
+             */
+            public Builder service(String service) {
+                this.service = service;
                 return this;
             }
 

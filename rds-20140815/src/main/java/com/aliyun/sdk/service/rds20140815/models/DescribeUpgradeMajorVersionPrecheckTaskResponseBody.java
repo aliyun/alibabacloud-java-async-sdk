@@ -159,6 +159,15 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
+        @com.aliyun.core.annotation.NameInMap("RecommendDiskSize")
+        private Integer recommendDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("RecommendLeastMemSize")
+        private Integer recommendLeastMemSize;
+
+        @com.aliyun.core.annotation.NameInMap("RecommendMemSize")
+        private Integer recommendMemSize;
+
         @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
@@ -175,6 +184,9 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             this.checkTime = builder.checkTime;
             this.detail = builder.detail;
             this.effectiveTime = builder.effectiveTime;
+            this.recommendDiskSize = builder.recommendDiskSize;
+            this.recommendLeastMemSize = builder.recommendLeastMemSize;
+            this.recommendMemSize = builder.recommendMemSize;
             this.result = builder.result;
             this.sourceMajorVersion = builder.sourceMajorVersion;
             this.targetMajorVersion = builder.targetMajorVersion;
@@ -211,6 +223,27 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
+         * @return recommendDiskSize
+         */
+        public Integer getRecommendDiskSize() {
+            return this.recommendDiskSize;
+        }
+
+        /**
+         * @return recommendLeastMemSize
+         */
+        public Integer getRecommendLeastMemSize() {
+            return this.recommendLeastMemSize;
+        }
+
+        /**
+         * @return recommendMemSize
+         */
+        public Integer getRecommendMemSize() {
+            return this.recommendMemSize;
+        }
+
+        /**
          * @return result
          */
         public String getResult() {
@@ -242,6 +275,9 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             private String checkTime; 
             private String detail; 
             private String effectiveTime; 
+            private Integer recommendDiskSize; 
+            private Integer recommendLeastMemSize; 
+            private Integer recommendMemSize; 
             private String result; 
             private String sourceMajorVersion; 
             private String targetMajorVersion; 
@@ -279,6 +315,49 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
+                return this;
+            }
+
+            /**
+             * <p>The minimum recommended disk capacity for upgrading. Unit: GB.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder recommendDiskSize(Integer recommendDiskSize) {
+                this.recommendDiskSize = recommendDiskSize;
+                return this;
+            }
+
+            /**
+             * <p>The minimum recommended memory for upgrading. Unit: GB.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
+             */
+            public Builder recommendLeastMemSize(Integer recommendLeastMemSize) {
+                this.recommendLeastMemSize = recommendLeastMemSize;
+                return this;
+            }
+
+            /**
+             * <p>Recommended memory when upgrading. Unit: GB.</p>
+             * <p>When the memory of the instance is greater than or equal to the recommended memory, it will be upgraded at the fastest speed to minimize the read-only time of the instance.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
+             */
+            public Builder recommendMemSize(Integer recommendMemSize) {
+                this.recommendMemSize = recommendMemSize;
                 return this;
             }
 

@@ -21,6 +21,10 @@ public class RenewInstanceRequest extends Request {
     private String autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -39,6 +43,10 @@ public class RenewInstanceRequest extends Request {
     private Integer period;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -50,10 +58,12 @@ public class RenewInstanceRequest extends Request {
         super(builder);
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerId = builder.ownerId;
         this.period = builder.period;
+        this.promotionCode = builder.promotionCode;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -86,6 +96,13 @@ public class RenewInstanceRequest extends Request {
     }
 
     /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -114,6 +131,13 @@ public class RenewInstanceRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -130,10 +154,12 @@ public class RenewInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<RenewInstanceRequest, Builder> {
         private String autoPay; 
         private String autoRenew; 
+        private Boolean autoUseCoupon; 
         private String clientToken; 
         private String DBInstanceId; 
         private Long ownerId; 
         private Integer period; 
+        private String promotionCode; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -145,10 +171,12 @@ public class RenewInstanceRequest extends Request {
             super(request);
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
             this.ownerId = request.ownerId;
             this.period = request.period;
+            this.promotionCode = request.promotionCode;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -195,6 +223,15 @@ public class RenewInstanceRequest extends Request {
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
             return this;
         }
 
@@ -250,6 +287,15 @@ public class RenewInstanceRequest extends Request {
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

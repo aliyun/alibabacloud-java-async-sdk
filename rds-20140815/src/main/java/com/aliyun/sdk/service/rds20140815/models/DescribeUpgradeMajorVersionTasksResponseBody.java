@@ -171,6 +171,9 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
+        @com.aliyun.core.annotation.NameInMap("SwitchEndTime")
+        private String switchEndTime;
+
         @com.aliyun.core.annotation.NameInMap("SwitchTime")
         private String switchTime;
 
@@ -194,6 +197,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             this.sourceInsName = builder.sourceInsName;
             this.sourceMajorVersion = builder.sourceMajorVersion;
             this.startTime = builder.startTime;
+            this.switchEndTime = builder.switchEndTime;
             this.switchTime = builder.switchTime;
             this.targetInsName = builder.targetInsName;
             this.targetMajorVersion = builder.targetMajorVersion;
@@ -259,6 +263,13 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return switchEndTime
+         */
+        public String getSwitchEndTime() {
+            return this.switchEndTime;
+        }
+
+        /**
          * @return switchTime
          */
         public String getSwitchTime() {
@@ -301,6 +312,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             private String sourceInsName; 
             private String sourceMajorVersion; 
             private String startTime; 
+            private String switchEndTime; 
             private String switchTime; 
             private String targetInsName; 
             private String targetMajorVersion; 
@@ -393,6 +405,18 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * <p>The end time of the switching from the original instance to the new instance.</p>
+             * <p>Expressed in Unix timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1714237539000</p>
+             */
+            public Builder switchEndTime(String switchEndTime) {
+                this.switchEndTime = switchEndTime;
                 return this;
             }
 

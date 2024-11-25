@@ -27,6 +27,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataDisks")
     private DataDisks dataDisks;
 
+    @com.aliyun.core.annotation.NameInMap("DbType")
+    private String dbType;
+
     @com.aliyun.core.annotation.NameInMap("DedicatedHostAttribute")
     private DedicatedHostAttribute dedicatedHostAttribute;
 
@@ -138,6 +141,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.creationTime = builder.creationTime;
         this.creditSpecification = builder.creditSpecification;
         this.dataDisks = builder.dataDisks;
+        this.dbType = builder.dbType;
         this.dedicatedHostAttribute = builder.dedicatedHostAttribute;
         this.deploymentSetId = builder.deploymentSetId;
         this.description = builder.description;
@@ -216,6 +220,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     public DataDisks getDataDisks() {
         return this.dataDisks;
+    }
+
+    /**
+     * @return dbType
+     */
+    public String getDbType() {
+        return this.dbType;
     }
 
     /**
@@ -469,6 +480,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private String creationTime; 
         private String creditSpecification; 
         private DataDisks dataDisks; 
+        private String dbType; 
         private DedicatedHostAttribute dedicatedHostAttribute; 
         private String deploymentSetId; 
         private String description; 
@@ -557,6 +569,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder dataDisks(DataDisks dataDisks) {
             this.dataDisks = dataDisks;
+            return this;
+        }
+
+        /**
+         * DbType.
+         */
+        public Builder dbType(String dbType) {
+            this.dbType = dbType;
             return this;
         }
 

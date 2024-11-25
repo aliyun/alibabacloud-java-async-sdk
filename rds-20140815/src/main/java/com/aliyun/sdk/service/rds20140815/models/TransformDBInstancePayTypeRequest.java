@@ -17,6 +17,10 @@ public class TransformDBInstancePayTypeRequest extends Request {
     private String autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessInfo")
     private String businessInfo;
 
@@ -47,6 +51,10 @@ public class TransformDBInstancePayTypeRequest extends Request {
     private String period;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -61,6 +69,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
     private TransformDBInstancePayTypeRequest(Builder builder) {
         super(builder);
         this.autoRenew = builder.autoRenew;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.businessInfo = builder.businessInfo;
         this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
@@ -68,6 +77,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
         this.period = builder.period;
+        this.promotionCode = builder.promotionCode;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.usedTime = builder.usedTime;
@@ -91,6 +101,13 @@ public class TransformDBInstancePayTypeRequest extends Request {
      */
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -143,6 +160,13 @@ public class TransformDBInstancePayTypeRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -165,6 +189,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
 
     public static final class Builder extends Request.Builder<TransformDBInstancePayTypeRequest, Builder> {
         private String autoRenew; 
+        private Boolean autoUseCoupon; 
         private String businessInfo; 
         private String clientToken; 
         private String DBInstanceId; 
@@ -172,6 +197,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
         private Long ownerId; 
         private String payType; 
         private String period; 
+        private String promotionCode; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer usedTime; 
@@ -183,6 +209,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
         private Builder(TransformDBInstancePayTypeRequest request) {
             super(request);
             this.autoRenew = request.autoRenew;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.businessInfo = request.businessInfo;
             this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
@@ -190,6 +217,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
             this.ownerId = request.ownerId;
             this.payType = request.payType;
             this.period = request.period;
+            this.promotionCode = request.promotionCode;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.usedTime = request.usedTime;
@@ -214,6 +242,15 @@ public class TransformDBInstancePayTypeRequest extends Request {
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
             return this;
         }
 
@@ -305,6 +342,15 @@ public class TransformDBInstancePayTypeRequest extends Request {
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

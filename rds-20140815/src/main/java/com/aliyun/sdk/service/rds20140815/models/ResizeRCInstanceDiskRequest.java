@@ -17,6 +17,10 @@ public class ResizeRCInstanceDiskRequest extends Request {
     private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    private String diskId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -39,6 +43,7 @@ public class ResizeRCInstanceDiskRequest extends Request {
     private ResizeRCInstanceDiskRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
+        this.diskId = builder.diskId;
         this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.newSize = builder.newSize;
@@ -64,6 +69,13 @@ public class ResizeRCInstanceDiskRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return diskId
+     */
+    public String getDiskId() {
+        return this.diskId;
     }
 
     /**
@@ -103,6 +115,7 @@ public class ResizeRCInstanceDiskRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResizeRCInstanceDiskRequest, Builder> {
         private Boolean autoPay; 
+        private String diskId; 
         private Boolean dryRun; 
         private String instanceId; 
         private Long newSize; 
@@ -116,6 +129,7 @@ public class ResizeRCInstanceDiskRequest extends Request {
         private Builder(ResizeRCInstanceDiskRequest request) {
             super(request);
             this.autoPay = request.autoPay;
+            this.diskId = request.diskId;
             this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.newSize = request.newSize;
@@ -139,6 +153,15 @@ public class ResizeRCInstanceDiskRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * DiskId.
+         */
+        public Builder diskId(String diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
             return this;
         }
 

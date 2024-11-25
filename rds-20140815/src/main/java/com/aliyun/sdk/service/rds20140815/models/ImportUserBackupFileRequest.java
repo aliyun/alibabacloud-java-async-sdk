@@ -28,6 +28,10 @@ public class ImportUserBackupFileRequest extends Request {
     private String comment;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    private String DBInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
@@ -69,6 +73,7 @@ public class ImportUserBackupFileRequest extends Request {
         this.backupFile = builder.backupFile;
         this.bucketRegion = builder.bucketRegion;
         this.comment = builder.comment;
+        this.DBInstanceId = builder.DBInstanceId;
         this.engineVersion = builder.engineVersion;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -112,6 +117,13 @@ public class ImportUserBackupFileRequest extends Request {
      */
     public String getComment() {
         return this.comment;
+    }
+
+    /**
+     * @return DBInstanceId
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     /**
@@ -181,6 +193,7 @@ public class ImportUserBackupFileRequest extends Request {
         private String backupFile; 
         private String bucketRegion; 
         private String comment; 
+        private String DBInstanceId; 
         private String engineVersion; 
         private Long ownerId; 
         private String regionId; 
@@ -200,6 +213,7 @@ public class ImportUserBackupFileRequest extends Request {
             this.backupFile = request.backupFile;
             this.bucketRegion = request.bucketRegion;
             this.comment = request.comment;
+            this.DBInstanceId = request.DBInstanceId;
             this.engineVersion = request.engineVersion;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -252,6 +266,18 @@ public class ImportUserBackupFileRequest extends Request {
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
             this.comment = comment;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
+         */
+        public Builder DBInstanceId(String DBInstanceId) {
+            this.putQueryParameter("DBInstanceId", DBInstanceId);
+            this.DBInstanceId = DBInstanceId;
             return this;
         }
 

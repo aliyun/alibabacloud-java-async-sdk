@@ -524,7 +524,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The order type. Valid values:</p>
+         * <p>The type of the order. Valid values:</p>
          * <ul>
          * <li><strong>BUY</strong>: purchase order</li>
          * <li><strong>UPGRADE</strong>: specification change order</li>
@@ -647,7 +647,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance.</p>
+         * <p>The subscription duration of the instance. Valid values:</p>
          * <ul>
          * <li>If you set the <strong>TimeType</strong> parameter to <strong>Year</strong>, the value of the UsedTime parameter ranges from <strong>1 to 100</strong>.</li>
          * <li>If you set the <strong>TimeType</strong> parameter to <strong>Month</strong>, the value of the UsedTime parameter ranges from <strong>1 to 999</strong>.</li>

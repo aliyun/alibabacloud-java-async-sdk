@@ -29,6 +29,10 @@ public class CreateDBInstanceRequest extends Request {
     private String autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BabelfishConfig")
     private String babelfishConfig;
 
@@ -155,6 +159,10 @@ public class CreateDBInstanceRequest extends Request {
     private String privateIpAddress;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -254,6 +262,7 @@ public class CreateDBInstanceRequest extends Request {
         this.autoCreateProxy = builder.autoCreateProxy;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.babelfishConfig = builder.babelfishConfig;
         this.bpeEnabled = builder.bpeEnabled;
         this.burstingEnabled = builder.burstingEnabled;
@@ -284,6 +293,7 @@ public class CreateDBInstanceRequest extends Request {
         this.period = builder.period;
         this.port = builder.port;
         this.privateIpAddress = builder.privateIpAddress;
+        this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -348,6 +358,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -561,6 +578,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -726,6 +750,7 @@ public class CreateDBInstanceRequest extends Request {
         private Boolean autoCreateProxy; 
         private Boolean autoPay; 
         private String autoRenew; 
+        private Boolean autoUseCoupon; 
         private String babelfishConfig; 
         private String bpeEnabled; 
         private Boolean burstingEnabled; 
@@ -756,6 +781,7 @@ public class CreateDBInstanceRequest extends Request {
         private String period; 
         private String port; 
         private String privateIpAddress; 
+        private String promotionCode; 
         private String regionId; 
         private String resourceGroupId; 
         private Long resourceOwnerId; 
@@ -790,6 +816,7 @@ public class CreateDBInstanceRequest extends Request {
             this.autoCreateProxy = request.autoCreateProxy;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.babelfishConfig = request.babelfishConfig;
             this.bpeEnabled = request.bpeEnabled;
             this.burstingEnabled = request.burstingEnabled;
@@ -820,6 +847,7 @@ public class CreateDBInstanceRequest extends Request {
             this.period = request.period;
             this.port = request.port;
             this.privateIpAddress = request.privateIpAddress;
+            this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -884,7 +912,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the feature. You must make sure that your account balance is sufficient.</li>
+         * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient.</li>
          * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
          * </ul>
          * <blockquote>
@@ -919,6 +947,22 @@ public class CreateDBInstanceRequest extends Request {
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: uses a coupon.</li>
+         * <li><strong>false</strong> (default): does not use a coupon.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
             return this;
         }
 
@@ -1006,10 +1050,11 @@ public class CreateDBInstanceRequest extends Request {
          * <li><strong>serverless_standard</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
          * <li><strong>serverless_ha</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</li>
          * </ul>
-         * <p>**</p>
-         * <p><strong>Note</strong> This parameter is required when you create a serverless instance.</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>This parameter is required when you create a serverless instance.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>HighAvailability</p>
@@ -1362,17 +1407,13 @@ public class CreateDBInstanceRequest extends Request {
          * </li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>ApsaraDB RDS for MariaDB does not support serverless instances.</p>
-         * </li>
-         * <li><p>RDS instances that run SQL Server: <code>_ent</code> specifies SQL Server EE (Always On), <code>_ent_ha</code> specifies SQL Server EE, <code>_std_ha</code> specifies SQL Server SE, and <code>_web</code> specifies SQL Server Web.</p>
-         * </li>
-         * <li><p>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</p>
-         * </li>
-         * <li><p>Babelfish is supported only for RDS instances that run PostgreSQL 15.</p>
-         * </li>
+         * <li>ApsaraDB RDS for MariaDB does not support serverless instances.</li>
+         * <li>RDS instances that run SQL Server: <code>_ent</code> specifies SQL Server EE (Always On), <code>_ent_ha</code> specifies SQL Server EE, <code>_std_ha</code> specifies SQL Server SE, and <code>_web</code> specifies SQL Server Web.</li>
+         * <li>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</li>
+         * <li>Babelfish is supported only for RDS instances that run PostgreSQL 15.</li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1387,7 +1428,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
          * <li><strong>Classic</strong>: the classic network</li>
          * </ul>
          * <blockquote>
@@ -1494,6 +1535,18 @@ public class CreateDBInstanceRequest extends Request {
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+
+        /**
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliwood-1688-mobile-promotion</p>
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 
@@ -1791,10 +1844,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by <strong>ZoneId</strong>.</p>
+         * <p>The vSwitch ID. The vSwitch must belong to the zone that is specified by <strong>ZoneId</strong>.</p>
          * <ul>
          * <li>If you set <strong>InstanceNetworkType</strong> to <strong>VPC</strong>, you must also specify this parameter.</li>
-         * <li>If you specify the ZoneSlaveId1 parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</li>
+         * <li>If you set the <strong>ZoneSlaveId1</strong> parameter to a value that is not <strong>Auto</strong>, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,). The ZoneSlaveId1 parameter specifies the zone ID of the secondary node.</li>
+         * <li>The value cannot contain <code>spaces</code>, exclamation points <code>(!)</code>, or special characters such as number signs <code>(#)</code>, dollar signs <code>($)</code>, ampersands <code>(&amp;)</code>, and percent signs <code>(%)</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1854,7 +1908,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The zone ID of the other secondary node. When you create an ApsaraDB RDS for MySQL cluster, you can create one to two secondary nodes for the cluster. This parameter applies if you create a cluster that contains two secondary nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-d</p>
@@ -1982,7 +2036,7 @@ public class CreateDBInstanceRequest extends Request {
              * <ul>
              * <li>Serverless ApsaraDB RDS for MySQL instances: <strong>0.5 to 32</strong>.</li>
              * <li>Serverless ApsaraDB RDS for SQL Server instances: <strong>2 to 8</strong>. Only integers are supported.</li>
-             * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>0.5 to 14</strong>.</li>
+             * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>0.5 to 14</strong></li>
              * </ul>
              * <blockquote>
              * <p> The value of this parameter must be less than or equal to the value of the <strong>MaxCapacity</strong> parameter.</p>

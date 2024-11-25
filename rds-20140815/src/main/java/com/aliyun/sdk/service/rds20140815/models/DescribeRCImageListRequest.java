@@ -17,6 +17,14 @@ public class DescribeRCImageListRequest extends Request {
     private String architecture;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    private String imageName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -36,6 +44,8 @@ public class DescribeRCImageListRequest extends Request {
     private DescribeRCImageListRequest(Builder builder) {
         super(builder);
         this.architecture = builder.architecture;
+        this.imageId = builder.imageId;
+        this.imageName = builder.imageName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -60,6 +70,20 @@ public class DescribeRCImageListRequest extends Request {
      */
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
+     * @return imageName
+     */
+    public String getImageName() {
+        return this.imageName;
     }
 
     /**
@@ -92,6 +116,8 @@ public class DescribeRCImageListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRCImageListRequest, Builder> {
         private String architecture; 
+        private String imageId; 
+        private String imageName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
@@ -104,6 +130,8 @@ public class DescribeRCImageListRequest extends Request {
         private Builder(DescribeRCImageListRequest request) {
             super(request);
             this.architecture = request.architecture;
+            this.imageId = request.imageId;
+            this.imageName = request.imageName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -123,6 +151,24 @@ public class DescribeRCImageListRequest extends Request {
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
             this.architecture = architecture;
+            return this;
+        }
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * ImageName.
+         */
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
             return this;
         }
 

@@ -283,7 +283,10 @@ public class ModifyDBProxyInstanceRequest extends Request {
         }
 
         /**
-         * DBProxyNodes.
+         * <p>List of proxy nodes.</p>
+         * <blockquote>
+         * <p>This parameter must be passed when the current proxy instance is deployed in multiple availability zones.</p>
+         * </blockquote>
          */
         public Builder DBProxyNodes(java.util.List < DBProxyNodes> DBProxyNodes) {
             String DBProxyNodesShrink = shrink(DBProxyNodes, "DBProxyNodes", "json");
@@ -326,7 +329,10 @@ public class ModifyDBProxyInstanceRequest extends Request {
         }
 
         /**
-         * MigrateAZ.
+         * <p>The list of available zones for migration agents.</p>
+         * <blockquote>
+         * <p>Currently, only RDS MySQL cloud disk version agent instance migration is supported.</p>
+         * </blockquote>
          */
         public Builder migrateAZ(java.util.List < MigrateAZ> migrateAZ) {
             String migrateAZShrink = shrink(migrateAZ, "MigrateAZ", "json");
@@ -453,7 +459,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
             private String zoneId; 
 
             /**
-             * cpuCores.
+             * <p>The number of cpu cores for the node, valid values: <strong>1</strong> to <strong>16</strong>.</p>
+             * <blockquote>
+             * <p>This parameter is required when selecting <strong>DBProxyNodes</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuCores(String cpuCores) {
                 this.cpuCores = cpuCores;
@@ -461,7 +473,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
             }
 
             /**
-             * nodeCounts.
+             * <p>The number of proxy nodes in the availability zone, valid values: <strong>1</strong> to <strong>16</strong>.</p>
+             * <blockquote>
+             * <p>This parameter is required when selecting <strong>DBProxyNodes</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeCounts(String nodeCounts) {
                 this.nodeCounts = nodeCounts;
@@ -469,7 +487,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The id of the availability zone where the node is located.</p>
+             * <blockquote>
+             * <p>This parameter is required when selecting <strong>DBProxyNodes</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hagnzhou-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -528,7 +552,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
             private String destVSwitchId; 
 
             /**
-             * dbProxyEndpointId.
+             * <p>The proxy connection address ID. You can obtain it through the DescribeDBProxyEndpoint interface.</p>
+             * <blockquote>
+             * <p>This parameter is required when MigrateAZ is selected.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>yhw429********</p>
              */
             public Builder dbProxyEndpointId(String dbProxyEndpointId) {
                 this.dbProxyEndpointId = dbProxyEndpointId;
@@ -536,7 +566,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
             }
 
             /**
-             * destVSwitchId.
+             * <p>The target VSwitchId corresponding to the proxy instance migration.</p>
+             * <blockquote>
+             * <p>This parameter is required when MigrateAZ is selected.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-sw0qq49d1m****</p>
              */
             public Builder destVSwitchId(String destVSwitchId) {
                 this.destVSwitchId = destVSwitchId;

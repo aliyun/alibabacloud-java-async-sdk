@@ -149,6 +149,113 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeRCInstancesResponseBody</p>
      */
+    public static class TagResources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private TagResources(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.resourceType = builder.resourceType;
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagResources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private String resourceType; 
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public TagResources build() {
+                return new TagResources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRCInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstancesResponseBody</p>
+     */
     public static class RCInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
@@ -183,8 +290,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TagResources")
+        private java.util.List < TagResources> tagResources;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
 
         private RCInstances(Builder builder) {
             this.clusterName = builder.clusterName;
@@ -198,7 +311,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.tagResources = builder.tagResources;
             this.vpcId = builder.vpcId;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -287,10 +402,24 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tagResources
+         */
+        public java.util.List < TagResources> getTagResources() {
+            return this.tagResources;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
@@ -305,7 +434,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private String regionId; 
             private String status; 
+            private java.util.List < TagResources> tagResources; 
             private String vpcId; 
+            private String zoneId; 
 
             /**
              * <p>The cluster name.</p>
@@ -433,6 +564,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * TagResources.
+             */
+            public Builder tagResources(java.util.List < TagResources> tagResources) {
+                this.tagResources = tagResources;
+                return this;
+            }
+
+            /**
              * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
@@ -440,6 +579,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

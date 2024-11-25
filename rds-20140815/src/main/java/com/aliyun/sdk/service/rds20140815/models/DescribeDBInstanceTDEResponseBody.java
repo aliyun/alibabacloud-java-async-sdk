@@ -15,6 +15,9 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Databases")
     private Databases databases;
 
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
+    private String encryptionKey;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -26,6 +29,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
 
     private DescribeDBInstanceTDEResponseBody(Builder builder) {
         this.databases = builder.databases;
+        this.encryptionKey = builder.encryptionKey;
         this.requestId = builder.requestId;
         this.TDEMode = builder.TDEMode;
         this.TDEStatus = builder.TDEStatus;
@@ -44,6 +48,13 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
      */
     public Databases getDatabases() {
         return this.databases;
+    }
+
+    /**
+     * @return encryptionKey
+     */
+    public String getEncryptionKey() {
+        return this.encryptionKey;
     }
 
     /**
@@ -69,6 +80,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
 
     public static final class Builder {
         private Databases databases; 
+        private String encryptionKey; 
         private String requestId; 
         private String TDEMode; 
         private String TDEStatus; 
@@ -81,6 +93,17 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the custom key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
+         */
+        public Builder encryptionKey(String encryptionKey) {
+            this.encryptionKey = encryptionKey;
             return this;
         }
 

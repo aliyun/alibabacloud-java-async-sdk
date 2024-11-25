@@ -194,6 +194,9 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsPublic")
         private Boolean isPublic;
 
+        @com.aliyun.core.annotation.NameInMap("IsSupportRdsCustom")
+        private Boolean isSupportRdsCustom;
+
         @com.aliyun.core.annotation.NameInMap("OSName")
         private String OSName;
 
@@ -220,6 +223,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             this.imageName = builder.imageName;
             this.imageVersion = builder.imageVersion;
             this.isPublic = builder.isPublic;
+            this.isSupportRdsCustom = builder.isSupportRdsCustom;
             this.OSName = builder.OSName;
             this.OSNameEn = builder.OSNameEn;
             this.OSType = builder.OSType;
@@ -286,6 +290,13 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
 
         /**
+         * @return isSupportRdsCustom
+         */
+        public Boolean getIsSupportRdsCustom() {
+            return this.isSupportRdsCustom;
+        }
+
+        /**
          * @return OSName
          */
         public String getOSName() {
@@ -335,6 +346,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             private String imageName; 
             private String imageVersion; 
             private Boolean isPublic; 
+            private Boolean isSupportRdsCustom; 
             private String OSName; 
             private String OSNameEn; 
             private String OSType; 
@@ -424,6 +436,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
              */
             public Builder isPublic(Boolean isPublic) {
                 this.isPublic = isPublic;
+                return this;
+            }
+
+            /**
+             * IsSupportRdsCustom.
+             */
+            public Builder isSupportRdsCustom(Boolean isSupportRdsCustom) {
+                this.isSupportRdsCustom = isSupportRdsCustom;
                 return this;
             }
 

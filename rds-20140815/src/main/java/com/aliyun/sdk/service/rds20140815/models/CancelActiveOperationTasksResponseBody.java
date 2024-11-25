@@ -50,7 +50,7 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Batch cancellation task IDs, separated by English commas (,).</p>
+         * <p>The IDs of the tasks that are canceled. Multiple task IDs are separated with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>188****,188****,188****</p>
@@ -61,7 +61,7 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A807C95D-410C-5BB5-96C0-C6E09F2C3D36</p>

@@ -125,7 +125,7 @@ public class CancelActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * <p>List of IDs for batch cancellation, separated by English commas (,). It is recommended to not exceed 25 at a time.</p>
+         * <p>The IDs of tasks that you want to cancel at a time. Separate multiple IDs with commas (,). We recommend that you configure up to 25 IDs at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

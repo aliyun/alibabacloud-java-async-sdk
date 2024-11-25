@@ -254,8 +254,9 @@ public class ModifyDBProxyRequest extends Request {
         /**
          * <p>Specifies whether to enable or disable the database proxy feature. Valid values:</p>
          * <ul>
-         * <li><strong>Startup</strong>: enables the database proxy feature.</li>
-         * <li><strong>Shutdown</strong>: disables the database proxy feature.</li>
+         * <li><strong>Startup</strong>: enables the feature.</li>
+         * <li><strong>Shutdown</strong>: disables the feature.</li>
+         * <li><strong>Modify</strong>: modifies the configuration of the feature.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -282,7 +283,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * <p>A deprecated parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -309,7 +310,11 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+         * <p>The database proxy type. Valid values:</p>
+         * <ul>
+         * <li><strong>common</strong>: general-purpose database proxy</li>
+         * <li><strong>exclusive</strong> (default): dedicated database proxy</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>common</p>
@@ -321,7 +326,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * DBProxyNodes.
+         * <p>The proxy nodes.</p>
          */
         public Builder DBProxyNodes(java.util.List < DBProxyNodes> DBProxyNodes) {
             String DBProxyNodesShrink = shrink(DBProxyNodes, "DBProxyNodes", "json");
@@ -355,17 +360,19 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable connection keep. Valid values:</p>
+         * <p>Specifies whether to enable persistent connections. Valid values:</p>
          * <ul>
-         * <li>Enabled: enables connection keeping</li>
-         * <li>Disabled: disables connection hold</li>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
          * </ul>
          * <blockquote>
-         * <ul>
-         * <li>This parameter is supported only for an ApsaraDB RDS for MySQL.</li>
-         * <li>When you modify the connection persistence state, the value of <strong>ConfigDBProxyService</strong> is modify.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>This parameter is available only for instances that run MySQL.</p>
+         * </li>
+         * <li><p>If you want to modify persistent connections, you must set the <strong>ConfigDBProxyService</strong> parameter to <strong>Modify</strong>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -512,7 +519,13 @@ public class ModifyDBProxyRequest extends Request {
             private String zoneId; 
 
             /**
-             * cpuCores.
+             * <p>The number of CPU cores of the node. Valid values: <strong>1</strong> to <strong>16</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is required when you configure the <strong>DBProxyNodes</strong> parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuCores(String cpuCores) {
                 this.cpuCores = cpuCores;
@@ -520,7 +533,13 @@ public class ModifyDBProxyRequest extends Request {
             }
 
             /**
-             * nodeCounts.
+             * <p>The number of proxy nodes in the zone. Valid values: <strong>1</strong> and <strong>2</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is required when you configure the <strong>DBProxyNodes</strong> parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeCounts(String nodeCounts) {
                 this.nodeCounts = nodeCounts;
@@ -528,7 +547,13 @@ public class ModifyDBProxyRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The ID of the zone in which the node resides.</p>
+             * <blockquote>
+             * <p> This parameter is required when you configure the <strong>DBProxyNodes</strong> parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hagnzhou-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

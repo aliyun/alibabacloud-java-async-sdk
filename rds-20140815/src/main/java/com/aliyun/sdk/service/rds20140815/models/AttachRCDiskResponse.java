@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDiagnosticReportResponse} extends {@link TeaModel}
+ * {@link AttachRCDiskResponse} extends {@link TeaModel}
  *
- * <p>CreateDiagnosticReportResponse</p>
+ * <p>AttachRCDiskResponse</p>
  */
-public class CreateDiagnosticReportResponse extends Response {
+public class AttachRCDiskResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CreateDiagnosticReportResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateDiagnosticReportResponseBody body;
+    private AttachRCDiskResponseBody body;
 
-    private CreateDiagnosticReportResponse(BuilderImpl builder) {
+    private AttachRCDiskResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateDiagnosticReportResponse create() {
+    public static AttachRCDiskResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CreateDiagnosticReportResponse extends Response {
     /**
      * @return body
      */
-    public CreateDiagnosticReportResponseBody getBody() {
+    public AttachRCDiskResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateDiagnosticReportResponse, Builder> {
+    public interface Builder extends Response.Builder<AttachRCDiskResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateDiagnosticReportResponseBody body);
+        Builder body(AttachRCDiskResponseBody body);
 
         @Override
-        CreateDiagnosticReportResponse build();
+        AttachRCDiskResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateDiagnosticReportResponse, Builder>
+            extends Response.BuilderImpl<AttachRCDiskResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateDiagnosticReportResponseBody body; 
+        private AttachRCDiskResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateDiagnosticReportResponse response) {
+        private BuilderImpl(AttachRCDiskResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CreateDiagnosticReportResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateDiagnosticReportResponseBody body) {
+        public Builder body(AttachRCDiskResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateDiagnosticReportResponse build() {
-            return new CreateDiagnosticReportResponse(this);
+        public AttachRCDiskResponse build() {
+            return new AttachRCDiskResponse(this);
         } 
 
     } 

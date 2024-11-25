@@ -228,6 +228,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AttachRCDisk  AttachRCDiskRequest
+     * @return AttachRCDiskResponse
+     */
+    @Override
+    public CompletableFuture<AttachRCDiskResponse> attachRCDisk(AttachRCDiskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AttachRCDisk").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AttachRCDiskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AttachRCDiskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AttachRCInstances  AttachRCInstancesRequest
+     * @return AttachRCInstancesResponse
+     */
+    @Override
+    public CompletableFuture<AttachRCInstancesResponse> attachRCInstances(AttachRCInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AttachRCInstances").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AttachRCInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AttachRCInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -293,29 +329,29 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported Engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
      * </ul>
-     * <h3>Related Function Documentation</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Notice: Before using this interface, please carefully read the function documentation to ensure you fully understand the prerequisites and the impact of using the interface before proceeding with the operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/104183.html">RDS MySQL Scheduled Events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104452.html">RDS PostgreSQL Scheduled Events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104451.html">RDS SQL Server Scheduled Events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104454.html">RDS MariaDB Scheduled Events</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events for ApsaraDB RDS for PostgreSQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events for ApsaraDB RDS for SQL Server instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events for ApsaraDB RDS for MariaDB instances</a></li>
      * </ul>
-     * <h3>Usage Restrictions</h3>
-     * <p>The task cannot be canceled under the following conditions:</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Tasks cannot be canceled in the following situations:</p>
      * <ul>
-     * <li><code>allowCancel</code> is 0.</li>
+     * <li>The allowCancel parameter is set to 0.</li>
      * <li>The current time is later than the task start time.</li>
-     * <li>The task status is not 3 (waiting for execution).</li>
+     * <li>The status of the task is not set to 3. The value 3 specifies that the task is waiting to be executed.</li>
      * </ul>
      * 
      * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
@@ -1074,30 +1110,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> This operation is no longer maintained. You can call the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
-     * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.</p>
-     * </blockquote>
-     * 
-     * @param request the request parameters of CreateDiagnosticReport  CreateDiagnosticReportRequest
-     * @return CreateDiagnosticReportResponse
-     */
-    @Override
-    public CompletableFuture<CreateDiagnosticReportResponse> createDiagnosticReport(CreateDiagnosticReportRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDiagnosticReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDiagnosticReportResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateDiagnosticReportResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
      * <li>MySQL</li>
@@ -1301,17 +1313,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>PostgreSQL</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
      * </blockquote>
-     * <h3><a href="#"></a>Precautions</h3>
-     * <p>Install only the plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Install only the extensions that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
      * <ul>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/142340.html">Extensions supported by ApsaraDB RDS for PostgreSQL</a>.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the major engine version of an instance.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/142340.html">Supported extensions</a>.</li>
+     * <li>You can call an API operation to query the major engine version of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreatePostgresExtensions  CreatePostgresExtensionsRequest
@@ -1344,6 +1356,55 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateRCDeploymentSetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateRCDisk  CreateRCDiskRequest
+     * @return CreateRCDiskResponse
+     */
+    @Override
+    public CompletableFuture<CreateRCDiskResponse> createRCDisk(CreateRCDiskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRCDisk").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRCDiskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRCDiskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>In the following scenarios, you cannot create snapshots for a specific disk:</p>
+     * <ul>
+     * <li>The number of manual snapshots of the disk has reached 256.</li>
+     * <li>A snapshot is being created for the disk.</li>
+     * <li>The instance to which the disk is attached has never been started.</li>
+     * <li>The instance to which the disk is attached is not in the <strong>Stopped</strong> or <strong>Running</strong> state.
+     * When you create a snapshot, take note of the following items:</li>
+     * <li>If a snapshot is being created, the snapshot cannot be used to create a custom image by calling the CreateImage operation.</li>
+     * <li>When a snapshot is being created for a disk that is attached to an RDS Custom instance, do not change the instance state.</li>
+     * <li>You can create snapshots for a disk that is in the <strong>Expired</strong> state. If the release time scheduled for a disk arrives when a snapshot is being created for the disk, the snapshot in the Creating state is deleted when the disk is released.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRCSnapshot  CreateRCSnapshotRequest
+     * @return CreateRCSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<CreateRCSnapshotResponse> createRCSnapshot(CreateRCSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRCSnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRCSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRCSnapshotResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1944,6 +2005,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteRCClusterNodes  DeleteRCClusterNodesRequest
+     * @return DeleteRCClusterNodesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRCClusterNodesResponse> deleteRCClusterNodes(DeleteRCClusterNodesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRCClusterNodes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRCClusterNodesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRCClusterNodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteRCDeploymentSet  DeleteRCDeploymentSetRequest
      * @return DeleteRCDeploymentSetResponse
      */
@@ -1956,6 +2035,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRCDeploymentSetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Manual snapshots of the disk are retained.</li>
+     * <li>The disk must be in the Unattached (Available) state.</li>
+     * <li>If no disk with the specified disk ID exists, the request will be ignored.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteRCDisk  DeleteRCDiskRequest
+     * @return DeleteRCDiskResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRCDiskResponse> deleteRCDisk(DeleteRCDiskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRCDisk").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRCDiskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRCDiskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1995,6 +2100,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRCInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>If the specified snapshot ID does not exist, the request will be ignored.</li>
+     * <li>If the snapshot is used to create custom images, the snapshot cannot be deleted. You must delete the created custom images before you can delete the snapshot.</li>
+     * <li>If the snapshot is used to create cloud disks and <code>Force</code> is not specified or is set to <code>false</code>, the snapshot cannot be directly deleted. If you want to delete the snapshot, set <code>Force</code> to true to forcefully delete the snapshot. The cloud disks created from the snapshot cannot be re-initialized after the snapshot is forcefully deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteRCSnapshot  DeleteRCSnapshotRequest
+     * @return DeleteRCSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRCSnapshotResponse> deleteRCSnapshot(DeleteRCSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRCSnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRCSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRCSnapshotResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4644,6 +4775,63 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Kubeconfig files store identity and authentication information that is used by clients to access ACK clusters. To use kubectl to manage an ACK cluster, you must use the kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</p>
+     * 
+     * @param request the request parameters of DescribeRCClusterConfig  DescribeRCClusterConfigRequest
+     * @return DescribeRCClusterConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRCClusterConfigResponse> describeRCClusterConfig(DescribeRCClusterConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCClusterConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRCClusterConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRCClusterConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeRCClusterNodes  DescribeRCClusterNodesRequest
+     * @return DescribeRCClusterNodesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRCClusterNodesResponse> describeRCClusterNodes(DescribeRCClusterNodesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCClusterNodes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRCClusterNodesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRCClusterNodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeRCClusters  DescribeRCClustersRequest
+     * @return DescribeRCClustersResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRCClustersResponse> describeRCClusters(DescribeRCClustersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCClusters").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRCClustersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRCClustersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeRCDeploymentSets  DescribeRCDeploymentSetsRequest
      * @return DescribeRCDeploymentSetsResponse
      */
@@ -4656,6 +4844,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRCDeploymentSetsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeRCDisks  DescribeRCDisksRequest
+     * @return DescribeRCDisksResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRCDisksResponse> describeRCDisks(DescribeRCDisksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCDisks").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRCDisksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRCDisksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4687,11 +4893,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DescribeRCInstanceAttributeResponse> describeRCInstanceAttribute(DescribeRCInstanceAttributeRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCInstanceAttribute").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCInstanceAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRCInstanceAttributeResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRCInstanceAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The address returned is valid only for 15 seconds. If you do not use the returned address to establish a connection within 15 seconds, the address expires and you must call the operation again to obtain a new address.</p>
+     * 
+     * @param request the request parameters of DescribeRCInstanceVncUrl  DescribeRCInstanceVncUrlRequest
+     * @return DescribeRCInstanceVncUrlResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRCInstanceVncUrlResponse> describeRCInstanceVncUrl(DescribeRCInstanceVncUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCInstanceVncUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRCInstanceVncUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRCInstanceVncUrlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4728,6 +4955,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRCMetricListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeRCSnapshots  DescribeRCSnapshotsRequest
+     * @return DescribeRCSnapshotsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRCSnapshotsResponse> describeRCSnapshots(DescribeRCSnapshotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCSnapshots").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRCSnapshotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRCSnapshotsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5478,6 +5723,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DetachRCDisk  DetachRCDiskRequest
+     * @return DetachRCDiskResponse
+     */
+    @Override
+    public CompletableFuture<DetachRCDiskResponse> detachRCDisk(DetachRCDiskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DetachRCDisk").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DetachRCDiskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DetachRCDiskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -5524,12 +5787,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
-     * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
-     * </ul>
+     * <p>RDS MySQL</p>
      * 
      * @param request the request parameters of GetDBInstanceTopology  GetDBInstanceTopologyRequest
      * @return GetDBInstanceTopologyResponse
@@ -6827,17 +7085,17 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL<blockquote>
-     * <p> Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
+     * <p> Starting October 17, 2023, ApsaraDB RDS for MySQL instances that run RDS Cluster Edition offer one free-of-charge dedicated database proxy for each unit in phases. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One dedicated proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy feature of ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable the database proxy feature of ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBProxy  ModifyDBProxyRequest
@@ -6892,18 +7150,18 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL</li>
      * </ul>
-     * <h3>References</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the database proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBProxyEndpointAddress  ModifyDBProxyEndpointAddressRequest
@@ -7013,15 +7271,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
      * <li>SQL Server</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
-     * <p>&lt;props=&quot;china&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.
-     * &lt;props=&quot;intl&quot;&gt;You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a>.</p>
+     * <p>You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses cloud disks to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.</p>
      * <blockquote>
-     * <p>: Before you call this operation, read the preceding topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDatabaseConfig  ModifyDatabaseConfigRequest
@@ -7377,6 +7634,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyRCInstanceAttribute  ModifyRCInstanceAttributeRequest
+     * @return ModifyRCInstanceAttributeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyRCInstanceAttributeResponse> modifyRCInstanceAttribute(ModifyRCInstanceAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyRCInstanceAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyRCInstanceAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyRCInstanceAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyRCInstanceChargeType  ModifyRCInstanceChargeTypeRequest
      * @return ModifyRCInstanceChargeTypeResponse
      */
@@ -7389,6 +7664,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyRCInstanceChargeTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyRCInstanceDescription  ModifyRCInstanceDescriptionRequest
+     * @return ModifyRCInstanceDescriptionResponse
+     */
+    @Override
+    public CompletableFuture<ModifyRCInstanceDescriptionResponse> modifyRCInstanceDescription(ModifyRCInstanceDescriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyRCInstanceDescription").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyRCInstanceDescriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyRCInstanceDescriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyRCInstanceKeyPair  ModifyRCInstanceKeyPairRequest
+     * @return ModifyRCInstanceKeyPairResponse
+     */
+    @Override
+    public CompletableFuture<ModifyRCInstanceKeyPairResponse> modifyRCInstanceKeyPair(ModifyRCInstanceKeyPairRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyRCInstanceKeyPair").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyRCInstanceKeyPairResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyRCInstanceKeyPairResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -8063,6 +8374,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ReplaceRCInstanceSystemDisk  ReplaceRCInstanceSystemDiskRequest
+     * @return ReplaceRCInstanceSystemDiskResponse
+     */
+    @Override
+    public CompletableFuture<ReplaceRCInstanceSystemDiskResponse> replaceRCInstanceSystemDisk(ReplaceRCInstanceSystemDiskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReplaceRCInstanceSystemDisk").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReplaceRCInstanceSystemDiskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReplaceRCInstanceSystemDiskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -8343,21 +8672,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
      * <li>PostgreSQL</li>
      * <li>SQL Server</li>
      * </ul>
-     * <h3>References</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/462504.html">Start an ApsaraDB RDS for SQL instance</a></p>
      * </blockquote>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Resume an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Resume an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Resume an ApsaraDB RDS for SQL Server instance</a></li>
-     * </ul>
      * 
      * @param request the request parameters of StartDBInstance  StartDBInstanceRequest
      * @return StartDBInstanceResponse
@@ -8404,13 +8729,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     *   <a href="https://help.aliyun.com/document_detail/462504.html">Suspend an ApsaraDB RDS for SQL Server instance</a></p>
      * </blockquote>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Suspend an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Suspend an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Suspend an ApsaraDB RDS for SQL Server instance</a></li>
-     * </ul>
      * 
      * @param request the request parameters of StopDBInstance  StopDBInstanceRequest
      * @return StopDBInstanceResponse

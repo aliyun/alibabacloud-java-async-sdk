@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RunRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Amount")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 30, minimum = 1)
     private Integer amount;
 
     @com.aliyun.core.annotation.Query
@@ -978,7 +978,7 @@ public class RunRCInstancesRequest extends Request {
         private String category;
 
         @com.aliyun.core.annotation.NameInMap("Size")
-        private String size;
+        private Integer size;
 
         private SystemDisk(Builder builder) {
             this.category = builder.category;
@@ -1003,13 +1003,13 @@ public class RunRCInstancesRequest extends Request {
         /**
          * @return size
          */
-        public String getSize() {
+        public Integer getSize() {
             return this.size;
         }
 
         public static final class Builder {
             private String category; 
-            private String size; 
+            private Integer size; 
 
             /**
              * <p>The type of the system disk. Set the value to <strong>cloud_essd</strong>, which indicates ESSDs.</p>
@@ -1028,7 +1028,7 @@ public class RunRCInstancesRequest extends Request {
              * <strong>example:</strong>
              * <p>20</p>
              */
-            public Builder size(String size) {
+            public Builder size(Integer size) {
                 this.size = size;
                 return this;
             }
